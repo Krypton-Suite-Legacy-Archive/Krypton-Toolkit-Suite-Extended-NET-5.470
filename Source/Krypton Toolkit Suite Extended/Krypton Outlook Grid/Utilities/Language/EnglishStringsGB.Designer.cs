@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KryptonOutlookGrid.Utilities {
+namespace KryptonOutlookGrid.Utilities.Language {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace KryptonOutlookGrid.Utilities {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KryptonOutlookGrid.Utilities.EnglishStringsGB", typeof(EnglishStringsGB).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KryptonOutlookGrid.Utilities.Language.EnglishStringsGB", typeof(EnglishStringsGB).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

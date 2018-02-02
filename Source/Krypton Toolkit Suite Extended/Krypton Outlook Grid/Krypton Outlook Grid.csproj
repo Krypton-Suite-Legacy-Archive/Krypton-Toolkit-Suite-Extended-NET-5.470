@@ -50,12 +50,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Utilities\EnglishStringsGB.Designer.cs">
+    <Compile Include="Utilities\Language\EnglishStringsGB.Designer.cs">
       <DependentUpon>EnglishStringsGB.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Utilities\EnglishStringsUS.Designer.cs">
+    <Compile Include="Utilities\Language\EnglishStringsUS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EnglishStringsUS.resx</DependentUpon>
@@ -71,14 +71,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Utilities\EnglishStringsGB.resx">
+    <EmbeddedResource Include="Utilities\Language\EnglishStringsGB.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EnglishStringsGB.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Utilities\EnglishStringsUS.resx">
+    <EmbeddedResource Include="Utilities\Language\EnglishStringsUS.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EnglishStringsUS.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\Language\FrenchStrings.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CollapseIcon.png" />
