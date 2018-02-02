@@ -9,4 +9,5 @@
 ## 2018-02-02 Initial commit
 * Added generic C# `.gitignore` file
 * Created solution with two class projects inside labeled `Extended Controls` and `Krypton Outlook Grid`
-* Automatic versioning 
+* Automatic versioning
+* High DPI support configuration 
