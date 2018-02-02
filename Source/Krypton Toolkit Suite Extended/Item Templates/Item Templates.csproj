@@ -7,7 +7,7 @@
     <ProjectGuid>{187B24BA-4B66-4D61-9BD6-D0E83DB45BD5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Item_Templates</RootNamespace>
-    <AssemblyName>Item_Templates</AssemblyName>
+    <AssemblyName>Item Templates</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
