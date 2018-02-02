@@ -49,5 +49,8 @@
     <None Include="App.config" />
     <None Include="app.manifest" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes\IMPORTANT.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
