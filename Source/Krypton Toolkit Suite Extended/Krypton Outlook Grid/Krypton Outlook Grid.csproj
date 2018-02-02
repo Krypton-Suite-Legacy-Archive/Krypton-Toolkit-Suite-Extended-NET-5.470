@@ -60,6 +60,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnglishStringsUS.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\Language\LanguageManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
