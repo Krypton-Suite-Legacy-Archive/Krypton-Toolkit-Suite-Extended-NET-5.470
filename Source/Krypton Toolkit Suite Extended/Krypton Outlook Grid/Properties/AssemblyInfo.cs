@@ -7,11 +7,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Krypton Outlook Grid")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("KryptonDataGridView with multi sorting and multi grouping abilities")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("JDH Software, Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV)")]
 [assembly: AssemblyProduct("Krypton Outlook Grid")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Copyright © JDH Software 2013-2018. Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2018. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

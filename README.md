@@ -6,6 +6,13 @@
 
 =======
 
+## 2018-02-03 Krypton outlook grid
+* Krypton outlook grid 45% complete
+* Altered assembly info
+* Variables and comments with `color` renamed to `colour`
+
+=======
+
 ## 2018-02-02 Initial commit
 * Added generic C# `.gitignore` file
 * Created solution with two class projects inside labeled `Extended Controls` and `Krypton Outlook Grid`
