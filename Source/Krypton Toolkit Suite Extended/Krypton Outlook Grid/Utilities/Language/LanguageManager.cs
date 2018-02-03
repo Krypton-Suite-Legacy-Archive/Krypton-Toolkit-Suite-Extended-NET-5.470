@@ -15,7 +15,7 @@ namespace KryptonOutlookGrid.Utilities.Language
 
         public static readonly object myLock = new object();
 
-        public ResourceManager resourceManager;
+        public ResourceManager resourceManagerUS, resourceManagerGB;
 
         private CultureInfo cultureInfo;
 
@@ -24,7 +24,9 @@ namespace KryptonOutlookGrid.Utilities.Language
 
         private LanguageManager()
         {
-            resourceManager = new ResourceManager("KryptonOutlookGrid.Utilities.Language.EnglishStringsUS", Assembly.GetExecutingAssembly());
+            resourceManagerUS = new ResourceManager("KryptonOutlookGrid.Utilities.Language.EnglishStringsUS", Assembly.GetExecutingAssembly());
+
+            resourceManagerGB = new ResourceManager("KryptonOutlookGrid.Utilities.Language.EnglishStringsGB", Assembly.GetExecutingAssembly());
 
             cultureInfo = Thread.CurrentThread.CurrentCulture;
         }
@@ -69,14 +71,24 @@ namespace KryptonOutlookGrid.Utilities.Language
         }
 
         /// <summary>
-        /// Get localised string
+        /// Get localised string for USA
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
         /// <remarks></remarks>
-        public string GetString(string name)
+        public string GetStringUS(string name)
         {
-            return resourceManager.GetString(name, cultureInfo);
+            return resourceManagerUS.GetString(name, cultureInfo);
+        }
+
+        /// <summary>
+        /// Get localised string for GB
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public string GetStringGB(string name)
+        {
+            return resourceManagerGB.GetString(name, cultureInfo);
         }
     }
 }

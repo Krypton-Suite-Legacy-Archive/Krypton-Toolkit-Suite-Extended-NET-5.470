@@ -52,5 +52,8 @@
   <ItemGroup>
     <Content Include="Notes\IMPORTANT.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ExtendedToolkit\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
