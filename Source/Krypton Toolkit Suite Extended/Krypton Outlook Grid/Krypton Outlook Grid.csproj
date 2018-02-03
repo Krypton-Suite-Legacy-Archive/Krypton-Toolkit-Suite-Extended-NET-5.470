@@ -77,13 +77,13 @@
     <Compile Include="Custom Columns\KryptonDataGridViewTreeTextColumn.cs" />
     <Compile Include="Formatting\ColourFormatting.cs" />
     <Compile Include="Formatting\CondtionalFormatting.cs" />
-    <Compile Include="Formatting\CustomFormatRule.cs">
+    <Compile Include="Formatting\Params\BarParams.cs" />
+    <Compile Include="Formatting\Params\CustomFormatRule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formatting\CustomFormatRule.Designer.cs">
+    <Compile Include="Formatting\Params\CustomFormatRule.Designer.cs">
       <DependentUpon>CustomFormatRule.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formatting\Params\BarParams.cs" />
     <Compile Include="Formatting\Params\ThreeColoursParams.cs" />
     <Compile Include="Formatting\Params\TwoColoursParams.cs" />
     <Compile Include="Interfaces\IOutlookGridGroup.cs" />
