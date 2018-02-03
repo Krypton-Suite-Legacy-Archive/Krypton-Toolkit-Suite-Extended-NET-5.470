@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KryptonOutlookGrid.Formatting.Params
+namespace KryptonOutlookGrid.Formatting
 {
     public partial class CustomFormatRule : Form
     {

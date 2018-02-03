@@ -1,4 +1,4 @@
-﻿namespace KryptonOutlookGrid.Formatting.Params
+﻿namespace KryptonOutlookGrid.Formatting
 {
     partial class CustomFormatRule
     {
