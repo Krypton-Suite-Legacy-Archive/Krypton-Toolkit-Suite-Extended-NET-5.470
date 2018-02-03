@@ -35,9 +35,28 @@
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Design, Version=4.71.2.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>O:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Design.dll</HintPath>
+      <HintPath>..\..\Required\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.71.533.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
+    <Reference Include="ComponentFactory.Krypton.Docking, Version=4.71.522.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Required\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.71.521.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Required\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.71.521.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Required\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.71.533.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Required\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.71.522.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Required\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -58,13 +77,13 @@
     <Compile Include="Custom Columns\KryptonDataGridViewTreeTextColumn.cs" />
     <Compile Include="Formatting\ColourFormatting.cs" />
     <Compile Include="Formatting\CondtionalFormatting.cs" />
-    <Compile Include="Formatting\Params\BarParams.cs" />
-    <Compile Include="Formatting\Params\CustomFormatRule.cs">
+    <Compile Include="Formatting\CustomFormatRule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formatting\Params\CustomFormatRule.Designer.cs">
+    <Compile Include="Formatting\CustomFormatRule.Designer.cs">
       <DependentUpon>CustomFormatRule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formatting\Params\BarParams.cs" />
     <Compile Include="Formatting\Params\ThreeColoursParams.cs" />
     <Compile Include="Formatting\Params\TwoColoursParams.cs" />
     <Compile Include="Interfaces\IOutlookGridGroup.cs" />
@@ -92,9 +111,6 @@
     <None Include="Notes\LICENSE.md" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formatting\Params\CustomFormatRule.resx">
-      <DependentUpon>CustomFormatRule.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
