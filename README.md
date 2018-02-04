@@ -6,6 +6,11 @@
 
 =======
 
+## 2018-02-04 Krypton outlook grid
+* Fully incorporated Krypton outlook grid code
+
+=======
+
 ## 2018-02-03 Krypton outlook grid
 * Krypton outlook grid 45% complete
 * Altered assembly info

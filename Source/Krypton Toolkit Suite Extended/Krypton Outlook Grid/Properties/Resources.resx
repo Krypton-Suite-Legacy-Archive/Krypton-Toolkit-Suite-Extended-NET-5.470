@@ -334,4 +334,22 @@
   <data name="TwoColors_yellow_white_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TwoColors_yellow_white_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_17871___apply_check_clean_clear_correct_ok_ready_valid_yes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17871 - apply check clean clear correct ok ready valid yes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_18520___agt_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\18520 - agt stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_18795___critical_messagebox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\18795 - critical messagebox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_18850___ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\18850 - ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_93808___calc_cancel_stock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\93808 - calc cancel stock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_94777___stock_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\94777 - stock stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

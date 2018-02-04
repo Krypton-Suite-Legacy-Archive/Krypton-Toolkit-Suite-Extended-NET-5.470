@@ -35,28 +35,9 @@
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Design, Version=4.71.2.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Design.dll</HintPath>
+      <HintPath>O:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Docking, Version=4.71.522.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Docking.dll</HintPath>
-    </Reference>
-    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.71.521.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Navigator.dll</HintPath>
-    </Reference>
-    <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.71.521.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Ribbon.dll</HintPath>
-    </Reference>
-    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.71.533.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.71.522.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Workspace.dll</HintPath>
-    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -69,6 +50,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\OutlookGrid.cs" />
+    <Compile Include="Classes\OutlookGridColumn.cs" />
+    <Compile Include="Classes\OutlookGridColumnCollection.cs" />
+    <Compile Include="Classes\OutlookGridColumnEventArgs.cs" />
+    <Compile Include="Classes\OutlookGridGroup.cs" />
+    <Compile Include="Classes\OutlookGridGroupBoxColumn.cs" />
+    <Compile Include="Classes\OutlookGridGroupCollection.cs" />
+    <Compile Include="Classes\OutlookGridGroupCountComparer.cs" />
+    <Compile Include="Classes\OutlookGridGroupImageEventArgs.cs" />
+    <Compile Include="Classes\OutlookGridRow.cs" />
+    <Compile Include="Classes\OutlookGridRowComparer.cs" />
+    <Compile Include="Classes\OutlookGridRowComparer2.cs" />
+    <Compile Include="Classes\OutlookGridRowNodeCollection.cs" />
+    <Compile Include="Classes\OutlookGridRowNodeEvents.cs" />
+    <Compile Include="Classes\StaticValues.cs" />
+    <Compile Include="Controls\KryptonOutlookGridGroupBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\KryptonOutlookGridGroupBox.Designer.cs">
+      <DependentUpon>KryptonOutlookGridGroupBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Custom Columns\KryptonDataGridViewFormattingColumn.cs" />
     <Compile Include="Custom Columns\KryptonDataGridViewPercentageColumn.cs" />
     <Compile Include="Custom Columns\KryptonDataGridViewRatingColumn.cs" />
@@ -83,9 +85,13 @@
     <Compile Include="Formatting\CustomFormatRule.Designer.cs">
       <DependentUpon>CustomFormatRule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formatting\EnumConditionalFormatType.cs" />
+    <Compile Include="Formatting\IFormatParams.cs" />
     <Compile Include="Formatting\Params\BarParams.cs" />
     <Compile Include="Formatting\Params\ThreeColoursParams.cs" />
     <Compile Include="Formatting\Params\TwoColoursParams.cs" />
+    <Compile Include="Helpers\ColourHelper.cs" />
+    <Compile Include="Helpers\OutlookGridGroupHelpers.cs" />
     <Compile Include="Interfaces\IOutlookGridGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -111,6 +117,12 @@
     <None Include="Notes\LICENSE.md" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controls\KryptonOutlookGridGroupBox.resx">
+      <DependentUpon>KryptonOutlookGridGroupBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formatting\CustomFormatRule.resx">
+      <DependentUpon>CustomFormatRule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -343,11 +355,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Notes\IMPORTANT.txt" />
+    <None Include="Resources\94777 - stock stop.png" />
+    <None Include="Resources\93808 - calc cancel stock.png" />
+    <None Include="Resources\18850 - ok.png" />
+    <None Include="Resources\18795 - critical messagebox.png" />
+    <None Include="Resources\18520 - agt stop.png" />
+    <None Include="Resources\17871 - apply check clean clear correct ok ready valid yes.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-    <Folder Include="Controls\" />
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,6 +9,8 @@
 //--------------------------------------------------------------------------------
 
 using ComponentFactory.Krypton.Toolkit;
+using KryptonOutlookGrid.Formatting;
+using KryptonOutlookGrid.Formatting.Params;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -126,7 +128,7 @@ namespace KryptonOutlookGrid.CustomColumns
             {
                 switch (FormatType)
                 {
-                    case EnumConditionalFormatType.Bar:
+                    case EnumConditionalFormatType.BAR:
                         int barWidth;
                         BarParams par = (BarParams)FormatParams;
                         barWidth = (int)((cellBounds.Width - 10) * par.ProportionValue);
@@ -138,36 +140,36 @@ namespace KryptonOutlookGrid.CustomColumns
                             Rectangle r = new Rectangle(cellBounds.X + 3, cellBounds.Y + 3, barWidth, cellBounds.Height - 8);
                             if (par.GradientFill)
                             {
-                                using (LinearGradientBrush linearBrush = new LinearGradientBrush(r, par.BarColor, Color.White, LinearGradientMode.Horizontal)) //Color.FromArgb(255, 247, 251, 242)
+                                using (LinearGradientBrush linearBrush = new LinearGradientBrush(r, par.BarColour, Color.White, LinearGradientMode.Horizontal)) //Color.FromArgb(255, 247, 251, 242)
                                 {
                                     graphics.FillRectangle(linearBrush, r);
                                 }
                             }
                             else
                             {
-                                using (SolidBrush solidBrush = new SolidBrush(par.BarColor)) //Color.FromArgb(255, 247, 251, 242)
+                                using (SolidBrush solidBrush = new SolidBrush(par.BarColour)) //Color.FromArgb(255, 247, 251, 242)
                                 {
                                     graphics.FillRectangle(solidBrush, r);
                                 }
                             }
 
-                            using (Pen pen = new Pen(par.BarColor)) //Color.FromArgb(255, 140, 197, 66)))
+                            using (Pen pen = new Pen(par.BarColour)) //Color.FromArgb(255, 140, 197, 66)))
                             {
                                 graphics.DrawRectangle(pen, r);
                             }
                         }
 
                         break;
-                    case EnumConditionalFormatType.TwoColorsRange:
-                        TwoColorsParams TWCpar = (TwoColorsParams)FormatParams;
-                        Style.BackColor = TWCpar.ValueColor;
+                    case EnumConditionalFormatType.TWOCOLOURSRANGE:
+                        TwoColoursParams TWCpar = (TwoColoursParams)FormatParams;
+                        Style.BackColor = TWCpar.ValueColour;
                         //  if (ContrastTextColor)
-                        Style.ForeColor = ContrastColour(TWCpar.ValueColor);
+                        Style.ForeColor = ContrastColour(TWCpar.ValueColour);
                         break;
-                    case EnumConditionalFormatType.ThreeColorsRange:
-                        ThreeColorsParams THCpar = (ThreeColorsParams)FormatParams;
-                        Style.BackColor = THCpar.ValueColor;
-                        Style.ForeColor = ContrastColour(THCpar.ValueColor);
+                    case EnumConditionalFormatType.THREECOLOURSRANGE:
+                        ThreeColoursParams THCpar = (ThreeColoursParams)FormatParams;
+                        Style.BackColor = THCpar.ValueColour;
+                        Style.ForeColor = ContrastColour(THCpar.ValueColour);
                         break;
                     default:
                         Style.BackColor = this.DataGridView.DefaultCellStyle.BackColor;

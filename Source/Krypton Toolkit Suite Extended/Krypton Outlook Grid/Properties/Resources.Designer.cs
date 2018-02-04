@@ -63,6 +63,66 @@ namespace KryptonOutlookGrid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _17871___apply_check_clean_clear_correct_ok_ready_valid_yes {
+            get {
+                object obj = ResourceManager.GetObject("_17871___apply_check_clean_clear_correct_ok_ready_valid_yes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _18520___agt_stop {
+            get {
+                object obj = ResourceManager.GetObject("_18520___agt_stop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _18795___critical_messagebox {
+            get {
+                object obj = ResourceManager.GetObject("_18795___critical_messagebox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _18850___ok {
+            get {
+                object obj = ResourceManager.GetObject("_18850___ok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _93808___calc_cancel_stock {
+            get {
+                object obj = ResourceManager.GetObject("_93808___calc_cancel_stock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _94777___stock_stop {
+            get {
+                object obj = ResourceManager.GetObject("_94777___stock_stop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CollapseIcon {
             get {
                 object obj = ResourceManager.GetObject("CollapseIcon", resourceCulture);

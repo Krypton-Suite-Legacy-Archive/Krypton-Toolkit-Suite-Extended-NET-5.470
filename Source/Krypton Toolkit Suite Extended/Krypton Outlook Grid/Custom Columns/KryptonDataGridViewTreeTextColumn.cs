@@ -9,6 +9,7 @@
 //--------------------------------------------------------------------------------
 
 using ComponentFactory.Krypton.Toolkit;
+using KryptonOutlookGrid.Classes;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -193,7 +194,7 @@ namespace KryptonOutlookGrid.CustomColumns
             //}
 
             // Paint tree lines			
-            if (((KryptonOutlookGrid)node.DataGridView).ShowLines)
+            if (((Classes.KryptonOutlookGrid)node.DataGridView).ShowLines)
             {
                 using (Pen linePen = new Pen(SystemBrushes.ControlDark, 1.0f))
                 {
@@ -301,7 +302,7 @@ namespace KryptonOutlookGrid.CustomColumns
 
             OutlookGridRow node = OwningNode;
             if (node != null)
-                ((KryptonOutlookGrid)node.DataGridView)._inExpandCollapseMouseCapture = false;
+                ((Classes.KryptonOutlookGrid)node.DataGridView)._inExpandCollapseMouseCapture = false;
         }
         /// <summary>
         /// Raises the <see cref="E:MouseDown" /> event.
@@ -322,7 +323,7 @@ namespace KryptonOutlookGrid.CustomColumns
                 OutlookGridRow node = OwningNode;
                 if (node != null)
                 {
-                    ((KryptonOutlookGrid)node.DataGridView)._inExpandCollapseMouseCapture = true;
+                    ((Classes.KryptonOutlookGrid)node.DataGridView)._inExpandCollapseMouseCapture = true;
 
                     if (node.Collapsed)
                         node.Expand();
