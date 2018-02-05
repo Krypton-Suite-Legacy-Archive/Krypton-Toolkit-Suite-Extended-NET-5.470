@@ -57,6 +57,7 @@
 		ABORT = 5,
 		RETRYABORT = 6,
 		RETRYABORTCANCEL = 7
+		CUSTOM = 8
 	}
 	
 	public enum KryptonMessageBoxMessageBoxResult
@@ -65,6 +66,11 @@
 		NO = 1,
 		NONE = 2,
 		OK = 3,
-		YES = 4
+		YES = 4,
+		RETRY = 5,
+		ABORT = 6,
+		RETRYABORT = 7,
+		RETRYABORTCANCEL = 8,
+		CUSTOM = 9
 	}
 }
