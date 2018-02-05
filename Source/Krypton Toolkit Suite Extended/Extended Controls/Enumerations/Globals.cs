@@ -3,7 +3,7 @@
     /// <summary>
     /// Messagebox icon
     /// </summary>
-    public enum KryptonMessageBoxIcon
+    internal enum KryptonMessageBoxIcon
     {
         /// <summary>
         /// A hand icon.
@@ -47,7 +47,7 @@
         NONE = 9
     }
 	
-	public enum KryptonMessageBoxButton
+	internal enum KryptonMessageBoxButton
 	{
 		OK = 0,
 		OKCANCEL = 1,
@@ -60,7 +60,7 @@
 		CUSTOM = 8
 	}
 	
-	public enum KryptonMessageBoxMessageBoxResult
+	internal enum KryptonMessageBoxMessageBoxResult
 	{
 		CANCEL = 0,
 		NO = 1,
