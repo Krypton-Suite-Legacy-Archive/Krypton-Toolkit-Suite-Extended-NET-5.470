@@ -77,6 +77,18 @@
     <Compile Include="Base\UI\KryptonFormBase.Designer.cs">
       <DependentUpon>KryptonFormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\AutosizeLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\HTMLLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Messageboxes\ExtendedKryptonMessagebox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Messageboxes\ExtendedKryptonMessagebox.Designer.cs">
+      <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -96,10 +108,11 @@
     <None Include="Resources\error.png" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="ExtendedToolkit\Messageboxes\" />
-  </ItemGroup>
-  <ItemGroup>
+    <EmbeddedResource Include="ExtendedToolkit\Messageboxes\ExtendedKryptonMessagebox.resx">
+      <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
