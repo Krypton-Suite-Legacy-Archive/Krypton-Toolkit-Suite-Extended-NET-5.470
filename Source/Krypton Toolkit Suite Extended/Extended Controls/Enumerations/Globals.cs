@@ -46,4 +46,25 @@
         /// </summary>
         NONE = 9
     }
+	
+	public enum KryptonMessageBoxButton
+	{
+		OK = 0,
+		OKCANCEL = 1,
+		YESNO = 2
+		YESNOCANCEL = 3,
+		RETRY = 4,
+		ABORT = 5,
+		RETRYABORT = 6,
+		RETRYABORTCANCEL = 7
+	}
+	
+	public enum KryptonMessageBoxMessageBoxResult
+	{
+		CANCEL = 0,
+		NO = 1,
+		NONE = 2,
+		OK = 3,
+		YES = 4
+	}
 }
