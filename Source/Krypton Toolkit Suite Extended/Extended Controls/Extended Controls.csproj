@@ -77,12 +77,7 @@
     <Compile Include="Base\UI\KryptonFormBase.Designer.cs">
       <DependentUpon>KryptonFormBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExtendedToolkit\Controls\AutosizeLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Controls\HTMLLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Enumerations\Globals.cs" />
     <Compile Include="ExtendedToolkit\Messageboxes\ExtendedKryptonMessagebox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,7 +103,9 @@
     <None Include="Resources\error.png" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ExtendedToolkit\Controls\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ExtendedToolkit\Messageboxes\ExtendedKryptonMessagebox.resx">
       <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
