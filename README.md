@@ -4,6 +4,12 @@
 
 ## An extension to the Krypton Toolkit suite of controls for .NET framework 4.7 
 
+======
+
+## 2018-02-05 Krypton outlook grid & Krypton messagebox base
+* Fixed bug with Krypton outlook grid
+* Incorporated a 'base' Krypton messagebox as a reference for extending
+
 =======
 
 ## 2018-02-04 Krypton outlook grid

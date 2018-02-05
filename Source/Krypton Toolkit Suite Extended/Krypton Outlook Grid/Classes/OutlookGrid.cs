@@ -39,7 +39,7 @@ namespace KryptonOutlookGrid.Classes
     /// <summary>
     /// Krypton DataGridView allowing nested grouping and unlimited sorting
     /// </summary>
-    /// <seealso cref="KryptonDataGridView" />
+    /// <seealso cref="ComponentFactory.Krypton.Toolkit.KryptonDataGridView" />
     public partial class KryptonOutlookGrid : KryptonDataGridView
     {
         private KryptonOutlookGridGroupBox groupBox;
@@ -80,7 +80,12 @@ namespace KryptonOutlookGrid.Classes
         private KryptonContextMenuSeparator _menuSeparator5;
         private KryptonContextMenuItem _menuConditionalFormatting;
         private int colSelected = 1;         //for menu
-        private const int FormattingBarSolidGradientSepIndex = 3;
+        private const int FormattingBARSolidGradientSepIndex = 3;
+
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
         //For the Drag and drop of columns
         private Rectangle DragDropRectangle;
@@ -137,7 +142,7 @@ namespace KryptonOutlookGrid.Classes
             groupCollection = new OutlookGridGroupCollection(null);
             internalRows = new List<OutlookGridRow>();
             internalColumns = new OutlookGridColumnCollection();
-            _fillMode = FillMode.GROUPONLY;
+            _fillMode = FillMode.GROUPSONLY;
 
             // Cache the current global palette setting
             _palette = KryptonManager.CurrentGlobalPalette;
@@ -176,6 +181,11 @@ namespace KryptonOutlookGrid.Classes
             StaticValues._ImageOffsetwidth = (int)(StaticValues._ImageOffsetwidth * factorX);
             StaticValues._groupLevelMultiplier = (int)(StaticValues._groupLevelMultiplier * factorX);
             StaticValues._groupImageSide = (int)(StaticValues._groupImageSide * factorX);
+        }
+
+        private void InitializeComponent()
+        {
+            components = new Container();
         }
 
         /// <summary>
@@ -1115,7 +1125,7 @@ namespace KryptonOutlookGrid.Classes
             fm.Dispose();
         }
 
-        private void OnBarCustomClick(object sender, EventArgs e)
+        private void OnBARCustomClick(object sender, EventArgs e)
         {
             CustomFormatRule fm = new CustomFormatRule(EnumConditionalFormatType.BAR);
             fm.ShowDialog();
@@ -1847,46 +1857,46 @@ namespace KryptonOutlookGrid.Classes
                         it.Image = Properties.Resources.databar_generic_16;
 
                         //Solid
-                        KryptonContextMenuHeading KFormattingBarHeadingSolid = new KryptonContextMenuHeading();
-                        KFormattingBarHeadingSolid.Text = LanguageManager.Instance.GetStringGB("SolidFill");
-                        KryptonContextMenuImageSelect KFormattingBarImgSelectSolid = new KryptonContextMenuImageSelect();
-                        KFormattingBarImgSelectSolid.ImageList = imgListFormatting;
-                        KFormattingBarImgSelectSolid.ImageIndexStart = 0;
-                        KFormattingBarImgSelectSolid.ImageIndexEnd = 5;
-                        KFormattingBarImgSelectSolid.LineItems = 4;
-                        KFormattingBarImgSelectSolid.Tag = tmpTag;
-                        KFormattingBarImgSelectSolid.Click += OnConditionalFormattingClick;
+                        KryptonContextMenuHeading KFormattingBARHeadingSolid = new KryptonContextMenuHeading();
+                        KFormattingBARHeadingSolid.Text = LanguageManager.Instance.GetStringGB("SolidFill");
+                        KryptonContextMenuImageSelect KFormattingBARImgSelectSolid = new KryptonContextMenuImageSelect();
+                        KFormattingBARImgSelectSolid.ImageList = imgListFormatting;
+                        KFormattingBARImgSelectSolid.ImageIndexStart = 0;
+                        KFormattingBARImgSelectSolid.ImageIndexEnd = 5;
+                        KFormattingBARImgSelectSolid.LineItems = 4;
+                        KFormattingBARImgSelectSolid.Tag = tmpTag;
+                        KFormattingBARImgSelectSolid.Click += OnConditionalFormattingClick;
 
                         //Gradient
-                        KryptonContextMenuHeading KFormattingBarHeadingGradient = new KryptonContextMenuHeading();
-                        KFormattingBarHeadingGradient.Text = LanguageManager.Instance.GetStringGB("GradientFill");
-                        KryptonContextMenuImageSelect KFormattingBarImgSelectGradient = new KryptonContextMenuImageSelect();
-                        KFormattingBarImgSelectGradient.ImageList = imgListFormatting;
-                        KFormattingBarImgSelectGradient.ImageIndexStart = 6;
-                        KFormattingBarImgSelectGradient.ImageIndexEnd = 11;
-                        KFormattingBarImgSelectGradient.LineItems = 4;
-                        KFormattingBarImgSelectGradient.Tag = tmpTag;
-                        KFormattingBarImgSelectGradient.Click += OnConditionalFormattingClick;
+                        KryptonContextMenuHeading KFormattingBARHeadingGradient = new KryptonContextMenuHeading();
+                        KFormattingBARHeadingGradient.Text = LanguageManager.Instance.GetStringGB("GradientFill");
+                        KryptonContextMenuImageSelect KFormattingBARImgSelectGradient = new KryptonContextMenuImageSelect();
+                        KFormattingBARImgSelectGradient.ImageList = imgListFormatting;
+                        KFormattingBARImgSelectGradient.ImageIndexStart = 6;
+                        KFormattingBARImgSelectGradient.ImageIndexEnd = 11;
+                        KFormattingBARImgSelectGradient.LineItems = 4;
+                        KFormattingBARImgSelectGradient.Tag = tmpTag;
+                        KFormattingBARImgSelectGradient.Click += OnConditionalFormattingClick;
 
                         //Custom
-                        KryptonContextMenuHeading KFormattingBarHeadingOther = new KryptonContextMenuHeading();
-                        KFormattingBarHeadingOther.Text = LanguageManager.Instance.GetStringGB("Other");
+                        KryptonContextMenuHeading KFormattingBARHeadingOther = new KryptonContextMenuHeading();
+                        KFormattingBARHeadingOther.Text = LanguageManager.Instance.GetStringGB("Other");
                         KryptonContextMenuItem it2 = null;
                         it2 = new KryptonContextMenuItem(LanguageManager.Instance.GetStringGB("CustomThreeDots"));
                         it2.Tag = "";
                         it2.Image = Properties.Resources.paint_bucket_green;
-                        it2.Click += OnBarCustomClick;
+                        it2.Click += OnBARCustomClick;
 
-                        KryptonContextMenuItems _Bars = new KryptonContextMenuItems(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] { it2 });
+                        KryptonContextMenuItems _BARs = new KryptonContextMenuItems(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] { it2 });
 
                         //Menu construction
                         it.Items.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
-                        KFormattingBarHeadingSolid,
-                        KFormattingBarImgSelectSolid,
-                        KFormattingBarHeadingGradient,
-                        KFormattingBarImgSelectGradient,
-                        KFormattingBarHeadingOther,
-                        _Bars
+                        KFormattingBARHeadingSolid,
+                        KFormattingBARImgSelectSolid,
+                        KFormattingBARHeadingGradient,
+                        KFormattingBARImgSelectGradient,
+                        KFormattingBARHeadingOther,
+                        _BARs
                         });
                     }
                     else if (names[i] == EnumConditionalFormatType.TWOCOLOURSRANGE.ToString())
@@ -2596,7 +2606,7 @@ namespace KryptonOutlookGrid.Classes
                 // }
 
                 //Add rows to underlying DataGridView
-                if (_fillMode == FillMode.GROUPONLY)
+                if (_fillMode == FillMode.GROUPSONLY)
                 {
                     Rows.AddRange(list.ToArray());
                 }
@@ -2816,7 +2826,7 @@ namespace KryptonOutlookGrid.Classes
                 }
 
                 //We add the rows associated with the current group
-                if (_fillMode == FillMode.GROUPONLY)
+                if (_fillMode == FillMode.GROUPSONLY)
                 {
                     tmp.AddRange(gr.Rows);
                 }
@@ -2931,7 +2941,7 @@ namespace KryptonOutlookGrid.Classes
         /// <summary>
         /// The grid contains only groups (faster).
         /// </summary>
-        GROUPONLY,
+        GROUPSONLY,
         /// <summary>
         /// The grid contains groups and nodes (no choice, choose this one !)
         /// </summary>
