@@ -97,7 +97,7 @@
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ExtendedToolkit\" />
+    <Folder Include="ExtendedToolkit\Messageboxes\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
