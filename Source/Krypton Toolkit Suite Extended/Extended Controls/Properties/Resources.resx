@@ -124,10 +124,40 @@
   <data name="help2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="if_Symbol_Check_49258" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Symbol-Check_49258.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Symbol_Delete_49260" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Symbol-Delete_49260.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Symbol_Error_49261" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Symbol-Error_49261.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Symbol_Exclamation_49262" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Symbol-Exclamation_49262.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Symbol_Help_49263" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Symbol-Help_49263.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Symbol_Information_49264" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Symbol-Information_49264.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Symbol_Restricted_49266" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Symbol-Restricted_49266.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Symbol_Stop_49267" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Symbol-Stop_49267.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="information" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sign_warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sign_warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Symbol_Error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Symbol-Error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

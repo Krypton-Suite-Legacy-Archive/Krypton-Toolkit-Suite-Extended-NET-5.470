@@ -1,4 +1,4 @@
-﻿namespace ExtendedControls.ExtendedToolkit.Messageboxes
+﻿namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
 {
     partial class ExtendedKryptonMessagebox
     {
@@ -49,7 +49,7 @@
             this.pbxIcon.BackColor = System.Drawing.Color.Transparent;
             this.pbxIcon.Location = new System.Drawing.Point(12, 12);
             this.pbxIcon.Name = "pbxIcon";
-            this.pbxIcon.Size = new System.Drawing.Size(65, 65);
+            this.pbxIcon.Size = new System.Drawing.Size(128, 128);
             this.pbxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbxIcon.TabIndex = 0;
             this.pbxIcon.TabStop = false;

@@ -83,6 +83,86 @@ namespace ExtendedControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_Symbol_Check_49258 {
+            get {
+                object obj = ResourceManager.GetObject("if_Symbol_Check_49258", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_Symbol_Delete_49260 {
+            get {
+                object obj = ResourceManager.GetObject("if_Symbol_Delete_49260", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_Symbol_Error_49261 {
+            get {
+                object obj = ResourceManager.GetObject("if_Symbol_Error_49261", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_Symbol_Exclamation_49262 {
+            get {
+                object obj = ResourceManager.GetObject("if_Symbol_Exclamation_49262", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_Symbol_Help_49263 {
+            get {
+                object obj = ResourceManager.GetObject("if_Symbol_Help_49263", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_Symbol_Information_49264 {
+            get {
+                object obj = ResourceManager.GetObject("if_Symbol_Information_49264", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_Symbol_Restricted_49266 {
+            get {
+                object obj = ResourceManager.GetObject("if_Symbol_Restricted_49266", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_Symbol_Stop_49267 {
+            get {
+                object obj = ResourceManager.GetObject("if_Symbol_Stop_49267", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap information {
             get {
                 object obj = ResourceManager.GetObject("information", resourceCulture);
@@ -96,6 +176,26 @@ namespace ExtendedControls.Properties {
         internal static System.Drawing.Bitmap sign_warning {
             get {
                 object obj = ResourceManager.GetObject("sign_warning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Symbol_Error {
+            get {
+                object obj = ResourceManager.GetObject("Symbol_Error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Warning {
+            get {
+                object obj = ResourceManager.GetObject("Warning", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -6,6 +6,11 @@
 
 ======
 
+## 2018-02-06 New resources
+* New icons for messageboxes
+
+======
+
 ## 2018-02-05pm New `Globals.cs` class for enumerations
 * New `Globals.cs` class for custom enumerations. (Needs documentation finishing off)
 * NOTE FOR FUTURE REFRENCE: Find suitable icons for messageboxes (CC license maybe?)

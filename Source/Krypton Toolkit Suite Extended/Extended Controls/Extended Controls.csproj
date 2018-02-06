@@ -78,10 +78,14 @@
       <DependentUpon>KryptonFormBase.cs</DependentUpon>
     </Compile>
     <Compile Include="Enumerations\Globals.cs" />
-    <Compile Include="ExtendedToolkit\Messageboxes\ExtendedKryptonMessagebox.cs">
+    <Compile Include="ExtendedToolkit\Controls\ExtendedProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Messageboxes\Classes\Globals.cs" />
+    <Compile Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\Messageboxes\ExtendedKryptonMessagebox.Designer.cs">
+    <Compile Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.Designer.cs">
       <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,13 +105,21 @@
     <None Include="Resources\information.png" />
     <None Include="Resources\sign_warning.png" />
     <None Include="Resources\error.png" />
+    <None Include="Resources\if_Symbol-Delete_49260.png" />
+    <None Include="Resources\if_Symbol-Exclamation_49262.png" />
+    <None Include="Resources\if_Symbol-Help_49263.png" />
+    <None Include="Resources\if_Symbol-Information_49264.png" />
+    <None Include="Resources\if_Symbol-Restricted_49266.png" />
+    <None Include="Resources\if_Symbol-Stop_49267.png" />
+    <None Include="Resources\Symbol-Error.png" />
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\if_Symbol-Check_49258.png" />
+    <None Include="Resources\if_Symbol-Error_49261.png" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="ExtendedToolkit\Controls\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ExtendedToolkit\Messageboxes\ExtendedKryptonMessagebox.resx">
+    <EmbeddedResource Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.resx">
       <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
