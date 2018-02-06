@@ -10,7 +10,6 @@
 // *****************************************************************************
 
 using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.Base.UI;
 using ExtendedControls.Properties;
 using System;
 using System.ComponentModel;
@@ -29,7 +28,7 @@ namespace ExtendedControls.Base.Code
     [ToolboxBitmap(typeof(KryptonMessageBoxBase), "ToolboxBitmaps.KryptonMessageBox.bmp")]
     [DesignerCategory("code")]
     [DesignTimeVisible(false)]
-    public class KryptonMessageBoxBase : KryptonFormBase
+    public class KryptonMessageBoxBase : KryptonForm
     {
         #region Types
         internal class HelpInfo
