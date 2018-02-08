@@ -6,6 +6,12 @@
 
 ======
 
+## 2018-02-08 New controls 
+* Extended 'KryptonTextBox' to have watermark functionality.
+* Wrapped 'KryptonTextBox' into a toolstrip container object to make it easier to add new functionality i.e watermarks.
+
+======
+
 ## 2018-02-06 New resources
 * New icons for messageboxes
 
