@@ -77,10 +77,17 @@
     <Compile Include="Base\UI\KryptonFormBase.Designer.cs">
       <DependentUpon>KryptonFormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Base\UI\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\UI\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enumerations\Globals.cs" />
     <Compile Include="ExtendedToolkit\Controls\ExtendedProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonUACShieldButton.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonWaterMarkTextBox.cs" />
     <Compile Include="ExtendedToolkit\Messageboxes\Classes\Globals.cs" />
     <Compile Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.cs">
@@ -133,7 +140,12 @@
     <None Include="Resources\if_Symbol-Error_49261.png" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Global Utilities\Global Utilities.csproj">
+      <Project>{2cdbe9aa-deb3-4a7b-97d7-7dc665418e92}</Project>
+      <Name>Global Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.resx">
       <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>

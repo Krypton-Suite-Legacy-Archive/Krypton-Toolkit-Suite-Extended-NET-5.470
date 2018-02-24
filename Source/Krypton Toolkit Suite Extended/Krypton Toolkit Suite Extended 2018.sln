@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krypton Outlook Grid", "Kry
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Item Templates", "Item Templates\Item Templates.csproj", "{187B24BA-4B66-4D61-9BD6-D0E83DB45BD5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global Utilities", "Global Utilities\Global Utilities.csproj", "{2CDBE9AA-DEB3-4A7B-97D7-7DC665418E92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{187B24BA-4B66-4D61-9BD6-D0E83DB45BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{187B24BA-4B66-4D61-9BD6-D0E83DB45BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{187B24BA-4B66-4D61-9BD6-D0E83DB45BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CDBE9AA-DEB3-4A7B-97D7-7DC665418E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CDBE9AA-DEB3-4A7B-97D7-7DC665418E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CDBE9AA-DEB3-4A7B-97D7-7DC665418E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CDBE9AA-DEB3-4A7B-97D7-7DC665418E92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

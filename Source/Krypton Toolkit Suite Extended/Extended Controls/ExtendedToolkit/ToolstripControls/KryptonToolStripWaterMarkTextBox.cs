@@ -171,7 +171,7 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
 
                 LostFocus += new EventHandler(WaterMarkToggle);
 
-                FontChanged += new EventHandler(WaterMarkFontChanged);
+                //FontChanged += new EventHandler(WaterMarkFontChanged);
             }
         }
 
@@ -199,12 +199,12 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
             _oldTypeface = new Font(Font.FontFamily, Font.Size, Font.Style, Font.Unit);
 
             //Enable OnPaint event handler
-            SetStyle(ControlStyles.UserPaint, true);
+            //SetStyle(ControlStyles.UserPaint, true);
 
             WaterMarkTextEnabled = true;
 
             //Trigger OnPaint immediately
-            Refresh();
+            //Refresh();
         }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
             //Disable OnPaint event handler
             WaterMarkTextEnabled = false;
 
-            SetStyle(ControlStyles.UserPaint, false);
+            //SetStyle(ControlStyles.UserPaint, false);
 
             //Return back oldFont if existed
             if (_oldTypeface != null)
@@ -233,7 +233,7 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
             {
                 _oldTypeface = new Font(Font.FontFamily, Font.Size, Font.Style, Font.Unit);
 
-                Refresh();
+                //Refresh();
             }
         }
         #endregion

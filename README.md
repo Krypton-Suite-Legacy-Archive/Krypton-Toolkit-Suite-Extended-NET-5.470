@@ -6,6 +6,12 @@
 
 ======
 
+## 2018-02-24 New Control
+* Krypton UAC shield button
+* New options for developers to check if the user is running Windows 7 or higher. 64-bit checks will follow soon.
+
+======
+
 ## 2018-02-08 New controls 
 * Extended 'KryptonTextBox' to have watermark functionality.
 * Wrapped 'KryptonTextBox' into a toolstrip container object to make it easier to add new functionality i.e watermarks.
