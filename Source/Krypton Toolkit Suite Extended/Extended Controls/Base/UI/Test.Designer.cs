@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test));
+            this.kryptonUACShieldButton1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonUACShieldButton();
+            this.SuspendLayout();
+            // 
+            // kryptonUACShieldButton1
+            // 
+            this.kryptonUACShieldButton1.Location = new System.Drawing.Point(398, 144);
+            this.kryptonUACShieldButton1.Name = "kryptonUACShieldButton1";
+            this.kryptonUACShieldButton1.Size = new System.Drawing.Size(208, 43);
+            this.kryptonUACShieldButton1.TabIndex = 0;
+            this.kryptonUACShieldButton1.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonUACShieldButton1.Values.Image")));
+            this.kryptonUACShieldButton1.Values.Text = "kryptonUACShieldButton1";
+            // 
+            // Test
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.kryptonUACShieldButton1);
+            this.Name = "Test";
             this.Text = "Test";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private ExtendedToolkit.Controls.KryptonUACShieldButton kryptonUACShieldButton1;
     }
 }

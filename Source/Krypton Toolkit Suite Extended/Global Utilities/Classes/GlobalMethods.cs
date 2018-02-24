@@ -113,6 +113,24 @@ namespace GlobalUtilities.Classes
 
             return IsTargetPlatformSupported;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public bool IsTargetPlatformRunningIn64BITMode()
+        {
+            if (Environment.Is64BitOperatingSystem)
+            {
+                IsTargetPlatform64BIT = true;
+            }
+            else
+            {
+                IsTargetPlatform64BIT = false;
+            }
+
+            return IsTargetPlatform64BIT;
+        }
         #endregion
 
         #region De-constructor

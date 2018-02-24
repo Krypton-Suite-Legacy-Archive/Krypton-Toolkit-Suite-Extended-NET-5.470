@@ -147,6 +147,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Base\UI\Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.resx">
       <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
     </EmbeddedResource>
