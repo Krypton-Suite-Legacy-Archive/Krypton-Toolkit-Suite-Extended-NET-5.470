@@ -1,4 +1,5 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using ExtendedControls.Base.Code;
+using ComponentFactory.Krypton.Toolkit;
 using GlobalUtilities.Classes;
 using System;
 using System.ComponentModel;
@@ -22,11 +23,36 @@ namespace ExtendedControls.ExtendedToolkit.Controls
     public partial class KryptonUACShieldButton : KryptonButton
     {
         #region Variables
+        private string _processName = string.Empty;
+
         private static bool? _isSystemAbleToLoadShield = null;
 
         private const int BCM_SETSHIELD = 0x160C;
 
         private GlobalMethods _globalMethods = new GlobalMethods();
+
+        private UtilityMethods _utilityMethods = new UtilityMethods();
+        #endregion
+
+        #region Properties
+        /// <summary>
+        /// The application assembly.
+        /// </summary>
+        /// <remarks>
+        /// Use 'Assembly.GetExecutingAssembly()...' as a start.
+        /// </remarks>
+        public string ProcessName
+        {
+            get
+            {
+                return _processName;
+            }
+
+            set
+            {
+                _processName = value;
+            }
+        }
         #endregion
 
         #region Constructor
@@ -66,7 +92,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
                     }
                     catch (Exception exc)
                     {
-                        MessageBox.Show("Your platform is unsupported. Please contact the software vendor for details.", "Unsupported Software", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Your platform is unsupported. Please contact the software vendor for details.\nFor reference, your system is running: { _globalMethods.GetOSFriendlyName() }.\nException message: { exc.Message }.", "Unsupported Software", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         _isSystemAbleToLoadShield = false;
                     }
@@ -76,6 +102,21 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
                 NativeMethods.SendMessage(Handle, BCM_SETSHIELD, IntPtr.Zero, new IntPtr(1));
             }
+        }
+        #endregion
+
+        #region Overrides
+        protected override void OnClick(EventArgs e)
+        {
+            if (_globalMethods.GetIsTargetPlatformSupported())
+            {
+                if (ProcessName != string.Empty)
+                {
+                    _utilityMethods.ElevateProcessWithAdministrativeRights(ProcessName);
+                }
+            }
+
+            base.OnClick(e);
         }
         #endregion
     }

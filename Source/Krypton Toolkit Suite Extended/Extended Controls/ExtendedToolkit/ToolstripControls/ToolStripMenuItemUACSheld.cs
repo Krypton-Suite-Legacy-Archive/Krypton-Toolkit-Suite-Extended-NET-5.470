@@ -62,7 +62,7 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
                     }
                     catch (Exception exc)
                     {
-                        MessageBox.Show("Your platform is unsupported. Please contact the software vendor for details.", "Unsupported Software", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Your platform is unsupported. Please contact the software vendor for details.\nFor reference, your system is running: { _globalMethods.GetOSFriendlyName() }.\nException message: { exc.Message }.", "Unsupported Software", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         _isSystemAbleToLoadShield = false;
                     }

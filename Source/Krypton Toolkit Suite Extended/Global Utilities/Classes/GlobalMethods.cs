@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Management;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Security.Principal;
@@ -194,6 +195,38 @@ namespace GlobalUtilities.Classes
 
                 return;
             }
+        }
+
+        public static string GetOSFriendlyNameForStaticMetods()
+        {
+            string result = string.Empty;
+
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT Caption FROM Win32_OperatingSystem");
+
+            foreach (ManagementObject os in searcher.Get())
+            {
+                result = os["Caption"].ToString();
+
+                break;
+            }
+
+            return result;
+        }
+
+        public string GetOSFriendlyName()
+        {
+            string result = string.Empty;
+
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT Caption FROM Win32_OperatingSystem");
+
+            foreach (ManagementObject os in searcher.Get())
+            {
+                result = os["Caption"].ToString();
+
+                break;
+            }
+
+            return result;
         }
         #endregion
 
