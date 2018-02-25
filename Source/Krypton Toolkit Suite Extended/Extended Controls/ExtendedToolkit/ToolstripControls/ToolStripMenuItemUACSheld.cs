@@ -1,25 +1,23 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using GlobalUtilities.Classes;
-using System;
+﻿using System;
 using System.ComponentModel;
-using System.Drawing;
 using System.Windows.Forms;
+using System.Drawing;
+using System.Windows.Forms.Design;
+using GlobalUtilities.Classes;
 
-namespace ExtendedControls.ExtendedToolkit.Controls
+namespace ExtendedControls.ExtendedToolkit.ToolstripControls
 {
     /// <summary>
-    /// A standard Krypton button control with UAC shield
+    /// A standard tool strip menu item control with UAC shield.
     /// Modified from the AeroSuite project.
     /// </summary>
     /// <remarks>
     /// The shield is extracted from the system with LoadImage if possible. Otherwise the shield will be enabled by sending the BCM_SETSHIELD Message to the control.
     /// If the operating system is not Windows Vista or higher, no shield will be displayed as there's no such thing as UAC on the target system -> the shield is obsolete.
     /// </remarks>
-    [DesignerCategory("Code")]
-    [DisplayName("Krypton UAC Shield Button")]
-    [ToolboxItem(true)]
-    [ToolboxBitmap(typeof(KryptonButton))]
-    public partial class KryptonUACShieldButton : KryptonButton
+    [DisplayName("ToolStrip UAC Shield Menu Item")]
+    [ToolboxBitmap(typeof(ToolStripMenuItem)), ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.All)]
+    public partial class ToolStripMenuItemUACSheld : ToolStripMenuItem
     {
         #region Variables
         private static bool? _isSystemAbleToLoadShield = null;
@@ -31,12 +29,10 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
         #region Constructor
         /// <summary>
-        /// Initialises a new instance of the <see cref="KryptonUACShieldButton"/> class.
+        /// Initialises a new instance of the <see cref="ToolStripMenuItemUACSheld"/> class.
         /// </summary>
-        public KryptonUACShieldButton() : base()
+        public ToolStripMenuItemUACSheld() : base()
         {
-            Size = new Size((int)(Width * 1.5), Height + 1);
-
             _globalMethods.CheckIfTargetPlatformIsSupported(true);
 
             if (_globalMethods.GetIsTargetPlatformSupported())
@@ -49,11 +45,11 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
                         if (_icon != null)
                         {
-                            Values.Image = _icon.ToBitmap();
+                            Image = _icon.ToBitmap();
 
-                            //this.TextImageRelation = TextImageRelation.ImageBeforeText;
+                            TextImageRelation = TextImageRelation.ImageBeforeText;
 
-                            //Values.Image.ImageAlign = ContentAlignment.MiddleCenter;
+                            ImageAlign = ContentAlignment.MiddleCenter;
 
                             _isSystemAbleToLoadShield = true;
 
@@ -72,9 +68,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
                     }
                 }
 
-                //FlatStyle = FlatStyle.System;
-
-                NativeMethods.SendMessage(Handle, BCM_SETSHIELD, IntPtr.Zero, new IntPtr(1));
+                //NativeMethods.SendMessage(Handle, BCM_SETSHIELD, IntPtr.Zero, new IntPtr(1));
             }
         }
         #endregion

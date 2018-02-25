@@ -6,6 +6,15 @@
 
 ======
 
+## 2018-02-25 New Control, methods and documentation
+* Added a new toolstrip menu item UAC shield control
+* Added/cleaned up documentation for methods
+* New setter/getter methods for certain properties in `Global Utilities`
+* New method `ElevateProcessWithAdministrativeRights(string processName)` for elevating your application with administrative rights (to be used in conjunction with the recently added UAC shield controls)
+* New `CODE_OF_CONDUCT.md` file for project
+
+======
+
 ## 2018-02-24 New Control
 * Krypton UAC shield button
 * New options for developers to check if the user is running Windows 7 or higher. 64-bit checks will follow soon.

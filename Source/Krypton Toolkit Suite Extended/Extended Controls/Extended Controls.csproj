@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
     <Compile Include="Base\Code\PI.cs" />
+    <Compile Include="Base\Code\UtilityMethods.cs" />
     <Compile Include="Base\UI\KryptonFormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +110,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\KryptonToolStripWaterMarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\ToolstripControls\ToolStripMenuItemUACSheld.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
