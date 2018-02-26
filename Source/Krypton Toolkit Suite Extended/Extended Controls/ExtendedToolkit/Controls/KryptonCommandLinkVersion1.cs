@@ -22,7 +22,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
     [Description("A Krypton Command Link Button.")]
     [ToolboxItem(true)]
     [ToolboxBitmap(typeof(KryptonButton))]
-    public partial class KryptonCommandLink : KryptonButton
+    public partial class KryptonCommandLinkVersion1 : KryptonButton
     {
         #region Variables
         private string _note = string.Empty;
@@ -36,9 +36,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
         #region Properties
         /// <summary>
-        /// Returns the default size of <see cref="KryptonCommandLink"/>.
+        /// Returns the default size of <see cref="KryptonCommandLinkVersion1"/>.
         /// </summary>
-        /// <value>The size of <see cref="KryptonCommandLink"/>.</value>
+        /// <value>The size of <see cref="KryptonCommandLinkVersion1"/>.</value>
         protected override Size DefaultSize
         {
             get
@@ -91,9 +91,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
         #region Constructor
         /// <summary>
-        /// Initialises a new instance of the <see cref="KryptonCommandLink"/> class.
+        /// Initialises a new instance of the <see cref="KryptonCommandLinkVersion1"/> class.
         /// </summary>
-        public KryptonCommandLink() : base()
+        public KryptonCommandLinkVersion1() : base()
         {
 
         }

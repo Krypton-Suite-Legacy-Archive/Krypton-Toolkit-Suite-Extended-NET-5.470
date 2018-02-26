@@ -88,7 +88,8 @@
     <Compile Include="ExtendedToolkit\Controls\ExtendedProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\Controls\KryptonCommandLink.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonCommandLinkVersion1.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonCommandLinkVersion2.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonUACShieldButton.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonWaterMarkTextBox.cs" />
     <Compile Include="ExtendedToolkit\Messageboxes\Classes\Globals.cs" />
