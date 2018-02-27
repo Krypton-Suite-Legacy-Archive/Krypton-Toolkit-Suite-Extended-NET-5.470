@@ -6,6 +6,11 @@
 
 ======
 
+## 2018-02-27 Toolkit update
+* A new Windows Forms application `Playground` has been added to test controls and features added to the toolkit.
+
+======
+
 ## 2018-02-25 New Control, methods and documentation
 * Added a new toolstrip menu item UAC shield control
 * Added/cleaned up documentation for methods

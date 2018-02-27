@@ -23,6 +23,8 @@ namespace ExtendedControls.ExtendedToolkit.Controls
     public partial class KryptonUACShieldButton : KryptonButton
     {
         #region Variables
+        private bool _elevateApplicationOnClick = true;
+
         private string _processName = string.Empty;
 
         private static bool? _isSystemAbleToLoadShield = null;
@@ -36,11 +38,36 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
         #region Properties
         /// <summary>
+        /// Elevates the current running application to administrator level when button is clicked.
+        /// </summary>
+        /// <remarks>
+        /// The application/process will restart when clicked.
+        /// </remarks>
+        [Category("Code")]
+        [Description("Elevates the current running application to administrator level when button is clicked. The application/process will restart when clicked.")]
+        [DefaultValue(true)]
+        public bool ElevateApplicationOnClick
+        {
+            get
+            {
+                return _elevateApplicationOnClick;
+            }
+
+            set
+            {
+                _elevateApplicationOnClick = value;
+            }
+        }
+
+        /// <summary>
         /// The application assembly.
         /// </summary>
         /// <remarks>
         /// Use 'Assembly.GetExecutingAssembly()...' as a start.
         /// </remarks>
+        [Category("Code")]
+        [Description("The application assembly. Use 'Assembly.GetExecutingAssembly()...' as a start.")]
+        [DefaultValue("")]
         public string ProcessName
         {
             get
@@ -106,17 +133,38 @@ namespace ExtendedControls.ExtendedToolkit.Controls
         #endregion
 
         #region Overrides
+        /// <summary>
+        /// Raises the <see cref="OnClick(EventArgs)"/> event.
+        /// </summary>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         protected override void OnClick(EventArgs e)
         {
-            if (_globalMethods.GetIsTargetPlatformSupported())
+            base.OnClick(e);
+
+            try
             {
-                if (ProcessName != string.Empty)
+                if (ElevateApplicationOnClick)
                 {
-                    _utilityMethods.ElevateProcessWithAdministrativeRights(ProcessName);
+                    if (_globalMethods.GetIsTargetPlatformSupported())
+                    {
+                        if (ProcessName != string.Empty)
+                        {
+                            _utilityMethods.ElevateProcessWithAdministrativeRights(ProcessName);
+                        }
+                    }
                 }
             }
-
-            base.OnClick(e);
+            catch (Exception ex)
+            {
+                if (_globalMethods.GetIsTargetPlatformSupported())
+                {
+                    KryptonMessageBox.Show($"An error has occurred: { ex.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show($"An error has occurred: { ex.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
         #endregion
     }

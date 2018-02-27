@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global Utilities", "Global 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krypton Wizard", "Krypton Wizard\Krypton Wizard.csproj", "{CA97E339-2014-47E3-890B-DF35F31EC11F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playground", "Playground\Playground.csproj", "{E10C5153-0007-4DD3-930D-9D3117DB7C44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CA97E339-2014-47E3-890B-DF35F31EC11F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA97E339-2014-47E3-890B-DF35F31EC11F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA97E339-2014-47E3-890B-DF35F31EC11F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E10C5153-0007-4DD3-930D-9D3117DB7C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E10C5153-0007-4DD3-930D-9D3117DB7C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E10C5153-0007-4DD3-930D-9D3117DB7C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E10C5153-0007-4DD3-930D-9D3117DB7C44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
