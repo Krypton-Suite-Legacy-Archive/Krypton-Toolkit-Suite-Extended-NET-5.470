@@ -1,9 +1,9 @@
-﻿using System;
+﻿using GlobalUtilities.Classes;
+using System;
 using System.ComponentModel;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Windows.Forms;
 using System.Windows.Forms.Design;
-using GlobalUtilities.Classes;
 
 namespace ExtendedControls.ExtendedToolkit.ToolstripControls
 {

@@ -63,6 +63,16 @@ namespace ExtendedControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap active_search {
+            get {
+                object obj = ResourceManager.GetObject("active_search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap error {
             get {
                 object obj = ResourceManager.GetObject("error", resourceCulture);
@@ -156,6 +166,16 @@ namespace ExtendedControls.Properties {
         internal static System.Drawing.Bitmap if_Symbol_Stop_49267 {
             get {
                 object obj = ResourceManager.GetObject("if_Symbol_Stop_49267", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inactive_search {
+            get {
+                object obj = ResourceManager.GetObject("inactive_search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

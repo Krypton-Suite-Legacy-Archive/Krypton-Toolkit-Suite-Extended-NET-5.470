@@ -1,12 +1,8 @@
-﻿using GlobalUtilities.Classes;
-using System.Drawing;
-using System.ComponentModel;
-using ComponentFactory.Krypton.Toolkit;
+﻿using ComponentFactory.Krypton.Toolkit;
+using GlobalUtilities.Classes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.Controls

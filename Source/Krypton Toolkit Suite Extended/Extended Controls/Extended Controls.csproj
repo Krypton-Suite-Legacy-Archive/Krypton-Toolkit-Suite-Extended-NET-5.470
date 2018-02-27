@@ -90,6 +90,14 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\KryptonCommandLinkVersion1.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonCommandLinkVersion2.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonCueComboBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonCueTextBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonSearchBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonSearchBox.Designer.cs">
+      <DependentUpon>KryptonSearchBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\KryptonUACShieldButton.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonWaterMarkTextBox.cs" />
     <Compile Include="ExtendedToolkit\Messageboxes\Classes\Globals.cs" />
@@ -144,6 +152,8 @@
     <None Include="Resources\Warning.png" />
     <None Include="Resources\if_Symbol-Check_49258.png" />
     <None Include="Resources\if_Symbol-Error_49261.png" />
+    <None Include="Resources\active_search.png" />
+    <None Include="Resources\inactive_search.png" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
   <ItemGroup>
