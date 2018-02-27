@@ -62,7 +62,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
         /// </summary>
         public KryptonCueComboBox() : base()
         {
-
+            UpdateCueText();
         }
         #endregion
 
@@ -70,7 +70,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
         /// <summary>
         /// Raises the <see cref="OnHandleCreated(EventArgs)"/> event.
         /// </summary>
-        /// <param name="e">Instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
