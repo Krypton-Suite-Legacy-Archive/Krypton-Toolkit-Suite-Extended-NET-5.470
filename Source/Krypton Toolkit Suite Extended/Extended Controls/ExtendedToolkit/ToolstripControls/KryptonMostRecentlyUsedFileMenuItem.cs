@@ -6,13 +6,14 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.ToolstripControls
 {
     /// <summary>
-    /// A class that manages a Most Recently Used file listing.
-    /// </summary>
-    [DefaultEvent(nameof(RecentFileMenuItemClick))]
+	/// A class that manages a Most Recently Used file listing.
+	/// </summary>
+	[DefaultEvent(nameof(RecentFileMenuItemClick))]
     public class KryptonMostRecentlyUsedFileMenuItem : Component
     {
         private const string defClearListMenuItemText = "Clear List";
@@ -541,13 +542,6 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
             }
         }
     }
-}
-
-#if !WPF
-namespace Community.Windows.Forms
-{
-    using ExtendedControls.ExtendedToolkit.ToolstripControls;
-    using System.Windows.Forms;
 
     /// <summary>
     /// A class that manages a Most Recently Used file listing and interacts with a MenuStrip to
@@ -601,7 +595,7 @@ namespace Community.Windows.Forms
         /// <summary>
         /// Builds a menu within a MenuStrip.
         /// </summary>
-        private class MenuStripMenuBuilder : ExtendedControls.ExtendedToolkit.ToolstripControls.KryptonMostRecentlyUsedFileMenuItem.IMenuBuilder
+        private class MenuStripMenuBuilder : IMenuBuilder
         {
             private Action<string> fileMenuItemClickAction;
 
@@ -677,144 +671,137 @@ namespace Community.Windows.Forms
                 return compactedString;
             }
         }
+
+
+        /// <summary>
+        /// A class that manages a Most Recently Used file listing and interacts with a MenuStrip to
+        /// display a menu list of the files. By default, the application settings are used to store the history.
+        /// Optionally a constructor can be used to provide an alternate class to handle that work.
+        /// </summary>
+        [DefaultProperty("RecentFileMenuItem")]
+        public class MenuMRUManager : KryptonMostRecentlyUsedFileMenuItem
+        {
+            /// <summary>
+            /// Initializes a new instance of the <see cref="MenuMRUManager"/> class.
+            /// </summary>
+            public MenuMRUManager() : base(new AppSettingsFileListStorage(), new MenuBuilder())
+            {
+            }
+
+            /// <summary>
+            /// Initializes a new instance of the <see cref="MenuMRUManager" /> class.
+            /// </summary>
+            /// <param name="extensions">The extensions of files to find in system MRU list.</param>
+            /// <param name="parentMenuItem">The parent "Recent Files" menu item.</param>
+            /// <param name="onRecentFileClick">Action to run when The on recent file click.</param>
+            /// <param name="onClearRecentFilesClick">Optional. The on clear recent files click.</param>
+            /// <param name="storageHandler">Optional. The storage handler.</param>
+            public MenuMRUManager(string extensions, MenuItem parentMenuItem, Action<string> onRecentFileClick, Action<StringCollection> onClearRecentFilesClick = null, IFileListStorage storageHandler = null)
+                : base(storageHandler == null ? new AppSettingsFileListStorage() : storageHandler, new MenuBuilder())
+            {
+                FileExtensions = extensions;
+                ((MenuBuilder)MenuBuilderHandler).RecentFileMenuItem = parentMenuItem;
+                if (onRecentFileClick != null)
+                    RecentFileMenuItemClick += onRecentFileClick;
+                if (onClearRecentFilesClick != null)
+                    ClearListMenuItemClick += onClearRecentFilesClick;
+
+                RefreshRecentFilesMenu();
+            }
+
+            /// <summary>
+            /// Gets or sets the recent file menu item.
+            /// </summary>
+            /// <value>
+            /// The recent file menu item.
+            /// </value>
+            [DefaultValue(null), Category("Behavior"), Description("The recent file menu item.")]
+            public MenuItem RecentFileMenuItem
+            {
+                get { return ((MenuBuilder)MenuBuilderHandler).RecentFileMenuItem; }
+                set { ((MenuBuilder)MenuBuilderHandler).RecentFileMenuItem = value; RefreshRecentFilesMenu(); }
+            }
+
+            /// <summary>
+            /// Builds a menu within a MenuStrip.
+            /// </summary>
+            private class MenuBuilder : IMenuBuilder
+            {
+                private Action<string> fileMenuItemClickAction;
+
+                /// <summary>
+                /// Initializes a new instance of the <see cref="MenuBuilder" /> class.
+                /// </summary>
+                public MenuBuilder()
+                {
+                }
+
+                /// <summary>
+                /// Gets or sets the recent file menu item.
+                /// </summary>
+                /// <value>
+                /// The recent file menu item.
+                /// </value>
+                public MenuItem RecentFileMenuItem { get; set; }
+
+                /// <summary>
+                /// Clears the recent files.
+                /// </summary>
+                public void ClearRecentFiles()
+                {
+                    if (RecentFileMenuItem != null)
+                    {
+                        RecentFileMenuItem.Items.Clear();
+                        RecentFileMenuItem.IsEnabled = false;
+                    }
+                }
+
+                /// <summary>
+                /// Rebuilds the menus.
+                /// </summary>
+                /// <param name="files">The files.</param>
+                /// <param name="fileMenuItemClick">The file menu item click.</param>
+                /// <param name="clearListMenuItemText">The clear list menu item text.</param>
+                /// <param name="clearListMenuItemClick">The clear list menu item click.</param>
+                public void RebuildMenus(IEnumerable<string> files, Action<string> fileMenuItemClick, string clearListMenuItemText, Action clearListMenuItemClick)
+                {
+                    if (RecentFileMenuItem != null)
+                    {
+                        RecentFileMenuItem.Items.Clear();
+
+                        fileMenuItemClickAction = fileMenuItemClick;
+                        foreach (var f in files)
+                            AddMenuItem(f, OnFileMenuItemClick);
+
+                        if (RecentFileMenuItem.Items.Count == 0)
+                        {
+                            RecentFileMenuItem.IsEnabled = false;
+                            return;
+                        }
+
+                        if (!string.IsNullOrEmpty(clearListMenuItemText))
+                        {
+                            RecentFileMenuItem.Items.Add(new Separator());
+                            AddMenuItem(clearListMenuItemText, (o, e) => clearListMenuItemClick());
+                        }
+                        RecentFileMenuItem.IsEnabled = true;
+                    }
+                }
+
+                private void AddMenuItem(string f, RoutedEventHandler handler)
+                {
+                    var m = new MenuItem() { Header = f, Tag = f };
+                    m.Click += handler;
+                    RecentFileMenuItem.Items.Add(m);
+                }
+
+                private void OnFileMenuItemClick(object sender, RoutedEventArgs e)
+                {
+                    var item = sender as MenuItem;
+                    if (item != null)
+                        fileMenuItemClickAction(item.Tag.ToString());
+                }
+            }
+        }
     }
 }
-#else
-namespace Community.Windows.Controls
-{
-	using Community.Core;
-	using System.Windows.Controls;
-	using System.Windows;
-
-	/// <summary>
-	/// A class that manages a Most Recently Used file listing and interacts with a MenuStrip to
-	/// display a menu list of the files. By default, the application settings are used to store the history.
-	/// Optionally a constructor can be used to provide an alternate class to handle that work.
-	/// </summary>
-	[DefaultProperty("RecentFileMenuItem")]
-	public class MenuMRUManager : MRUManager
-	{
-		/// <summary>
-		/// Initializes a new instance of the <see cref="MenuMRUManager"/> class.
-		/// </summary>
-		public MenuMRUManager() : base(new AppSettingsFileListStorage(), new MenuBuilder())
-		{
-		}
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="MenuMRUManager" /> class.
-		/// </summary>
-		/// <param name="extensions">The extensions of files to find in system MRU list.</param>
-		/// <param name="parentMenuItem">The parent "Recent Files" menu item.</param>
-		/// <param name="onRecentFileClick">Action to run when The on recent file click.</param>
-		/// <param name="onClearRecentFilesClick">Optional. The on clear recent files click.</param>
-		/// <param name="storageHandler">Optional. The storage handler.</param>
-		public MenuMRUManager(string extensions, MenuItem parentMenuItem, Action<string> onRecentFileClick, Action<StringCollection> onClearRecentFilesClick = null, IFileListStorage storageHandler = null)
-			: base(storageHandler == null ? new AppSettingsFileListStorage() : storageHandler, new MenuBuilder())
-		{
-			FileExtensions = extensions;
-			((MenuBuilder)MenuBuilderHandler).RecentFileMenuItem = parentMenuItem;
-			if (onRecentFileClick != null)
-				RecentFileMenuItemClick += onRecentFileClick;
-			if (onClearRecentFilesClick != null)
-				ClearListMenuItemClick += onClearRecentFilesClick;
-
-			RefreshRecentFilesMenu();
-		}
-
-		/// <summary>
-		/// Gets or sets the recent file menu item.
-		/// </summary>
-		/// <value>
-		/// The recent file menu item.
-		/// </value>
-		[DefaultValue(null), Category("Behavior"), Description("The recent file menu item.")]
-		public MenuItem RecentFileMenuItem
-		{
-			get { return ((MenuBuilder)MenuBuilderHandler).RecentFileMenuItem; }
-			set { ((MenuBuilder)MenuBuilderHandler).RecentFileMenuItem = value; RefreshRecentFilesMenu(); }
-		}
-
-		/// <summary>
-		/// Builds a menu within a MenuStrip.
-		/// </summary>
-		private class MenuBuilder : IMenuBuilder
-		{
-			private Action<string> fileMenuItemClickAction;
-
-			/// <summary>
-			/// Initializes a new instance of the <see cref="MenuBuilder" /> class.
-			/// </summary>
-			public MenuBuilder()
-			{
-			}
-
-			/// <summary>
-			/// Gets or sets the recent file menu item.
-			/// </summary>
-			/// <value>
-			/// The recent file menu item.
-			/// </value>
-			public MenuItem RecentFileMenuItem { get; set; }
-
-			/// <summary>
-			/// Clears the recent files.
-			/// </summary>
-			public void ClearRecentFiles()
-			{
-				if (RecentFileMenuItem != null)
-				{
-					RecentFileMenuItem.Items.Clear();
-					RecentFileMenuItem.IsEnabled = false;
-				}
-			}
-
-			/// <summary>
-			/// Rebuilds the menus.
-			/// </summary>
-			/// <param name="files">The files.</param>
-			/// <param name="fileMenuItemClick">The file menu item click.</param>
-			/// <param name="clearListMenuItemText">The clear list menu item text.</param>
-			/// <param name="clearListMenuItemClick">The clear list menu item click.</param>
-			public void RebuildMenus(IEnumerable<string> files, Action<string> fileMenuItemClick, string clearListMenuItemText, Action clearListMenuItemClick)
-			{
-				if (RecentFileMenuItem != null)
-				{
-					RecentFileMenuItem.Items.Clear();
-
-					fileMenuItemClickAction = fileMenuItemClick;
-					foreach (var f in files)
-						AddMenuItem(f, OnFileMenuItemClick);
-
-					if (RecentFileMenuItem.Items.Count == 0)
-					{
-						RecentFileMenuItem.IsEnabled = false;
-						return;
-					}
-
-					if (!string.IsNullOrEmpty(clearListMenuItemText))
-					{
-						RecentFileMenuItem.Items.Add(new Separator());
-						AddMenuItem(clearListMenuItemText, (o, e) => clearListMenuItemClick());
-					}
-					RecentFileMenuItem.IsEnabled = true;
-				}
-			}
-
-			private void AddMenuItem(string f, System.Windows.RoutedEventHandler handler)
-			{
-				var m = new MenuItem() { Header = f, Tag = f };
-				m.Click += handler;
-				RecentFileMenuItem.Items.Add(m);
-			}
-
-			private void OnFileMenuItemClick(object sender, RoutedEventArgs e)
-			{
-				var item = sender as MenuItem;
-				if (item != null)
-					fileMenuItemClickAction(item.Tag.ToString());
-			}
-		}
-	}
-}
-#endif

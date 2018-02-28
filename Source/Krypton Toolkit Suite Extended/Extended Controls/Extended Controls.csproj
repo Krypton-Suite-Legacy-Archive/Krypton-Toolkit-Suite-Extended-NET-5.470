@@ -60,6 +60,8 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -117,14 +119,13 @@
     <Compile Include="ExtendedToolkit\SystemDialogs\KryptonSaveFileDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\ToolstripControls\KryptonMostRecentlyUsedFileMenuItem.cs" />
     <Compile Include="ExtendedToolkit\ToolstripControls\KryptonToolStripTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\KryptonToolStripWaterMarkTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\ToolstripControls\MRUManager.cs">
+    <Compile Include="ExtendedToolkit\ToolstripControls\KryptonMostRecentlyUsedFileMenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\ToolStripMenuItemUACSheld.cs">
