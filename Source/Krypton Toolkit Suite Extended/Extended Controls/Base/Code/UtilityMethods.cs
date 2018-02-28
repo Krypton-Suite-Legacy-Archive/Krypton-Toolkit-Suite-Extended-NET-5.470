@@ -50,6 +50,22 @@ namespace ExtendedControls.Base.Code
                 return;
             }
         }
+
+        public bool GetHasElevateProcessWithAdministrativeRights()
+        {
+            WindowsPrincipal principal = new WindowsPrincipal(WindowsIdentity.GetCurrent());
+
+            bool hasAdministrativeRight = principal.IsInRole(WindowsBuiltInRole.Administrator);
+
+            if (hasAdministrativeRight)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         #endregion
     }
 }

@@ -63,10 +63,10 @@ namespace ExtendedControls.ExtendedToolkit.Controls
         /// The application assembly.
         /// </summary>
         /// <remarks>
-        /// Use 'Assembly.GetExecutingAssembly()...' as a start.
+        /// Use 'Process.GetCurrentProcess().ProcessName;' as a start.
         /// </remarks>
         [Category("Code")]
-        [Description("The application assembly. Use 'Assembly.GetExecutingAssembly()...' as a start.")]
+        [Description("The application assembly. Use 'Process.GetCurrentProcess().ProcessName;' as a start.")]
         [DefaultValue("")]
         public string ProcessName
         {

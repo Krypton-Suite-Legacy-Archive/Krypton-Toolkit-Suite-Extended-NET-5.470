@@ -40,6 +40,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiUACTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,9 +64,6 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kctb1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCueTextBox();
             this.kryptonWaterMarkTextBox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonWaterMarkTextBox();
-            this.toolStripMenuItemUACSheld1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItemUACSheld2 = new ExtendedControls.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
             this.kryptonCommandLinkVersion21 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion2();
             this.kryptonCommandLinkVersion11 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion1();
             this.menuStrip1.SuspendLayout();
@@ -76,7 +75,7 @@
             this.kbtnUACTest.Name = "kbtnUACTest";
             this.kbtnUACTest.Size = new System.Drawing.Size(135, 26);
             this.kbtnUACTest.TabIndex = 0;
-            this.kbtnUACTest.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonUACShieldButton1.Values.Image")));
+            this.kbtnUACTest.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnUACTest.Values.Image")));
             this.kbtnUACTest.Values.Text = "&Click Me";
             // 
             // menuStrip1
@@ -86,8 +85,7 @@
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.toolsToolStripMenuItem,
-            this.helpToolStripMenuItem,
-            this.toolStripMenuItemUACSheld2});
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -106,7 +104,7 @@
             this.printToolStripMenuItem,
             this.printPreviewToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.toolStripMenuItemUACSheld1,
+            this.tsmiUACTest,
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -118,7 +116,7 @@
             this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
             this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newToolStripMenuItem.Text = "&New";
             // 
             // openToolStripMenuItem
@@ -126,39 +124,39 @@
             this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "&Open";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(230, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveAsToolStripMenuItem.Text = "Save &As";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(230, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
             this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.printToolStripMenuItem.Text = "&Print";
             // 
             // printPreviewToolStripMenuItem
@@ -166,18 +164,30 @@
             this.printPreviewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewToolStripMenuItem.Image")));
             this.printPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.printPreviewToolStripMenuItem.Text = "Print Pre&view";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // tsmiUACTest
+            // 
+            this.tsmiUACTest.Image = ((System.Drawing.Image)(resources.GetObject("tsmiUACTest.Image")));
+            this.tsmiUACTest.Name = "tsmiUACTest";
+            this.tsmiUACTest.Size = new System.Drawing.Size(180, 22);
+            this.tsmiUACTest.Text = "Click Me";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(230, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // editToolStripMenuItem
@@ -330,25 +340,6 @@
             this.kryptonWaterMarkTextBox1.WaterMarkTextEnabled = true;
             this.kryptonWaterMarkTextBox1.WaterMarkTypeface = null;
             // 
-            // toolStripMenuItemUACSheld1
-            // 
-            this.toolStripMenuItemUACSheld1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemUACSheld1.Image")));
-            this.toolStripMenuItemUACSheld1.Name = "toolStripMenuItemUACSheld1";
-            this.toolStripMenuItemUACSheld1.Size = new System.Drawing.Size(233, 22);
-            this.toolStripMenuItemUACSheld1.Text = "toolStripMenuItemUACSheld1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(230, 6);
-            // 
-            // toolStripMenuItemUACSheld2
-            // 
-            this.toolStripMenuItemUACSheld2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemUACSheld2.Image")));
-            this.toolStripMenuItemUACSheld2.Name = "toolStripMenuItemUACSheld2";
-            this.toolStripMenuItemUACSheld2.Size = new System.Drawing.Size(194, 20);
-            this.toolStripMenuItemUACSheld2.Text = "toolStripMenuItemUACSheld2";
-            // 
             // kryptonCommandLinkVersion21
             // 
             this.kryptonCommandLinkVersion21.Location = new System.Drawing.Point(259, 194);
@@ -424,8 +415,7 @@
         private ExtendedControls.ExtendedToolkit.Controls.KryptonCueTextBox kctb1;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonWaterMarkTextBox kryptonWaterMarkTextBox1;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private ExtendedControls.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld toolStripMenuItemUACSheld1;
-        private ExtendedControls.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld toolStripMenuItemUACSheld2;
+        private ExtendedControls.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld tsmiUACTest;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion2 kryptonCommandLinkVersion21;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion1 kryptonCommandLinkVersion11;
     }

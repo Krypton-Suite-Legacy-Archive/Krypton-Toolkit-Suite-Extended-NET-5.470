@@ -1,4 +1,6 @@
-﻿using System.Reflection;
+﻿using ExtendedControls.Base.Code;
+using System.Diagnostics;
+using System.Reflection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,8 @@ namespace Playground
 {
     public partial class Form1 : Form
     {
+        UtilityMethods utilityMethods = new UtilityMethods();
+
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +24,14 @@ namespace Playground
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            kbtnUACTest.ProcessName = Assembly.GetExecutingAssembly().FullName;
+            kbtnUACTest.ProcessName = Process.GetCurrentProcess().ProcessName;
+
+            tsmiUACTest.ProcessName= Process.GetCurrentProcess().ProcessName;
+
+            if (utilityMethods.GetHasElevateProcessWithAdministrativeRights())
+            {
+                Text = Text + " (Administrator)";
+            }
 
             kctb1.CueText = "Hello";
 

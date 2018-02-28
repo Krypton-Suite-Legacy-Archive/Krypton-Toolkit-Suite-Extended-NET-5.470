@@ -1,4 +1,6 @@
-﻿using GlobalUtilities.Classes;
+﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Base.Code;
+using GlobalUtilities.Classes;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -20,11 +22,63 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
     public partial class ToolStripMenuItemUACSheld : ToolStripMenuItem
     {
         #region Variables
+        private bool _elevateApplicationOnClick = true;
+
+        private string _processName = string.Empty;
+
         private static bool? _isSystemAbleToLoadShield = null;
 
         private const int BCM_SETSHIELD = 0x160C;
 
         private GlobalMethods _globalMethods = new GlobalMethods();
+
+        private UtilityMethods _utilityMethods = new UtilityMethods();
+        #endregion
+
+        #region Properties
+        /// <summary>
+        /// Elevates the current running application to administrator level when button is clicked.
+        /// </summary>
+        /// <remarks>
+        /// The application/process will restart when clicked.
+        /// </remarks>
+        [Category("Code")]
+        [Description("Elevates the current running application to administrator level when button is clicked. The application/process will restart when clicked.")]
+        [DefaultValue(true)]
+        public bool ElevateApplicationOnClick
+        {
+            get
+            {
+                return _elevateApplicationOnClick;
+            }
+
+            set
+            {
+                _elevateApplicationOnClick = value;
+            }
+        }
+
+        /// <summary>
+        /// The application assembly.
+        /// </summary>
+        /// <remarks>
+        /// Use 'Process.GetCurrentProcess().ProcessName;' as a start.
+        /// </remarks>
+        [Category("Code")]
+        [Description("The application assembly. Use 'Process.GetCurrentProcess().ProcessName;' as a start.")]
+        [DefaultValue("")]
+        public string ProcessName
+        {
+            get
+            {
+                return _processName;
+            }
+
+            set
+            {
+                _processName = value;
+            }
+        }
         #endregion
 
         #region Constructor
@@ -69,6 +123,42 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
                 }
 
                 //NativeMethods.SendMessage(Handle, BCM_SETSHIELD, IntPtr.Zero, new IntPtr(1));
+            }
+        }
+        #endregion
+
+        #region Overrides
+        /// <summary>
+        /// Raises the <see cref="E:System.Windows.Forms.ToolStripItem.Click" /> event.
+        /// </summary>
+        /// <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+        protected override void OnClick(EventArgs e)
+        {
+            base.OnClick(e);
+
+            try
+            {
+                if (ElevateApplicationOnClick)
+                {
+                    if (_globalMethods.GetIsTargetPlatformSupported())
+                    {
+                        if (ProcessName != string.Empty)
+                        {
+                            _utilityMethods.ElevateProcessWithAdministrativeRights(ProcessName);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                if (_globalMethods.GetIsTargetPlatformSupported())
+                {
+                    KryptonMessageBox.Show($"An error has occurred: { ex.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show($"An error has occurred: { ex.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         #endregion
