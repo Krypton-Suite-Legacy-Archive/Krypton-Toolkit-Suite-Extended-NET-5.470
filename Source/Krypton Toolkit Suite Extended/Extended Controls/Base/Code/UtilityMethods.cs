@@ -51,6 +51,13 @@ namespace ExtendedControls.Base.Code
             }
         }
 
+        /// <summary>
+        /// Checks to see if the current process has launched with administrative rights.
+        /// </summary>
+        /// <remarks>
+        /// Use this method in your 'Load' event.
+        /// </remarks>
+        /// <returns>True if the current process has launched with administrative rights, false if not.</returns>
         public bool GetHasElevateProcessWithAdministrativeRights()
         {
             WindowsPrincipal principal = new WindowsPrincipal(WindowsIdentity.GetCurrent());

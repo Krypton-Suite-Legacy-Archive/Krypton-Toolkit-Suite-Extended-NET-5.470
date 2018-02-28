@@ -119,13 +119,14 @@
     <Compile Include="ExtendedToolkit\SystemDialogs\KryptonSaveFileDialog.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\ToolstripControls\KryptonMostRecentlyUsedFileMenuItem.cs" />
+    <Compile Include="ExtendedToolkit\ToolstripControls\KryptonMostRecentlyUsedFileMenuItemHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\KryptonToolStripTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\KryptonToolStripWaterMarkTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\ToolstripControls\KryptonMostRecentlyUsedFileMenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\ToolStripMenuItemUACSheld.cs">
