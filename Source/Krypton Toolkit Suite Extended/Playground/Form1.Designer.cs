@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.kbtnUACTest = new ExtendedControls.ExtendedToolkit.Controls.KryptonUACShieldButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,21 +61,18 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kctb1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCueTextBox();
-            this.kryptonWaterMarkTextBox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonWaterMarkTextBox();
-            this.kryptonCommandLinkVersion21 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion2();
+            this.lblIsAdminMode = new System.Windows.Forms.Label();
             this.kryptonCommandLinkVersion11 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion1();
+            this.kryptonCommandLinkVersion21 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion2();
+            this.kryptonWaterMarkTextBox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonWaterMarkTextBox();
+            this.kctb1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCueTextBox();
+            this.kbtnUACTest = new ExtendedControls.ExtendedToolkit.Controls.KryptonUACShieldButton();
+            this.kryptonMostRecentlyUsedFileMenuItem1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.KryptonMostRecentlyUsedFileMenuItem();
+            this.rtbTextPad = new System.Windows.Forms.RichTextBox();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.recentFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // kbtnUACTest
-            // 
-            this.kbtnUACTest.Location = new System.Drawing.Point(653, 412);
-            this.kbtnUACTest.Name = "kbtnUACTest";
-            this.kbtnUACTest.Size = new System.Drawing.Size(135, 26);
-            this.kbtnUACTest.TabIndex = 0;
-            this.kbtnUACTest.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnUACTest.Values.Image")));
-            this.kbtnUACTest.Values.Text = "&Click Me";
             // 
             // menuStrip1
             // 
@@ -88,7 +84,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1166, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -101,6 +97,8 @@
             this.saveToolStripMenuItem,
             this.saveAsToolStripMenuItem,
             this.toolStripSeparator1,
+            this.recentFilesToolStripMenuItem,
+            this.toolStripMenuItem2,
             this.printToolStripMenuItem,
             this.printPreviewToolStripMenuItem,
             this.toolStripMenuItem1,
@@ -126,6 +124,7 @@
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
@@ -319,17 +318,36 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
-            // kctb1
+            // lblIsAdminMode
             // 
-            this.kctb1.CueText = "Hello world!";
-            this.kctb1.Location = new System.Drawing.Point(166, 112);
-            this.kctb1.Name = "kctb1";
-            this.kctb1.Size = new System.Drawing.Size(282, 23);
-            this.kctb1.TabIndex = 2;
+            this.lblIsAdminMode.AutoSize = true;
+            this.lblIsAdminMode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIsAdminMode.Location = new System.Drawing.Point(12, 543);
+            this.lblIsAdminMode.Name = "lblIsAdminMode";
+            this.lblIsAdminMode.Size = new System.Drawing.Size(267, 21);
+            this.lblIsAdminMode.TabIndex = 6;
+            this.lblIsAdminMode.Text = "Is running in Administrator mode: {0}";
+            // 
+            // kryptonCommandLinkVersion11
+            // 
+            this.kryptonCommandLinkVersion11.Location = new System.Drawing.Point(851, 470);
+            this.kryptonCommandLinkVersion11.Name = "kryptonCommandLinkVersion11";
+            this.kryptonCommandLinkVersion11.Note = "";
+            this.kryptonCommandLinkVersion11.Size = new System.Drawing.Size(303, 45);
+            this.kryptonCommandLinkVersion11.TabIndex = 5;
+            this.kryptonCommandLinkVersion11.Values.Text = "kryptonCommandLinkVersion11";
+            // 
+            // kryptonCommandLinkVersion21
+            // 
+            this.kryptonCommandLinkVersion21.Location = new System.Drawing.Point(851, 418);
+            this.kryptonCommandLinkVersion21.Name = "kryptonCommandLinkVersion21";
+            this.kryptonCommandLinkVersion21.Size = new System.Drawing.Size(303, 46);
+            this.kryptonCommandLinkVersion21.TabIndex = 4;
+            this.kryptonCommandLinkVersion21.Values.Text = "kryptonCommandLinkVersion21";
             // 
             // kryptonWaterMarkTextBox1
             // 
-            this.kryptonWaterMarkTextBox1.Location = new System.Drawing.Point(166, 164);
+            this.kryptonWaterMarkTextBox1.Location = new System.Drawing.Point(872, 276);
             this.kryptonWaterMarkTextBox1.Name = "kryptonWaterMarkTextBox1";
             this.kryptonWaterMarkTextBox1.Size = new System.Drawing.Size(282, 23);
             this.kryptonWaterMarkTextBox1.TabIndex = 3;
@@ -340,28 +358,55 @@
             this.kryptonWaterMarkTextBox1.WaterMarkTextEnabled = true;
             this.kryptonWaterMarkTextBox1.WaterMarkTypeface = null;
             // 
-            // kryptonCommandLinkVersion21
+            // kctb1
             // 
-            this.kryptonCommandLinkVersion21.Location = new System.Drawing.Point(259, 194);
-            this.kryptonCommandLinkVersion21.Name = "kryptonCommandLinkVersion21";
-            this.kryptonCommandLinkVersion21.Size = new System.Drawing.Size(303, 46);
-            this.kryptonCommandLinkVersion21.TabIndex = 4;
-            this.kryptonCommandLinkVersion21.Values.Text = "kryptonCommandLinkVersion21";
+            this.kctb1.CueText = "Hello world!";
+            this.kctb1.Location = new System.Drawing.Point(872, 238);
+            this.kctb1.Name = "kctb1";
+            this.kctb1.Size = new System.Drawing.Size(282, 23);
+            this.kctb1.TabIndex = 2;
             // 
-            // kryptonCommandLinkVersion11
+            // kbtnUACTest
             // 
-            this.kryptonCommandLinkVersion11.Location = new System.Drawing.Point(259, 247);
-            this.kryptonCommandLinkVersion11.Name = "kryptonCommandLinkVersion11";
-            this.kryptonCommandLinkVersion11.Note = "";
-            this.kryptonCommandLinkVersion11.Size = new System.Drawing.Size(303, 45);
-            this.kryptonCommandLinkVersion11.TabIndex = 5;
-            this.kryptonCommandLinkVersion11.Values.Text = "kryptonCommandLinkVersion11";
+            this.kbtnUACTest.Location = new System.Drawing.Point(1019, 541);
+            this.kbtnUACTest.Name = "kbtnUACTest";
+            this.kbtnUACTest.Size = new System.Drawing.Size(135, 26);
+            this.kbtnUACTest.TabIndex = 0;
+            this.kbtnUACTest.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnUACTest.Values.Image")));
+            this.kbtnUACTest.Values.Text = "&Click Me";
+            // 
+            // kryptonMostRecentlyUsedFileMenuItem1
+            // 
+            this.kryptonMostRecentlyUsedFileMenuItem1.FileExtensions = "";
+            this.kryptonMostRecentlyUsedFileMenuItem1.Index = -1;
+            this.kryptonMostRecentlyUsedFileMenuItem1.Text = "";
+            // 
+            // rtbTextPad
+            // 
+            this.rtbTextPad.Location = new System.Drawing.Point(16, 45);
+            this.rtbTextPad.Name = "rtbTextPad";
+            this.rtbTextPad.Size = new System.Drawing.Size(475, 470);
+            this.rtbTextPad.TabIndex = 7;
+            this.rtbTextPad.Text = "";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // recentFilesToolStripMenuItem
+            // 
+            this.recentFilesToolStripMenuItem.Name = "recentFilesToolStripMenuItem";
+            this.recentFilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.recentFilesToolStripMenuItem.Text = "&Recent Files";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1166, 579);
+            this.Controls.Add(this.rtbTextPad);
+            this.Controls.Add(this.lblIsAdminMode);
             this.Controls.Add(this.kryptonCommandLinkVersion11);
             this.Controls.Add(this.kryptonCommandLinkVersion21);
             this.Controls.Add(this.kryptonWaterMarkTextBox1);
@@ -418,6 +463,11 @@
         private ExtendedControls.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld tsmiUACTest;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion2 kryptonCommandLinkVersion21;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion1 kryptonCommandLinkVersion11;
+        private System.Windows.Forms.Label lblIsAdminMode;
+        private ExtendedControls.ExtendedToolkit.ToolstripControls.KryptonMostRecentlyUsedFileMenuItem kryptonMostRecentlyUsedFileMenuItem1;
+        private System.Windows.Forms.RichTextBox rtbTextPad;
+        private System.Windows.Forms.ToolStripMenuItem recentFilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
     }
 }
 
