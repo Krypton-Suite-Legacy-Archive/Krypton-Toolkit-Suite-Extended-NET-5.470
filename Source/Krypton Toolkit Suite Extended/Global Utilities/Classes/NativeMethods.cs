@@ -13,9 +13,25 @@ namespace GlobalUtilities.Classes
         private const string uxtheme = "uxtheme.dll";
         private const string dwmapi = "dwmapi.dll";
 
+        /// <summary>
+        /// Sends the message.
+        /// </summary>
+        /// <param name="hWnd">The h WND.</param>
+        /// <param name="msg">The MSG.</param>
+        /// <param name="wParam">The w parameter.</param>
+        /// <param name="lParam">The l parameter.</param>
+        /// <returns></returns>
         [DllImport(user32, SetLastError = true)]
         public static extern IntPtr SendMessage(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam);
 
+        /// <summary>
+        /// Sends the message.
+        /// </summary>
+        /// <param name="hWnd">The h WND.</param>
+        /// <param name="msg">The MSG.</param>
+        /// <param name="wParam">The w parameter.</param>
+        /// <param name="lParam">The l parameter.</param>
+        /// <returns></returns>
         [DllImport(user32, CharSet = CharSet.Unicode, SetLastError = true)]
         public static extern IntPtr SendMessage(IntPtr hWnd, UInt32 msg, IntPtr wParam, string lParam);
 
@@ -47,6 +63,10 @@ namespace GlobalUtilities.Classes
         //[DllImport(dwmapi, SetLastError = true)]
         //public static extern int DwmExtendFrameIntoClientArea(IntPtr hwnd, ref AeroSuite.Forms.BorderlessForm.Margins margins);
 
+        /// <summary>
+        /// DWMs the is composition enabled.
+        /// </summary>
+        /// <returns></returns>
         [DllImport(dwmapi, PreserveSig = false, SetLastError = true)]
         public static extern bool DwmIsCompositionEnabled();
     }

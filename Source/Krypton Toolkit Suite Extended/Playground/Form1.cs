@@ -74,7 +74,11 @@ namespace Playground
         {
             if (File.Exists(filePath))
             {
-                rtbTextPad.LoadFile(filePath);
+                //rtbTextPad.LoadFile(filePath);
+
+                StreamReader reader = new StreamReader(filePath);
+
+                rtbTextPad.Text = reader.ReadToEnd();
 
                 mostRecentlyUsedFileManager.AddRecentFile(filePath);
             }

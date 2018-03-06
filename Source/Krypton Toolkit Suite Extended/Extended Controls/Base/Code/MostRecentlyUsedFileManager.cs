@@ -1,4 +1,7 @@
-﻿using Microsoft.Win32;
+﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.ExtendedToolkit.ToolstripControls;
+using GlobalUtilities.Classes;
+using Microsoft.Win32;
 using System;
 using System.Windows.Forms;
 
@@ -13,15 +16,44 @@ namespace ExtendedControls.Base.Code
         ExceptionHandler exceptionHandler = new ExceptionHandler();
 
         #region Private members
+        private bool UseConfirmClearListDialogue;
+
         private string NameOfProgram;
 
         private string SubKeyName;
 
+        private string filePath;
+
         private ToolStripMenuItem ParentMenuItem;
+
+        private ToolStripMenuItemUACSheld ClearListItem;
 
         private Action<object, EventArgs> OnRecentFileClick;
 
         private Action<object, EventArgs> OnClearRecentFilesClick;
+
+        private UtilityMethods utilityMethods = new UtilityMethods();
+
+        private GlobalMethods globalMethods = new GlobalMethods();
+
+        /// <summary>
+        /// Gets or sets the file path.
+        /// </summary>
+        /// <value>
+        /// The file path.
+        /// </value>
+        public string FilePath
+        {
+            get
+            {
+                return filePath;
+            }
+
+            set
+            {
+                filePath = value;
+            }
+        }
 
         /// <summary>
         /// Called when [clear recent files click].
@@ -29,6 +61,46 @@ namespace ExtendedControls.Base.Code
         /// <param name="obj">The object.</param>
         /// <param name="evt">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void OnClearRecentFiles_Click(object obj, EventArgs evt)
+        {
+            try
+            {
+                if (UseConfirmClearListDialogue)
+                {
+                    if (globalMethods.CheckIfTargetPlatformIsSupported(UseConfirmClearListDialogue))
+                    {
+                        if (globalMethods.GetIsTargetPlatformSupported())
+                        {
+                            if (KryptonMessageBox.Show("You are about to clear your recent files list. Do you want to continue?", "Clear Recent Files", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                ClearRecentFiles();
+                            }
+                            else if (MessageBox.Show("You are about to clear your recent files list. Do you want to continue?", "Clear Recent Files", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                ClearRecentFiles();
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    ClearRecentFiles();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
+            if (OnClearRecentFilesClick != null)
+            {
+                OnClearRecentFilesClick(obj, evt);
+            }
+        }
+
+        /// <summary>
+        /// Clears the recent files.
+        /// </summary>
+        private void ClearRecentFiles()
         {
             try
             {
@@ -54,12 +126,7 @@ namespace ExtendedControls.Base.Code
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
-            }
 
-            if (OnClearRecentFilesClick != null)
-            {
-                OnClearRecentFilesClick(obj, evt);
             }
         }
 
@@ -209,8 +276,9 @@ namespace ExtendedControls.Base.Code
         /// <param name="nameOfProgram">The name of program.</param>
         /// <param name="onRecentFileClick">The on recent file click.</param>
         /// <param name="onClearRecentFilesClick">The on clear recent files click.</param>
+        /// <param name="useConfirmClearListDialogue">if set to <c>true</c> [use confirm clear list dialogue].</param>
         /// <exception cref="ArgumentException">Bad argument.</exception>
-        public MostRecentlyUsedFileManager(ToolStripMenuItem parentMenuItem, string nameOfProgram, Action<object, EventArgs> onRecentFileClick, Action<object, EventArgs> onClearRecentFilesClick = null)
+        public MostRecentlyUsedFileManager(ToolStripMenuItem parentMenuItem, string nameOfProgram, Action<object, EventArgs> onRecentFileClick, Action<object, EventArgs> onClearRecentFilesClick = null, bool useConfirmClearListDialogue = true)
         {
             if (parentMenuItem == null || onRecentFileClick == null || nameOfProgram == null || nameOfProgram.Length == 0 || nameOfProgram.Contains("\\"))
             {
@@ -226,6 +294,8 @@ namespace ExtendedControls.Base.Code
             OnClearRecentFilesClick = onClearRecentFilesClick;
 
             SubKeyName = string.Format($"Software\\{ NameOfProgram }\\MRU");
+
+            UseConfirmClearListDialogue = useConfirmClearListDialogue;
 
             RefreshRecentFilesMenu();
         }

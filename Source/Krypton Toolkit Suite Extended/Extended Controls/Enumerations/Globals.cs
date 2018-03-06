@@ -51,8 +51,14 @@
         NONE = 9
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public enum KryptonMessageBoxButton
     {
+        /// <summary>
+        /// The ok button.
+        /// </summary>
         OK = 0,
         OKCANCEL = 1,
         YESNO = 2,

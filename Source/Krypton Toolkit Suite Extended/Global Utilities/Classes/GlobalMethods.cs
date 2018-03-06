@@ -1,10 +1,10 @@
-﻿using System;
-using System.Management;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Management;
 using System.Security.Principal;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
 
 namespace GlobalUtilities.Classes
 {
@@ -197,7 +197,11 @@ namespace GlobalUtilities.Classes
             }
         }
 
-        public static string GetOSFriendlyNameForStaticMetods()
+        /// <summary>
+        /// Gets the os friendly name for static methods.
+        /// </summary>
+        /// <returns></returns>
+        public static string GetOSFriendlyNameForStaticMethods()
         {
             string result = string.Empty;
 
@@ -213,6 +217,10 @@ namespace GlobalUtilities.Classes
             return result;
         }
 
+        /// <summary>
+        /// Gets the name of the os friendly.
+        /// </summary>
+        /// <returns></returns>
         public string GetOSFriendlyName()
         {
             string result = string.Empty;
@@ -287,6 +295,9 @@ namespace GlobalUtilities.Classes
         #endregion
 
         #region De-constructor
+        /// <summary>
+        /// Finalizes an instance of the <see cref="GlobalMethods"/> class.
+        /// </summary>
         ~GlobalMethods()
         {
             GC.SuppressFinalize(this);
