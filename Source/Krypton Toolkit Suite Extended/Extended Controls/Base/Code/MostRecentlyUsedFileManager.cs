@@ -126,7 +126,7 @@ namespace ExtendedControls.Base.Code
             }
             catch (Exception ex)
             {
-
+                exceptionHandler.ShowException($"Error: { ex.Message }", true);
             }
         }
 

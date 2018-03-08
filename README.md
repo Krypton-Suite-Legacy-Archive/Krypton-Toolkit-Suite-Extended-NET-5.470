@@ -6,6 +6,12 @@
 
 ======
 
+## 2018-03-08 New controls
+* New wizard control based off of [Aero Wizard](https://github.com/dahall/AeroWizard) base implemented, ready for conversion to Krypton controls
+* New "Most Recently Used" files option for `File` menu, see `Playground` for proper implementation
+
+======
+
 ## 2018-02-27 Toolkit update
 * A new Windows Forms application `Playground` has been added to test controls and features added to the toolkit.
 

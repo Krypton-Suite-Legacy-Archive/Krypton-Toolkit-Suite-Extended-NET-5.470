@@ -1,4 +1,5 @@
-﻿using ExtendedControls.Enumerations;
+﻿using ExtendedControls.Base.Code;
+using ExtendedControls.Enumerations;
 using System;
 using System.Media;
 
@@ -6,6 +7,8 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.Classes
 {
     public class Globals
     {
+        ExceptionHandler exceptionHandler = new ExceptionHandler();
+
         public Globals()
         {
 
@@ -52,7 +55,7 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.Classes
                     }
                     catch (Exception e)
                     {
-
+                        exceptionHandler.ShowException(e.Message, true);
                     }
                     break;
                 case KryptonMessageBoxIcon.CRITICAL:
