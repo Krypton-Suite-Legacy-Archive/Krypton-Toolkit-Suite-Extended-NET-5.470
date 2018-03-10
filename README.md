@@ -6,6 +6,12 @@
 
 ======
 
+## 2018-03-10 Krypton Application Updater (XML based version)
+* Begun fundemental groundwork on an XML based application updater (classes/settings/UI).
+* Improved documentation with the aid of [GhostDoc](https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc).
+
+======
+
 ## 2018-03-08 New controls
 * New wizard control based off of [Aero Wizard](https://github.com/dahall/AeroWizard) base implemented, ready for conversion to Krypton controls
 * New "Most Recently Used" files option for `File` menu, see `Playground` for proper implementation

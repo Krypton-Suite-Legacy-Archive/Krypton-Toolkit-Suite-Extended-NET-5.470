@@ -125,5 +125,61 @@ namespace KryptonApplicationUpdater.Interfaces
         ///   <c>true</c> if [start update installation upon download completion]; otherwise, <c>false</c>.
         /// </value>
         bool StartUpdateInstallationUponDownloadCompletion { get; set; }
+
+        /// <summary>
+        /// Gets or sets the update package release date.
+        /// </summary>
+        /// <value>
+        /// The update package release date.
+        /// </value>
+        DateTime UpdatePackageReleaseDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the size of the update package file.
+        /// </summary>
+        /// <value>
+        /// The size of the update package file.
+        /// </value>
+        long UpdatePackageFileSize { get; set; }
+
+        /// <summary>
+        /// Gets or sets the optional arguments.
+        /// </summary>
+        /// <value>
+        /// The optional arguments.
+        /// </value>
+        String OptionalArguments { get; set; }
+
+        /// <summary>
+        /// Gets or sets the update package build date.
+        /// </summary>
+        /// <value>
+        /// The update package build date.
+        /// </value>
+        DateTime UpdatePackageBuildDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the update package build string.
+        /// </summary>
+        /// <value>
+        /// The update package build string.
+        /// </value>
+        String UpdatePackageBuildString { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether [beta flag].
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [beta flag]; otherwise, <c>false</c>.
+        /// </value>
+        bool BetaFlag { get; set; }
+
+        /// <summary>
+        /// Gets or sets the checksum file URL.
+        /// </summary>
+        /// <value>
+        /// The checksum file URL.
+        /// </value>
+        String ChecksumFileURL { get; set; }
     }
 }

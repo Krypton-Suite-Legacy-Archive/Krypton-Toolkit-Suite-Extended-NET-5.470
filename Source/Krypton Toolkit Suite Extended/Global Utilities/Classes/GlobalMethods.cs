@@ -11,7 +11,9 @@ namespace GlobalUtilities.Classes
     public class GlobalMethods
     {
         #region Variables
-        private bool _isTargetPlatformSupported = false, _isTargetPlatform64BIT = false, _isAssemblies64BIT = false;
+        private bool _isTargetPlatformSupported = false, _isTargetPlatform64BIT = false, _isAssemblies64BIT = false, _internetConnectionState = false;
+
+        private ExceptionHandler _exceptionHandler = new ExceptionHandler();
         #endregion
 
         #region Properties
@@ -63,6 +65,25 @@ namespace GlobalUtilities.Classes
             }
 
         }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether [internet connection state].
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [internet connection state]; otherwise, <c>false</c>.
+        /// </value>
+        private bool InternetConnectionState
+        {
+            get
+            {
+                return _internetConnectionState;
+            }
+
+            set
+            {
+                _internetConnectionState = value;
+            }
+        }
         #endregion
 
         #region Constructor
@@ -110,7 +131,7 @@ namespace GlobalUtilities.Classes
             }
             catch (Exception exc)
             {
-                MessageBox.Show("Error: " + exc.Message, "Error Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _exceptionHandler.ShowException(exc.Message, false, false, true, false, false, null, null, "Exception Caught", MessageBoxButtons.OK, MessageBoxDefaultButton.Button1, MessageBoxIcon.Error);
 
                 SetIsTargetPlatformSupported(false);
             }
@@ -216,6 +237,34 @@ namespace GlobalUtilities.Classes
 
             return result;
         }
+
+        /// <summary>
+        /// Checks the state of the internet connection.
+        /// </summary>
+        /// <param name="pingAddress">The ping address.</param>
+        public void CheckInternetConnectionState(string pingAddress = null)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                if (CheckIfTargetPlatformIsSupported(true))
+                {
+                    if (GetIsTargetPlatformSupported())
+                    {
+                        _exceptionHandler.ShowException(ex.Message, true, false, false, false, false, null, null, "Exception Caught", MessageBoxButtons.OK, MessageBoxDefaultButton.Button1, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+
+                    }
+                }
+
+                SetInternetConnectionState(false);
+            }
+        }
         #endregion
 
         #region Setters and Getters
@@ -272,6 +321,24 @@ namespace GlobalUtilities.Classes
         {
             return IsAssemblies64BIT;
         }
+
+        /// <summary>
+        /// Sets the InternetConnectionState to the value of value.
+        /// </summary>
+        /// <param name="value">The desired value of InternetConnectionState.</param>
+        public void SetInternetConnectionState(bool value)
+        {
+            InternetConnectionState = value;
+        }
+
+        /// <summary>
+        /// Returns the value of the InternetConnectionState.
+        /// </summary>
+        /// <returns>The value of the InternetConnectionState.</returns>
+        public bool GetInternetConnectionState()
+        {
+            return InternetConnectionState;
+        }
         #endregion
 
         #region De-constructor
@@ -285,10 +352,12 @@ namespace GlobalUtilities.Classes
         #endregion
     }
 
+
+    #region Static Class
     public static class GlobalMethodsStatic
     {
         #region Variables
-        public static bool _isTargetPlatformSupported = false, _isTargetPlatform64BIT = false, _isAssemblies64BIT = false;
+        public static bool _isTargetPlatformSupported = false, _isTargetPlatform64BIT = false, _isAssemblies64BIT = false, _internetConnectionState = false;
         #endregion
 
         #region Properties
@@ -339,6 +408,25 @@ namespace GlobalUtilities.Classes
                 _isAssemblies64BIT = value;
             }
 
+        }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether [internet connection state].
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [internet connection state]; otherwise, <c>false</c>.
+        /// </value>
+        private static bool InternetConnectionState
+        {
+            get
+            {
+                return _internetConnectionState;
+            }
+
+            set
+            {
+                _internetConnectionState = value;
+            }
         }
         #endregion
 
@@ -539,6 +627,25 @@ namespace GlobalUtilities.Classes
         {
             return IsAssemblies64BIT;
         }
+
+        /// <summary>
+        /// Sets the InternetConnectionState to the value of value.
+        /// </summary>
+        /// <param name="value">The desired value of InternetConnectionState.</param>
+        private static void SetInternetConnectionState(bool value)
+        {
+            InternetConnectionState = value;
+        }
+
+        /// <summary>
+        /// Returns the value of the InternetConnectionState.
+        /// </summary>
+        /// <returns>The value of the InternetConnectionState.</returns>
+        private static bool GetInternetConnectionState()
+        {
+            return InternetConnectionState;
+        }
         #endregion
     }
+    #endregion
 }

@@ -51,6 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Settings Manager\InternalApplicationUpdaterSettingsManager.cs" />
+    <Compile Include="Classes\Settings Manager\XMLFileApplicationUpdaterSettingsManager.cs" />
+    <Compile Include="Classes\UpdaterLogic.cs" />
+    <Compile Include="Classes\XMLFileParser.cs" />
     <Compile Include="Interfaces\IUpdatable.cs" />
     <Compile Include="Interfaces\IXMLData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,6 +62,34 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\InternalApplicationUpdaterSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>InternalApplicationUpdaterSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\XMLFileApplicationUpdaterSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>XMLFileApplicationUpdaterSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\ChecksumViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\ChecksumViewerForm.Designer.cs">
+      <DependentUpon>ChecksumViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\StartupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\StartupForm.Designer.cs">
+      <DependentUpon>StartupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\ValidateChecksumsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\ValidateChecksumsForm.Designer.cs">
+      <DependentUpon>ValidateChecksumsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Basic\BasicUpdaterForm.cs">
       <SubType>Form</SubType>
@@ -71,12 +103,30 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Advanced\XML Based\ChecksumViewerForm.resx">
+      <DependentUpon>ChecksumViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Advanced\XML Based\StartupForm.resx">
+      <DependentUpon>StartupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Advanced\XML Based\ValidateChecksumsForm.resx">
+      <DependentUpon>ValidateChecksumsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Basic\BasicUpdaterForm.resx">
       <DependentUpon>BasicUpdaterForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Resources\Krypton.ico" />
+    <None Include="Settings\InternalApplicationUpdaterSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>InternalApplicationUpdaterSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\XMLFileApplicationUpdaterSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>XMLFileApplicationUpdaterSettings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Extended Controls\Extended Controls.csproj">
@@ -89,8 +139,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
-    <Folder Include="UI\Advanced\" />
+    <Folder Include="UI\Advanced\Wizard\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
