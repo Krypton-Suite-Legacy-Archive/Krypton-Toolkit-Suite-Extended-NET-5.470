@@ -36,6 +36,10 @@
     <Reference Include="ComponentFactory.Krypton.Design">
       <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.70.534.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
@@ -85,6 +89,24 @@
     <Compile Include="UI\Advanced\XML Based\StartupForm.Designer.cs">
       <DependentUpon>StartupForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Advanced\XML Based\UpdateAvailableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\UpdateAvailableForm.Designer.cs">
+      <DependentUpon>UpdateAvailableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\UpdateDownloadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\UpdateDownloadForm.Designer.cs">
+      <DependentUpon>UpdateDownloadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\UpdaterOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\UpdaterOptionsForm.Designer.cs">
+      <DependentUpon>UpdaterOptionsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Advanced\XML Based\ValidateChecksumsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +130,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Advanced\XML Based\StartupForm.resx">
       <DependentUpon>StartupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Advanced\XML Based\UpdateAvailableForm.resx">
+      <DependentUpon>UpdateAvailableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Advanced\XML Based\UpdateDownloadForm.resx">
+      <DependentUpon>UpdateDownloadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Advanced\XML Based\UpdaterOptionsForm.resx">
+      <DependentUpon>UpdaterOptionsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Advanced\XML Based\ValidateChecksumsForm.resx">
       <DependentUpon>ValidateChecksumsForm.cs</DependentUpon>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KryptonApplicationUpdater.Classes.Settings_Manager
+namespace KryptonApplicationUpdater.Classes.SettingsManager
 {
     class XMLFileApplicationUpdaterSettingsManager
     {

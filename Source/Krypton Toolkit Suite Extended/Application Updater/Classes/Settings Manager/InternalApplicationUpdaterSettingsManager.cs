@@ -11,7 +11,7 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
     public class InternalApplicationUpdaterSettingsManager
     {
         #region Variables
-        private bool _alwaysUsePrompt = false;
+        private bool _alwaysUsePrompt = false, _settingsModified = false;
 
         private InternalApplicationUpdaterSettings _internalApplicationUpdaterSettings = new InternalApplicationUpdaterSettings();
         #endregion
@@ -33,6 +33,25 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
             set
             {
                 _alwaysUsePrompt = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether [settings modifed].
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [settings modifed]; otherwise, <c>false</c>.
+        /// </value>
+        public bool SettingsModifed
+        {
+            get
+            {
+                return _settingsModified;
+            }
+
+            set
+            {
+                _settingsModified = value;
             }
         }
         #endregion
@@ -68,6 +87,24 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         }
 
         /// <summary>
+        /// Sets the SettingsModified to the value of value.
+        /// </summary>
+        /// <param name="value">The desired value of SettingsModified.</param>
+        public void SetSettingsModified(bool value)
+        {
+            SettingsModifed = value;
+        }
+
+        /// <summary>
+        /// Returns the value of the SettingsModified.
+        /// </summary>
+        /// <returns>The value of the SettingsModified.</returns>
+        public bool GetSettingsModified()
+        {
+            return SettingsModifed;
+        }
+
+        /// <summary>
         /// Sets the ApplicationName to the value of value.
         /// </summary>
         /// <param name="value">The desired value of ApplicationName.</param>
@@ -75,7 +112,7 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         {
             _internalApplicationUpdaterSettings.ApplicationName = value;
 
-            SaveInternalApplicationUpdaterSettings(GetAlwaysUsePrompt());
+            SetSettingsModified(true);
         }
 
         /// <summary>
@@ -95,7 +132,7 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         {
             _internalApplicationUpdaterSettings.CurrentApplicationVersion = value;
 
-            SaveInternalApplicationUpdaterSettings(GetAlwaysUsePrompt());
+            SetSettingsModified(true);
         }
 
         /// <summary>
@@ -115,7 +152,7 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         {
             _internalApplicationUpdaterSettings.XMLFileURL = value;
 
-            SaveInternalApplicationUpdaterSettings(GetAlwaysUsePrompt());
+            SetSettingsModified(true);
         }
 
         /// <summary>
@@ -135,7 +172,7 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         {
             _internalApplicationUpdaterSettings.DestinationDownloadPath = value;
 
-            SaveInternalApplicationUpdaterSettings(GetAlwaysUsePrompt());
+            SetSettingsModified(true);
         }
 
         /// <summary>
@@ -155,7 +192,7 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         {
             _internalApplicationUpdaterSettings.DisableAutomaticUpdates = value;
 
-            SaveInternalApplicationUpdaterSettings(GetAlwaysUsePrompt());
+            SetSettingsModified(true);
         }
 
         /// <summary>
@@ -175,7 +212,7 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         {
             _internalApplicationUpdaterSettings.AlwaysUseUACElevation = value;
 
-            SaveInternalApplicationUpdaterSettings(GetAlwaysUsePrompt());
+            SetSettingsModified(true);
         }
 
         /// <summary>
@@ -195,7 +232,7 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         {
             _internalApplicationUpdaterSettings.BetaFlag = value;
 
-            SaveInternalApplicationUpdaterSettings(GetAlwaysUsePrompt());
+            SetSettingsModified(true);
         }
 
         /// <summary>
@@ -215,7 +252,7 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         {
             _internalApplicationUpdaterSettings.DateOfLastCheck = value;
 
-            SaveInternalApplicationUpdaterSettings(GetAlwaysUsePrompt());
+            SetSettingsModified(true);
         }
 
         /// <summary>
@@ -235,7 +272,7 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         {
             _internalApplicationUpdaterSettings.DateOfNextCheck = value;
 
-            SaveInternalApplicationUpdaterSettings(GetAlwaysUsePrompt());
+            SetSettingsModified(true);
         }
 
         /// <summary>
@@ -255,7 +292,7 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         {
             _internalApplicationUpdaterSettings.DateOfLastUpdateInstallation = value;
 
-            SaveInternalApplicationUpdaterSettings(GetAlwaysUsePrompt());
+            SetSettingsModified(true);
         }
 
         /// <summary>

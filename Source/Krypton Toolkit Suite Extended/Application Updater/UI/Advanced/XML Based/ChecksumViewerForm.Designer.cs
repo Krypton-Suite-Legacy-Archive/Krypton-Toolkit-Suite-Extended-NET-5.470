@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.kpnlBackground = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnValidateChecksums = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.klblFilename = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.klblMD5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kcbtnToggle = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
-            this.klblSHA1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.klblSHA512 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.klblSHA384 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.klblSHA256 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.klblRIPEMD160 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblSHA256 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblSHA384 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblSHA512 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblSHA1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kcbtnToggle = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
+            this.klblMD5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblFilename = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kbtnValidateChecksums = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kMan = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kpnlBackground)).BeginInit();
             this.kpnlBackground.SuspendLayout();
             this.SuspendLayout();
@@ -61,43 +63,50 @@
             this.kpnlBackground.Size = new System.Drawing.Size(1250, 633);
             this.kpnlBackground.TabIndex = 0;
             // 
-            // kbtnCancel
+            // klblRIPEMD160
             // 
-            this.kbtnCancel.Location = new System.Drawing.Point(1127, 583);
-            this.kbtnCancel.Name = "kbtnCancel";
-            this.kbtnCancel.Size = new System.Drawing.Size(111, 38);
-            this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnCancel.TabIndex = 0;
-            this.kbtnCancel.Values.Text = "&Cancel";
-            this.kbtnCancel.Click += new System.EventHandler(this.kbtnCancel_Click);
+            this.klblRIPEMD160.Location = new System.Drawing.Point(12, 397);
+            this.klblRIPEMD160.Name = "klblRIPEMD160";
+            this.klblRIPEMD160.Size = new System.Drawing.Size(130, 26);
+            this.klblRIPEMD160.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.klblRIPEMD160.TabIndex = 9;
+            this.klblRIPEMD160.Values.Text = "RIPEMD-160: {0}";
             // 
-            // kbtnValidateChecksums
+            // klblSHA256
             // 
-            this.kbtnValidateChecksums.Location = new System.Drawing.Point(942, 583);
-            this.kbtnValidateChecksums.Name = "kbtnValidateChecksums";
-            this.kbtnValidateChecksums.Size = new System.Drawing.Size(179, 38);
-            this.kbtnValidateChecksums.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnValidateChecksums.TabIndex = 1;
-            this.kbtnValidateChecksums.Values.Text = "&Validate Checksums";
-            this.kbtnValidateChecksums.Click += new System.EventHandler(this.kbtnValidateChecksums_Click);
+            this.klblSHA256.Location = new System.Drawing.Point(12, 199);
+            this.klblSHA256.Name = "klblSHA256";
+            this.klblSHA256.Size = new System.Drawing.Size(103, 26);
+            this.klblSHA256.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.klblSHA256.TabIndex = 8;
+            this.klblSHA256.Values.Text = "SHA-256: {0}";
             // 
-            // klblFilename
+            // klblSHA384
             // 
-            this.klblFilename.Location = new System.Drawing.Point(12, 12);
-            this.klblFilename.Name = "klblFilename";
-            this.klblFilename.Size = new System.Drawing.Size(366, 26);
-            this.klblFilename.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblFilename.TabIndex = 2;
-            this.klblFilename.Values.Text = "These are the checksum values for the file: {0}";
+            this.klblSHA384.Location = new System.Drawing.Point(12, 265);
+            this.klblSHA384.Name = "klblSHA384";
+            this.klblSHA384.Size = new System.Drawing.Size(103, 26);
+            this.klblSHA384.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.klblSHA384.TabIndex = 7;
+            this.klblSHA384.Values.Text = "SHA-384: {0}";
             // 
-            // klblMD5
+            // klblSHA512
             // 
-            this.klblMD5.Location = new System.Drawing.Point(12, 67);
-            this.klblMD5.Name = "klblMD5";
-            this.klblMD5.Size = new System.Drawing.Size(74, 26);
-            this.klblMD5.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.klblMD5.TabIndex = 3;
-            this.klblMD5.Values.Text = "MD5: {0}";
+            this.klblSHA512.Location = new System.Drawing.Point(12, 331);
+            this.klblSHA512.Name = "klblSHA512";
+            this.klblSHA512.Size = new System.Drawing.Size(103, 26);
+            this.klblSHA512.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.klblSHA512.TabIndex = 6;
+            this.klblSHA512.Values.Text = "SHA-512: {0}";
+            // 
+            // klblSHA1
+            // 
+            this.klblSHA1.Location = new System.Drawing.Point(12, 133);
+            this.klblSHA1.Name = "klblSHA1";
+            this.klblSHA1.Size = new System.Drawing.Size(85, 26);
+            this.klblSHA1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.klblSHA1.TabIndex = 5;
+            this.klblSHA1.Values.Text = "SHA-1: {0}";
             // 
             // kcbtnToggle
             // 
@@ -109,50 +118,43 @@
             this.kcbtnToggle.Values.Text = "&Toggle UPPERCASE";
             this.kcbtnToggle.Click += new System.EventHandler(this.kcbtnToggle_Click);
             // 
-            // klblSHA1
+            // klblMD5
             // 
-            this.klblSHA1.Location = new System.Drawing.Point(12, 133);
-            this.klblSHA1.Name = "klblSHA1";
-            this.klblSHA1.Size = new System.Drawing.Size(85, 26);
-            this.klblSHA1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.klblSHA1.TabIndex = 5;
-            this.klblSHA1.Values.Text = "SHA-1: {0}";
+            this.klblMD5.Location = new System.Drawing.Point(12, 67);
+            this.klblMD5.Name = "klblMD5";
+            this.klblMD5.Size = new System.Drawing.Size(74, 26);
+            this.klblMD5.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.klblMD5.TabIndex = 3;
+            this.klblMD5.Values.Text = "MD5: {0}";
             // 
-            // klblSHA512
+            // klblFilename
             // 
-            this.klblSHA512.Location = new System.Drawing.Point(12, 331);
-            this.klblSHA512.Name = "klblSHA512";
-            this.klblSHA512.Size = new System.Drawing.Size(103, 26);
-            this.klblSHA512.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.klblSHA512.TabIndex = 6;
-            this.klblSHA512.Values.Text = "SHA-512: {0}";
+            this.klblFilename.Location = new System.Drawing.Point(12, 12);
+            this.klblFilename.Name = "klblFilename";
+            this.klblFilename.Size = new System.Drawing.Size(366, 26);
+            this.klblFilename.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblFilename.TabIndex = 2;
+            this.klblFilename.Values.Text = "These are the checksum values for the file: {0}";
             // 
-            // klblSHA384
+            // kbtnValidateChecksums
             // 
-            this.klblSHA384.Location = new System.Drawing.Point(12, 265);
-            this.klblSHA384.Name = "klblSHA384";
-            this.klblSHA384.Size = new System.Drawing.Size(103, 26);
-            this.klblSHA384.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.klblSHA384.TabIndex = 7;
-            this.klblSHA384.Values.Text = "SHA-384: {0}";
+            this.kbtnValidateChecksums.Location = new System.Drawing.Point(942, 583);
+            this.kbtnValidateChecksums.Name = "kbtnValidateChecksums";
+            this.kbtnValidateChecksums.Size = new System.Drawing.Size(179, 38);
+            this.kbtnValidateChecksums.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnValidateChecksums.TabIndex = 1;
+            this.kbtnValidateChecksums.Values.Text = "&Validate Checksums";
+            this.kbtnValidateChecksums.Click += new System.EventHandler(this.kbtnValidateChecksums_Click);
             // 
-            // klblSHA256
+            // kbtnCancel
             // 
-            this.klblSHA256.Location = new System.Drawing.Point(12, 199);
-            this.klblSHA256.Name = "klblSHA256";
-            this.klblSHA256.Size = new System.Drawing.Size(103, 26);
-            this.klblSHA256.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.klblSHA256.TabIndex = 8;
-            this.klblSHA256.Values.Text = "SHA-256: {0}";
-            // 
-            // klblRIPEMD160
-            // 
-            this.klblRIPEMD160.Location = new System.Drawing.Point(12, 397);
-            this.klblRIPEMD160.Name = "klblRIPEMD160";
-            this.klblRIPEMD160.Size = new System.Drawing.Size(130, 26);
-            this.klblRIPEMD160.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.klblRIPEMD160.TabIndex = 9;
-            this.klblRIPEMD160.Values.Text = "RIPEMD-160: {0}";
+            this.kbtnCancel.Location = new System.Drawing.Point(1127, 583);
+            this.kbtnCancel.Name = "kbtnCancel";
+            this.kbtnCancel.Size = new System.Drawing.Size(111, 38);
+            this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnCancel.TabIndex = 0;
+            this.kbtnCancel.Values.Text = "&Cancel";
+            this.kbtnCancel.Click += new System.EventHandler(this.kbtnCancel_Click);
             // 
             // ChecksumViewerForm
             // 
@@ -188,5 +190,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel klblMD5;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel klblFilename;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnValidateChecksums;
+        private ComponentFactory.Krypton.Toolkit.KryptonManager kMan;
     }
 }

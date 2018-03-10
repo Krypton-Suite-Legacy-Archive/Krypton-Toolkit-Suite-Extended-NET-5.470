@@ -148,5 +148,12 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
         {
             pbWait.Value = pbWait.Value + 1;
         }
+
+        private void kbtOptions_Click(object sender, EventArgs e)
+        {
+            UpdaterOptionsForm updaterOptions = new UpdaterOptionsForm();
+
+            updaterOptions.Show();
+        }
     }
 }
