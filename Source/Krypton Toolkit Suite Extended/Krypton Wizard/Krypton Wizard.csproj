@@ -154,6 +154,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Resources\GlassExtenderProvider.bmp" />
   </ItemGroup>
   <ItemGroup>

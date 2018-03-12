@@ -134,72 +134,72 @@ namespace KryptonApplicationUpdater.Settings {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string MD5Checksum {
+        public string MD5CheckSum {
             get {
-                return ((string)(this["MD5Checksum"]));
+                return ((string)(this["MD5CheckSum"]));
             }
             set {
-                this["MD5Checksum"] = value;
+                this["MD5CheckSum"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SHA1Checksum {
+        public string SHA1CheckSum {
             get {
-                return ((string)(this["SHA1Checksum"]));
+                return ((string)(this["SHA1CheckSum"]));
             }
             set {
-                this["SHA1Checksum"] = value;
+                this["SHA1CheckSum"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SHA256Checksum {
+        public string SHA256CheckSum {
             get {
-                return ((string)(this["SHA256Checksum"]));
+                return ((string)(this["SHA256CheckSum"]));
             }
             set {
-                this["SHA256Checksum"] = value;
+                this["SHA256CheckSum"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SHA384Checksum {
+        public string SHA384CheckSum {
             get {
-                return ((string)(this["SHA384Checksum"]));
+                return ((string)(this["SHA384CheckSum"]));
             }
             set {
-                this["SHA384Checksum"] = value;
+                this["SHA384CheckSum"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SHA512Checksum {
+        public string SHA512CheckSum {
             get {
-                return ((string)(this["SHA512Checksum"]));
+                return ((string)(this["SHA512CheckSum"]));
             }
             set {
-                this["SHA512Checksum"] = value;
+                this["SHA512CheckSum"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string RIPEMD160Checksum {
+        public string RIPEMD160CheckSum {
             get {
-                return ((string)(this["RIPEMD160Checksum"]));
+                return ((string)(this["RIPEMD160CheckSum"]));
             }
             set {
-                this["RIPEMD160Checksum"] = value;
+                this["RIPEMD160CheckSum"] = value;
             }
         }
         
@@ -276,12 +276,12 @@ namespace KryptonApplicationUpdater.Settings {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ChecksumFileURL {
+        public string CheckSumFileURL {
             get {
-                return ((string)(this["ChecksumFileURL"]));
+                return ((string)(this["CheckSumFileURL"]));
             }
             set {
-                this["ChecksumFileURL"] = value;
+                this["CheckSumFileURL"] = value;
             }
         }
     }

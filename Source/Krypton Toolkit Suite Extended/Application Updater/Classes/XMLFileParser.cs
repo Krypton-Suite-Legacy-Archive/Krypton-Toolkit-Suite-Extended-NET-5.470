@@ -1,9 +1,11 @@
 ﻿using KryptonApplicationUpdater.Interfaces;
 using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace KryptonApplicationUpdater.Classes
 {
-    public class XMLFileParser
+    public class XMLFileParser : IXMLData, IUpdatable
     {
         #region Variables
         private string _xmlFilePath, _applicationIdentifier, _applicationName, _serverVersion, _updatePackageType, _updatePackageSeverity, _updatePackageName, _updatePackageServerURLDownloadLocation, _changelogServerURLDownloadLocation, _specialisedUpdateIconURL, _md5Checksum, _sha1Checksum, _sha256Checksum, _sha384Checksum, _sha512Checksum, _ripemd160Checksum, _updatePackageBuildString, _optionalArguments, _checksumFileURL;
@@ -26,6 +28,39 @@ namespace KryptonApplicationUpdater.Classes
         }
         #endregion
 
+        #region IXMLData Implementation
+        public string ApplicationIdentifier { get { return _applicationIdentifier; } set { _applicationIdentifier = value; } }
+        public string ServerVersion { get { return _serverVersion; } set { _serverVersion = value; } }
+        public string UpdatePackageType { get { return _updatePackageType; } set { _updatePackageType = value; } }
+        public string UpdatePackageSeverity { get { return _updatePackageSeverity; } set { _updatePackageSeverity = value; } }
+        public string UpdatePackageName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string UpdatePackageServerURLDownloadLocation { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string ChangelogServerURLDownloadLocation { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string SpecialisedUpdateIconURL { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string MD5Checksum { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string SHA1Checksum { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string SHA256Checksum { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string SHA384Checksum { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string SHA512Checksum { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string RIPEMD160Checksum { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool StartUpdateInstallationUponDownloadCompletion { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime UpdatePackageReleaseDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public long UpdatePackageFileSize { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string OptionalArguments { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime UpdatePackageBuildDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string UpdatePackageBuildString { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool BetaFlag { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string ChecksumFileURL { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        #endregion
+
+        #region IUpdatable Implementation
+        public Icon ApplicationIcon { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string ServerXMLFileURL { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string ApplicationName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string CurrentApplicationVersion { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Form ParentForm { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        #endregion
+
         #region Methods
         /// <summary>
         /// Parses the XML file.
@@ -37,7 +72,7 @@ namespace KryptonApplicationUpdater.Classes
         }
 
         /// <summary>
-        /// Parses the XML file.
+        /// Writes the data.
         /// </summary>
         /// <param name="xmlFilePath">The XML file path.</param>
         /// <param name="applicationIdentifier">The application identifier.</param>
@@ -63,7 +98,7 @@ namespace KryptonApplicationUpdater.Classes
         /// <param name="updatePackageReleaseDate">The update package release date.</param>
         /// <param name="updatePackageBuildDate">The update package build date.</param>
         /// <param name="updatePackageFileSize">Size of the update package file.</param>
-        public void ParseXMLFile(string xmlFilePath, string applicationIdentifier, string applicationName, string serverVersion, string updatePackageType, string updatePackageSeverity, string updatePackageName, string updatePackageServerURLDownloadLocation, string changelogServerURLDownloadLocation, string specialisedUpdateIconURL, string md5Checksum, string sha1Checksum, string sha256Checksum, string sha384Checksum, string sha512Checksum, string ripemd160Checksum, string updatePackageBuildString, string optionalArguments, string checksumFileURL, bool betaFlag, bool startUpdateInstallationUponDownloadCompletion, DateTime updatePackageReleaseDate, DateTime updatePackageBuildDate, long updatePackageFileSize)
+        public void WriteData(string xmlFilePath, string applicationIdentifier, string applicationName, string serverVersion, string updatePackageType, string updatePackageSeverity, string updatePackageName, string updatePackageServerURLDownloadLocation, string changelogServerURLDownloadLocation, string specialisedUpdateIconURL, string md5Checksum, string sha1Checksum, string sha256Checksum, string sha384Checksum, string sha512Checksum, string ripemd160Checksum, string updatePackageBuildString, string optionalArguments, string checksumFileURL, bool betaFlag, bool startUpdateInstallationUponDownloadCompletion, DateTime updatePackageReleaseDate, DateTime updatePackageBuildDate, long updatePackageFileSize)
         {
             _xmlFilePath = xmlFilePath;
 
@@ -72,6 +107,46 @@ namespace KryptonApplicationUpdater.Classes
             _applicationName = applicationName;
 
             _serverVersion = serverVersion;
+
+            _updatePackageType = updatePackageType;
+
+            _updatePackageSeverity = updatePackageSeverity;
+
+            _updatePackageName = updatePackageName;
+
+            _updatePackageServerURLDownloadLocation = updatePackageServerURLDownloadLocation;
+
+            _changelogServerURLDownloadLocation = changelogServerURLDownloadLocation;
+
+            _specialisedUpdateIconURL = specialisedUpdateIconURL;
+
+            _md5Checksum = md5Checksum;
+
+            _sha1Checksum = sha1Checksum;
+
+            _sha256Checksum = sha256Checksum;
+
+            _sha384Checksum = sha384Checksum;
+
+            _sha512Checksum = sha512Checksum;
+
+            _ripemd160Checksum = ripemd160Checksum;
+
+            _updatePackageBuildString = updatePackageBuildString;
+
+            _optionalArguments = optionalArguments;
+
+            _checksumFileURL = checksumFileURL;
+
+            _betaFlag = betaFlag;
+
+            _startUpdateInstallationUponDownloadCompletion = startUpdateInstallationUponDownloadCompletion;
+
+            _updatePackageReleaseDate = updatePackageReleaseDate;
+
+            _updatePackageBuildDate = updatePackageBuildDate;
+
+            _updatePackageFileSize = updatePackageFileSize;
         }
         #endregion
     }

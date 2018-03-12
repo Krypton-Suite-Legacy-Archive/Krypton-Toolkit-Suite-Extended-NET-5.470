@@ -35,12 +35,20 @@
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kuacbtnApply = new ExtendedControls.ExtendedToolkit.Controls.KryptonUACShieldButton();
             this.kMan = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+            this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
+            this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlBackground)).BeginInit();
             this.kpnlBackground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
+            this.kryptonNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
             this.SuspendLayout();
             // 
             // kpnlBackground
             // 
+            this.kpnlBackground.Controls.Add(this.kryptonNavigator1);
             this.kpnlBackground.Controls.Add(this.kbtnOk);
             this.kpnlBackground.Controls.Add(this.kbtnCancel);
             this.kpnlBackground.Controls.Add(this.kuacbtnApply);
@@ -81,6 +89,42 @@
             this.kuacbtnApply.Values.Image = ((System.Drawing.Image)(resources.GetObject("kuacbtnApply.Values.Image")));
             this.kuacbtnApply.Values.Text = "&Apply";
             // 
+            // kryptonNavigator1
+            // 
+            this.kryptonNavigator1.Location = new System.Drawing.Point(12, 12);
+            this.kryptonNavigator1.Name = "kryptonNavigator1";
+            this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
+            this.kryptonPage1,
+            this.kryptonPage2});
+            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonNavigator1.Size = new System.Drawing.Size(905, 670);
+            this.kryptonNavigator1.TabIndex = 1;
+            this.kryptonNavigator1.Text = "kryptonNavigator1";
+            // 
+            // kryptonPage1
+            // 
+            this.kryptonPage1.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage1.Flags = 65534;
+            this.kryptonPage1.LastVisibleSet = true;
+            this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage1.Name = "kryptonPage1";
+            this.kryptonPage1.Size = new System.Drawing.Size(903, 643);
+            this.kryptonPage1.Text = "kryptonPage1";
+            this.kryptonPage1.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage1.UniqueName = "D6B2663B645F4214C0BB7B3C9D44348B";
+            // 
+            // kryptonPage2
+            // 
+            this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage2.Flags = 65534;
+            this.kryptonPage2.LastVisibleSet = true;
+            this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage2.Name = "kryptonPage2";
+            this.kryptonPage2.Size = new System.Drawing.Size(100, 100);
+            this.kryptonPage2.Text = "kryptonPage2";
+            this.kryptonPage2.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage2.UniqueName = "D6D9A79E325340655D9E0A418BF9D6B5";
+            // 
             // UpdaterOptionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +140,10 @@
             this.Text = "UpdaterOptionsForm";
             ((System.ComponentModel.ISupportInitialize)(this.kpnlBackground)).EndInit();
             this.kpnlBackground.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).EndInit();
+            this.kryptonNavigator1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,5 +155,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonManager kMan;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnOk;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnCancel;
+        private ComponentFactory.Krypton.Navigator.KryptonNavigator kryptonNavigator1;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage1;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage2;
     }
 }

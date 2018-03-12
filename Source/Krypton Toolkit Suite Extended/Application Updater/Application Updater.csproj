@@ -43,6 +43,21 @@
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ExtendedLinguisticServices, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Sensors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.Sensors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -59,6 +74,7 @@
     <Compile Include="Classes\Settings Manager\XMLFileApplicationUpdaterSettingsManager.cs" />
     <Compile Include="Classes\UpdaterLogic.cs" />
     <Compile Include="Classes\XMLFileParser.cs" />
+    <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="Interfaces\IUpdatable.cs" />
     <Compile Include="Interfaces\IXMLData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +87,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>InternalApplicationUpdaterSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\ThemeSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ThemeSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="Settings\XMLFileApplicationUpdaterSettings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -100,6 +121,12 @@
     </Compile>
     <Compile Include="UI\Advanced\XML Based\UpdateDownloadForm.Designer.cs">
       <DependentUpon>UpdateDownloadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\UpdatePackageDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Advanced\XML Based\UpdatePackageDetailsForm.Designer.cs">
+      <DependentUpon>UpdatePackageDetailsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Advanced\XML Based\UpdaterOptionsForm.cs">
       <SubType>Form</SubType>
@@ -137,6 +164,9 @@
     <EmbeddedResource Include="UI\Advanced\XML Based\UpdateDownloadForm.resx">
       <DependentUpon>UpdateDownloadForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Advanced\XML Based\UpdatePackageDetailsForm.resx">
+      <DependentUpon>UpdatePackageDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Advanced\XML Based\UpdaterOptionsForm.resx">
       <DependentUpon>UpdaterOptionsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,10 +179,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Resources\Krypton.ico" />
     <None Include="Settings\InternalApplicationUpdaterSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>InternalApplicationUpdaterSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\ThemeSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ThemeSettings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Settings\XMLFileApplicationUpdaterSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

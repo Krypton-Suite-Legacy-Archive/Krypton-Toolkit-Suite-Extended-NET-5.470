@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Microsoft.WindowsAPICodePack.Taskbar;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -263,6 +264,22 @@ namespace GlobalUtilities.Classes
                 }
 
                 SetInternetConnectionState(false);
+            }
+        }
+
+        /// <summary>
+        /// This method checks if the client operating system supports the Windows API CodePack set of API's.
+        /// </summary>
+        /// <returns>True, if the client operating system supports the Windows API CodePack set of API's.</returns>
+        public bool IsWindowsAPICodePackSupported()
+        {
+            if (TaskbarManager.IsPlatformSupported)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
         #endregion
@@ -570,6 +587,22 @@ namespace GlobalUtilities.Classes
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// This method checks if the client operating system supports the Windows API CodePack set of API's.
+        /// </summary>
+        /// <returns>True, if the client operating system supports the Windows API CodePack set of API's.</returns>
+        public static bool IsWindowsAPICodePackSupported()
+        {
+            if (TaskbarManager.IsPlatformSupported)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         #endregion
 

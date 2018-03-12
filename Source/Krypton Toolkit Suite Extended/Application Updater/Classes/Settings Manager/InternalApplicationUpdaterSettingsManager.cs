@@ -353,11 +353,15 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
                 if (KryptonMessageBox.Show("You have changed a setting value. Do you want to save these changes?", "Setting Values Changed", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     _internalApplicationUpdaterSettings.Save();
+
+                    SetSettingsModified(false);
                 }
             }
             else
             {
                 _internalApplicationUpdaterSettings.Save();
+
+                SetSettingsModified(false);
             }
         }
         #endregion

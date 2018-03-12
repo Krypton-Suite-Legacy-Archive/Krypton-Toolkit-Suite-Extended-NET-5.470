@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateDownloadForm));
             this.kpnlBackground = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.pbDownloadIndicator = new System.Windows.Forms.ProgressBar();
+            this.klblDownloadPercent = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblCurrentSpeed = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblDownloaded = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblDownloadingTo = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblDownloadingFrom = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kuacbtnInstallUpdate = new ExtendedControls.ExtendedToolkit.Controls.KryptonUACShieldButton();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.klblDownloadingFrom = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.klblDownloadingTo = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.klblDownloaded = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.klblCurrentSpeed = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.klblDownloadPercent = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.pbDownloadIndicator = new System.Windows.Forms.ProgressBar();
             this.kMan = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.ttHelp = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kpnlBackground)).BeginInit();
@@ -61,35 +61,43 @@
             this.kpnlBackground.Size = new System.Drawing.Size(800, 298);
             this.kpnlBackground.TabIndex = 0;
             // 
-            // kuacbtnInstallUpdate
+            // pbDownloadIndicator
             // 
-            this.kuacbtnInstallUpdate.Enabled = false;
-            this.kuacbtnInstallUpdate.Location = new System.Drawing.Point(472, 247);
-            this.kuacbtnInstallUpdate.Name = "kuacbtnInstallUpdate";
-            this.kuacbtnInstallUpdate.Size = new System.Drawing.Size(199, 38);
-            this.kuacbtnInstallUpdate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kuacbtnInstallUpdate.TabIndex = 2;
-            this.kuacbtnInstallUpdate.Values.Image = ((System.Drawing.Image)(resources.GetObject("kuacbtnApply.Values.Image")));
-            this.kuacbtnInstallUpdate.Values.Text = "&Install Update";
+            this.pbDownloadIndicator.Location = new System.Drawing.Point(12, 204);
+            this.pbDownloadIndicator.Name = "pbDownloadIndicator";
+            this.pbDownloadIndicator.Size = new System.Drawing.Size(718, 26);
+            this.pbDownloadIndicator.TabIndex = 8;
+            this.pbDownloadIndicator.MouseHover += new System.EventHandler(this.pbDownloadIndicator_MouseHover);
             // 
-            // kbtnCancel
+            // klblDownloadPercent
             // 
-            this.kbtnCancel.Location = new System.Drawing.Point(677, 247);
-            this.kbtnCancel.Name = "kbtnCancel";
-            this.kbtnCancel.Size = new System.Drawing.Size(111, 38);
-            this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnCancel.TabIndex = 1;
-            this.kbtnCancel.Values.Text = "&Cancel";
+            this.klblDownloadPercent.Location = new System.Drawing.Point(736, 204);
+            this.klblDownloadPercent.Name = "klblDownloadPercent";
+            this.klblDownloadPercent.Size = new System.Drawing.Size(44, 26);
+            this.klblDownloadPercent.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.klblDownloadPercent.TabIndex = 7;
+            this.klblDownloadPercent.Values.Text = "{0}%";
+            this.klblDownloadPercent.MouseHover += new System.EventHandler(this.klblDownloadPercent_MouseHover);
             // 
-            // klblDownloadingFrom
+            // klblCurrentSpeed
             // 
-            this.klblDownloadingFrom.AutoSize = false;
-            this.klblDownloadingFrom.Location = new System.Drawing.Point(12, 12);
-            this.klblDownloadingFrom.Name = "klblDownloadingFrom";
-            this.klblDownloadingFrom.Size = new System.Drawing.Size(776, 26);
-            this.klblDownloadingFrom.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblDownloadingFrom.TabIndex = 3;
-            this.klblDownloadingFrom.Values.Text = "Downloading from: {0}";
+            this.klblCurrentSpeed.Location = new System.Drawing.Point(538, 127);
+            this.klblCurrentSpeed.Name = "klblCurrentSpeed";
+            this.klblCurrentSpeed.Size = new System.Drawing.Size(189, 26);
+            this.klblCurrentSpeed.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblCurrentSpeed.TabIndex = 6;
+            this.klblCurrentSpeed.Values.Text = "Current Speed: {0}KB/s";
+            this.klblCurrentSpeed.MouseHover += new System.EventHandler(this.klblCurrentSpeed_MouseHover);
+            // 
+            // klblDownloaded
+            // 
+            this.klblDownloaded.Location = new System.Drawing.Point(12, 127);
+            this.klblDownloaded.Name = "klblDownloaded";
+            this.klblDownloaded.Size = new System.Drawing.Size(250, 26);
+            this.klblDownloaded.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblDownloaded.TabIndex = 5;
+            this.klblDownloaded.Values.Text = "Downloaded: {0} MB of {1} MB";
+            this.klblDownloaded.MouseHover += new System.EventHandler(this.klblDownloaded_MouseHover);
             // 
             // klblDownloadingTo
             // 
@@ -100,40 +108,40 @@
             this.klblDownloadingTo.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblDownloadingTo.TabIndex = 4;
             this.klblDownloadingTo.Values.Text = "Downloading to: {0}";
+            this.klblDownloadingTo.MouseHover += new System.EventHandler(this.klblDownloadingTo_MouseHover);
             // 
-            // klblDownloaded
+            // klblDownloadingFrom
             // 
-            this.klblDownloaded.Location = new System.Drawing.Point(12, 127);
-            this.klblDownloaded.Name = "klblDownloaded";
-            this.klblDownloaded.Size = new System.Drawing.Size(250, 26);
-            this.klblDownloaded.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblDownloaded.TabIndex = 5;
-            this.klblDownloaded.Values.Text = "Downloaded: {0} MB of {1} MB";
+            this.klblDownloadingFrom.AutoSize = false;
+            this.klblDownloadingFrom.Location = new System.Drawing.Point(12, 12);
+            this.klblDownloadingFrom.Name = "klblDownloadingFrom";
+            this.klblDownloadingFrom.Size = new System.Drawing.Size(776, 26);
+            this.klblDownloadingFrom.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblDownloadingFrom.TabIndex = 3;
+            this.klblDownloadingFrom.Values.Text = "Downloading from: {0}";
+            this.klblDownloadingFrom.MouseHover += new System.EventHandler(this.klblDownloadingFrom_MouseHover);
             // 
-            // klblCurrentSpeed
+            // kuacbtnInstallUpdate
             // 
-            this.klblCurrentSpeed.Location = new System.Drawing.Point(538, 127);
-            this.klblCurrentSpeed.Name = "klblCurrentSpeed";
-            this.klblCurrentSpeed.Size = new System.Drawing.Size(189, 26);
-            this.klblCurrentSpeed.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblCurrentSpeed.TabIndex = 6;
-            this.klblCurrentSpeed.Values.Text = "Current Speed: {0}KB/s";
+            this.kuacbtnInstallUpdate.Enabled = false;
+            this.kuacbtnInstallUpdate.Location = new System.Drawing.Point(472, 247);
+            this.kuacbtnInstallUpdate.Name = "kuacbtnInstallUpdate";
+            this.kuacbtnInstallUpdate.Size = new System.Drawing.Size(199, 38);
+            this.kuacbtnInstallUpdate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kuacbtnInstallUpdate.TabIndex = 2;
+            this.kuacbtnInstallUpdate.Values.Image = ((System.Drawing.Image)(resources.GetObject("kuacbtnInstallUpdate.Values.Image")));
+            this.kuacbtnInstallUpdate.Values.Text = "&Install Update";
+            this.kuacbtnInstallUpdate.Click += new System.EventHandler(this.kuacbtnInstallUpdate_Click);
             // 
-            // klblDownloadPercent
+            // kbtnCancel
             // 
-            this.klblDownloadPercent.Location = new System.Drawing.Point(736, 204);
-            this.klblDownloadPercent.Name = "klblDownloadPercent";
-            this.klblDownloadPercent.Size = new System.Drawing.Size(44, 26);
-            this.klblDownloadPercent.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.klblDownloadPercent.TabIndex = 7;
-            this.klblDownloadPercent.Values.Text = "{0}%";
-            // 
-            // pbDownloadIndicator
-            // 
-            this.pbDownloadIndicator.Location = new System.Drawing.Point(12, 204);
-            this.pbDownloadIndicator.Name = "pbDownloadIndicator";
-            this.pbDownloadIndicator.Size = new System.Drawing.Size(718, 26);
-            this.pbDownloadIndicator.TabIndex = 8;
+            this.kbtnCancel.Location = new System.Drawing.Point(677, 247);
+            this.kbtnCancel.Name = "kbtnCancel";
+            this.kbtnCancel.Size = new System.Drawing.Size(111, 38);
+            this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnCancel.TabIndex = 1;
+            this.kbtnCancel.Values.Text = "&Cancel";
+            this.kbtnCancel.Click += new System.EventHandler(this.kbtnCancel_Click);
             // 
             // UpdateDownloadForm
             // 
@@ -141,7 +149,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 298);
             this.Controls.Add(this.kpnlBackground);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "UpdateDownloadForm";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Downloading Update";
             this.Load += new System.EventHandler(this.UpdateDownloadForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kpnlBackground)).EndInit();

@@ -29,22 +29,22 @@
     <Setting Name="SpecialisedUpdateIconURL" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="MD5Checksum" Type="System.String" Scope="User">
+    <Setting Name="MD5CheckSum" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="SHA1Checksum" Type="System.String" Scope="User">
+    <Setting Name="SHA1CheckSum" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="SHA256Checksum" Type="System.String" Scope="User">
+    <Setting Name="SHA256CheckSum" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="SHA384Checksum" Type="System.String" Scope="User">
+    <Setting Name="SHA384CheckSum" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="SHA512Checksum" Type="System.String" Scope="User">
+    <Setting Name="SHA512CheckSum" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="RIPEMD160Checksum" Type="System.String" Scope="User">
+    <Setting Name="RIPEMD160CheckSum" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="UpdatePackageReleaseDate" Type="System.DateTime" Scope="User">
@@ -65,7 +65,7 @@
     <Setting Name="BetaFlag" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="ChecksumFileURL" Type="System.String" Scope="User">
+    <Setting Name="CheckSumFileURL" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
