@@ -72,6 +72,8 @@
     <Compile Include="Classes\GlobalMethods.cs" />
     <Compile Include="Classes\IconExtractor.cs" />
     <Compile Include="Classes\NativeMethods.cs" />
+    <Compile Include="Classes\NetworkUtilities.cs" />
+    <Compile Include="Classes\TranslationMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

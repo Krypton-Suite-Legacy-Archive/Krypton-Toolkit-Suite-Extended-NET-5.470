@@ -1,0 +1,12 @@
+﻿<!--This file is entirely optional. Use as required.-->
+<?xml version="1.0" encoding="utf-8" ?>
+<checkSums applicationIdentification="MyCoolApplication">
+  <fileName>My Cool Application Installer.exe</fileName>
+  <fileURL>http://#SOME_DOMAIN/files/My Cool Application Installer.exe</fileURL>
+  <md5CheckSum></md5CheckSum>
+  <sha1CheckSum></sha1CheckSum>
+  <sha256CheckSum></sha256CheckSum>
+  <sha384CheckSum></sha384CheckSum>
+  <sha512CheckSum></sha512CheckSum>
+  <ripemd160CheckSum></ripemd160CheckSum>
+</checkSums>

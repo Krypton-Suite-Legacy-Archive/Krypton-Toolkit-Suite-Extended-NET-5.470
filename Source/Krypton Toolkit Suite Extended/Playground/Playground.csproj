@@ -89,6 +89,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Application Updater\Application Updater.csproj">
+      <Project>{bcc482fd-377f-4918-b91a-09444ac90a8e}</Project>
+      <Name>Application Updater</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Extended Controls\Extended Controls.csproj">
       <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
       <Name>Extended Controls</Name>

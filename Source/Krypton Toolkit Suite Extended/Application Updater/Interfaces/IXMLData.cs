@@ -181,5 +181,13 @@ namespace KryptonApplicationUpdater.Interfaces
         /// The checksum file URL.
         /// </value>
         String ChecksumFileURL { get; set; }
+
+        /// <summary>
+        /// Gets or sets the install countdown.
+        /// </summary>
+        /// <value>
+        /// The install countdown.
+        /// </value>
+        int InstallCountdown { get; set; }
     }
 }

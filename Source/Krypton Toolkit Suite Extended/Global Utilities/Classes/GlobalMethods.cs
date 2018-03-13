@@ -239,33 +239,7 @@ namespace GlobalUtilities.Classes
             return result;
         }
 
-        /// <summary>
-        /// Checks the state of the internet connection.
-        /// </summary>
-        /// <param name="pingAddress">The ping address.</param>
-        public void CheckInternetConnectionState(string pingAddress = null)
-        {
-            try
-            {
 
-            }
-            catch (Exception ex)
-            {
-                if (CheckIfTargetPlatformIsSupported(true))
-                {
-                    if (GetIsTargetPlatformSupported())
-                    {
-                        _exceptionHandler.ShowException(ex.Message, true, false, false, false, false, null, null, "Exception Caught", MessageBoxButtons.OK, MessageBoxDefaultButton.Button1, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-
-                    }
-                }
-
-                SetInternetConnectionState(false);
-            }
-        }
 
         /// <summary>
         /// This method checks if the client operating system supports the Windows API CodePack set of API's.

@@ -6,6 +6,7 @@ using KryptonApplicationUpdater.Enumerations;
 using KryptonApplicationUpdater.Interfaces;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
@@ -44,6 +45,10 @@ namespace KryptonApplicationUpdater.Classes
         private XMLFileApplicationUpdaterSettingsManager xmlFileApplicationUpdaterSettingsManager = new XMLFileApplicationUpdaterSettingsManager();
 
         private FileUtilityMethods fileUtilityMethods = new FileUtilityMethods();
+
+        private TranslationMethods translationMethods = new TranslationMethods();
+
+        private NetworkUtilities networkUtilities = new NetworkUtilities();
 
         private IUpdatable _updatable;
 
@@ -267,7 +272,7 @@ namespace KryptonApplicationUpdater.Classes
         /// <param name="pingURL">The ping URL.</param>
         public void CheckForUpdates(string xmlFilePath, string pingURL)
         {
-            _globalMethods.CheckInternetConnectionState(pingURL);
+            networkUtilities.CheckInternetConnectionState(pingURL);
 
             try
             {
@@ -466,9 +471,41 @@ namespace KryptonApplicationUpdater.Classes
             }
         }
 
-        private void DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
+        /// <summary>
+        /// Downloads the file completed.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="AsyncCompletedEventArgs"/> instance containing the event data.</param>
+        /// <exception cref="NotImplementedException"></exception>
+        private void DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Determines whether [is newer than] [the specified current application version].
+        /// </summary>
+        /// <param name="currentApplicationVersion">The current application version.</param>
+        /// <returns>
+        ///   <c>true</c> if [is newer than] [the specified current application version]; otherwise, <c>false</c>.
+        /// </returns>
+        public bool IsNewerThan(Version currentApplicationVersion)
+        {
+            try
+            {
+                if (xmlFileApplicationUpdaterSettingsManager.GetServerVersion() != null)
+                {
+                    return translationMethods.ParseVersion(xmlFileApplicationUpdaterSettingsManager.GetServerVersion()) > currentApplicationVersion;
+                }
+            }
+            catch (Exception e)
+            {
+                _exceptionHandler.ShowException($"Error: { e.Message }", true);
+
+                return false;
+            }
+
+            return false;
         }
         #endregion
 

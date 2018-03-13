@@ -284,5 +284,17 @@ namespace KryptonApplicationUpdater.Settings {
                 this["CheckSumFileURL"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int InstallCountdown {
+            get {
+                return ((int)(this["InstallCountdown"]));
+            }
+            set {
+                this["InstallCountdown"] = value;
+            }
+        }
     }
 }

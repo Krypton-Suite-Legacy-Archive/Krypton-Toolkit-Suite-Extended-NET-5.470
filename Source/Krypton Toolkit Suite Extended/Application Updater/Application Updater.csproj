@@ -207,5 +207,9 @@
   <ItemGroup>
     <Folder Include="UI\Advanced\Wizard\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sample\CheckSums.xml" />
+    <Content Include="Sample\Update.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

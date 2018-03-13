@@ -1,22 +1,35 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code;
+using KryptonApplicationUpdater.Interfaces;
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Playground
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, IUpdatable
     {
         UtilityMethods utilityMethods = new UtilityMethods();
 
         MostRecentlyUsedFileManager mostRecentlyUsedFileManager;
 
+        Version currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
+
         public Form1()
         {
             InitializeComponent();
         }
+
+        #region IUpdatable Implementation
+        public Icon ApplicationIcon { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string ServerXMLFileURL { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string ApplicationName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string CurrentApplicationVersion { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        Form IUpdatable.ParentForm { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        #endregion
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -36,6 +49,8 @@ namespace Playground
             kctb1.CueText = "Hello";
 
             kryptonCommandLinkVersion11.Note = "Hello";
+
+            lblVersion.Text = $"Version: { currentVersion.ToString() }";
         }
 
         private void MyOwnRecentFileGotClicked_Handler(object sender, EventArgs e)
