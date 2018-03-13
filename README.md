@@ -6,6 +6,13 @@
 
 ======
 
+## 2018-03-13 Krypton Application Updater (XML based version) update
+* Base groundwork for XML updater & parsing XML files has been completed
+* New XML files labeled `Update.xml` and `CheckSum.xml` have been created to explain to developers how to use the updater back-end.
+* TODO: Connect the framework up to UI elements.
+
+======
+
 ## 2018-03-10 Krypton Application Updater (XML based version)
 * Begun fundemental groundwork on an XML based application updater (classes/settings/UI).
 * Improved documentation with the aid of [GhostDoc](https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc).
