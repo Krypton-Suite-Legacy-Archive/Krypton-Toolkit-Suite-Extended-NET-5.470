@@ -106,5 +106,65 @@ namespace KryptonApplicationUpdater.Settings {
                 this["UseOffice2010SilverTheme"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseOffice2013Theme {
+            get {
+                return ((bool)(this["UseOffice2013Theme"]));
+            }
+            set {
+                this["UseOffice2013Theme"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseOffice2013WhiteTheme {
+            get {
+                return ((bool)(this["UseOffice2013WhiteTheme"]));
+            }
+            set {
+                this["UseOffice2013WhiteTheme"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseSparkleBlueTheme {
+            get {
+                return ((bool)(this["UseSparkleBlueTheme"]));
+            }
+            set {
+                this["UseSparkleBlueTheme"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseSparkleOrangeTheme {
+            get {
+                return ((bool)(this["UseSparkleOrangeTheme"]));
+            }
+            set {
+                this["UseSparkleOrangeTheme"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseSparklePurpleTheme {
+            get {
+                return ((bool)(this["UseSparklePurpleTheme"]));
+            }
+            set {
+                this["UseSparklePurpleTheme"] = value;
+            }
+        }
     }
 }

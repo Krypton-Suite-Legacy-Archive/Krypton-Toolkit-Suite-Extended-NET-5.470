@@ -139,5 +139,17 @@ namespace KryptonApplicationUpdater.Settings {
                 this["BetaFlag"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ApplicationIdentification {
+            get {
+                return ((string)(this["ApplicationIdentification"]));
+            }
+            set {
+                this["ApplicationIdentification"] = value;
+            }
+        }
     }
 }

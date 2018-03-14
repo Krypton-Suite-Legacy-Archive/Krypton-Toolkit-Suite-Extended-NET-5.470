@@ -485,6 +485,24 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         }
 
         /// <summary>
+        /// Sets the VirusTotalScanURL to the value of value.
+        /// </summary>
+        /// <param name="value">The desired value of VirusTotalScanURL.</param>
+        public void SetVirusTotalScanURL(string value)
+        {
+            _xmlFileApplicationUpdaterSettings.VirusTotalScanURL = value;
+        }
+
+        /// <summary>
+        /// Returns the value of the VirusTotalScanURL.
+        /// </summary>
+        /// <returns>The value of the VirusTotalScanURL.</returns>
+        public string GetVirusTotalScanURL()
+        {
+            return _xmlFileApplicationUpdaterSettings.VirusTotalScanURL;
+        }
+
+        /// <summary>
         /// Sets the UpdatePackageReleaseDate to the value of value.
         /// </summary>
         /// <param name="value">The desired value of UpdatePackageReleaseDate.</param>
@@ -590,6 +608,8 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
                 SetUpdatePackageBuildString(string.Empty);
 
                 SetCheckSumFileURL(string.Empty);
+
+                SetVirusTotalScanURL(string.Empty);
 
                 SetUpdatePackageReleaseDate(DateTime.Now);
 

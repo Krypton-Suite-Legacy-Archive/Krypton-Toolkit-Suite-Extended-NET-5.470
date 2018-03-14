@@ -50,6 +50,8 @@ namespace KryptonApplicationUpdater.Classes
 
         private NetworkUtilities networkUtilities = new NetworkUtilities();
 
+        private XMLFileParser xmlFileParser = new XMLFileParser();
+
         private IUpdatable _updatable;
 
         private IXMLData _xmlData;
@@ -264,13 +266,15 @@ namespace KryptonApplicationUpdater.Classes
         }
         #endregion
 
-        #region Methods
+        #region Methods                
         /// <summary>
         /// Checks for updates.
         /// </summary>
         /// <param name="xmlFilePath">The XML file path.</param>
+        /// <param name="currentVersion">The current version.</param>
         /// <param name="pingURL">The ping URL.</param>
-        public void CheckForUpdates(string xmlFilePath, string pingURL)
+        /// <returns></returns>
+        public bool CheckForUpdates(string xmlFilePath, Version currentVersion, string pingURL)
         {
             networkUtilities.CheckInternetConnectionState(pingURL);
 
@@ -278,7 +282,19 @@ namespace KryptonApplicationUpdater.Classes
             {
                 if (_globalMethods.GetInternetConnectionState())
                 {
+                    if (networkUtilities.ExistsOnServer(new Uri(xmlFilePath)))
+                    {
+                        xmlFileParser.ParseXMLFile(new Uri(xmlFilePath), internalApplicationUpdaterSettingsManager.GetApplicationIdentification());
 
+                        if (IsNewerThan(currentVersion))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
                 }
                 else
                 {
@@ -295,7 +311,11 @@ namespace KryptonApplicationUpdater.Classes
                 {
 
                 }
+
+                return false;
             }
+
+            return false;
         }
 
         /// <summary>

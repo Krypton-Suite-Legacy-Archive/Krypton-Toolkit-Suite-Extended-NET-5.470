@@ -18,4 +18,11 @@
   <ripemd160CheckSum></ripemd160CheckSum>
   <optionalArguments>/taskkill /pid 00000</optionalArguments>
   <checkSumFileURL>http://#SOME_DOMAIN/files/CheckSums.xml</checkSumFileURL>
+  <installCountdown>60</installCountdown>
+  <updatePackageFileSize>30</updatePackageFileSize>
+  <updatePackageBuildDate>Wednesday 14th March, 2018 12:00:00 AM</updatePackageBuildDate>
+  <updatePackageReleaseDate>Wednesday 14th March, 2018 12:00:00 AM</updatePackageReleaseDate>
+  <betaFlag>false</betaFlag>
+  <startUpdateInstallationUponDownloadCompletion>false</startUpdateInstallationUponDownloadCompletion>
+  <virusTotalScanURL></virusTotalScanURL>
 </update>

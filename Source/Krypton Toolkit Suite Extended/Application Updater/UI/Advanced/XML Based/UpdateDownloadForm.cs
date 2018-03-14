@@ -24,6 +24,8 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
         private XMLFileApplicationUpdaterSettingsManager xmlFileApplicationUpdaterSettingsManager = new XMLFileApplicationUpdaterSettingsManager();
 
         private UpdaterLogic updaterLogic = new UpdaterLogic();
+
+        private NetworkUtilities networkUtilities = new NetworkUtilities();
         #endregion
 
         public UpdateDownloadForm()
@@ -35,7 +37,7 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
         {
             kuacbtnInstallUpdate.ProcessName = internalApplicationUpdaterSettingsManager.GetDestinationDownloadPath();
 
-            globalMethods.CheckInternetConnectionState(internalApplicationUpdaterSettingsManager.GetXMLFileURL());
+            networkUtilities.CheckInternetConnectionState(internalApplicationUpdaterSettingsManager.GetXMLFileURL());
 
             if (globalMethods.GetInternetConnectionState())
             {

@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Design">
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Design.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Global Utilities">
       <HintPath>..\Global Utilities\bin\Debug\Global Utilities.dll</HintPath>

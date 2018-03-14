@@ -33,14 +33,16 @@
     <ApplicationIcon>Resources\Krypton.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ComponentFactory.Krypton.Design">
+    <Reference Include="ComponentFactory.Krypton.Design, Version=4.70.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.70.534.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Toolkit">
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -71,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Settings Manager\InternalApplicationUpdaterSettingsManager.cs" />
+    <Compile Include="Classes\Settings Manager\ThemeSettingsManager.cs" />
     <Compile Include="Classes\Settings Manager\XMLFileApplicationUpdaterSettingsManager.cs" />
     <Compile Include="Classes\UpdaterLogic.cs" />
     <Compile Include="Classes\XMLFileParser.cs" />

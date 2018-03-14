@@ -48,5 +48,13 @@ namespace KryptonApplicationUpdater.Interfaces
         /// The parent form.
         /// </value>
         Form ParentForm { get; set; }
+
+        /// <summary>
+        /// Gets or sets the application identification.
+        /// </summary>
+        /// <value>
+        /// The application identification.
+        /// </value>
+        String ApplicationIdentification { get; set; }
     }
 }

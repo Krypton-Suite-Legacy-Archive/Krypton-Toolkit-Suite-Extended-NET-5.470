@@ -122,7 +122,6 @@
             // 
             // tmrWaiting
             // 
-            this.tmrWaiting.Enabled = true;
             this.tmrWaiting.Tick += new System.EventHandler(this.tmrWaiting_Tick);
             // 
             // StartupForm
@@ -138,6 +137,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "StartupForm";
+            this.Load += new System.EventHandler(this.StartupForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();

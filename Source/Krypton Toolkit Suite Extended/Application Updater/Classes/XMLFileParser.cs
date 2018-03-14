@@ -10,7 +10,7 @@ namespace KryptonApplicationUpdater.Classes
     public class XMLFileParser : IXMLData, IUpdatable
     {
         #region Variables
-        private string _xmlFilePath, _applicationIdentifier, _applicationName, _serverVersion, _updatePackageType, _updatePackageSeverity, _updatePackageName, _updatePackageServerURLDownloadLocation, _changelogServerURLDownloadLocation, _specialisedUpdateIconURL, _md5Checksum, _sha1Checksum, _sha256Checksum, _sha384Checksum, _sha512Checksum, _ripemd160Checksum, _updatePackageBuildString, _optionalArguments, _checksumFileURL;
+        private string _xmlFilePath, _applicationIdentifier, _applicationName, _serverVersion, _updatePackageType, _updatePackageSeverity, _updatePackageName, _updatePackageServerURLDownloadLocation, _changelogServerURLDownloadLocation, _specialisedUpdateIconURL, _md5Checksum, _sha1Checksum, _sha256Checksum, _sha384Checksum, _sha512Checksum, _ripemd160Checksum, _updatePackageBuildString, _optionalArguments, _checksumFileURL, _virusTotalScanURL;
 
         private bool _betaFlag, _startUpdateInstallationUponDownloadCompletion;
 
@@ -33,7 +33,7 @@ namespace KryptonApplicationUpdater.Classes
         }
 
         /// <summary>
-        /// Initialises a new instance of the <see cref="XMLFileParser"/> class.
+        /// Initializes a new instance of the <see cref="XMLFileParser"/> class.
         /// </summary>
         /// <param name="xmlFilePath">The XML file path.</param>
         /// <param name="applicationIdentifier">The application identifier.</param>
@@ -54,15 +54,16 @@ namespace KryptonApplicationUpdater.Classes
         /// <param name="updatePackageBuildString">The update package build string.</param>
         /// <param name="optionalArguments">The optional arguments.</param>
         /// <param name="checksumFileURL">The checksum file URL.</param>
+        /// <param name="virusTotalScanURL">The virus total scan URL.</param>
         /// <param name="betaFlag">if set to <c>true</c> [beta flag].</param>
         /// <param name="startUpdateInstallationUponDownloadCompletion">if set to <c>true</c> [start update installation upon download completion].</param>
         /// <param name="updatePackageReleaseDate">The update package release date.</param>
         /// <param name="updatePackageBuildDate">The update package build date.</param>
         /// <param name="updatePackageFileSize">Size of the update package file.</param>
         /// <param name="installCountdown">The install countdown.</param>
-        public XMLFileParser(string xmlFilePath, string applicationIdentifier, string applicationName, string serverVersion, string updatePackageType, string updatePackageSeverity, string updatePackageName, string updatePackageServerURLDownloadLocation, string changelogServerURLDownloadLocation, string specialisedUpdateIconURL, string md5Checksum, string sha1Checksum, string sha256Checksum, string sha384Checksum, string sha512Checksum, string ripemd160Checksum, string updatePackageBuildString, string optionalArguments, string checksumFileURL, bool betaFlag, bool startUpdateInstallationUponDownloadCompletion, DateTime updatePackageReleaseDate, DateTime updatePackageBuildDate, long updatePackageFileSize, int installCountdown)
+        public XMLFileParser(string xmlFilePath, string applicationIdentifier, string applicationName, string serverVersion, string updatePackageType, string updatePackageSeverity, string updatePackageName, string updatePackageServerURLDownloadLocation, string changelogServerURLDownloadLocation, string specialisedUpdateIconURL, string md5Checksum, string sha1Checksum, string sha256Checksum, string sha384Checksum, string sha512Checksum, string ripemd160Checksum, string updatePackageBuildString, string optionalArguments, string checksumFileURL, string virusTotalScanURL, bool betaFlag, bool startUpdateInstallationUponDownloadCompletion, DateTime updatePackageReleaseDate, DateTime updatePackageBuildDate, long updatePackageFileSize, int installCountdown)
         {
-            WriteData(xmlFilePath, applicationIdentifier, applicationName, serverVersion, updatePackageType, updatePackageSeverity, updatePackageName, updatePackageServerURLDownloadLocation, changelogServerURLDownloadLocation, specialisedUpdateIconURL, md5Checksum, sha1Checksum, sha256Checksum, sha384Checksum, sha512Checksum, ripemd160Checksum, updatePackageBuildString, optionalArguments, checksumFileURL, betaFlag, startUpdateInstallationUponDownloadCompletion, updatePackageReleaseDate, updatePackageBuildDate, updatePackageFileSize, installCountdown);
+            WriteData(xmlFilePath, applicationIdentifier, applicationName, serverVersion, updatePackageType, updatePackageSeverity, updatePackageName, updatePackageServerURLDownloadLocation, changelogServerURLDownloadLocation, specialisedUpdateIconURL, md5Checksum, sha1Checksum, sha256Checksum, sha384Checksum, sha512Checksum, ripemd160Checksum, updatePackageBuildString, optionalArguments, checksumFileURL, virusTotalScanURL, betaFlag, startUpdateInstallationUponDownloadCompletion, updatePackageReleaseDate, updatePackageBuildDate, updatePackageFileSize, installCountdown);
         }
         #endregion
 
@@ -90,6 +91,7 @@ namespace KryptonApplicationUpdater.Classes
         public bool BetaFlag { get { return _betaFlag; } set { _betaFlag = value; } }
         public string ChecksumFileURL { get { return _checksumFileURL; } set { _checksumFileURL = value; } }
         public int InstallCountdown { get { return _installCountdown; } set { _installCountdown = value; } }
+        public string VirusTotalScanURL { get { return _virusTotalScanURL; } set { _virusTotalScanURL = value; } }
         #endregion
 
         #region IUpdatable Implementation
@@ -102,6 +104,7 @@ namespace KryptonApplicationUpdater.Classes
         public Icon ApplicationIcon { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public Form ParentForm { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string CurrentApplicationVersion { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string ApplicationIdentification { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         #endregion
 
         #region Methods
@@ -116,7 +119,7 @@ namespace KryptonApplicationUpdater.Classes
         public XMLFileParser ParseXMLFile(Uri xmlFilePath, string applicationIdentification, bool createConfigurationFile = false, string configurationFilePath = null)
         {
             #region Internal Variables
-            string _applicationIdentifier = "", _applicationName = "", _serverVersion = "", _updatePackageType = "", _updatePackageSeverity = "", _updatePackageName = "", _updatePackageServerURLDownloadLocation = "", _changelogServerURLDownloadLocation = "", _specialisedUpdateIconURL = "", _md5Checksum = "", _sha1Checksum = "", _sha256Checksum = "", _sha384Checksum = "", _sha512Checksum = "", _ripemd160Checksum = "", _updatePackageBuildString = "", _optionalArguments = "", _checksumFileURL = "";
+            string _applicationIdentifier = "", _applicationName = "", _serverVersion = "", _updatePackageType = "", _updatePackageSeverity = "", _updatePackageName = "", _updatePackageServerURLDownloadLocation = "", _changelogServerURLDownloadLocation = "", _specialisedUpdateIconURL = "", _md5Checksum = "", _sha1Checksum = "", _sha256Checksum = "", _sha384Checksum = "", _sha512Checksum = "", _ripemd160Checksum = "", _updatePackageBuildString = "", _optionalArguments = "", _checksumFileURL = "", _virusTotalScanURL = "";
 
             bool _betaFlag, _startUpdateInstallationUponDownloadCompletion;
 
@@ -142,62 +145,64 @@ namespace KryptonApplicationUpdater.Classes
                 }
 
                 #region Booleans
-                _betaFlag = translationMethods.ParseBoolean(node["BetaFlag"].InnerText);
+                _betaFlag = translationMethods.ParseBoolean(node["betaFlag"].InnerText);
 
-                _startUpdateInstallationUponDownloadCompletion = translationMethods.ParseBoolean(node["StartUpdateInstallationUponDownloadCompletion"].InnerText);
+                _startUpdateInstallationUponDownloadCompletion = translationMethods.ParseBoolean(node["startUpdateInstallationUponDownloadCompletion"].InnerText);
                 #endregion
 
                 #region Date and Time
-                _updatePackageBuildDate = translationMethods.ParseDateTime(node["UpdatePackageBuildDate"].InnerText);
+                _updatePackageBuildDate = translationMethods.ParseDateTime(node["updatePackageBuildDate"].InnerText);
 
-                _updatePackageReleaseDate = translationMethods.ParseDateTime(node["UpdatePackageReleaseDate"].InnerText);
+                _updatePackageReleaseDate = translationMethods.ParseDateTime(node["updatePackageReleaseDate"].InnerText);
                 #endregion
 
                 #region Integers
-                _installCountdown = translationMethods.ParseInteger(node["InstallCountdown"].InnerText);
+                _installCountdown = translationMethods.ParseInteger(node["installCountdown"].InnerText);
                 #endregion
 
                 #region Longs
-                _updatePackageFileSize = translationMethods.ParseLong(node["UpdatePackageFileSize"].InnerText);
+                _updatePackageFileSize = translationMethods.ParseLong(node["updatePackageFileSize"].InnerText);
                 #endregion
 
                 #region Strings
-                _applicationName = node["ApplicationName"].InnerText;
+                _applicationName = node["applicationName"].InnerText;
 
-                _serverVersion = node["ServerVersion"].InnerText;
+                _serverVersion = node["serverVersion"].InnerText;
 
-                _updatePackageType = node["UpdatePackageType"].InnerText;
+                _updatePackageType = node["updatePackageType"].InnerText;
 
-                _updatePackageSeverity = node["UpdatePackageSeverity"].InnerText;
+                _updatePackageSeverity = node["updatePackageSeverity"].InnerText;
 
-                _updatePackageName = node["UpdatePackageName"].InnerText;
+                _updatePackageName = node["updatePackageName"].InnerText;
 
-                _updatePackageServerURLDownloadLocation = node["UpdatePackageServerURLDownloadLocation"].InnerText;
+                _updatePackageServerURLDownloadLocation = node["updatePackageServerURLDownloadLocation"].InnerText;
 
-                _changelogServerURLDownloadLocation = node["ChangelogServerURLDownloadLocation"].InnerText;
+                _changelogServerURLDownloadLocation = node["changelogServerURLDownloadLocation"].InnerText;
 
-                _specialisedUpdateIconURL = node["SpecialisedUpdateIconURL"].InnerText;
+                _specialisedUpdateIconURL = node["specialisedUpdateIconURL"].InnerText;
 
-                _md5Checksum = node["MD5CheckSum"].InnerText;
+                _md5Checksum = node["md5CheckSum"].InnerText;
 
-                _sha1Checksum = node["SHA1CheckSum"].InnerText;
+                _sha1Checksum = node["sha1CheckSum"].InnerText;
 
-                _sha256Checksum = node["SHA256"].InnerText;
+                _sha256Checksum = node["sha256CheckSum"].InnerText;
 
-                _sha384Checksum = node["SHA384CheckSum"].InnerText;
+                _sha384Checksum = node["sha384CheckSum"].InnerText;
 
-                _sha512Checksum = node["SHA512CheckSum"].InnerText;
+                _sha512Checksum = node["sha512CheckSum"].InnerText;
 
-                _ripemd160Checksum = node["RIPEMD160CheckSum"].InnerText;
+                _ripemd160Checksum = node["ripemd160CheckSum"].InnerText;
 
-                _updatePackageBuildString = node["UpdatePackageBuildString"].InnerText;
+                _updatePackageBuildString = node["updatePackageBuildString"].InnerText;
 
-                _optionalArguments = node["OptionalArguments"].InnerText;
+                _optionalArguments = node["optionalArguments"].InnerText;
 
-                _checksumFileURL = node["ChecksumFileURL"].InnerText;
+                _checksumFileURL = node["checkSumFileURL"].InnerText;
+
+                _virusTotalScanURL = node["virusTotalScanURL"].InnerText;
                 #endregion
 
-                return new XMLFileParser(xmlFilePath.ToString(), _applicationIdentifier, _applicationName, _serverVersion, _updatePackageType, _updatePackageSeverity, _updatePackageName, _updatePackageServerURLDownloadLocation, _changelogServerURLDownloadLocation, _specialisedUpdateIconURL, _md5Checksum, _sha1Checksum, _sha256Checksum, _sha384Checksum, _sha512Checksum, _ripemd160Checksum, _updatePackageBuildString, _optionalArguments, _checksumFileURL, _betaFlag, _startUpdateInstallationUponDownloadCompletion, _updatePackageReleaseDate, _updatePackageBuildDate, _updatePackageFileSize, _installCountdown);
+                return new XMLFileParser(xmlFilePath.ToString(), _applicationIdentifier, _applicationName, _serverVersion, _updatePackageType, _updatePackageSeverity, _updatePackageName, _updatePackageServerURLDownloadLocation, _changelogServerURLDownloadLocation, _specialisedUpdateIconURL, _md5Checksum, _sha1Checksum, _sha256Checksum, _sha384Checksum, _sha512Checksum, _ripemd160Checksum, _updatePackageBuildString, _optionalArguments, _checksumFileURL, _virusTotalScanURL, _betaFlag, _startUpdateInstallationUponDownloadCompletion, _updatePackageReleaseDate, _updatePackageBuildDate, _updatePackageFileSize, _installCountdown);
             }
             catch (Exception)
             {
@@ -228,13 +233,14 @@ namespace KryptonApplicationUpdater.Classes
         /// <param name="updatePackageBuildString">The update package build string.</param>
         /// <param name="optionalArguments">The optional arguments.</param>
         /// <param name="checksumFileURL">The checksum file URL.</param>
+        /// <param name="virusTotalScanURL">The virus total scan URL.</param>
         /// <param name="betaFlag">if set to <c>true</c> [beta flag].</param>
         /// <param name="startUpdateInstallationUponDownloadCompletion">if set to <c>true</c> [start update installation upon download completion].</param>
         /// <param name="updatePackageReleaseDate">The update package release date.</param>
         /// <param name="updatePackageBuildDate">The update package build date.</param>
         /// <param name="updatePackageFileSize">Size of the update package file.</param>
         /// <param name="installCountdown">The install countdown.</param>
-        public void WriteData(string xmlFilePath, string applicationIdentifier, string applicationName, string serverVersion, string updatePackageType, string updatePackageSeverity, string updatePackageName, string updatePackageServerURLDownloadLocation, string changelogServerURLDownloadLocation, string specialisedUpdateIconURL, string md5Checksum, string sha1Checksum, string sha256Checksum, string sha384Checksum, string sha512Checksum, string ripemd160Checksum, string updatePackageBuildString, string optionalArguments, string checksumFileURL, bool betaFlag, bool startUpdateInstallationUponDownloadCompletion, DateTime updatePackageReleaseDate, DateTime updatePackageBuildDate, long updatePackageFileSize, int installCountdown)
+        public void WriteData(string xmlFilePath, string applicationIdentifier, string applicationName, string serverVersion, string updatePackageType, string updatePackageSeverity, string updatePackageName, string updatePackageServerURLDownloadLocation, string changelogServerURLDownloadLocation, string specialisedUpdateIconURL, string md5Checksum, string sha1Checksum, string sha256Checksum, string sha384Checksum, string sha512Checksum, string ripemd160Checksum, string updatePackageBuildString, string optionalArguments, string checksumFileURL, string virusTotalScanURL, bool betaFlag, bool startUpdateInstallationUponDownloadCompletion, DateTime updatePackageReleaseDate, DateTime updatePackageBuildDate, long updatePackageFileSize, int installCountdown)
         {
             ServerXMLFileURL = xmlFilePath;
 
@@ -274,6 +280,8 @@ namespace KryptonApplicationUpdater.Classes
 
             ChecksumFileURL = checksumFileURL;
 
+            VirusTotalScanURL = virusTotalScanURL;
+
             BetaFlag = betaFlag;
 
             StartUpdateInstallationUponDownloadCompletion = startUpdateInstallationUponDownloadCompletion;
@@ -284,7 +292,7 @@ namespace KryptonApplicationUpdater.Classes
 
             UpdatePackageFileSize = updatePackageFileSize;
 
-            SaveDataToSettings(ServerXMLFileURL, ApplicationIdentifier, ApplicationName, ServerVersion, UpdatePackageType, UpdatePackageSeverity, UpdatePackageName, UpdatePackageServerURLDownloadLocation, ChangelogServerURLDownloadLocation, SpecialisedUpdateIconURL, MD5Checksum, SHA1Checksum, SHA256Checksum, SHA384Checksum, SHA512Checksum, RIPEMD160Checksum, UpdatePackageBuildString, OptionalArguments, ChecksumFileURL, BetaFlag, StartUpdateInstallationUponDownloadCompletion, UpdatePackageReleaseDate, UpdatePackageBuildDate, UpdatePackageFileSize, InstallCountdown);
+            SaveDataToSettings(ServerXMLFileURL, ApplicationIdentifier, ApplicationName, ServerVersion, UpdatePackageType, UpdatePackageSeverity, UpdatePackageName, UpdatePackageServerURLDownloadLocation, ChangelogServerURLDownloadLocation, SpecialisedUpdateIconURL, MD5Checksum, SHA1Checksum, SHA256Checksum, SHA384Checksum, SHA512Checksum, RIPEMD160Checksum, UpdatePackageBuildString, OptionalArguments, ChecksumFileURL, VirusTotalScanURL, BetaFlag, StartUpdateInstallationUponDownloadCompletion, UpdatePackageReleaseDate, UpdatePackageBuildDate, UpdatePackageFileSize, InstallCountdown);
         }
 
         /// <summary>
@@ -309,13 +317,14 @@ namespace KryptonApplicationUpdater.Classes
         /// <param name="updatePackageBuildString">The update package build string.</param>
         /// <param name="optionalArguments">The optional arguments.</param>
         /// <param name="checksumFileURL">The checksum file URL.</param>
+        /// <param name="virusTotalScanURL">The virus total scan URL.</param>
         /// <param name="betaFlag">if set to <c>true</c> [beta flag].</param>
         /// <param name="startUpdateInstallationUponDownloadCompletion">if set to <c>true</c> [start update installation upon download completion].</param>
         /// <param name="updatePackageReleaseDate">The update package release date.</param>
         /// <param name="updatePackageBuildDate">The update package build date.</param>
         /// <param name="updatePackageFileSize">Size of the update package file.</param>
         /// <param name="installCountdown">The install countdown.</param>
-        private void SaveDataToSettings(string xmlFilePath, string applicationIdentifier, string applicationName, string serverVersion, string updatePackageType, string updatePackageSeverity, string updatePackageName, string updatePackageServerURLDownloadLocation, string changelogServerURLDownloadLocation, string specialisedUpdateIconURL, string md5Checksum, string sha1Checksum, string sha256Checksum, string sha384Checksum, string sha512Checksum, string ripemd160Checksum, string updatePackageBuildString, string optionalArguments, string checksumFileURL, bool betaFlag, bool startUpdateInstallationUponDownloadCompletion, DateTime updatePackageReleaseDate, DateTime updatePackageBuildDate, long updatePackageFileSize, int installCountdown)
+        private void SaveDataToSettings(string xmlFilePath, string applicationIdentifier, string applicationName, string serverVersion, string updatePackageType, string updatePackageSeverity, string updatePackageName, string updatePackageServerURLDownloadLocation, string changelogServerURLDownloadLocation, string specialisedUpdateIconURL, string md5Checksum, string sha1Checksum, string sha256Checksum, string sha384Checksum, string sha512Checksum, string ripemd160Checksum, string updatePackageBuildString, string optionalArguments, string checksumFileURL, string virusTotalScanURL, bool betaFlag, bool startUpdateInstallationUponDownloadCompletion, DateTime updatePackageReleaseDate, DateTime updatePackageBuildDate, long updatePackageFileSize, int installCountdown)
         {
 
         }
@@ -343,13 +352,14 @@ namespace KryptonApplicationUpdater.Classes
         /// <param name="updatePackageBuildString">The update package build string.</param>
         /// <param name="optionalArguments">The optional arguments.</param>
         /// <param name="checksumFileURL">The checksum file URL.</param>
+        /// <param name="virusTotalScanURL">The virus total scan URL.</param>
         /// <param name="betaFlag">if set to <c>true</c> [beta flag].</param>
         /// <param name="startUpdateInstallationUponDownloadCompletion">if set to <c>true</c> [start update installation upon download completion].</param>
         /// <param name="updatePackageReleaseDate">The update package release date.</param>
         /// <param name="updatePackageBuildDate">The update package build date.</param>
         /// <param name="updatePackageFileSize">Size of the update package file.</param>
         /// <param name="installCountdown">The install countdown.</param>
-        private void CreateConfigurationFile(string configurationFilePath, string xmlFilePath, string applicationIdentifier, string applicationName, string serverVersion, string updatePackageType, string updatePackageSeverity, string updatePackageName, string updatePackageServerURLDownloadLocation, string changelogServerURLDownloadLocation, string specialisedUpdateIconURL, string md5Checksum, string sha1Checksum, string sha256Checksum, string sha384Checksum, string sha512Checksum, string ripemd160Checksum, string updatePackageBuildString, string optionalArguments, string checksumFileURL, bool betaFlag, bool startUpdateInstallationUponDownloadCompletion, DateTime updatePackageReleaseDate, DateTime updatePackageBuildDate, long updatePackageFileSize, int installCountdown)
+        private void CreateConfigurationFile(string configurationFilePath, string xmlFilePath, string applicationIdentifier, string applicationName, string serverVersion, string updatePackageType, string updatePackageSeverity, string updatePackageName, string updatePackageServerURLDownloadLocation, string changelogServerURLDownloadLocation, string specialisedUpdateIconURL, string md5Checksum, string sha1Checksum, string sha256Checksum, string sha384Checksum, string sha512Checksum, string ripemd160Checksum, string updatePackageBuildString, string optionalArguments, string checksumFileURL, string virusTotalScanURL, bool betaFlag, bool startUpdateInstallationUponDownloadCompletion, DateTime updatePackageReleaseDate, DateTime updatePackageBuildDate, long updatePackageFileSize, int installCountdown)
         {
 
         }

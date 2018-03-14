@@ -189,5 +189,13 @@ namespace KryptonApplicationUpdater.Interfaces
         /// The install countdown.
         /// </value>
         int InstallCountdown { get; set; }
+
+        /// <summary>
+        /// Gets or sets the virus total scan URL.
+        /// </summary>
+        /// <value>
+        /// The virus total scan URL.
+        /// </value>
+        String VirusTotalScanURL { get; set; }
     }
 }

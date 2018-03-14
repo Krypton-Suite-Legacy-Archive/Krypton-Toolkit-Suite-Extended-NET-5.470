@@ -1,4 +1,5 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using KryptonApplicationUpdater.UI.Advanced.XMLBased;
+using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code;
 using KryptonApplicationUpdater.Interfaces;
 using System;
@@ -24,11 +25,12 @@ namespace Playground
         }
 
         #region IUpdatable Implementation
-        public Icon ApplicationIcon { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string ServerXMLFileURL { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string ApplicationName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string CurrentApplicationVersion { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        Form IUpdatable.ParentForm { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Icon ApplicationIcon { get { return this.Icon; } set { } }
+        public string ServerXMLFileURL { get { return "https://www.dropbox.com/s/mwyexz1baqt0y4b/Update.xml?dl=0"; } set { } }
+        public string ApplicationName { get { return "Playground"; } set { } }
+        public string CurrentApplicationVersion { get { return currentVersion.ToString(); } set { } }
+        public string ApplicationIdentification { get { return "Playground"; } set { } }
+        Form IUpdatable.ParentForm { get { return this; } set { } }
         #endregion
 
         private void Form1_Load(object sender, EventArgs e)
@@ -110,6 +112,13 @@ namespace Playground
             string openedFile = openFileDlg.FileName;
 
             OpenFile(openedFile);
+        }
+
+        private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartupForm startupForm = new StartupForm(false, ServerXMLFileURL);
+
+            startupForm.Show();
         }
     }
 }

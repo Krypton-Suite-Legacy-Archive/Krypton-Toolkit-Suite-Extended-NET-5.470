@@ -303,6 +303,24 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         {
             return _internalApplicationUpdaterSettings.DateOfLastUpdateInstallation;
         }
+
+        /// <summary>
+        /// Sets the ApplicationIdentification to the value of value.
+        /// </summary>
+        /// <param name="value">The desired value of ApplicationIdentification.</param>
+        public void SetApplicationIdentification(string value)
+        {
+            _internalApplicationUpdaterSettings.ApplicationIdentification = value;
+        }
+
+        /// <summary>
+        /// Returns the value of the ApplicationIdentification.
+        /// </summary>
+        /// <returns>The value of the ApplicationIdentification.</returns>
+        public string GetApplicationIdentification()
+        {
+            return _internalApplicationUpdaterSettings.ApplicationIdentification;
+        }
         #endregion
 
         #region Methods
@@ -332,6 +350,8 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
                 SetDestinationDownloadPath(string.Empty);
 
                 SetXMLFileURL(string.Empty);
+
+                SetApplicationIdentification(string.Empty);
 
                 SaveInternalApplicationUpdaterSettings(GetAlwaysUsePrompt());
 

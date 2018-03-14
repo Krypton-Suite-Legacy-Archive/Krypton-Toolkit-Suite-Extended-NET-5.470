@@ -296,5 +296,17 @@ namespace KryptonApplicationUpdater.Settings {
                 this["InstallCountdown"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string VirusTotalScanURL {
+            get {
+                return ((string)(this["VirusTotalScanURL"]));
+            }
+            set {
+                this["VirusTotalScanURL"] = value;
+            }
+        }
     }
 }

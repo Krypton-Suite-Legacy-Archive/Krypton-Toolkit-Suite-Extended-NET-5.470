@@ -1,4 +1,6 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using KryptonApplicationUpdater.Classes.SettingsManager;
+using System.Deployment.Internal;
+using ComponentFactory.Krypton.Toolkit;
 using GlobalUtilities.Classes;
 using KryptonApplicationUpdater.Classes;
 using KryptonApplicationUpdater.Interfaces;
@@ -18,6 +20,12 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
         private ExceptionHandler _exceptionHandler = new ExceptionHandler();
 
         private UpdaterLogic _updaterLogic = new UpdaterLogic();
+
+        private InternalApplicationUpdaterSettingsManager internalApplicationUpdaterSettingsManager = new InternalApplicationUpdaterSettingsManager();
+
+        private XMLFileApplicationUpdaterSettingsManager xmlFileApplicationUpdaterSettingsManager = new XMLFileApplicationUpdaterSettingsManager();
+
+        private XMLFileParser xmlFileParser = new XMLFileParser();
 
         private IUpdatable _updatable;
         #endregion
@@ -76,11 +84,15 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
 
             if (useUACElevation)
             {
+                kbtnCheckForUpdates.Visible = false;
 
+                kuacsbtnCheckForUpdates.Visible = true;
             }
             else
             {
+                kbtnCheckForUpdates.Visible = true;
 
+                kuacsbtnCheckForUpdates.Visible = false;
             }
         }
         #endregion
@@ -106,7 +118,18 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void kbtnCheckForUpdates_Click(object sender, EventArgs e)
         {
+            if (_updaterLogic.CheckForUpdates(internalApplicationUpdaterSettingsManager.GetXMLFileURL(), Version.Parse(internalApplicationUpdaterSettingsManager.GetCurrentApplicationVersion()), internalApplicationUpdaterSettingsManager.GetXMLFileURL()))
+            {
+                UpdateAvailableForm updateAvailable = new UpdateAvailableForm(internalApplicationUpdaterSettingsManager.GetApplicationName(), Version.Parse(internalApplicationUpdaterSettingsManager.GetCurrentApplicationVersion()), Version.Parse(xmlFileApplicationUpdaterSettingsManager.GetServerVersion()), xmlFileApplicationUpdaterSettingsManager.GetChangelogServerURLDownloadLocation());
 
+                updateAvailable.Show();
+
+                Hide();
+            }
+            else
+            {
+                
+            }
         }
 
         /// <summary>
@@ -154,6 +177,11 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
             UpdaterOptionsForm updaterOptions = new UpdaterOptionsForm();
 
             updaterOptions.Show();
+        }
+
+        private void StartupForm_Load(object sender, EventArgs e)
+        {
+            xmlFileParser.ParseXMLFile(new Uri(internalApplicationUpdaterSettingsManager.GetXMLFileURL()), internalApplicationUpdaterSettingsManager.GetApplicationIdentification());
         }
     }
 }
