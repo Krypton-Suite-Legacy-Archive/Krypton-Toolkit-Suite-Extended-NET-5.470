@@ -1,7 +1,8 @@
-﻿using KryptonApplicationUpdater.UI.Advanced.XMLBased;
-using ComponentFactory.Krypton.Toolkit;
+﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code;
+using KryptonApplicationUpdater.Classes.SettingsManager;
 using KryptonApplicationUpdater.Interfaces;
+using KryptonApplicationUpdater.UI.Advanced.XMLBased;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -14,6 +15,8 @@ namespace Playground
     public partial class Form1 : Form, IUpdatable
     {
         UtilityMethods utilityMethods = new UtilityMethods();
+
+        InternalApplicationUpdaterSettingsManager internalApplicationUpdaterSettingsManager = new InternalApplicationUpdaterSettingsManager();
 
         MostRecentlyUsedFileManager mostRecentlyUsedFileManager;
 
@@ -40,6 +43,11 @@ namespace Playground
             kbtnUACTest.ProcessName = Process.GetCurrentProcess().ProcessName;
 
             tsmiUACTest.ProcessName = Process.GetCurrentProcess().ProcessName;
+
+            if (ServerXMLFileURL != null)
+            {
+                internalApplicationUpdaterSettingsManager.SetXMLFileURL(ServerXMLFileURL);
+            }
 
             if (utilityMethods.GetHasElevateProcessWithAdministrativeRights())
             {
@@ -116,7 +124,7 @@ namespace Playground
 
         private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StartupForm startupForm = new StartupForm(false, ServerXMLFileURL);
+            StartupForm startupForm = new StartupForm("https://www.dropbox.com/s/mwyexz1baqt0y4b/Update.xml?dl=0", currentVersion, false);
 
             startupForm.Show();
         }

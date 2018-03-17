@@ -166,4 +166,40 @@
   <data name="inactive_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inactive_search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SparkleChecked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SparkleChecked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SparkleContextMenuSub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SparkleContextMenuSub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SparkleDropDownButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SparkleDropDownButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SparkleDropDownOutlineButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SparkleDropDownOutlineButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SparkleDropUpButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SparkleDropUpButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SparkleGalleryDropButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SparkleGalleryDropButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SparkleGrayChecked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SparkleGrayChecked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SparkleGrayIndeterminate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SparkleGrayIndeterminate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SparkleIndeterminate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SparkleIndeterminate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GridErrorIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GridErrorIcon.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GridRowIndicators" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GridRowIndicators.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GridSortOrder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GridSortOrder.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

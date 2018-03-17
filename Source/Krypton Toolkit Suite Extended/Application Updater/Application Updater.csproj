@@ -208,6 +208,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Class Diagram\" />
     <Folder Include="UI\Advanced\Wizard\" />
   </ItemGroup>
   <ItemGroup>

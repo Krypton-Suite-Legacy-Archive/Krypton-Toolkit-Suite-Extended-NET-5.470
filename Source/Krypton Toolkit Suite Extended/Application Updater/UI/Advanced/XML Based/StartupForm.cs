@@ -13,7 +13,9 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
         #region Variables
         private bool _isRunning = false;
 
-        private string _serverURL;
+        private string _serverURL, _xmlServerFileURL;
+
+        private Version _currentApplicationVersion;
 
         private GlobalMethods _globalMethods = new GlobalMethods();
 
@@ -26,6 +28,8 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
         private XMLFileApplicationUpdaterSettingsManager xmlFileApplicationUpdaterSettingsManager = new XMLFileApplicationUpdaterSettingsManager();
 
         private XMLFileParser xmlFileParser = new XMLFileParser();
+
+        private TranslationMethods translationMethods = new TranslationMethods();
 
         private IUpdatable _updatable;
         #endregion
@@ -68,19 +72,61 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
                 _serverURL = value;
             }
         }
+
+        /// <summary>
+        /// Gets or sets the XML server file URL.
+        /// </summary>
+        /// <value>
+        /// The XML server file URL.
+        /// </value>
+        public string XMLServerFileURL
+        {
+            get
+            {
+                return _xmlServerFileURL;
+            }
+
+            set
+            {
+                _xmlServerFileURL = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the current application version.
+        /// </summary>
+        /// <value>
+        /// The current application version.
+        /// </value>
+        public Version CurrentApplicationVersion
+        {
+            get
+            {
+                return _currentApplicationVersion;
+            }
+
+            set
+            {
+                _currentApplicationVersion = value;
+            }
+        }
         #endregion
 
         #region Constructor
         /// <summary>
         /// Initialises a new instance of the <see cref="StartupForm"/> class.
         /// </summary>
+        /// <param name="xmlServerFileURL">The XML server file URL.</param>
+        /// <param name="currentApplicationVersion">The current application version.</param>
         /// <param name="useUACElevation">if set to <c>true</c> [use uac elevation].</param>
         /// <param name="serverURL">The server URL.</param>
-        public StartupForm(bool useUACElevation = false, string serverURL = null)
+        public StartupForm(string xmlServerFileURL, Version currentApplicationVersion, bool useUACElevation = false, string serverURL = null)
         {
             InitializeComponent();
 
             SetServerURL(serverURL);
+
+            ServerURL = serverURL;
 
             if (useUACElevation)
             {
@@ -118,7 +164,7 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void kbtnCheckForUpdates_Click(object sender, EventArgs e)
         {
-            if (_updaterLogic.CheckForUpdates(internalApplicationUpdaterSettingsManager.GetXMLFileURL(), Version.Parse(internalApplicationUpdaterSettingsManager.GetCurrentApplicationVersion()), internalApplicationUpdaterSettingsManager.GetXMLFileURL()))
+            if (_updaterLogic.CheckForUpdates(ServerURL, CurrentApplicationVersion, internalApplicationUpdaterSettingsManager.GetXMLFileURL()))
             {
                 UpdateAvailableForm updateAvailable = new UpdateAvailableForm(internalApplicationUpdaterSettingsManager.GetApplicationName(), Version.Parse(internalApplicationUpdaterSettingsManager.GetCurrentApplicationVersion()), Version.Parse(xmlFileApplicationUpdaterSettingsManager.GetServerVersion()), xmlFileApplicationUpdaterSettingsManager.GetChangelogServerURLDownloadLocation());
 
@@ -128,7 +174,7 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
             }
             else
             {
-                
+                klblDetails.Text = $"No new updates are available.\nYour version: { CurrentApplicationVersion.ToString() }\nServer version: { xmlFileApplicationUpdaterSettingsManager.GetServerVersion() }";
             }
         }
 
@@ -181,7 +227,18 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
 
         private void StartupForm_Load(object sender, EventArgs e)
         {
-            xmlFileParser.ParseXMLFile(new Uri(internalApplicationUpdaterSettingsManager.GetXMLFileURL()), internalApplicationUpdaterSettingsManager.GetApplicationIdentification());
+            try
+            {
+                if (XMLServerFileURL != null)
+                {
+                    xmlFileParser.ParseXMLFile(new Uri(XMLServerFileURL), null);
+                }
+            }
+            catch (Exception exc)
+            {
+
+                throw;
+            }
         }
     }
 }

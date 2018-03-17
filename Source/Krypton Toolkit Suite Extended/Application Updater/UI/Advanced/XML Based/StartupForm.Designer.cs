@@ -35,7 +35,7 @@
             this.pbWait = new System.Windows.Forms.ProgressBar();
             this.kbtnCheckForUpdates = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kuacsbtnCheckForUpdates = new ExtendedControls.ExtendedToolkit.Controls.KryptonUACShieldButton();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblDetails = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tmrWaiting = new System.Windows.Forms.Timer(this.components);
             this.kMan = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
@@ -49,7 +49,7 @@
             this.kryptonPanel1.Controls.Add(this.pbWait);
             this.kryptonPanel1.Controls.Add(this.kbtnCheckForUpdates);
             this.kryptonPanel1.Controls.Add(this.kuacsbtnCheckForUpdates);
-            this.kryptonPanel1.Controls.Add(this.kryptonLabel1);
+            this.kryptonPanel1.Controls.Add(this.klblDetails);
             this.kryptonPanel1.Controls.Add(this.kbtnCancel);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
@@ -75,6 +75,7 @@
             this.pbWait.Size = new System.Drawing.Size(776, 31);
             this.pbWait.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pbWait.TabIndex = 1;
+            this.pbWait.Visible = false;
             // 
             // kbtnCheckForUpdates
             // 
@@ -99,15 +100,15 @@
             this.kuacsbtnCheckForUpdates.Values.Text = "&Check for Updates...";
             this.kuacsbtnCheckForUpdates.Click += new System.EventHandler(this.kuacsbtnCheckForUpdates_Click);
             // 
-            // kryptonLabel1
+            // klblDetails
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(12, 12);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(285, 26);
-            this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.TabIndex = 1;
-            this.kryptonLabel1.Values.Text = "To start, click \'Check for Updates...\'";
+            this.klblDetails.Location = new System.Drawing.Point(12, 12);
+            this.klblDetails.Name = "klblDetails";
+            this.klblDetails.Size = new System.Drawing.Size(285, 26);
+            this.klblDetails.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblDetails.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblDetails.TabIndex = 1;
+            this.klblDetails.Values.Text = "To start, click \'Check for Updates...\'";
             // 
             // kbtnCancel
             // 
@@ -137,6 +138,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "StartupForm";
+            this.UseDropShadow = true;
             this.Load += new System.EventHandler(this.StartupForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
@@ -149,7 +151,7 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonUACShieldButton kuacsbtnCheckForUpdates;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel klblDetails;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnCancel;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnCheckForUpdates;
         private System.Windows.Forms.ProgressBar pbWait;
