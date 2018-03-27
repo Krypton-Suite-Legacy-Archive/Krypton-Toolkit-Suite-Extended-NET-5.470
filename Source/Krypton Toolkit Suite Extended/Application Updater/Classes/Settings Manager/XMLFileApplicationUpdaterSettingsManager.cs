@@ -503,6 +503,60 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         }
 
         /// <summary>
+        /// Sets the KnowledgebaseArticleNumber to the value of value.
+        /// </summary>
+        /// <param name="value">The desired value of KnowledgebaseArticleNumber.</param>
+        public void SetKnowledgebaseArticleNumber(string value)
+        {
+            _xmlFileApplicationUpdaterSettings.KnowledgebaseArticleNumber = value;
+        }
+
+        /// <summary>
+        /// Returns the value of the KnowledgebaseArticleNumber.
+        /// </summary>
+        /// <returns>The value of the KnowledgebaseArticleNumber.</returns>
+        public string GetKnowledgebaseArticleNumber()
+        {
+            return _xmlFileApplicationUpdaterSettings.KnowledgebaseArticleNumber;
+        }
+
+        /// <summary>
+        /// Sets the KnowledgebaseArticleNumberURL to the value of value.
+        /// </summary>
+        /// <param name="value">The desired value of KnowledgebaseArticleNumberURL.</param>
+        public void SetKnowledgebaseArticleNumberURL(string value)
+        {
+            _xmlFileApplicationUpdaterSettings.KnowledgebaseArticleNumberURL = value;
+        }
+
+        /// <summary>
+        /// Returns the value of the KnowledgebaseArticleNumberURL.
+        /// </summary>
+        /// <returns>The value of the KnowledgebaseArticleNumberURL.</returns>
+        public string GetKnowledgebaseArticleNumberURL()
+        {
+            return _xmlFileApplicationUpdaterSettings.KnowledgebaseArticleNumberURL;
+        }
+
+        /// <summary>
+        /// Sets the UpdatePackageDescription to the value of value.
+        /// </summary>
+        /// <param name="value">The desired value of UpdatePackageDescription.</param>
+        public void SetUpdatePackageDescription(string value)
+        {
+            _xmlFileApplicationUpdaterSettings.UpdatePackageDescription = value;
+        }
+
+        /// <summary>
+        /// Returns the value of the UpdatePackageDescription.
+        /// </summary>
+        /// <returns>The value of the UpdatePackageDescription.</returns>
+        public string GetUpdatePackageDescription()
+        {
+            return _xmlFileApplicationUpdaterSettings.UpdatePackageDescription;
+        }
+
+        /// <summary>
         /// Sets the UpdatePackageReleaseDate to the value of value.
         /// </summary>
         /// <param name="value">The desired value of UpdatePackageReleaseDate.</param>
@@ -561,6 +615,24 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
         {
             return _xmlFileApplicationUpdaterSettings.UpdatePackageFileSize;
         }
+
+        /// <summary>
+        /// Sets the InstallCountdown to the value of value.
+        /// </summary>
+        /// <param name="value">The desired value of InstallCountdown.</param>
+        public void SetInstallCountdown(int value)
+        {
+            _xmlFileApplicationUpdaterSettings.InstallCountdown = value;
+        }
+
+        /// <summary>
+        /// Returns the value of the InstallCountdown.
+        /// </summary>
+        /// <returns>The value of the InstallCountdown.</returns>
+        public int GetInstallCountdown()
+        {
+            return _xmlFileApplicationUpdaterSettings.InstallCountdown;
+        }
         #endregion
 
         #region Methods
@@ -584,6 +656,8 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
                 SetUpdatePackageSeverity(string.Empty);
 
                 SetUpdatePackageName(string.Empty);
+
+                SetUpdatePackageDescription(string.Empty);
 
                 SetUpdatePackageServerURLDownloadLocation(string.Empty);
 
@@ -611,11 +685,17 @@ namespace KryptonApplicationUpdater.Classes.SettingsManager
 
                 SetVirusTotalScanURL(string.Empty);
 
+                SetKnowledgebaseArticleNumber(string.Empty);
+
+                SetKnowledgebaseArticleNumberURL(string.Empty);
+
                 SetUpdatePackageReleaseDate(DateTime.Now);
 
                 SetUpdatePackageBuildDate(DateTime.Now);
 
                 SetUpdatePackageFileSize(0);
+
+                SetInstallCountdown(60);
 
                 SaveXMLFileApplicationUpdaterSettings(GetAlwaysUsePrompt());
 

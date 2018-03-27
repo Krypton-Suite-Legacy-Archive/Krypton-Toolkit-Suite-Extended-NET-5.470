@@ -308,5 +308,41 @@ namespace KryptonApplicationUpdater.Settings {
                 this["VirusTotalScanURL"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string KnowledgebaseArticleNumber {
+            get {
+                return ((string)(this["KnowledgebaseArticleNumber"]));
+            }
+            set {
+                this["KnowledgebaseArticleNumber"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string KnowledgebaseArticleNumberURL {
+            get {
+                return ((string)(this["KnowledgebaseArticleNumberURL"]));
+            }
+            set {
+                this["KnowledgebaseArticleNumberURL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UpdatePackageDescription {
+            get {
+                return ((string)(this["UpdatePackageDescription"]));
+            }
+            set {
+                this["UpdatePackageDescription"] = value;
+            }
+        }
     }
 }

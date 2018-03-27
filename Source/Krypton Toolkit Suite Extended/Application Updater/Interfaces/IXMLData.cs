@@ -197,5 +197,29 @@ namespace KryptonApplicationUpdater.Interfaces
         /// The virus total scan URL.
         /// </value>
         String VirusTotalScanURL { get; set; }
+
+        /// <summary>
+        /// Gets or sets the knowledgebase article number.
+        /// </summary>
+        /// <value>
+        /// The knowledgebase article number.
+        /// </value>
+        String KnowledgebaseArticleNumber { get; set; }
+
+        /// <summary>
+        /// Gets or sets the knowledgebase article number URL.
+        /// </summary>
+        /// <value>
+        /// The knowledgebase article number URL.
+        /// </value>
+        String KnowledgebaseArticleNumberURL { get; set; }
+
+        /// <summary>
+        /// Gets or sets the update package description.
+        /// </summary>
+        /// <value>
+        /// The update package description.
+        /// </value>
+        String UpdatePackageDescription { get; set; }
     }
 }

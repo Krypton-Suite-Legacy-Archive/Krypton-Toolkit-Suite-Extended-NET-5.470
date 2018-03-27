@@ -1,6 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code;
-using ExtendedControls.Base.Renderers.Core;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;

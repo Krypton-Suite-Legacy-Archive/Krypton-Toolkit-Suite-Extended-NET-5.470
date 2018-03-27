@@ -34,29 +34,29 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ComponentFactory.Krypton.Design, Version=4.71.2.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="ComponentFactory.Krypton.Design, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Design.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Docking, Version=4.71.522.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="ComponentFactory.Krypton.Docking, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.71.521.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.71.521.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.71.533.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.71.522.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -93,42 +93,6 @@
     <Compile Include="Base\Code\MostRecentlyUsedFileManager.cs" />
     <Compile Include="Base\Code\PI.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
-    <Compile Include="Base\Renderers\Components\RenderBase.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Base\Renderers\Components\RenderOffice2007.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Base\Renderers\Components\RenderOffice2010.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Base\Renderers\Components\RenderOffice2013.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Base\Renderers\Components\RenderProfessional.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Base\Renderers\Components\RenderSparkle.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Base\Renderers\Components\RenderStandard.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Base\Renderers\Core\KryptonOffice2007Renderer.cs" />
-    <Compile Include="Base\Renderers\Core\KryptonOffice2010Renderer.cs" />
-    <Compile Include="Base\Renderers\Core\KryptonOffice2013Renderer.cs" />
-    <Compile Include="Base\Renderers\Core\KryptonProfessionalRenderer.cs" />
-    <Compile Include="Base\Renderers\Core\KryptonSparkleRenderer.cs" />
-    <Compile Include="Base\Renderers\Core\KryptonStandardRenderer.cs" />
-    <Compile Include="Base\Renderers\Core\RenderContext.cs" />
-    <Compile Include="Base\Renderers\Core\RenderDefinitions.cs" />
-    <Compile Include="Base\Renderers\Core\RenderDragDockingData.cs" />
-    <Compile Include="Base\Renderers\Core\RenderExpertHelpers.cs" />
-    <Compile Include="Base\Renderers\Core\RenderGlassHelpers.cs" />
-    <Compile Include="Base\Renderers\NT 10 Glass\AccentColorService.cs" />
-    <Compile Include="Base\Renderers\NT 10 Glass\BlurWindowExtensions.cs" />
-    <Compile Include="Base\Renderers\NT 10 Glass\ThemeService.cs" />
-    <Compile Include="Base\Renderers\NT 10 Glass\UserSystemPreferencesService.cs" />
     <Compile Include="Base\UI\KryptonFormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +113,7 @@
     <Compile Include="ExtendedToolkit\Controls\KryptonCommandLinkVersion2.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonCueComboBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonCueTextBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonDateTimePickerExtended.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonSearchBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -157,6 +122,12 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\KryptonUACShieldButton.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonWaterMarkTextBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\ModernProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\ModernProgressBar.Designer.cs">
+      <DependentUpon>ModernProgressBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExtendedToolkit\Messageboxes\Classes\Globals.cs" />
     <Compile Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.cs">
       <SubType>Form</SubType>
@@ -193,6 +164,12 @@
     </Compile>
     <Compile Include="ExtendedToolkit\UI\KryptonPanelForm.Designer.cs">
       <DependentUpon>KryptonPanelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\KryptonSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\KryptonSplashScreen.Designer.cs">
+      <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -235,6 +212,7 @@
     <None Include="Resources\GridRowIndicators.bmp" />
     <None Include="Resources\GridSortOrder.bmp" />
     <None Include="Resources\GridErrorIcon.bmp" />
+    <None Include="Resources\progress_bar.ico" />
     <Content Include="ToolboxBitmaps\KryptonForm.bmp" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
@@ -248,8 +226,14 @@
     <EmbeddedResource Include="Base\UI\Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\ModernProgressBar.resx">
+      <DependentUpon>ModernProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.resx">
       <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\KryptonSplashScreen.resx">
+      <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

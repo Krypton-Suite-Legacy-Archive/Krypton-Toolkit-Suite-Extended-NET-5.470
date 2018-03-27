@@ -1,5 +1,5 @@
-﻿<!--This file is entirely optional. Use as required.-->
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--This file is entirely optional. Use as required.-->
 <checkSums applicationIdentification="MyCoolApplication">
   <fileName>My Cool Application Installer.exe</fileName>
   <fileURL>http://#SOME_DOMAIN/files/My Cool Application Installer.exe</fileURL>

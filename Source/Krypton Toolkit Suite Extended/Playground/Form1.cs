@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Playground
 {
-    public partial class Form1 : Form, IUpdatable
+    public partial class Form1 : KryptonForm, IUpdatable
     {
         UtilityMethods utilityMethods = new UtilityMethods();
 
@@ -38,11 +38,11 @@ namespace Playground
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            mostRecentlyUsedFileManager = new MostRecentlyUsedFileManager(recentFilesToolStripMenuItem, "Playground", MyOwnRecentFileGotClicked_Handler, MyOwnRecentFilesGotCleared_Handler);
+            mostRecentlyUsedFileManager = new MostRecentlyUsedFileManager(recentDocumentsToolStripMenuItem, "Playground", MyOwnRecentFileGotClicked_Handler, MyOwnRecentFilesGotCleared_Handler);
 
-            kbtnUACTest.ProcessName = Process.GetCurrentProcess().ProcessName;
+            //kbtnUACTest.ProcessName = Process.GetCurrentProcess().ProcessName;
 
-            tsmiUACTest.ProcessName = Process.GetCurrentProcess().ProcessName;
+            //tsmiUACTest.ProcessName = Process.GetCurrentProcess().ProcessName;
 
             if (ServerXMLFileURL != null)
             {
@@ -56,9 +56,9 @@ namespace Playground
 
             lblIsAdminMode.Text = $"Is running in Administrator mode: { utilityMethods.GetHasElevateProcessWithAdministrativeRights().ToString() }";
 
-            kctb1.CueText = "Hello";
+            //kctb1.CueText = "Hello";
 
-            kryptonCommandLinkVersion11.Note = "Hello";
+            //kryptonCommandLinkVersion11.Note = "Hello";
 
             lblVersion.Text = $"Version: { currentVersion.ToString() }";
         }
@@ -120,13 +120,6 @@ namespace Playground
             string openedFile = openFileDlg.FileName;
 
             OpenFile(openedFile);
-        }
-
-        private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            StartupForm startupForm = new StartupForm("https://www.dropbox.com/s/mwyexz1baqt0y4b/Update.xml?dl=0", currentVersion, false);
-
-            startupForm.Show();
         }
     }
 }

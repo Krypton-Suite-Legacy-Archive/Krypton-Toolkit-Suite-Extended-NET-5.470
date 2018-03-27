@@ -1,5 +1,5 @@
-﻿<!--A sample 'Update.xml' file.-->
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--A sample 'Update.xml' file.-->
 <update applicationIdentification="MyCoolApplication">
   <applicationName>My Cool Application</applicationName>
   <serverVersion>1.0.0.0</serverVersion>
@@ -7,6 +7,7 @@
   <updatePackageType>Hotfix</updatePackageType>
   <updatePackageSeverity>None</updatePackageSeverity>
   <updatePackageName>My Cool Application Installer.exe</updatePackageName>
+  <updatePackageDescription></updatePackageDescription>
   <updatePackageServerURLDownloadLocation>http://#SOME_DOMAIN/files/My Cool Application Installer.exe</updatePackageServerURLDownloadLocation>
   <changelogServerURLDownloadLocation>http://#SOME_DOMAIN/files/MyCoolApplicationChangelog.html</changelogServerURLDownloadLocation>
   <specialisedUpdateIconURL>http://#SOME_DOMAIN/files/MyCoolApplicationUpdater.ico</specialisedUpdateIconURL>
@@ -18,6 +19,8 @@
   <ripemd160CheckSum></ripemd160CheckSum>
   <optionalArguments>/taskkill /pid 00000</optionalArguments>
   <checkSumFileURL>http://#SOME_DOMAIN/files/CheckSums.xml</checkSumFileURL>
+  <knowledgebaseArticleNumber>000000</knowledgebaseArticleNumber>
+  <knowledgebaseArticleNumberURL>http://#SOME_DOMAIN/files/KBArticle#000000.html</knowledgebaseArticleNumberURL>
   <installCountdown>60</installCountdown>
   <updatePackageFileSize>30</updatePackageFileSize>
   <updatePackageBuildDate>Wednesday 14th March, 2018 12:00:00 AM</updatePackageBuildDate>
