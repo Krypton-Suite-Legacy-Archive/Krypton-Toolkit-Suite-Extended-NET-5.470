@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ExtendedControls.ExtendedToolkit.Controls
+namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 {
     public partial class ModernProgressBar : UserControl
     {

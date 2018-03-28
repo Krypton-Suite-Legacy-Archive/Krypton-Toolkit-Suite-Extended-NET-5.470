@@ -1,11 +1,11 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.Base.Code;
-using ExtendedControls.ExtendedToolkit.UI;
+using KryptonExtendedToolkit.Base.Code;
+using KryptonExtendedToolkit.ExtendedToolkit.UI;
 using System;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace ExtendedControls.Base.ButtonSpec
+namespace KryptonExtendedToolkit.Base.ButtonSpec
 {
     /// <summary>
     /// Implementation for the fixed minimize button for krypton form.

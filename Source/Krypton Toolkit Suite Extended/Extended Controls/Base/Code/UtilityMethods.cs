@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Security.Principal;
 using System.Windows.Forms;
 
-namespace ExtendedControls.Base.Code
+namespace KryptonExtendedToolkit.Base.Code
 {
     public class UtilityMethods
     {

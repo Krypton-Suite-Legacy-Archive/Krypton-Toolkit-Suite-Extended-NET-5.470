@@ -1,4 +1,4 @@
-﻿namespace ExtendedControls.Enumerations
+﻿namespace KryptonExtendedToolkit.Enumerations
 {
     /// <summary>
     /// Messagebox icon

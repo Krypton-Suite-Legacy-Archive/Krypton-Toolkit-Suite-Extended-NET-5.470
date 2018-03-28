@@ -1,5 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.Base.Code;
+using KryptonExtendedToolkit.Base.Code;
 using GlobalUtilities.Classes;
 using System;
 using System.ComponentModel;
@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
-namespace ExtendedControls.ExtendedToolkit.ToolstripControls
+namespace KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls
 {
     /// <summary>
     /// A standard tool strip menu item control with UAC shield.

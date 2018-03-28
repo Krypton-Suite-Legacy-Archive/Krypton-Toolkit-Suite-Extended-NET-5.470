@@ -1,5 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.Base.Code;
+using KryptonExtendedToolkit.Base.Code;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -8,7 +8,7 @@ using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace ExtendedControls.ExtendedToolkit.UI
+namespace KryptonExtendedToolkit.ExtendedToolkit.UI
 {
     /// <summary>
     /// Draws the window chrome using a Krypton palette.

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 
-namespace ExtendedControls.Base
+namespace KryptonExtendedToolkit.Base
 {
     /// <summary>
 	/// Manage a collection of ButtonSpec instances.

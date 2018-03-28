@@ -1,9 +1,9 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.ExtendedToolkit.UI;
+using KryptonExtendedToolkit.ExtendedToolkit.UI;
 using System.ComponentModel;
 using System.Diagnostics;
 
-namespace ExtendedControls.Base
+namespace KryptonExtendedToolkit.Base
 {
     /// <summary>
     /// Implementation for the fixed navigator buttons.

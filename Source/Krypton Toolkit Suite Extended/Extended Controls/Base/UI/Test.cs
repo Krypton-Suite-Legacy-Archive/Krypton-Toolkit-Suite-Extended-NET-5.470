@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ExtendedControls.Base.UI
+namespace KryptonExtendedToolkit.Base.UI
 {
     public partial class Test : Form
     {

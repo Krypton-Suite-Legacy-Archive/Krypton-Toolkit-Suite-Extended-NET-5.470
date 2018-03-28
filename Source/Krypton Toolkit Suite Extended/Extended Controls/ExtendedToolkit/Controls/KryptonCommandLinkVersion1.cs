@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ExtendedControls.ExtendedToolkit.Controls
+namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 {
     /// <summary>
     /// A KryptonCommandLink button.

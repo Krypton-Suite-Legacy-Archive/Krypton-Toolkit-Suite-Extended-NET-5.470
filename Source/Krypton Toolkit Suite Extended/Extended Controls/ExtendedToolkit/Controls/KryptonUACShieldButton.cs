@@ -1,12 +1,12 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.Base.Code;
+using KryptonExtendedToolkit.Base.Code;
 using GlobalUtilities.Classes;
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ExtendedControls.ExtendedToolkit.Controls
+namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 {
     /// <summary>
     /// A standard Krypton button control with UAC shield

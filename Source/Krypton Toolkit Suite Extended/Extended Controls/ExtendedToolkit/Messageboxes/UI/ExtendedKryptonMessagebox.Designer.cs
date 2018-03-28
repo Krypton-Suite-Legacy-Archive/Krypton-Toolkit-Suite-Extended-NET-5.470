@@ -1,4 +1,4 @@
-﻿namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
+﻿namespace KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.UI
 {
     partial class ExtendedKryptonMessagebox
     {

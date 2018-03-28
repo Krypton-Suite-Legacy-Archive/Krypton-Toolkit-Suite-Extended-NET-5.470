@@ -1,8 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.Base.Code;
+using KryptonExtendedToolkit.Base.Code;
 using KryptonApplicationUpdater.Classes.SettingsManager;
 using KryptonApplicationUpdater.Interfaces;
-using KryptonApplicationUpdater.UI.Advanced.XMLBased;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -40,9 +39,7 @@ namespace Playground
         {
             mostRecentlyUsedFileManager = new MostRecentlyUsedFileManager(recentDocumentsToolStripMenuItem, "Playground", MyOwnRecentFileGotClicked_Handler, MyOwnRecentFilesGotCleared_Handler);
 
-            //kbtnUACTest.ProcessName = Process.GetCurrentProcess().ProcessName;
-
-            //tsmiUACTest.ProcessName = Process.GetCurrentProcess().ProcessName;
+            kuacsbElevate.ProcessName = Process.GetCurrentProcess().ProcessName;
 
             if (ServerXMLFileURL != null)
             {
@@ -54,7 +51,7 @@ namespace Playground
                 Text = Text + " (Administrator)";
             }
 
-            lblIsAdminMode.Text = $"Is running in Administrator mode: { utilityMethods.GetHasElevateProcessWithAdministrativeRights().ToString() }";
+            klblAdminMode.Text = $"Is running in Administrator mode: { utilityMethods.GetHasElevateProcessWithAdministrativeRights().ToString() }";
 
             //kctb1.CueText = "Hello";
 
@@ -105,6 +102,18 @@ namespace Playground
             }
         }
 
+        private void SaveFile(string filePath, bool saveAs = false)
+        {
+            if (saveAs)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FileDialog openFileDlg = new OpenFileDialog();
@@ -120,6 +129,26 @@ namespace Playground
             string openedFile = openFileDlg.FileName;
 
             OpenFile(openedFile);
+        }
+
+        private void saveAsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            saveFileDialog.Title = "Save file as:";
+
+            saveFileDialog.Filter = "Normal Text Files (*.txt)|*.txt";
+
+            saveFileDialog.InitialDirectory = Environment.CurrentDirectory;
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter writer = new StreamWriter(saveFileDialog.FileName);
+
+                writer.Write(krtbEditor.Text);
+
+                mostRecentlyUsedFileManager.AddRecentFile(Path.GetFullPath(saveFileDialog.FileName));
+            }
         }
     }
 }

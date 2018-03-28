@@ -20,7 +20,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace ExtendedControls.ExtendedToolkit.Controls
+namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 {
     /// <summary>
     /// A progress bar that used a solid bar instead of the ugly chucks from the default WinForm ProgressBar.

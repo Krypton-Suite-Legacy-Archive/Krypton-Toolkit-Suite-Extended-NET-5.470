@@ -4,6 +4,14 @@
 
 ## An extension to the Krypton Toolkit suite of controls for .NET framework 4.7 
 
+
+======
+
+## 2018-03-28 Toolkit changes
+* The `ExtendedControls.dll` has now been renamed to `KryptonExtendedToolkit.dll`
+* Build output paths changed for neatness
+* The **releases** tab is now activated
+
 ======
 
 ## 2018-03-13 Krypton Application Updater (XML based version) update

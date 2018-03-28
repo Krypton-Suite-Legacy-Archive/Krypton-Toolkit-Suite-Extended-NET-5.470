@@ -12,7 +12,7 @@ using System.Windows.Forms.Design;
 #region Resources
 #endregion
 
-namespace ExtendedControls.ExtendedToolkit.ToolstripControls
+namespace KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls
 {
     /// <summary>
     /// A <see cref="MenuItem"/> that displays the most recently used files to the user.
@@ -627,10 +627,10 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
 
 #region User Controls
 #if !WPF
-namespace ExtendedControls.Windows.Forms
+namespace KryptonExtendedToolkit.Windows.Forms
 {
     #region Using Statements
-    using ExtendedControls.ExtendedToolkit.ToolstripControls;
+    using KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls;
 
     using System.Windows.Forms;
     #endregion

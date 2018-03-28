@@ -1,11 +1,11 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.ExtendedToolkit.ToolstripControls;
+using KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls;
 using GlobalUtilities.Classes;
 using Microsoft.Win32;
 using System;
 using System.Windows.Forms;
 
-namespace ExtendedControls.Base.Code
+namespace KryptonExtendedToolkit.Base.Code
 {
     /// <summary>
     /// Deals with the back-end logic of a most recently used file <see cref="ToolStripMenuItem"/>.

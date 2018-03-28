@@ -1,5 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.ExtendedToolkit.Controls;
+using KryptonExtendedToolkit.ExtendedToolkit.Controls;
 using GlobalUtilities.Classes;
 using KryptonApplicationUpdater.Classes.SettingsManager;
 using KryptonApplicationUpdater.Enumerations;

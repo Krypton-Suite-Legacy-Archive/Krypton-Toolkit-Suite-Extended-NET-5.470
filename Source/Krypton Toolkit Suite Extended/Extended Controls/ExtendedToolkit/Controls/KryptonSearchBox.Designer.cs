@@ -1,4 +1,4 @@
-﻿namespace ExtendedControls.ExtendedToolkit.Controls
+﻿namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 {
     partial class KryptonSearchBox
     {

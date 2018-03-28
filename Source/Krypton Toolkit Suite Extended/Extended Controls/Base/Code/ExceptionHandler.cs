@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace ExtendedControls.Base.Code
+namespace KryptonExtendedToolkit.Base.Code
 {
     /// <summary>
     /// A wrapper for exception handling.

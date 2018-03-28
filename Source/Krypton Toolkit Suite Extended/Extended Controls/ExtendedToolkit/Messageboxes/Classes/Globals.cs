@@ -1,9 +1,9 @@
-﻿using ExtendedControls.Base.Code;
-using ExtendedControls.Enumerations;
+﻿using KryptonExtendedToolkit.Base.Code;
+using KryptonExtendedToolkit.Enumerations;
 using System;
 using System.Media;
 
-namespace ExtendedControls.ExtendedToolkit.Messageboxes.Classes
+namespace KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.Classes
 {
     public class Globals
     {

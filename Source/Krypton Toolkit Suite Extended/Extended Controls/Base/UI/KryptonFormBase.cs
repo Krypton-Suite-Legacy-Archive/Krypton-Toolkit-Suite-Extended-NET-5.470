@@ -1,6 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 
-namespace ExtendedControls.Base.UI
+namespace KryptonExtendedToolkit.Base.UI
 {
     public partial class KryptonFormBase : KryptonForm
     {

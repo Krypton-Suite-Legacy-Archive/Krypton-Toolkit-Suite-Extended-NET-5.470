@@ -1,4 +1,4 @@
-﻿namespace ExtendedControls.ExtendedToolkit.UI
+﻿namespace KryptonExtendedToolkit.ExtendedToolkit.UI
 {
     partial class KryptonSplashScreen
     {

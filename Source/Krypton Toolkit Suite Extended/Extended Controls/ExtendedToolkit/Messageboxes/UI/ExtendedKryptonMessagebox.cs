@@ -1,6 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 
-namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
+namespace KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.UI
 {
     public partial class ExtendedKryptonMessagebox : KryptonForm
     {

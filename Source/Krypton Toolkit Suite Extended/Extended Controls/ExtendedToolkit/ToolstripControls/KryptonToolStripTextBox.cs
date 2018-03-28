@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
-namespace ExtendedControls.ExtendedToolkit.ToolstripControls
+namespace KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls
 {
     [ToolboxBitmap(typeof(KryptonTextBox)), ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.All)]
     public class KryptonToolStripTextBox : ToolStripControlHost

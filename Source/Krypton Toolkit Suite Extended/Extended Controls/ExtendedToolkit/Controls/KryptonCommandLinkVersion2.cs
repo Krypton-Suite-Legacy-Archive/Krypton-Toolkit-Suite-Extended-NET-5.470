@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ExtendedControls.ExtendedToolkit.Controls
+namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 {
     /// <summary>
     /// A KryptonCommandLink button.

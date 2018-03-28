@@ -4,7 +4,7 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace ExtendedControls.ExtendedToolkit.Controls
+namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 {
     /// <summary>
     /// A KryptonTextBox with cue banner support.

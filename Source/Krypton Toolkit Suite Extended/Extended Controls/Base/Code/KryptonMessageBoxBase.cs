@@ -10,7 +10,7 @@
 // *****************************************************************************
 
 using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.Properties;
+using KryptonExtendedToolkit.Properties;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -18,7 +18,7 @@ using System.Media;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ExtendedControls.Base.Code
+namespace KryptonExtendedToolkit.Base.Code
 {
     /// <summary>
     /// Displays a message box that can contain text, buttons, and symbols that inform and instruct the user.

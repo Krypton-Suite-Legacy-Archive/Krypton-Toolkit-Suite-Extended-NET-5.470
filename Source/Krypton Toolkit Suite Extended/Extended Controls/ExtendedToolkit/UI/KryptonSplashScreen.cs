@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace ExtendedControls.ExtendedToolkit.UI
+namespace KryptonExtendedToolkit.ExtendedToolkit.UI
 {
     public partial class KryptonSplashScreen : KryptonForm
     {

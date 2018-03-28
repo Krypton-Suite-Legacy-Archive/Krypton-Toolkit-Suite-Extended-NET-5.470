@@ -1,4 +1,4 @@
-﻿namespace ExtendedControls.Base.UI
+﻿namespace KryptonExtendedToolkit.Base.UI
 {
     partial class KryptonFormBase
     {

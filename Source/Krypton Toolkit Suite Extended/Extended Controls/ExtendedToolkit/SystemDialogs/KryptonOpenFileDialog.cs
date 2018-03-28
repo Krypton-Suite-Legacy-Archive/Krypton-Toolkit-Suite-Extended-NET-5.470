@@ -1,6 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 
-namespace ExtendedControls.ExtendedToolkit.SystemDialogs
+namespace KryptonExtendedToolkit.ExtendedToolkit.SystemDialogs
 {
     public partial class KryptonOpenFileDialog : KryptonForm
     {

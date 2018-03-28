@@ -1,4 +1,4 @@
-﻿namespace ExtendedControls.Base.UI
+﻿namespace KryptonExtendedToolkit.Base.UI
 {
     partial class Test
     {
@@ -42,7 +42,7 @@
             this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemUACSheld1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
+            this.toolStripMenuItemUACSheld1 = new KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,9 +62,9 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItemUACSheld2 = new ExtendedControls.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
-            this.toolStripMenuItemUACSheld3 = new ExtendedControls.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
-            this.kryptonUACShieldButton1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonUACShieldButton();
+            this.toolStripMenuItemUACSheld2 = new KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
+            this.toolStripMenuItemUACSheld3 = new KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
+            this.kryptonUACShieldButton1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACShieldButton();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
