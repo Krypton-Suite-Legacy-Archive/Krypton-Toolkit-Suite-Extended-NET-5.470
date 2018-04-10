@@ -36,27 +36,27 @@
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Design, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Design.dll</HintPath>
+      <HintPath>..\..\..\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>..\..\..\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>..\..\..\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>..\..\..\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>..\..\..\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.7\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>..\..\..\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WindowsAPICodePackMainFile.1.1.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
@@ -65,8 +65,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Bin\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
     </Reference>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationCore">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\PresentationCore.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\PresentationFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -116,6 +120,11 @@
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Enumerations\Globals.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Classes\AdvancedKryptonOutlookGrid.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.Designer.cs">
+      <DependentUpon>AdvancedDataGridViewSearchToolBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\ExtendedProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -155,6 +164,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\KryptonMostRecentlyUsedFileMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\ToolstripControls\KryptonNumericUpDownToolStripItem.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\KryptonToolStripTextBox.cs">
@@ -224,6 +236,25 @@
     <None Include="Resources\GridSortOrder.bmp" />
     <None Include="Resources\GridErrorIcon.bmp" />
     <None Include="Resources\progress_bar.ico" />
+    <None Include="Resources\ColumnHeader_Filtered.png" />
+    <None Include="Resources\ColumnHeader_FilteredAndOrderedASC.png" />
+    <None Include="Resources\ColumnHeader_FilteredAndOrderedDESC.png" />
+    <None Include="Resources\ColumnHeader_OrderedASC.png" />
+    <None Include="Resources\ColumnHeader_OrderedDESC.png" />
+    <None Include="Resources\ColumnHeader_SavedFilters.png" />
+    <None Include="Resources\ColumnHeader_UnFiltered.png" />
+    <None Include="Resources\MenuStrip_OrderASCbool.png" />
+    <None Include="Resources\MenuStrip_OrderASCnum.png" />
+    <None Include="Resources\MenuStrip_OrderASCtxt.png" />
+    <None Include="Resources\MenuStrip_OrderDESCbool.png" />
+    <None Include="Resources\MenuStrip_OrderDESCnum.png" />
+    <None Include="Resources\MenuStrip_OrderDESCtxt.png" />
+    <None Include="Resources\MenuStrip_ResizeGrip.png" />
+    <None Include="Resources\SearchToolBar_ButtonCaseSensitive.png" />
+    <None Include="Resources\SearchToolBar_ButtonClose.png" />
+    <None Include="Resources\SearchToolBar_ButtonFromBegin.png" />
+    <None Include="Resources\SearchToolBar_ButtonSearch.png" />
+    <None Include="Resources\SearchToolBar_ButtonWholeWord.png" />
     <Content Include="ToolboxBitmaps\KryptonForm.bmp" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
@@ -231,6 +262,10 @@
     <ProjectReference Include="..\Global Utilities\Global Utilities.csproj">
       <Project>{2cdbe9aa-deb3-4a7b-97d7-7dc665418e92}</Project>
       <Name>Global Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Krypton Outlook Grid\Krypton Outlook Grid.csproj">
+      <Project>{2a10c696-45ad-48aa-8ead-2cb322672972}</Project>
+      <Name>Krypton Outlook Grid</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

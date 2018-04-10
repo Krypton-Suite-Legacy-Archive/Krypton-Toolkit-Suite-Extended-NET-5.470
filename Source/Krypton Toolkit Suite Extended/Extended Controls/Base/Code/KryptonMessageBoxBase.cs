@@ -10,7 +10,7 @@
 // *****************************************************************************
 
 using ComponentFactory.Krypton.Toolkit;
-using KryptonExtendedToolkit.Properties;
+using ExtendedControls.Properties;
 using System;
 using System.ComponentModel;
 using System.Drawing;

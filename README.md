@@ -4,6 +4,10 @@
 
 ## An extension to the Krypton Toolkit suite of controls for .NET framework 4.7 
 
+======
+
+## 2018-04-10 New Menu control
+* `KryptonNumericUpDown` control can now be used on menu & toolbar controls.
 
 ======
 
