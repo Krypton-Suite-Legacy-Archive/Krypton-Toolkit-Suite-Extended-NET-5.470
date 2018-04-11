@@ -4,6 +4,12 @@
 
 ## An extension to the Krypton Toolkit suite of controls for .NET framework 4.7 
 
+
+======
+
+## 2018-04-11 Nuget package migration/consolodation
+* Migrated `packages.config` over  to `PackageReference` (must have the latest Visual Studio 2017 Preview build to utilise this feature).
+
 ======
 
 ## 2018-04-10 New Menu control
