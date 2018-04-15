@@ -1,9 +1,41 @@
-﻿namespace KryptonExtendedToolkit.Enumerations
+﻿namespace ExtendedControls.ExtendedToolkit.Messageboxes.Enumerations
 {
+    public enum KryptonMessageBoxExtendedBorderType
+    {
+
+    }
+
+    /// <summary>
+    /// Krypton messagebox extended palette theme.
+    /// </summary>
+    public enum KryptonMessageBoxExtendedThemeType
+    {
+        CUSTOM = 0,
+        OFFICE2013 = 1,
+        OFFICE2013WHITE = 2,
+        OFFICE2010BLACK = 3,
+        OFFICE2010BLUE = 4,
+        OFFICE2010SILVER = 5,
+        OFFICE2007BLACK = 6,
+        OFFICE2007BLUE = 7,
+        OFFICE2007SILVER = 8,
+        PROFESSIONALOFFICE2003 = 9,
+        PROFESSIONALSYSTEM = 10,
+        SPARKLEBLUE = 11,
+        SPARKLEORANGE = 12,
+        SPARKLEPURPLE = 13
+    }
+
+    public enum KryptonMessageBoxExtendedApplicationIconVisability
+    {
+        VISABLE = 0,
+        HIDDEN = 1
+    }
+
     /// <summary>
     /// Messagebox icon
     /// </summary>
-    public enum KryptonMessageBoxIcon
+    public enum KryptonMessageBoxExtendedIcon
     {
         /// <summary>
         /// A hand icon.
@@ -44,7 +76,7 @@
         /// <summary>
         /// A critical icon.
         /// </summary>
-		CRITICAL = 8,
+        CRITICAL = 8,
         /// <summary>
         /// No icon set.
         /// </summary>
@@ -54,7 +86,7 @@
     /// <summary>
     /// 
     /// </summary>
-    public enum KryptonMessageBoxButton
+    public enum KryptonMessageBoxExtendedButtons
     {
         /// <summary>
         /// The ok button.
@@ -70,28 +102,29 @@
         CUSTOM = 8
     }
 
-    public enum KryptonMessageBoxMessageBoxResult
+    public enum KryptonMessageBoxExtendedResult
     {
         CANCEL = 0,
         NO = 1,
         NONE = 2,
         OK = 3,
         YES = 4,
-        RETRY = 5,
-        ABORT = 6,
-        RETRYABORT = 7,
-        RETRYABORTCANCEL = 8,
-        CUSTOM = 9
+        YESNO = 5,
+        RETRY = 6,
+        ABORT = 7,
+        RETRYABORT = 8,
+        RETRYABORTCANCEL = 9,
+        CUSTOM = 10
     }
 
-    public enum KryptonMessageBoxDefaultButton
+    public enum KryptonMessageBoxExtendedDefaultButton
     {
         BUTTON1 = 0,
         BUTTON2 = 256,
         BUTTON3 = 512
     }
 
-    public enum KryptonMessageBoxOptions
+    public enum KryptonMessageBoxExtendedBoxOptions
     {
 
     }

@@ -116,7 +116,6 @@
     <Compile Include="Base\UI\Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
-    <Compile Include="Enumerations\Globals.cs" />
     <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Classes\AdvancedKryptonOutlookGrid.cs" />
     <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.cs" />
     <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.Designer.cs">
@@ -145,6 +144,7 @@
       <DependentUpon>ModernProgressBar.cs</DependentUpon>
     </Compile>
     <Compile Include="ExtendedToolkit\Messageboxes\Classes\Globals.cs" />
+    <Compile Include="ExtendedToolkit\Messageboxes\Enumerations\MessageBoxSpecificEnumerations.cs" />
     <Compile Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +286,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Enumerations\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>

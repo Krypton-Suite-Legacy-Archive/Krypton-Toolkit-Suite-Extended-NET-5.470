@@ -1,5 +1,5 @@
-﻿using KryptonExtendedToolkit.Base.Code;
-using KryptonExtendedToolkit.Enumerations;
+﻿using ExtendedControls.ExtendedToolkit.Messageboxes.Enumerations;
+using KryptonExtendedToolkit.Base.Code;
 using System;
 using System.Media;
 
@@ -19,32 +19,32 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.Classes
         /// Plays system sound on displaying messagebox.
         /// </summary>
         /// <param name="type">The type of messagebox being displayed.</param>
-        public void PlaySound(KryptonMessageBoxIcon type, string customSoundLocation = null)
+        public void PlaySound(KryptonMessageBoxExtendedIcon type, string customSoundLocation = null)
         {
             switch (type)
             {
-                case KryptonMessageBoxIcon.HAND:
+                case KryptonMessageBoxExtendedIcon.HAND:
                     SystemSounds.Hand.Play();
                     break;
-                case KryptonMessageBoxIcon.QUESTION:
+                case KryptonMessageBoxExtendedIcon.QUESTION:
                     SystemSounds.Question.Play();
                     break;
-                case KryptonMessageBoxIcon.EXCLAMATION:
+                case KryptonMessageBoxExtendedIcon.EXCLAMATION:
                     SystemSounds.Exclamation.Play();
                     break;
-                case KryptonMessageBoxIcon.ASTERISK:
+                case KryptonMessageBoxExtendedIcon.ASTERISK:
                     SystemSounds.Asterisk.Play();
                     break;
-                case KryptonMessageBoxIcon.STOP:
+                case KryptonMessageBoxExtendedIcon.STOP:
                     SystemSounds.Asterisk.Play();
                     break;
-                case KryptonMessageBoxIcon.ERROR:
+                case KryptonMessageBoxExtendedIcon.ERROR:
                     SystemSounds.Asterisk.Play();
                     break;
-                case KryptonMessageBoxIcon.INFORMATION:
+                case KryptonMessageBoxExtendedIcon.INFORMATION:
 
                     break;
-                case KryptonMessageBoxIcon.CUSTOM:
+                case KryptonMessageBoxExtendedIcon.CUSTOM:
                     try
                     {
                         SoundPlayer sound = new SoundPlayer();
@@ -58,10 +58,10 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.Classes
                         exceptionHandler.ShowException(e.Message, true);
                     }
                     break;
-                case KryptonMessageBoxIcon.CRITICAL:
+                case KryptonMessageBoxExtendedIcon.CRITICAL:
                     SystemSounds.Asterisk.Play();
                     break;
-                case KryptonMessageBoxIcon.NONE:
+                case KryptonMessageBoxExtendedIcon.NONE:
                     break;
                 default:
                     break;
