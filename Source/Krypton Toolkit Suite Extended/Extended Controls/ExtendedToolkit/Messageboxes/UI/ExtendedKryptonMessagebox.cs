@@ -96,5 +96,64 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.UI
                     break;
             }
         }
+
+        /// <summary>
+        /// Sets the button text.
+        /// </summary>
+        /// <param name="buttons">The buttons.</param>
+        /// <param name="kryptonButtonText1">The krypton button text1.</param>
+        /// <param name="kryptonButtonText2">The krypton button text2.</param>
+        /// <param name="kryptonButtonText3">The krypton button text3.</param>
+        /// <param name="buttonCount">The button count.</param>
+        public void SetButtonText(KryptonMessageBoxExtendedButtons buttons, string kryptonButtonText1 = null, string kryptonButtonText2 = null, string kryptonButtonText3 = null, KryptonMessageBoxExtendedBoxButtonCount buttonCount = KryptonMessageBoxExtendedBoxButtonCount.THREE)
+        {
+            switch (buttons)
+            {
+                case KryptonMessageBoxExtendedButtons.OK:
+                    kbtnButton3.Text = "&Ok";
+                    break;
+                case KryptonMessageBoxExtendedButtons.OKCANCEL:
+                    kbtnButton2.Text = "&Ok";
+
+                    kbtnButton3.Text = "C&ancel";
+                    break;
+                case KryptonMessageBoxExtendedButtons.YESNO:
+                    kbtnButton2.Text = "Y&es";
+
+                    kbtnButton3.Text = "&No";
+                    break;
+                case KryptonMessageBoxExtendedButtons.YESNOCANCEL:
+                    break;
+                case KryptonMessageBoxExtendedButtons.RETRY:
+                    break;
+                case KryptonMessageBoxExtendedButtons.ABORT:
+                    break;
+                case KryptonMessageBoxExtendedButtons.RETRYABORT:
+                    break;
+                case KryptonMessageBoxExtendedButtons.RETRYABORTCANCEL:
+                    break;
+                case KryptonMessageBoxExtendedButtons.CUSTOM:
+                    kbtnButton1.Text = kryptonButtonText1;
+
+                    kbtnButton2.Text = kryptonButtonText2;
+
+                    kbtnButton3.Text = kryptonButtonText3;
+
+                    switch (buttonCount)
+                    {
+                        case KryptonMessageBoxExtendedBoxButtonCount.ONE:
+                            break;
+                        case KryptonMessageBoxExtendedBoxButtonCount.TWO:
+                            break;
+                        case KryptonMessageBoxExtendedBoxButtonCount.THREE:
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
