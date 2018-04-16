@@ -4,6 +4,10 @@
 
 ## An extension to the Krypton Toolkit suite of controls for .NET framework 4.7 
 
+======
+
+## 2018-04-16am Krypton Extended Messagebox
+* Laid basic foundation for a designable Krypton Messagebox.
 
 ======
 

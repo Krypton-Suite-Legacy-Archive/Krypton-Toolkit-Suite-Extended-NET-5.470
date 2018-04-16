@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.kpnlBackdrop = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.pnlSeperator = new System.Windows.Forms.Panel();
             this.kchkOptionalCheck = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kbtnButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.klblMessage = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pbxIcon = new System.Windows.Forms.PictureBox();
-            this.pnlSeperator = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlBackdrop)).BeginInit();
             this.kpnlBackdrop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxIcon)).BeginInit();
@@ -55,6 +55,17 @@
             this.kpnlBackdrop.Name = "kpnlBackdrop";
             this.kpnlBackdrop.Size = new System.Drawing.Size(800, 450);
             this.kpnlBackdrop.TabIndex = 0;
+            // 
+            // pnlSeperator
+            // 
+            this.pnlSeperator.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSeperator.AutoSize = true;
+            this.pnlSeperator.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnlSeperator.Location = new System.Drawing.Point(12, 400);
+            this.pnlSeperator.Name = "pnlSeperator";
+            this.pnlSeperator.Size = new System.Drawing.Size(776, 2);
+            this.pnlSeperator.TabIndex = 1;
             // 
             // kchkOptionalCheck
             // 
@@ -101,7 +112,7 @@
             // 
             // klblMessage
             // 
-            this.klblMessage.Location = new System.Drawing.Point(147, 13);
+            this.klblMessage.Location = new System.Drawing.Point(146, 12);
             this.klblMessage.Name = "klblMessage";
             this.klblMessage.Size = new System.Drawing.Size(215, 26);
             this.klblMessage.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,17 +128,6 @@
             this.pbxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbxIcon.TabIndex = 0;
             this.pbxIcon.TabStop = false;
-            // 
-            // pnlSeperator
-            // 
-            this.pnlSeperator.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSeperator.AutoSize = true;
-            this.pnlSeperator.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlSeperator.Location = new System.Drawing.Point(12, 400);
-            this.pnlSeperator.Name = "pnlSeperator";
-            this.pnlSeperator.Size = new System.Drawing.Size(776, 2);
-            this.pnlSeperator.TabIndex = 1;
             // 
             // ExtendedKryptonMessagebox
             // 
