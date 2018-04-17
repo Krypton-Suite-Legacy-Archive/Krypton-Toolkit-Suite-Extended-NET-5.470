@@ -117,9 +117,13 @@
         /// </summary>
         CRITICAL = 8,
         /// <summary>
+        /// The ok icon.
+        /// </summary>
+        OK = 9,
+        /// <summary>
         /// No icon set.
         /// </summary>
-        NONE = 9
+        NONE = 10
     }
 
     /// <summary>

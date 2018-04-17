@@ -73,6 +73,16 @@ namespace ExtendedControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Check {
+            get {
+                object obj = ResourceManager.GetObject("Check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ColumnHeader_Filtered {
             get {
                 object obj = ResourceManager.GetObject("ColumnHeader_Filtered", resourceCulture);
@@ -186,16 +196,6 @@ namespace ExtendedControls.Properties {
         internal static System.Drawing.Bitmap help2 {
             get {
                 object obj = ResourceManager.GetObject("help2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap if_Symbol_Check_49258 {
-            get {
-                object obj = ResourceManager.GetObject("if_Symbol_Check_49258", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

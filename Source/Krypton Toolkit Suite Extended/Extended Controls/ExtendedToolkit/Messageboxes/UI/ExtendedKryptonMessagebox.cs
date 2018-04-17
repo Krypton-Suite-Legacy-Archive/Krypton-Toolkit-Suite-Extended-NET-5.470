@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.ExtendedToolkit.Messageboxes.Enumerations;
+using ExtendedControls.Properties;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -158,7 +159,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.UI
         /// <param name="kryptonButtonText1">The krypton button text1.</param>
         /// <param name="kryptonButtonText2">The krypton button text2.</param>
         /// <param name="kryptonButtonText3">The krypton button text3.</param>
-        public void Show(string messageboxTitle, string messageBoxText, KryptonMessageBoxExtendedButtons buttons, KryptonMessageBoxExtendedIcon icon, KryptonMessageBoxExtendedDefaultButton defaultButton = KryptonMessageBoxExtendedDefaultButton.BUTTON1, string kryptonButtonText1 = null, string kryptonButtonText2 = null, string kryptonButtonText3 = null, KryptonMessageBoxExtendedBoxButtonCount buttonCount = KryptonMessageBoxExtendedBoxButtonCount.ONE)
+        public void Show(string messageboxTitle, string messageBoxText, KryptonMessageBoxExtendedButtons buttons, KryptonMessageBoxExtendedIcon icon, KryptonMessageBoxExtendedDefaultButton defaultButton = KryptonMessageBoxExtendedDefaultButton.BUTTON1, string kryptonButtonText1 = null, string kryptonButtonText2 = null, string kryptonButtonText3 = null, string iconCustomFileName = null, KryptonMessageBoxExtendedBoxButtonCount buttonCount = KryptonMessageBoxExtendedBoxButtonCount.ONE)
         {
             Text = messageboxTitle;
 
@@ -166,31 +167,55 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.UI
 
             SetButtonText(buttons, kryptonButtonText1, kryptonButtonText2, kryptonButtonText3, buttonCount);
 
+            #region Messagebox Icons
             switch (icon)
             {
                 case KryptonMessageBoxExtendedIcon.HAND:
+                    pbxIcon.Image = new Bitmap(Resources.if_Symbol_Stop_49267);
                     break;
                 case KryptonMessageBoxExtendedIcon.QUESTION:
+                    pbxIcon.Image = new Bitmap(Resources.if_Symbol_Help_49263);
                     break;
                 case KryptonMessageBoxExtendedIcon.EXCLAMATION:
+                    pbxIcon.Image = new Bitmap(Resources.if_Symbol_Exclamation_49262);
                     break;
                 case KryptonMessageBoxExtendedIcon.ASTERISK:
+                    pbxIcon.Image = new Bitmap(Resources.if_Symbol_Restricted_49266);
                     break;
                 case KryptonMessageBoxExtendedIcon.STOP:
+                    pbxIcon.Image = new Bitmap(Resources.if_Symbol_Stop_49267);
                     break;
                 case KryptonMessageBoxExtendedIcon.ERROR:
+                    pbxIcon.Image = new Bitmap(Resources.if_Symbol_Error_49261);
                     break;
                 case KryptonMessageBoxExtendedIcon.INFORMATION:
+                    pbxIcon.Image = new Bitmap(Resources.if_Symbol_Information_49264);
                     break;
                 case KryptonMessageBoxExtendedIcon.CUSTOM:
+                    if (iconCustomFileName != null)
+                    {
+                        pbxIcon.Image = new Bitmap(iconCustomFileName);
+                    }
+                    else
+                    {
+                        pbxIcon.Visible = false;
+
+                        klblMessage.Location = new Point(12, 12);
+                    }
                     break;
                 case KryptonMessageBoxExtendedIcon.CRITICAL:
+                    pbxIcon.Image = new Bitmap(Resources.if_Symbol_Error_49261);
+                    break;
+                case KryptonMessageBoxExtendedIcon.OK:
+                    pbxIcon.Image = new Bitmap(Resources.Check);
                     break;
                 case KryptonMessageBoxExtendedIcon.NONE:
-                    break;
-                default:
+                    pbxIcon.Visible = false;
+
+                    klblMessage.Location = new Point(12, 12);
                     break;
             }
+            #endregion
 
             SetDefaultButton(defaultButton);
         }

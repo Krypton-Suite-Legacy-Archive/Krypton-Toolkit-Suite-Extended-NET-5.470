@@ -6,7 +6,12 @@
 
 ======
 
-## 2018-04-16am Krypton Extended Messagebox
+## 2018-04-17 Application Update XML Configuration
+* Nearly completed first design stage of the `Update File Creator`.
+
+======
+
+## 2018-04-16 Krypton Extended Messagebox
 * Laid basic foundation for a designable Krypton Messagebox.
 
 ======
