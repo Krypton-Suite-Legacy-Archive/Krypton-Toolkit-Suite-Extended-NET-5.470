@@ -8,6 +8,7 @@
 
 ## 2018-04-17 Application Update XML Configuration
 * Nearly completed first design stage of the `Update File Creator`.
+* New installer project (Advanced Installer & WIX).
 
 ======
 
