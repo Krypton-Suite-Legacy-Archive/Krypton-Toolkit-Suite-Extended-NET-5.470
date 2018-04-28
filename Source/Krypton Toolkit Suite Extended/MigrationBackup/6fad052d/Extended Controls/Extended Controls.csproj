@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExtendedControls</RootNamespace>
+    <AssemblyName>Krypton Extended Toolkit</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationVersion>4.7.410.0</ApplicationVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Design, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePackMainFile.1.1.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\PresentationCore.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\PresentationFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\ButtonSpec\ButtonSpecCollectionBase.cs" />
+    <Compile Include="Base\ButtonSpec\ButtonSpecFormFixed.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\ButtonSpec\ButtonSpecFormWindowClose.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\ButtonSpec\ButtonSpecFormWindowMax.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\ButtonSpec\ButtonSpecFormWindowMin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Code\ExceptionHandler.cs" />
+    <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
+    <Compile Include="Base\Code\MostRecentlyUsedFileManager.cs" />
+    <Compile Include="Base\Code\PI.cs" />
+    <Compile Include="Base\Code\UtilityMethods.cs" />
+    <Compile Include="Base\UI\KryptonFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\UI\KryptonFormBase.Designer.cs">
+      <DependentUpon>KryptonFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\UI\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\UI\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enumerations\Globals.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Classes\AdvancedKryptonOutlookGrid.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.Designer.cs">
+      <DependentUpon>AdvancedDataGridViewSearchToolBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\ExtendedProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonCommandLinkVersion1.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonCommandLinkVersion2.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonCueComboBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonCueTextBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonDateTimePickerExtended.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonSearchBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonSearchBox.Designer.cs">
+      <DependentUpon>KryptonSearchBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonUACShieldButton.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonWaterMarkTextBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\ModernProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\ModernProgressBar.Designer.cs">
+      <DependentUpon>ModernProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Messageboxes\Classes\Globals.cs" />
+    <Compile Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.Designer.cs">
+      <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\SystemDialogs\KryptonFolderPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\SystemDialogs\KryptonOpenFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\SystemDialogs\KryptonSaveFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\ToolstripControls\KryptonMostRecentlyUsedFileMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\ToolstripControls\KryptonNumericUpDownToolStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\ToolstripControls\KryptonToolStripTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\ToolstripControls\KryptonToolStripWaterMarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\ToolstripControls\ToolStripMenuItemUACSheld.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\KryptonFormWithDropShadow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\KryptonPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\KryptonPanelForm.Designer.cs">
+      <DependentUpon>KryptonPanelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\KryptonSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\KryptonSplashScreen.Designer.cs">
+      <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes\IMPORTANT.txt" />
+    <None Include="packages.config" />
+    <None Include="Resources\help2.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\sign_warning.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\if_Symbol-Delete_49260.png" />
+    <None Include="Resources\if_Symbol-Exclamation_49262.png" />
+    <None Include="Resources\if_Symbol-Help_49263.png" />
+    <None Include="Resources\if_Symbol-Information_49264.png" />
+    <None Include="Resources\if_Symbol-Restricted_49266.png" />
+    <None Include="Resources\if_Symbol-Stop_49267.png" />
+    <None Include="Resources\Symbol-Error.png" />
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\if_Symbol-Check_49258.png" />
+    <None Include="Resources\if_Symbol-Error_49261.png" />
+    <None Include="Resources\active_search.png" />
+    <None Include="Resources\inactive_search.png" />
+    <None Include="Resources\SparkleChecked.png" />
+    <None Include="Resources\SparkleContextMenuSub.png" />
+    <None Include="Resources\SparkleDropDownButton.png" />
+    <None Include="Resources\SparkleDropDownOutlineButton.png" />
+    <None Include="Resources\SparkleDropUpButton.png" />
+    <None Include="Resources\SparkleGalleryDropButton.png" />
+    <None Include="Resources\SparkleGrayChecked.png" />
+    <None Include="Resources\SparkleGrayIndeterminate.png" />
+    <None Include="Resources\SparkleIndeterminate.png" />
+    <None Include="Resources\GridRowIndicators.bmp" />
+    <None Include="Resources\GridSortOrder.bmp" />
+    <None Include="Resources\GridErrorIcon.bmp" />
+    <None Include="Resources\progress_bar.ico" />
+    <None Include="Resources\ColumnHeader_Filtered.png" />
+    <None Include="Resources\ColumnHeader_FilteredAndOrderedASC.png" />
+    <None Include="Resources\ColumnHeader_FilteredAndOrderedDESC.png" />
+    <None Include="Resources\ColumnHeader_OrderedASC.png" />
+    <None Include="Resources\ColumnHeader_OrderedDESC.png" />
+    <None Include="Resources\ColumnHeader_SavedFilters.png" />
+    <None Include="Resources\ColumnHeader_UnFiltered.png" />
+    <None Include="Resources\MenuStrip_OrderASCbool.png" />
+    <None Include="Resources\MenuStrip_OrderASCnum.png" />
+    <None Include="Resources\MenuStrip_OrderASCtxt.png" />
+    <None Include="Resources\MenuStrip_OrderDESCbool.png" />
+    <None Include="Resources\MenuStrip_OrderDESCnum.png" />
+    <None Include="Resources\MenuStrip_OrderDESCtxt.png" />
+    <None Include="Resources\MenuStrip_ResizeGrip.png" />
+    <None Include="Resources\SearchToolBar_ButtonCaseSensitive.png" />
+    <None Include="Resources\SearchToolBar_ButtonClose.png" />
+    <None Include="Resources\SearchToolBar_ButtonFromBegin.png" />
+    <None Include="Resources\SearchToolBar_ButtonSearch.png" />
+    <None Include="Resources\SearchToolBar_ButtonWholeWord.png" />
+    <Content Include="ToolboxBitmaps\KryptonForm.bmp" />
+    <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Global Utilities\Global Utilities.csproj">
+      <Project>{2cdbe9aa-deb3-4a7b-97d7-7dc665418e92}</Project>
+      <Name>Global Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Krypton Outlook Grid\Krypton Outlook Grid.csproj">
+      <Project>{2a10c696-45ad-48aa-8ead-2cb322672972}</Project>
+      <Name>Krypton Outlook Grid</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Base\UI\Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\ModernProgressBar.resx">
+      <DependentUpon>ModernProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.resx">
+      <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\KryptonSaveFileDialog.resx">
+      <DependentUpon>KryptonSaveFileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\KryptonSplashScreen.resx">
+      <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

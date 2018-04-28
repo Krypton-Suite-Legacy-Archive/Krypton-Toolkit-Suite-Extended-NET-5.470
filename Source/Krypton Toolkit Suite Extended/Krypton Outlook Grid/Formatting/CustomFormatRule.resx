@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="kbtnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="kbtnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>542, 245</value>
+  </data>
+  <data name="kbtnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 30</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="kbtnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="kbtnCancel.Values.Text" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="&gt;&gt;kbtnCancel.Name" xml:space="preserve">
+    <value>kbtnCancel</value>
+  </data>
+  <data name="&gt;&gt;kbtnCancel.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kbtnCancel.Parent" xml:space="preserve">
+    <value>kpnlBackdrop</value>
+  </data>
+  <data name="&gt;&gt;kbtnCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="kryptonButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>668, 245</value>
+  </data>
+  <data name="kryptonButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 30</value>
+  </data>
+  <data name="kryptonButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="kryptonButton1.Values.Text" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="&gt;&gt;kryptonButton1.Name" xml:space="preserve">
+    <value>kryptonButton1</value>
+  </data>
+  <data name="&gt;&gt;kryptonButton1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kryptonButton1.Parent" xml:space="preserve">
+    <value>kpnlBackdrop</value>
+  </data>
+  <data name="&gt;&gt;kryptonButton1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="kcolMin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="kcolMin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="kcolMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 121</value>
+  </data>
+  <data name="kcolMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 30</value>
+  </data>
+  <data name="kcolMin.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="kcolMin.Values.Text" xml:space="preserve">
+    <value>Mini&amp;mum Colour</value>
+  </data>
+  <data name="&gt;&gt;kcolMin.Name" xml:space="preserve">
+    <value>kcolMin</value>
+  </data>
+  <data name="&gt;&gt;kcolMin.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonColorButton, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kcolMin.Parent" xml:space="preserve">
+    <value>kpnlBackdrop</value>
+  </data>
+  <data name="&gt;&gt;kcolMin.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="kcolMed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="kcolMed.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="kcolMed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 121</value>
+  </data>
+  <data name="kcolMed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 30</value>
+  </data>
+  <data name="kcolMed.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="kcolMed.Values.Text" xml:space="preserve">
+    <value>Med&amp;ium Colour</value>
+  </data>
+  <data name="&gt;&gt;kcolMed.Name" xml:space="preserve">
+    <value>kcolMed</value>
+  </data>
+  <data name="&gt;&gt;kcolMed.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonColorButton, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kcolMed.Parent" xml:space="preserve">
+    <value>kpnlBackdrop</value>
+  </data>
+  <data name="&gt;&gt;kcolMed.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="kcolMax.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="kcolMax.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="kcolMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>373, 121</value>
+  </data>
+  <data name="kcolMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 30</value>
+  </data>
+  <data name="kcolMax.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="kcolMax.Values.Text" xml:space="preserve">
+    <value>M&amp;aximum Colour</value>
+  </data>
+  <data name="&gt;&gt;kcolMax.Name" xml:space="preserve">
+    <value>kcolMax</value>
+  </data>
+  <data name="&gt;&gt;kcolMax.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonColorButton, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kcolMax.Parent" xml:space="preserve">
+    <value>kpnlBackdrop</value>
+  </data>
+  <data name="&gt;&gt;kcolMax.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="kcmbFill.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 212</value>
+  </data>
+  <data name="kcmbFill.Size" type="System.Drawing.Size, System.Drawing">
+    <value>692, 27</value>
+  </data>
+  <data name="kcmbFill.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;kcmbFill.Name" xml:space="preserve">
+    <value>kcmbFill</value>
+  </data>
+  <data name="&gt;&gt;kcmbFill.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kcmbFill.Parent" xml:space="preserve">
+    <value>kpnlBackdrop</value>
+  </data>
+  <data name="&gt;&gt;kcmbFill.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pbxPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 45</value>
+  </data>
+  <data name="pbxPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>692, 25</value>
+  </data>
+  <data name="pbxPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pbxPreview.Name" xml:space="preserve">
+    <value>pbxPreview</value>
+  </data>
+  <data name="&gt;&gt;pbxPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbxPreview.Parent" xml:space="preserve">
+    <value>kpnlBackdrop</value>
+  </data>
+  <data name="&gt;&gt;pbxPreview.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="kcmbFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 12</value>
+  </data>
+  <data name="kcmbFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>692, 27</value>
+  </data>
+  <data name="kcmbFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;kcmbFormat.Name" xml:space="preserve">
+    <value>kcmbFormat</value>
+  </data>
+  <data name="&gt;&gt;kcmbFormat.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kcmbFormat.Parent" xml:space="preserve">
+    <value>kpnlBackdrop</value>
+  </data>
+  <data name="&gt;&gt;kcmbFormat.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="klblFill.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 212</value>
+  </data>
+  <data name="klblFill.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 26</value>
+  </data>
+  <data name="klblFill.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="klblFill.Values.Text" xml:space="preserve">
+    <value>Fill:</value>
+  </data>
+  <data name="&gt;&gt;klblFill.Name" xml:space="preserve">
+    <value>klblFill</value>
+  </data>
+  <data name="&gt;&gt;klblFill.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;klblFill.Parent" xml:space="preserve">
+    <value>kpnlBackdrop</value>
+  </data>
+  <data name="&gt;&gt;klblFill.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="klblPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 44</value>
+  </data>
+  <data name="klblPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 26</value>
+  </data>
+  <data name="klblPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="klblPreview.Values.Text" xml:space="preserve">
+    <value>Preview:</value>
+  </data>
+  <data name="&gt;&gt;klblPreview.Name" xml:space="preserve">
+    <value>klblPreview</value>
+  </data>
+  <data name="&gt;&gt;klblPreview.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;klblPreview.Parent" xml:space="preserve">
+    <value>kpnlBackdrop</value>
+  </data>
+  <data name="&gt;&gt;klblPreview.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="klblFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="klblFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 26</value>
+  </data>
+  <data name="klblFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="klblFormat.Values.Text" xml:space="preserve">
+    <value>Format:</value>
+  </data>
+  <data name="&gt;&gt;klblFormat.Name" xml:space="preserve">
+    <value>klblFormat</value>
+  </data>
+  <data name="&gt;&gt;klblFormat.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;klblFormat.Parent" xml:space="preserve">
+    <value>kpnlBackdrop</value>
+  </data>
+  <data name="&gt;&gt;klblFormat.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="kpnlBackdrop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="kpnlBackdrop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="kpnlBackdrop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="kpnlBackdrop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 286</value>
+  </data>
+  <data name="kpnlBackdrop.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;kpnlBackdrop.Name" xml:space="preserve">
+    <value>kpnlBackdrop</value>
+  </data>
+  <data name="&gt;&gt;kpnlBackdrop.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonPanel, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kpnlBackdrop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;kpnlBackdrop.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 21</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 286</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Custom Rule</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CustomFormatRule</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonForm, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+</root>
