@@ -6,6 +6,12 @@
 
 ======
 
+## 2018-04-29 Tinkering with the References
+* Tinkering with the References.
+* Start to fill out the WIX installer project.
+
+======
+
 ## 2018-04-17 Application Update XML Configuration
 * Nearly completed first design stage of the `Update File Creator`.
 * New installer project (Advanced Installer & WIX).
@@ -13,7 +19,7 @@
 ======
 
 ## 2018-04-16 Krypton Extended Messagebox
-* Laid basic foundation for a designable Krypton Messagebox.
+* Laid basic foundation for a designable `Krypton MessageBox`.
 
 ======
 
@@ -36,13 +42,13 @@
 
 ## 2018-03-13 Krypton Application Updater (XML based version) update
 * Base groundwork for XML updater & parsing XML files has been completed
-* New XML files labeled `Update.xml` and `CheckSum.xml` have been created to explain to developers how to use the updater back-end.
+* New XML files labelled `Update.xml` and `CheckSum.xml` have been created to explain to developers how to use the updater back-end.
 * TODO: Connect the framework up to UI elements.
 
 ======
 
 ## 2018-03-10 Krypton Application Updater (XML based version)
-* Begun fundemental groundwork on an XML based application updater (classes/settings/UI).
+* Begun fundamental groundwork on an XML based application updater (classes/settings/UI).
 * Improved documentation with the aid of [GhostDoc](https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc).
 
 ======
@@ -75,34 +81,34 @@
 
 ## 2018-02-08 New controls 
 * Extended 'KryptonTextBox' to have watermark functionality.
-* Wrapped 'KryptonTextBox' into a toolstrip container object to make it easier to add new functionality i.e watermarks.
+* Wrapped 'KryptonTextBox' into a `toolstrip container` object to make it easier to add new functionality i.e watermarks.
 
 ======
 
 ## 2018-02-06 New resources
-* New icons for messageboxes
+* New icons for `MessageBoxes`
 
 ======
 
 ## 2018-02-05pm New `Globals.cs` class for enumerations
 * New `Globals.cs` class for custom enumerations. (Needs documentation finishing off)
-* NOTE FOR FUTURE REFRENCE: Find suitable icons for messageboxes (CC license maybe?)
+* NOTE FOR FUTURE REFRENCE: Find suitable icons for `MessageBoxes` (CC license maybe?)
 
 ======
 
 ## 2018-02-05am Krypton outlook grid & Krypton messagebox base
 * Fixed bug with Krypton outlook grid
-* Incorporated a 'base' Krypton messagebox as a reference for extending
+* Incorporated a `base Krypton MessageBox` as a reference for extending
 
 =======
 
 ## 2018-02-04 Krypton outlook grid
-* Fully incorporated Krypton outlook grid code
+* Fully incorporated `Krypton Outlook Grid` code
 
 =======
 
 ## 2018-02-03 Krypton outlook grid
-* Krypton outlook grid 45% complete
+* `Krypton Outlook Grid` 45% complete
 * Altered assembly info
 * Variables and comments with `color` renamed to `colour`
 
@@ -110,6 +116,6 @@
 
 ## 2018-02-02 Initial commit
 * Added generic C# `.gitignore` file
-* Created solution with two class projects inside labeled `Extended Controls` and `Krypton Outlook Grid`
+* Created solution with two class projects inside labelled `Extended Controls` and `Krypton Outlook Grid`
 * Automatic versioning
 * High DPI support configuration 

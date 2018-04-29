@@ -8,9 +8,10 @@
 //
 //--------------------------------------------------------------------------------
 
-using KryptonOutlookGrid.Interfaces;
 using System;
 using System.Windows.Forms;
+
+using KryptonOutlookGrid.Interfaces;
 
 namespace KryptonOutlookGrid.Classes
 {

@@ -1,6 +1,7 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.UI
 {

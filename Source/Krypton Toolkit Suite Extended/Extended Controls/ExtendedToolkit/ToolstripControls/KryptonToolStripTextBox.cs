@@ -1,8 +1,9 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
+
+using ComponentFactory.Krypton.Toolkit;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls
 {

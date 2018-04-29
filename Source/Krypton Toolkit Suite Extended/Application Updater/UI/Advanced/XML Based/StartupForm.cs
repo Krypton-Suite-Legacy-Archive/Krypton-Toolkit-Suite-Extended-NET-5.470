@@ -1,10 +1,12 @@
-﻿using KryptonApplicationUpdater.Classes.SettingsManager;
-using System.Deployment.Internal;
+﻿using System;
+
 using ComponentFactory.Krypton.Toolkit;
+
 using GlobalUtilities.Classes;
+
 using KryptonApplicationUpdater.Classes;
+using KryptonApplicationUpdater.Classes.SettingsManager;
 using KryptonApplicationUpdater.Interfaces;
-using System;
 
 namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
 {

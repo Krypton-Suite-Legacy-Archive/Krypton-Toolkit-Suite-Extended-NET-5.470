@@ -5,6 +5,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+
 using static KryptonWizard.Native.NativeMethods;
 
 namespace KryptonWizard.Native

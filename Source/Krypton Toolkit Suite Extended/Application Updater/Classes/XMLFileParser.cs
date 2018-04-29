@@ -1,10 +1,12 @@
-﻿using GlobalUtilities.Classes;
-using KryptonApplicationUpdater.Classes.SettingsManager;
-using KryptonApplicationUpdater.Interfaces;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
+
+using GlobalUtilities.Classes;
+
+using KryptonApplicationUpdater.Classes.SettingsManager;
+using KryptonApplicationUpdater.Interfaces;
 
 namespace KryptonApplicationUpdater.Classes
 {

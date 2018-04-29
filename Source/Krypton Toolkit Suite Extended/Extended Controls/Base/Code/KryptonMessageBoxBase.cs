@@ -9,14 +9,16 @@
 //  Version 4.7.0.0  www.ComponentFactory.com
 // *****************************************************************************
 
-using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.Properties;
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Media;
 using System.Text;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using ExtendedControls.Properties;
 
 namespace KryptonExtendedToolkit.Base.Code
 {

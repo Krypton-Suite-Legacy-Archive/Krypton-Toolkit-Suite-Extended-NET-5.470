@@ -17,13 +17,15 @@
 // Visit http://www.jdhsoftware.com and follow @jdhsoftware on Twitter
 //
 //--------------------------------------------------------------------------------
-using ComponentFactory.Krypton.Toolkit;
-using KryptonOutlookGrid.Interfaces;
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using KryptonOutlookGrid.Interfaces;
 
 namespace KryptonOutlookGrid.Classes
 {

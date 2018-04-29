@@ -1,8 +1,10 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
 using ExtendedControls.ExtendedToolkit.Messageboxes.Enumerations;
 using ExtendedControls.Properties;
-using System.Drawing;
-using System.Windows.Forms;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.UI
 {

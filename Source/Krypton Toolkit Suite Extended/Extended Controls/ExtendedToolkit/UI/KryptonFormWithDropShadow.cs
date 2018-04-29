@@ -1,12 +1,14 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using KryptonExtendedToolkit.Base.Code;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using KryptonExtendedToolkit.Base.Code;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.UI
 {

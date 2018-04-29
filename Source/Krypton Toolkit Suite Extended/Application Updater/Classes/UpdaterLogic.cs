@@ -1,16 +1,21 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using KryptonExtendedToolkit.ExtendedToolkit.Controls;
-using GlobalUtilities.Classes;
-using KryptonApplicationUpdater.Classes.SettingsManager;
-using KryptonApplicationUpdater.Enumerations;
-using KryptonApplicationUpdater.Interfaces;
-using Microsoft.WindowsAPICodePack.Taskbar;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using GlobalUtilities.Classes;
+
+using KryptonApplicationUpdater.Classes.SettingsManager;
+using KryptonApplicationUpdater.Enumerations;
+using KryptonApplicationUpdater.Interfaces;
+
+using KryptonExtendedToolkit.ExtendedToolkit.Controls;
+
+using Microsoft.WindowsAPICodePack.Taskbar;
 
 namespace KryptonApplicationUpdater.Classes
 {

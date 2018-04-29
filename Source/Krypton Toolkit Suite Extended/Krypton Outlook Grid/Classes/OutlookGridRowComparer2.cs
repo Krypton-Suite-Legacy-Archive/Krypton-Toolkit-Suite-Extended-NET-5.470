@@ -7,11 +7,12 @@
 // Visit http://www.jdhsoftware.com and follow @jdhsoftware on Twitter
 //
 //--------------------------------------------------------------------------------
-using KryptonOutlookGrid.CustomColumns;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
+
+using KryptonOutlookGrid.CustomColumns;
 
 namespace KryptonOutlookGrid.Classes
 {

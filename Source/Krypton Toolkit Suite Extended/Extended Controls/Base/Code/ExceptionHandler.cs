@@ -1,6 +1,7 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using System;
+﻿using System;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
 
 namespace KryptonExtendedToolkit.Base.Code
 {

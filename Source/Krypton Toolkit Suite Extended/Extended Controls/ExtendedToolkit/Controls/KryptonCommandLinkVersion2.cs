@@ -1,10 +1,11 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 {

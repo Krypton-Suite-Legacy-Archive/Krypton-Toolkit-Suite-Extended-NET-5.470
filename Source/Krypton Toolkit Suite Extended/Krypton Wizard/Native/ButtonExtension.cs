@@ -1,6 +1,7 @@
-﻿using GlobalUtilities.Classes;
-using System;
+﻿using System;
 using System.Windows.Forms;
+
+using GlobalUtilities.Classes;
 
 namespace KryptonWizard.Native
 {

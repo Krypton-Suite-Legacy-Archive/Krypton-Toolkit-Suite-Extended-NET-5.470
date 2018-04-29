@@ -1,30 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
-	<Product Id="*" Name="WIX_Setup" Language="1033" Version="1.0.0.0" Manufacturer="" UpgradeCode="79d7d79c-61e2-4ba4-b9d2-422a5bfadaff">
-		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
-		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
-		<MediaTemplate />
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
 
-		<Feature Id="ProductFeature" Title="WIX_Setup" Level="1">
-			<ComponentGroupRef Id="ProductComponents" />
-		</Feature>
-	</Product>
+    <!-- do not change this ever !-->
+    <?define UpgradeCode = "79D7D79C-61E2-4BA4-B9D2-422A5BFADAFF" ?>
 
-	<Fragment>
-		<Directory Id="TARGETDIR" Name="SourceDir">
-			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="WIX_Setup" />
-			</Directory>
-		</Directory>
-	</Fragment>
+    <?define Version = "!(bind.FileVersion.GlobalUtilities.File)" ?>
+    <?define ProductName = "Krypton Toolkit Suite Extended NET 4.70"?>
 
-	<Fragment>
-		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
-			<!-- <Component Id="ProductComponent"> -->
-				<!-- TODO: Insert files, registry keys, and other resources here. -->
-			<!-- </Component> -->
-		</ComponentGroup>
-	</Fragment>
+    <Product Version="$(var.Version)" Id="*" UpgradeCode="$(var.UpgradeCode)"
+             Name="$(var.ProductName)" Language="1033" Manufacturer="https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-4.70">
+
+        <Package Id="*" Keywords='Installer'
+                 InstallScope='perMachine'
+                 Description="$(var.ProductName)"
+                 Comments=" Version: $(var.Version)" InstallerVersion="401" Compressed="yes"
+                 AdminImage='no'
+                 InstallPrivileges='elevated' />
+
+        <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed. Downgrades are not allowed - Use add/remove from the control panel first." />
+        <MediaTemplate />
+
+
+        <InstallExecuteSequence>
+            <!-- This disables removing shortcuts except on uninstall. -->
+            <RemoveShortcuts>Installed AND NOT UPGRADINGPRODUCTCODE</RemoveShortcuts>
+        </InstallExecuteSequence>
+
+        <!-- +++++++++++++++++++++++++++ High compression to squeeze this tighter -->
+        <Media Id="1" Cabinet="Setup.cab" EmbedCab="yes" CompressionLevel="mszip" />
+
+        <!-- Support Information shown in Add/Remove programs (this is optional) -->
+        <Property Id="ARPHELPLINK" Value="http://www.redlux.net/systems_non-contact_3D_coordinate-measuring_machin" />
+        <Property Id="ARPCOMMENTS" Value="http://www.redlux.net/services" />
+        <Property Id="ARPCONTACT" Value="http://www.redlux.net/contact-redlux#ContactRedLux" />
+        <Property Id="ARPURLINFOABOUT" Value="http://www.redlux.net/services" />
+        <Icon Id="InstallerIcon" SourceFile="$(sys.SOURCEFILEDIR)..\..\Images\Icon.ico" />
+        <Property Id="ARPPRODUCTICON" Value="InstallerIcon" />
+
+        <Property Id="ARPNOMODIFY" Value="1" />
+
+        <!-- +++++++++++++++++++++++++++ Advertised shortcuts will not produce ICE errors, but will be converted to non-advertised shortcuts when installed -->
+        <Property Id="DISABLEADVTSHORTCUTS" Value="1" />
+
+        <WixVariable Id="WixUILicenseRtf" Value="$(sys.SOURCEFILEDIR)..\..\..\LICENSE" />
+
+        <!-- This property enables verbose logging in WiX custom actions. It writes extra entries to the MSI log. -->
+        <Property Id="LOGVERBOSE" Value="1"/>
+
+        <!-- Taken from https://github.com/wixtoolset/issues/issues/5575 -->
+        <PropertyRef Id="NETFRAMEWORK45" />
+        <Condition Message="[ProductName] Requires .NET Framework 4.7.0 or later to be installed">
+            <![CDATA[Installed OR (NETFRAMEWORK45 AND NETFRAMEWORK45 >= "#460798")]]>
+        </Condition>
+
+        <Property Id="WIX_IS_NETFRAMEWORK_470_OR_LATER_INSTALLED" Value="0" />
+        <!-- <PropertyRef Id="WIX_IS_NETFRAMEWORK_470_OR_LATER_INSTALLED" /> 
+      <Condition Message="[ProductName] Requires .NET Framework 4.7.0 or later to be installed">
+            <![CDATA[Installed OR WIX_IS_NETFRAMEWORK_470_OR_LATER_INSTALLED]]>
+        </Condition>-->
+
+
+        <Condition Message="You need to be an administrator to install this product.">
+            Privileged
+        </Condition>
+
+        <!-- This just adds 84K on top of the UI Extension.dll and has to be 493 × 58 -->
+        <!--<WixVariable Id="WixUIBannerBmp" Value="$(sys.SOURCEFILEDIR)RedLux Logo Installer.bmp" />-->
+        <!-- This adds another 450K and has to be 493 × 312 -->
+        <!--<WixVariable Id="WixUIDialogBmp" Value="$(sys.SOURCEFILEDIR)banner for licence agreement.bmp" />-->
+
+        <UIRef Id="WixUI_MinimalCustom"/>
+        <UIRef Id="WixUI_ErrorProgressText" />
+
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder">
+                <Directory Id="INSTALLDIR" Name="Krypton-Toolkit-Suite-Extended-NET-4.70" />
+            </Directory>
+            <Directory Id="ProgramMenuFolder" />
+        </Directory>
+
+        <UIRef Id="WixUI_FeatureTree" />
+
+        <Feature Id="BaseFeature" Title="GlobalUtilities" Level="1">
+            <ComponentGroupRef Id="GlobalUtilities" />
+        </Feature>
+        <Feature Id="ApplicationUpdater" Title="ApplicationUpdater" Level="2">
+            <ComponentGroupRef Id="ApplicationUpdater" />
+        </Feature>
+        <Feature Id="ExtendedControls" Title="ExtendedControls" Level="2">
+            <ComponentGroupRef Id="ExtendedControls" />
+        </Feature>
+        
+
+    </Product>
 </Wix>

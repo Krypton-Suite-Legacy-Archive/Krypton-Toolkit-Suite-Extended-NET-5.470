@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using System.Security;
 using System.Text;
+
 using FILETIME = System.Runtime.InteropServices.ComTypes.FILETIME;
 
 namespace KryptonWizard.Native

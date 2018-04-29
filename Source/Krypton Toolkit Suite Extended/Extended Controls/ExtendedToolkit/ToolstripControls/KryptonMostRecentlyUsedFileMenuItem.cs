@@ -630,9 +630,9 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls
 namespace KryptonExtendedToolkit.Windows.Forms
 {
     #region Using Statements
-    using KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls;
-
     using System.Windows.Forms;
+
+    using KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls;
     #endregion
 
     #region MenuStripMRUManager Class

@@ -17,17 +17,19 @@
 // Visit http://www.jdhsoftware.com and follow @jdhsoftware on Twitter
 //
 //--------------------------------------------------------------------------------
-using ComponentFactory.Krypton.Toolkit;
-using KryptonOutlookGrid.CustomColumns;
-using KryptonOutlookGrid.Helpers;
-using KryptonOutlookGrid.Interfaces;
-using KryptonOutlookGrid.Utilities.Language;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using KryptonOutlookGrid.CustomColumns;
+using KryptonOutlookGrid.Helpers;
+using KryptonOutlookGrid.Interfaces;
+using KryptonOutlookGrid.Utilities.Language;
 
 namespace KryptonOutlookGrid.Classes
 {

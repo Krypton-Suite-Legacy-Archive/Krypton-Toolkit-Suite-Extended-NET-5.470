@@ -17,13 +17,6 @@
 // Visit http://www.jdhsoftware.com and follow @jdhsoftware on Twitter
 //
 //--------------------------------------------------------------------------------
-using ComponentFactory.Krypton.Toolkit;
-using KryptonOutlookGrid.Controls;
-using KryptonOutlookGrid.CustomColumns;
-using KryptonOutlookGrid.Formatting;
-using KryptonOutlookGrid.Formatting.Params;
-using KryptonOutlookGrid.Interfaces;
-using KryptonOutlookGrid.Utilities.Language;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -33,6 +26,15 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using KryptonOutlookGrid.Controls;
+using KryptonOutlookGrid.CustomColumns;
+using KryptonOutlookGrid.Formatting;
+using KryptonOutlookGrid.Formatting.Params;
+using KryptonOutlookGrid.Interfaces;
+using KryptonOutlookGrid.Utilities.Language;
 
 namespace KryptonOutlookGrid.Classes
 {

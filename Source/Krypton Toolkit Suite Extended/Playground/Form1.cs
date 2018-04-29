@@ -1,13 +1,16 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using KryptonExtendedToolkit.Base.Code;
-using KryptonApplicationUpdater.Classes.SettingsManager;
-using KryptonApplicationUpdater.Interfaces;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using KryptonApplicationUpdater.Classes.SettingsManager;
+using KryptonApplicationUpdater.Interfaces;
+
+using KryptonExtendedToolkit.Base.Code;
 
 namespace Playground
 {

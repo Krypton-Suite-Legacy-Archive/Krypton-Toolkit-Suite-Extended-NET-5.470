@@ -1,8 +1,9 @@
-﻿using KryptonWizard.Classes;
-using KryptonWizard.Properties;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+
+using KryptonWizard.Classes;
+using KryptonWizard.Properties;
 
 namespace KryptonWizard.Controls
 {

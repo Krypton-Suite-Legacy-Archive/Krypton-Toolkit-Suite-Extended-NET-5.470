@@ -1,5 +1,6 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using System;
+﻿using System;
+
+using ComponentFactory.Krypton.Toolkit;
 
 namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
 {

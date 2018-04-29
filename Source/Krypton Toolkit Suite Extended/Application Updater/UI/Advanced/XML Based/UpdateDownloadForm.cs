@@ -1,12 +1,15 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using GlobalUtilities.Classes;
-using KryptonApplicationUpdater.Classes;
-using KryptonApplicationUpdater.Classes.SettingsManager;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using GlobalUtilities.Classes;
+
+using KryptonApplicationUpdater.Classes;
+using KryptonApplicationUpdater.Classes.SettingsManager;
 
 namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
 {
