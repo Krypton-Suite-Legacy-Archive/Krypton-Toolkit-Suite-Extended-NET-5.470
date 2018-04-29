@@ -1,7 +1,9 @@
-﻿using ExtendedControls.ExtendedToolkit.Messageboxes.Enumerations;
-using KryptonExtendedToolkit.Base.Code;
-using System;
+﻿using System;
 using System.Media;
+
+using ExtendedControls.ExtendedToolkit.Messageboxes.Enumerations;
+
+using KryptonExtendedToolkit.Base.Code;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.Classes
 {

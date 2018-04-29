@@ -3,29 +3,79 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>3.9</ProductVersion>
+    <ProductVersion>3.11</ProductVersion>
     <ProjectGuid>7474a9bb-8747-4ef7-8513-04c8229cfd95</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>WIX_Setup</OutputName>
+    <OutputName>Krypton Toolkit Suite Extended Installer</OutputName>
     <OutputType>Package</OutputType>
-    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\WiX Toolset\v4\wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
     <DefineConstants>Debug</DefineConstants>
+    <SuppressAllWarnings>False</SuppressAllWarnings>
+    <Pedantic>True</Pedantic>
+    <VerboseOutput>True</VerboseOutput>
+    <SuppressPdbOutput>True</SuppressPdbOutput>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
   </PropertyGroup>
+    <ItemGroup>
+        <WixExtension Include="WixUIExtension">
+            <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+            <Name>WixUIExtension</Name>
+        </WixExtension>
+        <WixExtension Include="WixUtilExtension">
+            <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+            <Name>WixUtilExtension</Name>
+        </WixExtension>
+        <WixExtension Include="WixNetFxExtension">
+            <HintPath>$(WixExtDir)\WixNetFxExtension.dll</HintPath>
+            <Name>WixNetFxExtension</Name>
+        </WixExtension>
+        <WixExtension Include="WixFirewallExtension">
+            <HintPath>$(WixExtDir)\WixFirewallExtension.dll</HintPath>
+            <Name>WixFirewallExtension</Name>
+        </WixExtension>
+    </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application Updater.wxs" />
+    <Compile Include="Extended Controls.wxs" />
+    <Compile Include="Global Utilities.wxs" />
+    <Compile Include="Item Templates.wxs" />
+    <Compile Include="Krypton Outlook Grid.wxs" />
+    <Compile Include="Krypton Wizard.wxs" />
+    <Compile Include="Playground.wxs" />
     <Compile Include="Product.wxs" />
+    <Compile Include="Update File Creator.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixNetFxExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.11\bin\WixNetFxExtension.dll</HintPath>
+      <Name>WixNetFxExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixNetFxExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.11\bin\WixNetFxExtension.dll</HintPath>
+      <Name>WixNetFxExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixNetFxExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.11\bin\WixNetFxExtension.dll</HintPath>
+      <Name>WixNetFxExtension</Name>
+    </WixExtension>
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" Condition=" Exists('$(WixTargetsPath)') " />
   <Target Name="EnsureWixToolsetInstalled" Condition=" !Exists('$(WixTargetsPath)') ">
-    <Error Text="The WiX Toolset v4 build tools must be installed to build this project. To download the WiX Toolset v4, see http://wixtoolset.org/releases/" />
+    <Error Text="The WiX Toolset v3.11 build tools must be installed to build this project. To download the WiX Toolset v3.11, see http://wixtoolset.org/releases/" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>%40echo Start %25Time%25</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>%40echo End %25Time%25</PostBuildEvent>
+  </PropertyGroup>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.
 	Other similar extension points exist, see Wix.targets.

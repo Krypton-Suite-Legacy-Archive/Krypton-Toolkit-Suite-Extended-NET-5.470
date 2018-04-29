@@ -1,9 +1,13 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls;
-using GlobalUtilities.Classes;
-using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using GlobalUtilities.Classes;
+
+using KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls;
+
+using Microsoft.Win32;
 
 namespace KryptonExtendedToolkit.Base.Code
 {

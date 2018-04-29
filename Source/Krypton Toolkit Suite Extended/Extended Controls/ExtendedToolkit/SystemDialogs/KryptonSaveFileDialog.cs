@@ -1,5 +1,4 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using System.Windows.Forms;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.SystemDialogs
 {

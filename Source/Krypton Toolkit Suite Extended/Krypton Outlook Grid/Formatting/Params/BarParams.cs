@@ -8,9 +8,10 @@
 //
 //--------------------------------------------------------------------------------
 
-using ComponentFactory.Krypton.Toolkit;
 using System.Drawing;
 using System.Xml;
+
+using ComponentFactory.Krypton.Toolkit;
 
 namespace KryptonOutlookGrid.Formatting.Params
 {

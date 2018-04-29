@@ -1,7 +1,9 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using KryptonApplicationUpdater.Settings;
-using System;
+﻿using System;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using KryptonApplicationUpdater.Settings;
 
 namespace KryptonApplicationUpdater.Classes.SettingsManager
 {

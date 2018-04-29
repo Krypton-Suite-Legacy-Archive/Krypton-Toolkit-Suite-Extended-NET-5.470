@@ -1,7 +1,9 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using KryptonExtendedToolkit.ExtendedToolkit.UI;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Diagnostics;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using KryptonExtendedToolkit.ExtendedToolkit.UI;
 
 namespace KryptonExtendedToolkit.Base
 {

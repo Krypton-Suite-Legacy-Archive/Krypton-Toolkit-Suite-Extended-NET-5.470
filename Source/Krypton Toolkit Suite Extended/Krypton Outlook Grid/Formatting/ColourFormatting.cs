@@ -1,5 +1,4 @@
-﻿using KryptonOutlookGrid.Formatting.Params;
-//--------------------------------------------------------------------------------
+﻿//--------------------------------------------------------------------------------
 // Copyright (C) 2013-2015 JDH Software - <support@jdhsoftware.com>
 //
 // This program is provided to you under the terms of the Microsoft Public
@@ -11,6 +10,9 @@
 
 using System;
 using System.Drawing;
+
+using KryptonOutlookGrid.Formatting.Params;
+
 using static ColourHelper;
 
 namespace KryptonOutlookGrid.Formatting

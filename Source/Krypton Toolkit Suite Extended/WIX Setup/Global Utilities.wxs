@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension"
+    >
+    <?define GlobalUtilitiesSrc=$(sys.SOURCEFILEDIR)..\..\..\bin ?>
+
+    <Fragment>
+        <DirectoryRef Id="INSTALLDIR" />
+
+        <ComponentGroup Id="GlobalUtilities" Directory="INSTALLDIR">
+
+            <Component Guid="9DD1BE03-EE8C-4F74-8CB2-A449CCA47587">
+                <File Id="GlobalUtilities.File" Source="$(var.GlobalUtilitiesSrc)\Global Utilities.dll" KeyPath="yes">
+                    <netfx:NativeImage Id="ngen_GlobalUtilities" Platform="all" Priority="2" AppBaseDirectory="INSTALLDIR" />
+                </File>
+            </Component>
+
+        </ComponentGroup>
+    </Fragment>
+</Wix>

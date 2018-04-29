@@ -1,10 +1,11 @@
-﻿using KryptonWizard.Classes;
-using KryptonWizard.Native;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+
+using KryptonWizard.Classes;
+using KryptonWizard.Native;
 
 namespace KryptonWizard.Controls
 {

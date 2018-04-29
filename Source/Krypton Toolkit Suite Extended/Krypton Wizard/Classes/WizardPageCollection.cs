@@ -1,5 +1,6 @@
-﻿using KryptonWizard.Controls;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+
+using KryptonWizard.Controls;
 
 namespace KryptonWizard.Classes
 {

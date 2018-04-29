@@ -1,9 +1,10 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using System;
+using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
 using KryptonExtendedToolkit.Base.Code;
 using KryptonExtendedToolkit.ExtendedToolkit.UI;
-using System;
-using System.Linq;
-using System.Windows.Forms;
 
 namespace KryptonExtendedToolkit.Base.ButtonSpec
 {

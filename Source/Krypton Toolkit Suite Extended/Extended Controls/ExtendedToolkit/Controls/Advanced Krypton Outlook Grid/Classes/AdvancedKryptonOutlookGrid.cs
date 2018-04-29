@@ -1,7 +1,8 @@
-﻿using KryptonOutlookGrid.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+
+using KryptonOutlookGrid.Controls;
 
 namespace ExtendedControls.ExtendedToolkit.Controls.AdvancedKryptonOutlookGrid.Classes
 {

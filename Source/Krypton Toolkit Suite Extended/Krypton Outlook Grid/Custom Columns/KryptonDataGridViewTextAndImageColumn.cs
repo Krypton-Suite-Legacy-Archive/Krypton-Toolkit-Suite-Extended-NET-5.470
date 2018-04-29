@@ -8,13 +8,14 @@
 //
 //--------------------------------------------------------------------------------
 
-using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Globalization;
 using System.Text;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
 
 namespace KryptonOutlookGrid.CustomColumns
 {

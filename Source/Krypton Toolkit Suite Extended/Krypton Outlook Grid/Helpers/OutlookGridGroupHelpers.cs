@@ -8,9 +8,10 @@
 //
 //--------------------------------------------------------------------------------
 
-using KryptonOutlookGrid.Utilities.Language;
 using System;
 using System.Globalization;
+
+using KryptonOutlookGrid.Utilities.Language;
 
 namespace KryptonOutlookGrid.Helpers
 {

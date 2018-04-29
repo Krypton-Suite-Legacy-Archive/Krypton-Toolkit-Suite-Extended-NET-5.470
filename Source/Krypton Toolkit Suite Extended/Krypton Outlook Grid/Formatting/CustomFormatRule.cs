@@ -8,12 +8,14 @@
 //
 //--------------------------------------------------------------------------------
 
-using ComponentFactory.Krypton.Toolkit;
-using KryptonOutlookGrid.Utilities.Language;
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
+using KryptonOutlookGrid.Utilities.Language;
 
 namespace KryptonOutlookGrid.Formatting
 {
