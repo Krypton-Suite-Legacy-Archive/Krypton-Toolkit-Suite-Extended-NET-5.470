@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="ms.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>520, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="kuacsbElevate.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -134,11 +134,8 @@
         YII=
 </value>
   </data>
-  <metadata name="kryptonManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
   <metadata name="menuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>281, 17</value>
+    <value>736, 17</value>
   </metadata>
   <data name="newToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -255,19 +252,22 @@
 </value>
   </data>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>396, 17</value>
+    <value>851, 17</value>
   </metadata>
   <data name="toolStripMenuItemUACSheld1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGESURBVDhPjZM7T8JQFMfP4GpCGFhcGBwdcPBVEAhKSNSo
-        k2KUh0FUIrL4mI2bCZODiTE+iC4YExYXg4qJ4HOAD+B3YHDv8Zz2VmhvNfyTf0LuPb9fe9sCdolEIkFq
-        hYqi/Nsjtv8ODbmp5wwNzK6jK1nA2kkQd9Ljhoj33GK8FVrkK9R5yD8VxZ7EMUL2A2HjHdUnH9WLd4cB
-        jM+FDRHPVgSuCbB38QCdK9cImwQKGDIs8KJaUfQ+jmDjwoeX+wFNJHBdALlPCYbMmwlWH4b13g/ZCGxg
-        WBMCC6yWB2WBM1WUYFh9tYUbZ4oscCUKEgxpElhgbu3IKwlK+e0x6YExCKkXhOUaQpKaqCLEq9g3s8uC
-        ksA1QZKNX8VR6cxWuHvhRrs6MwLXQwv1TCwsnbkdhtgzKpNxhusCa4UWPdRmfiv0C/N522Fx602eFZg5
-        hmQvG8LvWyEguGupjP3Tuf9hI4aEP9vGqYLO6BX6J+Y7g43QoINq/Tc6xHbnIYjfjvlpmwLwA0FjguKg
-        QixEAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAYRJREFUOE+NkztPwlAUx8/gakIYWFwYHB1w8FUQCEpI1KiTYpSHQVQisviYjZsJ
+        k4OJMT6ILhgTFheDiongc4AP4HdgcO/xnPZWaG81/JN/Qu49v1972wJ2iUQiQWqFiqL82yO2/w4Nuann
+        DA3MrqMrWcDaSRB30uOGiPfcYrwVWuQr1HnIPxXFnsQxQvYDYeMd1Scf1Yt3hwGMz4UNEc9WBK4JsHfx
+        AJ0r1wibBAoYMizwolpR9D6OYOPCh5f7AU0kcF0AuU8JhsybCVYfhvXeD9kIbGBYEwILrJYHZYEzVZRg
+        WH21hRtniixwJQoSDGkSWGBu7cgrCUr57THpgTEIqReE5RpCkpqoIsSr2Dezy4KSwDVBko1fxVHpzFa4
+        e+FGuzozAtdDC/VMLCyduR2G2DMqk3GG6wJrhRY91GZ+K/QL83nbYXHrTZ4VmDmGZC8bwu9bISC4a6mM
+        /dO5/2EjhoQ/28apgs7oFfon5juDjdCgg2r9NzrEduchiN+O+WmbAvADQWOC4qBCLEQAAAAASUVORK5C
+        YII=
 </value>
   </data>
+  <metadata name="kryptonRichTextBoxExtended1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>956, 17</value>
+  </metadata>
 </root>

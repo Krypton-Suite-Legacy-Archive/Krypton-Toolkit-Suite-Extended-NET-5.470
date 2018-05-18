@@ -76,11 +76,12 @@
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.krtbEditor = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
-            this.klblAdminMode = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.kryptonNumericUpDownToolStripItem1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.KryptonNumericUpDownToolStripItem();
             this.toolStripMenuItemUACSheld1 = new KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
+            this.krtbEditor = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.klblAdminMode = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonRichTextBoxExtended1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -152,6 +153,10 @@
             this.kuacsbElevate.TabIndex = 0;
             this.kuacsbElevate.Values.Image = ((System.Drawing.Image)(resources.GetObject("kuacsbElevate.Values.Image")));
             this.kuacsbElevate.Values.Text = "Elevate";
+            // 
+            // kryptonManager1
+            // 
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2010Blue;
             // 
             // menuStrip2
             // 
@@ -438,23 +443,6 @@
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 579);
             this.kryptonPanel1.TabIndex = 2;
             // 
-            // krtbEditor
-            // 
-            this.krtbEditor.Location = new System.Drawing.Point(13, 28);
-            this.krtbEditor.Name = "krtbEditor";
-            this.krtbEditor.Size = new System.Drawing.Size(614, 539);
-            this.krtbEditor.TabIndex = 1;
-            this.krtbEditor.Text = "";
-            // 
-            // klblAdminMode
-            // 
-            this.klblAdminMode.Location = new System.Drawing.Point(633, 28);
-            this.klblAdminMode.Name = "klblAdminMode";
-            this.klblAdminMode.Size = new System.Drawing.Size(283, 26);
-            this.klblAdminMode.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblAdminMode.TabIndex = 0;
-            this.klblAdminMode.Values.Text = "Is running in Administrator mode: No";
-            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -464,7 +452,7 @@
             this.toolStripMenuItemUACSheld1});
             this.toolStrip1.Location = new System.Drawing.Point(634, 123);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(282, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(251, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -485,6 +473,34 @@
             this.toolStripMenuItemUACSheld1.Name = "toolStripMenuItemUACSheld1";
             this.toolStripMenuItemUACSheld1.Size = new System.Drawing.Size(194, 25);
             this.toolStripMenuItemUACSheld1.Text = "toolStripMenuItemUACSheld1";
+            // 
+            // krtbEditor
+            // 
+            this.krtbEditor.Location = new System.Drawing.Point(13, 28);
+            this.krtbEditor.Name = "krtbEditor";
+            this.krtbEditor.Size = new System.Drawing.Size(614, 539);
+            this.krtbEditor.TabIndex = 1;
+            this.krtbEditor.Text = "";
+            // 
+            // klblAdminMode
+            // 
+            this.klblAdminMode.Location = new System.Drawing.Point(633, 28);
+            this.klblAdminMode.Name = "klblAdminMode";
+            this.klblAdminMode.Size = new System.Drawing.Size(283, 26);
+            this.klblAdminMode.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblAdminMode.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.klblAdminMode.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.klblAdminMode.TabIndex = 0;
+            this.klblAdminMode.Values.Text = "Is running in Administrator mode: No";
+            // 
+            // kryptonRichTextBoxExtended1
+            // 
+            this.kryptonRichTextBoxExtended1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonRichTextBoxExtended1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonRichTextBoxExtended1.Name = "kryptonRichTextBoxExtended1";
+            this.kryptonRichTextBoxExtended1.SelectionAlignment = ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended.TextAlignment.LEFT;
+            this.kryptonRichTextBoxExtended1.TabIndex = 0;
+            this.kryptonRichTextBoxExtended1.Text = "";
             // 
             // Form1
             // 
@@ -564,6 +580,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private ExtendedControls.ExtendedToolkit.ToolstripControls.KryptonNumericUpDownToolStripItem kryptonNumericUpDownToolStripItem1;
         private KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld toolStripMenuItemUACSheld1;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended kryptonRichTextBoxExtended1;
     }
 }
 

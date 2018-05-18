@@ -62,6 +62,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IMG", "IMG", "{3FBD4A85-FA0
 		..\..\Updates\Changelog\IMG\Krypton.ico = ..\..\Updates\Changelog\IMG\Krypton.ico
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Failsafe", "Failsafe", "{8BE8A4D1-F63E-4674-B34D-C5FA417A42E9}"
+	ProjectSection(SolutionItems) = preProject
+		..\Required\Failsafe\ComponentFactory.Krypton.Design.dll = ..\Required\Failsafe\ComponentFactory.Krypton.Design.dll
+		..\Required\Failsafe\ComponentFactory.Krypton.Docking.dll = ..\Required\Failsafe\ComponentFactory.Krypton.Docking.dll
+		..\Required\Failsafe\ComponentFactory.Krypton.Navigator.dll = ..\Required\Failsafe\ComponentFactory.Krypton.Navigator.dll
+		..\Required\Failsafe\ComponentFactory.Krypton.Ribbon.dll = ..\Required\Failsafe\ComponentFactory.Krypton.Ribbon.dll
+		..\Required\Failsafe\ComponentFactory.Krypton.Toolkit.dll = ..\Required\Failsafe\ComponentFactory.Krypton.Toolkit.dll
+		..\Required\Failsafe\ComponentFactory.Krypton.Workspace.dll = ..\Required\Failsafe\ComponentFactory.Krypton.Workspace.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -190,6 +200,7 @@ Global
 		{D2B92C0D-A67E-4739-A6F9-DFA7F5DF7E3E} = {D4ADA5CA-C5FE-4C4C-9B56-17CBCA64240B}
 		{7E8CB4D3-B017-4E65-81CD-74DBFA0E30DB} = {D2B92C0D-A67E-4739-A6F9-DFA7F5DF7E3E}
 		{3FBD4A85-FA04-470D-BD52-F086246B78FA} = {D2B92C0D-A67E-4739-A6F9-DFA7F5DF7E3E}
+		{8BE8A4D1-F63E-4674-B34D-C5FA417A42E9} = {A0FB35B2-7BF6-4EA9-8A27-25DB28534230}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4D1018D-143A-451D-8FC0-F63E4923F552}

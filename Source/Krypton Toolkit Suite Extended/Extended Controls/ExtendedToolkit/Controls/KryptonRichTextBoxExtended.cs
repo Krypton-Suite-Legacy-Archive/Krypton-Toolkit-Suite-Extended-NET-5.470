@@ -8,6 +8,7 @@ using System.Drawing;
 using ComponentFactory.Krypton.Toolkit;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
+using System.Drawing.Printing;
 
 namespace ExtendedControls.ExtendedToolkit.Controls
 {
@@ -199,6 +200,104 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
                 SendMessage(new HandleRef(this, Handle), 11, 0, 0);
             }
+        }
+
+        public void EndUpdate()
+        {
+            _updating--;
+
+            if (_updating <= 0)
+            {
+                SendMessage(new HandleRef(this, Handle), 11, 1, 0);
+
+                SendMessage(new HandleRef(this, Handle), 1073, 0, _oldEventMask);
+            }
+        }
+
+        public int Print(int charFrom, int charTo, PrintPageEventArgs e)
+        {
+            CHARRANGE cHARRANGE = new CHARRANGE();
+
+            FORMATRANGE fORMATRANGE = new FORMATRANGE();
+
+            RECT rect0 = new RECT(), rect1 = new RECT();
+
+            cHARRANGE.cpMin = charFrom;
+
+            cHARRANGE.cpMax = charTo;
+
+            Rectangle marginBounds = e.MarginBounds;
+
+            rect1.Top = checked((int)Math.Round((double)marginBounds.Top * 14.4));
+
+            marginBounds = e.MarginBounds;
+
+            rect1.Bottom = checked((int)Math.Round((double)marginBounds.Bottom * 14.4));
+
+            marginBounds = e.MarginBounds;
+
+            rect1.Left = checked((int)Math.Round((double)marginBounds.Left * 14.4));
+
+            marginBounds = e.MarginBounds;
+
+            rect1.Right = checked((int)Math.Round((double)marginBounds.Right * 14.4));
+
+            marginBounds = e.PageBounds;
+
+            rect0.Top = checked((int)Math.Round((double)marginBounds.Top * 14.4));
+
+            marginBounds = e.PageBounds;
+
+            rect0.Bottom = checked((int)Math.Round((double)marginBounds.Bottom * 14.4));
+
+            marginBounds = e.PageBounds;
+
+            rect0.Left = checked((int)Math.Round((double)marginBounds.Left * 14.4));
+
+            marginBounds = e.PageBounds;
+
+            rect0.Right = checked((int)Math.Round((double)marginBounds.Right * 14.4));
+
+            IntPtr hdc = e.Graphics.GetHdc();
+
+            fORMATRANGE.chrg = cHARRANGE;
+
+            fORMATRANGE.hdc = hdc;
+
+            fORMATRANGE.hdcTarget = hdc;
+
+            fORMATRANGE.rc = rect1;
+
+            fORMATRANGE.rcPage = rect0;
+
+            IntPtr zero = IntPtr.Zero;
+
+            IntPtr intPtr = IntPtr.Zero;
+
+            intPtr = new IntPtr(1);
+
+            IntPtr zero1 = IntPtr.Zero;
+
+            zero1 = Marshal.AllocCoTaskMem(Marshal.SizeOf<FORMATRANGE>(fORMATRANGE));
+
+            Marshal.StructureToPtr<FORMATRANGE>(fORMATRANGE, zero1, false);
+
+            zero = SendMessage(Handle, 1081, intPtr, zero1);
+
+            Marshal.FreeCoTaskMem(zero1);
+
+            e.Graphics.ReleaseHdc(hdc);
+
+            return zero.ToInt32();
+        }
+        #endregion
+
+        #region Overrides
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+
+            SendMessage(new HandleRef(this, Handle), 1226, 1, 1);
         }
         #endregion
     }

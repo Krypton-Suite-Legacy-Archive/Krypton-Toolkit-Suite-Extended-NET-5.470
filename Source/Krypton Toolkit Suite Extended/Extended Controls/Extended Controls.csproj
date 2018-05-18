@@ -36,12 +36,6 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Design">
-      <HintPath>..\..\Required\Krypton Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Toolkit">
-      <HintPath>..\..\Required\Krypton Toolkit.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Bin\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
@@ -232,10 +226,6 @@
     <ProjectReference Include="..\Global Utilities\Global Utilities.csproj">
       <Project>{2cdbe9aa-deb3-4a7b-97d7-7dc665418e92}</Project>
       <Name>Global Utilities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Krypton Outlook Grid\Krypton Outlook Grid.csproj">
-      <Project>{2a10c696-45ad-48aa-8ead-2cb322672972}</Project>
-      <Name>Krypton Outlook Grid</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
