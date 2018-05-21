@@ -72,6 +72,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Failsafe", "Failsafe", "{8B
 		..\Required\Failsafe\ComponentFactory.Krypton.Workspace.dll = ..\Required\Failsafe\ComponentFactory.Krypton.Workspace.dll
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Renderer", "Palette Renderer\Palette Renderer.csproj", "{87182631-9FEB-4250-B39F-63BB6714AEA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -192,6 +194,18 @@ Global
 		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Release|Any CPU.ActiveCfg = Release|x86
 		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Release|x86.ActiveCfg = Release|x86
 		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Release|x86.Build.0 = Release|x86
+		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Debug|x86.Build.0 = Debug|Any CPU
+		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Installer Only|x86.Build.0 = Release|Any CPU
+		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Release|x86.ActiveCfg = Release|Any CPU
+		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
