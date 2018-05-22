@@ -6,6 +6,11 @@
 
 ======
 
+## 2018-05-22 Colour Mania!
+* Colours... colours... colours... We now have 19 **new** colours to choose from! Find the `xml` files in the `Palettes` folder, this will be updated regulary, so be sure to come back often! Alternatively, if you would like to request/submit a colour palette, then please submit a base colour in a hexadecimal format on the `New Palette Ideas` issues thread.
+
+======
+
 ## 2018-04-29 Tinkering with the References
 * Tinkering with the References.
 * Start to fill out the WIX installer project.
