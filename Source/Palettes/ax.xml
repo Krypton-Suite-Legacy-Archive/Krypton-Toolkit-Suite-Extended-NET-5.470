@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<!--Created by exporting the settings of a KryptonPalette instance.-->
+<!--For more information about Krypton visit www.ComponentFactory.com-->
+<!--WARNING: Modifying this file may render it invalid for importing.-->
+<KryptonPalette Version="18" Generated="Tuesday, 22 May 2018, 07:32">
+  <Properties>
+    <ButtonStyles>
+      <ButtonStandalone>
+        <StateNormal>
+          <Back>
+            <Color1 Type="Color" Value="60, 81, 130" />
+            <Color2 Type="Color" Value="60, 81, 130" />
+            <ColorStyle Type="PaletteColorStyle" Value="GlassThreeEdge" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="White" />
+            </ShortText>
+          </Content>
+        </StateNormal>
+        <StateTracking>
+          <Content>
+            <ShortText>
+              <ColorStyle Type="PaletteColorStyle" Value="GlassThreeEdge" />
+            </ShortText>
+          </Content>
+        </StateTracking>
+      </ButtonStandalone>
+      <ButtonCluster>
+        <StateNormal>
+          <Back>
+            <Color1 Type="Color" Value="60, 81, 130" />
+            <Color2 Type="Color" Value="84, 113, 157" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="White" />
+            </ShortText>
+          </Content>
+        </StateNormal>
+      </ButtonCluster>
+    </ButtonStyles>
+    <ControlStyles>
+      <ControlRibbon>
+        <StateNormal>
+          <Back>
+            <Color1 Type="Color" Value="210, 234, 255" />
+            <Color2 Type="Color" Value="210, 234, 255" />
+          </Back>
+        </StateNormal>
+      </ControlRibbon>
+    </ControlStyles>
+    <HeaderStyles>
+      <HeaderPrimary>
+        <StateNormal>
+          <Back>
+            <Color1 Type="Color" Value="123, 162, 217" />
+            <Color2 Type="Color" Value="60, 81, 130" />
+            <ColorStyle Type="PaletteColorStyle" Value="HalfCut" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="60, 81, 130" />
+            <Color2 Type="Color" Value="60, 81, 130" />
+          </Border>
+          <Content>
+            <ShortText>
+              <Font Type="Font" Value="Microsoft Sans Serif, 12pt" />
+              <Color1 Type="Color" Value="White" />
+            </ShortText>
+            <LongText>
+              <Color1 Type="Color" Value="White" />
+            </LongText>
+          </Content>
+        </StateNormal>
+      </HeaderPrimary>
+      <HeaderSecondary>
+        <StateNormal>
+          <Back>
+            <Color1 Type="Color" Value="236, 236, 236" />
+            <Color2 Type="Color" Value="244, 244, 244" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="Black" />
+            </ShortText>
+            <LongText>
+              <Color1 Type="Color" Value="82, 82, 82" />
+            </LongText>
+          </Content>
+        </StateNormal>
+      </HeaderSecondary>
+    </HeaderStyles>
+    <PanelStyles>
+      <PanelClient>
+        <StateDisabled>
+          <Color1 Type="Color" Value="244, 244, 244" />
+          <Color2 Type="Color" Value="244, 244, 244" />
+        </StateDisabled>
+        <StateNormal>
+          <Color1 Type="Color" Value="82, 111, 155" />
+          <Color2 Type="Color" Value="236, 236, 236" />
+        </StateNormal>
+      </PanelClient>
+    </PanelStyles>
+    <Ribbon>
+      <RibbonAppMenuInner>
+        <BackColor3 Type="Color" Value="82, 111, 155" />
+        <BackColor5 Type="Color" Value="82, 111, 155" />
+      </RibbonAppMenuInner>
+      <RibbonGeneral>
+        <DisabledDark Type="Color" Value="82, 111, 155" />
+        <DisabledLight Type="Color" Value="82, 111, 155" />
+        <GroupDialogDark Type="Color" Value="221, 221, 221" />
+        <GroupDialogLight Type="Color" Value="Transparent" />
+        <GroupSeparatorLight Type="Color" Value="82, 111, 155" />
+        <TabSeparatorColor Type="Color" Value="210, 234, 255" />
+        <TextHint Type="PaletteTextHint" Value="ClearTypeGridFit" />
+      </RibbonGeneral>
+      <RibbonGroupArea>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="60, 81, 130" />
+          <BackColor3 Type="Color" Value="60, 81, 130" />
+          <BackColor4 Type="Color" Value="123, 162, 217" />
+          <BackColor5 Type="Color" Value="108, 134, 193" />
+        </StateCommon>
+      </RibbonGroupArea>
+      <RibbonGroupButtonText>
+        <StateCommon>
+          <TextColor Type="Color" Value="White" />
+        </StateCommon>
+        <StateNormal>
+          <TextColor Type="Color" Value="Black" />
+        </StateNormal>
+      </RibbonGroupButtonText>
+      <RibbonGroupNormalBorder>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="84, 113, 157" />
+          <BackColor2 Type="Color" Value="84, 113, 157" />
+          <BackColor3 Type="Color" Value="84, 113, 157" />
+          <BackColor4 Type="Color" Value="84, 113, 157" />
+          <BackColor5 Type="Color" Value="84, 113, 157" />
+        </StateCommon>
+      </RibbonGroupNormalBorder>
+      <RibbonGroupNormalTitle>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="113, 138, 179" />
+          <BackColor2 Type="Color" Value="82, 111, 155" />
+          <BackColor3 Type="Color" Value="93, 118, 159" />
+          <BackColor4 Type="Color" Value="93, 118, 159" />
+          <BackColor5 Type="Color" Value="93, 118, 159" />
+          <TextColor Type="Color" Value="White" />
+        </StateCommon>
+      </RibbonGroupNormalTitle>
+      <RibbonQATFullbar>
+        <BackColor1 Type="Color" Value="210, 234, 255" />
+        <BackColor2 Type="Color" Value="210, 234, 255" />
+        <BackColor3 Type="Color" Value="210, 234, 255" />
+        <BackColor4 Type="Color" Value="210, 234, 255" />
+        <BackColor5 Type="Color" Value="210, 234, 255" />
+      </RibbonQATFullbar>
+      <RibbonTab>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="60, 81, 130" />
+          <BackColor2 Type="Color" Value="210, 234, 255" />
+          <BackColor3 Type="Color" Value="123, 162, 217" />
+          <BackColor4 Type="Color" Value="123, 162, 217" />
+          <BackColor5 Type="Color" Value="82, 111, 155" />
+          <TextColor Type="Color" Value="White" />
+        </StateCommon>
+        <StateNormal>
+          <BackColor1 Type="Color" Value="82, 111, 155" />
+          <BackColor3 Type="Color" Value="82, 111, 155" />
+          <BackColor4 Type="Color" Value="82, 111, 155" />
+          <BackColor5 Type="Color" Value="82, 111, 155" />
+        </StateNormal>
+        <StateTracking>
+          <BackColor1 Type="Color" Value="82, 111, 155" />
+          <BackColor2 Type="Color" Value="82, 111, 155" />
+          <BackColor3 Type="Color" Value="82, 111, 155" />
+          <BackColor4 Type="Color" Value="82, 111, 155" />
+          <BackColor5 Type="Color" Value="82, 111, 155" />
+        </StateTracking>
+      </RibbonTab>
+    </Ribbon>
+    <BasePaletteMode Type="PaletteMode" Value="Office 2007 - Silver" />
+  </Properties>
+  <Images />
+</KryptonPalette>
