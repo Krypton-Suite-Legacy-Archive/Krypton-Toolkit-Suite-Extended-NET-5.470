@@ -1,20 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 
 namespace PaletteRenderer.UI
 {
-    public partial class MainWindow : Form
+    public partial class MainWindow : KryptonForm
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAssemblyPath_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnToolkitAssembly_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCompose_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstViewPalettes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstViewPalettes_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

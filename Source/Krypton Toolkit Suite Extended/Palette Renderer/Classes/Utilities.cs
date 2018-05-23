@@ -42,7 +42,7 @@ namespace PaletteRenderer.Classes
         /// <param name="value">The value.</param>
         /// <param name="args">The arguments.</param>
         /// <returns></returns>
-        public static String Format(this string value, params object[] args)
+        public static String Frmt(this string value, params object[] args)
         {
             return String.Format(value, args);
         }

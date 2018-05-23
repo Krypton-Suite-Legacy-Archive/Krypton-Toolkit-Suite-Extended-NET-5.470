@@ -35,10 +35,8 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Design">
-      <HintPath>..\..\Required\Krypton Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Toolkit">
+    <Reference Include="Krypton Toolkit, Version=4.70.593.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Required\Krypton Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
