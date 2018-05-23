@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.CodeDom.Compiler;
+using System.IO;
+using Microsoft.CSharp;
 
 namespace PaletteRenderer.Classes
 {
-    class Utilities
+    public class Utilities
     {
+        #region Variables
+        private string _outputFile, 
+        #endregion
     }
 }
