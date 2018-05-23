@@ -37,6 +37,8 @@ namespace PaletteRenderer.Classes
 
             _provider = new CSharpCodeProvider(new Dictionary<string, string>() { { "CompilerVersion", "v3.5" } });
 
+            //_provider = new CSharpCodeProvider(new Dictionary<string, string>() { { "CompilerVersion", "v15.0" } });
+
             _sources = new List<string>();
 
             _paletteItems = new List<string>();
@@ -70,6 +72,24 @@ namespace PaletteRenderer.Classes
             AddPaletteItemsClass();
 
             CreateAssemblyInfo();
+        }
+        #endregion
+
+        #region Methods
+        public string Finish()
+        {
+            string _result = "";
+
+            FinishManager();
+
+            CompilerResults _compilerResults = _provider.CompileAssemblyFromSource(_compilerParameters, _sources.ToArray());
+
+            if (_compilerResults.Errors.Count > 0)
+            {
+                _result = GetErrorText(_compilerResults.Errors);
+            }
+
+            return _result;
         }
         #endregion
     }
