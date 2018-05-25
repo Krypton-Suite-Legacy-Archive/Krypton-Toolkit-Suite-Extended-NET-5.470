@@ -78,6 +78,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Composer", "Palette
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colour Creator", "Colour Creator\Colour Creator.csproj", "{EEC1BBB0-C57D-4A84-960E-C43069190F6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Creator", "Palette Creator\Palette Creator.csproj", "{E668A872-620B-4247-9629-28F12F7B0FD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -234,6 +236,18 @@ Global
 		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Release|x86.ActiveCfg = Release|Any CPU
 		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Release|x86.Build.0 = Release|Any CPU
+		{E668A872-620B-4247-9629-28F12F7B0FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E668A872-620B-4247-9629-28F12F7B0FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E668A872-620B-4247-9629-28F12F7B0FD7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E668A872-620B-4247-9629-28F12F7B0FD7}.Debug|x86.Build.0 = Debug|Any CPU
+		{E668A872-620B-4247-9629-28F12F7B0FD7}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{E668A872-620B-4247-9629-28F12F7B0FD7}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{E668A872-620B-4247-9629-28F12F7B0FD7}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{E668A872-620B-4247-9629-28F12F7B0FD7}.Installer Only|x86.Build.0 = Release|Any CPU
+		{E668A872-620B-4247-9629-28F12F7B0FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E668A872-620B-4247-9629-28F12F7B0FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E668A872-620B-4247-9629-28F12F7B0FD7}.Release|x86.ActiveCfg = Release|Any CPU
+		{E668A872-620B-4247-9629-28F12F7B0FD7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
