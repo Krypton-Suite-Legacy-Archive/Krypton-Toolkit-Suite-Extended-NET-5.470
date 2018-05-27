@@ -104,6 +104,9 @@
     <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.Designer.cs">
       <DependentUpon>AdvancedDataGridViewSearchToolBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Experimental\Toggle Switches\KryptonToggleSwitchV1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\ExtendedProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
