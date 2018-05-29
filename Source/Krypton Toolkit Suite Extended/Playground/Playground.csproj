@@ -87,10 +87,6 @@
       <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
       <Name>Extended Controls</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Global Utilities\Global Utilities.csproj">
-      <Project>{2cdbe9aa-deb3-4a7b-97d7-7dc665418e92}</Project>
-      <Name>Global Utilities</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,9 +33,6 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Design">
-      <HintPath>..\..\Required\Krypton Design.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -122,7 +119,7 @@
       <Name>Extended Controls</Name>
     </ProjectReference>
     <ProjectReference Include="..\Global Utilities\Global Utilities.csproj">
-      <Project>{2cdbe9aa-deb3-4a7b-97d7-7dc665418e92}</Project>
+      <Project>{edb87d0c-a37c-48b5-9857-f014c438a4c5}</Project>
       <Name>Global Utilities</Name>
     </ProjectReference>
   </ItemGroup>

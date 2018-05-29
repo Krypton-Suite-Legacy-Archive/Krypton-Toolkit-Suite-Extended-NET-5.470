@@ -35,6 +35,15 @@
     <ApplicationIcon>Resources\color.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Krypton Navigator">
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Ribbon">
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Toolkit">
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
     </Reference>
@@ -52,6 +61,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +75,16 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UX\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,13 +111,23 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\MainWindowWithRibbonUI.resx">
       <DependentUpon>MainWindowWithRibbonUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\RibbonChromeForm.resx">
+      <DependentUpon>RibbonChromeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\TMSChromeForm.resx">
+      <DependentUpon>TMSChromeForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -298,6 +328,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TopTrackBar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application Updater\Application Updater.csproj">
+      <Project>{bcc482fd-377f-4918-b91a-09444ac90a8e}</Project>
+      <Name>Application Updater</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Extended Controls\Extended Controls.csproj">
+      <Project>{1c9153e4-cdc4-44c9-9794-1d144fe87a1f}</Project>
+      <Name>Extended Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Palette Composer\Palette Composer.csproj">
+      <Project>{6f708c9a-c7c7-42f6-b80e-8b4cb3209c8a}</Project>
+      <Name>Palette Composer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_scotland1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_brazil1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_iceland1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

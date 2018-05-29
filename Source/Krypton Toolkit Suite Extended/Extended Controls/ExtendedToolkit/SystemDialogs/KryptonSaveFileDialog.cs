@@ -1,10 +1,11 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Microsoft.WindowsAPICodePack.Controls.WindowsForms;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.SystemDialogs
 {
     public partial class KryptonSaveFileDialog : KryptonForm
     {
-        private Microsoft.WindowsAPICodePack.Controls.WindowsForms.ExplorerBrowser explorerBrowser1;
+        private ExplorerBrowser explorerBrowser1;
         private KryptonBreadCrumb kryptonBreadCrumb1;
         private KryptonComboBox kryptonComboBox1;
         private KryptonTextBox kryptonTextBox1;

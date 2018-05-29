@@ -49,39 +49,39 @@ namespace ColourCreator.Classes
             StringBuilder properties = new StringBuilder();
 
             // For each color in color table.
-            IEnumerable<ColourTableGroup> values = Enum.GetValues(
-                typeof(ColourTableGroup)).Cast<ColourTableGroup>();
+            //IEnumerable<ColourTableGroup> values = Enum.GetValues(
+            //    typeof(ColourTableGroup)).Cast<ColourTableGroup>();
 
-            foreach (ColourTableGroup colourGroup in values)
-            {
-                // Color and name of the property.
-                Color colour = table[colourGroup];
-                string propertyName = Enum.GetName(typeof(ColourTableGroup), colourGroup);
+            //foreach (ColourTableGroup colourGroup in values)
+            //{
+            //    // Color and name of the property.
+            //    Color colour = table[colourGroup];
+            //    string propertyName = Enum.GetName(typeof(ColourTableGroup), colourGroup);
 
-                // Templates for Color.FromArgb and Color.FromName.
-                string propertyTemplateArgb = vb ? VbPropertyArgbTemplate
-                                                 : CsPropertyArgbTemplate;
-                string propertyTemplateName = vb ? VbPropertyNameTemplate
-                                                 : CsPropertyNameTemplate;
+            //    // Templates for Color.FromArgb and Color.FromName.
+            //    string propertyTemplateArgb = vb ? VbPropertyArgbTemplate
+            //                                     : CsPropertyArgbTemplate;
+            //    string propertyTemplateName = vb ? VbPropertyNameTemplate
+            //                                     : CsPropertyNameTemplate;
 
-                // Compose property.
-                string property;
-                if (colour.IsNamedColor)
-                {
-                    property = string.Format(CultureInfo.InvariantCulture,
-                                             propertyTemplateName, propertyName,
-                                             colour.Name);
-                }
-                else
-                {
-                    property = string.Format(CultureInfo.InvariantCulture,
-                                             propertyTemplateArgb, propertyName,
-                                             colour.A, colour.R, colour.G, colour.B);
-                }
+            //    // Compose property.
+            //    string property;
+            //    if (colour.IsNamedColor)
+            //    {
+            //        property = string.Format(CultureInfo.InvariantCulture,
+            //                                 propertyTemplateName, propertyName,
+            //                                 colour.Name);
+            //    }
+            //    else
+            //    {
+            //        property = string.Format(CultureInfo.InvariantCulture,
+            //                                 propertyTemplateArgb, propertyName,
+            //                                 colour.A, colour.R, colour.G, colour.B);
+            //    }
 
-                // Append to list.
-                properties.AppendLine(property);
-            }
+            //    // Append to list.
+            //    properties.AppendLine(property);
+            //}
 
             string header = Settings.Default.IncludeHeader
                                 ? string.Format(

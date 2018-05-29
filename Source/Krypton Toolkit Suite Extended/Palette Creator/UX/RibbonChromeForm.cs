@@ -1,20 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using ComponentFactory.Krypton.Toolkit;
 
 namespace PaletteCreator.UX
 {
-    public partial class RibbonChromeForm : Form
+    public partial class RibbonChromeForm : KryptonForm
     {
         public RibbonChromeForm()
         {
             InitializeComponent();
         }
+
+        #region Public
+        public KryptonPalette OverridePalette
+        {
+            set
+            {
+                Palette = value;
+
+                kryptonPanel1.Palette = value;
+
+                kryptonRibbon1.Palette = value;
+            }
+        }
+        #endregion
     }
 }
