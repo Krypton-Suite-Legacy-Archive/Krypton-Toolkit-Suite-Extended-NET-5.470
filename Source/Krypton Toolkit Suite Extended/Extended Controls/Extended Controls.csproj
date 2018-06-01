@@ -111,6 +111,9 @@
     <Compile Include="ExtendedToolkit\Controls\ExtendedProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\ToolstripControls\ExtendedToolStripStatusLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\KryptonCommandLinkVersion1.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonCommandLinkVersion2.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonCueComboBox.cs" />
