@@ -183,6 +183,16 @@ namespace PaletteCreator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap documentinfo {
+            get {
+                object obj = ResourceManager.GetObject("documentinfo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap environment {
             get {
                 object obj = ResourceManager.GetObject("environment", resourceCulture);
@@ -706,6 +716,16 @@ namespace PaletteCreator.Properties {
         internal static System.Drawing.Bitmap TopTrackBar1 {
             get {
                 object obj = ResourceManager.GetObject("TopTrackBar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ui_label_link {
+            get {
+                object obj = ResourceManager.GetObject("ui_label_link", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

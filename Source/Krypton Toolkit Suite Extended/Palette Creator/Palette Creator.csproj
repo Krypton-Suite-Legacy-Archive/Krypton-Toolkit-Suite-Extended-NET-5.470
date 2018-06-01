@@ -35,6 +35,9 @@
     <ApplicationIcon>Resources\color.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Krypton Docking">
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Docking.dll</HintPath>
+    </Reference>
     <Reference Include="Krypton Navigator">
       <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
     </Reference>
@@ -354,6 +357,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\flag_iceland1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui-label-link.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

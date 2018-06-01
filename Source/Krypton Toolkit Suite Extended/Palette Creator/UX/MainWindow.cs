@@ -70,6 +70,26 @@ namespace PaletteCreator.UX
         {
 
         }
+
+        private void MainWindow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          
+        }
+
+        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                openPaletteToolStripMenuItem.PerformClick();
+            }
+        }
+        #endregion
+
+        #region Methods
+        private void OpenPaletteFile(string paletteFilePath)
+        {
+
+        }
         #endregion
     }
 }

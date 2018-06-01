@@ -36,21 +36,25 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Docking">
-      <HintPath>..\..\Required\Krypton Docking.dll</HintPath>
+    <Reference Include="Krypton Docking, Version=4.70.570.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Docking.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Navigator">
-      <HintPath>..\..\Required\Krypton Navigator.dll</HintPath>
+    <Reference Include="Krypton Navigator, Version=4.70.570.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Ribbon">
-      <HintPath>..\..\Required\Krypton Ribbon.dll</HintPath>
+    <Reference Include="Krypton Ribbon, Version=4.70.571.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Toolkit, Version=4.70.593.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\Krypton Toolkit.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Workspace">
-      <HintPath>..\..\Required\Krypton Workspace.dll</HintPath>
+    <Reference Include="Krypton Workspace, Version=4.70.571.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Workspace.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\PresentationCore.dll</HintPath>
@@ -62,6 +66,7 @@
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +130,9 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\ModernProgressBar.Designer.cs">
       <DependentUpon>ModernProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonToolStripStatusLabelExtended.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Messageboxes\Classes\Globals.cs" />
     <Compile Include="ExtendedToolkit\Messageboxes\Enumerations\MessageBoxSpecificEnumerations.cs" />

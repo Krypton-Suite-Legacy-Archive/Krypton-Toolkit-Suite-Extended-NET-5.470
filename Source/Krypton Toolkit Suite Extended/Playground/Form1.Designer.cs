@@ -76,12 +76,14 @@
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonToggleSwitchV11 = new ExtendedControls.ExtendedToolkit.Controls.Experimental.ToggleSwitches.KryptonToggleSwitchV1();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.kryptonNumericUpDownToolStripItem1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.KryptonNumericUpDownToolStripItem();
             this.toolStripMenuItemUACSheld1 = new KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
             this.krtbEditor = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.klblAdminMode = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonRichTextBoxExtended1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended();
+            this.kPal = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -156,7 +158,8 @@
             // 
             // kryptonManager1
             // 
-            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2010Blue;
+            this.kryptonManager1.GlobalPalette = this.kPal;
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
             // 
             // menuStrip2
             // 
@@ -434,6 +437,7 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonToggleSwitchV11);
             this.kryptonPanel1.Controls.Add(this.toolStrip1);
             this.kryptonPanel1.Controls.Add(this.krtbEditor);
             this.kryptonPanel1.Controls.Add(this.klblAdminMode);
@@ -442,6 +446,16 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 579);
             this.kryptonPanel1.TabIndex = 2;
+            // 
+            // kryptonToggleSwitchV11
+            // 
+            this.kryptonToggleSwitchV11.Location = new System.Drawing.Point(713, 204);
+            this.kryptonToggleSwitchV11.Name = "kryptonToggleSwitchV11";
+            this.kryptonToggleSwitchV11.Size = new System.Drawing.Size(79, 27);
+            this.kryptonToggleSwitchV11.State = ExtendedControls.ExtendedToolkit.Controls.Experimental.ToggleSwitches.KryptonToggleSwitchV1.ToggleState.ONOFF;
+            this.kryptonToggleSwitchV11.TabIndex = 3;
+            this.kryptonToggleSwitchV11.Text = "kryptonToggleSwitchV11";
+            this.kryptonToggleSwitchV11.Toggled = false;
             // 
             // toolStrip1
             // 
@@ -499,8 +513,324 @@
             this.kryptonRichTextBoxExtended1.Location = new System.Drawing.Point(0, 0);
             this.kryptonRichTextBoxExtended1.Name = "kryptonRichTextBoxExtended1";
             this.kryptonRichTextBoxExtended1.SelectionAlignment = ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended.TextAlignment.LEFT;
+            this.kryptonRichTextBoxExtended1.Size = new System.Drawing.Size(100, 96);
             this.kryptonRichTextBoxExtended1.TabIndex = 0;
             this.kryptonRichTextBoxExtended1.Text = "";
+            // 
+            // kPal
+            // 
+            this.kPal.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Silver;
+            this.kPal.ButtonStyles.ButtonCluster.OverrideDefault.Back.Color1 = System.Drawing.Color.SeaGreen;
+            this.kPal.ButtonStyles.ButtonCluster.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCluster.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(122)))), ((int)(((byte)(87)))));
+            this.kPal.ButtonStyles.ButtonCluster.OverrideFocus.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCluster.StateCheckedNormal.Back.Color1 = System.Drawing.Color.SeaGreen;
+            this.kPal.ButtonStyles.ButtonCluster.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(237)))));
+            this.kPal.ButtonStyles.ButtonCluster.StateCheckedNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCluster.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.GlassNormalFull;
+            this.kPal.ButtonStyles.ButtonCluster.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCluster.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kPal.ButtonStyles.ButtonCluster.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCluster.StatePressed.Back.Color1 = System.Drawing.Color.SeaGreen;
+            this.kPal.ButtonStyles.ButtonCluster.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            this.kPal.ButtonStyles.ButtonCluster.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCluster.StateTracking.Back.Color1 = System.Drawing.Color.SeaGreen;
+            this.kPal.ButtonStyles.ButtonCluster.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(171)))));
+            this.kPal.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(237)))));
+            this.kPal.ButtonStyles.ButtonCommon.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.OverrideDefault.Content.LongText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(83)))), ((int)(((byte)(59)))));
+            this.kPal.ButtonStyles.ButtonCommon.OverrideDefault.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.OverrideDefault.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(83)))), ((int)(((byte)(59)))));
+            this.kPal.ButtonStyles.ButtonCommon.OverrideDefault.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.OverrideDefault.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(181)))), ((int)(((byte)(106)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(175)))), ((int)(((byte)(77)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.GlassCheckedFull;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedPressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(181)))), ((int)(((byte)(106)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedPressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(175)))), ((int)(((byte)(77)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedPressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.GlassCheckedStump;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedPressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedPressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedPressed.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedPressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedPressed.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedPressed.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedPressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedPressed.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedPressed.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(181)))), ((int)(((byte)(106)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(175)))), ((int)(((byte)(77)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedTracking.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedTracking.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedTracking.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedTracking.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCheckedTracking.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCommon.Content.LongText.Color1 = System.Drawing.Color.Yellow;
+            this.kPal.ButtonStyles.ButtonCommon.StateCommon.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCommon.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Yellow;
+            this.kPal.ButtonStyles.ButtonCommon.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateDisabled.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateDisabled.Content.LongText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateDisabled.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateDisabled.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateDisabled.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateDisabled.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateNormal.Back.Color1 = System.Drawing.Color.SeaGreen;
+            this.kPal.ButtonStyles.ButtonCommon.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kPal.ButtonStyles.ButtonCommon.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kPal.ButtonStyles.ButtonCommon.StateNormal.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateNormal.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(181)))), ((int)(((byte)(106)))));
+            this.kPal.ButtonStyles.ButtonCommon.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(134)))));
+            this.kPal.ButtonStyles.ButtonCommon.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kPal.ButtonStyles.ButtonCommon.StatePressed.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StatePressed.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kPal.ButtonStyles.ButtonCommon.StatePressed.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StatePressed.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(233)))), ((int)(((byte)(163)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(77)))));
+            this.kPal.ButtonStyles.ButtonCommon.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kPal.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.Common.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.kPal.Common.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Common.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.Common.StateCommon.Border.Color1 = System.Drawing.Color.SeaGreen;
+            this.kPal.Common.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(122)))), ((int)(((byte)(87)))));
+            this.kPal.Common.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kPal.Common.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.Common.StateCommon.Content.LongText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.Common.StateCommon.Content.LongText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.Common.StateCommon.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.Common.StateCommon.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.Common.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.Common.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.Common.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.Common.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.FormStyles.FormCommon.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.FormStyles.FormCommon.StateActive.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.FormStyles.FormCommon.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kPal.FormStyles.FormCommon.StateActive.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.GridStyles.GridSheet.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
+            this.kPal.GridStyles.GridSheet.StateCommon.HeaderColumn.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.GridStyles.GridSheet.StateCommon.HeaderColumn.Content.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.GridStyles.GridSheet.StateCommon.HeaderColumn.Content.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.GridStyles.GridSheet.StateCommon.HeaderRow.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.GridStyles.GridSheet.StateCommon.HeaderRow.Content.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.GridStyles.GridSheet.StateCommon.HeaderRow.Content.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.GridStyles.GridSheet.StateNormal.HeaderColumn.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.GridStyles.GridSheet.StateNormal.HeaderColumn.Content.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.GridStyles.GridSheet.StateNormal.HeaderColumn.Content.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.GridStyles.GridSheet.StateNormal.HeaderColumn.Content.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.GridStyles.GridSheet.StateNormal.HeaderRow.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.GridStyles.GridSheet.StateNormal.HeaderRow.Content.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.GridStyles.GridSheet.StateNormal.HeaderRow.Content.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.GridStyles.GridSheet.StateTracking.HeaderColumn.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.GridStyles.GridSheet.StateTracking.HeaderColumn.Content.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.GridStyles.GridSheet.StateTracking.HeaderColumn.Content.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.HeaderStyles.HeaderCommon.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.HeaderStyles.HeaderCommon.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.HeaderStyles.HeaderCommon.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.HeaderStyles.HeaderCommon.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.HeaderStyles.HeaderCommon.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.HeaderStyles.HeaderCommon.StateDisabled.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.HeaderStyles.HeaderCommon.StateDisabled.Content.LongText.Color1 = System.Drawing.Color.Gray;
+            this.kPal.HeaderStyles.HeaderCommon.StateDisabled.Content.LongText.Color2 = System.Drawing.Color.SeaGreen;
+            this.kPal.HeaderStyles.HeaderCommon.StateDisabled.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.HeaderStyles.HeaderCommon.StateDisabled.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.HeaderStyles.HeaderCommon.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.kPal.HeaderStyles.HeaderCommon.StateDisabled.Content.ShortText.Color2 = System.Drawing.Color.Gray;
+            this.kPal.HeaderStyles.HeaderCommon.StateDisabled.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.HeaderStyles.HeaderCommon.StateDisabled.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.HeaderStyles.HeaderForm.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.HeaderStyles.HeaderForm.StateDisabled.Back.Color1 = System.Drawing.Color.Gray;
+            this.kPal.HeaderStyles.HeaderForm.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.HeaderStyles.HeaderForm.StateDisabled.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.HeaderStyles.HeaderForm.StateDisabled.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kPal.HeaderStyles.HeaderForm.StateDisabled.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.HeaderStyles.HeaderForm.StateDisabled.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.HeaderStyles.HeaderForm.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kPal.HeaderStyles.HeaderForm.StateDisabled.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.HeaderStyles.HeaderForm.StateDisabled.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.InputControlStyles.InputControlCommon.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(237)))));
+            this.kPal.InputControlStyles.InputControlCommon.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.OverrideNotVisited.LongText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.LabelStyles.LabelNormalControl.OverrideNotVisited.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.OverrideNotVisited.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.OverrideNotVisited.ShortText.Color1 = System.Drawing.Color.Blue;
+            this.kPal.LabelStyles.LabelNormalControl.OverrideNotVisited.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.OverrideNotVisited.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.OverridePressed.LongText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.LabelStyles.LabelNormalControl.OverridePressed.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.OverridePressed.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.OverridePressed.ShortText.Color1 = System.Drawing.Color.Red;
+            this.kPal.LabelStyles.LabelNormalControl.OverridePressed.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.OverridePressed.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.OverrideVisited.LongText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.LabelStyles.LabelNormalControl.OverrideVisited.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.OverrideVisited.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.OverrideVisited.ShortText.Color1 = System.Drawing.Color.Purple;
+            this.kPal.LabelStyles.LabelNormalControl.OverrideVisited.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.OverrideVisited.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.StateDisabled.LongText.Color1 = System.Drawing.Color.Gray;
+            this.kPal.LabelStyles.LabelNormalControl.StateDisabled.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.StateDisabled.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.StateDisabled.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.kPal.LabelStyles.LabelNormalControl.StateDisabled.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.StateDisabled.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.StateNormal.LongText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.LabelStyles.LabelNormalControl.StateNormal.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.StateNormal.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.LabelStyles.LabelNormalControl.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.LabelStyles.LabelNormalControl.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kPal.Ribbon.RibbonAppButton.StateCommon.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonAppButton.StateCommon.BackColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.Ribbon.RibbonAppButton.StateCommon.BackColor5 = System.Drawing.Color.SeaGreen;
+            this.kPal.Ribbon.RibbonAppButton.StatePressed.BackColor5 = System.Drawing.Color.SeaGreen;
+            this.kPal.Ribbon.RibbonAppButton.StateTracking.BackColor5 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(122)))), ((int)(((byte)(87)))));
+            this.kPal.Ribbon.RibbonGroupArea.StateCheckedNormal.BackColor1 = System.Drawing.Color.SeaGreen;
+            this.kPal.Ribbon.RibbonGroupArea.StateCheckedNormal.BackColor2 = System.Drawing.Color.AliceBlue;
+            this.kPal.Ribbon.RibbonGroupArea.StateCheckedNormal.BackColor3 = System.Drawing.Color.SeaGreen;
+            this.kPal.Ribbon.RibbonGroupArea.StateCheckedNormal.BackColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonGroupArea.StateCheckedNormal.BackColor5 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonGroupButtonText.StateCommon.TextColor = System.Drawing.Color.MintCream;
+            this.kPal.Ribbon.RibbonGroupCheckBoxText.StateCommon.TextColor = System.Drawing.Color.MintCream;
+            this.kPal.Ribbon.RibbonGroupCollapsedBack.StateNormal.BackColor1 = System.Drawing.SystemColors.Window;
+            this.kPal.Ribbon.RibbonGroupCollapsedBack.StateNormal.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedBack.StateNormal.BackColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(122)))), ((int)(((byte)(87)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedBack.StateNormal.BackColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedBack.StateTracking.BackColor1 = System.Drawing.SystemColors.Window;
+            this.kPal.Ribbon.RibbonGroupCollapsedBack.StateTracking.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedBack.StateTracking.BackColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedBack.StateTracking.BackColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedBorder.StateCommon.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedBorder.StateCommon.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(122)))), ((int)(((byte)(87)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedBorder.StateCommon.BackColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedBorder.StateCommon.BackColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedBorder.StateCommon.BackColor5 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedFrameBack.StateCommon.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedFrameBack.StateCommon.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedFrameBack.StateCommon.BackColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedFrameBack.StateCommon.BackColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedFrameBack.StateCommon.BackColor5 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedFrameBorder.StateCommon.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(122)))), ((int)(((byte)(87)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedFrameBorder.StateCommon.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.kPal.Ribbon.RibbonGroupCollapsedText.StateCommon.TextColor = System.Drawing.Color.White;
+            this.kPal.Ribbon.RibbonGroupNormalBorder.StateCommon.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(122)))), ((int)(((byte)(87)))));
+            this.kPal.Ribbon.RibbonGroupNormalBorder.StateCommon.BackColor2 = System.Drawing.Color.SeaGreen;
+            this.kPal.Ribbon.RibbonGroupNormalTitle.StateCommon.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.kPal.Ribbon.RibbonGroupNormalTitle.StateCommon.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonGroupNormalTitle.StateCommon.TextColor = System.Drawing.Color.MintCream;
+            this.kPal.Ribbon.RibbonGroupNormalTitle.StateTracking.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.kPal.Ribbon.RibbonGroupNormalTitle.StateTracking.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonQATFullbar.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonQATFullbar.BackColor2 = System.Drawing.Color.SeaGreen;
+            this.kPal.Ribbon.RibbonQATFullbar.BackColor3 = System.Drawing.Color.SeaGreen;
+            this.kPal.Ribbon.RibbonQATMinibar.StateCommon.BackColor1 = System.Drawing.Color.SeaGreen;
+            this.kPal.Ribbon.RibbonQATMinibar.StateCommon.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonQATMinibar.StateCommon.BackColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.kPal.Ribbon.RibbonQATMinibar.StateCommon.BackColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonQATOverflow.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonQATOverflow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.kPal.Ribbon.RibbonTab.StateCheckedTracking.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.kPal.Ribbon.RibbonTab.StateCheckedTracking.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.Ribbon.RibbonTab.StateCheckedTracking.BackColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(122)))), ((int)(((byte)(87)))));
+            this.kPal.Ribbon.RibbonTab.StateCheckedTracking.BackColor4 = System.Drawing.Color.SeaGreen;
+            this.kPal.Ribbon.RibbonTab.StateCommon.BackColor1 = System.Drawing.Color.SeaGreen;
+            this.kPal.Ribbon.RibbonTab.StateCommon.BackColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.Ribbon.RibbonTab.StateCommon.BackColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.Ribbon.RibbonTab.StateCommon.BackColor5 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.Ribbon.RibbonTab.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.Ribbon.RibbonTab.StateContextCheckedTracking.BackColor2 = System.Drawing.Color.SeaGreen;
+            this.kPal.Ribbon.RibbonTab.StateTracking.BackColor2 = System.Drawing.Color.SeaGreen;
+            this.kPal.SeparatorStyles.SeparatorCommon.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.SeparatorStyles.SeparatorCommon.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.kPal.SeparatorStyles.SeparatorCommon.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.SeparatorStyles.SeparatorCommon.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.kPal.SeparatorStyles.SeparatorCommon.StateCommon.Border.Color2 = System.Drawing.Color.SeaGreen;
+            this.kPal.SeparatorStyles.SeparatorCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kPal.SeparatorStyles.SeparatorCommon.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kPal.ToolMenuStatus.Button.ButtonPressedBorder = System.Drawing.Color.SeaGreen;
+            this.kPal.ToolMenuStatus.Button.ButtonSelectedBorder = System.Drawing.Color.SeaGreen;
+            this.kPal.ToolMenuStatus.Button.OverflowButtonGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(202)))), ((int)(((byte)(115)))));
+            this.kPal.ToolMenuStatus.Button.OverflowButtonGradientEnd = System.Drawing.Color.SeaGreen;
+            this.kPal.ToolMenuStatus.Button.OverflowButtonGradientMiddle = System.Drawing.Color.SeaGreen;
+            this.kPal.ToolMenuStatus.Grip.GripDark = System.Drawing.Color.SeaGreen;
+            this.kPal.ToolMenuStatus.Grip.GripLight = System.Drawing.Color.MintCream;
+            this.kPal.ToolMenuStatus.Menu.MenuItemPressedGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.ToolMenuStatus.Menu.MenuItemPressedGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.ToolMenuStatus.Menu.MenuItemPressedGradientMiddle = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.ToolMenuStatus.Menu.MenuItemSelected = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.ToolMenuStatus.Menu.MenuItemSelectedGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.ToolMenuStatus.Menu.MenuItemSelectedGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.ToolMenuStatus.Menu.MenuItemText = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.ToolMenuStatus.MenuStrip.MenuStripGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.ToolMenuStatus.MenuStrip.MenuStripGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.ToolMenuStatus.MenuStrip.MenuStripText = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.ToolMenuStatus.Rafting.RaftingContainerGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.ToolMenuStatus.Rafting.RaftingContainerGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.ToolMenuStatus.Separator.SeparatorDark = System.Drawing.Color.SeaGreen;
+            this.kPal.ToolMenuStatus.Separator.SeparatorLight = System.Drawing.Color.MintCream;
+            this.kPal.ToolMenuStatus.StatusStrip.StatusStripGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(199)))), ((int)(((byte)(182)))));
+            this.kPal.ToolMenuStatus.StatusStrip.StatusStripGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.ToolMenuStatus.StatusStrip.StatusStripText = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(47)))));
+            this.kPal.ToolMenuStatus.ToolStrip.ToolStripBorder = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(122)))), ((int)(((byte)(87)))));
+            this.kPal.ToolMenuStatus.ToolStrip.ToolStripContentPanelGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.ToolMenuStatus.ToolStrip.ToolStripContentPanelGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.ToolMenuStatus.ToolStrip.ToolStripGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.ToolMenuStatus.ToolStrip.ToolStripGradientEnd = System.Drawing.Color.SeaGreen;
+            this.kPal.ToolMenuStatus.ToolStrip.ToolStripGradientMiddle = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.ToolMenuStatus.ToolStrip.ToolStripPanelGradientBegin = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
+            this.kPal.ToolMenuStatus.ToolStrip.ToolStripPanelGradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(219)))), ((int)(((byte)(202)))));
+            this.kPal.ToolMenuStatus.ToolStrip.ToolStripText = System.Drawing.Color.Black;
+            this.kPal.TrackBar.StateCommon.Position.Color4 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(53)))), ((int)(((byte)(56)))));
+            this.kPal.TrackBar.StateCommon.Position.Color5 = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
+            this.kPal.TrackBar.StateCommon.Tick.Color3 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.kPal.TrackBar.StateCommon.Tick.Color4 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(53)))), ((int)(((byte)(56)))));
+            this.kPal.TrackBar.StateCommon.Tick.Color5 = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
+            this.kPal.TrackBar.StateCommon.Track.Color4 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(53)))), ((int)(((byte)(56)))));
+            this.kPal.TrackBar.StateCommon.Track.Color5 = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
+            this.kPal.TrackBar.StateNormal.Track.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
+            this.kPal.TrackBar.StateNormal.Track.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(53)))), ((int)(((byte)(56)))));
+            this.kPal.TrackBar.StateNormal.Track.Color5 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             // 
             // Form1
             // 
@@ -581,6 +911,8 @@
         private ExtendedControls.ExtendedToolkit.ToolstripControls.KryptonNumericUpDownToolStripItem kryptonNumericUpDownToolStripItem1;
         private KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld toolStripMenuItemUACSheld1;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended kryptonRichTextBoxExtended1;
+        private ExtendedControls.ExtendedToolkit.Controls.Experimental.ToggleSwitches.KryptonToggleSwitchV1 kryptonToggleSwitchV11;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette kPal;
     }
 }
 
