@@ -540,7 +540,8 @@
             // 
             // extendedToolStripStatusLabel1
             // 
-            this.extendedToolStripStatusLabel1.ForeColor = System.Drawing.Color.Yellow;
+            this.extendedToolStripStatusLabel1.ForeColor = System.Drawing.Color.Teal;
+            this.extendedToolStripStatusLabel1.GradientColourOne = System.Drawing.Color.Empty;
             this.extendedToolStripStatusLabel1.GradientColourTwo = System.Drawing.Color.Red;
             this.extendedToolStripStatusLabel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.extendedToolStripStatusLabel1.Name = "extendedToolStripStatusLabel1";
