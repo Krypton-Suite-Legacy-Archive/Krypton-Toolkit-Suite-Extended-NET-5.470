@@ -4,6 +4,10 @@
 
 ## An extension to the Krypton Toolkit suite of controls for .NET framework 4.7 
 
+## 2018-06-11 New palettes & gradeint toolstrip label
+* There are now 50+ **new** palettes to choose from.
+* A new toolstrip label capable of background gradeints is now available to use, as per [#28](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-4.70/issues/28).
+
 ======
 
 ## 2018-05-22 Colour Mania!
