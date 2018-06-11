@@ -179,7 +179,7 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
                 }
             }
 
-            base.OnPaint(e);
+            //base.OnPaint(e);
         }
         #endregion
 
