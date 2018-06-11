@@ -91,7 +91,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
             {
                 if (_globalMethods.GetIsTargetPlatformSupported())
                 {
-                    NativeMethods.SendMessage(Handle, CB_SETCUEBANNER, IntPtr.Zero, _cueText);
+                    GlobalNativeMethods.SendMessage(Handle, CB_SETCUEBANNER, IntPtr.Zero, _cueText);
                 }
             }
         }

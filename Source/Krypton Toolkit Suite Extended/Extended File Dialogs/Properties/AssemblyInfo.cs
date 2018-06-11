@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Palette Creator")]
+[assembly: AssemblyTitle("Extended File Dialogs")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Palette Creator")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyProduct("Extended File Dialogs")]
+[assembly: AssemblyCopyright("Copyright © Decebal Mihailescu 2007-2015. Then modifications by Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2018. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -21,7 +21,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e668a872-620b-4247-9629-28f12f7b0fd7")]
+[assembly: Guid("d4644d8a-1c7a-43b6-8461-ab0b56fd6463")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -33,7 +33,7 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("4.70.519.0")]
-[assembly: AssemblyFileVersion("4.70.519.0")]
+[assembly: AssemblyVersion("4.70.200.0")]
+[assembly: AssemblyFileVersion("4.70.200.0")]
 [assembly: NeutralResourcesLanguage("en-GB")]
 

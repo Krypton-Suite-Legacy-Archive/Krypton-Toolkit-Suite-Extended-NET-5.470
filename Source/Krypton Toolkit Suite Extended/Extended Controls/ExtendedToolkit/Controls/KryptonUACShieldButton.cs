@@ -130,7 +130,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 
                 //FlatStyle = FlatStyle.System;
 
-                NativeMethods.SendMessage(Handle, BCM_SETSHIELD, IntPtr.Zero, new IntPtr(1));
+                GlobalNativeMethods.SendMessage(Handle, BCM_SETSHIELD, IntPtr.Zero, new IntPtr(1));
             }
         }
         #endregion

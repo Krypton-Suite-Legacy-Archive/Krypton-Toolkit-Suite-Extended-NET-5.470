@@ -7,7 +7,7 @@ namespace GlobalUtilities.Classes
     /// Provides some methods from the user32 and uxtheme libraries.
     /// Modified from the AeroSuite project.
     /// </summary>
-    public static class NativeMethods
+    public static class GlobalNativeMethods
     {
         private const string user32 = "user32.dll";
         private const string uxtheme = "uxtheme.dll";

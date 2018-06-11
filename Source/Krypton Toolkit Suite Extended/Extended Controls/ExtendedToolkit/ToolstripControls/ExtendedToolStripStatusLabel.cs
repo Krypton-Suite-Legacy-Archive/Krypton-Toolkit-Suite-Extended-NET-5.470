@@ -112,10 +112,45 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         /// Raises the <see cref="E:System.Windows.Forms.ToolStripItem.Paint" /> event.
         /// </summary>
         /// <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs" /> that contains the event data.</param>
+        //protected override void OnPaint(PaintEventArgs e)
+        //{
+        //    Graphics g = e.Graphics;
+
+        //    Rectangle r = new Rectangle(0, 0, Width, Height);
+
+        //    if (ForeColor != Color.Empty)
+        //    {
+        //        g.TextRenderingHint = TextRenderingHint.AntiAlias;
+
+        //        Font typeface = new Font(Font.FontFamily, Font.Size, Font.Style, Font.Unit);
+
+        //        SolidBrush brush = new SolidBrush(ForeColor);
+
+        //        g.DrawString(Text, typeface, brush, 0, 0);
+        //    }
+        //    else if (BackColor != Color.Empty)
+        //    {
+        //        using (SolidBrush sb = new SolidBrush(BackColor))
+        //        {
+        //            g.FillRectangle(sb, r);
+        //        }
+        //    }
+        //    else if (GradientColourOne != Color.Empty || GradientColourTwo != Color.Empty)
+        //    {
+        //        using (LinearGradientBrush lgb = new LinearGradientBrush(r, GradientColourOne, GradientColourTwo, GradientMode))
+        //        {
+        //            g.FillRectangle(lgb, r);
+        //        }
+        //    }
+
+        //    base.OnPaint(e);
+        //}
         protected override void OnPaint(PaintEventArgs e)
         {
+            // Set a graphics variable
             Graphics g = e.Graphics;
 
+            // Rectangle variable
             Rectangle r = new Rectangle(0, 0, Width, Height);
 
             if (ForeColor != Color.Empty)
@@ -128,7 +163,8 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
 
                 g.DrawString(Text, typeface, brush, 0, 0);
             }
-            else if (BackColor != Color.Empty)
+
+            if (BackColor != Color.Empty)
             {
                 using (SolidBrush sb = new SolidBrush(BackColor))
                 {

@@ -104,7 +104,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
             {
                 if (_globalMethods.GetIsTargetPlatformSupported())
                 {
-                    NativeMethods.SendMessage(Handle, BCM_SETNOTE, IntPtr.Zero, _note);
+                    GlobalNativeMethods.SendMessage(Handle, BCM_SETNOTE, IntPtr.Zero, _note);
                 }
             }
         }
