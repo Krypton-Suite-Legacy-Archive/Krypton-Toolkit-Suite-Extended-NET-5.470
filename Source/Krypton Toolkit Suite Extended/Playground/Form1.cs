@@ -11,6 +11,7 @@ using KryptonApplicationUpdater.Classes.SettingsManager;
 using KryptonApplicationUpdater.Interfaces;
 
 using KryptonExtendedToolkit.Base.Code;
+using Tooling.Classes.Other;
 
 namespace Playground
 {
@@ -24,9 +25,13 @@ namespace Playground
 
         Version currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
 
+        ToolStripNonClientRenderer toolStripNonClientRenderer;
+
         public Form1()
         {
             InitializeComponent();
+
+            tsTest.Renderer = new ToolStripNonClientRenderer();
         }
 
         #region IUpdatable Implementation

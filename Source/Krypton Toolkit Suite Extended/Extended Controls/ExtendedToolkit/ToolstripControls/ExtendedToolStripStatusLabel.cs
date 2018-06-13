@@ -22,11 +22,13 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         KryptonPalette _kryptonPalette;
         #endregion
 
-        Color _textColour, _backGradient1, _backGradient2;
+        Color _textColour, _backGradient1, _backGradient2, _textGlow;
 
         Font _textTypeface;
 
         LinearGradientMode _linearGradientMode;
+
+        int _textGlowSpread;
         #endregion
 
         #region Properties        
@@ -75,6 +77,28 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         }
 
         /// <summary>
+        /// Gets or sets the text glow colour.
+        /// </summary>
+        /// <value>
+        /// The text glow colour.
+        /// </value>
+        [DefaultValue(typeof(Color), "White"), Description("The text glow colour."), Category("Appearance")]
+        public Color TextGlow
+        {
+            get
+            {
+                return _textGlow;
+            }
+
+            set
+            {
+                _textGlow = value;
+
+                Invalidate();
+            }
+        }
+
+        /// <summary>
         /// Gets or sets the gradient mode.
         /// </summary>
         /// <value>
@@ -93,6 +117,26 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
                 _linearGradientMode = value;
 
                 Invalidate();
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the text glow spread.
+        /// </summary>
+        /// <value>
+        /// The text glow spread.
+        /// </value>
+        [DefaultValue(5), Description("The text glow spread"), Category("Appearance")]
+        public int TextGlowSpread
+        {
+            get
+            {
+                return _textGlowSpread;
+            }
+
+            set
+            {
+                _textGlowSpread = value;
             }
         }
         #endregion

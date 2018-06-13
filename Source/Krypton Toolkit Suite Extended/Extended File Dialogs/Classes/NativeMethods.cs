@@ -19,6 +19,8 @@
 //  PURPOSE. IT CAN BE DISTRIBUTED FREE OF CHARGE AS LONG AS THIS HEADER 
 //  REMAINS UNCHANGED.
 
+using ExtendedFileDialogs.Enumerations;
+using ExtendedFileDialogs.Structs;
 using System;
 using System.Runtime.InteropServices;
 using System.Text;

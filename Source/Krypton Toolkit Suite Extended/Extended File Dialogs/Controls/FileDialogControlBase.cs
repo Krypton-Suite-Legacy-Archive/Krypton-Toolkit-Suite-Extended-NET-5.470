@@ -680,3 +680,4 @@ namespace ExtendedFileDialogs.Controls
             #endregion
         }
     }
+}
