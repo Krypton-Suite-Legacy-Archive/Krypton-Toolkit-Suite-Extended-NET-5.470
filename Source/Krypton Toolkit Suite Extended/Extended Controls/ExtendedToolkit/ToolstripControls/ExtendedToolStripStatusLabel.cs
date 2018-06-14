@@ -25,7 +25,7 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         KryptonPalette _kryptonPalette;
         #endregion
 
-        bool _alert;
+        bool _alert, _enableBlinking;
 
         Color _textColour, _backGradient1, _backGradient2, _textGlow, _alertColour1, _alertColour2, _alertTextColour;
 
@@ -36,6 +36,8 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         int _textGlowSpread, _flashInterval;
 
         Timer _alertFlashTimer;
+
+        long _blinkDuration;
         #endregion
 
         #region Properties        
@@ -60,12 +62,32 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         }
 
         /// <summary>
+        /// Gets or sets a value indicating whether [enable blinking].
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [enable blinking]; otherwise, <c>false</c>.
+        /// </value>
+        [DefaultValue(false), Description("Enables a blinking mode."), Category("Blinking Settings")]
+        public bool EnableBlinking
+        {
+            get
+            {
+                return _enableBlinking;
+            }
+
+            set
+            {
+                _enableBlinking = value;
+            }
+        }
+
+        /// <summary>
         /// Gets or sets the alert colour one.
         /// </summary>
         /// <value>
         /// The alert colour one.
         /// </value>
-        [DefaultValue(typeof(Color), "White"), Description("Defined alert first colour."), Category("Appearance")]
+        [DefaultValue(typeof(Color), "White"), Description("Defined alert first colour."), Category("Blinking Settings")]
         public Color AlertColourOne
         {
             get
@@ -87,7 +109,7 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         /// <value>
         /// The alert colour two.
         /// </value>
-        [DefaultValue(typeof(Color), "Black"), Description("Defined alert second colour."), Category("Appearance")]
+        [DefaultValue(typeof(Color), "Black"), Description("Defined alert second colour."), Category("Blinking Settings")]
         public Color AlertColourTwo
         {
             get
@@ -109,7 +131,7 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         /// <value>
         /// The alert text colour.
         /// </value>
-        [DefaultValue(typeof(Color), "Red"), Description("Defined alert text colour."), Category("Appearance")]
+        [DefaultValue(typeof(Color), "Red"), Description("Defined alert text colour."), Category("Blinking Settings")]
         public Color AlertTextColour
         {
             get
@@ -239,7 +261,7 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         /// <value>
         /// The alert blink interval.
         /// </value>
-        [DefaultValue(256), Description("The blink interval."), Category("Appearance")]
+        [DefaultValue(256), Description("The blink interval."), Category("Blinking Settings")]
         public int AlertBlinkInterval
         {
             get
@@ -252,13 +274,87 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
                 _flashInterval = value;
             }
         }
+
+        /// <summary>
+        /// Gets or sets the duration of the blink.
+        /// </summary>
+        /// <value>
+        /// The duration of the blink.
+        /// </value>
+        [DefaultValue(10), Description("Defines how long the blinking lasts for."), Category("Blinking Settings")]
+        public long BlinkDuration
+        {
+            get
+            {
+                return _blinkDuration;
+            }
+
+            set
+            {
+                _blinkDuration = value;
+            }
+        }
         #endregion
 
         #region Constructors
         public ExtendedToolStripStatusLabel()
         {
+            Alert = false;
 
+            AlertColourOne = Color.White;
+
+            AlertColourTwo = Color.Black;
+
+            AlertTextColour = Color.Red;
+
+            GradientColourOne = Color.Empty;
+
+            GradientColourTwo = Color.Empty;
+
+            TextGlow = Color.White;
+
+            GradientMode = LinearGradientMode.ForwardDiagonal;
+
+            TextGlowSpread = 5;
+
+            AlertBlinkInterval = 256;
+
+            BlinkDuration = 10;
         }
+
+        //public ExtendedToolStripStatusLabel(bool enableBlinking)
+        //{
+        //    if (enableBlinking)
+        //    {
+        //        _alertFlashTimer = new Timer();
+
+        //        _alertFlashTimer.Interval = AlertBlinkInterval;
+
+        //        if (enableBlinking)
+        //        {
+        //            _alertFlashTimer.Start();
+
+        //            _alertFlashTimer.Tick += AlertFlashTimer_Tick;
+
+        //            base.ForeColor = AlertTextColour;
+        //        }
+        //    }
+        //}
+
+        //private void AlertFlashTimer_Tick(object sender, EventArgs e)
+        //{
+        //    if (AlertColourOne != Color.Empty && AlertColourTwo != Color.Empty)
+        //    {
+        //        if (BackColor == AlertColourOne)
+        //        {
+        //            BackColor = AlertColourTwo;
+        //        }
+        //        else
+        //        {
+        //            BackColor = AlertColourOne;
+        //        }
+        //    }
+        //}
         #endregion
 
         #region Overrides
@@ -324,27 +420,45 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         /// <summary>
         /// Blinks the label.
         /// </summary>
-        public async void BlinkLabel()
+        public async void BlinkLabel(long blinkDuration)
         {
-            while (true)
+            var sw = Stopwatch.StartNew();
+
+            var fgc = ForeColor;
+
+            var bgc = BackColor;
+
+            while (sw.ElapsedMilliseconds < blinkDuration)
             {
                 await Task.Delay(_flashInterval);
 
                 base.BackColor = base.BackColor == AlertColourOne ? AlertColourTwo : AlertColourOne;
 
                 base.ForeColor = AlertTextColour;
+
+                Invalidate();
             }
+
+            BackColor = bgc;
+
+            ForeColor = fgc;
+
+            Invalidate();
+
+            sw.Stop();
         }
 
-        public async void SoftBlink(Color alertColour1, Color alertColour2, Color alertTextColour, short cycleInterval, bool bkClr)
+        public async void SoftBlink(Color alertColour1, Color alertColour2, Color alertTextColour, short cycleInterval, bool bkClr, long blinkDuration)
         {
-            var sw = new Stopwatch();
+            var sw = Stopwatch.StartNew();
 
-            sw.Start();
+            var fgc = ForeColor;
+
+            var bgc = BackColor;
 
             short halfCycle = (short)Math.Round(cycleInterval * 0.5);
 
-            while (true)
+            while (sw.ElapsedMilliseconds < blinkDuration)
             {
                 await Task.Delay(1);
 
@@ -366,11 +480,19 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
                 }
                 else
                 {
-                    //ctrl.ForeColor = clr;
-
-                    base.ForeColor = alertTextColour;
+                    base.ForeColor = clr;
                 }
+
+                Invalidate();
             }
+
+            BackColor = bgc;
+
+            ForeColor = fgc;
+
+            Invalidate();
+
+            sw.Stop();
         }
         #endregion
     }

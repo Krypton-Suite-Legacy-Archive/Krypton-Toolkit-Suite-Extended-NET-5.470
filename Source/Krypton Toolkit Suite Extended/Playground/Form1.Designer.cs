@@ -98,7 +98,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.extendedToolStripStatusLabel1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
-            this.exttlAlert = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -641,8 +640,7 @@
             this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
-            this.extendedToolStripStatusLabel1,
-            this.exttlAlert});
+            this.extendedToolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 578);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
@@ -662,27 +660,14 @@
             this.extendedToolStripStatusLabel1.AlertColourOne = System.Drawing.Color.Empty;
             this.extendedToolStripStatusLabel1.AlertColourTwo = System.Drawing.Color.Empty;
             this.extendedToolStripStatusLabel1.AlertTextColour = System.Drawing.Color.Empty;
-            this.extendedToolStripStatusLabel1.GradientColourTwo = System.Drawing.Color.Red;
-            this.extendedToolStripStatusLabel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.extendedToolStripStatusLabel1.GradientColourOne = System.Drawing.Color.Empty;
+            this.extendedToolStripStatusLabel1.GradientColourTwo = System.Drawing.Color.Empty;
+            this.extendedToolStripStatusLabel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.extendedToolStripStatusLabel1.Name = "extendedToolStripStatusLabel1";
             this.extendedToolStripStatusLabel1.Size = new System.Drawing.Size(168, 17);
             this.extendedToolStripStatusLabel1.Text = "extendedToolStripStatusLabel1";
             this.extendedToolStripStatusLabel1.TextGlow = System.Drawing.Color.Empty;
             this.extendedToolStripStatusLabel1.TextGlowSpread = 0;
-            // 
-            // exttlAlert
-            // 
-            this.exttlAlert.Alert = true;
-            this.exttlAlert.AlertColourOne = System.Drawing.Color.Black;
-            this.exttlAlert.AlertColourTwo = System.Drawing.Color.White;
-            this.exttlAlert.GradientColourOne = System.Drawing.Color.Empty;
-            this.exttlAlert.GradientColourTwo = System.Drawing.Color.Empty;
-            this.exttlAlert.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.exttlAlert.Name = "exttlAlert";
-            this.exttlAlert.Size = new System.Drawing.Size(168, 17);
-            this.exttlAlert.Text = "extendedToolStripStatusLabel2";
-            this.exttlAlert.TextGlow = System.Drawing.Color.Empty;
-            this.exttlAlert.TextGlowSpread = 0;
             // 
             // Form1
             // 
@@ -784,7 +769,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel extendedToolStripStatusLabel1;
-        private ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel exttlAlert;
     }
 }
 
