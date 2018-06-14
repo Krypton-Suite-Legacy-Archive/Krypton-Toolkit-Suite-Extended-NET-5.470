@@ -1,16 +1,13 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using KryptonApplicationUpdater.Classes.SettingsManager;
+using KryptonApplicationUpdater.Interfaces;
+using KryptonExtendedToolkit.Base.Code;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-
-using ComponentFactory.Krypton.Toolkit;
-
-using KryptonApplicationUpdater.Classes.SettingsManager;
-using KryptonApplicationUpdater.Interfaces;
-
-using KryptonExtendedToolkit.Base.Code;
 using Tooling.Classes.Other;
 
 namespace Playground
@@ -84,7 +81,7 @@ namespace Playground
                 }
             }
 
-            exttlAlert.SoftBlink(exttlAlert.AlertColourOne, exttlAlert.AlertColourTwo, exttlAlert.AlertTextColour, 2000, false);
+            exttlAlert.SoftBlink(exttlAlert.AlertColourOne, exttlAlert.AlertColourTwo, exttlAlert.AlertTextColour, Convert.ToInt16(exttlAlert.AlertBlinkInterval), false);
 
             OpenFile(fileName);
         }
