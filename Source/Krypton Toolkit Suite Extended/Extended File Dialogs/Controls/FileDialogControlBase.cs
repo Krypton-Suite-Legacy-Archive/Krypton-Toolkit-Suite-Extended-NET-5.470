@@ -21,6 +21,7 @@
 
 using ExtendedFileDialogs.Classes;
 using ExtendedFileDialogs.Enumerations;
+using ExtendedFileDialogs.Structs;
 using GlobalUtilities.Classes;
 using System;
 using System.ComponentModel;

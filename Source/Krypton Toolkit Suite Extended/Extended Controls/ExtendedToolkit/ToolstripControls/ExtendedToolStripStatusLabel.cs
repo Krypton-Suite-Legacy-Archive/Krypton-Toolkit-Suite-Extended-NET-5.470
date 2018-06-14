@@ -1,8 +1,11 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
@@ -22,16 +25,106 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         KryptonPalette _kryptonPalette;
         #endregion
 
-        Color _textColour, _backGradient1, _backGradient2, _textGlow;
+        bool _alert;
+
+        Color _textColour, _backGradient1, _backGradient2, _textGlow, _alertColour1, _alertColour2, _alertTextColour;
 
         Font _textTypeface;
 
         LinearGradientMode _linearGradientMode;
 
-        int _textGlowSpread;
+        int _textGlowSpread, _flashInterval;
+
+        Timer _alertFlashTimer;
         #endregion
 
         #region Properties        
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="ExtendedToolStripStatusLabel"/> is alert.
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if alert; otherwise, <c>false</c>.
+        /// </value>
+        [DefaultValue(false), Description("Alerts the user."), Category("Appearance")]
+        public bool Alert
+        {
+            get
+            {
+                return _alert;
+            }
+
+            set
+            {
+                _alert = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the alert colour one.
+        /// </summary>
+        /// <value>
+        /// The alert colour one.
+        /// </value>
+        [DefaultValue(typeof(Color), "White"), Description("Defined alert first colour."), Category("Appearance")]
+        public Color AlertColourOne
+        {
+            get
+            {
+                return _alertColour1;
+            }
+
+            set
+            {
+                _alertColour1 = value;
+
+                Invalidate();
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the alert colour two.
+        /// </summary>
+        /// <value>
+        /// The alert colour two.
+        /// </value>
+        [DefaultValue(typeof(Color), "Black"), Description("Defined alert second colour."), Category("Appearance")]
+        public Color AlertColourTwo
+        {
+            get
+            {
+                return _alertColour2;
+            }
+
+            set
+            {
+                _alertColour2 = value;
+
+                Invalidate();
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the alert text colour.
+        /// </summary>
+        /// <value>
+        /// The alert text colour.
+        /// </value>
+        [DefaultValue(typeof(Color), "Red"), Description("Defined alert text colour."), Category("Appearance")]
+        public Color AlertTextColour
+        {
+            get
+            {
+                return _alertTextColour;
+            }
+
+            set
+            {
+                _alertTextColour = value;
+
+                Invalidate();
+            }
+        }
+
         /// <summary>
         /// Gets or sets the gradient colour one.
         /// </summary>
@@ -139,6 +232,26 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
                 _textGlowSpread = value;
             }
         }
+
+        /// <summary>
+        /// Gets or sets the alert blink interval.
+        /// </summary>
+        /// <value>
+        /// The alert blink interval.
+        /// </value>
+        [DefaultValue(256), Description("The blink interval."), Category("Appearance")]
+        public int AlertBlinkInterval
+        {
+            get
+            {
+                return _flashInterval;
+            }
+
+            set
+            {
+                _flashInterval = value;
+            }
+        }
         #endregion
 
         #region Constructors
@@ -150,45 +263,12 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
 
         #region Overrides
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-        public override Color BackColor { get => new Color(); set {; } }
+        public override Color BackColor { get; set; }
 
         /// <summary>
         /// Raises the <see cref="E:System.Windows.Forms.ToolStripItem.Paint" /> event.
         /// </summary>
         /// <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs" /> that contains the event data.</param>
-        //protected override void OnPaint(PaintEventArgs e)
-        //{
-        //    Graphics g = e.Graphics;
-
-        //    Rectangle r = new Rectangle(0, 0, Width, Height);
-
-        //    if (ForeColor != Color.Empty)
-        //    {
-        //        g.TextRenderingHint = TextRenderingHint.AntiAlias;
-
-        //        Font typeface = new Font(Font.FontFamily, Font.Size, Font.Style, Font.Unit);
-
-        //        SolidBrush brush = new SolidBrush(ForeColor);
-
-        //        g.DrawString(Text, typeface, brush, 0, 0);
-        //    }
-        //    else if (BackColor != Color.Empty)
-        //    {
-        //        using (SolidBrush sb = new SolidBrush(BackColor))
-        //        {
-        //            g.FillRectangle(sb, r);
-        //        }
-        //    }
-        //    else if (GradientColourOne != Color.Empty || GradientColourTwo != Color.Empty)
-        //    {
-        //        using (LinearGradientBrush lgb = new LinearGradientBrush(r, GradientColourOne, GradientColourTwo, GradientMode))
-        //        {
-        //            g.FillRectangle(lgb, r);
-        //        }
-        //    }
-
-        //    base.OnPaint(e);
-        //}
         protected override void OnPaint(PaintEventArgs e)
         {
             // Set a graphics variable
@@ -197,30 +277,35 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
             // Rectangle variable
             Rectangle r = new Rectangle(0, 0, Width, Height);
 
-            if (ForeColor != Color.Empty)
-            {
-                g.TextRenderingHint = TextRenderingHint.AntiAlias;
-
-                Font typeface = new Font(Font.FontFamily, Font.Size, Font.Style, Font.Unit);
-
-                SolidBrush brush = new SolidBrush(ForeColor);
-
-                g.DrawString(Text, typeface, brush, 0, 0);
-            }
-
             if (BackColor != Color.Empty)
             {
-                using (SolidBrush sb = new SolidBrush(BackColor))
+                // Fill the background with a solid colour
+                using (SolidBrush solidBrush = new SolidBrush(BackColor))
                 {
-                    g.FillRectangle(sb, r);
+                    g.FillRectangle(solidBrush, r);
                 }
             }
             else if (GradientColourOne != Color.Empty || GradientColourTwo != Color.Empty)
             {
+                // Fill the background with a gradient colour
                 using (LinearGradientBrush lgb = new LinearGradientBrush(r, GradientColourOne, GradientColourTwo, GradientMode))
                 {
                     g.FillRectangle(lgb, r);
                 }
+            }
+
+            // Text rendering
+            if (ForeColor != Color.Empty)
+            {
+                g.TextRenderingHint = TextRenderingHint.AntiAlias | TextRenderingHint.ClearTypeGridFit;
+
+                // Preserve user font settings
+                Font typeface = new Font(Font.FontFamily, Font.Size, Font.Style, Font.Unit);
+
+                SolidBrush brush = new SolidBrush(ForeColor);
+
+                // Draw the text
+                g.DrawString(Text, typeface, brush, 0, 0);
             }
 
             //base.OnPaint(e);
@@ -233,6 +318,58 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
             if (_palette != null)
             {
 
+            }
+        }
+
+        /// <summary>
+        /// Blinks the label.
+        /// </summary>
+        public async void BlinkLabel()
+        {
+            while (true)
+            {
+                await Task.Delay(_flashInterval);
+
+                base.BackColor = base.BackColor == AlertColourOne ? AlertColourTwo : AlertColourOne;
+
+                base.ForeColor = AlertTextColour;
+            }
+        }
+
+        public async void SoftBlink(Color alertColour1, Color alertColour2, Color alertTextColour, short cycleInterval, bool bkClr)
+        {
+            var sw = new Stopwatch();
+
+            sw.Start();
+
+            short halfCycle = (short)Math.Round(cycleInterval * 0.5);
+
+            while (true)
+            {
+                await Task.Delay(1);
+
+                var n = sw.ElapsedMilliseconds % cycleInterval;
+
+                var per = (double)Math.Abs(n - halfCycle) / halfCycle;
+
+                var red = (short)Math.Round((alertColour2.R - alertColour1.R) * per) + alertColour1.R;
+
+                var grn = (short)Math.Round((alertColour2.G - alertColour1.G) * per) + alertColour1.G;
+
+                var blw = (short)Math.Round((alertColour2.B - alertColour1.B) * per) + alertColour1.B;
+
+                var clr = Color.FromArgb(red, grn, blw);
+
+                if (bkClr)
+                {
+                    base.BackColor = clr;
+                }
+                else
+                {
+                    //ctrl.ForeColor = clr;
+
+                    base.ForeColor = alertTextColour;
+                }
             }
         }
         #endregion

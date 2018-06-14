@@ -84,6 +84,8 @@ namespace Playground
                 }
             }
 
+            exttlAlert.SoftBlink(exttlAlert.AlertColourOne, exttlAlert.AlertColourTwo, exttlAlert.AlertTextColour, 2000, false);
+
             OpenFile(fileName);
         }
 

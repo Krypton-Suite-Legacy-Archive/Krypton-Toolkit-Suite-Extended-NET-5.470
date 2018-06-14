@@ -77,17 +77,6 @@
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonToggleSwitchV11 = new ExtendedControls.ExtendedToolkit.Controls.Experimental.ToggleSwitches.KryptonToggleSwitchV1();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.kryptonNumericUpDownToolStripItem1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.KryptonNumericUpDownToolStripItem();
-            this.toolStripMenuItemUACSheld1 = new KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
-            this.krtbEditor = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
-            this.klblAdminMode = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonRichTextBoxExtended1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.extendedToolStripStatusLabel1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
-            this.extendedToolStripStatusLabel2 = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
             this.tsTest = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -99,12 +88,23 @@
             this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.kryptonToggleSwitchV11 = new ExtendedControls.ExtendedToolkit.Controls.Experimental.ToggleSwitches.KryptonToggleSwitchV1();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.kryptonNumericUpDownToolStripItem1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.KryptonNumericUpDownToolStripItem();
+            this.toolStripMenuItemUACSheld1 = new KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
+            this.krtbEditor = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.klblAdminMode = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonRichTextBoxExtended1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.extendedToolStripStatusLabel1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
+            this.exttlAlert = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
+            this.tsTest.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            this.tsTest.SuspendLayout();
             this.SuspendLayout();
             // 
             // ms
@@ -465,115 +465,6 @@
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 600);
             this.kryptonPanel1.TabIndex = 2;
             // 
-            // kryptonToggleSwitchV11
-            // 
-            this.kryptonToggleSwitchV11.Location = new System.Drawing.Point(713, 204);
-            this.kryptonToggleSwitchV11.Name = "kryptonToggleSwitchV11";
-            this.kryptonToggleSwitchV11.Size = new System.Drawing.Size(79, 27);
-            this.kryptonToggleSwitchV11.State = ExtendedControls.ExtendedToolkit.Controls.Experimental.ToggleSwitches.KryptonToggleSwitchV1.ToggleState.ONOFF;
-            this.kryptonToggleSwitchV11.TabIndex = 3;
-            this.kryptonToggleSwitchV11.Text = "kryptonToggleSwitchV11";
-            this.kryptonToggleSwitchV11.Toggled = false;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kryptonNumericUpDownToolStripItem1,
-            this.toolStripMenuItemUACSheld1});
-            this.toolStrip1.Location = new System.Drawing.Point(634, 123);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(251, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // kryptonNumericUpDownToolStripItem1
-            // 
-            this.kryptonNumericUpDownToolStripItem1.Name = "kryptonNumericUpDownToolStripItem1";
-            this.kryptonNumericUpDownToolStripItem1.Size = new System.Drawing.Size(45, 22);
-            this.kryptonNumericUpDownToolStripItem1.Text = "0";
-            this.kryptonNumericUpDownToolStripItem1.Value = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            // 
-            // toolStripMenuItemUACSheld1
-            // 
-            this.toolStripMenuItemUACSheld1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemUACSheld1.Image")));
-            this.toolStripMenuItemUACSheld1.Name = "toolStripMenuItemUACSheld1";
-            this.toolStripMenuItemUACSheld1.Size = new System.Drawing.Size(194, 25);
-            this.toolStripMenuItemUACSheld1.Text = "toolStripMenuItemUACSheld1";
-            // 
-            // krtbEditor
-            // 
-            this.krtbEditor.Location = new System.Drawing.Point(13, 28);
-            this.krtbEditor.Name = "krtbEditor";
-            this.krtbEditor.Size = new System.Drawing.Size(614, 539);
-            this.krtbEditor.TabIndex = 1;
-            this.krtbEditor.Text = "";
-            // 
-            // klblAdminMode
-            // 
-            this.klblAdminMode.Location = new System.Drawing.Point(633, 28);
-            this.klblAdminMode.Name = "klblAdminMode";
-            this.klblAdminMode.Size = new System.Drawing.Size(283, 26);
-            this.klblAdminMode.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblAdminMode.TabIndex = 0;
-            this.klblAdminMode.Values.Text = "Is running in Administrator mode: No";
-            // 
-            // kryptonRichTextBoxExtended1
-            // 
-            this.kryptonRichTextBoxExtended1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonRichTextBoxExtended1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonRichTextBoxExtended1.Name = "kryptonRichTextBoxExtended1";
-            this.kryptonRichTextBoxExtended1.SelectionAlignment = ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended.TextAlignment.LEFT;
-            this.kryptonRichTextBoxExtended1.Size = new System.Drawing.Size(100, 96);
-            this.kryptonRichTextBoxExtended1.TabIndex = 0;
-            this.kryptonRichTextBoxExtended1.Text = "";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.extendedToolStripStatusLabel1,
-            this.extendedToolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 578);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.statusStrip1.Size = new System.Drawing.Size(1166, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
-            // extendedToolStripStatusLabel1
-            // 
-            this.extendedToolStripStatusLabel1.GradientColourOne = System.Drawing.Color.Empty;
-            this.extendedToolStripStatusLabel1.GradientColourTwo = System.Drawing.Color.Red;
-            this.extendedToolStripStatusLabel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.extendedToolStripStatusLabel1.Name = "extendedToolStripStatusLabel1";
-            this.extendedToolStripStatusLabel1.Size = new System.Drawing.Size(168, 17);
-            this.extendedToolStripStatusLabel1.Text = "extendedToolStripStatusLabel1";
-            // 
-            // extendedToolStripStatusLabel2
-            // 
-            this.extendedToolStripStatusLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.extendedToolStripStatusLabel2.ForeColor = System.Drawing.Color.DarkRed;
-            this.extendedToolStripStatusLabel2.GradientColourOne = System.Drawing.Color.Green;
-            this.extendedToolStripStatusLabel2.GradientColourTwo = System.Drawing.Color.Empty;
-            this.extendedToolStripStatusLabel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.extendedToolStripStatusLabel2.Name = "extendedToolStripStatusLabel2";
-            this.extendedToolStripStatusLabel2.Size = new System.Drawing.Size(865, 17);
-            this.extendedToolStripStatusLabel2.Spring = true;
-            this.extendedToolStripStatusLabel2.Text = "extendedToolStripStatusLabel2";
-            // 
             // tsTest
             // 
             this.tsTest.Dock = System.Windows.Forms.DockStyle.None;
@@ -677,6 +568,122 @@
             this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.helpToolStripButton.Text = "He&lp";
             // 
+            // kryptonToggleSwitchV11
+            // 
+            this.kryptonToggleSwitchV11.Location = new System.Drawing.Point(713, 204);
+            this.kryptonToggleSwitchV11.Name = "kryptonToggleSwitchV11";
+            this.kryptonToggleSwitchV11.Size = new System.Drawing.Size(79, 27);
+            this.kryptonToggleSwitchV11.State = ExtendedControls.ExtendedToolkit.Controls.Experimental.ToggleSwitches.KryptonToggleSwitchV1.ToggleState.ONOFF;
+            this.kryptonToggleSwitchV11.TabIndex = 3;
+            this.kryptonToggleSwitchV11.Text = "kryptonToggleSwitchV11";
+            this.kryptonToggleSwitchV11.Toggled = false;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kryptonNumericUpDownToolStripItem1,
+            this.toolStripMenuItemUACSheld1});
+            this.toolStrip1.Location = new System.Drawing.Point(634, 123);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(251, 25);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // kryptonNumericUpDownToolStripItem1
+            // 
+            this.kryptonNumericUpDownToolStripItem1.Name = "kryptonNumericUpDownToolStripItem1";
+            this.kryptonNumericUpDownToolStripItem1.Size = new System.Drawing.Size(45, 22);
+            this.kryptonNumericUpDownToolStripItem1.Text = "0";
+            this.kryptonNumericUpDownToolStripItem1.Value = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            // 
+            // toolStripMenuItemUACSheld1
+            // 
+            this.toolStripMenuItemUACSheld1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemUACSheld1.Image")));
+            this.toolStripMenuItemUACSheld1.Name = "toolStripMenuItemUACSheld1";
+            this.toolStripMenuItemUACSheld1.Size = new System.Drawing.Size(194, 25);
+            this.toolStripMenuItemUACSheld1.Text = "toolStripMenuItemUACSheld1";
+            // 
+            // krtbEditor
+            // 
+            this.krtbEditor.Location = new System.Drawing.Point(13, 28);
+            this.krtbEditor.Name = "krtbEditor";
+            this.krtbEditor.Size = new System.Drawing.Size(614, 539);
+            this.krtbEditor.TabIndex = 1;
+            this.krtbEditor.Text = "";
+            // 
+            // klblAdminMode
+            // 
+            this.klblAdminMode.Location = new System.Drawing.Point(633, 28);
+            this.klblAdminMode.Name = "klblAdminMode";
+            this.klblAdminMode.Size = new System.Drawing.Size(283, 26);
+            this.klblAdminMode.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblAdminMode.TabIndex = 0;
+            this.klblAdminMode.Values.Text = "Is running in Administrator mode: No";
+            // 
+            // kryptonRichTextBoxExtended1
+            // 
+            this.kryptonRichTextBoxExtended1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonRichTextBoxExtended1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonRichTextBoxExtended1.Name = "kryptonRichTextBoxExtended1";
+            this.kryptonRichTextBoxExtended1.SelectionAlignment = ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended.TextAlignment.LEFT;
+            this.kryptonRichTextBoxExtended1.Size = new System.Drawing.Size(100, 96);
+            this.kryptonRichTextBoxExtended1.TabIndex = 0;
+            this.kryptonRichTextBoxExtended1.Text = "";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.extendedToolStripStatusLabel1,
+            this.exttlAlert});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 578);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
+            this.statusStrip1.Size = new System.Drawing.Size(1166, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // extendedToolStripStatusLabel1
+            // 
+            this.extendedToolStripStatusLabel1.AlertBlinkInterval = 0;
+            this.extendedToolStripStatusLabel1.AlertColourOne = System.Drawing.Color.Empty;
+            this.extendedToolStripStatusLabel1.AlertColourTwo = System.Drawing.Color.Empty;
+            this.extendedToolStripStatusLabel1.AlertTextColour = System.Drawing.Color.Empty;
+            this.extendedToolStripStatusLabel1.GradientColourTwo = System.Drawing.Color.Red;
+            this.extendedToolStripStatusLabel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.extendedToolStripStatusLabel1.Name = "extendedToolStripStatusLabel1";
+            this.extendedToolStripStatusLabel1.Size = new System.Drawing.Size(168, 17);
+            this.extendedToolStripStatusLabel1.Text = "extendedToolStripStatusLabel1";
+            this.extendedToolStripStatusLabel1.TextGlow = System.Drawing.Color.Empty;
+            this.extendedToolStripStatusLabel1.TextGlowSpread = 0;
+            // 
+            // exttlAlert
+            // 
+            this.exttlAlert.Alert = true;
+            this.exttlAlert.AlertColourOne = System.Drawing.Color.Black;
+            this.exttlAlert.AlertColourTwo = System.Drawing.Color.White;
+            this.exttlAlert.GradientColourOne = System.Drawing.Color.Empty;
+            this.exttlAlert.GradientColourTwo = System.Drawing.Color.Empty;
+            this.exttlAlert.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.exttlAlert.Name = "exttlAlert";
+            this.exttlAlert.Size = new System.Drawing.Size(168, 17);
+            this.exttlAlert.Text = "extendedToolStripStatusLabel2";
+            this.exttlAlert.TextGlow = System.Drawing.Color.Empty;
+            this.exttlAlert.TextGlowSpread = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -695,12 +702,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
+            this.tsTest.ResumeLayout(false);
+            this.tsTest.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.tsTest.ResumeLayout(false);
-            this.tsTest.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -765,8 +772,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kPal;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel extendedToolStripStatusLabel1;
-        private ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel extendedToolStripStatusLabel2;
         private System.Windows.Forms.ToolStrip tsTest;
         private System.Windows.Forms.ToolStripButton newToolStripButton;
         private System.Windows.Forms.ToolStripButton openToolStripButton;
@@ -778,6 +783,8 @@
         private System.Windows.Forms.ToolStripButton pasteToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
+        private ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel extendedToolStripStatusLabel1;
+        private ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel exttlAlert;
     }
 }
 
