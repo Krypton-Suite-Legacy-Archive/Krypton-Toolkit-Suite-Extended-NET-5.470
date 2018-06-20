@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Base.Enumerations;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -25,7 +26,7 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         KryptonPalette _kryptonPalette;
         #endregion
 
-        bool _alert, _enableBlinking;
+        bool _alert, _enableBlinking, _bkClr, _fadeText;
 
         Color _textColour, _backGradient1, _backGradient2, _textGlow, _alertColour1, _alertColour2, _alertTextColour;
 
@@ -33,11 +34,17 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
 
         LinearGradientMode _linearGradientMode;
 
-        int _textGlowSpread, _flashInterval;
+        int _textGlowSpread, _flashInterval, _fadeInteval;
 
-        Timer _alertFlashTimer;
+        int[] _targetColour, _fadeRGB;
+
+        Timer _alertFlashTimer, _fadeAnimationTimer;
 
         long _blinkDuration;
+
+        BlinkState _blinkState;
+
+        short _cycleInterval;
         #endregion
 
         #region Properties        
@@ -78,6 +85,39 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
             set
             {
                 _enableBlinking = value;
+            }
+        }
+
+        public bool BkClr
+        {
+            get
+            {
+                return _bkClr;
+            }
+
+            set
+            {
+                _bkClr = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether [enable fade animation].
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [enable fade animation]; otherwise, <c>false</c>.
+        /// </value>
+        [DefaultValue(false), Description("Enables a fade text animation."), Category("Fade Settings")]
+        public bool EnableFadeAnimation
+        {
+            get
+            {
+                return _fadeText;
+            }
+
+            set
+            {
+                _fadeText = value;
             }
         }
 
@@ -276,6 +316,26 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         }
 
         /// <summary>
+        /// Gets or sets the fade interval.
+        /// </summary>
+        /// <value>
+        /// The fade interval.
+        /// </value>
+        [DefaultValue(10), Description("The fade timer interval."), Category("Fade Settings")]
+        public int FadeInterval
+        {
+            get
+            {
+                return _fadeInteval;
+            }
+
+            set
+            {
+                _fadeInteval = value;
+            }
+        }
+
+        /// <summary>
         /// Gets or sets the duration of the blink.
         /// </summary>
         /// <value>
@@ -294,12 +354,44 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
                 _blinkDuration = value;
             }
         }
+
+        public BlinkState BlinkState
+        {
+            get
+            {
+                return _blinkState;
+            }
+
+            set
+            {
+                _blinkState = value;
+            }
+        }
+
+        public short CycleInterval
+        {
+            get
+            {
+                return _cycleInterval;
+            }
+
+            set
+            {
+                _cycleInterval = value;
+            }
+        }
         #endregion
 
         #region Constructors
         public ExtendedToolStripStatusLabel()
         {
             Alert = false;
+
+            BkClr = false;
+
+            EnableBlinking = true;
+
+            EnableFadeAnimation = false;
 
             AlertColourOne = Color.White;
 
@@ -319,42 +411,18 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
 
             AlertBlinkInterval = 256;
 
+            FadeInterval = 10;
+
+            _targetColour =  { Convert.ToInt32(ForeColor.R), Convert.ToInt32(ForeColor.G), Convert.ToInt32(ForeColor.B) };
+
+            _fadeRGB = new int[3];
+
             BlinkDuration = 10;
+
+            BlinkState = BlinkState.NormalBlink;
+
+            CycleInterval = 2000;
         }
-
-        //public ExtendedToolStripStatusLabel(bool enableBlinking)
-        //{
-        //    if (enableBlinking)
-        //    {
-        //        _alertFlashTimer = new Timer();
-
-        //        _alertFlashTimer.Interval = AlertBlinkInterval;
-
-        //        if (enableBlinking)
-        //        {
-        //            _alertFlashTimer.Start();
-
-        //            _alertFlashTimer.Tick += AlertFlashTimer_Tick;
-
-        //            base.ForeColor = AlertTextColour;
-        //        }
-        //    }
-        //}
-
-        //private void AlertFlashTimer_Tick(object sender, EventArgs e)
-        //{
-        //    if (AlertColourOne != Color.Empty && AlertColourTwo != Color.Empty)
-        //    {
-        //        if (BackColor == AlertColourOne)
-        //        {
-        //            BackColor = AlertColourTwo;
-        //        }
-        //        else
-        //        {
-        //            BackColor = AlertColourOne;
-        //        }
-        //    }
-        //}
         #endregion
 
         #region Overrides
@@ -404,7 +472,40 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
                 g.DrawString(Text, typeface, brush, 0, 0);
             }
 
+            if (EnableBlinking)
+            {
+                switch (BlinkState)
+                {
+                    case BlinkState.NormalBlink:
+                        BlinkLabel(BlinkDuration);
+                        break;
+                    case BlinkState.SoftBlink:
+                        SoftBlink(AlertColourOne, AlertColourTwo, AlertTextColour, CycleInterval, BkClr, BlinkDuration);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            if (EnableFadeAnimation)
+            {
+                _fadeAnimationTimer = new Timer();
+
+                _fadeAnimationTimer.Interval = FadeInterval;
+
+                _fadeAnimationTimer.Enabled = true;
+
+                _fadeAnimationTimer.Tick += new EventHandler(FadeAnimationTimer_Tick);
+            }
+
             //base.OnPaint(e);
+        }
+        #endregion
+
+        #region Event Handlers
+        private void FadeAnimationTimer_Tick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
         #endregion
 
@@ -420,6 +521,7 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
         /// <summary>
         /// Blinks the label.
         /// </summary>
+        /// <param name="blinkDuration">Duration of the blink.</param>
         public async void BlinkLabel(long blinkDuration)
         {
             var sw = Stopwatch.StartNew();
@@ -448,6 +550,15 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
             sw.Stop();
         }
 
+        /// <summary>
+        /// Softs the blink.
+        /// </summary>
+        /// <param name="alertColour1">The alert colour1.</param>
+        /// <param name="alertColour2">The alert colour2.</param>
+        /// <param name="alertTextColour">The alert text colour.</param>
+        /// <param name="cycleInterval">The cycle interval.</param>
+        /// <param name="bkClr">if set to <c>true</c> [bk color].</param>
+        /// <param name="blinkDuration">Duration of the blink.</param>
         public async void SoftBlink(Color alertColour1, Color alertColour2, Color alertTextColour, short cycleInterval, bool bkClr, long blinkDuration)
         {
             var sw = Stopwatch.StartNew();

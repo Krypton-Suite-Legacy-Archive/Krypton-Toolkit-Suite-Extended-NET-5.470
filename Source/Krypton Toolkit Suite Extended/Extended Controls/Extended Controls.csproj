@@ -88,6 +88,7 @@
     <Compile Include="Base\Code\MostRecentlyUsedFileManager.cs" />
     <Compile Include="Base\Code\PI.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
+    <Compile Include="Base\Enumerations\Enumerations.cs" />
     <Compile Include="Base\UI\KryptonFormBase.cs">
       <SubType>Form</SubType>
     </Compile>

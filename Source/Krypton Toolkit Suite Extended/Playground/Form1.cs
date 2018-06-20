@@ -63,6 +63,8 @@ namespace Playground
             //kryptonCommandLinkVersion11.Note = "Hello";
 
             lblVersion.Text = $"Version: { currentVersion.ToString() }";
+
+            etslBlinkTest.SoftBlink(etslBlinkTest.AlertColourOne, etslBlinkTest.AlertColourTwo, etslBlinkTest.AlertTextColour, 2000, false, 5);
         }
 
         private void MyOwnRecentFileGotClicked_Handler(object sender, EventArgs e)

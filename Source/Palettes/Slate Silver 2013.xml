@@ -1,0 +1,572 @@
+<?xml version="1.0"?>
+<!--Created by exporting the settings of a KryptonPalette instance.-->
+<!--For more information about Krypton visit www.ComponentFactory.com-->
+<!--WARNING: Modifying this file may render it invalid for importing.-->
+<KryptonPalette Version="18" Generated="Wednesday, 20 June 2018, 19:11">
+  <Properties>
+    <ButtonStyles>
+      <ButtonCommon>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="Black" />
+            </ShortText>
+            <LongText>
+              <Color1 Type="Color" Value="Black" />
+            </LongText>
+          </Content>
+        </StateCommon>
+        <StateDisabled>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+            <Color2 Type="Color" Value="164, 181, 192" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="Silver" />
+            </ShortText>
+            <LongText>
+              <Color1 Type="Color" Value="Silver" />
+            </LongText>
+          </Content>
+        </StateDisabled>
+        <StateNormal>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+            <Color2 Type="Color" Value="164, 181, 192" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="Black" />
+              <Color2 Type="Color" Value="Black" />
+            </ShortText>
+          </Content>
+        </StateNormal>
+        <StateTracking>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+            <Color2 Type="Color" Value="79, 112, 133" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="Black" />
+            </ShortText>
+          </Content>
+        </StateTracking>
+        <StatePressed>
+          <Back>
+            <Color1 Type="Color" Value="117, 142, 158" />
+            <Color2 Type="Color" Value="79, 112, 133" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="Black" />
+            </ShortText>
+            <LongText>
+              <Color1 Type="Color" Value="Black" />
+            </LongText>
+          </Content>
+        </StatePressed>
+        <StateCheckedNormal>
+          <Back>
+            <Color1 Type="Color" Value="117, 142, 158" />
+            <Color2 Type="Color" Value="79, 112, 133" />
+            <ColorStyle Type="PaletteColorStyle" Value="GlassCheckedFull" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="Black" />
+            </ShortText>
+            <LongText>
+              <Color1 Type="Color" Value="Black" />
+            </LongText>
+          </Content>
+        </StateCheckedNormal>
+        <StateCheckedTracking>
+          <Back>
+            <Color1 Type="Color" Value="117, 142, 158" />
+            <Color2 Type="Color" Value="79, 112, 133" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+          </Border>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="Black" />
+            </ShortText>
+            <LongText>
+              <Color1 Type="Color" Value="Black" />
+            </LongText>
+          </Content>
+        </StateCheckedTracking>
+        <StateCheckedPressed>
+          <Back>
+            <Color1 Type="Color" Value="117, 142, 158" />
+            <Color2 Type="Color" Value="79, 112, 133" />
+            <ColorStyle Type="PaletteColorStyle" Value="GlassCheckedStump" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+          </Border>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="Black" />
+            </ShortText>
+            <LongText>
+              <Color1 Type="Color" Value="Black" />
+            </LongText>
+          </Content>
+        </StateCheckedPressed>
+        <OverrideDefault>
+          <Back>
+            <Color1 Type="Color" Value="117, 142, 158" />
+            <Color2 Type="Color" Value="210, 218, 224" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="Black" />
+            </ShortText>
+            <LongText>
+              <Color1 Type="Color" Value="Black" />
+            </LongText>
+          </Content>
+        </OverrideDefault>
+      </ButtonCommon>
+      <ButtonCluster>
+        <StateCommon>
+          <Back>
+            <ColorStyle Type="PaletteColorStyle" Value="GlassNormalFull" />
+          </Back>
+        </StateCommon>
+        <StateNormal>
+          <Back>
+            <Color1 Type="Color" Value="79, 112, 133" />
+          </Back>
+        </StateNormal>
+        <StateTracking>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+          </Back>
+        </StateTracking>
+        <StatePressed>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+          </Back>
+        </StatePressed>
+        <StateCheckedNormal>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+          </Back>
+        </StateCheckedNormal>
+        <OverrideDefault>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+          </Back>
+        </OverrideDefault>
+        <OverrideFocus>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+          </Back>
+        </OverrideFocus>
+      </ButtonCluster>
+    </ButtonStyles>
+    <Common>
+      <StateCommon>
+        <Back>
+          <Color1 Type="Color" Value="242, 247, 247" />
+          <Color2 Type="Color" Value="164, 181, 192" />
+        </Back>
+        <Border>
+          <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+          <Color1 Type="Color" Value="164, 181, 192" />
+          <Color2 Type="Color" Value="189, 177, 65" />
+        </Border>
+        <Content>
+          <ShortText>
+            <Color1 Type="Color" Value="Black" />
+            <Color2 Type="Color" Value="Black" />
+          </ShortText>
+          <LongText>
+            <Color1 Type="Color" Value="Black" />
+            <Color2 Type="Color" Value="Black" />
+          </LongText>
+        </Content>
+      </StateCommon>
+    </Common>
+    <FormStyles>
+      <FormCommon>
+        <StateActive>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+          </Border>
+        </StateActive>
+      </FormCommon>
+    </FormStyles>
+    <HeaderStyles>
+      <HeaderCommon>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+            <Color2 Type="Color" Value="79, 112, 133" />
+          </Back>
+        </StateCommon>
+        <StateDisabled>
+          <Back>
+            <Color1 Type="Color" Value="79, 112, 133" />
+            <Color2 Type="Color" Value="117, 142, 158" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="Gray" />
+              <Color2 Type="Color" Value="Gray" />
+            </ShortText>
+            <LongText>
+              <Color1 Type="Color" Value="Gray" />
+              <Color2 Type="Color" Value="164, 181, 192" />
+            </LongText>
+          </Content>
+        </StateDisabled>
+      </HeaderCommon>
+      <HeaderForm>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+            <Color2 Type="Color" Value="79, 112, 133" />
+          </Back>
+        </StateCommon>
+        <StateDisabled>
+          <Back>
+            <Color1 Type="Color" Value="Gray" />
+            <Color2 Type="Color" Value="164, 181, 192" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="Black" />
+            </ShortText>
+            <LongText>
+              <Color1 Type="Color" Value="Black" />
+            </LongText>
+          </Content>
+        </StateDisabled>
+      </HeaderForm>
+    </HeaderStyles>
+    <GridStyles>
+      <GridSheet>
+        <StateCommon>
+          <HeaderColumn>
+            <Content>
+              <Color1 Type="Color" Value="79, 112, 133" />
+            </Content>
+          </HeaderColumn>
+          <HeaderRow>
+            <Content>
+              <Color1 Type="Color" Value="79, 112, 133" />
+            </Content>
+          </HeaderRow>
+        </StateCommon>
+        <StateNormal>
+          <HeaderColumn>
+            <Content>
+              <Color1 Type="Color" Value="104, 17, 19" />
+              <Color2 Type="Color" Value="79, 112, 133" />
+            </Content>
+          </HeaderColumn>
+          <HeaderRow>
+            <Content>
+              <Color1 Type="Color" Value="104, 17, 19" />
+            </Content>
+          </HeaderRow>
+        </StateNormal>
+        <StateTracking>
+          <HeaderColumn>
+            <Content>
+              <Color1 Type="Color" Value="104, 17, 19" />
+            </Content>
+          </HeaderColumn>
+        </StateTracking>
+      </GridSheet>
+    </GridStyles>
+    <InputControlStyles>
+      <InputControlCommon>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+          </Back>
+        </StateCommon>
+      </InputControlCommon>
+      <InputControlCustom1>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+          </Back>
+        </StateCommon>
+      </InputControlCustom1>
+    </InputControlStyles>
+    <LabelStyles>
+      <LabelNormalControl>
+        <StateDisabled>
+          <ShortText>
+            <Color1 Type="Color" Value="Gray" />
+          </ShortText>
+          <LongText>
+            <Color1 Type="Color" Value="Gray" />
+          </LongText>
+        </StateDisabled>
+        <StateNormal>
+          <ShortText>
+            <Color1 Type="Color" Value="Black" />
+          </ShortText>
+          <LongText>
+            <Color1 Type="Color" Value="Black" />
+          </LongText>
+        </StateNormal>
+        <OverrideVisited>
+          <ShortText>
+            <Color1 Type="Color" Value="Purple" />
+          </ShortText>
+          <LongText>
+            <Color1 Type="Color" Value="79, 112, 133" />
+          </LongText>
+        </OverrideVisited>
+        <OverrideNotVisited>
+          <ShortText>
+            <Color1 Type="Color" Value="Blue" />
+          </ShortText>
+          <LongText>
+            <Color1 Type="Color" Value="Black" />
+          </LongText>
+        </OverrideNotVisited>
+        <OverridePressed>
+          <ShortText>
+            <Color1 Type="Color" Value="Red" />
+          </ShortText>
+          <LongText>
+            <Color1 Type="Color" Value="Black" />
+          </LongText>
+        </OverridePressed>
+      </LabelNormalControl>
+    </LabelStyles>
+    <PanelStyles>
+      <PanelCommon>
+        <StateCommon>
+          <Color1 Type="Color" Value="164, 181, 192" />
+        </StateCommon>
+      </PanelCommon>
+    </PanelStyles>
+    <Ribbon>
+      <RibbonAppButton>
+        <StateCommon>
+          <BackColor2 Type="Color" Value="164, 181, 192" />
+          <BackColor3 Type="Color" Value="79, 112, 133" />
+          <BackColor5 Type="Color" Value="164, 181, 192" />
+        </StateCommon>
+        <StateTracking>
+          <BackColor5 Type="Color" Value="189, 177, 65" />
+        </StateTracking>
+        <StatePressed>
+          <BackColor5 Type="Color" Value="164, 181, 192" />
+        </StatePressed>
+      </RibbonAppButton>
+      <RibbonGroupArea>
+        <StateCheckedNormal>
+          <BackColor1 Type="Color" Value="164, 181, 192" />
+          <BackColor2 Type="Color" Value="AliceBlue" />
+          <BackColor3 Type="Color" Value="164, 181, 192" />
+          <BackColor4 Type="Color" Value="164, 181, 192" />
+          <BackColor5 Type="Color" Value="164, 181, 192" />
+        </StateCheckedNormal>
+      </RibbonGroupArea>
+      <RibbonGroupButtonText>
+        <StateCommon>
+          <TextColor Type="Color" Value="MintCream" />
+        </StateCommon>
+      </RibbonGroupButtonText>
+      <RibbonGroupCheckBoxText>
+        <StateCommon>
+          <TextColor Type="Color" Value="MintCream" />
+        </StateCommon>
+      </RibbonGroupCheckBoxText>
+      <RibbonGroupNormalBorder>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="189, 177, 65" />
+          <BackColor2 Type="Color" Value="164, 181, 192" />
+        </StateCommon>
+      </RibbonGroupNormalBorder>
+      <RibbonGroupNormalTitle>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="230, 230, 230" />
+          <BackColor2 Type="Color" Value="164, 181, 192" />
+          <TextColor Type="Color" Value="MintCream" />
+        </StateCommon>
+        <StateTracking>
+          <BackColor1 Type="Color" Value="237, 237, 237" />
+          <BackColor2 Type="Color" Value="164, 181, 192" />
+        </StateTracking>
+      </RibbonGroupNormalTitle>
+      <RibbonGroupCollapsedBorder>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="164, 181, 192" />
+          <BackColor2 Type="Color" Value="79, 112, 133" />
+          <BackColor3 Type="Color" Value="117, 142, 158" />
+          <BackColor4 Type="Color" Value="164, 181, 192" />
+          <BackColor5 Type="Color" Value="164, 181, 192" />
+        </StateCommon>
+      </RibbonGroupCollapsedBorder>
+      <RibbonGroupCollapsedBack>
+        <StateNormal>
+          <BackColor1 Type="Color" Value="Window" />
+          <BackColor2 Type="Color" Value="164, 181, 192" />
+          <BackColor3 Type="Color" Value="117, 142, 158" />
+          <BackColor4 Type="Color" Value="164, 181, 192" />
+        </StateNormal>
+        <StateTracking>
+          <BackColor1 Type="Color" Value="Window" />
+          <BackColor2 Type="Color" Value="79, 112, 133" />
+          <BackColor3 Type="Color" Value="230, 230, 230" />
+          <BackColor4 Type="Color" Value="164, 181, 192" />
+        </StateTracking>
+      </RibbonGroupCollapsedBack>
+      <RibbonGroupCollapsedFrameBorder>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="79, 112, 133" />
+          <BackColor2 Type="Color" Value="230, 230, 230" />
+        </StateCommon>
+      </RibbonGroupCollapsedFrameBorder>
+      <RibbonGroupCollapsedFrameBack>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="164, 181, 192" />
+          <BackColor2 Type="Color" Value="164, 181, 192" />
+          <BackColor3 Type="Color" Value="117, 142, 158" />
+          <BackColor4 Type="Color" Value="117, 142, 158" />
+          <BackColor5 Type="Color" Value="164, 181, 192" />
+        </StateCommon>
+      </RibbonGroupCollapsedFrameBack>
+      <RibbonGroupCollapsedText>
+        <StateCommon>
+          <TextColor Type="Color" Value="Black" />
+        </StateCommon>
+      </RibbonGroupCollapsedText>
+      <RibbonQATFullbar>
+        <BackColor1 Type="Color" Value="164, 181, 192" />
+        <BackColor2 Type="Color" Value="164, 181, 192" />
+        <BackColor3 Type="Color" Value="164, 181, 192" />
+      </RibbonQATFullbar>
+      <RibbonQATMinibar>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="164, 181, 192" />
+          <BackColor2 Type="Color" Value="164, 181, 192" />
+          <BackColor3 Type="Color" Value="164, 181, 192" />
+          <BackColor4 Type="Color" Value="164, 181, 192" />
+        </StateCommon>
+      </RibbonQATMinibar>
+      <RibbonQATOverflow>
+        <BackColor1 Type="Color" Value="164, 181, 192" />
+        <BackColor2 Type="Color" Value="164, 181, 192" />
+      </RibbonQATOverflow>
+      <RibbonTab>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="164, 181, 192" />
+          <BackColor3 Type="Color" Value="164, 181, 192" />
+          <BackColor4 Type="Color" Value="79, 112, 133" />
+          <BackColor5 Type="Color" Value="79, 112, 133" />
+          <TextColor Type="Color" Value="Black" />
+        </StateCommon>
+        <StateTracking>
+          <BackColor2 Type="Color" Value="164, 181, 192" />
+        </StateTracking>
+        <StateCheckedTracking>
+          <BackColor1 Type="Color" Value="164, 181, 192" />
+          <BackColor2 Type="Color" Value="79, 112, 133" />
+          <BackColor3 Type="Color" Value="189, 177, 65" />
+          <BackColor4 Type="Color" Value="164, 181, 192" />
+        </StateCheckedTracking>
+        <StateContextCheckedTracking>
+          <BackColor2 Type="Color" Value="164, 181, 192" />
+        </StateContextCheckedTracking>
+      </RibbonTab>
+    </Ribbon>
+    <SeparatorStyles>
+      <SeparatorCommon>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="164, 181, 192" />
+            <Color2 Type="Color" Value="164, 181, 192" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="164, 181, 192" />
+            <Color2 Type="Color" Value="164, 181, 192" />
+          </Border>
+        </StateCommon>
+      </SeparatorCommon>
+    </SeparatorStyles>
+    <ToolMenuStatus>
+      <Button>
+        <ButtonPressedBorder Type="Color" Value="164, 181, 192" />
+        <ButtonSelectedBorder Type="Color" Value="164, 181, 192" />
+        <OverflowButtonGradientBegin Type="Color" Value="79, 112, 133" />
+        <OverflowButtonGradientEnd Type="Color" Value="164, 181, 192" />
+        <OverflowButtonGradientMiddle Type="Color" Value="164, 181, 192" />
+      </Button>
+      <Grip>
+        <GripDark Type="Color" Value="164, 181, 192" />
+        <GripLight Type="Color" Value="MintCream" />
+      </Grip>
+      <Menu>
+        <ImageMarginGradientBegin Type="Color" Value="164, 181, 192" />
+        <ImageMarginGradientEnd Type="Color" Value="79, 112, 133" />
+        <ImageMarginGradientMiddle Type="Color" Value="117, 142, 158" />
+        <ImageMarginRevealedGradientBegin Type="Color" Value="164, 181, 192" />
+        <ImageMarginRevealedGradientEnd Type="Color" Value="79, 112, 133" />
+        <ImageMarginRevealedGradientMiddle Type="Color" Value="117, 142, 158" />
+        <MenuBorder Type="Color" Value="164, 181, 192" />
+        <MenuItemText Type="Color" Value="Black" />
+        <MenuItemBorder Type="Color" Value="79, 112, 133" />
+        <MenuItemPressedGradientBegin Type="Color" Value="164, 181, 192" />
+        <MenuItemPressedGradientEnd Type="Color" Value="79, 112, 133" />
+        <MenuItemPressedGradientMiddle Type="Color" Value="79, 112, 133" />
+        <MenuItemSelected Type="Color" Value="164, 181, 192" />
+        <MenuItemSelectedGradientBegin Type="Color" Value="79, 112, 133" />
+        <MenuItemSelectedGradientEnd Type="Color" Value="164, 181, 192" />
+      </Menu>
+      <Rafting>
+        <RaftingContainerGradientBegin Type="Color" Value="117, 142, 158" />
+        <RaftingContainerGradientEnd Type="Color" Value="79, 112, 133" />
+      </Rafting>
+      <MenuStrip>
+        <MenuStripText Type="Color" Value="Black" />
+        <MenuStripGradientBegin Type="Color" Value="164, 181, 192" />
+        <MenuStripGradientEnd Type="Color" Value="79, 112, 133" />
+      </MenuStrip>
+      <Separator>
+        <SeparatorDark Type="Color" Value="164, 181, 192" />
+        <SeparatorLight Type="Color" Value="MintCream" />
+      </Separator>
+      <StatusStrip>
+        <StatusStripText Type="Color" Value="Black" />
+        <StatusStripGradientBegin Type="Color" Value="117, 142, 158" />
+        <StatusStripGradientEnd Type="Color" Value="164, 181, 192" />
+      </StatusStrip>
+      <ToolStrip>
+        <ToolStripText Type="Color" Value="Black" />
+        <ToolStripBorder Type="Color" Value="79, 112, 133" />
+        <ToolStripContentPanelGradientBegin Type="Color" Value="164, 181, 192" />
+        <ToolStripContentPanelGradientEnd Type="Color" Value="79, 112, 133" />
+        <ToolStripDropDownBackground Type="Color" Value="117, 142, 158" />
+        <ToolStripGradientBegin Type="Color" Value="79, 112, 133" />
+        <ToolStripGradientEnd Type="Color" Value="164, 181, 192" />
+        <ToolStripGradientMiddle Type="Color" Value="164, 181, 192" />
+        <ToolStripPanelGradientBegin Type="Color" Value="164, 181, 192" />
+        <ToolStripPanelGradientEnd Type="Color" Value="79, 112, 133" />
+      </ToolStrip>
+    </ToolMenuStatus>
+    <BasePaletteMode Type="PaletteMode" Value="Office2013" />
+  </Properties>
+  <Images />
+</KryptonPalette>

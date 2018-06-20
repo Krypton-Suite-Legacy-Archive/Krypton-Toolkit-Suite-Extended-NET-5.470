@@ -4,6 +4,15 @@
 
 ## An extension to the Krypton Toolkit suite of controls for .NET framework 4.7 
 
+## NOTE: 20/06/2018 Background menu colours will be implemented in the comming weeks. Stay tuned for updates!
+
+======
+
+## 2018-06-2018 Slate silver theme
+* One **new** theme called `Slate Silver`, stylised for the 2007/2010 and 2013 theme sets.
+
+======
+
 ## 2018-06-11 New palettes & gradeint toolstrip label
 * There are now 50+ **new** palettes to choose from.
 * A new toolstrip label capable of background gradeints is now available to use, as per [#28](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-4.70/issues/28).
