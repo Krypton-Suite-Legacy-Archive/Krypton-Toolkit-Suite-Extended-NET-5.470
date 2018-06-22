@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\Bin\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -109,6 +109,7 @@
     <Compile Include="ExtendedToolkit\Controls\Experimental\Toggle Switches\KryptonToggleSwitchV1.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\ExtendedKryptonLinkLabel.cs" />
     <Compile Include="ExtendedToolkit\Controls\ExtendedProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>

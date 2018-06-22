@@ -61,6 +61,7 @@
     <Compile Include="Classes\Colours\PaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\RawPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\WIN32.cs" />
+    <Compile Include="Classes\Other\ConversionMethods.cs" />
     <Compile Include="Classes\Other\ToolStripNonClientRenderer.cs" />
     <Compile Include="Controls\Colours\ColourEditorManager.cs">
       <SubType>Component</SubType>
@@ -111,6 +112,12 @@
     <Compile Include="UX\ColourPickerDialog.Designer.cs">
       <DependentUpon>ColourPickerDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="UX\ColourRGBToHexadecimalConverter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\ColourRGBToHexadecimalConverter.Designer.cs">
+      <DependentUpon>ColourRGBToHexadecimalConverter.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -120,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\ColourPickerDialog.resx">
       <DependentUpon>ColourPickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\ColourRGBToHexadecimalConverter.resx">
+      <DependentUpon>ColourRGBToHexadecimalConverter.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

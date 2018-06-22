@@ -8,6 +8,11 @@
 
 ======
 
+## 2018-06-21 Build paths
+* Reset build paths, so no errors should be incurred.
+
+======
+
 ## 2018-06-2018 Slate silver theme
 * One **new** theme called `Slate Silver`, stylised for the 2007/2010 and 2013 theme sets.
 

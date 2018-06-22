@@ -77,6 +77,7 @@
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tsTest = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -98,6 +99,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
+            this.kryptonLinkLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -453,6 +455,8 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonLinkLabel1);
+            this.kryptonPanel1.Controls.Add(this.kryptonButton1);
             this.kryptonPanel1.Controls.Add(this.tsTest);
             this.kryptonPanel1.Controls.Add(this.kryptonToggleSwitchV11);
             this.kryptonPanel1.Controls.Add(this.toolStrip1);
@@ -463,6 +467,15 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 600);
             this.kryptonPanel1.TabIndex = 2;
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(838, 296);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton1.TabIndex = 5;
+            this.kryptonButton1.Values.Text = "Convert Colour";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // tsTest
             // 
@@ -484,6 +497,7 @@
             this.tsTest.Size = new System.Drawing.Size(208, 25);
             this.tsTest.TabIndex = 4;
             this.tsTest.Text = "toolStrip2";
+            this.tsTest.Visible = false;
             // 
             // newToolStripButton
             // 
@@ -576,6 +590,7 @@
             this.kryptonToggleSwitchV11.TabIndex = 3;
             this.kryptonToggleSwitchV11.Text = "kryptonToggleSwitchV11";
             this.kryptonToggleSwitchV11.Toggled = false;
+            this.kryptonToggleSwitchV11.Visible = false;
             // 
             // toolStrip1
             // 
@@ -656,12 +671,26 @@
             // 
             // etslBlinkTest
             // 
+            this.etslBlinkTest.BackColor = System.Drawing.Color.Empty;
+            this.etslBlinkTest.BkClr = false;
             this.etslBlinkTest.BlinkDuration = ((long)(10));
-            this.etslBlinkTest.GradientColourOne = System.Drawing.Color.Empty;
-            this.etslBlinkTest.GradientColourTwo = System.Drawing.Color.Empty;
+            this.etslBlinkTest.BlinkState = ExtendedControls.Base.Enumerations.BlinkState.NormalBlink;
+            this.etslBlinkTest.CycleInterval = ((short)(2000));
+            this.etslBlinkTest.EnableBlinking = true;
+            this.etslBlinkTest.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.etslBlinkTest.GradientColourOne = System.Drawing.Color.Lime;
+            this.etslBlinkTest.GradientColourTwo = System.Drawing.Color.Red;
             this.etslBlinkTest.Name = "etslBlinkTest";
             this.etslBlinkTest.Size = new System.Drawing.Size(168, 17);
             this.etslBlinkTest.Text = "extendedToolStripStatusLabel2";
+            // 
+            // kryptonLinkLabel1
+            // 
+            this.kryptonLinkLabel1.Location = new System.Drawing.Point(727, 347);
+            this.kryptonLinkLabel1.Name = "kryptonLinkLabel1";
+            this.kryptonLinkLabel1.Size = new System.Drawing.Size(110, 20);
+            this.kryptonLinkLabel1.TabIndex = 6;
+            this.kryptonLinkLabel1.Values.Text = "kryptonLinkLabel1";
             // 
             // Form1
             // 
@@ -763,6 +792,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel etslBlinkTest;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel kryptonLinkLabel1;
     }
 }
 

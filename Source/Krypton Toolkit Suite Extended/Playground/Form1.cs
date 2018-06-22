@@ -9,6 +9,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using Tooling.Classes.Other;
+using Tooling.UX;
 
 namespace Playground
 {
@@ -156,6 +157,13 @@ namespace Playground
 
                 mostRecentlyUsedFileManager.AddRecentFile(Path.GetFullPath(saveFileDialog.FileName));
             }
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            ColourRGBToHexadecimalConverter colourRGBToHexadecimalConverter = new ColourRGBToHexadecimalConverter();
+
+            colourRGBToHexadecimalConverter.Show();
         }
     }
 }

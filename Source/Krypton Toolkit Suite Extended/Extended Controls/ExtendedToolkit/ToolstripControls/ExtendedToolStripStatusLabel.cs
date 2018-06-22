@@ -413,7 +413,7 @@ namespace ExtendedControls.ExtendedToolkit.ToolstripControls
 
             FadeInterval = 10;
 
-            _targetColour =  { Convert.ToInt32(ForeColor.R), Convert.ToInt32(ForeColor.G), Convert.ToInt32(ForeColor.B) };
+            //_targetColour =  { Convert.ToInt32(ForeColor.R), Convert.ToInt32(ForeColor.G), Convert.ToInt32(ForeColor.B) };
 
             _fadeRGB = new int[3];
 
