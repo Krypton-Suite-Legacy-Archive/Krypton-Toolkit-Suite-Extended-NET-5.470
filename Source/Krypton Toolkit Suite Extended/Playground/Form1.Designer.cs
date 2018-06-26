@@ -1,4 +1,6 @@
-﻿namespace Playground
+﻿using System.Windows.Forms;
+
+namespace Playground
 {
     partial class Form1
     {
@@ -77,6 +79,14 @@
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.tsAlignLeft = new System.Windows.Forms.ToolStripButton();
+            this.tsAlignCentre = new System.Windows.Forms.ToolStripButton();
+            this.tsAlignRight = new System.Windows.Forms.ToolStripButton();
+            this.tsJustify = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsInsertText = new System.Windows.Forms.ToolStripButton();
+            this.rxrbTextPad = new ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tsTest = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -89,7 +99,6 @@
             this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.kryptonToggleSwitchV11 = new ExtendedControls.ExtendedToolkit.Controls.Experimental.ToggleSwitches.KryptonToggleSwitchV1();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.kryptonNumericUpDownToolStripItem1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.KryptonNumericUpDownToolStripItem();
             this.toolStripMenuItemUACSheld1 = new KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
@@ -99,10 +108,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
-            this.kryptonLinkLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.tsTest.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -167,7 +176,7 @@
             // 
             // kuacsbElevate
             // 
-            this.kuacsbElevate.Location = new System.Drawing.Point(633, 296);
+            this.kuacsbElevate.Location = new System.Drawing.Point(634, 85);
             this.kuacsbElevate.Name = "kuacsbElevate";
             this.kuacsbElevate.Size = new System.Drawing.Size(135, 26);
             this.kuacsbElevate.TabIndex = 0;
@@ -455,10 +464,11 @@
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.kryptonLinkLabel1);
+            this.kryptonPanel1.Controls.Add(this.toolStrip2);
+            this.kryptonPanel1.Controls.Add(this.rxrbTextPad);
             this.kryptonPanel1.Controls.Add(this.kryptonButton1);
+            this.kryptonPanel1.Controls.Add(this.kuacsbElevate);
             this.kryptonPanel1.Controls.Add(this.tsTest);
-            this.kryptonPanel1.Controls.Add(this.kryptonToggleSwitchV11);
             this.kryptonPanel1.Controls.Add(this.toolStrip1);
             this.kryptonPanel1.Controls.Add(this.krtbEditor);
             this.kryptonPanel1.Controls.Add(this.klblAdminMode);
@@ -468,9 +478,90 @@
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 600);
             this.kryptonPanel1.TabIndex = 2;
             // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsAlignLeft,
+            this.tsAlignCentre,
+            this.tsAlignRight,
+            this.tsJustify,
+            this.toolStripSeparator2,
+            this.tsInsertText});
+            this.toolStrip2.Location = new System.Drawing.Point(634, 171);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(164, 25);
+            this.toolStrip2.TabIndex = 7;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // tsAlignLeft
+            // 
+            this.tsAlignLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsAlignLeft.Image = ((System.Drawing.Image)(resources.GetObject("tsAlignLeft.Image")));
+            this.tsAlignLeft.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsAlignLeft.Name = "tsAlignLeft";
+            this.tsAlignLeft.Size = new System.Drawing.Size(23, 22);
+            this.tsAlignLeft.Text = "toolStripButton1";
+            this.tsAlignLeft.Click += new System.EventHandler(this.tsAlignLeft_Click);
+            // 
+            // tsAlignCentre
+            // 
+            this.tsAlignCentre.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsAlignCentre.Image = ((System.Drawing.Image)(resources.GetObject("tsAlignCentre.Image")));
+            this.tsAlignCentre.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsAlignCentre.Name = "tsAlignCentre";
+            this.tsAlignCentre.Size = new System.Drawing.Size(23, 22);
+            this.tsAlignCentre.Text = "toolStripButton2";
+            this.tsAlignCentre.Click += new System.EventHandler(this.tsAlignCentre_Click);
+            // 
+            // tsAlignRight
+            // 
+            this.tsAlignRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsAlignRight.Image = ((System.Drawing.Image)(resources.GetObject("tsAlignRight.Image")));
+            this.tsAlignRight.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsAlignRight.Name = "tsAlignRight";
+            this.tsAlignRight.Size = new System.Drawing.Size(23, 22);
+            this.tsAlignRight.Text = "toolStripButton3";
+            this.tsAlignRight.Click += new System.EventHandler(this.tsAlignRight_Click);
+            // 
+            // tsJustify
+            // 
+            this.tsJustify.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsJustify.Image = ((System.Drawing.Image)(resources.GetObject("tsJustify.Image")));
+            this.tsJustify.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsJustify.Name = "tsJustify";
+            this.tsJustify.Size = new System.Drawing.Size(23, 22);
+            this.tsJustify.Text = "toolStripButton4";
+            this.tsJustify.Click += new System.EventHandler(this.tsJustify_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsInsertText
+            // 
+            this.tsInsertText.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsInsertText.Image = ((System.Drawing.Image)(resources.GetObject("tsInsertText.Image")));
+            this.tsInsertText.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsInsertText.Name = "tsInsertText";
+            this.tsInsertText.Size = new System.Drawing.Size(23, 22);
+            this.tsInsertText.Text = "Insert Text";
+            // 
+            // rxrbTextPad
+            // 
+            this.rxrbTextPad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rxrbTextPad.Location = new System.Drawing.Point(634, 202);
+            this.rxrbTextPad.Name = "rxrbTextPad";
+            this.rxrbTextPad.SelectionAlignments = ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended.TextAlignment.LEFT;
+            this.rxrbTextPad.Size = new System.Drawing.Size(520, 365);
+            this.rxrbTextPad.TabIndex = 6;
+            this.rxrbTextPad.Text = "kryptonRichTextBoxExtended2";
+            // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(838, 296);
+            this.kryptonButton1.Location = new System.Drawing.Point(888, 57);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(218, 25);
             this.kryptonButton1.TabIndex = 5;
@@ -581,17 +672,6 @@
             this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.helpToolStripButton.Text = "He&lp";
             // 
-            // kryptonToggleSwitchV11
-            // 
-            this.kryptonToggleSwitchV11.Location = new System.Drawing.Point(713, 204);
-            this.kryptonToggleSwitchV11.Name = "kryptonToggleSwitchV11";
-            this.kryptonToggleSwitchV11.Size = new System.Drawing.Size(79, 27);
-            this.kryptonToggleSwitchV11.State = ExtendedControls.ExtendedToolkit.Controls.Experimental.ToggleSwitches.KryptonToggleSwitchV1.ToggleState.ONOFF;
-            this.kryptonToggleSwitchV11.TabIndex = 3;
-            this.kryptonToggleSwitchV11.Text = "kryptonToggleSwitchV11";
-            this.kryptonToggleSwitchV11.Toggled = false;
-            this.kryptonToggleSwitchV11.Visible = false;
-            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -599,7 +679,7 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kryptonNumericUpDownToolStripItem1,
             this.toolStripMenuItemUACSheld1});
-            this.toolStrip1.Location = new System.Drawing.Point(634, 123);
+            this.toolStrip1.Location = new System.Drawing.Point(634, 57);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(251, 25);
             this.toolStrip1.TabIndex = 2;
@@ -645,7 +725,7 @@
             this.kryptonRichTextBoxExtended1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonRichTextBoxExtended1.Location = new System.Drawing.Point(0, 0);
             this.kryptonRichTextBoxExtended1.Name = "kryptonRichTextBoxExtended1";
-            this.kryptonRichTextBoxExtended1.SelectionAlignment = ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended.TextAlignment.LEFT;
+            this.kryptonRichTextBoxExtended1.SelectionAlignments = ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended.TextAlignment.LEFT;
             this.kryptonRichTextBoxExtended1.Size = new System.Drawing.Size(100, 96);
             this.kryptonRichTextBoxExtended1.TabIndex = 0;
             this.kryptonRichTextBoxExtended1.Text = "";
@@ -684,21 +764,12 @@
             this.etslBlinkTest.Size = new System.Drawing.Size(168, 17);
             this.etslBlinkTest.Text = "extendedToolStripStatusLabel2";
             // 
-            // kryptonLinkLabel1
-            // 
-            this.kryptonLinkLabel1.Location = new System.Drawing.Point(727, 347);
-            this.kryptonLinkLabel1.Name = "kryptonLinkLabel1";
-            this.kryptonLinkLabel1.Size = new System.Drawing.Size(110, 20);
-            this.kryptonLinkLabel1.TabIndex = 6;
-            this.kryptonLinkLabel1.Values.Text = "kryptonLinkLabel1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 600);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.kuacsbElevate);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.kryptonPanel1);
             this.MainMenuStrip = this.ms;
@@ -710,6 +781,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.tsTest.ResumeLayout(false);
             this.tsTest.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -776,7 +849,6 @@
         private ExtendedControls.ExtendedToolkit.ToolstripControls.KryptonNumericUpDownToolStripItem kryptonNumericUpDownToolStripItem1;
         private KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld toolStripMenuItemUACSheld1;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended kryptonRichTextBoxExtended1;
-        private ExtendedControls.ExtendedToolkit.Controls.Experimental.ToggleSwitches.KryptonToggleSwitchV1 kryptonToggleSwitchV11;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kPal;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
@@ -793,7 +865,14 @@
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel etslBlinkTest;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel kryptonLinkLabel1;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton tsAlignLeft;
+        private System.Windows.Forms.ToolStripButton tsAlignCentre;
+        private System.Windows.Forms.ToolStripButton tsAlignRight;
+        private System.Windows.Forms.ToolStripButton tsJustify;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton tsInsertText;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended rxrbTextPad;
     }
 }
 

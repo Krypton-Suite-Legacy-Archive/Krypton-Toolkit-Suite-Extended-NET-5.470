@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.ExtendedToolkit.Controls;
 using KryptonApplicationUpdater.Classes.SettingsManager;
 using KryptonApplicationUpdater.Interfaces;
 using KryptonExtendedToolkit.Base.Code;
@@ -164,6 +165,26 @@ namespace Playground
             ColourRGBToHexadecimalConverter colourRGBToHexadecimalConverter = new ColourRGBToHexadecimalConverter();
 
             colourRGBToHexadecimalConverter.Show();
+        }
+
+        private void tsAlignLeft_Click(object sender, EventArgs e)
+        {
+            rxrbTextPad.SelectionAlignments = KryptonRichTextBoxExtended.TextAlignment.LEFT;
+        }
+
+        private void tsAlignCentre_Click(object sender, EventArgs e)
+        {
+            rxrbTextPad.SelectionAlignments = KryptonRichTextBoxExtended.TextAlignment.CENTRE;
+        }
+
+        private void tsAlignRight_Click(object sender, EventArgs e)
+        {
+            rxrbTextPad.SelectionAlignments = KryptonRichTextBoxExtended.TextAlignment.RIGHT;
+        }
+
+        private void tsJustify_Click(object sender, EventArgs e)
+        {
+            rxrbTextPad.SelectionAlignments = KryptonRichTextBoxExtended.TextAlignment.JUSTIFY;
         }
     }
 }

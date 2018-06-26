@@ -101,6 +101,7 @@
     <Compile Include="Base\UI\Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Classes\AdvancedKryptonOutlookGrid.cs" />
     <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.cs" />
     <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.Designer.cs">
@@ -272,7 +273,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Enumerations\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
