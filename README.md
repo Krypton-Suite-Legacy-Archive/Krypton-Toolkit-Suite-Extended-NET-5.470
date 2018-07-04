@@ -2,7 +2,7 @@
 
 =======
 
-## Help needed! If anyone knows how to generate colours based on a base color, then please contribute to this project (4 colours are needed). Thanks!
+## Help needed! If anyone knows how to generate colours based on a base color, then please contribute to this project, as it'll be appreciated (4 colours are needed). Thanks!
 
 =======
 
