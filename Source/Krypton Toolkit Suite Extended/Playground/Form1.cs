@@ -1,5 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.ExtendedToolkit.Controls;
+using ExtendedControls.Enumerations;
 using KryptonApplicationUpdater.Classes.SettingsManager;
 using KryptonApplicationUpdater.Interfaces;
 using KryptonExtendedToolkit.Base.Code;
@@ -16,15 +16,11 @@ namespace Playground
 {
     public partial class Form1 : KryptonForm, IUpdatable
     {
-        UtilityMethods utilityMethods = new UtilityMethods();
-
-        InternalApplicationUpdaterSettingsManager internalApplicationUpdaterSettingsManager = new InternalApplicationUpdaterSettingsManager();
-
-        MostRecentlyUsedFileManager mostRecentlyUsedFileManager;
-
-        Version currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
-
-        ToolStripNonClientRenderer toolStripNonClientRenderer;
+        private UtilityMethods utilityMethods = new UtilityMethods();
+        private InternalApplicationUpdaterSettingsManager internalApplicationUpdaterSettingsManager = new InternalApplicationUpdaterSettingsManager();
+        private MostRecentlyUsedFileManager mostRecentlyUsedFileManager;
+        private Version currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
+        private ToolStripNonClientRenderer toolStripNonClientRenderer;
 
         public Form1()
         {
@@ -169,22 +165,36 @@ namespace Playground
 
         private void tsAlignLeft_Click(object sender, EventArgs e)
         {
-            rxrbTextPad.SelectionAlignments = KryptonRichTextBoxExtended.TextAlignment.LEFT;
+            rxrbTextPad.SelectionAlignment = TextAlignment.LEFT;
         }
 
         private void tsAlignCentre_Click(object sender, EventArgs e)
         {
-            rxrbTextPad.SelectionAlignments = KryptonRichTextBoxExtended.TextAlignment.CENTRE;
+            rxrbTextPad.SelectionAlignment = TextAlignment.CENTRE;
         }
 
         private void tsAlignRight_Click(object sender, EventArgs e)
         {
-            rxrbTextPad.SelectionAlignments = KryptonRichTextBoxExtended.TextAlignment.RIGHT;
+            rxrbTextPad.SelectionAlignment = TextAlignment.RIGHT;
         }
 
         private void tsJustify_Click(object sender, EventArgs e)
         {
-            rxrbTextPad.SelectionAlignments = KryptonRichTextBoxExtended.TextAlignment.JUSTIFY;
+            rxrbTextPad.SelectionAlignment = TextAlignment.JUSTIFY;
+        }
+
+        private void kbtnHexToRGB_Click(object sender, EventArgs e)
+        {
+            ColourHexadecimalToRGBConverter colourHexadecimalToRGBConverter = new ColourHexadecimalToRGBConverter();
+
+            colourHexadecimalToRGBConverter.Show();
+        }
+
+        private void kbtnColourMixer_Click(object sender, EventArgs e)
+        {
+            ColourMixer colourMixer = new ColourMixer(255, 255, 255, 255);
+
+            colourMixer.Show();
         }
     }
 }

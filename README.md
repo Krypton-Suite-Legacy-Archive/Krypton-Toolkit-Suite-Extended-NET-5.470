@@ -2,6 +2,10 @@
 
 =======
 
+## Help needed! If anyone knows how to generate colours based on a base color, then please contribute to this project (4 colours are needed). Thanks!
+
+=======
+
 ## An extension to the Krypton Toolkit suite of controls for .NET framework 4.7 
 
 ## NOTE: 20/06/2018 Background menu colours will be implemented in the comming weeks. Stay tuned for updates!

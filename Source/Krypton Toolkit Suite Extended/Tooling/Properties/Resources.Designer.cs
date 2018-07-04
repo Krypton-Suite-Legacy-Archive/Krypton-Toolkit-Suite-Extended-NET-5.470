@@ -71,6 +71,16 @@ namespace Tooling.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon color {
+            get {
+                object obj = ResourceManager.GetObject("color", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap dropper {
@@ -107,6 +117,16 @@ namespace Tooling.Properties {
             get {
                 object obj = ResourceManager.GetObject("folder_palette", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon palette {
+            get {
+                object obj = ResourceManager.GetObject("palette", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         

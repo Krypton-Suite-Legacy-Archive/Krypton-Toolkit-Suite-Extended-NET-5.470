@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace Playground
+﻿namespace Playground
 {
     partial class Form1
     {
@@ -79,6 +77,7 @@ namespace Playground
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.tsAlignLeft = new System.Windows.Forms.ToolStripButton();
             this.tsAlignCentre = new System.Windows.Forms.ToolStripButton();
@@ -108,6 +107,7 @@ namespace Playground
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
+            this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -464,6 +464,8 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnColourMixer);
+            this.kryptonPanel1.Controls.Add(this.kbtnHexToRGB);
             this.kryptonPanel1.Controls.Add(this.toolStrip2);
             this.kryptonPanel1.Controls.Add(this.rxrbTextPad);
             this.kryptonPanel1.Controls.Add(this.kryptonButton1);
@@ -478,6 +480,15 @@ namespace Playground
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 600);
             this.kryptonPanel1.TabIndex = 2;
             // 
+            // kbtnHexToRGB
+            // 
+            this.kbtnHexToRGB.Location = new System.Drawing.Point(888, 85);
+            this.kbtnHexToRGB.Name = "kbtnHexToRGB";
+            this.kbtnHexToRGB.Size = new System.Drawing.Size(218, 25);
+            this.kbtnHexToRGB.TabIndex = 8;
+            this.kbtnHexToRGB.Values.Text = "Convert Colour (Hex to RGB)";
+            this.kbtnHexToRGB.Click += new System.EventHandler(this.kbtnHexToRGB_Click);
+            // 
             // toolStrip2
             // 
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
@@ -491,7 +502,7 @@ namespace Playground
             this.tsInsertText});
             this.toolStrip2.Location = new System.Drawing.Point(634, 171);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(164, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(133, 25);
             this.toolStrip2.TabIndex = 7;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -554,7 +565,6 @@ namespace Playground
             this.rxrbTextPad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rxrbTextPad.Location = new System.Drawing.Point(634, 202);
             this.rxrbTextPad.Name = "rxrbTextPad";
-            this.rxrbTextPad.SelectionAlignments = ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended.TextAlignment.LEFT;
             this.rxrbTextPad.Size = new System.Drawing.Size(520, 365);
             this.rxrbTextPad.TabIndex = 6;
             this.rxrbTextPad.Text = "kryptonRichTextBoxExtended2";
@@ -725,7 +735,6 @@ namespace Playground
             this.kryptonRichTextBoxExtended1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonRichTextBoxExtended1.Location = new System.Drawing.Point(0, 0);
             this.kryptonRichTextBoxExtended1.Name = "kryptonRichTextBoxExtended1";
-            this.kryptonRichTextBoxExtended1.SelectionAlignments = ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended.TextAlignment.LEFT;
             this.kryptonRichTextBoxExtended1.Size = new System.Drawing.Size(100, 96);
             this.kryptonRichTextBoxExtended1.TabIndex = 0;
             this.kryptonRichTextBoxExtended1.Text = "";
@@ -763,6 +772,15 @@ namespace Playground
             this.etslBlinkTest.Name = "etslBlinkTest";
             this.etslBlinkTest.Size = new System.Drawing.Size(168, 17);
             this.etslBlinkTest.Text = "extendedToolStripStatusLabel2";
+            // 
+            // kbtnColourMixer
+            // 
+            this.kbtnColourMixer.Location = new System.Drawing.Point(888, 116);
+            this.kbtnColourMixer.Name = "kbtnColourMixer";
+            this.kbtnColourMixer.Size = new System.Drawing.Size(218, 25);
+            this.kbtnColourMixer.TabIndex = 9;
+            this.kbtnColourMixer.Values.Text = "Colour Mixer";
+            this.kbtnColourMixer.Click += new System.EventHandler(this.kbtnColourMixer_Click);
             // 
             // Form1
             // 
@@ -873,6 +891,8 @@ namespace Playground
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton tsInsertText;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended rxrbTextPad;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnHexToRGB;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnColourMixer;
     }
 }
 
