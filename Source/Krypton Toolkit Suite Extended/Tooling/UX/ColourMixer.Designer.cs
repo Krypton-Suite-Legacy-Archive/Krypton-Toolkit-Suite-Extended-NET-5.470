@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColourMixer));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnUtiliseAsBaseColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.knumBlueChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.knumGreenChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.knumRedChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
@@ -41,14 +43,15 @@
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.pbColourPreview = new System.Windows.Forms.PictureBox();
             this.ktbRed = new ComponentFactory.Krypton.Toolkit.KryptonTrackBar();
             this.ktbGreen = new ComponentFactory.Krypton.Toolkit.KryptonTrackBar();
             this.ktbBlue = new ComponentFactory.Krypton.Toolkit.KryptonTrackBar();
             this.ktbAlpha = new ComponentFactory.Krypton.Toolkit.KryptonTrackBar();
-            this.kbtnUtiliseAsBaseColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pbColourPreview = new System.Windows.Forms.PictureBox();
             this.tmrUpdate = new System.Windows.Forms.Timer(this.components);
-            this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnGenerateBlueValue = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnGenerateGreenValue = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnGenerateRedValue = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColourPreview)).BeginInit();
@@ -56,6 +59,9 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnGenerateBlueValue);
+            this.kryptonPanel1.Controls.Add(this.kbtnGenerateGreenValue);
+            this.kryptonPanel1.Controls.Add(this.kbtnGenerateRedValue);
             this.kryptonPanel1.Controls.Add(this.kbtnGenerate);
             this.kryptonPanel1.Controls.Add(this.kbtnUtiliseAsBaseColour);
             this.kryptonPanel1.Controls.Add(this.knumBlueChannelValue);
@@ -78,6 +84,27 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(753, 667);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kbtnGenerate
+            // 
+            this.kbtnGenerate.AutoSize = true;
+            this.kbtnGenerate.Location = new System.Drawing.Point(200, 627);
+            this.kbtnGenerate.Name = "kbtnGenerate";
+            this.kbtnGenerate.Size = new System.Drawing.Size(167, 30);
+            this.kbtnGenerate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerate.TabIndex = 16;
+            this.kbtnGenerate.Values.Text = "Gener&ate a Colour";
+            this.kbtnGenerate.Click += new System.EventHandler(this.kbtnGenerate_Click);
+            // 
+            // kbtnUtiliseAsBaseColour
+            // 
+            this.kbtnUtiliseAsBaseColour.AutoSize = true;
+            this.kbtnUtiliseAsBaseColour.Location = new System.Drawing.Point(13, 627);
+            this.kbtnUtiliseAsBaseColour.Name = "kbtnUtiliseAsBaseColour";
+            this.kbtnUtiliseAsBaseColour.Size = new System.Drawing.Size(167, 30);
+            this.kbtnUtiliseAsBaseColour.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnUtiliseAsBaseColour.TabIndex = 15;
+            this.kbtnUtiliseAsBaseColour.Values.Text = "Utilise as Base &Colour";
             // 
             // knumBlueChannelValue
             // 
@@ -195,6 +222,17 @@
             this.kryptonLabel1.TabIndex = 5;
             this.kryptonLabel1.Values.Text = "Alpha:";
             // 
+            // pbColourPreview
+            // 
+            this.pbColourPreview.BackColor = System.Drawing.Color.Transparent;
+            this.pbColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbColourPreview.Location = new System.Drawing.Point(12, 12);
+            this.pbColourPreview.Name = "pbColourPreview";
+            this.pbColourPreview.Size = new System.Drawing.Size(207, 195);
+            this.pbColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbColourPreview.TabIndex = 4;
+            this.pbColourPreview.TabStop = false;
+            // 
             // ktbRed
             // 
             this.ktbRed.DrawBackground = true;
@@ -257,43 +295,44 @@
             this.ktbAlpha.TabIndex = 0;
             this.ktbAlpha.ValueChanged += new System.EventHandler(this.ktbAlpha_ValueChanged);
             // 
-            // kbtnUtiliseAsBaseColour
-            // 
-            this.kbtnUtiliseAsBaseColour.AutoSize = true;
-            this.kbtnUtiliseAsBaseColour.Location = new System.Drawing.Point(13, 627);
-            this.kbtnUtiliseAsBaseColour.Name = "kbtnUtiliseAsBaseColour";
-            this.kbtnUtiliseAsBaseColour.Size = new System.Drawing.Size(167, 30);
-            this.kbtnUtiliseAsBaseColour.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnUtiliseAsBaseColour.TabIndex = 15;
-            this.kbtnUtiliseAsBaseColour.Values.Text = "Utilise as Base &Colour";
-            // 
-            // pbColourPreview
-            // 
-            this.pbColourPreview.BackColor = System.Drawing.Color.Transparent;
-            this.pbColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbColourPreview.Location = new System.Drawing.Point(12, 12);
-            this.pbColourPreview.Name = "pbColourPreview";
-            this.pbColourPreview.Size = new System.Drawing.Size(207, 195);
-            this.pbColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbColourPreview.TabIndex = 4;
-            this.pbColourPreview.TabStop = false;
-            // 
             // tmrUpdate
             // 
             this.tmrUpdate.Enabled = true;
             this.tmrUpdate.Interval = 250;
             this.tmrUpdate.Tick += new System.EventHandler(this.tmrUpdate_Tick);
             // 
-            // kbtnGenerate
+            // kbtnGenerateBlueValue
             // 
-            this.kbtnGenerate.AutoSize = true;
-            this.kbtnGenerate.Location = new System.Drawing.Point(200, 627);
-            this.kbtnGenerate.Name = "kbtnGenerate";
-            this.kbtnGenerate.Size = new System.Drawing.Size(167, 30);
-            this.kbtnGenerate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGenerate.TabIndex = 16;
-            this.kbtnGenerate.Values.Text = "Gener&ate a Colour";
-            this.kbtnGenerate.Click += new System.EventHandler(this.kbtnGenerate_Click);
+            this.kbtnGenerateBlueValue.AutoSize = true;
+            this.kbtnGenerateBlueValue.Location = new System.Drawing.Point(314, 99);
+            this.kbtnGenerateBlueValue.Name = "kbtnGenerateBlueValue";
+            this.kbtnGenerateBlueValue.Size = new System.Drawing.Size(167, 30);
+            this.kbtnGenerateBlueValue.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateBlueValue.TabIndex = 28;
+            this.kbtnGenerateBlueValue.Values.Text = "Generate &Blue";
+            this.kbtnGenerateBlueValue.Click += new System.EventHandler(this.kbtnGenerateBlueValue_Click);
+            // 
+            // kbtnGenerateGreenValue
+            // 
+            this.kbtnGenerateGreenValue.AutoSize = true;
+            this.kbtnGenerateGreenValue.Location = new System.Drawing.Point(314, 56);
+            this.kbtnGenerateGreenValue.Name = "kbtnGenerateGreenValue";
+            this.kbtnGenerateGreenValue.Size = new System.Drawing.Size(167, 30);
+            this.kbtnGenerateGreenValue.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateGreenValue.TabIndex = 27;
+            this.kbtnGenerateGreenValue.Values.Text = "Generate &Green";
+            this.kbtnGenerateGreenValue.Click += new System.EventHandler(this.kbtnGenerateGreenValue_Click);
+            // 
+            // kbtnGenerateRedValue
+            // 
+            this.kbtnGenerateRedValue.AutoSize = true;
+            this.kbtnGenerateRedValue.Location = new System.Drawing.Point(314, 12);
+            this.kbtnGenerateRedValue.Name = "kbtnGenerateRedValue";
+            this.kbtnGenerateRedValue.Size = new System.Drawing.Size(167, 30);
+            this.kbtnGenerateRedValue.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateRedValue.TabIndex = 26;
+            this.kbtnGenerateRedValue.Values.Text = "Generate &Red";
+            this.kbtnGenerateRedValue.Click += new System.EventHandler(this.kbtnGenerateRedValue_Click);
             // 
             // ColourMixer
             // 
@@ -337,5 +376,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnUtiliseAsBaseColour;
         private System.Windows.Forms.Timer tmrUpdate;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGenerate;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGenerateBlueValue;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGenerateGreenValue;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGenerateRedValue;
     }
 }

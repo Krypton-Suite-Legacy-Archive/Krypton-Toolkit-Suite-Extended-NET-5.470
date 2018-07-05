@@ -34,7 +34,18 @@ namespace Tooling.UX
 
         private void kbtnConvert_Click(object sender, EventArgs e)
         {
-            UpdateUI();
+            try
+            {
+                int[] rgb = ConversionMethods.ConvertHexadecimalToRGBTest(ktxtHexColourValue.Text);
+
+                pnlPreview.BackColor = Color.FromArgb(rgb[0], rgb[1], rgb[2]);
+            }
+            catch (Exception)
+            {
+
+            }
+
+            //UpdateUI();
         }
 
         private void ktxtHexColourValue_TextChanged(object sender, EventArgs e)

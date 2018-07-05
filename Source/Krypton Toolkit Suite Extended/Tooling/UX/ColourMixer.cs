@@ -282,11 +282,26 @@ namespace Tooling.UX
 
         private void kbtnGenerate_Click(object sender, EventArgs e)
         {
-            ktbRed.Value = _randomNumberGenerator.RandomlyGenerateARedNumberBetween(ktbRed.Minimum, ktbRed.Maximum);
+            kbtnGenerateRedValue.PerformClick();
 
-            ktbGreen.Value = _randomNumberGenerator.RandomlyGenerateAGreenNumberBetween(ktbGreen.Minimum, ktbGreen.Maximum);
+            kbtnGenerateGreenValue.PerformClick();
 
-            ktbBlue.Value = _randomNumberGenerator.RandomlyGenerateABlueNumberBetween(ktbBlue.Minimum, ktbBlue.Maximum);
+            kbtnGenerateBlueValue.PerformClick();
+        }
+
+        private void kbtnGenerateRedValue_Click(object sender, EventArgs e)
+        {
+            ktbRed.Value = _randomNumberGenerator.RandomlyGenerateARedNumberBetween(0, 255);
+        }
+
+        private void kbtnGenerateGreenValue_Click(object sender, EventArgs e)
+        {
+            ktbGreen.Value = _randomNumberGenerator.RandomlyGenerateAGreenNumberBetween(0, 255);
+        }
+
+        private void kbtnGenerateBlueValue_Click(object sender, EventArgs e)
+        {
+            ktbBlue.Value = _randomNumberGenerator.RandomlyGenerateABlueNumberBetween(0, 255);
         }
 
         private void DisplayColour()

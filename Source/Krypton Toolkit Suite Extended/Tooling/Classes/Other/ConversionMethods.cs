@@ -135,39 +135,62 @@ namespace Tooling.Classes.Other
             return rgbColour;
         }
 
-        public Color ConvertHexadecimalToRGBTest(string hexColour)
+        //public Color ConvertHexadecimalToRGBTest(string hexColour)
+        //{
+        //    if (hexColour.StartsWith("#"))
+        //    {
+        //        hexColour = hexColour.Remove(0, 1);
+        //    }
+
+        //    byte red, green, blue;
+
+        //    if (hexColour.Length == 3)
+        //    {
+        //        red = Convert.ToByte(hexColour[0] + "" + hexColour[0], 16);
+
+        //        green = Convert.ToByte(hexColour[1] + "" + hexColour[1], 16);
+
+        //        blue = Convert.ToByte(hexColour[2] + "" + hexColour[2], 16);
+        //    }
+        //    else if (hexColour.Length == 6)
+        //    {
+        //        red = Convert.ToByte(hexColour[0] + "" + hexColour[1], 16);
+
+        //        green = Convert.ToByte(hexColour[2] + "" + hexColour[3], 16);
+
+        //        blue = Convert.ToByte(hexColour[4] + "" + hexColour[5], 16);
+        //    }
+        //    else
+        //    {
+        //        throw new ArgumentNullException($"Hex colour value: '{ hexColour.ToUpper() }' is invalid.");
+        //    }
+
+        //    SetRGB(Convert.ToInt32(red), Convert.ToInt32(green), Convert.ToInt32(blue));
+
+        //    return Color.FromArgb(255, red, green, blue);
+        //}
+
+        public static int[] ConvertHexadecimalToRGBTest(string hexColour)
         {
-            if (hexColour.StartsWith("#"))
+            int[] result;
+
+            try
             {
-                hexColour = hexColour.Remove(0, 1);
+                if (!hexColour.StartsWith("#"))
+                {
+                    hexColour = string.Concat("#", hexColour);
+                }
+
+                Color colourResult = ColorTranslator.FromHtml(hexColour);
+
+                result = new int[] { colourResult.R, colourResult.G, colourResult.B };
+            }
+            catch (Exception)
+            {
+                result = new int[3];
             }
 
-            byte red, green, blue;
-
-            if (hexColour.Length == 3)
-            {
-                red = Convert.ToByte(hexColour[0] + "" + hexColour[0], 16);
-
-                green = Convert.ToByte(hexColour[1] + "" + hexColour[1], 16);
-
-                blue = Convert.ToByte(hexColour[2] + "" + hexColour[2], 16);
-            }
-            else if (hexColour.Length == 6)
-            {
-                red = Convert.ToByte(hexColour[0] + "" + hexColour[1], 16);
-
-                green = Convert.ToByte(hexColour[2] + "" + hexColour[3], 16);
-
-                blue = Convert.ToByte(hexColour[4] + "" + hexColour[5], 16);
-            }
-            else
-            {
-                throw new ArgumentNullException($"Hex colour value: '{ hexColour.ToUpper() }' is invalid.");
-            }
-
-            SetRGB(Convert.ToInt32(red), Convert.ToInt32(green), Convert.ToInt32(blue));
-
-            return Color.FromArgb(255, red, green, blue);
+            return result;
         }
 
         /// <summary>

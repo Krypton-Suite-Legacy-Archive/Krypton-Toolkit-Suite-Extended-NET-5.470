@@ -6,6 +6,7 @@ using KryptonExtendedToolkit.Base.Code;
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
@@ -63,6 +64,11 @@ namespace Playground
             lblVersion.Text = $"Version: { currentVersion.ToString() }";
 
             etslBlinkTest.SoftBlink(etslBlinkTest.AlertColourOne, etslBlinkTest.AlertColourTwo, etslBlinkTest.AlertTextColour, 2000, false, 5);
+
+            foreach (LinearGradientMode lgm in Enum.GetValues(typeof(LinearGradientMode)))
+            {
+                kcmbGradientDirection.Items.Add(lgm.ToString().ToUpper());
+            }
         }
 
         private void MyOwnRecentFileGotClicked_Handler(object sender, EventArgs e)
@@ -195,6 +201,38 @@ namespace Playground
             ColourMixer colourMixer = new ColourMixer(255, 255, 255, 255);
 
             colourMixer.Show();
+        }
+
+        private void kbtnColourCreator_Click(object sender, EventArgs e)
+        {
+            PaletteColourCreator paletteColourCreator = new PaletteColourCreator();
+
+            paletteColourCreator.Show();
+        }
+
+        private void kcbtnGradientColour1_SelectedColorChanged(object sender, ColorEventArgs e)
+        {
+            etslBlinkTest.GradientColourOne = kcbtnGradientColour1.SelectedColor;
+        }
+
+        private void kcbtnGradientColour2_SelectedColorChanged(object sender, ColorEventArgs e)
+        {
+            etslBlinkTest.GradientColourTwo = kcbtnGradientColour2.SelectedColor;
+        }
+
+        private void kcbtnTextColour_SelectedColorChanged(object sender, ColorEventArgs e)
+        {
+            etslBlinkTest.ForeColor = kcbtnTextColour.SelectedColor;
+        }
+
+        private void kcmbGradientDirection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void kcmbGradientDirection_TextChanged(object sender, EventArgs e)
+        {
+           // etslBlinkTest.GradientMode = Enum.Parse(typeof(LinearGradientMode), (LinearGradientMode)kcmbGradientDirection.Text);
         }
     }
 }
