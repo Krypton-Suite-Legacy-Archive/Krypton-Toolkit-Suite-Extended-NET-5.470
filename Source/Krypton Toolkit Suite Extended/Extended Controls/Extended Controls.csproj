@@ -107,11 +107,18 @@
     <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.Designer.cs">
       <DependentUpon>AdvancedDataGridViewSearchToolBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\ColourComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Experimental\Toggle Switches\KryptonToggleSwitchV1.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\ExtendedKryptonLinkLabel.cs" />
     <Compile Include="ExtendedToolkit\Controls\ExtendedProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonColourComboBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonSlideButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\ExtendedToolStripStatusLabel.cs">

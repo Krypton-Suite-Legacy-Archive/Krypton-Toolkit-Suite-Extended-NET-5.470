@@ -77,6 +77,10 @@
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kcbtnBackwardDiagonal = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
+            this.kcbtnForwardDiagonal = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
+            this.kcbtnVertical = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
+            this.kcbtnHorizontal = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.kcmbGradientDirection = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kcbtnTextColour = new ComponentFactory.Krypton.Toolkit.KryptonColorButton();
@@ -114,6 +118,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
+            this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -122,6 +127,7 @@
             this.tsTest.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonCheckSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // ms
@@ -192,7 +198,6 @@
             // 
             // kryptonManager1
             // 
-            this.kryptonManager1.GlobalPalette = this.kPal;
             this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
             // 
             // menuStrip2
@@ -471,6 +476,10 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kcbtnBackwardDiagonal);
+            this.kryptonPanel1.Controls.Add(this.kcbtnForwardDiagonal);
+            this.kryptonPanel1.Controls.Add(this.kcbtnVertical);
+            this.kryptonPanel1.Controls.Add(this.kcbtnHorizontal);
             this.kryptonPanel1.Controls.Add(this.kcmbGradientDirection);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel1);
             this.kryptonPanel1.Controls.Add(this.kcbtnTextColour);
@@ -490,8 +499,45 @@
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1166, 600);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1166, 659);
             this.kryptonPanel1.TabIndex = 2;
+            // 
+            // kcbtnBackwardDiagonal
+            // 
+            this.kcbtnBackwardDiagonal.Location = new System.Drawing.Point(634, 593);
+            this.kcbtnBackwardDiagonal.Name = "kcbtnBackwardDiagonal";
+            this.kcbtnBackwardDiagonal.Size = new System.Drawing.Size(150, 25);
+            this.kcbtnBackwardDiagonal.TabIndex = 19;
+            this.kcbtnBackwardDiagonal.Values.Text = "&Backward Diagonal";
+            this.kcbtnBackwardDiagonal.Click += new System.EventHandler(this.kcbtnBackwardDiagonal_Click);
+            // 
+            // kcbtnForwardDiagonal
+            // 
+            this.kcbtnForwardDiagonal.Checked = true;
+            this.kcbtnForwardDiagonal.Location = new System.Drawing.Point(945, 562);
+            this.kcbtnForwardDiagonal.Name = "kcbtnForwardDiagonal";
+            this.kcbtnForwardDiagonal.Size = new System.Drawing.Size(150, 25);
+            this.kcbtnForwardDiagonal.TabIndex = 18;
+            this.kcbtnForwardDiagonal.Values.Text = "&Forward Diagonal";
+            this.kcbtnForwardDiagonal.Click += new System.EventHandler(this.kcbtnForwardDiagonal_Click);
+            // 
+            // kcbtnVertical
+            // 
+            this.kcbtnVertical.Location = new System.Drawing.Point(789, 562);
+            this.kcbtnVertical.Name = "kcbtnVertical";
+            this.kcbtnVertical.Size = new System.Drawing.Size(150, 25);
+            this.kcbtnVertical.TabIndex = 17;
+            this.kcbtnVertical.Values.Text = "Ver&tical";
+            this.kcbtnVertical.Click += new System.EventHandler(this.kcbtnVertical_Click);
+            // 
+            // kcbtnHorizontal
+            // 
+            this.kcbtnHorizontal.Location = new System.Drawing.Point(633, 562);
+            this.kcbtnHorizontal.Name = "kcbtnHorizontal";
+            this.kcbtnHorizontal.Size = new System.Drawing.Size(150, 25);
+            this.kcbtnHorizontal.TabIndex = 16;
+            this.kcbtnHorizontal.Values.Text = "&Horizontal";
+            this.kcbtnHorizontal.Click += new System.EventHandler(this.kcbtnHorizontal_Click);
             // 
             // kcmbGradientDirection
             // 
@@ -828,7 +874,7 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.etslBlinkTest});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 578);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 637);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
             this.statusStrip1.Size = new System.Drawing.Size(1166, 22);
@@ -856,11 +902,19 @@
             this.etslBlinkTest.Size = new System.Drawing.Size(168, 17);
             this.etslBlinkTest.Text = "extendedToolStripStatusLabel2";
             // 
+            // kryptonCheckSet1
+            // 
+            this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnHorizontal);
+            this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnVertical);
+            this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnForwardDiagonal);
+            this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnBackwardDiagonal);
+            this.kryptonCheckSet1.CheckedButton = this.kcbtnForwardDiagonal;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1166, 600);
+            this.ClientSize = new System.Drawing.Size(1166, 659);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.kryptonPanel1);
@@ -882,6 +936,7 @@
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonCheckSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -974,6 +1029,11 @@
         private ComponentFactory.Krypton.Toolkit.KryptonColorButton kcbtnGradientColour1;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kcmbGradientDirection;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcbtnBackwardDiagonal;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcbtnForwardDiagonal;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcbtnVertical;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcbtnHorizontal;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckSet kryptonCheckSet1;
     }
 }
 

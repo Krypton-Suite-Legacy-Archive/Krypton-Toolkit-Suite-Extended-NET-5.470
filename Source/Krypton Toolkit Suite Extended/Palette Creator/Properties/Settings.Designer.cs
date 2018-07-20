@@ -22,5 +22,60 @@ namespace PaletteCreator.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color BaseColour {
+            get {
+                return ((global::System.Drawing.Color)(this["BaseColour"]));
+            }
+            set {
+                this["BaseColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color DarkColour {
+            get {
+                return ((global::System.Drawing.Color)(this["DarkColour"]));
+            }
+            set {
+                this["DarkColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color MediumColour {
+            get {
+                return ((global::System.Drawing.Color)(this["MediumColour"]));
+            }
+            set {
+                this["MediumColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color LightColour {
+            get {
+                return ((global::System.Drawing.Color)(this["LightColour"]));
+            }
+            set {
+                this["LightColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color LightestColour {
+            get {
+                return ((global::System.Drawing.Color)(this["LightestColour"]));
+            }
+            set {
+                this["LightestColour"] = value;
+            }
+        }
     }
 }

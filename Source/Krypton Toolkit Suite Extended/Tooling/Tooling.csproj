@@ -55,16 +55,19 @@
     <Compile Include="Classes\Colours\ColourPalettes.cs" />
     <Compile Include="Classes\Colours\EditColourCancelEventArgs.cs" />
     <Compile Include="Classes\Colours\GimpPaletteSerialiser.cs" />
+    <Compile Include="Classes\Colours\HSLColour.cs" />
     <Compile Include="Classes\Colours\InterleavedBitmapPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\JascPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\PaintNetPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\PaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\RawPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\WIN32.cs" />
+    <Compile Include="Classes\Other\ColourControlManager.cs" />
     <Compile Include="Classes\Other\ColourUtility.cs" />
     <Compile Include="Classes\Other\ConversionMethods.cs" />
     <Compile Include="Classes\Other\RandomNumberGenerator.cs" />
     <Compile Include="Classes\Other\ToolStripNonClientRenderer.cs" />
+    <Compile Include="Classes\Other\ToolTipManager.cs" />
     <Compile Include="Controls\Colours\ColourEditorManager.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -138,6 +141,12 @@
     <Compile Include="UX\PaletteColourCreator.Designer.cs">
       <DependentUpon>PaletteColourCreator.cs</DependentUpon>
     </Compile>
+    <Compile Include="UX\SysInfo\SystemInformationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\SysInfo\SystemInformationWindow.Designer.cs">
+      <DependentUpon>SystemInformationWindow.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\color.ico" />
@@ -161,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\PaletteColourCreator.resx">
       <DependentUpon>PaletteColourCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\SysInfo\SystemInformationWindow.resx">
+      <DependentUpon>SystemInformationWindow.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

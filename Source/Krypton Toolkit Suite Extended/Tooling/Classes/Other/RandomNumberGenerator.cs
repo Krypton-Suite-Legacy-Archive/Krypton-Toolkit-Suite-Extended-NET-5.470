@@ -5,7 +5,7 @@ namespace Tooling.Classes.Other
     public class RandomNumberGenerator
     {
         #region Variables
-        private int _alphaValue, _redValue, _greenValue, _blueValue;
+        private int _alphaValue, _redValue, _greenValue, _blueValue, _hueValue;
         #endregion
 
         #region Properties
@@ -16,6 +16,8 @@ namespace Tooling.Classes.Other
         public int GreenValue { get { return _greenValue; } set { _greenValue = value; } }
 
         public int BlueValue { get { return _blueValue; } set { _blueValue = value; } }
+
+        public int HueValue { get { return _hueValue; } set { _hueValue = value; } }
         #endregion
 
         #region Constructor
@@ -25,7 +27,26 @@ namespace Tooling.Classes.Other
         }
         #endregion
 
-        #region Methods        
+        #region Methods              
+        /// <summary>
+        /// Randomly generate a alpha number.
+        /// </summary>
+        /// <param name="startNumber">The start number.</param>
+        /// <param name="endNumber">The end number.</param>
+        /// <returns></returns>
+        public int RandomlyGenerateAlphaNumberBetween(int startNumber, int endNumber)
+        {
+            int alphaOutput;
+
+            Random random = new Random();
+
+            alphaOutput = random.Next(startNumber, endNumber + 1);
+
+            SetAlphaValue(alphaOutput);
+
+            return alphaOutput;
+        }
+
         /// <summary>
         /// Randomly generate a number.
         /// </summary>
@@ -84,6 +105,19 @@ namespace Tooling.Classes.Other
             }
 
             return output3;
+        }
+
+        public int RandomlyGenerateAHueNumberBetween(int startNumber, int endNumber)
+        {
+            int hueOutputValue;
+
+            Random random = new Random();
+
+            hueOutputValue = random.Next(startNumber, endNumber + 1);
+
+            SetHueValue(hueOutputValue);
+
+            return hueOutputValue;
         }
         #endregion
 
@@ -158,6 +192,24 @@ namespace Tooling.Classes.Other
         public int GetBlueValue()
         {
             return BlueValue;
+        }
+
+        /// <summary>
+        /// Sets the hue value.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        public void SetHueValue(int value)
+        {
+            HueValue = value;
+        }
+
+        /// <summary>
+        /// Gets the hue value.
+        /// </summary>
+        /// <returns></returns>
+        public int GetHueValue()
+        {
+            return HueValue;
         }
         #endregion
     }

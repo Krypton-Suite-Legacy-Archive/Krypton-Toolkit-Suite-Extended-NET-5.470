@@ -31,7 +31,7 @@ namespace Playground
         }
 
         #region IUpdatable Implementation
-        public Icon ApplicationIcon { get { return this.Icon; } set { } }
+        public Icon ApplicationIcon { get { return Icon; } set { } }
         public string ServerXMLFileURL { get { return "https://www.dropbox.com/s/mwyexz1baqt0y4b/Update.xml?dl=0"; } set { } }
         public string ApplicationName { get { return "Playground"; } set { } }
         public string CurrentApplicationVersion { get { return currentVersion.ToString(); } set { } }
@@ -69,6 +69,8 @@ namespace Playground
             {
                 kcmbGradientDirection.Items.Add(lgm.ToString().ToUpper());
             }
+
+            //kcmbGradientDirection.d
         }
 
         private void MyOwnRecentFileGotClicked_Handler(object sender, EventArgs e)
@@ -227,12 +229,64 @@ namespace Playground
 
         private void kcmbGradientDirection_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void kcmbGradientDirection_TextChanged(object sender, EventArgs e)
         {
-           // etslBlinkTest.GradientMode = Enum.Parse(typeof(LinearGradientMode), (LinearGradientMode)kcmbGradientDirection.Text);
+            // etslBlinkTest.GradientMode = Enum.Parse(typeof(LinearGradientMode), (LinearGradientMode)kcmbGradientDirection.Text);
+        }
+
+        private void kcbtnHorizontal_Click(object sender, EventArgs e)
+        {
+            etslBlinkTest.GradientMode = LinearGradientMode.Horizontal;
+
+            kcbtnHorizontal.Checked = true;
+
+            kcbtnVertical.Checked = false;
+
+            kcbtnForwardDiagonal.Checked = false;
+
+            kcbtnBackwardDiagonal.Checked = false;
+        }
+
+        private void kcbtnVertical_Click(object sender, EventArgs e)
+        {
+            etslBlinkTest.GradientMode = LinearGradientMode.Vertical;
+
+            kcbtnHorizontal.Checked = false;
+
+            kcbtnVertical.Checked = true;
+
+            kcbtnForwardDiagonal.Checked = false;
+
+            kcbtnBackwardDiagonal.Checked = false;
+        }
+
+        private void kcbtnForwardDiagonal_Click(object sender, EventArgs e)
+        {
+            etslBlinkTest.GradientMode = LinearGradientMode.ForwardDiagonal;
+
+            kcbtnHorizontal.Checked = false;
+
+            kcbtnVertical.Checked = false;
+
+            kcbtnForwardDiagonal.Checked = true;
+
+            kcbtnBackwardDiagonal.Checked = false;
+        }
+
+        private void kcbtnBackwardDiagonal_Click(object sender, EventArgs e)
+        {
+            etslBlinkTest.GradientMode = LinearGradientMode.BackwardDiagonal;
+
+            kcbtnHorizontal.Checked = false;
+
+            kcbtnVertical.Checked = false;
+
+            kcbtnForwardDiagonal.Checked = false;
+
+            kcbtnBackwardDiagonal.Checked = true;
         }
     }
 }

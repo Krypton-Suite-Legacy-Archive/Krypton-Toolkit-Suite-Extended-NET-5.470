@@ -76,6 +76,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\PaletteExporter.cs" />
+    <Compile Include="Classes\SettingsManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -88,6 +90,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UX\ColourMixer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\ColourMixer.Designer.cs">
+      <DependentUpon>ColourMixer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UX\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +107,12 @@
     </Compile>
     <Compile Include="UX\MainWindowWithRibbonUI.Designer.cs">
       <DependentUpon>MainWindowWithRibbonUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UX\PaletteComposer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\PaletteComposer.Designer.cs">
+      <DependentUpon>PaletteComposer.cs</DependentUpon>
     </Compile>
     <Compile Include="UX\RibbonChromeForm.cs">
       <SubType>Form</SubType>
@@ -120,11 +134,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UX\ColourMixer.resx">
+      <DependentUpon>ColourMixer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UX\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\MainWindowWithRibbonUI.resx">
       <DependentUpon>MainWindowWithRibbonUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\PaletteComposer.resx">
+      <DependentUpon>PaletteComposer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\RibbonChromeForm.resx">
       <DependentUpon>RibbonChromeForm.cs</DependentUpon>
@@ -347,6 +367,10 @@
     <ProjectReference Include="..\Palette Composer\Palette Composer.csproj">
       <Project>{6f708c9a-c7c7-42f6-b80e-8b4cb3209c8a}</Project>
       <Name>Palette Composer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tooling\Tooling.csproj">
+      <Project>{efb997fb-1e05-444b-ba02-16c004e1a111}</Project>
+      <Name>Tooling</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
