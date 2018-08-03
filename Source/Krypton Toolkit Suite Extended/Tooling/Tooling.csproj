@@ -30,11 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Toolkit">
+    <Reference Include="Krypton Navigator">
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Toolkit, Version=4.70.632.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Windows.Forms" />
@@ -66,6 +71,7 @@
     <Compile Include="Classes\Other\ColourUtility.cs" />
     <Compile Include="Classes\Other\ConversionMethods.cs" />
     <Compile Include="Classes\Other\RandomNumberGenerator.cs" />
+    <Compile Include="Classes\Other\SettingsManager.cs" />
     <Compile Include="Classes\Other\ToolStripNonClientRenderer.cs" />
     <Compile Include="Classes\Other\ToolTipManager.cs" />
     <Compile Include="Controls\Colours\ColourEditorManager.cs">
@@ -103,6 +109,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="STRUCTS\HSLColour.cs" />
     <Compile Include="User Controls\Colours\ColourEditor.cs">
@@ -147,8 +158,15 @@
     <Compile Include="UX\SysInfo\SystemInformationWindow.Designer.cs">
       <DependentUpon>SystemInformationWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Version Framework\Classes\AssemblyInformation.cs" />
+    <Compile Include="Version Framework\Classes\AssemblyVersion.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\color.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +216,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\palette.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System-Information-tool-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System-Information-tool-icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
