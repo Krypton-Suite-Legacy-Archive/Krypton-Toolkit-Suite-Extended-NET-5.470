@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaletteColourCreator));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnGenerateDarkest = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kcmbtnLightestColour = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.kcmbtnLightColour = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.kcmbtnMediumColour = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
@@ -73,6 +74,9 @@
             this.ttInformation = new System.Windows.Forms.ToolTip(this.components);
             this.kcsHueValues = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
             this.tmrUpdateUI = new System.Windows.Forms.Timer(this.components);
+            this.kbtnGenerateLightestColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnGenerateLightColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnGenerateMidDark = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbHSBValues)).BeginInit();
@@ -90,6 +94,10 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnGenerateLightestColour);
+            this.kryptonPanel1.Controls.Add(this.kbtnGenerateLightColour);
+            this.kryptonPanel1.Controls.Add(this.kbtnGenerateMidDark);
+            this.kryptonPanel1.Controls.Add(this.kbtnGenerateDarkest);
             this.kryptonPanel1.Controls.Add(this.kcmbtnLightestColour);
             this.kryptonPanel1.Controls.Add(this.kcmbtnLightColour);
             this.kryptonPanel1.Controls.Add(this.kcmbtnMediumColour);
@@ -133,6 +141,17 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1028, 686);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kbtnGenerateDarkest
+            // 
+            this.kbtnGenerateDarkest.AutoSize = true;
+            this.kbtnGenerateDarkest.Location = new System.Drawing.Point(715, 199);
+            this.kbtnGenerateDarkest.Name = "kbtnGenerateDarkest";
+            this.kbtnGenerateDarkest.Size = new System.Drawing.Size(167, 30);
+            this.kbtnGenerateDarkest.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateDarkest.TabIndex = 48;
+            this.kbtnGenerateDarkest.Values.Text = "Generate &50%";
+            this.kbtnGenerateDarkest.Click += new System.EventHandler(this.kbtnGenerateDarkest_Click);
             // 
             // kcmbtnLightestColour
             // 
@@ -584,6 +603,39 @@
             this.tmrUpdateUI.Interval = 250;
             this.tmrUpdateUI.Tick += new System.EventHandler(this.tmrUpdateUI_Tick);
             // 
+            // kbtnGenerateLightestColour
+            // 
+            this.kbtnGenerateLightestColour.AutoSize = true;
+            this.kbtnGenerateLightestColour.Location = new System.Drawing.Point(715, 597);
+            this.kbtnGenerateLightestColour.Name = "kbtnGenerateLightestColour";
+            this.kbtnGenerateLightestColour.Size = new System.Drawing.Size(167, 30);
+            this.kbtnGenerateLightestColour.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateLightestColour.TabIndex = 49;
+            this.kbtnGenerateLightestColour.Values.Text = "Generate &50%";
+            this.kbtnGenerateLightestColour.Click += new System.EventHandler(this.kbtnGenerateLightestColour_Click);
+            // 
+            // kbtnGenerateLightColour
+            // 
+            this.kbtnGenerateLightColour.AutoSize = true;
+            this.kbtnGenerateLightColour.Location = new System.Drawing.Point(715, 475);
+            this.kbtnGenerateLightColour.Name = "kbtnGenerateLightColour";
+            this.kbtnGenerateLightColour.Size = new System.Drawing.Size(167, 30);
+            this.kbtnGenerateLightColour.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateLightColour.TabIndex = 50;
+            this.kbtnGenerateLightColour.Values.Text = "Generate 2&5%";
+            this.kbtnGenerateLightColour.Click += new System.EventHandler(this.kbtnGenerateLightColour_Click);
+            // 
+            // kbtnGenerateMidDark
+            // 
+            this.kbtnGenerateMidDark.AutoSize = true;
+            this.kbtnGenerateMidDark.Location = new System.Drawing.Point(715, 335);
+            this.kbtnGenerateMidDark.Name = "kbtnGenerateMidDark";
+            this.kbtnGenerateMidDark.Size = new System.Drawing.Size(167, 30);
+            this.kbtnGenerateMidDark.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateMidDark.TabIndex = 51;
+            this.kbtnGenerateMidDark.Values.Text = "Generate &25%";
+            this.kbtnGenerateMidDark.Click += new System.EventHandler(this.kbtnGenerateMidDark_Click);
+            // 
             // PaletteColourCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,5 +712,9 @@
         private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcmbtnDarkColour;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckSet kcsHueValues;
         private System.Windows.Forms.Timer tmrUpdateUI;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGenerateDarkest;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGenerateMidDark;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGenerateLightestColour;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGenerateLightColour;
     }
 }

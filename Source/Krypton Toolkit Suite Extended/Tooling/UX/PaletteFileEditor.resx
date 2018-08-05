@@ -117,4 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="acmPalette.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="acmPalette.Colors" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRBdXRvY29tcGxldGVNZW51LVNjaW50aWxsYU5FVCwgVmVyc2lv
+        bj0xLjMuNC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwMAwAAAFFTeXN0ZW0u
+        RHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIw
+        M2Y1ZjdmMTFkNTBhM2EFAQAAABlBdXRvY29tcGxldGVNZW51TlMuQ29sb3JzBgAAABo8Rm9yZUNvbG9y
+        PmtfX0JhY2tpbmdGaWVsZBo8QmFja0NvbG9yPmtfX0JhY2tpbmdGaWVsZCI8U2VsZWN0ZWRGb3JlQ29s
+        b3I+a19fQmFja2luZ0ZpZWxkIjxTZWxlY3RlZEJhY2tDb2xvcj5rX19CYWNraW5nRmllbGQjPFNlbGVj
+        dGVkQmFja0NvbG9yMj5rX19CYWNraW5nRmllbGQiPEhpZ2hsaWdodGluZ0NvbG9yPmtfX0JhY2tpbmdG
+        aWVsZAQEBAQEBBRTeXN0ZW0uRHJhd2luZy5Db2xvcgMAAAAUU3lzdGVtLkRyYXdpbmcuQ29sb3IDAAAA
+        FFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAABRTeXN0ZW0uRHJhd2luZy5Db2xvcgMAAAAUU3lzdGVtLkRy
+        YXdpbmcuQ29sb3IDAAAAFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAAAIAAAAF/P///xRTeXN0ZW0uRHJh
+        d2luZy5Db2xvcgQAAAAEbmFtZQV2YWx1ZQprbm93bkNvbG9yBXN0YXRlAQAAAAkHBwMAAAAKAAAAAAAA
+        AAAjAAEAAfv////8////CgAAAAAAAAAApAABAAH6/////P///woAAAAAAAAAACMAAQAB+f////z///8K
+        AAAAAAAAAAB/AAEAAfj////8////CgAAAAAAAAAApAABAAH3/////P///woAAAAAAAAAAH8AAQAL
+</value>
+  </data>
 </root>

@@ -155,6 +155,26 @@ namespace Tooling.UX
             pbxBaseColour.BackColor = Color.FromArgb(255, Convert.ToInt32(knumRedChannelValue.Value), Convert.ToInt32(knumGreenChannelValue.Value), Convert.ToInt32(knumBlueChannelValue.Value));
         }
 
+        private void kbtnGenerateDarkest_Click(object sender, EventArgs e)
+        {
+            pbxDarkColour.BackColor = ColourUtilities.Darken(pbxBaseColour.BackColor, 0.5f);
+        }
+
+        private void kbtnGenerateMidDark_Click(object sender, EventArgs e)
+        {
+            pbxMiddleColour.BackColor = ColourUtilities.Darken(pbxBaseColour.BackColor, 0.25f);
+        }
+
+        private void kbtnGenerateLightColour_Click(object sender, EventArgs e)
+        {
+            pbxLightColour.BackColor = ColourUtilities.Lighten(pbxBaseColour.BackColor, 0.25f);
+        }
+
+        private void kbtnGenerateLightestColour_Click(object sender, EventArgs e)
+        {
+            pbxLightestColour.BackColor = ColourUtilities.Lighten(pbxBaseColour.BackColor, 0.5f);
+        }
+
         private void kbtnSaveValues_Click(object sender, EventArgs e)
         {
             if (kcmbHSBValues.Text == "Dark Colour")

@@ -1,11 +1,18 @@
 ﻿using System;
+using System.Drawing;
 
 namespace Tooling.Classes.Other
 {
     public class RandomNumberGenerator
     {
+        #region Constants
+        private const int MINIMUM_COLOUR_VALUE = 0, MAXMUM_COLOUR_VALUE = 256;
+        #endregion
+
         #region Variables
-        private int _alphaValue, _redValue, _greenValue, _blueValue, _hueValue;
+        private int _alphaValue, _redValue, _greenValue, _blueValue, _hueValue, _max = byte.MaxValue + 1;
+
+        private Random _randomColourGenerator = new Random();
         #endregion
 
         #region Properties
@@ -118,6 +125,38 @@ namespace Tooling.Classes.Other
             SetHueValue(hueOutputValue);
 
             return hueOutputValue;
+        }
+
+        /// <summary>
+        /// Generates the random colour.
+        /// </summary>
+        /// <param name="generateAlphaValue">if set to <c>true</c> [generate alpha value].</param>
+        public void GenerateRandomColour(bool generateAlphaValue = false)
+        {
+            int a, r, g, b;
+
+            if (generateAlphaValue)
+            {
+                a = _randomColourGenerator.Next(_max);
+
+                SetAlphaValue(a);
+            }
+            else
+            {
+                SetAlphaValue(MAXMUM_COLOUR_VALUE);
+            }
+
+            r = _randomColourGenerator.Next(_max);
+
+            SetRedValue(r);
+
+            g = _randomColourGenerator.Next(_max);
+
+            SetGreenValue(g);
+
+            b = _randomColourGenerator.Next(_max);
+
+            SetBlueValue(b);
         }
         #endregion
 

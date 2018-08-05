@@ -1,5 +1,4 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using PaletteCreator.Classes;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -16,7 +15,7 @@ namespace PaletteCreator.UX
 
         private ConversionMethods _conversionMethods = new ConversionMethods();
 
-        private SettingsManager _settingsManager = new SettingsManager();
+        private Classes.SettingsManager _settingsManager = new Classes.SettingsManager();
         #endregion
 
         public ColourMixer()

@@ -119,6 +119,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -476,6 +477,7 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonButton2);
             this.kryptonPanel1.Controls.Add(this.kcbtnBackwardDiagonal);
             this.kryptonPanel1.Controls.Add(this.kcbtnForwardDiagonal);
             this.kryptonPanel1.Controls.Add(this.kcbtnVertical);
@@ -889,7 +891,6 @@
             // 
             // etslBlinkTest
             // 
-            this.etslBlinkTest.BackColor = System.Drawing.Color.Empty;
             this.etslBlinkTest.BkClr = false;
             this.etslBlinkTest.BlinkDuration = ((long)(10));
             this.etslBlinkTest.BlinkState = ExtendedControls.Base.Enumerations.BlinkState.NormalBlink;
@@ -909,6 +910,15 @@
             this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnForwardDiagonal);
             this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnBackwardDiagonal);
             this.kryptonCheckSet1.CheckedButton = this.kcbtnForwardDiagonal;
+            // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(634, 133);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton2.TabIndex = 20;
+            this.kryptonButton2.Values.Text = "File Creator";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // Form1
             // 
@@ -1034,6 +1044,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcbtnVertical;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcbtnHorizontal;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckSet kryptonCheckSet1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }
 

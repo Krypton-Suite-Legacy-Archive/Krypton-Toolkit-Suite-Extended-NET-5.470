@@ -235,6 +235,26 @@ namespace Tooling.Classes.Other
 
             SetAlpha(alpha);
         }
+
+        /// <summary>
+        /// Formats the colour RGB string.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
+        public static String FormatColourRGBString(Color colour)
+        {
+            return $"{ colour.R.ToString() }, { colour.G.ToString() }, { colour.B.ToString() }";
+        }
+
+        /// <summary>
+        /// Formats the colour ARGB string.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
+        public static String FormatColourARGBString(Color colour)
+        {
+            return $"{ colour.A.ToString() }, { colour.R.ToString() }, { colour.G.ToString() }, { colour.B.ToString() }";
+        }
         #endregion
 
         #region Setters & Getters        

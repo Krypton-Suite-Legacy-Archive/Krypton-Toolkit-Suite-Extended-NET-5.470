@@ -8,11 +8,11 @@ namespace Tooling.UX
     public partial class ColourMixer : KryptonForm
     {
         #region Variables
-        private int _alphaChannelValue, _redColourChannelValue, _greenColourChannelValue, _blueColourChannelValue;
+        private int _alphaChannelValue, _redColourChannelValue, _greenColourChannelValue, _blueColourChannelValue, _max = byte.MaxValue + 1;
+        private ConversionMethods _conversionMethods = new ConversionMethods();
+        private RandomNumberGenerator _randomNumberGenerator = new RandomNumberGenerator();
 
-        ConversionMethods _conversionMethods = new ConversionMethods();
-
-        RandomNumberGenerator _randomNumberGenerator = new RandomNumberGenerator();
+        private Random randomColour = new Random();
         #endregion
 
         #region Properties
@@ -302,6 +302,27 @@ namespace Tooling.UX
         private void kbtnGenerateBlueValue_Click(object sender, EventArgs e)
         {
             ktbBlue.Value = _randomNumberGenerator.RandomlyGenerateABlueNumberBetween(0, 255);
+        }
+
+        private void kbtnGenerateColour_Click(object sender, EventArgs e)
+        {
+             _randomNumberGenerator.GenerateRandomColour(kchkGenerateAlphaValue.Checked);
+
+            knumAlphaChannelValue.Value = _randomNumberGenerator.GetAlphaValue();
+
+            knumRedChannelValue.Value = _randomNumberGenerator.GetRedValue();
+
+            knumGreenChannelValue.Value = _randomNumberGenerator.GetGreenValue();
+
+            knumBlueChannelValue.Value = _randomNumberGenerator.GetBlueValue();
+
+            //int a = randomColour.Next(_max), r = randomColour.Next(_max), g = randomColour.Next(_max), b = randomColour.Next(_max); 
+
+            //knumRedChannelValue.Value = r;
+
+            //knumGreenChannelValue.Value = g;
+
+            //knumBlueChannelValue.Value = b;
         }
 
         private void DisplayColour()

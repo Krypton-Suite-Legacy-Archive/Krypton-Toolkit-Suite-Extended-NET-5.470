@@ -288,5 +288,12 @@ namespace Playground
 
             kcbtnBackwardDiagonal.Checked = true;
         }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            PaletteFileEditor paletteFileEditor = new PaletteFileEditor();
+
+            paletteFileEditor.Show();
+        }
     }
 }

@@ -30,12 +30,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutocompleteMenu-ScintillaNET, Version=1.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoCompleteMenu-ScintillaNET.1.6.1\lib\net40\AutocompleteMenu-ScintillaNET.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyScintilla, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyScintilla.1.0.4\lib\net40\EasyScintilla.dll</HintPath>
+    </Reference>
     <Reference Include="Krypton Navigator">
       <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Toolkit, Version=4.70.632.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="ScintillaNET FindReplaceDialog, Version=1.4.0.17540, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScintillaNet.SearchBox.1.0.3\lib\net45\ScintillaNET FindReplaceDialog.dll</HintPath>
+    </Reference>
+    <Reference Include="ScintillaNET, Version=3.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jacobslusser.ScintillaNET.3.6.3\lib\net40\ScintillaNET.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -68,8 +83,10 @@
     <Compile Include="Classes\Colours\RawPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\WIN32.cs" />
     <Compile Include="Classes\Other\ColourControlManager.cs" />
+    <Compile Include="Classes\Other\ColourUtilities.cs" />
     <Compile Include="Classes\Other\ColourUtility.cs" />
     <Compile Include="Classes\Other\ConversionMethods.cs" />
+    <Compile Include="Classes\Other\FileCreator.cs" />
     <Compile Include="Classes\Other\RandomNumberGenerator.cs" />
     <Compile Include="Classes\Other\SettingsManager.cs" />
     <Compile Include="Classes\Other\ToolStripNonClientRenderer.cs" />
@@ -152,6 +169,12 @@
     <Compile Include="UX\PaletteColourCreator.Designer.cs">
       <DependentUpon>PaletteColourCreator.cs</DependentUpon>
     </Compile>
+    <Compile Include="UX\PaletteFileEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\PaletteFileEditor.Designer.cs">
+      <DependentUpon>PaletteFileEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="UX\SysInfo\SystemInformationWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +186,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -188,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\PaletteColourCreator.resx">
       <DependentUpon>PaletteColourCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\PaletteFileEditor.resx">
+      <DependentUpon>PaletteFileEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\SysInfo\SystemInformationWindow.resx">
       <DependentUpon>SystemInformationWindow.cs</DependentUpon>
