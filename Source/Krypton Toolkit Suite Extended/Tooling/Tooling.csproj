@@ -132,6 +132,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Classes\ColourSettingsManager.cs" />
+    <Compile Include="Settings\ColourSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ColourSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\ColourStringSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ColourStringSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="STRUCTS\HSLColour.cs" />
     <Compile Include="User Controls\Colours\ColourEditor.cs">
       <SubType>UserControl</SubType>
@@ -192,6 +203,14 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Resources\color.ico" />
+    <None Include="Settings\ColourSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ColourSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\ColourStringSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ColourStringSettings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -250,5 +269,6 @@
   <ItemGroup>
     <None Include="Resources\System-Information-tool-icon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

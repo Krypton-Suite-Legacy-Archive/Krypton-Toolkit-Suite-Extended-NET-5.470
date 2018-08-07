@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Tooling.Classes.Other
 {
@@ -136,6 +134,66 @@ namespace Tooling.Classes.Other
             var tintedColor = FromHsl(color.A, color.GetHue(), color.GetSaturation(), lighting);
 
             return tintedColor;
+        }
+
+        /// <summary>
+        /// Generates the colour shades.
+        /// </summary>
+        /// <param name="baseColour">The base colour.</param>
+        /// <param name="darkestColour">The darkest colour.</param>
+        /// <param name="mediumColour">The medium colour.</param>
+        /// <param name="lightColour">The light colour.</param>
+        /// <param name="lightestColour">The lightest colour.</param>
+        public static void GenerateColourShades(Color baseColour, PictureBox darkestColour, PictureBox mediumColour, PictureBox lightColour, PictureBox lightestColour)
+        {
+            if (baseColour != null)
+            {
+                darkestColour.BackColor = Darken(baseColour, 0.5f);
+
+                mediumColour.BackColor = Darken(baseColour, 0.25f);
+
+                lightColour.BackColor = Lighten(baseColour, 0.25f);
+
+                lightestColour.BackColor = Lighten(baseColour, 0.5f);
+            }
+        }
+
+        /// <summary>
+        /// Formats the colour ARGB string.
+        /// </summary>
+        /// <param name="colourInput">The colour input.</param>
+        /// <returns>A string containing the alpha, red, green and blue colour values of the selected <paramref name="colourInput"/>.</returns>
+        public static string FormatColourARGBString(Color colourInput)
+        {
+            return $"{ colourInput.A.ToString() }, { colourInput.R.ToString() }, { colourInput.G.ToString() }, { colourInput.B.ToString() }";
+        }
+
+        /// <summary>
+        /// Formats the colour RGB string.
+        /// </summary>
+        /// <param name="colourInput">The colour input.</param>
+        /// <returns>A string containing the red, green and blue colour values of the selected <paramref name="colourInput"/>.</returns>
+        public static string FormatColourRGBString(Color colourInput)
+        {
+            return $"{ colourInput.R.ToString() }, { colourInput.G.ToString() }, { colourInput.B.ToString() }";
+        }
+
+        /// <summary>
+        /// Propagates the HSB values.
+        /// </summary>
+        /// <param name="hueValue">The hue value.</param>
+        /// <param name="saturationValue">The saturation value.</param>
+        /// <param name="brightnessValue">The brightness value.</param>
+        /// <param name="hue">The hue.</param>
+        /// <param name="saturation">The saturation.</param>
+        /// <param name="brightness">The brightness.</param>
+        public static void PropagateHSBValues(KryptonNumericUpDown hueValue, KryptonNumericUpDown saturationValue, KryptonNumericUpDown brightnessValue, decimal hue, decimal saturation, decimal brightness)
+        {
+            hueValue.Value = hue;
+
+            saturationValue.Value = saturation;
+
+            brightnessValue.Value = brightness;
         }
     }
 }

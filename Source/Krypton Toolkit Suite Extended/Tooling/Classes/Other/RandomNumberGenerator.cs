@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 
 namespace Tooling.Classes.Other
 {
@@ -34,7 +33,7 @@ namespace Tooling.Classes.Other
         }
         #endregion
 
-        #region Methods              
+        #region Methods
         /// <summary>
         /// Randomly generate a alpha number.
         /// </summary>
@@ -137,7 +136,7 @@ namespace Tooling.Classes.Other
 
             if (generateAlphaValue)
             {
-                a = _randomColourGenerator.Next(_max);
+                a = _randomColourGenerator.Next(MAXMUM_COLOUR_VALUE);
 
                 SetAlphaValue(a);
             }
@@ -146,15 +145,15 @@ namespace Tooling.Classes.Other
                 SetAlphaValue(MAXMUM_COLOUR_VALUE);
             }
 
-            r = _randomColourGenerator.Next(_max);
+            r = _randomColourGenerator.Next(MAXMUM_COLOUR_VALUE);
 
             SetRedValue(r);
 
-            g = _randomColourGenerator.Next(_max);
+            g = _randomColourGenerator.Next(MAXMUM_COLOUR_VALUE);
 
             SetGreenValue(g);
 
-            b = _randomColourGenerator.Next(_max);
+            b = _randomColourGenerator.Next(MAXMUM_COLOUR_VALUE);
 
             SetBlueValue(b);
         }

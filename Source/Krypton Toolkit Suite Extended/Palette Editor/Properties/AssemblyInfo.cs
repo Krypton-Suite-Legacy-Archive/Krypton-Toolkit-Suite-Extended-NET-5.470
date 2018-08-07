@@ -1,17 +1,16 @@
-﻿using System.Resources;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Krypton Outlook Grid")]
-[assembly: AssemblyDescription("KryptonDataGridView with multi sorting and multi grouping abilities")]
+[assembly: AssemblyTitle("Palette Editor")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("JDH Software, Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV)")]
-[assembly: AssemblyProduct("Krypton Outlook Grid")]
-[assembly: AssemblyCopyright("Copyright © JDH Software 2013-2018. Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2018. All rights reserved.")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Palette Editor")]
+[assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -21,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2a10c696-45ad-48aa-8ead-2cb322672972")]
+[assembly: Guid("5ea4522d-b13c-45b1-9bc6-13e29587248a")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -33,7 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("4.7.449.0")]
-[assembly: AssemblyFileVersion("4.7.449.0")]
-[assembly: NeutralResourcesLanguage("en-GB")]
-
+[assembly: AssemblyVersion("4.70.600.0")]
+[assembly: AssemblyFileVersion("4.70.600.0")]

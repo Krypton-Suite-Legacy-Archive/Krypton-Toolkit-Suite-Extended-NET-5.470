@@ -7,7 +7,7 @@ namespace Tooling.Classes.Other
     public class SettingsManager
     {
         #region Variables
-        private Settings _mySettings = new Settings();
+        private Tooling.Properties.Settings _mySettings = new Properties.Settings();
         #endregion
 
         #region Constructor

@@ -13,6 +13,8 @@ namespace Tooling.UX
         private RandomNumberGenerator _randomNumberGenerator = new RandomNumberGenerator();
 
         private Random randomColour = new Random();
+
+        private ColourUtility _colourUtility = new ColourUtility();
         #endregion
 
         #region Properties
@@ -304,17 +306,16 @@ namespace Tooling.UX
             ktbBlue.Value = _randomNumberGenerator.RandomlyGenerateABlueNumberBetween(0, 255);
         }
 
+        private void kbtnUtiliseAsBaseColour_Click(object sender, EventArgs e)
+        {
+            PaletteColourCreator paletteColourCreator = new PaletteColourCreator(Convert.ToInt32(knumAlphaChannelValue.Value), Convert.ToInt32(knumRedChannelValue.Value), Convert.ToInt32(knumGreenChannelValue.Value), Convert.ToInt32(knumBlueChannelValue.Value));
+
+            paletteColourCreator.Show();
+        }
+
         private void kbtnGenerateColour_Click(object sender, EventArgs e)
         {
-             _randomNumberGenerator.GenerateRandomColour(kchkGenerateAlphaValue.Checked);
-
-            knumAlphaChannelValue.Value = _randomNumberGenerator.GetAlphaValue();
-
-            knumRedChannelValue.Value = _randomNumberGenerator.GetRedValue();
-
-            knumGreenChannelValue.Value = _randomNumberGenerator.GetGreenValue();
-
-            knumBlueChannelValue.Value = _randomNumberGenerator.GetBlueValue();
+            pbColourPreview.BackColor = _colourUtility.GenerateRandomColour(kchkGenerateAlphaValue.Checked);
 
             //int a = randomColour.Next(_max), r = randomColour.Next(_max), g = randomColour.Next(_max), b = randomColour.Next(_max); 
 

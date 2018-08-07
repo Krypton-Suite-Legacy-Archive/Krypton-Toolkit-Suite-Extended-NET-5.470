@@ -1,8 +1,11 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 using Tooling.Classes.Colours.Extended;
 using Tooling.Classes.Other;
+using Tooling.Settings.Classes;
 
 namespace Tooling.UX
 {
@@ -27,6 +30,26 @@ namespace Tooling.UX
         public PaletteColourCreator()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaletteColourCreator"/> class.
+        /// </summary>
+        /// <param name="alphaValue">The alpha value.</param>
+        /// <param name="redValue">The red value.</param>
+        /// <param name="greenValue">The green value.</param>
+        /// <param name="blueValue">The blue value.</param>
+        public PaletteColourCreator(int alphaValue, int redValue, int greenValue, int blueValue)
+        {
+            InitializeComponent();
+
+            knumAlphaChannelValue.Value = alphaValue;
+
+            knumRedChannelValue.Value = redValue;
+
+            knumGreenChannelValue.Value = greenValue;
+
+            knumBlueChannelValue.Value = blueValue;
         }
 
         private void PaletteColourCreator_Load(object sender, EventArgs e)
@@ -121,22 +144,29 @@ namespace Tooling.UX
 
         private void kbtnGenerate_Click(object sender, EventArgs e)
         {
-
+            ColourUtilities.GenerateColourShades(pbxBaseColour.BackColor, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour);
         }
 
         private void kbtnExport_Click(object sender, EventArgs e)
         {
+            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
 
+            colourSettingsManager.SetBaseColour(pbxBaseColour.BackColor);
+
+            colourSettingsManager.SetDarkestColour(pbxDarkColour.BackColor);
+
+            colourSettingsManager.SetMediumColour(pbxMiddleColour.BackColor);
+
+            colourSettingsManager.SetLightColour(pbxLightColour.BackColor);
+
+            colourSettingsManager.SetLightestColour(pbxLightestColour.BackColor);
+
+            colourSettingsManager.SaveColourSettings();
         }
 
         private void knumHueValue_ValueChanged(object sender, EventArgs e)
         {
-            BaseColour = pbxBaseColour.BackColor;
 
-            if (kcmbHSBValues.Text == "Dark Colour")
-            {
-                pbxDarkColour.BackColor = SetHue(BaseColour, (double)knumHueValue.Value);
-            }
         }
 
         private void tmrUpdate_Tick(object sender, EventArgs e)
@@ -175,30 +205,59 @@ namespace Tooling.UX
             pbxLightestColour.BackColor = ColourUtilities.Lighten(pbxBaseColour.BackColor, 0.5f);
         }
 
+        private void kchkAutomateColourSwatchValues_CheckedChanged(object sender, EventArgs e)
+        {
+            tmrAutomateColourSwatchValues.Enabled = kchkAutomateColourSwatchValues.Checked;
+        }
+
+        private void tmrAutomateColourSwatchValues_Tick(object sender, EventArgs e)
+        {
+            ColourUtilities.GenerateColourShades(pbxBaseColour.BackColor, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour);
+        }
+
+        private void pbxDarkColour_Click(object sender, EventArgs e)
+        {
+            ColourUtilities.PropagateHSBValues(knumHueValue, knumSaturation, knumBrightness, (decimal)Math.Round(pbxDarkColour.BackColor.GetHue()), (decimal)Math.Round(pbxDarkColour.BackColor.GetSaturation()), (decimal)Math.Round(pbxDarkColour.BackColor.GetBrightness()));
+        }
+
+        private void kbtnBrowse_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            saveFileDialog.Filter = "Text Files (*.txt)|*.txt";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.Yes)
+            {
+                kmtxtFilePath.Text = Path.GetFullPath(saveFileDialog.FileName);
+            }
+        }
+
+        private void kbtnFileExport_Click(object sender, EventArgs e)
+        {
+            if (kmtxtFilePath.Text != "")
+            {
+                FileCreator fileCreator = new FileCreator();
+
+                fileCreator.WriteColourFile("A:\\Test Colour.txt", ColourUtilities.FormatColourARGBString(pbxDarkColour.BackColor), ColourUtilities.FormatColourARGBString(pbxMiddleColour.BackColor), ColourUtilities.FormatColourARGBString(pbxLightColour.BackColor), ColourUtilities.FormatColourARGBString(pbxLightestColour.BackColor));
+            }
+        }
+
+        private void kcmbSelectedColour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (kcmbSelectedColour.Text == "Base Colour")
+            {
+                lblColourOutput.Text = $"{ ColourUtilities.FormatColourARGBString(pbxBaseColour.BackColor) }";
+            }
+        }
+
         private void kbtnSaveValues_Click(object sender, EventArgs e)
         {
-            if (kcmbHSBValues.Text == "Dark Colour")
-            {
-                _hslColour.SetRGB(pbxBaseColour.BackColor.R, pbxBaseColour.BackColor.G, pbxBaseColour.BackColor.B);
 
-                _hslColour.Hue = (double)knumHueValue.Value;
-
-                //pbxDarkColour.BackColor.
-            }
         }
 
         private void kbtnGenerateHue_Click(object sender, EventArgs e)
         {
-            //knumHueValue.Value = _randomNumberGenerator.RandomlyGenerateAHueNumberBetween(0, 360);
 
-            if (!kcmbtnDarkColour.Checked || !kcmbtnMediumColour.Checked || !kcmbtnLightColour.Checked || !kcmbtnLightestColour.Checked)
-            {
-
-            }
-            else if (kcmbtnDarkColour.Checked)
-            {
-                knumHueValue.Value = _randomNumberGenerator.RandomlyGenerateAHueNumberBetween(0, 90);
-            }
         }
 
         private Color SetHue(Color baseColour, double hueValue)
@@ -210,14 +269,7 @@ namespace Tooling.UX
 
         private void UpdateUI()
         {
-            if (!kcmbtnDarkColour.Checked || !kcmbtnMediumColour.Checked || !kcmbtnLightColour.Checked || !kcmbtnLightestColour.Checked)
-            {
 
-            }
-            else if (kcmbtnDarkColour.Checked)
-            {
-                _colourControlManager.SetDarkColourHueValues(knumHueValue, 0, 90);
-            }
         }
     }
 }

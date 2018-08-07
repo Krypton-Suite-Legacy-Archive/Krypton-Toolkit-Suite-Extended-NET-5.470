@@ -86,6 +86,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ICO", "ICO", "{68CF0D41-4A1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krypton Toolkit Extended Hub", "Krypton Toolkit Extended Hub\Krypton Toolkit Extended Hub.csproj", "{2ED623EA-947D-4B53-9E9F-05674EF0084D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Editor", "Palette Editor\Palette Editor.csproj", "{5EA4522D-B13C-45B1-9BC6-13E29587248A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -303,6 +305,18 @@ Global
 		{2ED623EA-947D-4B53-9E9F-05674EF0084D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2ED623EA-947D-4B53-9E9F-05674EF0084D}.Release|x86.ActiveCfg = Release|Any CPU
 		{2ED623EA-947D-4B53-9E9F-05674EF0084D}.Release|x86.Build.0 = Release|Any CPU
+		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Debug|x86.Build.0 = Debug|Any CPU
+		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Installer Only|x86.Build.0 = Release|Any CPU
+		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Release|x86.ActiveCfg = Release|Any CPU
+		{5EA4522D-B13C-45B1-9BC6-13E29587248A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

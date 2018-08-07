@@ -2,13 +2,17 @@
 
 =======
 
-## Help needed! If anyone knows how to generate colours based on a base colour, then please contribute to this project, as it'll be appreciated (4 colours are needed). Thanks!
-
-=======
-
 ## An extension to the Krypton Toolkit suite of controls for .NET framework 4.7 
 
 ## NOTE: 20/06/2018 Background menu colours will be implemented in the comming weeks. Stay tuned for updates!
+
+======
+
+## 2018-08-07 Palette colour generator
+* New API to allow a complementary colour set to be generated.
+* Begun work on a slimmed down version of a palette designer
+* New project icon
+* Idea for a randomly generated colour - Need help for fixing!
 
 ======
 

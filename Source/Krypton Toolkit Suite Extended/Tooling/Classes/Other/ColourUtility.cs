@@ -1,6 +1,6 @@
 ﻿using System;
-using System.CodeDom.Compiler;
 using System.Drawing;
+using Tooling.Settings.Classes;
 
 namespace Tooling.Classes.Other
 {
@@ -9,11 +9,28 @@ namespace Tooling.Classes.Other
     /// </summary>
     public class ColourUtility
     {
+        #region Constants
+        private const int MINIMUM_COLOUR_VALUE = 0, MAXIMUM_COLOUR_VALUE = 255;
+        #endregion
+
         #region Variables
         private Color _colour;
+
+        private Random randomColour = new Random(DateTime.Now.Millisecond);
+
+        private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
         #endregion
 
         #region Constructor
+        public ColourUtility()
+        {
+
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ColourUtility"/> class.
+        /// </summary>
+        /// <param name="originalColour">The original colour.</param>
         public ColourUtility(Color originalColour)
         {
             _colour = originalColour;
@@ -21,6 +38,11 @@ namespace Tooling.Classes.Other
         #endregion
 
         #region Methods
+        /// <summary>
+        /// Gets the transformed colour.
+        /// </summary>
+        /// <param name="overlay">The overlay.</param>
+        /// <returns></returns>
         public Color GetTransformedColour(Color overlay)
         {
             using (var bitmap = new Bitmap(1, 1))
@@ -41,6 +63,11 @@ namespace Tooling.Classes.Other
             }
         }
 
+        /// <summary>
+        /// Sets the hue.
+        /// </summary>
+        /// <param name="baseColour">The base colour.</param>
+        /// <returns></returns>
         public static Color SetHue(Color baseColour)
         {
             var tmpColour = new HSV();
@@ -54,6 +81,11 @@ namespace Tooling.Classes.Other
             return ColourFromHSL(tmpColour);
         }
 
+        /// <summary>
+        /// Colour from HSL.
+        /// </summary>
+        /// <param name="hsl">The HSL.</param>
+        /// <returns></returns>
         private static Color ColourFromHSL(HSV hsl)
         {
             if (hsl.saturation == 0)
@@ -76,6 +108,13 @@ namespace Tooling.Classes.Other
             return c;
         }
 
+        /// <summary>
+        /// RGBs the channel from hue.
+        /// </summary>
+        /// <param name="m1">The m1.</param>
+        /// <param name="m2">The m2.</param>
+        /// <param name="h">The h.</param>
+        /// <returns></returns>
         public static double RGBChannelFromHue(double m1, double m2, double h)
         {
             h = (h + 1d) % 1d;
@@ -89,6 +128,28 @@ namespace Tooling.Classes.Other
             else if (h * 2 < 1) return m2;
             else if (h * 3 < 2) return m1 + (m2 - m1) * 6 * (2d / 3d - h);
             else return m1;
+        }
+
+        /// <summary>
+        /// Generates a random colour.
+        /// </summary>
+        /// <param name="useAlphaChannelValue">if set to <c>true</c> [use alpha channel value].</param>
+        /// <returns>A random colour.</returns>
+        public Color GenerateRandomColour(bool useAlphaChannelValue = false)
+        {
+            Color randomColourOutput;
+
+            //if (useAlphaChannelValue)
+            //{
+            //    a = (byte)randomColour.Next(0, 255);
+            //}
+            //else
+            //{
+            randomColourOutput = Color.FromArgb(randomColour.Next(255), randomColour.Next(255), randomColour.Next(255));
+            //}
+
+            return randomColourOutput;
+
         }
         #endregion
 
