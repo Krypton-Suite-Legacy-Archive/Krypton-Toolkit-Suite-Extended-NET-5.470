@@ -706,6 +706,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PaletteColourCreator";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Palette Colour Creator";
             this.Load += new System.EventHandler(this.PaletteColourCreator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();

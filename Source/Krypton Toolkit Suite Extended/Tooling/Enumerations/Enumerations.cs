@@ -288,6 +288,30 @@
         /// <summary>
         /// The custom colour five
         /// </summary>
-        CUSTOMCOLOURFIVE
+        CUSTOMCOLOURFIVE,
+        /// <summary>
+        /// The menu text colour
+        /// </summary>
+        MENUTEXTCOLOUR,
+        /// <summary>
+        /// The custom text colour one
+        /// </summary>
+        CUSTOMTEXTCOLOURONE,
+        /// <summary>
+        /// The custom text colour two
+        /// </summary>
+        CUSTOMTEXTCOLOURTWO,
+        /// <summary>
+        /// The custom text colour three
+        /// </summary>
+        CUSTOMTEXTCOLOURTHREE,
+        /// <summary>
+        /// The custom text colour four
+        /// </summary>
+        CUSTOMTEXTCOLOURFOUR,
+        /// <summary>
+        /// The custom text colour five
+        /// </summary>
+        CUSTOMTEXTCOLOURFIVE
     }
 }

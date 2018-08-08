@@ -253,5 +253,60 @@ namespace Tooling.Settings {
                 this["MenuTextColour"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color CustomTextColourOne {
+            get {
+                return ((global::System.Drawing.Color)(this["CustomTextColourOne"]));
+            }
+            set {
+                this["CustomTextColourOne"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color CustomTextColourTwo {
+            get {
+                return ((global::System.Drawing.Color)(this["CustomTextColourTwo"]));
+            }
+            set {
+                this["CustomTextColourTwo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color CustomTextColourThree {
+            get {
+                return ((global::System.Drawing.Color)(this["CustomTextColourThree"]));
+            }
+            set {
+                this["CustomTextColourThree"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color CustomTextColourFour {
+            get {
+                return ((global::System.Drawing.Color)(this["CustomTextColourFour"]));
+            }
+            set {
+                this["CustomTextColourFour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color CustomTextColourFive {
+            get {
+                return ((global::System.Drawing.Color)(this["CustomTextColourFive"]));
+            }
+            set {
+                this["CustomTextColourFive"] = value;
+            }
+        }
     }
 }

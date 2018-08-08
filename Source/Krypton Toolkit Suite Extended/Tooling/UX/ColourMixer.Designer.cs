@@ -380,6 +380,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ColourMixer";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Colour Mixer";
             this.Load += new System.EventHandler(this.ColourMixer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();

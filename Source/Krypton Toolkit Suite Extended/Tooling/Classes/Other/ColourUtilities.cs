@@ -157,6 +157,17 @@ namespace Tooling.Classes.Other
                 lightColour.BackColor = Lighten(baseColour, 0.25f);
 
                 lightestColour.BackColor = Lighten(baseColour, 0.5f);
+
+                if (lightestColour.BackColor == lightColour.BackColor)
+                {
+                    lightestColour.BackColor = Color.Transparent;
+
+                    lightestColour.Enabled = false;
+                }
+                else
+                {
+                    lightestColour.Enabled = true;
+                }
             }
         }
 
