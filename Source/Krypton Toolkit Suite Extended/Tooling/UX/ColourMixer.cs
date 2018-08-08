@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using Tooling.Classes.Other;
+using Tooling.Settings.Classes;
 
 namespace Tooling.UX
 {
@@ -9,8 +10,14 @@ namespace Tooling.UX
     {
         #region Variables
         private int _alphaChannelValue, _redColourChannelValue, _greenColourChannelValue, _blueColourChannelValue, _max = byte.MaxValue + 1;
+
         private ConversionMethods _conversionMethods = new ConversionMethods();
+
         private RandomNumberGenerator _randomNumberGenerator = new RandomNumberGenerator();
+
+        private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
+
+        private ColourIntegerSettingsManager _colourIntegerSettingsManager = new ColourIntegerSettingsManager();
 
         private Random randomColour = new Random();
 
@@ -34,6 +41,8 @@ namespace Tooling.UX
         public ColourMixer()
         {
             InitializeComponent();
+
+            SetAlphaChannelValue(_colourIntegerSettingsManager.GetAlphaChannelValue());
         }
 
         /// <summary>

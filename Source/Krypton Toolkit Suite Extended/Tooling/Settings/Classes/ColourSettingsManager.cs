@@ -145,6 +145,24 @@ namespace Tooling.Settings.Classes
         }
 
         /// <summary>
+        /// Sets the AlternativeNormalTextColour to the value of alternativeNormalTextColour.
+        /// </summary>
+        /// <param name="alternativeNormalTextColour">The value of alternativeNormalTextColour.</param>
+        public void SetAlternativeNormalTextColour(Color alternativeNormalTextColour)
+        {
+            _colourSettings.AlternativeNormalTextColour = alternativeNormalTextColour;
+        }
+
+        /// <summary>
+        /// Gets the AlternativeNormalTextColour value.
+        /// </summary>
+        /// <returns>The value of alternativeNormalTextColour.</returns>
+        public Color GetAlternativeNormalTextColour()
+        {
+            return _colourSettings.AlternativeNormalTextColour;
+        }
+
+        /// <summary>
         /// Sets the DisabledTextColour to the value of disabledTextColur.
         /// </summary>
         /// <param name="disabledTextColur">The value of disabledTextColur.</param>
@@ -199,75 +217,75 @@ namespace Tooling.Settings.Classes
         }
 
         /// <summary>
-        /// Sets the AlphaChannelValue to the value of alphaChannelValue.
+        /// Sets the FocusTextColour to the value of focusTextColour.
         /// </summary>
-        /// <param name="alphaChannelValue">The value of alphaChannelValue.</param>
-        public void SetAlphaChannelValue(int alphaChannelValue)
+        /// <param name="focusTextColour">The value of focusTextColour.</param>
+        public void SetFocusTextColour(Color focusTextColour)
         {
-            _colourSettings.AlphaChannelValue = alphaChannelValue;
+            _colourSettings.FocusTextColour = focusTextColour;
         }
 
         /// <summary>
-        /// Gets the AlphaChannelValue value.
+        /// Gets the FocusTextColour value.
         /// </summary>
-        /// <returns>The value of alphaChannelValue.</returns>
-        public int GetAlphaChannelValue()
+        /// <returns>The value of focusTextColour.</returns>
+        public Color GetFocusTextColour()
         {
-            return _colourSettings.AlphaChannelValue;
+            return _colourSettings.FocusTextColour;
         }
 
         /// <summary>
-        /// Sets the RedChannelValue to the value of redChannelValue.
+        /// Sets the PressedTextColour to the value of pressedTextColour.
         /// </summary>
-        /// <param name="redChannelValue">The value of redChannelValue.</param>
-        public void SetRedChannelValue(int redChannelValue)
+        /// <param name="pressedTextColour">The value of pressedTextColour.</param>
+        public void SetPressedTextColour(Color pressedTextColour)
         {
-            _colourSettings.RedChannelValue = redChannelValue;
+            _colourSettings.PressedTextColour = pressedTextColour;
         }
 
         /// <summary>
-        /// Gets the RedChannelValue value.
+        /// Gets the PressedTextColour value.
         /// </summary>
-        /// <returns>The value of redChannelValue.</returns>
-        public int GetRedChannelValue()
+        /// <returns>The value of pressedTextColour.</returns>
+        public Color GetPressedTextColour()
         {
-            return _colourSettings.RedChannelValue;
+            return _colourSettings.PressedTextColour;
         }
 
         /// <summary>
-        /// Sets the GreenChannelValue to the value of greenChannelValue.
+        /// Sets the LinkHoverColour to the value of linkHoverColour.
         /// </summary>
-        /// <param name="greenChannelValue">The value of greenChannelValue.</param>
-        public void SetGreenChannelValue(int greenChannelValue)
+        /// <param name="linkHoverColour">The value of linkHoverColour.</param>
+        public void SetLinkHoverColour(Color linkHoverColour)
         {
-            _colourSettings.GreenChannelValue = greenChannelValue;
+            _colourSettings.LinkHoverColour = linkHoverColour;
         }
 
         /// <summary>
-        /// Gets the GreenChannelValue value.
+        /// Gets the LinkHoverColour value.
         /// </summary>
-        /// <returns>The value of greenChannelValue.</returns>
-        public int GetGreenChannelValue()
+        /// <returns>The value of linkHoverColour.</returns>
+        public Color GetLinkHoverColour()
         {
-            return _colourSettings.GreenChannelValue;
+            return _colourSettings.LinkHoverColour;
         }
 
         /// <summary>
-        /// Sets the BlueChannelValue to the value of blueChannelValue.
+        /// Sets the LinkVisitedColour to the value of linkVisitedColour.
         /// </summary>
-        /// <param name="blueChannelValue">The value of blueChannelValue.</param>
-        public void SetBlueChannelValue(int blueChannelValue)
+        /// <param name="linkVisitedColour">The value of linkVisitedColour.</param>
+        public void SetLinkVisitedColour(Color linkVisitedColour)
         {
-            _colourSettings.BlueChannelValue = blueChannelValue;
+            _colourSettings.LinkVisitedColour = linkVisitedColour;
         }
 
         /// <summary>
-        /// Gets the BlueChannelValue value.
+        /// Gets the LinkVisitedColour value.
         /// </summary>
-        /// <returns>The value of blueChannelValue.</returns>
-        public int GetBlueChannelValue()
+        /// <returns>The value of linkVisitedColour.</returns>
+        public Color GetLinkVisitedColour()
         {
-            return _colourSettings.BlueChannelValue;
+            return _colourSettings.LinkVisitedColour;
         }
         #endregion
 
@@ -341,19 +359,15 @@ namespace Tooling.Settings.Classes
 
             SetNormalTextColour(Color.Black);
 
+            SetFocusTextColour(Color.White);
+
+            SetPressedTextColour(Color.Black);
+
             SetDisabledTextColour(Color.Gray);
 
             SetDisabledColour(Color.Silver);
 
             SetLinkNormalColour(Color.Blue);
-
-            SetAlphaChannelValue(255);
-
-            SetRedChannelValue(0);
-
-            SetGreenChannelValue(0);
-
-            SetBlueChannelValue(0);
         }
         #endregion
     }

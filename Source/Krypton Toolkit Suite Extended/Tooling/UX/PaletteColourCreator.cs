@@ -250,6 +250,13 @@ namespace Tooling.UX
             }
         }
 
+        private void kbtnDefineCustomColours_Click(object sender, EventArgs e)
+        {
+            CustomColours customColours = new CustomColours();
+
+            customColours.Show();
+        }
+
         private void kbtnSaveValues_Click(object sender, EventArgs e)
         {
 

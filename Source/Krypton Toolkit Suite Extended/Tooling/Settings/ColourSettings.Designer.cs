@@ -135,49 +135,122 @@ namespace Tooling.Settings {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("255")]
-        public int AlphaChannelValue {
+        public global::System.Drawing.Color FocusTextColour {
             get {
-                return ((int)(this["AlphaChannelValue"]));
+                return ((global::System.Drawing.Color)(this["FocusTextColour"]));
             }
             set {
-                this["AlphaChannelValue"] = value;
+                this["FocusTextColour"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int RedChannelValue {
+        public global::System.Drawing.Color PressedTextColour {
             get {
-                return ((int)(this["RedChannelValue"]));
+                return ((global::System.Drawing.Color)(this["PressedTextColour"]));
             }
             set {
-                this["RedChannelValue"] = value;
+                this["PressedTextColour"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int GreenChannelValue {
+        public global::System.Drawing.Color LinkHoverColour {
             get {
-                return ((int)(this["GreenChannelValue"]));
+                return ((global::System.Drawing.Color)(this["LinkHoverColour"]));
             }
             set {
-                this["GreenChannelValue"] = value;
+                this["LinkHoverColour"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int BlueChannelValue {
+        public global::System.Drawing.Color LinkVisitedColour {
             get {
-                return ((int)(this["BlueChannelValue"]));
+                return ((global::System.Drawing.Color)(this["LinkVisitedColour"]));
             }
             set {
-                this["BlueChannelValue"] = value;
+                this["LinkVisitedColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color AlternativeNormalTextColour {
+            get {
+                return ((global::System.Drawing.Color)(this["AlternativeNormalTextColour"]));
+            }
+            set {
+                this["AlternativeNormalTextColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color CustomColourOne {
+            get {
+                return ((global::System.Drawing.Color)(this["CustomColourOne"]));
+            }
+            set {
+                this["CustomColourOne"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color CustomColourTwo {
+            get {
+                return ((global::System.Drawing.Color)(this["CustomColourTwo"]));
+            }
+            set {
+                this["CustomColourTwo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color CustomColourThree {
+            get {
+                return ((global::System.Drawing.Color)(this["CustomColourThree"]));
+            }
+            set {
+                this["CustomColourThree"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color CustomColourFour {
+            get {
+                return ((global::System.Drawing.Color)(this["CustomColourFour"]));
+            }
+            set {
+                this["CustomColourFour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color CustomColourFive {
+            get {
+                return ((global::System.Drawing.Color)(this["CustomColourFive"]));
+            }
+            set {
+                this["CustomColourFive"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color MenuTextColour {
+            get {
+                return ((global::System.Drawing.Color)(this["MenuTextColour"]));
+            }
+            set {
+                this["MenuTextColour"] = value;
             }
         }
     }

@@ -87,6 +87,7 @@
     <Compile Include="Classes\Other\ColourUtility.cs" />
     <Compile Include="Classes\Other\ConversionMethods.cs" />
     <Compile Include="Classes\Other\FileCreator.cs" />
+    <Compile Include="Classes\Other\InformationControlManager.cs" />
     <Compile Include="Classes\Other\RandomNumberGenerator.cs" />
     <Compile Include="Classes\Other\SettingsManager.cs" />
     <Compile Include="Classes\Other\ToolStripNonClientRenderer.cs" />
@@ -132,7 +133,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Classes\ColourIntegerSettingsManager.cs" />
     <Compile Include="Settings\Classes\ColourSettingsManager.cs" />
+    <Compile Include="Settings\ColourIntegerSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ColourIntegerSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Settings\ColourSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -174,6 +181,18 @@
     <Compile Include="UX\ColourRGBToHexadecimalConverter.Designer.cs">
       <DependentUpon>ColourRGBToHexadecimalConverter.cs</DependentUpon>
     </Compile>
+    <Compile Include="UX\CustomColours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\CustomColours.Designer.cs">
+      <DependentUpon>CustomColours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UX\CustomColoursOld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\CustomColoursOld.Designer.cs">
+      <DependentUpon>CustomColoursOld.cs</DependentUpon>
+    </Compile>
     <Compile Include="UX\PaletteColourCreator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +222,10 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Resources\color.ico" />
+    <None Include="Settings\ColourIntegerSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ColourIntegerSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Settings\ColourSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>ColourSettings.Designer.cs</LastGenOutput>
@@ -228,6 +251,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\ColourRGBToHexadecimalConverter.resx">
       <DependentUpon>ColourRGBToHexadecimalConverter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\CustomColours.resx">
+      <DependentUpon>CustomColours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\CustomColoursOld.resx">
+      <DependentUpon>CustomColoursOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\PaletteColourCreator.resx">
       <DependentUpon>PaletteColourCreator.cs</DependentUpon>

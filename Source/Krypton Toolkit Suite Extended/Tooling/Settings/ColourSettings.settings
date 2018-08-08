@@ -32,17 +32,38 @@
     <Setting Name="LinkNormalColour" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="AlphaChannelValue" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">255</Value>
+    <Setting Name="FocusTextColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="RedChannelValue" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="PressedTextColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="GreenChannelValue" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="LinkHoverColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="BlueChannelValue" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="LinkVisitedColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AlternativeNormalTextColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomColourOne" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomColourTwo" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomColourThree" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomColourFour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomColourFive" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MenuTextColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

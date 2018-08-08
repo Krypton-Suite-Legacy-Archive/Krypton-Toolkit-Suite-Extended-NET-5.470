@@ -1,6 +1,8 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Tooling.Classes.Other
@@ -194,6 +196,63 @@ namespace Tooling.Classes.Other
             saturationValue.Value = saturation;
 
             brightnessValue.Value = brightness;
+        }
+
+        /// <summary>
+        /// Propagates the standard colours.
+        /// </summary>
+        /// <param name="standardColourSelection">The standard colour selection.</param>
+        public static void PropagateStandardColours(KryptonComboBox standardColourSelection)
+        {
+            List<Color> allColours = new List<Color>();
+
+            foreach (KnownColor colour in Enum.GetValues(typeof(KnownColor)))
+            {
+                Color standardColour = Color.FromKnownColor(colour);
+
+                if (!allColours.Contains(standardColour))
+                {
+                    standardColourSelection.Items.Add(standardColour.Name);
+
+                    standardColourSelection.AutoCompleteCustomSource.Add(standardColour.Name);
+
+                    allColours.Add(standardColour);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Propagates the system colours.
+        /// </summary>
+        /// <param name="systemColourSelection">The system colour selection.</param>
+        public static void PropagateSystemColours(KryptonComboBox systemColourSelection)
+        {
+            List<Color> allSystemColours = new List<Color>();
+
+            PropertyInfo[] systemColourProperties = typeof(SystemColors).GetProperties();
+
+            foreach (PropertyInfo propertyInfo in systemColourProperties)
+            {
+                object colourObject = propertyInfo.GetValue(null, null);
+
+                Color systemColour = (Color)colourObject;
+
+                if (!allSystemColours.Contains(systemColour))
+                {
+                    systemColourSelection.Items.Add(systemColour.Name);
+
+                    systemColourSelection.AutoCompleteCustomSource.Add(systemColour.Name);
+
+                    allSystemColours.Add(systemColour);
+                }
+            }
+        }
+
+        public static void PropagateBasePaletteModes(KryptonComboBox basePaletteModeSelection)
+        {
+            List<PaletteMode> allPaletteModes = new List<PaletteMode>();
+
+            basePaletteModeSelection.Items.Add(Enum.GetValues(typeof(PaletteMode)).ToString());
         }
     }
 }
