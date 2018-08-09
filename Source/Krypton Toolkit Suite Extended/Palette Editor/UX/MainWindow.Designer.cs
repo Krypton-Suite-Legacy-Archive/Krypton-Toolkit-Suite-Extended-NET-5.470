@@ -172,15 +172,16 @@
             this.kbtnClose.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnClose.TabIndex = 44;
             this.kbtnClose.Values.Text = "&Close";
+            this.kbtnClose.Click += new System.EventHandler(this.kbtnClose_Click);
             // 
             // lblColourOutput
             // 
-            this.lblColourOutput.Location = new System.Drawing.Point(33, 10);
+            this.lblColourOutput.Location = new System.Drawing.Point(12, 9);
             this.lblColourOutput.Name = "lblColourOutput";
-            this.lblColourOutput.Size = new System.Drawing.Size(203, 26);
+            this.lblColourOutput.Size = new System.Drawing.Size(6, 2);
             this.lblColourOutput.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColourOutput.TabIndex = 62;
-            this.lblColourOutput.Values.Text = "Colour Values for: {0} {1}";
+            this.lblColourOutput.Values.Text = "";
             // 
             // kryptonPanel2
             // 
@@ -629,6 +630,7 @@
             this.pbxBaseColour.TabIndex = 4;
             this.pbxBaseColour.TabStop = false;
             this.pbxBaseColour.MouseEnter += new System.EventHandler(this.pbxBaseColour_MouseEnter);
+            this.pbxBaseColour.MouseLeave += new System.EventHandler(this.pbxBaseColour_MouseLeave);
             // 
             // pbxLightestColour
             // 
@@ -653,6 +655,7 @@
             this.pbxDarkColour.TabIndex = 5;
             this.pbxDarkColour.TabStop = false;
             this.pbxDarkColour.MouseEnter += new System.EventHandler(this.pbxDarkColour_MouseEnter);
+            this.pbxDarkColour.MouseLeave += new System.EventHandler(this.pbxDarkColour_MouseLeave);
             // 
             // pbxLightColour
             // 
@@ -665,6 +668,7 @@
             this.pbxLightColour.TabIndex = 7;
             this.pbxLightColour.TabStop = false;
             this.pbxLightColour.MouseEnter += new System.EventHandler(this.pbxLightColour_MouseEnter);
+            this.pbxLightColour.MouseLeave += new System.EventHandler(this.pbxLightColour_MouseLeave);
             // 
             // pbxMiddleColour
             // 
@@ -677,6 +681,7 @@
             this.pbxMiddleColour.TabIndex = 6;
             this.pbxMiddleColour.TabStop = false;
             this.pbxMiddleColour.MouseEnter += new System.EventHandler(this.pbxMiddleColour_MouseEnter);
+            this.pbxMiddleColour.MouseLeave += new System.EventHandler(this.pbxMiddleColour_MouseLeave);
             // 
             // labelGridNormal
             // 

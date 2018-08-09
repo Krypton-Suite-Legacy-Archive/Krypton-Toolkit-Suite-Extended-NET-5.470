@@ -241,6 +241,7 @@ namespace PaletteEditor.UX
             _colourSettingsManager.ResetSettings(_debugMode);
         }
 
+        #region Picture Box Mouse Enter Events
         private void pbxBaseColour_MouseEnter(object sender, EventArgs e)
         {
             InformationControlManager.DisplayColourInformation(pbxBaseColour, false, "Base Colour", lblColourOutput);
@@ -371,7 +372,7 @@ namespace PaletteEditor.UX
         {
             InformationControlManager.DisplayColourInformation(pbxMenuTextColourPreview, false, "Menu Text Colour", lblColourOutput);
         }
-
+        #endregion
 
         private void kbtnGenerate_Click(object sender, EventArgs e)
         {
@@ -412,66 +413,71 @@ namespace PaletteEditor.UX
 
         private void kbtnGetColours_Click(object sender, EventArgs e)
         {
-            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+            ColourUtilities.GrabColourDefinitions(pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview);
+        }
 
-            pbxBaseColour.BackColor = colourSettingsManager.GetBaseColour();
+        private void pbxBaseColour_MouseLeave(object sender, EventArgs e)
+        {
+            InformationControlManager.ResetColourValueInformation(lblColourOutput);
+        }
 
-            pbxDarkColour.BackColor = colourSettingsManager.GetDarkestColour();
+        private void pbxDarkColour_MouseLeave(object sender, EventArgs e)
+        {
+            InformationControlManager.ResetColourValueInformation(lblColourOutput);
+        }
 
-            pbxMiddleColour.BackColor = colourSettingsManager.GetMediumColour();
+        private void pbxMiddleColour_MouseLeave(object sender, EventArgs e)
+        {
+            InformationControlManager.ResetColourValueInformation(lblColourOutput);
+        }
 
-            pbxLightColour.BackColor = colourSettingsManager.GetLightColour();
+        private void pbxLightColour_MouseLeave(object sender, EventArgs e)
+        {
+            InformationControlManager.ResetColourValueInformation(lblColourOutput);
+        }
 
-            pbxLightestColour.BackColor = colourSettingsManager.GetLightestColour();
+        private void kbtnClose_Click(object sender, EventArgs e)
+        {
+            ExitPaletteEditor();
+        }
 
-            pbxBorderColourPreview.BackColor = colourSettingsManager.GetBorderColour();
+        private void ExitPaletteEditor()
+        {
+            if (_dirty)
+            {
+                DialogResult result = KryptonMessageBox.Show("The palette has not yet been saved.\nDo you want to save now?", "Palette Editor Save Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            pbxAlternativeNormalTextColour.BackColor = colourSettingsManager.GetAlternativeNormalTextColour();
+                if (result == DialogResult.Yes)
+                {
+                    if (_loaded)
+                    {
+                        Save();
 
-            pbxNormalTextColourPreview.BackColor = colourSettingsManager.GetNormalTextColour();
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        Save();
 
-            pbxDisabledTextColourPreview.BackColor = colourSettingsManager.GetDisabledTextColour();
-
-            pbxFocusedTextColourPreview.BackColor = colourSettingsManager.GetFocusTextColour();
-
-            pbxPressedTextColourPreview.BackColor = colourSettingsManager.GetPressedTextColour();
-
-            pbxDisabledColourPreview.BackColor = colourSettingsManager.GetDisabledColour();
-
-            pbxLinkNormalColourPreview.BackColor = colourSettingsManager.GetLinkNormalColour();
-
-            pbxLinkHoverColourPreview.BackColor = colourSettingsManager.GetLinkHoverColour();
-
-            pbxLinkVisitedColourPreview.BackColor = colourSettingsManager.GetLinkVisitedColour();
-
-            pbxCustomColourOnePreview.BackColor = colourSettingsManager.GetCustomColourOne();
-
-            pbxCustomColourTwoPreview.BackColor = colourSettingsManager.GetCustomColourTwo();
-
-            pbxCustomColourThreePreview.BackColor = colourSettingsManager.GetCustomColourThree();
-
-            pbxCustomColourFourPreview.BackColor = colourSettingsManager.GetCustomColourFour();
-
-            pbxCustomColourFivePreview.BackColor = colourSettingsManager.GetCustomColourFive();
-
-            pbxMenuTextColourPreview.BackColor = colourSettingsManager.GetMenuTextColour();
-
-            pbxCustomTextColourOnePreview.BackColor = colourSettingsManager.GetCustomTextColourOne();
-
-            pbxCustomTextColourTwoPreview.BackColor = colourSettingsManager.GetCustomTextColourTwo();
-
-            pbxCustomTextColourThreePreview.BackColor = colourSettingsManager.GetCustomTextColourThree();
-
-            pbxCustomTextColourFourPreview.BackColor = colourSettingsManager.GetCustomTextColourFour();
-
-            pbxCustomTextColourFivePreview.BackColor = colourSettingsManager.GetCustomTextColourFive();
+                        Application.Exit();
+                    }
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
 
         private void kbtnExportPalette_Click(object sender, EventArgs e)
         {
             //PaletteEditorEngine.ExportPaletteTheme(palette, PaletteMode.Office2007Silver, pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, tslStatus);
 
-            PaletteEditorEngine.ExportPalette(PaletteMode.Office2007Silver, pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, tslStatus);
+            PaletteEditorEngine.ExportPalette(PaletteMode.Office2007Silver, pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, tslStatus, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview);
         }
 
 
