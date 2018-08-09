@@ -263,7 +263,10 @@ namespace Tooling.Classes.Other
         {
             List<PaletteMode> allPaletteModes = new List<PaletteMode>();
 
-            basePaletteModeSelection.Items.Add(Enum.GetValues(typeof(PaletteMode)).ToString());
+            foreach (string mode in Enum.GetNames(typeof(PaletteMode)))
+            {
+                basePaletteModeSelection.Items.Add(mode);
+            }
         }
     }
 }

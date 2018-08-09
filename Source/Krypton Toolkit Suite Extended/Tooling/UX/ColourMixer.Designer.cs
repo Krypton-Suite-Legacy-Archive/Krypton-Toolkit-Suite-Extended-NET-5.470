@@ -36,8 +36,6 @@
             this.kbtnGenerateBlueValue = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnGenerateGreenValue = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnGenerateRedValue = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnUtiliseAsBaseColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.knumBlueChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.knumGreenChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.knumRedChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
@@ -53,26 +51,31 @@
             this.ktbGreen = new ComponentFactory.Krypton.Toolkit.KryptonTrackBar();
             this.ktbBlue = new ComponentFactory.Krypton.Toolkit.KryptonTrackBar();
             this.ktbAlpha = new ComponentFactory.Krypton.Toolkit.KryptonTrackBar();
+            this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnUtiliseAsBaseColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tmrUpdate = new System.Windows.Forms.Timer(this.components);
+            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
+            this.kryptonPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.ktxtHexValue);
             this.kryptonPanel1.Controls.Add(this.kchkGenerateAlphaValue);
             this.kryptonPanel1.Controls.Add(this.kbtnGenerateColour);
             this.kryptonPanel1.Controls.Add(this.kbtnGenerateBlueValue);
             this.kryptonPanel1.Controls.Add(this.kbtnGenerateGreenValue);
             this.kryptonPanel1.Controls.Add(this.kbtnGenerateRedValue);
-            this.kryptonPanel1.Controls.Add(this.kbtnGenerate);
-            this.kryptonPanel1.Controls.Add(this.kbtnUtiliseAsBaseColour);
             this.kryptonPanel1.Controls.Add(this.knumBlueChannelValue);
             this.kryptonPanel1.Controls.Add(this.knumGreenChannelValue);
             this.kryptonPanel1.Controls.Add(this.knumRedChannelValue);
             this.kryptonPanel1.Controls.Add(this.knumAlphaChannelValue);
-            this.kryptonPanel1.Controls.Add(this.ktxtHexValue);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel5);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel4);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel3);
@@ -86,12 +89,12 @@
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(753, 667);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1204, 314);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // kchkGenerateAlphaValue
             // 
-            this.kchkGenerateAlphaValue.Location = new System.Drawing.Point(276, 213);
+            this.kchkGenerateAlphaValue.Location = new System.Drawing.Point(987, 227);
             this.kchkGenerateAlphaValue.Name = "kchkGenerateAlphaValue";
             this.kchkGenerateAlphaValue.Size = new System.Drawing.Size(205, 26);
             this.kchkGenerateAlphaValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,7 +105,7 @@
             // 
             this.kbtnGenerateColour.AutoSize = true;
             this.kbtnGenerateColour.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGenerateColour.Location = new System.Drawing.Point(284, 177);
+            this.kbtnGenerateColour.Location = new System.Drawing.Point(784, 223);
             this.kbtnGenerateColour.Name = "kbtnGenerateColour";
             this.kbtnGenerateColour.Size = new System.Drawing.Size(197, 30);
             this.kbtnGenerateColour.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,7 +117,7 @@
             // 
             this.kbtnGenerateBlueValue.AutoSize = true;
             this.kbtnGenerateBlueValue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGenerateBlueValue.Location = new System.Drawing.Point(367, 108);
+            this.kbtnGenerateBlueValue.Location = new System.Drawing.Point(1066, 148);
             this.kbtnGenerateBlueValue.Name = "kbtnGenerateBlueValue";
             this.kbtnGenerateBlueValue.Size = new System.Drawing.Size(114, 30);
             this.kbtnGenerateBlueValue.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,7 +129,7 @@
             // 
             this.kbtnGenerateGreenValue.AutoSize = true;
             this.kbtnGenerateGreenValue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGenerateGreenValue.Location = new System.Drawing.Point(355, 63);
+            this.kbtnGenerateGreenValue.Location = new System.Drawing.Point(1066, 104);
             this.kbtnGenerateGreenValue.Name = "kbtnGenerateGreenValue";
             this.kbtnGenerateGreenValue.Size = new System.Drawing.Size(126, 30);
             this.kbtnGenerateGreenValue.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,7 +141,7 @@
             // 
             this.kbtnGenerateRedValue.AutoSize = true;
             this.kbtnGenerateRedValue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGenerateRedValue.Location = new System.Drawing.Point(370, 12);
+            this.kbtnGenerateRedValue.Location = new System.Drawing.Point(1066, 56);
             this.kbtnGenerateRedValue.Name = "kbtnGenerateRedValue";
             this.kbtnGenerateRedValue.Size = new System.Drawing.Size(111, 30);
             this.kbtnGenerateRedValue.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -146,33 +149,9 @@
             this.kbtnGenerateRedValue.Values.Text = "Generate &Red";
             this.kbtnGenerateRedValue.Click += new System.EventHandler(this.kbtnGenerateRedValue_Click);
             // 
-            // kbtnGenerate
-            // 
-            this.kbtnGenerate.AutoSize = true;
-            this.kbtnGenerate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGenerate.Location = new System.Drawing.Point(186, 627);
-            this.kbtnGenerate.Name = "kbtnGenerate";
-            this.kbtnGenerate.Size = new System.Drawing.Size(144, 30);
-            this.kbtnGenerate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGenerate.TabIndex = 16;
-            this.kbtnGenerate.Values.Text = "Gener&ate a Colour";
-            this.kbtnGenerate.Click += new System.EventHandler(this.kbtnGenerate_Click);
-            // 
-            // kbtnUtiliseAsBaseColour
-            // 
-            this.kbtnUtiliseAsBaseColour.AutoSize = true;
-            this.kbtnUtiliseAsBaseColour.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnUtiliseAsBaseColour.Location = new System.Drawing.Point(13, 627);
-            this.kbtnUtiliseAsBaseColour.Name = "kbtnUtiliseAsBaseColour";
-            this.kbtnUtiliseAsBaseColour.Size = new System.Drawing.Size(167, 30);
-            this.kbtnUtiliseAsBaseColour.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnUtiliseAsBaseColour.TabIndex = 15;
-            this.kbtnUtiliseAsBaseColour.Values.Text = "Utilise as Base &Colour";
-            this.kbtnUtiliseAsBaseColour.Click += new System.EventHandler(this.kbtnUtiliseAsBaseColour_Click);
-            // 
             // knumBlueChannelValue
             // 
-            this.knumBlueChannelValue.Location = new System.Drawing.Point(81, 372);
+            this.knumBlueChannelValue.Location = new System.Drawing.Point(310, 150);
             this.knumBlueChannelValue.Maximum = new decimal(new int[] {
             256,
             0,
@@ -188,7 +167,7 @@
             // 
             // knumGreenChannelValue
             // 
-            this.knumGreenChannelValue.Location = new System.Drawing.Point(81, 329);
+            this.knumGreenChannelValue.Location = new System.Drawing.Point(310, 104);
             this.knumGreenChannelValue.Maximum = new decimal(new int[] {
             256,
             0,
@@ -203,7 +182,7 @@
             // 
             // knumRedChannelValue
             // 
-            this.knumRedChannelValue.Location = new System.Drawing.Point(81, 285);
+            this.knumRedChannelValue.Location = new System.Drawing.Point(310, 58);
             this.knumRedChannelValue.Maximum = new decimal(new int[] {
             256,
             0,
@@ -219,7 +198,7 @@
             // 
             // knumAlphaChannelValue
             // 
-            this.knumAlphaChannelValue.Location = new System.Drawing.Point(81, 243);
+            this.knumAlphaChannelValue.Location = new System.Drawing.Point(310, 12);
             this.knumAlphaChannelValue.Maximum = new decimal(new int[] {
             255,
             0,
@@ -233,7 +212,7 @@
             // 
             // ktxtHexValue
             // 
-            this.ktxtHexValue.Location = new System.Drawing.Point(136, 594);
+            this.ktxtHexValue.Location = new System.Drawing.Point(140, 226);
             this.ktxtHexValue.MaxLength = 7;
             this.ktxtHexValue.Name = "ktxtHexValue";
             this.ktxtHexValue.Size = new System.Drawing.Size(154, 29);
@@ -243,16 +222,16 @@
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(13, 594);
+            this.kryptonLabel5.Location = new System.Drawing.Point(13, 227);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(116, 26);
+            this.kryptonLabel5.Size = new System.Drawing.Size(130, 26);
             this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel5.TabIndex = 9;
-            this.kryptonLabel5.Values.Text = "Hexadecimal:";
+            this.kryptonLabel5.Values.Text = "Hexadecimal: #";
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(13, 374);
+            this.kryptonLabel4.Location = new System.Drawing.Point(242, 150);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(50, 26);
             this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -261,7 +240,7 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(13, 329);
+            this.kryptonLabel3.Location = new System.Drawing.Point(242, 104);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(62, 26);
             this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -270,7 +249,7 @@
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(13, 287);
+            this.kryptonLabel2.Location = new System.Drawing.Point(242, 58);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(46, 26);
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -279,7 +258,7 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(13, 243);
+            this.kryptonLabel1.Location = new System.Drawing.Point(242, 12);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(62, 26);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -300,11 +279,10 @@
             // ktbRed
             // 
             this.ktbRed.DrawBackground = true;
-            this.ktbRed.Location = new System.Drawing.Point(553, 12);
+            this.ktbRed.Location = new System.Drawing.Point(436, 63);
             this.ktbRed.Maximum = 255;
             this.ktbRed.Name = "ktbRed";
-            this.ktbRed.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.ktbRed.Size = new System.Drawing.Size(21, 608);
+            this.ktbRed.Size = new System.Drawing.Size(624, 21);
             this.ktbRed.StateCommon.Tick.Color1 = System.Drawing.Color.Red;
             this.ktbRed.StateCommon.Track.Color1 = System.Drawing.Color.Red;
             this.ktbRed.StateCommon.Track.Color2 = System.Drawing.Color.Red;
@@ -318,11 +296,10 @@
             // ktbGreen
             // 
             this.ktbGreen.DrawBackground = true;
-            this.ktbGreen.Location = new System.Drawing.Point(623, 12);
+            this.ktbGreen.Location = new System.Drawing.Point(436, 109);
             this.ktbGreen.Maximum = 255;
             this.ktbGreen.Name = "ktbGreen";
-            this.ktbGreen.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.ktbGreen.Size = new System.Drawing.Size(21, 608);
+            this.ktbGreen.Size = new System.Drawing.Size(624, 21);
             this.ktbGreen.StateCommon.Tick.Color1 = System.Drawing.Color.Green;
             this.ktbGreen.StateCommon.Track.Color1 = System.Drawing.Color.Green;
             this.ktbGreen.StateCommon.Track.Color2 = System.Drawing.Color.Green;
@@ -336,11 +313,10 @@
             // ktbBlue
             // 
             this.ktbBlue.DrawBackground = true;
-            this.ktbBlue.Location = new System.Drawing.Point(704, 12);
+            this.ktbBlue.Location = new System.Drawing.Point(436, 155);
             this.ktbBlue.Maximum = 255;
             this.ktbBlue.Name = "ktbBlue";
-            this.ktbBlue.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.ktbBlue.Size = new System.Drawing.Size(21, 608);
+            this.ktbBlue.Size = new System.Drawing.Size(624, 21);
             this.ktbBlue.StateCommon.Tick.Color1 = System.Drawing.Color.Blue;
             this.ktbBlue.StateCommon.Track.Color1 = System.Drawing.Color.Blue;
             this.ktbBlue.StateCommon.Track.Color2 = System.Drawing.Color.Blue;
@@ -354,14 +330,37 @@
             // ktbAlpha
             // 
             this.ktbAlpha.DrawBackground = true;
-            this.ktbAlpha.Location = new System.Drawing.Point(487, 12);
+            this.ktbAlpha.Location = new System.Drawing.Point(436, 17);
             this.ktbAlpha.Maximum = 255;
             this.ktbAlpha.Name = "ktbAlpha";
-            this.ktbAlpha.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.ktbAlpha.Size = new System.Drawing.Size(21, 608);
+            this.ktbAlpha.Size = new System.Drawing.Size(624, 21);
             this.ktbAlpha.TabIndex = 0;
             this.ktbAlpha.TickStyle = System.Windows.Forms.TickStyle.None;
             this.ktbAlpha.ValueChanged += new System.EventHandler(this.ktbAlpha_ValueChanged);
+            // 
+            // kbtnGenerate
+            // 
+            this.kbtnGenerate.AutoSize = true;
+            this.kbtnGenerate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnGenerate.Location = new System.Drawing.Point(185, 6);
+            this.kbtnGenerate.Name = "kbtnGenerate";
+            this.kbtnGenerate.Size = new System.Drawing.Size(144, 30);
+            this.kbtnGenerate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerate.TabIndex = 16;
+            this.kbtnGenerate.Values.Text = "Gener&ate a Colour";
+            this.kbtnGenerate.Click += new System.EventHandler(this.kbtnGenerate_Click);
+            // 
+            // kbtnUtiliseAsBaseColour
+            // 
+            this.kbtnUtiliseAsBaseColour.AutoSize = true;
+            this.kbtnUtiliseAsBaseColour.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnUtiliseAsBaseColour.Location = new System.Drawing.Point(12, 6);
+            this.kbtnUtiliseAsBaseColour.Name = "kbtnUtiliseAsBaseColour";
+            this.kbtnUtiliseAsBaseColour.Size = new System.Drawing.Size(167, 30);
+            this.kbtnUtiliseAsBaseColour.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnUtiliseAsBaseColour.TabIndex = 15;
+            this.kbtnUtiliseAsBaseColour.Values.Text = "Utilise as Base &Colour";
+            this.kbtnUtiliseAsBaseColour.Click += new System.EventHandler(this.kbtnUtiliseAsBaseColour_Click);
             // 
             // tmrUpdate
             // 
@@ -369,11 +368,45 @@
             this.tmrUpdate.Interval = 250;
             this.tmrUpdate.Tick += new System.EventHandler(this.tmrUpdate_Tick);
             // 
+            // kryptonPanel2
+            // 
+            this.kryptonPanel2.Controls.Add(this.kbtnOk);
+            this.kryptonPanel2.Controls.Add(this.kbtnUtiliseAsBaseColour);
+            this.kryptonPanel2.Controls.Add(this.kbtnGenerate);
+            this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.kryptonPanel2.Location = new System.Drawing.Point(0, 269);
+            this.kryptonPanel2.Name = "kryptonPanel2";
+            this.kryptonPanel2.Size = new System.Drawing.Size(1204, 45);
+            this.kryptonPanel2.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 267);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1204, 2);
+            this.panel1.TabIndex = 2;
+            // 
+            // kbtnOk
+            // 
+            this.kbtnOk.AutoSize = true;
+            this.kbtnOk.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnOk.Location = new System.Drawing.Point(1160, 6);
+            this.kbtnOk.Name = "kbtnOk";
+            this.kbtnOk.Size = new System.Drawing.Size(32, 30);
+            this.kbtnOk.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnOk.TabIndex = 60;
+            this.kbtnOk.Values.Text = "O&k";
+            // 
             // ColourMixer
             // 
+            this.AcceptButton = this.kbtnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 667);
+            this.ClientSize = new System.Drawing.Size(1204, 314);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.kryptonPanel2);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -388,6 +421,9 @@
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
+            this.kryptonPanel2.ResumeLayout(false);
+            this.kryptonPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -418,5 +454,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGenerateRedValue;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGenerateColour;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kchkGenerateAlphaValue;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
+        private System.Windows.Forms.Panel panel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnOk;
     }
 }

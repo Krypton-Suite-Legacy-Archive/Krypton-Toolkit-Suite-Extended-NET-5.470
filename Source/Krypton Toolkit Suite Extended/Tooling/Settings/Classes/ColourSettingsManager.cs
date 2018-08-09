@@ -287,6 +287,204 @@ namespace Tooling.Settings.Classes
         {
             return _colourSettings.LinkVisitedColour;
         }
+
+        /// <summary>
+        /// Sets the CustomColourOne to the value of customColourOne.
+        /// </summary>
+        /// <param name="customColourOne">The value of customColourOne.</param>
+        public void SetCustomColourOne(Color customColourOne)
+        {
+            _colourSettings.CustomColourOne = customColourOne;
+        }
+
+        /// <summary>
+        /// Gets the CustomColourOne value.
+        /// </summary>
+        /// <returns>The value of customColourOne.</returns>
+        public Color GetCustomColourOne()
+        {
+            return _colourSettings.CustomColourOne;
+        }
+
+        /// <summary>
+        /// Sets the CustomColourTwo to the value of customColourTwo.
+        /// </summary>
+        /// <param name="customColourTwo">The value of customColourTwo.</param>
+        public void SetCustomColourTwo(Color customColourTwo)
+        {
+            _colourSettings.CustomColourTwo = customColourTwo;
+        }
+
+        /// <summary>
+        /// Gets the CustomColourTwo value.
+        /// </summary>
+        /// <returns>The value of customColourTwo.</returns>
+        public Color GetCustomColourTwo()
+        {
+            return _colourSettings.CustomColourTwo;
+        }
+
+        /// <summary>
+        /// Sets the CustomColourThree to the value of customColourThree.
+        /// </summary>
+        /// <param name="customColourThree">The value of customColourThree.</param>
+        public void SetCustomColourThree(Color customColourThree)
+        {
+            _colourSettings.CustomColourThree = customColourThree;
+        }
+
+        /// <summary>
+        /// Gets the CustomColourThree value.
+        /// </summary>
+        /// <returns>The value of customColourThree.</returns>
+        public Color GetCustomColourThree()
+        {
+            return _colourSettings.CustomColourThree;
+        }
+
+        /// <summary>
+        /// Sets the CustomColourFour to the value of customColourFour.
+        /// </summary>
+        /// <param name="customColourFour">The value of customColourFour.</param>
+        public void SetCustomColourFour(Color customColourFour)
+        {
+            _colourSettings.CustomColourFour = customColourFour;
+        }
+
+        /// <summary>
+        /// Gets the CustomColourFour value.
+        /// </summary>
+        /// <returns>The value of customColourFour.</returns>
+        public Color GetCustomColourFour()
+        {
+            return _colourSettings.CustomColourFour;
+        }
+
+        /// <summary>
+        /// Sets the CustomColourFive to the value of customColourFive.
+        /// </summary>
+        /// <param name="customColourFive">The value of customColourFive.</param>
+        public void SetCustomColourFive(Color customColourFive)
+        {
+            _colourSettings.CustomColourFive = customColourFive;
+        }
+
+        /// <summary>
+        /// Gets the CustomColourFive value.
+        /// </summary>
+        /// <returns>The value of customColourFive.</returns>
+        public Color GetCustomColourFive()
+        {
+            return _colourSettings.CustomColourFive;
+        }
+
+        /// <summary>
+        /// Sets the MenuTextColour to the value of menuTextColour.
+        /// </summary>
+        /// <param name="menuTextColour">The value of menuTextColour.</param>
+        public void SetMenuTextColour(Color menuTextColour)
+        {
+            _colourSettings.MenuTextColour = menuTextColour;
+        }
+
+        /// <summary>
+        /// Gets the MenuTextColour value.
+        /// </summary>
+        /// <returns>The value of menuTextColour.</returns>
+        public Color GetMenuTextColour()
+        {
+            return _colourSettings.MenuTextColour;
+        }
+
+        /// <summary>
+        /// Sets the CustomTextColourOne to the value of customTextColourOne.
+        /// </summary>
+        /// <param name="customTextColourOne">The value of customTextColourOne.</param>
+        public void SetCustomTextColourOne(Color customTextColourOne)
+        {
+            _colourSettings.CustomTextColourOne = customTextColourOne;
+        }
+
+        /// <summary>
+        /// Gets the CustomTextColourOne value.
+        /// </summary>
+        /// <returns>The value of customTextColourOne.</returns>
+        public Color GetCustomTextColourOne()
+        {
+            return _colourSettings.CustomTextColourOne;
+        }
+
+        /// <summary>
+        /// Sets the CustomTextColourTwo to the value of customTextColourTwo.
+        /// </summary>
+        /// <param name="customTextColourTwo">The value of customTextColourTwo.</param>
+        public void SetCustomTextColourTwo(Color customTextColourTwo)
+        {
+            _colourSettings.CustomTextColourTwo = customTextColourTwo;
+        }
+
+        /// <summary>
+        /// Gets the CustomTextColourTwo value.
+        /// </summary>
+        /// <returns>The value of customTextColourTwo.</returns>
+        public Color GetCustomTextColourTwo()
+        {
+            return _colourSettings.CustomTextColourTwo;
+        }
+
+        /// <summary>
+        /// Sets the CustomTextColourThree to the value of customTextColourThree.
+        /// </summary>
+        /// <param name="customTextColourThree">The value of customTextColourThree.</param>
+        public void SetCustomTextColourThree(Color customTextColourThree)
+        {
+            _colourSettings.CustomTextColourThree = customTextColourThree;
+        }
+
+        /// <summary>
+        /// Gets the CustomTextColourThree value.
+        /// </summary>
+        /// <returns>The value of customTextColourThree.</returns>
+        public Color GetCustomTextColourThree()
+        {
+            return _colourSettings.CustomTextColourThree;
+        }
+
+        /// <summary>
+        /// Sets the CustomTextColourFour to the value of customTextColourFour.
+        /// </summary>
+        /// <param name="customTextColourFour">The value of customTextColourFour.</param>
+        public void SetCustomTextColourFour(Color customTextColourFour)
+        {
+            _colourSettings.CustomTextColourFour = customTextColourFour;
+        }
+
+        /// <summary>
+        /// Gets the CustomTextColourFour value.
+        /// </summary>
+        /// <returns>The value of customTextColourFour.</returns>
+        public Color GetCustomTextColourFour()
+        {
+            return _colourSettings.CustomTextColourFour;
+        }
+
+        /// <summary>
+        /// Sets the CustomTextColourFive to the value of customTextColourFive.
+        /// </summary>
+        /// <param name="customTextColourFive">The value of customTextColourFive.</param>
+        public void SetCustomTextColourFive(Color customTextColourFive)
+        {
+            _colourSettings.CustomTextColourFive = customTextColourFive;
+        }
+
+        /// <summary>
+        /// Gets the CustomTextColourFive value.
+        /// </summary>
+        /// <returns>The value of customTextColourFive.</returns>
+        public Color GetCustomTextColourFive()
+        {
+            return _colourSettings.CustomTextColourFive;
+        }
         #endregion
 
         #region Methods
@@ -319,7 +517,7 @@ namespace Tooling.Settings.Classes
         /// Resets the settings.
         /// </summary>
         /// <param name="usePrompt">if set to <c>true</c> [use prompt].</param>
-        private void ResetSettings(bool usePrompt = false)
+        public void ResetSettings(bool usePrompt = false)
         {
             if (usePrompt)
             {
@@ -355,7 +553,9 @@ namespace Tooling.Settings.Classes
 
             SetLightestColour(Color.White);
 
-            SetBorderColour(Color.Black);
+            SetBorderColour(SystemColors.Control);
+
+            SetAlternativeNormalTextColour(Color.White);
 
             SetNormalTextColour(Color.Black);
 
@@ -368,6 +568,32 @@ namespace Tooling.Settings.Classes
             SetDisabledColour(Color.Silver);
 
             SetLinkNormalColour(Color.Blue);
+
+            SetLinkHoverColour(Color.Red);
+
+            SetLinkVisitedColour(Color.Purple);
+
+            SetCustomColourOne(Color.Black);
+
+            SetCustomColourTwo(Color.White);
+
+            SetCustomColourThree(Color.Black);
+
+            SetCustomColourFour(Color.FromArgb(230, 230, 230));
+
+            SetCustomColourFive(Color.MintCream);
+
+            SetMenuTextColour(Color.Black);
+
+            SetCustomTextColourOne(Color.Black);
+
+            SetCustomTextColourTwo(Color.White);
+
+            SetCustomTextColourThree(Color.Black);
+
+            SetCustomTextColourFour(Color.FromArgb(230, 230, 230));
+
+            SetCustomTextColourFive(Color.MintCream);
         }
         #endregion
     }
