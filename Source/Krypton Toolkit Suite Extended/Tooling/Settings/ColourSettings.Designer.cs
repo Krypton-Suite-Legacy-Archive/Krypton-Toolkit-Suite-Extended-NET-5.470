@@ -308,5 +308,16 @@ namespace Tooling.Settings {
                 this["CustomTextColourFive"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color StatusTextColour {
+            get {
+                return ((global::System.Drawing.Color)(this["StatusTextColour"]));
+            }
+            set {
+                this["StatusTextColour"] = value;
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -485,6 +486,24 @@ namespace Tooling.Settings.Classes
         {
             return _colourSettings.CustomTextColourFive;
         }
+
+        /// <summary>
+        /// Sets the StatusTextColour to the value of statusTextColour.
+        /// </summary>
+        /// <param name="statusTextColour">The value of statusTextColour.</param>
+        public void SetStatusTextColour(Color statusTextColour)
+        {
+            _colourSettings.StatusTextColour = statusTextColour;
+        }
+
+        /// <summary>
+        /// Gets the StatusTextColour value.
+        /// </summary>
+        /// <returns>The value of statusTextColour.</returns>
+        public Color GetStatusTextColour()
+        {
+            return _colourSettings.StatusTextColour;
+        }
         #endregion
 
         #region Methods
@@ -594,6 +613,8 @@ namespace Tooling.Settings.Classes
             SetCustomTextColourFour(Color.FromArgb(230, 230, 230));
 
             SetCustomTextColourFive(Color.MintCream);
+
+            SetStatusTextColour(Color.Black);
         }
         #endregion
     }

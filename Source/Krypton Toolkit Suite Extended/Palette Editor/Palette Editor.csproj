@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\PE Icon 256 x 256.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Krypton Toolkit">
       <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
@@ -90,6 +93,9 @@
       <Project>{efb997fb-1e05-444b-ba02-16c004e1a111}</Project>
       <Name>Tooling</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PE Icon 256 x 256.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -312,6 +312,10 @@
         /// <summary>
         /// The custom text colour five
         /// </summary>
-        CUSTOMTEXTCOLOURFIVE
+        CUSTOMTEXTCOLOURFIVE,
+        /// <summary>
+        /// The status text colour
+        /// </summary>
+        STATUSTEXTCOLOUR
     }
 }

@@ -31,7 +31,6 @@ namespace PaletteEditor.Classes
         /// <param name="linkNormalColourPreview">The link normal colour preview.</param>
         /// <param name="linkHoverColourPreview">The link hover colour preview.</param>
         /// <param name="linkVisitedColourPreview">The link visited colour preview.</param>
-        /// <param name="statusState">State of the status.</param>
         /// <param name="customColourOne">The custom colour one.</param>
         /// <param name="customColourTwo">The custom colour two.</param>
         /// <param name="customColourThree">The custom colour three.</param>
@@ -43,8 +42,10 @@ namespace PaletteEditor.Classes
         /// <param name="customTextColourFour">The custom text colour four.</param>
         /// <param name="customTextColourFive">The custom text colour five.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
-        /// <param name="invertColours">If set to <c>true</c> then invert colours.</param>
-        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, ToolStripLabel statusState, PictureBox customColourOne = null, PictureBox customColourTwo = null, PictureBox customColourThree = null, PictureBox customColourFour = null, PictureBox customColourFive = null, PictureBox customTextColourOne = null, PictureBox customTextColourTwo = null, PictureBox customTextColourThree = null, PictureBox customTextColourFour = null, PictureBox customTextColourFive = null, PictureBox menuTextColour = null, bool invertColours = false)
+        /// <param name="statusTextColour">The status text colour.</param>
+        /// <param name="statusState">State of the status.</param>
+        /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
+        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour, PictureBox statusTextColour, ToolStripLabel statusState, bool invertColours = false)
         {
             palette = new KryptonPalette();
 
@@ -59,7 +60,105 @@ namespace PaletteEditor.Classes
 
             if (invertColours)
             {
+                #region Button Cluster
+                palette.ButtonStyles.ButtonCluster.OverrideDefault.Back.Color1 = darkColour.BackColor;
 
+                palette.ButtonStyles.ButtonCluster.OverrideFocus.Back.Color1 = darkColour.BackColor;
+
+                palette.ButtonStyles.ButtonCluster.StateCheckedNormal.Back.Color1 = darkColour.BackColor;
+
+                palette.ButtonStyles.ButtonCluster.StateCommon.Back.ColorStyle = PaletteColorStyle.GlassNormalFull;
+
+                palette.ButtonStyles.ButtonCluster.StateNormal.Back.Color1 = middleColour.BackColor;
+
+                palette.ButtonStyles.ButtonCluster.StatePressed.Back.Color1 = baseColour.BackColor;
+
+                palette.ButtonStyles.ButtonCluster.StateTracking.Back.Color1 = darkColour.BackColor;
+                #endregion
+
+                #region Button Common
+                palette.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color1 = lightColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.OverrideDefault.Content.LongText.Color1 = normalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.OverrideDefault.Content.ShortText.Color1 = normalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedNormal.Back.Color1 = darkColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedNormal.Back.Color2 = baseColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedNormal.Back.ColorStyle = PaletteColorStyle.GlassCheckedFull;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.LongText.Color1 = alternativeNormalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.ShortText.Color1 = alternativeNormalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Back.Color1 = darkColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Back.Color2 = baseColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Back.ColorStyle = PaletteColorStyle.GlassCheckedStump;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Border.DrawBorders = PaletteDrawBorders.All;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Content.LongText.Color1 = alternativeNormalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Content.ShortText.Color1 = alternativeNormalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedTracking.Back.Color1 = baseColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedTracking.Back.Color2 = baseColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedTracking.Border.DrawBorders = PaletteDrawBorders.All;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedTracking.Content.LongText.Color1 = alternativeNormalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCheckedTracking.Content.ShortText.Color1 = alternativeNormalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateCommon.Back.Color1 = lightColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1 = disabledColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color2 = disabledColourPreview.BackColor;
+
+                /*
+                palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1 = lightColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color2 = lightColour.BackColor;
+                */
+
+                palette.ButtonStyles.ButtonCommon.StateDisabled.Content.LongText.Color1 = disabledTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateDisabled.Content.ShortText.Color1 = disabledTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateNormal.Back.Color1 = lightColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateNormal.Back.Color2 = lightColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateNormal.Content.LongText.Color1 = normalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateNormal.Content.LongText.Color2 = normalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateNormal.Content.ShortText.Color1 = normalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateNormal.Content.ShortText.Color2 = normalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StatePressed.Back.Color1 = darkColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StatePressed.Back.Color2 = baseColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StatePressed.Content.LongText.Color1 = alternativeNormalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StatePressed.Content.ShortText.Color1 = alternativeNormalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateTracking.Back.Color1 = lightColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateTracking.Back.Color2 = lightestColour.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateTracking.Content.LongText.Color1 = normalTextColourPreview.BackColor;
+
+                palette.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Color1 = normalTextColourPreview.BackColor;
+                #endregion
             }
             else
             {
@@ -506,7 +605,6 @@ namespace PaletteEditor.Classes
         /// <param name="linkNormalColourPreview">The link normal colour preview.</param>
         /// <param name="linkHoverColourPreview">The link hover colour preview.</param>
         /// <param name="linkVisitedColourPreview">The link visited colour preview.</param>
-        /// <param name="statusState">State of the status.</param>
         /// <param name="customColourOne">The custom colour one.</param>
         /// <param name="customColourTwo">The custom colour two.</param>
         /// <param name="customColourThree">The custom colour three.</param>
@@ -518,8 +616,10 @@ namespace PaletteEditor.Classes
         /// <param name="customTextColourFour">The custom text colour four.</param>
         /// <param name="customTextColourFive">The custom text colour five.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
+        /// <param name="statusTextColour">The status text colour.</param>
+        /// <param name="statusState">State of the status.</param>
         /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
-        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColourPreview, Color alternativeNormalTextColourPreview, Color normalTextColourPreview, Color disabledTextColourPreview, Color focusedTextColourPreview, Color pressedTextColourPreview, Color disabledColourPreview, Color linkNormalColourPreview, Color linkHoverColourPreview, Color linkVisitedColourPreview, ToolStripLabel statusState, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, bool invertColours = false)
+        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColourPreview, Color alternativeNormalTextColourPreview, Color normalTextColourPreview, Color disabledTextColourPreview, Color focusedTextColourPreview, Color pressedTextColourPreview, Color disabledColourPreview, Color linkNormalColourPreview, Color linkHoverColourPreview, Color linkVisitedColourPreview, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, ToolStripLabel statusState, bool invertColours = false)
         {
             try
             {
@@ -954,7 +1054,7 @@ namespace PaletteEditor.Classes
             }
         }
 
-        #region !EXPERIMENTAL CODE!
+        #region !EXPERIMENTAL CODE!       
         /// <summary>
         /// Exports the palette.
         /// </summary>
@@ -974,7 +1074,6 @@ namespace PaletteEditor.Classes
         /// <param name="linkNormalColourPreview">The link normal colour preview.</param>
         /// <param name="linkHoverColourPreview">The link hover colour preview.</param>
         /// <param name="linkVisitedColourPreview">The link visited colour preview.</param>
-        /// <param name="statusState">State of the status.</param>
         /// <param name="customColourOne">The custom colour one.</param>
         /// <param name="customColourTwo">The custom colour two.</param>
         /// <param name="customColourThree">The custom colour three.</param>
@@ -986,8 +1085,10 @@ namespace PaletteEditor.Classes
         /// <param name="customTextColourFour">The custom text colour four.</param>
         /// <param name="customTextColourFive">The custom text colour five.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
+        /// <param name="statusTextColour">The status text colour.</param>
+        /// <param name="statusState">State of the status.</param>
         /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
-        public static void ExportPalette(PaletteMode paletteMode, PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, ToolStripLabel statusState, PictureBox customColourOne = null, PictureBox customColourTwo = null, PictureBox customColourThree = null, PictureBox customColourFour = null, PictureBox customColourFive = null, PictureBox customTextColourOne = null, PictureBox customTextColourTwo = null, PictureBox customTextColourThree = null, PictureBox customTextColourFour = null, PictureBox customTextColourFive = null, PictureBox menuTextColour = null, bool invertColours = false)
+        public static void ExportPalette(PaletteMode paletteMode, PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour, PictureBox statusTextColour, ToolStripLabel statusState, bool invertColours = false)
         {
             KryptonPalette palette = new KryptonPalette();
 

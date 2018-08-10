@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
+using Tooling.Enumerations;
 using Tooling.Settings.Classes;
 
 namespace Tooling.Classes.Other
@@ -299,7 +300,8 @@ namespace Tooling.Classes.Other
         /// <param name="customTextColourFour">The custom text colour four.</param>
         /// <param name="customTextColourFive">The custom text colour five.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
-        public static void GrabColourDefinitions(PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour)
+        /// <param name="statusTextColour">The status text colour.</param>
+        public static void GrabColourDefinitions(PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour, PictureBox statusTextColour)
         {
             ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
 
@@ -354,6 +356,148 @@ namespace Tooling.Classes.Other
             customTextColourFour.BackColor = colourSettingsManager.GetCustomTextColourFour();
 
             customTextColourFive.BackColor = colourSettingsManager.GetCustomTextColourFive();
+
+            statusTextColour.BackColor = colourSettingsManager.GetStatusTextColour();
+        }
+
+        /// <summary>
+        /// Defines the custom colour.
+        /// </summary>
+        /// <param name="colourDefinitions">The colour definitions.</param>
+        /// <param name="definedColour">The defined colour.</param>
+        /// <param name="usePrompt">if set to <c>true</c> [use prompt].</param>
+        public static void DefineCustomColour(MiscellaneousColourDefinitions colourDefinitions, Color definedColour, bool usePrompt = false)
+        {
+            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+
+            switch (colourDefinitions)
+            {
+                case MiscellaneousColourDefinitions.BORDERCOLOUR:
+                    colourSettingsManager.SetBorderColour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.ALTERNATIVENORMALTEXTCOLOUR:
+                    colourSettingsManager.SetAlternativeNormalTextColour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.NORMALTEXTCOLOUR:
+                    colourSettingsManager.SetNormalTextColour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.DISABLEDTEXTCOLOUR:
+                    colourSettingsManager.SetDisabledTextColour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.FOCUSEDTEXTCOLOUR:
+                    colourSettingsManager.SetFocusTextColour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.PRESSEDTEXTCOLOUR:
+                    colourSettingsManager.SetPressedTextColour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.LINKNORMALTEXTCOLOUR:
+                    colourSettingsManager.SetLinkNormalColour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.LINKHOVERTEXTCOLOUR:
+                    colourSettingsManager.SetLinkHoverColour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.LINKVISITEDTEXTCOLOUR:
+                    colourSettingsManager.SetLinkVisitedColour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.DISABLEDCONTROLCOLOUR:
+                    colourSettingsManager.SetDisabledColour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.CUSTOMCOLOURONE:
+                    colourSettingsManager.SetCustomColourOne(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.CUSTOMCOLOURTWO:
+                    colourSettingsManager.SetCustomColourTwo(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.CUSTOMCOLOURTHREE:
+                    colourSettingsManager.SetCustomColourThree(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.CUSTOMCOLOURFOUR:
+                    colourSettingsManager.SetCustomColourFour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.CUSTOMCOLOURFIVE:
+                    colourSettingsManager.SetCustomColourFive(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.MENUTEXTCOLOUR:
+                    colourSettingsManager.SetMenuTextColour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURONE:
+                    colourSettingsManager.SetCustomTextColourOne(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURTWO:
+                    colourSettingsManager.SetCustomTextColourTwo(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURTHREE:
+                    colourSettingsManager.SetCustomTextColourThree(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURFOUR:
+                    colourSettingsManager.SetCustomTextColourFour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURFIVE:
+                    colourSettingsManager.SetCustomTextColourFive(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                case MiscellaneousColourDefinitions.STATUSTEXTCOLOUR:
+                    colourSettingsManager.SetStatusTextColour(definedColour);
+
+                    colourSettingsManager.SaveColourSettings(usePrompt);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Updates the colour.
+        /// </summary>
+        /// <param name="colourPreview">The colour preview.</param>
+        /// <param name="alpha">The alpha.</param>
+        /// <param name="red">The red.</param>
+        /// <param name="green">The green.</param>
+        /// <param name="blue">The blue.</param>
+        public static void UpdateColour(PictureBox colourPreview, int alpha, int red, int green, int blue)
+        {
+            colourPreview.BackColor = Color.FromArgb(alpha, red, green, blue);
         }
     }
 }
