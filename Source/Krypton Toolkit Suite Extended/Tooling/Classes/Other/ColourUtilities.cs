@@ -368,116 +368,558 @@ namespace Tooling.Classes.Other
         /// <param name="usePrompt">if set to <c>true</c> [use prompt].</param>
         public static void DefineCustomColour(MiscellaneousColourDefinitions colourDefinitions, Color definedColour, bool usePrompt = false)
         {
+            Color _baseColour, _darkestColour, _middleColour, _lightColour, _lightestColour;
+
             ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
 
             switch (colourDefinitions)
             {
                 case MiscellaneousColourDefinitions.BORDERCOLOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetBorderColour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.ALTERNATIVENORMALTEXTCOLOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetAlternativeNormalTextColour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.NORMALTEXTCOLOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetNormalTextColour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.DISABLEDTEXTCOLOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetDisabledTextColour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.FOCUSEDTEXTCOLOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetFocusTextColour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.PRESSEDTEXTCOLOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetPressedTextColour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.LINKNORMALTEXTCOLOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetLinkNormalColour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.LINKHOVERTEXTCOLOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetLinkHoverColour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.LINKVISITEDTEXTCOLOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetLinkVisitedColour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.DISABLEDCONTROLCOLOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetDisabledColour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.CUSTOMCOLOURONE:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetCustomColourOne(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.CUSTOMCOLOURTWO:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetCustomColourTwo(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.CUSTOMCOLOURTHREE:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetCustomColourThree(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.CUSTOMCOLOURFOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetCustomColourFour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.CUSTOMCOLOURFIVE:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetCustomColourFive(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.MENUTEXTCOLOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetMenuTextColour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURONE:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetCustomTextColourOne(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURTWO:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetCustomTextColourTwo(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURTHREE:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetCustomTextColourThree(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURFOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetCustomTextColourFour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURFIVE:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetCustomTextColourFive(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);
                     break;
                 case MiscellaneousColourDefinitions.STATUSTEXTCOLOUR:
+                    _baseColour = colourSettingsManager.GetBaseColour();
+
+                    _darkestColour = colourSettingsManager.GetDarkestColour();
+
+                    _middleColour = colourSettingsManager.GetMediumColour();
+
+                    _lightColour = colourSettingsManager.GetLightColour();
+
+                    _lightestColour = colourSettingsManager.GetLightestColour();
+
+                    colourSettingsManager.SetBaseColour(_baseColour);
+
+                    colourSettingsManager.SetDarkestColour(_darkestColour);
+
+                    colourSettingsManager.SetMediumColour(_middleColour);
+
+                    colourSettingsManager.SetLightColour(_lightColour);
+
+                    colourSettingsManager.SetLightestColour(_lightestColour);
+
                     colourSettingsManager.SetStatusTextColour(definedColour);
 
                     colourSettingsManager.SaveColourSettings(usePrompt);

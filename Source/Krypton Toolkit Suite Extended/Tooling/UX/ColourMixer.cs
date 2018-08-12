@@ -322,6 +322,13 @@ namespace Tooling.UX
             paletteColourCreator.Show();
         }
 
+        private void kbtnDefineCustomColours_Click(object sender, EventArgs e)
+        {
+            CustomColours customColours = new CustomColours();
+
+            customColours.Show();
+        }
+
         private void kbtnGenerateColour_Click(object sender, EventArgs e)
         {
             pbColourPreview.BackColor = _colourUtility.GenerateRandomColour(kchkGenerateAlphaValue.Checked);

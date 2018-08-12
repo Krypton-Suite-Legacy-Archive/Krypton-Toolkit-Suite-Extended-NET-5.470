@@ -8,6 +8,10 @@ namespace Tooling.UX
 {
     public partial class CustomColours : KryptonForm
     {
+        #region Variables
+        private RandomNumberGenerator _randomNumberGenerator = new RandomNumberGenerator();
+        #endregion
+
         public CustomColours()
         {
             InitializeComponent();
@@ -45,69 +49,93 @@ namespace Tooling.UX
 
         private void kbtnSaveColour_Click(object sender, EventArgs e)
         {
-            if (kcmbCustomColours.Text == "Border Colour")
+            if (klstCustomColourSelector.SelectedItem.ToString() == "Border Colour")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.BORDERCOLOUR, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Alternative Normal Text Colour")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Alternative Normal Text Colour")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.ALTERNATIVENORMALTEXTCOLOUR, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Normal Text Colour")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Normal Text Colour")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.NORMALTEXTCOLOUR, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Disabled Text Colour")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Disabled Text Colour")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.DISABLEDTEXTCOLOUR, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Focused Text Colour")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Focused Text Colour")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.FOCUSEDTEXTCOLOUR, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Pressed Text Colour")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Pressed Text Colour")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.PRESSEDTEXTCOLOUR, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Link Normal Text Colour")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Link Normal Text Colour")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.LINKNORMALTEXTCOLOUR, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Link Hover Text Colour")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Link Hover Text Colour")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.LINKHOVERTEXTCOLOUR, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Link Visited Text Colour")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Link Visited Text Colour")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.LINKVISITEDTEXTCOLOUR, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Disabled Control Colour")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Disabled Control Colour")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.DISABLEDCONTROLCOLOUR, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Custom Colour One")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Custom Colour One")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.CUSTOMCOLOURONE, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Custom Colour Two")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Custom Colour Two")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.CUSTOMCOLOURTWO, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Custom Colour Three")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Custom Colour Three")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.CUSTOMCOLOURTHREE, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Custom Colour Four")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Custom Colour Four")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.CUSTOMCOLOURFOUR, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Custom Colour Five")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Custom Colour Five")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.CUSTOMCOLOURFIVE, pbxColourPreview.BackColor);
             }
-            else if (kcmbCustomColours.Text == "Menu Text Colour")
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Menu Text Colour")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.MENUTEXTCOLOUR, pbxColourPreview.BackColor);
+            }
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Custom Text Colour One")
+            {
+                ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURONE, pbxColourPreview.BackColor);
+            }
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Custom Text Colour Two")
+            {
+                ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURTWO, pbxColourPreview.BackColor);
+            }
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Custom Text Colour Three")
+            {
+                ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURTHREE, pbxColourPreview.BackColor);
+            }
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Custom Text Colour Four")
+            {
+                ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURFOUR, pbxColourPreview.BackColor);
+            }
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Custom Text Colour Five")
+            {
+                ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.CUSTOMTEXTCOLOURFIVE, pbxColourPreview.BackColor);
+            }
+            else if (klstCustomColourSelector.SelectedItem.ToString() == "Status Text Colour")
+            {
+                ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.STATUSTEXTCOLOUR, pbxColourPreview.BackColor);
             }
         }
 
@@ -130,6 +158,21 @@ namespace Tooling.UX
             ColourUtilities.UpdateColour(pbxColourPreview, 255, Convert.ToInt32(knumRedChannelValue.Value), Convert.ToInt32(knumGreenChannelValue.Value), Convert.ToInt32(knumBlueChannelValue.Value));
 
             kbtnSaveColour.Enabled = true;
+        }
+
+        private void kbtnGenerateNormalTextRedValue_Click(object sender, EventArgs e)
+        {
+            knumRedChannelValue.Value = _randomNumberGenerator.RandomlyGenerateARedNumberBetween(0, 255);
+        }
+
+        private void kbtnGenerateNormalTextGreenValue_Click(object sender, EventArgs e)
+        {
+            knumGreenChannelValue.Value = _randomNumberGenerator.RandomlyGenerateAGreenNumberBetween(0, 255);
+        }
+
+        private void kbtnGenerateNormalTextBlueValue_Click(object sender, EventArgs e)
+        {
+            knumBlueChannelValue.Value = _randomNumberGenerator.RandomlyGenerateABlueNumberBetween(0, 255);
         }
     }
 }

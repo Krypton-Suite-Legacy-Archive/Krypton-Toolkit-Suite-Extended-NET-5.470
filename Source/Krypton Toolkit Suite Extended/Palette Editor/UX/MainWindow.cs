@@ -1,6 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using PaletteEditor.Classes;
 using System;
+using System.IO;
 using System.Windows.Forms;
 using Tooling.Classes.Other;
 using Tooling.Settings.Classes;
@@ -522,6 +523,22 @@ namespace PaletteEditor.UX
         private void pbxDisabledColourPreview_MouseHover(object sender, EventArgs e)
         {
             InformationControlManager.ResetColourValueInformation(lblColourOutput);
+        }
+
+        private void kbtnViewPaletteFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+
+            openFile.Title = "Open A Palette File:";
+
+            openFile.Filter = "Krypton Palette Files (*.xml)|*.xml";
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                PaletteFileEditor paletteFileEditor = new PaletteFileEditor(Path.GetFullPath(openFile.FileName));
+
+                paletteFileEditor.Show();
+            }
         }
 
         private void kbtnExportPalette_Click(object sender, EventArgs e)

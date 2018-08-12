@@ -37,6 +37,7 @@
             this.kbtnClose = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblColourOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnViewPaletteFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kcmbBasePaletteMode = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel32 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -88,7 +89,6 @@
             this.ttInformation = new System.Windows.Forms.ToolTip(this.components);
             this.palette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kbtnViewPaletteFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.ss.SuspendLayout();
@@ -201,6 +201,18 @@
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.Size = new System.Drawing.Size(998, 628);
             this.kryptonPanel2.TabIndex = 1;
+            // 
+            // kbtnViewPaletteFile
+            // 
+            this.kbtnViewPaletteFile.AutoSize = true;
+            this.kbtnViewPaletteFile.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnViewPaletteFile.Location = new System.Drawing.Point(438, 586);
+            this.kbtnViewPaletteFile.Name = "kbtnViewPaletteFile";
+            this.kbtnViewPaletteFile.Size = new System.Drawing.Size(130, 30);
+            this.kbtnViewPaletteFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnViewPaletteFile.TabIndex = 113;
+            this.kbtnViewPaletteFile.Values.Text = "View Palette &File";
+            this.kbtnViewPaletteFile.Click += new System.EventHandler(this.kbtnViewPaletteFile_Click);
             // 
             // kryptonLabel1
             // 
@@ -778,18 +790,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(998, 2);
             this.panel1.TabIndex = 2;
-            // 
-            // kbtnViewPaletteFile
-            // 
-            this.kbtnViewPaletteFile.AutoSize = true;
-            this.kbtnViewPaletteFile.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnViewPaletteFile.Enabled = false;
-            this.kbtnViewPaletteFile.Location = new System.Drawing.Point(438, 586);
-            this.kbtnViewPaletteFile.Name = "kbtnViewPaletteFile";
-            this.kbtnViewPaletteFile.Size = new System.Drawing.Size(130, 30);
-            this.kbtnViewPaletteFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnViewPaletteFile.TabIndex = 113;
-            this.kbtnViewPaletteFile.Values.Text = "View Palette &File";
             // 
             // MainWindow
             // 

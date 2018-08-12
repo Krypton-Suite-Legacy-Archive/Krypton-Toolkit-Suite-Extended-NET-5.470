@@ -1042,6 +1042,10 @@ namespace PaletteEditor.Classes
 
                     palette.ToolMenuStatus.ToolStrip.ToolStripText = normalTextColourPreview;
                     #endregion
+
+                    #region Trackbar
+                    palette.TrackBar.StateCommon.Position.Color4 = darkColour;
+                    #endregion
                 }
 
                 palette.Export();
@@ -1496,7 +1500,7 @@ namespace PaletteEditor.Classes
 
                     palette.ToolMenuStatus.StatusStrip.StatusStripGradientEnd = lightColour.BackColor;
 
-                    palette.ToolMenuStatus.StatusStrip.StatusStripText = normalTextColourPreview.BackColor;
+                    palette.ToolMenuStatus.StatusStrip.StatusStripText = statusTextColour.BackColor;
 
                     palette.ToolMenuStatus.ToolStrip.ToolStripBorder = darkColour.BackColor;
 
@@ -1517,6 +1521,38 @@ namespace PaletteEditor.Classes
                     palette.ToolMenuStatus.ToolStrip.ToolStripPanelGradientEnd = darkColour.BackColor;
 
                     palette.ToolMenuStatus.ToolStrip.ToolStripText = normalTextColourPreview.BackColor;
+                    #endregion
+
+                    #region Trackbar
+                    palette.TrackBar.StateCommon.Position.Color4 = middleColour.BackColor;
+
+                    palette.TrackBar.StateCommon.Position.Color5 = lightColour.BackColor;
+
+                    palette.TrackBar.StateCommon.Tick.Color3 = darkColour.BackColor;
+
+                    palette.TrackBar.StateCommon.Tick.Color4 = middleColour.BackColor;
+
+                    palette.TrackBar.StateCommon.Tick.Color5 = lightColour.BackColor;
+
+                    palette.TrackBar.StateCommon.Track.Color1 = baseColour.BackColor;
+
+                    palette.TrackBar.StateCommon.Track.Color2 = darkColour.BackColor;
+
+                    palette.TrackBar.StateCommon.Track.Color3 = middleColour.BackColor;
+
+                    palette.TrackBar.StateCommon.Track.Color4 = lightColour.BackColor;
+
+                    palette.TrackBar.StateCommon.Track.Color5 = lightestColour.BackColor;
+
+                    palette.TrackBar.StateNormal.Track.Color1 = baseColour.BackColor;
+
+                    palette.TrackBar.StateNormal.Track.Color2 = darkColour.BackColor;
+
+                    palette.TrackBar.StateNormal.Track.Color3 = middleColour.BackColor;
+
+                    palette.TrackBar.StateNormal.Track.Color4 = lightColour.BackColor;
+
+                    palette.TrackBar.StateNormal.Track.Color5 = lightestColour.BackColor;
                     #endregion
                 }
 

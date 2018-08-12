@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaletteFileEditor));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnGenerateColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnSaveFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnOpenFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnGenerateNewFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.filePane = new EasyScintilla.SimpleEditor();
-            this.kbtnOpenFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnSaveFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.acmPalette = new AutocompleteMenuNS.AutocompleteMenu();
-            this.kbtnGenerateColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -54,6 +54,36 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(948, 52);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kbtnGenerateColours
+            // 
+            this.kbtnGenerateColours.AutoSize = true;
+            this.kbtnGenerateColours.Location = new System.Drawing.Point(531, 10);
+            this.kbtnGenerateColours.Name = "kbtnGenerateColours";
+            this.kbtnGenerateColours.Size = new System.Drawing.Size(167, 30);
+            this.kbtnGenerateColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateColours.TabIndex = 30;
+            this.kbtnGenerateColours.Values.Text = "Generate &Colours";
+            // 
+            // kbtnSaveFile
+            // 
+            this.kbtnSaveFile.AutoSize = true;
+            this.kbtnSaveFile.Location = new System.Drawing.Point(358, 10);
+            this.kbtnSaveFile.Name = "kbtnSaveFile";
+            this.kbtnSaveFile.Size = new System.Drawing.Size(167, 30);
+            this.kbtnSaveFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnSaveFile.TabIndex = 29;
+            this.kbtnSaveFile.Values.Text = "S&ave File";
+            // 
+            // kbtnOpenFile
+            // 
+            this.kbtnOpenFile.AutoSize = true;
+            this.kbtnOpenFile.Location = new System.Drawing.Point(185, 10);
+            this.kbtnOpenFile.Name = "kbtnOpenFile";
+            this.kbtnOpenFile.Size = new System.Drawing.Size(167, 30);
+            this.kbtnOpenFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnOpenFile.TabIndex = 28;
+            this.kbtnOpenFile.Values.Text = "&Open File";
             // 
             // kbtnGenerateNewFile
             // 
@@ -81,32 +111,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.filePane.FontQuality = ScintillaNET.FontQuality.AntiAliased;
+            this.filePane.IndentationGuides = ScintillaNET.IndentView.LookBoth;
             this.filePane.Lexer = ScintillaNET.Lexer.Xml;
             this.filePane.Location = new System.Drawing.Point(12, 12);
             this.filePane.Name = "filePane";
             this.filePane.Size = new System.Drawing.Size(924, 695);
             this.filePane.Styler = null;
             this.filePane.TabIndex = 0;
-            // 
-            // kbtnOpenFile
-            // 
-            this.kbtnOpenFile.AutoSize = true;
-            this.kbtnOpenFile.Location = new System.Drawing.Point(185, 10);
-            this.kbtnOpenFile.Name = "kbtnOpenFile";
-            this.kbtnOpenFile.Size = new System.Drawing.Size(167, 30);
-            this.kbtnOpenFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnOpenFile.TabIndex = 28;
-            this.kbtnOpenFile.Values.Text = "&Open File";
-            // 
-            // kbtnSaveFile
-            // 
-            this.kbtnSaveFile.AutoSize = true;
-            this.kbtnSaveFile.Location = new System.Drawing.Point(358, 10);
-            this.kbtnSaveFile.Name = "kbtnSaveFile";
-            this.kbtnSaveFile.Size = new System.Drawing.Size(167, 30);
-            this.kbtnSaveFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnSaveFile.TabIndex = 29;
-            this.kbtnSaveFile.Values.Text = "S&ave File";
             // 
             // acmPalette
             // 
@@ -115,16 +126,6 @@
             this.acmPalette.ImageList = null;
             this.acmPalette.Items = new string[0];
             this.acmPalette.TargetControlWrapper = null;
-            // 
-            // kbtnGenerateColours
-            // 
-            this.kbtnGenerateColours.AutoSize = true;
-            this.kbtnGenerateColours.Location = new System.Drawing.Point(531, 10);
-            this.kbtnGenerateColours.Name = "kbtnGenerateColours";
-            this.kbtnGenerateColours.Size = new System.Drawing.Size(167, 30);
-            this.kbtnGenerateColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGenerateColours.TabIndex = 30;
-            this.kbtnGenerateColours.Values.Text = "Generate &Colours";
             // 
             // PaletteFileEditor
             // 
@@ -138,6 +139,7 @@
             this.MinimizeBox = false;
             this.Name = "PaletteFileEditor";
             this.Text = "PaletteFileEditor";
+            this.Load += new System.EventHandler(this.PaletteFileEditor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
