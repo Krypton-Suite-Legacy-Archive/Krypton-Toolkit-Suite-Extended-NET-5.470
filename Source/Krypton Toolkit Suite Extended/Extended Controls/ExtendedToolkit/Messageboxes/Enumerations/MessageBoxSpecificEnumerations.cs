@@ -184,4 +184,11 @@
         TWO = 1,
         THREE = 2
     }
+
+    public enum CheckedState
+    {
+        CHECKED = 0,
+        UNCHECKED = 1,
+        INTERMEDIATE = 3
+    }
 }
