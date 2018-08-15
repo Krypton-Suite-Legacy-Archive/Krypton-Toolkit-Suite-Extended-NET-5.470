@@ -541,6 +541,13 @@ namespace PaletteEditor.UX
             }
         }
 
+        private void kbtnGenerateContrastColours_Click(object sender, EventArgs e)
+        {
+            ContrastColourGenerator contrastColourGenerator = new ContrastColourGenerator();
+
+            contrastColourGenerator.Show();
+        }
+
         private void kbtnExportPalette_Click(object sender, EventArgs e)
         {
             //PaletteEditorEngine.ExportPaletteTheme(palette, PaletteMode.Office2007Silver, pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, tslStatus);

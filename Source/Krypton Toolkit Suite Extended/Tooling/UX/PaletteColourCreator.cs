@@ -27,6 +27,7 @@ namespace Tooling.UX
         public Color BaseColour { get { return _baseColour; } set { _baseColour = value; } }
         #endregion
 
+        #region Constructors
         public PaletteColourCreator()
         {
             InitializeComponent();
@@ -51,6 +52,20 @@ namespace Tooling.UX
 
             knumBlueChannelValue.Value = blueValue;
         }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaletteColourCreator"/> class.
+        /// </summary>
+        /// <param name="baseColour">The base colour.</param>
+        public PaletteColourCreator(Color baseColour)
+        {
+            InitializeComponent();
+
+            BaseColour = baseColour;
+
+            cpbBaseColourPreview.BackColor = baseColour;
+        }
+        #endregion
 
         private void PaletteColourCreator_Load(object sender, EventArgs e)
         {
@@ -144,7 +159,9 @@ namespace Tooling.UX
 
         private void kbtnGenerate_Click(object sender, EventArgs e)
         {
-            ColourUtilities.GenerateColourShades(pbxBaseColour.BackColor, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour);
+            //ColourUtilities.GenerateColourShades(pbxBaseColour.BackColor, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour);
+
+            ColourUtilities.GenerateColourShades(cpbBaseColourPreview.BackColor, cpbDarkestColourPreview, cpbMiddleColourPreview, cpbLightColourPreview, cpbLightestColourPreview);
         }
 
         private void kbtnExport_Click(object sender, EventArgs e)
@@ -182,27 +199,9 @@ namespace Tooling.UX
 
         private void UpdateBaseColour()
         {
-            pbxBaseColour.BackColor = Color.FromArgb(255, Convert.ToInt32(knumRedChannelValue.Value), Convert.ToInt32(knumGreenChannelValue.Value), Convert.ToInt32(knumBlueChannelValue.Value));
-        }
+            //pbxBaseColour.BackColor = Color.FromArgb(255, Convert.ToInt32(knumRedChannelValue.Value), Convert.ToInt32(knumGreenChannelValue.Value), Convert.ToInt32(knumBlueChannelValue.Value));
 
-        private void kbtnGenerateDarkest_Click(object sender, EventArgs e)
-        {
-            pbxDarkColour.BackColor = ColourUtilities.Darken(pbxBaseColour.BackColor, 0.5f);
-        }
-
-        private void kbtnGenerateMidDark_Click(object sender, EventArgs e)
-        {
-            pbxMiddleColour.BackColor = ColourUtilities.Darken(pbxBaseColour.BackColor, 0.25f);
-        }
-
-        private void kbtnGenerateLightColour_Click(object sender, EventArgs e)
-        {
-            pbxLightColour.BackColor = ColourUtilities.Lighten(pbxBaseColour.BackColor, 0.25f);
-        }
-
-        private void kbtnGenerateLightestColour_Click(object sender, EventArgs e)
-        {
-            pbxLightestColour.BackColor = ColourUtilities.Lighten(pbxBaseColour.BackColor, 0.5f);
+            cpbBaseColourPreview.BackColor = Color.FromArgb(255, Convert.ToInt32(knumRedChannelValue.Value), Convert.ToInt32(knumGreenChannelValue.Value), Convert.ToInt32(knumBlueChannelValue.Value));
         }
 
         private void kchkAutomateColourSwatchValues_CheckedChanged(object sender, EventArgs e)
@@ -212,7 +211,9 @@ namespace Tooling.UX
 
         private void tmrAutomateColourSwatchValues_Tick(object sender, EventArgs e)
         {
-            ColourUtilities.GenerateColourShades(pbxBaseColour.BackColor, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour);
+            //ColourUtilities.GenerateColourShades(pbxBaseColour.BackColor, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour);
+
+            ColourUtilities.GenerateColourShades(cpbBaseColourPreview.BackColor, cpbDarkestColourPreview, cpbMiddleColourPreview, cpbLightColourPreview, cpbLightestColourPreview);
         }
 
         private void pbxDarkColour_Click(object sender, EventArgs e)

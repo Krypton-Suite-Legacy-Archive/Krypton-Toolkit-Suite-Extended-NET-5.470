@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using Tooling.Classes.Other;
 using Tooling.Enumerations;
+using Tooling.Settings.Classes;
 
 namespace Tooling.UX
 {
@@ -10,6 +11,8 @@ namespace Tooling.UX
     {
         #region Variables
         private RandomNumberGenerator _randomNumberGenerator = new RandomNumberGenerator();
+
+        private GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
         #endregion
 
         public CustomColours()
@@ -52,6 +55,11 @@ namespace Tooling.UX
             if (klstCustomColourSelector.SelectedItem.ToString() == "Border Colour")
             {
                 ColourUtilities.DefineCustomColour(MiscellaneousColourDefinitions.BORDERCOLOUR, pbxColourPreview.BackColor);
+
+                if (_globalBooleanSettingsManager.GetDisableListItem())
+                {
+
+                }
             }
             else if (klstCustomColourSelector.SelectedItem.ToString() == "Alternative Normal Text Colour")
             {

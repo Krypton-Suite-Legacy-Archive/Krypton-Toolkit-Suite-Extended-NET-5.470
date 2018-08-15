@@ -89,6 +89,7 @@
             this.ttInformation = new System.Windows.Forms.ToolTip(this.components);
             this.palette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.kbtnGenerateContrastColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.ss.SuspendLayout();
@@ -131,6 +132,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxMiddleColour)).BeginInit();
             this.ms.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // kMan
+            // 
+            this.kMan.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
             // 
             // kryptonPanel1
             // 
@@ -186,6 +191,7 @@
             // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.kbtnGenerateContrastColours);
             this.kryptonPanel2.Controls.Add(this.kbtnViewPaletteFile);
             this.kryptonPanel2.Controls.Add(this.kryptonLabel1);
             this.kryptonPanel2.Controls.Add(this.kcmbBasePaletteMode);
@@ -791,6 +797,18 @@
             this.panel1.Size = new System.Drawing.Size(998, 2);
             this.panel1.TabIndex = 2;
             // 
+            // kbtnGenerateContrastColours
+            // 
+            this.kbtnGenerateContrastColours.AutoSize = true;
+            this.kbtnGenerateContrastColours.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnGenerateContrastColours.Location = new System.Drawing.Point(574, 586);
+            this.kbtnGenerateContrastColours.Name = "kbtnGenerateContrastColours";
+            this.kbtnGenerateContrastColours.Size = new System.Drawing.Size(204, 30);
+            this.kbtnGenerateContrastColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateContrastColours.TabIndex = 114;
+            this.kbtnGenerateContrastColours.Values.Text = "Generate &Contrast Colours";
+            this.kbtnGenerateContrastColours.Click += new System.EventHandler(this.kbtnGenerateContrastColours_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -919,5 +937,6 @@
         private System.Windows.Forms.PictureBox pbxCustomColourTwoPreview;
         private System.Windows.Forms.PictureBox pbxCustomColourOnePreview;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnViewPaletteFile;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGenerateContrastColours;
     }
 }

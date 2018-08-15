@@ -345,6 +345,8 @@ namespace Tooling.UX
         private void DisplayColour()
         {
             pbColourPreview.BackColor = Color.FromArgb(ktbAlpha.Value, ktbRed.Value, ktbGreen.Value, ktbBlue.Value);
+
+            cpbColourPreview.BackColor = Color.FromArgb(ktbAlpha.Value, ktbRed.Value, ktbGreen.Value, ktbBlue.Value);
         }
         #endregion
 

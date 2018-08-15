@@ -107,6 +107,9 @@
     <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.Designer.cs">
       <DependentUpon>AdvancedDataGridViewSearchToolBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\CircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\ColourComboBox.cs">
       <SubType>Component</SubType>
     </Compile>

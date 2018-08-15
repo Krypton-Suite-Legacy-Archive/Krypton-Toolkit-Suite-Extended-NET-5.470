@@ -36,8 +36,14 @@
     <Reference Include="EasyScintilla, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EasyScintilla.1.0.4\lib\net40\EasyScintilla.dll</HintPath>
     </Reference>
+    <Reference Include="Global Utilities">
+      <HintPath>..\Global Utilities\bin\Debug\Global Utilities.dll</HintPath>
+    </Reference>
     <Reference Include="Krypton Navigator">
       <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Outlook Grid">
+      <HintPath>..\Krypton Outlook Grid\bin\Debug\Krypton Outlook Grid.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Toolkit, Version=4.70.633.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -45,6 +51,9 @@
     </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>C:\Users\Peter William Wagner\.nuget\packages\windowsapicodepack\1.1.0\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
     </Reference>
     <Reference Include="ScintillaNET FindReplaceDialog, Version=1.4.0.17540, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ScintillaNet.SearchBox.1.0.3\lib\net45\ScintillaNET FindReplaceDialog.dll</HintPath>
@@ -83,6 +92,7 @@
     <Compile Include="Classes\Colours\RawPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\WIN32.cs" />
     <Compile Include="Classes\Other\ColourControlManager.cs" />
+    <Compile Include="Classes\Other\ColourExtensions.cs" />
     <Compile Include="Classes\Other\ColourUtilities.cs" />
     <Compile Include="Classes\Other\ColourUtility.cs" />
     <Compile Include="Classes\Other\ConversionMethods.cs" />
@@ -135,6 +145,7 @@
     </Compile>
     <Compile Include="Settings\Classes\ColourIntegerSettingsManager.cs" />
     <Compile Include="Settings\Classes\ColourSettingsManager.cs" />
+    <Compile Include="Settings\Classes\GlobalBooleanSettingsManager.cs" />
     <Compile Include="Settings\ColourIntegerSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -149,6 +160,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>ColourStringSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\GlobalBooleanSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>GlobalBooleanSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="STRUCTS\HSLColour.cs" />
     <Compile Include="User Controls\Colours\ColourEditor.cs">
@@ -180,6 +196,12 @@
     </Compile>
     <Compile Include="UX\ColourRGBToHexadecimalConverter.Designer.cs">
       <DependentUpon>ColourRGBToHexadecimalConverter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UX\ContrastColourGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\ContrastColourGenerator.Designer.cs">
+      <DependentUpon>ContrastColourGenerator.cs</DependentUpon>
     </Compile>
     <Compile Include="UX\CustomColours.cs">
       <SubType>Form</SubType>
@@ -234,6 +256,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>ColourStringSettings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Settings\GlobalBooleanSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>GlobalBooleanSettings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -251,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\ColourRGBToHexadecimalConverter.resx">
       <DependentUpon>ColourRGBToHexadecimalConverter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\ContrastColourGenerator.resx">
+      <DependentUpon>ContrastColourGenerator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\CustomColours.resx">
       <DependentUpon>CustomColours.cs</DependentUpon>
@@ -298,6 +327,17 @@
   <ItemGroup>
     <None Include="Resources\System-Information-tool-icon.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Extended Controls\Extended Controls.csproj">
+      <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
+      <Name>Extended Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10-large-opt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10-large-opt.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

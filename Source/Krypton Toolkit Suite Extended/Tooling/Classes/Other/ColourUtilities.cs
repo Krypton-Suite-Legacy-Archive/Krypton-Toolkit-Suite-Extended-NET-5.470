@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.ExtendedToolkit.Controls;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -155,6 +156,39 @@ namespace Tooling.Classes.Other
                 darkestColour.BackColor = Darken(baseColour, 0.5f);
 
                 mediumColour.BackColor = Darken(baseColour, 0.25f);
+
+                lightColour.BackColor = Lighten(baseColour, 0.25f);
+
+                lightestColour.BackColor = Lighten(baseColour, 0.5f);
+
+                if (lightestColour.BackColor == lightColour.BackColor)
+                {
+                    lightestColour.BackColor = Color.Transparent;
+
+                    lightestColour.Enabled = false;
+                }
+                else
+                {
+                    lightestColour.Enabled = true;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Generates the colour shades.
+        /// </summary>
+        /// <param name="baseColour">The base colour.</param>
+        /// <param name="darkestColour">The darkest colour.</param>
+        /// <param name="middleColour">The middle colour.</param>
+        /// <param name="lightColour">The light colour.</param>
+        /// <param name="lightestColour">The lightest colour.</param>
+        public static void GenerateColourShades(Color baseColour, CircularPictureBox darkestColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour)
+        {
+            if (baseColour != null)
+            {
+                darkestColour.BackColor = Darken(baseColour, 0.5f);
+
+                middleColour.BackColor = Darken(baseColour, 0.25f);
 
                 lightColour.BackColor = Lighten(baseColour, 0.25f);
 

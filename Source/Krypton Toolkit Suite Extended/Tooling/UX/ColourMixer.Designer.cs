@@ -55,18 +55,21 @@
             this.kbtnUtiliseAsBaseColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tmrUpdate = new System.Windows.Forms.Timer(this.components);
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnDefineCustomColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kbtnDefineCustomColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.cpbColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbColourPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.cpbColourPreview);
             this.kryptonPanel1.Controls.Add(this.ktxtHexValue);
             this.kryptonPanel1.Controls.Add(this.kchkGenerateAlphaValue);
             this.kryptonPanel1.Controls.Add(this.kbtnGenerateColour);
@@ -276,6 +279,7 @@
             this.pbColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbColourPreview.TabIndex = 4;
             this.pbColourPreview.TabStop = false;
+            this.pbColourPreview.Visible = false;
             // 
             // ktbRed
             // 
@@ -381,6 +385,18 @@
             this.kryptonPanel2.Size = new System.Drawing.Size(1204, 45);
             this.kryptonPanel2.TabIndex = 1;
             // 
+            // kbtnDefineCustomColours
+            // 
+            this.kbtnDefineCustomColours.AutoSize = true;
+            this.kbtnDefineCustomColours.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnDefineCustomColours.Location = new System.Drawing.Point(335, 6);
+            this.kbtnDefineCustomColours.Name = "kbtnDefineCustomColours";
+            this.kbtnDefineCustomColours.Size = new System.Drawing.Size(215, 30);
+            this.kbtnDefineCustomColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnDefineCustomColours.TabIndex = 63;
+            this.kbtnDefineCustomColours.Values.Text = "Define Custom Text &Colours";
+            this.kbtnDefineCustomColours.Click += new System.EventHandler(this.kbtnDefineCustomColours_Click);
+            // 
             // kbtnOk
             // 
             this.kbtnOk.AutoSize = true;
@@ -401,17 +417,14 @@
             this.panel1.Size = new System.Drawing.Size(1204, 2);
             this.panel1.TabIndex = 2;
             // 
-            // kbtnDefineCustomColours
+            // cpbColourPreview
             // 
-            this.kbtnDefineCustomColours.AutoSize = true;
-            this.kbtnDefineCustomColours.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnDefineCustomColours.Location = new System.Drawing.Point(335, 6);
-            this.kbtnDefineCustomColours.Name = "kbtnDefineCustomColours";
-            this.kbtnDefineCustomColours.Size = new System.Drawing.Size(215, 30);
-            this.kbtnDefineCustomColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnDefineCustomColours.TabIndex = 63;
-            this.kbtnDefineCustomColours.Values.Text = "Define Custom Text &Colours";
-            this.kbtnDefineCustomColours.Click += new System.EventHandler(this.kbtnDefineCustomColours_Click);
+            this.cpbColourPreview.BackColor = System.Drawing.Color.Transparent;
+            this.cpbColourPreview.Location = new System.Drawing.Point(13, 12);
+            this.cpbColourPreview.Name = "cpbColourPreview";
+            this.cpbColourPreview.Size = new System.Drawing.Size(206, 195);
+            this.cpbColourPreview.TabIndex = 3;
+            this.cpbColourPreview.TabStop = false;
             // 
             // ColourMixer
             // 
@@ -438,6 +451,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbColourPreview)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,5 +486,6 @@
         private System.Windows.Forms.Panel panel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnOk;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnDefineCustomColours;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cpbColourPreview;
     }
 }
