@@ -37,9 +37,6 @@
     <ApplicationIcon>Resources\Oxygen-Icons.org-Oxygen-Mimetypes-text-xml.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Design">
-      <HintPath>..\..\Required\Krypton Design.dll</HintPath>
-    </Reference>
     <Reference Include="Krypton Navigator">
       <HintPath>..\..\Required\Krypton Navigator.dll</HintPath>
     </Reference>

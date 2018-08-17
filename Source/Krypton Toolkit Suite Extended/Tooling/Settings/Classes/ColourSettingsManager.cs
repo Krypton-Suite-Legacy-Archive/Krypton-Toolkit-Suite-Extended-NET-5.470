@@ -541,24 +541,20 @@ namespace Tooling.Settings.Classes
         {
             if (usePrompt)
             {
-                //DialogResult result = KryptonMessageBox.Show("This action will reset the colour values. Do you want to continue?", "Reset Colour Values", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = KryptonMessageBox.Show("This action will reset the colour values. Do you want to continue?", "Reset Colour Values", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                //if (result == DialogResult.Yes)
-                //{
-                //    ResetColourSettings();
+                if (result == DialogResult.Yes)
+                {
+                    ResetColourSettings();
 
-                //    SaveColourSettings(usePrompt);
-                //}
-                //else
-                //{
-                //    ResetColourSettings();
+                    SaveColourSettings(usePrompt);
+                }
+                else
+                {
+                    ResetColourSettings();
 
-                //    SaveColourSettings();
-                //}
-
-                ExtendedKryptonMessagebox extendedKryptonMessagebox = new ExtendedKryptonMessagebox("This action will reset the colour values. Do you want to continue?", "Reset Colour Values", KryptonMessageBoxExtendedApplicationIconVisibility.VISIBLE, KryptonMessageBoxExtendedBorderType.FIXED3D, KryptonMessageBoxExtendedBoxButtonCount.TWO, KryptonMessageBoxExtendedButtons.YESNO, KryptonMessageBoxExtendedDefaultButton.BUTTON3, KryptonMessageBoxExtendedIcon.QUESTION, KryptonMessageBoxExtendedResult.NO);
-
-                extendedKryptonMessagebox.Show();
+                    SaveColourSettings();
+                }
             }
         }
 

@@ -27,10 +27,10 @@ namespace ExtendedFileDialogs.Classes
     public static class Extensions
     {
         #region Extension Methods
-        public static DialogResult ShowDialog(this FileDialog fileDialog, FileDialogControlBase fileDialogControlBase, IWin32Window owner)
-        {
+        //public static DialogResult ShowDialog(this FileDialog fileDialog, FileDialogControlBase fileDialogControlBase, IWin32Window owner)
+        //{
 
-        }
+        //}
         #endregion
     }
 }

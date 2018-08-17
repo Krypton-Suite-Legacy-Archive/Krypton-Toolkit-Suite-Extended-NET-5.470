@@ -1099,41 +1099,41 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.UI
         /// or
         /// Cannot show message box from a service with help specified - options
         /// </exception>
-        private static KryptonMessageBoxExtendedResult InternalShow(IWin32Window owner, string messageContent, string caption, KryptonMessageBoxExtendedApplicationIconVisibility iconVisibility, KryptonMessageBoxExtendedBorderType borderType, KryptonMessageBoxExtendedBoxButtonCount buttonCount, KryptonMessageBoxExtendedButtons buttons, KryptonMessageBoxExtendedBoxOptions options, HelpInfo helpInfo = null, KryptonMessageBoxExtendedDefaultButton defaultButton = KryptonMessageBoxExtendedDefaultButton.BUTTON1, KryptonMessageBoxExtendedIcon icon = KryptonMessageBoxExtendedIcon.NONE, string[] buttonTextCollection = null, string checkBoxText = null, Image customIcon = null) // KryptonMessageBoxExtendedResult result = KryptonMessageBoxExtendedResult.OK,
-        {
-            // Check if trying to show a message box from a non-interactive process, this is not possible
-            if (!SystemInformation.UserInteractive && ((options & (KryptonMessageBoxExtendedBoxOptions.SERVICENOTIFICATION | KryptonMessageBoxExtendedBoxOptions.DEFAULTDESKTOPONLY)) == 0))
-            {
-                throw new InvalidOperationException("Cannot show modal dialog when non-interactive");
-            }
+        //private static KryptonMessageBoxExtendedResult InternalShow(IWin32Window owner, string messageContent, string caption, KryptonMessageBoxExtendedApplicationIconVisibility iconVisibility, KryptonMessageBoxExtendedBorderType borderType, KryptonMessageBoxExtendedBoxButtonCount buttonCount, KryptonMessageBoxExtendedButtons buttons, KryptonMessageBoxExtendedBoxOptions options, HelpInfo helpInfo = null, KryptonMessageBoxExtendedDefaultButton defaultButton = KryptonMessageBoxExtendedDefaultButton.BUTTON1, KryptonMessageBoxExtendedIcon icon = KryptonMessageBoxExtendedIcon.NONE, string[] buttonTextCollection = null, string checkBoxText = null, Image customIcon = null) // KryptonMessageBoxExtendedResult result = KryptonMessageBoxExtendedResult.OK,
+        //{
+        //    // Check if trying to show a message box from a non-interactive process, this is not possible
+        //    if (!SystemInformation.UserInteractive && ((options & (KryptonMessageBoxExtendedBoxOptions.SERVICENOTIFICATION | KryptonMessageBoxExtendedBoxOptions.DEFAULTDESKTOPONLY)) == 0))
+        //    {
+        //        throw new InvalidOperationException("Cannot show modal dialog when non-interactive");
+        //    }
 
-            // Check if trying to show a message box from a service and the owner has been specified, this is not possible
-            if ((owner != null) && ((options & (KryptonMessageBoxExtendedBoxOptions.SERVICENOTIFICATION | KryptonMessageBoxExtendedBoxOptions.DEFAULTDESKTOPONLY)) != 0))
-            {
-                throw new ArgumentException(@"Cannot show message box from a service with an owner specified", nameof(options));
-            }
+        //    // Check if trying to show a message box from a service and the owner has been specified, this is not possible
+        //    if ((owner != null) && ((options & (KryptonMessageBoxExtendedBoxOptions.SERVICENOTIFICATION | KryptonMessageBoxExtendedBoxOptions.DEFAULTDESKTOPONLY)) != 0))
+        //    {
+        //        throw new ArgumentException(@"Cannot show message box from a service with an owner specified", nameof(options));
+        //    }
 
-            // Check if trying to show a message box from a service and help information is specified, this is not possible
-            if ((helpInfo != null) && ((options & (KryptonMessageBoxExtendedBoxOptions.SERVICENOTIFICATION | KryptonMessageBoxExtendedBoxOptions.DEFAULTDESKTOPONLY)) != 0))
-            {
-                throw new ArgumentException(@"Cannot show message box from a service with help specified", nameof(options));
-            }
+        //    // Check if trying to show a message box from a service and help information is specified, this is not possible
+        //    if ((helpInfo != null) && ((options & (KryptonMessageBoxExtendedBoxOptions.SERVICENOTIFICATION | KryptonMessageBoxExtendedBoxOptions.DEFAULTDESKTOPONLY)) != 0))
+        //    {
+        //        throw new ArgumentException(@"Cannot show message box from a service with help specified", nameof(options));
+        //    }
 
-            // If help information provided or we are not a service/default desktop application then grab an owner for showing the message box
-            IWin32Window showOwner = null;
-            if ((helpInfo != null) || ((options & (KryptonMessageBoxExtendedBoxOptions.SERVICENOTIFICATION | KryptonMessageBoxExtendedBoxOptions.DEFAULTDESKTOPONLY)) == 0))
-            {
-                // If do not have an owner passed in then get the active window and use that instead
-                showOwner = owner ?? FromHandle(PI.GetActiveWindow());
-            }
+        //    // If help information provided or we are not a service/default desktop application then grab an owner for showing the message box
+        //    IWin32Window showOwner = null;
+        //    if ((helpInfo != null) || ((options & (KryptonMessageBoxExtendedBoxOptions.SERVICENOTIFICATION | KryptonMessageBoxExtendedBoxOptions.DEFAULTDESKTOPONLY)) == 0))
+        //    {
+        //        // If do not have an owner passed in then get the active window and use that instead
+        //        showOwner = owner ?? FromHandle(PI.GetActiveWindow());
+        //    }
 
-            using (ExtendedKryptonMessagebox ekmb = new ExtendedKryptonMessagebox(showOwner, messageContent, caption, iconVisibility, borderType, buttonCount, buttons, options, helpInfo, defaultButton, icon, buttonTextCollection, checkBoxText, customIcon))
-            {
-                ekmb.StartPosition = showOwner == null ? FormStartPosition.CenterScreen : FormStartPosition.CenterParent;
+        //    using (ExtendedKryptonMessagebox ekmb = new ExtendedKryptonMessagebox(showOwner, messageContent, caption, iconVisibility, borderType, buttonCount, buttons, options, helpInfo, defaultButton, icon, buttonTextCollection, checkBoxText, customIcon))
+        //    {
+        //        ekmb.StartPosition = showOwner == null ? FormStartPosition.CenterScreen : FormStartPosition.CenterParent;
 
-                return ekmb.ShowDialog(showOwner);
-            }
-        }
+        //        return ekmb.ShowDialog();
+        //    }
+        //}
         #endregion
 
         #region Update Methods

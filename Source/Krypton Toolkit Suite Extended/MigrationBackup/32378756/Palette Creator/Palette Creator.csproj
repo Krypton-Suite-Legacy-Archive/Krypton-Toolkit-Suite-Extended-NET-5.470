@@ -36,16 +36,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Krypton Docking">
-      <HintPath>..\..\Required\Krypton Docking.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Docking.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Navigator">
-      <HintPath>..\..\Required\Krypton Navigator.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Ribbon">
-      <HintPath>..\..\Required\Krypton Ribbon.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Toolkit">
-      <HintPath>..\..\Required\Krypton Toolkit.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WindowsAPICodePack.1.1.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
@@ -152,6 +152,7 @@
     <EmbeddedResource Include="UX\TMSChromeForm.resx">
       <DependentUpon>TMSChromeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -386,11 +387,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ui-label-link.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="WindowsAPICodePack">
-      <Version>1.1.0</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

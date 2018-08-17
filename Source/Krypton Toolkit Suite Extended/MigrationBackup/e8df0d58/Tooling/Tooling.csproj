@@ -40,14 +40,14 @@
       <HintPath>..\Global Utilities\bin\Debug\Global Utilities.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Navigator">
-      <HintPath>..\..\Required\Krypton Navigator.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Outlook Grid">
       <HintPath>..\Krypton Outlook Grid\bin\Debug\Krypton Outlook Grid.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Toolkit, Version=4.70.633.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\Krypton Toolkit.dll</HintPath>
+      <HintPath>A:\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
@@ -238,6 +238,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -337,23 +338,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\10-large-opt.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="AutoCompleteMenu-ScintillaNET">
-      <Version>1.6.1</Version>
-    </PackageReference>
-    <PackageReference Include="EasyScintilla">
-      <Version>1.0.4</Version>
-    </PackageReference>
-    <PackageReference Include="jacobslusser.ScintillaNET">
-      <Version>3.6.3</Version>
-    </PackageReference>
-    <PackageReference Include="log4net">
-      <Version>1.2.10</Version>
-    </PackageReference>
-    <PackageReference Include="ScintillaNet.SearchBox">
-      <Version>1.0.3</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
