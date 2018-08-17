@@ -1,31 +1,13 @@
-﻿namespace KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.UI
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
+using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace ExtendedControls.ExtendedToolkit.Messageboxes.Classes
 {
-    partial class ExtendedKryptonMessagebox
+    public class ExtendedKryptonMessagebox : KryptonForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
+        #region Designer Code
         private void InitializeComponent()
         {
             this.kpnlBackdrop = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -35,14 +17,14 @@
             this.kbtnButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.kpnlBottom = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.pbxDivider = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlBackdrop)).BeginInit();
             this.kpnlBackdrop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
-            this.kryptonPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlBottom)).BeginInit();
+            this.kpnlBottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDivider)).BeginInit();
             this.SuspendLayout();
             // 
             // kpnlBackdrop
@@ -94,7 +76,6 @@
             this.kbtnButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnButton3.TabIndex = 4;
             this.kbtnButton3.Values.Text = "Button 3 Text";
-            this.kbtnButton3.Click += new System.EventHandler(this.kbtnButton3_Click);
             // 
             // kbtnButton2
             // 
@@ -106,7 +87,6 @@
             this.kbtnButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnButton2.TabIndex = 3;
             this.kbtnButton2.Values.Text = "Button 2 Text";
-            this.kbtnButton2.Click += new System.EventHandler(this.kbtnButton2_Click);
             // 
             // kbtnButton1
             // 
@@ -121,33 +101,33 @@
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.kchkOptionalCheck);
-            this.kryptonPanel1.Controls.Add(this.kbtnButton3);
-            this.kryptonPanel1.Controls.Add(this.kbtnButton1);
-            this.kryptonPanel1.Controls.Add(this.kbtnButton2);
-            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel1.Location = new System.Drawing.Point(0, 401);
-            this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(800, 49);
-            this.kryptonPanel1.TabIndex = 1;
+            this.kpnlBottom.Controls.Add(this.kchkOptionalCheck);
+            this.kpnlBottom.Controls.Add(this.kbtnButton3);
+            this.kpnlBottom.Controls.Add(this.kbtnButton1);
+            this.kpnlBottom.Controls.Add(this.kbtnButton2);
+            this.kpnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.kpnlBottom.Location = new System.Drawing.Point(0, 401);
+            this.kpnlBottom.Name = "kryptonPanel1";
+            this.kpnlBottom.Size = new System.Drawing.Size(800, 49);
+            this.kpnlBottom.TabIndex = 1;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 399);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 2);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pbxDivider.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.pbxDivider.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pbxDivider.Location = new System.Drawing.Point(0, 399);
+            this.pbxDivider.Name = "pictureBox1";
+            this.pbxDivider.Size = new System.Drawing.Size(800, 2);
+            this.pbxDivider.TabIndex = 2;
+            this.pbxDivider.TabStop = false;
             // 
             // ExtendedKryptonMessagebox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.kryptonPanel1);
+            this.Controls.Add(this.pbxDivider);
+            this.Controls.Add(this.kpnlBottom);
             this.Controls.Add(this.kpnlBackdrop);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -161,24 +141,37 @@
             this.kpnlBackdrop.ResumeLayout(false);
             this.kpnlBackdrop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
-            this.kryptonPanel1.ResumeLayout(false);
-            this.kryptonPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlBottom)).EndInit();
+            this.kpnlBottom.ResumeLayout(false);
+            this.kpnlBottom.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDivider)).EndInit();
             this.ResumeLayout(false);
-
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private KryptonPanel kpnlBackdrop;
+        private PictureBox pbxIcon;
+        private KryptonCheckBox kchkOptionalCheck;
+        private KryptonButton kbtnButton3;
+        private KryptonButton kbtnButton2;
+        private KryptonButton kbtnButton1;
+        private KryptonLabel klblMessage;
+        private KryptonPanel kpnlBottom;
+        private PictureBox pbxDivider;
+        private IContainer components = null;
         #endregion
 
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlBackdrop;
-        private System.Windows.Forms.PictureBox pbxIcon;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kchkOptionalCheck;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnButton3;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnButton2;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnButton1;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel klblMessage;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private void ExtendedKryptonMessagebox_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

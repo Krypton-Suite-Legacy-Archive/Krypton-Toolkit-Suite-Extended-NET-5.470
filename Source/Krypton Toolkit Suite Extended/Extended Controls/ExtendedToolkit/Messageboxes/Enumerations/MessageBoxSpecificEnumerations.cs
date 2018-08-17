@@ -175,7 +175,8 @@
 
     public enum KryptonMessageBoxExtendedBoxOptions
     {
-
+        SERVICENOTIFICATION = 0,
+        DEFAULTDESKTOPONLY = 1
     }
 
     public enum KryptonMessageBoxExtendedBoxButtonCount
