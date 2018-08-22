@@ -1,6 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.ExtendedToolkit.Messageboxes.Classes;
 using ExtendedControls.ExtendedToolkit.Messageboxes.Enumerations;
-using KryptonExtendedToolkit.ExtendedToolkit.Messageboxes.UI;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -511,12 +511,14 @@ namespace Tooling.Settings.Classes
         /// <summary>
         /// Saves the colour settings.
         /// </summary>
-        /// <param name="usePrompt">if set to <c>true</c> [use prompt].</param>
+        /// <param name="usePrompt">If set to <c>true</c> [use prompt].</param>
         public void SaveColourSettings(bool usePrompt = false)
         {
             if (usePrompt)
             {
                 DialogResult result = KryptonMessageBox.Show("Do you want to save the current colour settings?", "Save Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                //KryptonMessageBoxExtendedResult result = ExtendedKryptonMessagebox.Show("Do you want to save the current colour settings?", "Save Confirmation", KryptonMessageBoxExtendedButtons.YESNO, KryptonMessageBoxExtendedIcon.QUESTION);
 
                 if (result == DialogResult.Yes)
                 {
@@ -533,10 +535,11 @@ namespace Tooling.Settings.Classes
             }
         }
 
+
         /// <summary>
         /// Resets the settings.
         /// </summary>
-        /// <param name="usePrompt">if set to <c>true</c> [use prompt].</param>
+        /// <param name="usePrompt">If set to <c>true</c> [use prompt].</param>
         public void ResetSettings(bool usePrompt = false)
         {
             if (usePrompt)

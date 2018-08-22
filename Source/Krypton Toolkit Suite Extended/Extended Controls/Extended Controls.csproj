@@ -155,10 +155,6 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Messageboxes\Classes\Globals.cs" />
     <Compile Include="ExtendedToolkit\Messageboxes\Enumerations\MessageBoxSpecificEnumerations.cs" />
-    <Compile Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.cs" />
-    <Compile Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.Designer.cs">
-      <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
-    </Compile>
     <Compile Include="ExtendedToolkit\SystemDialogs\KryptonFolderPickerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +262,13 @@
     <None Include="Resources\Stop.png" />
     <None Include="Resources\Information_2.png" />
     <None Include="Resources\Warning_2.png" />
+    <None Include="Resources\Critical 128 x 128.png" />
+    <None Include="Resources\Hand 128 x 128.png" />
+    <None Include="Resources\Information 128 x 128.png" />
+    <None Include="Resources\Ok 128 x 128.png" />
+    <None Include="Resources\Question 128 x 128.png" />
+    <None Include="Resources\Stop 128 x 128.png" />
+    <None Include="Resources\Warning 128 x 128.png" />
     <Content Include="ToolboxBitmaps\KryptonForm.bmp" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
@@ -276,7 +279,7 @@
     <EmbeddedResource Include="ExtendedToolkit\Controls\ModernProgressBar.resx">
       <DependentUpon>ModernProgressBar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessagebox.resx">
+    <EmbeddedResource Include="ExtendedToolkit\Messageboxes\Classes\ExtendedKryptonMessagebox.resx">
       <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\KryptonSaveFileDialog.resx">
@@ -291,6 +294,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ExtendedToolkit\Messageboxes\UI\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>

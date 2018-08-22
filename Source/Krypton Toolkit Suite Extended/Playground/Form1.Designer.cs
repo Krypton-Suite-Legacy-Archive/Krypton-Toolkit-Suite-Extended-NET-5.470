@@ -77,6 +77,7 @@
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kcbtnBackwardDiagonal = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.kcbtnForwardDiagonal = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.kcbtnVertical = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
@@ -119,7 +120,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnMessageboxTest = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -197,9 +198,9 @@
             this.kuacsbElevate.Values.Image = ((System.Drawing.Image)(resources.GetObject("kuacsbElevate.Values.Image")));
             this.kuacsbElevate.Values.Text = "Elevate";
             // 
-            // kryptonManager1
+            // kPal
             // 
-            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
+            this.kPal.FilePath = null;
             // 
             // menuStrip2
             // 
@@ -477,6 +478,7 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnMessageboxTest);
             this.kryptonPanel1.Controls.Add(this.kryptonButton2);
             this.kryptonPanel1.Controls.Add(this.kcbtnBackwardDiagonal);
             this.kryptonPanel1.Controls.Add(this.kcbtnForwardDiagonal);
@@ -503,6 +505,15 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 659);
             this.kryptonPanel1.TabIndex = 2;
+            // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(634, 133);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton2.TabIndex = 20;
+            this.kryptonButton2.Values.Text = "File Creator";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // kcbtnBackwardDiagonal
             // 
@@ -631,7 +642,7 @@
             this.tsJustify,
             this.toolStripSeparator2,
             this.tsInsertText});
-            this.toolStrip2.Location = new System.Drawing.Point(634, 171);
+            this.toolStrip2.Location = new System.Drawing.Point(634, 300);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(133, 25);
             this.toolStrip2.TabIndex = 7;
@@ -694,9 +705,9 @@
             // rxrbTextPad
             // 
             this.rxrbTextPad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rxrbTextPad.Location = new System.Drawing.Point(634, 202);
+            this.rxrbTextPad.Location = new System.Drawing.Point(634, 328);
             this.rxrbTextPad.Name = "rxrbTextPad";
-            this.rxrbTextPad.Size = new System.Drawing.Size(520, 289);
+            this.rxrbTextPad.Size = new System.Drawing.Size(520, 163);
             this.rxrbTextPad.TabIndex = 6;
             this.rxrbTextPad.Text = "kryptonRichTextBoxExtended2";
             // 
@@ -911,14 +922,14 @@
             this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnBackwardDiagonal);
             this.kryptonCheckSet1.CheckedButton = this.kcbtnForwardDiagonal;
             // 
-            // kryptonButton2
+            // kbtnMessageboxTest
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(634, 133);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(218, 25);
-            this.kryptonButton2.TabIndex = 20;
-            this.kryptonButton2.Values.Text = "File Creator";
-            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            this.kbtnMessageboxTest.Location = new System.Drawing.Point(634, 164);
+            this.kbtnMessageboxTest.Name = "kbtnMessageboxTest";
+            this.kbtnMessageboxTest.Size = new System.Drawing.Size(218, 25);
+            this.kbtnMessageboxTest.TabIndex = 21;
+            this.kbtnMessageboxTest.Values.Text = "Messagebox Test";
+            this.kbtnMessageboxTest.Click += new System.EventHandler(this.kbtnMessageboxTest_Click);
             // 
             // Form1
             // 
@@ -1045,6 +1056,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcbtnHorizontal;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckSet kryptonCheckSet1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnMessageboxTest;
     }
 }
 

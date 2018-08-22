@@ -283,4 +283,25 @@
   <data name="Warning_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Critical_128_x_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Critical 128 x 128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hand_128_x_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hand 128 x 128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Information_128_x_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Information 128 x 128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ok_128_x_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ok 128 x 128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Question_128_x_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Question 128 x 128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stop_128_x_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stop 128 x 128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Warning_128_x_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Warning 128 x 128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

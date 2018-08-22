@@ -31,6 +31,8 @@
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.colourComboBox1 = new ExtendedControls.ExtendedToolkit.Controls.ColourComboBox();
             this.kryptonColourComboBox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonColourComboBox();
+            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTreeView1 = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonColourComboBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,11 +61,28 @@
             this.kryptonColourComboBox1.TabIndex = 2;
             this.kryptonColourComboBox1.Text = "kryptonColourComboBox1";
             // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.kryptonTextBox1.TabIndex = 3;
+            this.kryptonTextBox1.Text = "kryptonTextBox1";
+            // 
+            // kryptonTreeView1
+            // 
+            this.kryptonTreeView1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonTreeView1.Name = "kryptonTreeView1";
+            this.kryptonTreeView1.Size = new System.Drawing.Size(120, 96);
+            this.kryptonTreeView1.TabIndex = 4;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.kryptonTreeView1);
+            this.Controls.Add(this.kryptonTextBox1);
             this.Controls.Add(this.kryptonColourComboBox1);
             this.Controls.Add(this.colourComboBox1);
             this.Controls.Add(this.kryptonButton1);
@@ -71,6 +90,7 @@
             this.Text = "MainWindow";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonColourComboBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -79,5 +99,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ExtendedControls.ExtendedToolkit.Controls.ColourComboBox colourComboBox1;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonColourComboBox kryptonColourComboBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTreeView kryptonTreeView1;
     }
 }

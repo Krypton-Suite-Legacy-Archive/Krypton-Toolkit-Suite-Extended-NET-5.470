@@ -295,5 +295,10 @@ namespace Playground
 
             paletteFileEditor.Show();
         }
+
+        private void kbtnMessageboxTest_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
