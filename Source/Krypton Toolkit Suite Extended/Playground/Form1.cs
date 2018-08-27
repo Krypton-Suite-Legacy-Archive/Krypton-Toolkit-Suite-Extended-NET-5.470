@@ -300,5 +300,12 @@ namespace Playground
         {
 
         }
+
+        private void kbtnPaletteEditor_Click(object sender, EventArgs e)
+        {
+            PaletteEditor.UX.MainWindow _paletteEditor = new PaletteEditor.UX.MainWindow();
+
+            _paletteEditor.Show();
+        }
     }
 }

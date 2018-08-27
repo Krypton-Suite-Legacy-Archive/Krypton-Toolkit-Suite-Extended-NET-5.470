@@ -36,8 +36,20 @@
     <ApplicationIcon>Resources\PE Icon 256 x 256.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Global Utilities, Version=1.0.32.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Global Utilities\bin\Debug\Global Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Outlook Grid, Version=4.7.455.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Krypton Outlook Grid\bin\Debug\Krypton Outlook Grid.dll</HintPath>
+    </Reference>
     <Reference Include="Krypton Toolkit">
       <HintPath>..\..\Required\Krypton Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Peter William Wagner\.nuget\packages\windowsapicodepack\1.1.0\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,9 +65,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\GlobalMethods.cs" />
     <Compile Include="Classes\PaletteEditorEngine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UX\ColourInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\ColourInformation.Designer.cs">
+      <DependentUpon>ColourInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="UX\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +91,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UX\ColourInformation.resx">
+      <DependentUpon>ColourInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UX\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +111,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Extended Controls\Extended Controls.csproj">
+      <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
+      <Name>Extended Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tooling\Tooling.csproj">
       <Project>{efb997fb-1e05-444b-ba02-16c004e1a111}</Project>
       <Name>Tooling</Name>

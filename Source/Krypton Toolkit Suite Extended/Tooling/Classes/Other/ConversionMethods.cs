@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Globalization;
 
 namespace Tooling.Classes.Other
 {
@@ -254,6 +253,13 @@ namespace Tooling.Classes.Other
         public static String FormatColourARGBString(Color colour)
         {
             return $"{ colour.A.ToString() }, { colour.R.ToString() }, { colour.G.ToString() }, { colour.B.ToString() }";
+        }
+
+        public static String FormatColourToHexadecimal(Color colour)
+        {
+            int redValue = colour.R, greenValue = colour.G, blueValue = colour.B;
+
+            return ColorTranslator.FromHtml(string.Format("#{0:X2}{1:X2}{2:X2}", redValue, greenValue, blueValue)).Name.Remove(0, 1);
         }
         #endregion
 

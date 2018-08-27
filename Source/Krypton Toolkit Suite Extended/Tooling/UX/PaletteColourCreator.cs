@@ -20,6 +20,8 @@ namespace Tooling.UX
 
         private ColourControlManager _colourControlManager = new ColourControlManager();
 
+        private GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
+
         private Color _baseColour, _colourDark, _colourNormal, _colourLight, _colourLightness;
         #endregion
 
@@ -168,15 +170,30 @@ namespace Tooling.UX
         {
             ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
 
-            colourSettingsManager.SetBaseColour(pbxBaseColour.BackColor);
+            if (_globalBooleanSettingsManager.GetUseCircularPictureBoxes())
+            {
+                colourSettingsManager.SetBaseColour(cpbBaseColourPreview.BackColor);
 
-            colourSettingsManager.SetDarkestColour(pbxDarkColour.BackColor);
+                colourSettingsManager.SetDarkestColour(cpbDarkestColourPreview.BackColor);
 
-            colourSettingsManager.SetMediumColour(pbxMiddleColour.BackColor);
+                colourSettingsManager.SetMediumColour(cpbMiddleColourPreview.BackColor);
 
-            colourSettingsManager.SetLightColour(pbxLightColour.BackColor);
+                colourSettingsManager.SetLightColour(cpbLightColourPreview.BackColor);
 
-            colourSettingsManager.SetLightestColour(pbxLightestColour.BackColor);
+                colourSettingsManager.SetLightestColour(cpbLightestColourPreview.BackColor);
+            }
+            else
+            {
+                colourSettingsManager.SetBaseColour(pbxBaseColour.BackColor);
+
+                colourSettingsManager.SetDarkestColour(pbxDarkColour.BackColor);
+
+                colourSettingsManager.SetMediumColour(pbxMiddleColour.BackColor);
+
+                colourSettingsManager.SetLightColour(pbxLightColour.BackColor);
+
+                colourSettingsManager.SetLightestColour(pbxLightestColour.BackColor);
+            }
 
             colourSettingsManager.SaveColourSettings();
         }

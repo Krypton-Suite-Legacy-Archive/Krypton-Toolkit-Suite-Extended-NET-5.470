@@ -395,6 +395,95 @@ namespace Tooling.Classes.Other
         }
 
         /// <summary>
+        /// Grabs the colour definitions.
+        /// </summary>
+        /// <param name="baseColour">The base colour.</param>
+        /// <param name="darkColour">The dark colour.</param>
+        /// <param name="middleColour">The middle colour.</param>
+        /// <param name="lightColour">The light colour.</param>
+        /// <param name="lightestColour">The lightest colour.</param>
+        /// <param name="borderColourPreview">The border colour preview.</param>
+        /// <param name="alternativeNormalTextColourPreview">The alternative normal text colour preview.</param>
+        /// <param name="normalTextColourPreview">The normal text colour preview.</param>
+        /// <param name="disabledTextColourPreview">The disabled text colour preview.</param>
+        /// <param name="focusedTextColourPreview">The focused text colour preview.</param>
+        /// <param name="pressedTextColourPreview">The pressed text colour preview.</param>
+        /// <param name="disabledColourPreview">The disabled colour preview.</param>
+        /// <param name="linkNormalColourPreview">The link normal colour preview.</param>
+        /// <param name="linkHoverColourPreview">The link hover colour preview.</param>
+        /// <param name="linkVisitedColourPreview">The link visited colour preview.</param>
+        /// <param name="customColourOne">The custom colour one.</param>
+        /// <param name="customColourTwo">The custom colour two.</param>
+        /// <param name="customColourThree">The custom colour three.</param>
+        /// <param name="customColourFour">The custom colour four.</param>
+        /// <param name="customColourFive">The custom colour five.</param>
+        /// <param name="customTextColourOne">The custom text colour one.</param>
+        /// <param name="customTextColourTwo">The custom text colour two.</param>
+        /// <param name="customTextColourThree">The custom text colour three.</param>
+        /// <param name="customTextColourFour">The custom text colour four.</param>
+        /// <param name="customTextColourFive">The custom text colour five.</param>
+        /// <param name="menuTextColour">The menu text colour.</param>
+        /// <param name="statusTextColour">The status text colour.</param>
+        public static void GrabColourDefinitions(CircularPictureBox baseColour, CircularPictureBox darkColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, CircularPictureBox borderColourPreview, CircularPictureBox alternativeNormalTextColourPreview, CircularPictureBox normalTextColourPreview, CircularPictureBox disabledTextColourPreview, CircularPictureBox focusedTextColourPreview, CircularPictureBox pressedTextColourPreview, CircularPictureBox disabledColourPreview, CircularPictureBox linkNormalColourPreview, CircularPictureBox linkHoverColourPreview, CircularPictureBox linkVisitedColourPreview, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColour, CircularPictureBox statusTextColour)
+        {
+            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+
+            baseColour.BackColor = colourSettingsManager.GetBaseColour();
+
+            darkColour.BackColor = colourSettingsManager.GetDarkestColour();
+
+            middleColour.BackColor = colourSettingsManager.GetMediumColour();
+
+            lightColour.BackColor = colourSettingsManager.GetLightColour();
+
+            lightestColour.BackColor = colourSettingsManager.GetLightestColour();
+
+            borderColourPreview.BackColor = colourSettingsManager.GetBorderColour();
+
+            alternativeNormalTextColourPreview.BackColor = colourSettingsManager.GetAlternativeNormalTextColour();
+
+            normalTextColourPreview.BackColor = colourSettingsManager.GetNormalTextColour();
+
+            disabledTextColourPreview.BackColor = colourSettingsManager.GetDisabledTextColour();
+
+            focusedTextColourPreview.BackColor = colourSettingsManager.GetFocusTextColour();
+
+            pressedTextColourPreview.BackColor = colourSettingsManager.GetPressedTextColour();
+
+            disabledColourPreview.BackColor = colourSettingsManager.GetDisabledColour();
+
+            linkNormalColourPreview.BackColor = colourSettingsManager.GetLinkNormalColour();
+
+            linkHoverColourPreview.BackColor = colourSettingsManager.GetLinkHoverColour();
+
+            linkVisitedColourPreview.BackColor = colourSettingsManager.GetLinkVisitedColour();
+
+            customColourOne.BackColor = colourSettingsManager.GetCustomColourOne();
+
+            customColourTwo.BackColor = colourSettingsManager.GetCustomColourTwo();
+
+            customColourThree.BackColor = colourSettingsManager.GetCustomColourThree();
+
+            customColourFour.BackColor = colourSettingsManager.GetCustomColourFour();
+
+            customColourFive.BackColor = colourSettingsManager.GetCustomColourFive();
+
+            menuTextColour.BackColor = colourSettingsManager.GetMenuTextColour();
+
+            customTextColourOne.BackColor = colourSettingsManager.GetCustomTextColourOne();
+
+            customTextColourTwo.BackColor = colourSettingsManager.GetCustomTextColourTwo();
+
+            customTextColourThree.BackColor = colourSettingsManager.GetCustomTextColourThree();
+
+            customTextColourFour.BackColor = colourSettingsManager.GetCustomTextColourFour();
+
+            customTextColourFive.BackColor = colourSettingsManager.GetCustomTextColourFive();
+
+            statusTextColour.BackColor = colourSettingsManager.GetStatusTextColour();
+        }
+
+        /// <summary>
         /// Defines the custom colour.
         /// </summary>
         /// <param name="colourDefinitions">The colour definitions.</param>

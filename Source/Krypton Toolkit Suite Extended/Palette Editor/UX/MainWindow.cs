@@ -12,16 +12,21 @@ namespace PaletteEditor.UX
     public partial class MainWindow : KryptonForm
     {
         #region Variables
-        private bool _dirty, _loaded, _debugMode = true;
+        private bool _dirty, _loaded, _debugMode = true, _useCircularPictureBoxes = true;
 
         private string _filename;
 
         private KryptonPalette _palette;
 
+        private PaletteMode _paletteMode;
+
         private ConversionMethods _conversionMethods = new ConversionMethods();
 
         private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
+
+        private GlobalMethods _globalMethods = new GlobalMethods();
         #endregion
+
         public MainWindow()
         {
             InitializeComponent();
@@ -240,6 +245,11 @@ namespace PaletteEditor.UX
             ColourUtilities.PropagateBasePaletteModes(kcmbBasePaletteMode);
 
             _colourSettingsManager.ResetSettings(_debugMode);
+
+            if (_useCircularPictureBoxes)
+            {
+                ShowCircularPreviewBoxes(false);
+            }
         }
 
         #region Picture Box Mouse Enter Events
@@ -425,7 +435,13 @@ namespace PaletteEditor.UX
 
         private void kbtnGetColours_Click(object sender, EventArgs e)
         {
-            ColourUtilities.GrabColourDefinitions(pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview, pbxStatusTextColourPreview);
+
+            if (_useCircularPictureBoxes)
+            {
+                UpdateColourPalette(_useCircularPictureBoxes);
+
+                ShowCircularPreviewBoxes(true);
+            }
         }
 
         private void pbxBaseColour_MouseLeave(object sender, EventArgs e)
@@ -548,18 +564,210 @@ namespace PaletteEditor.UX
             contrastColourGenerator.Show();
         }
 
+        private void cbxBaseColourPreview_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxBaseColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.ToolTipManager.DisplayToolTip(ttInformation, cbxBaseColourPreview, "Base", cbxBaseColourPreview.BackColor, true);
+        }
+
+        private void kcmbBasePaletteMode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (kcmbBasePaletteMode.Text == "Global")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.Global);
+            }
+            else if (kcmbBasePaletteMode.Text == "ProfessionalSystem")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.ProfessionalSystem);
+            }
+            else if (kcmbBasePaletteMode.Text == "ProfessionalOffice2003")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.ProfessionalOffice2003);
+            }
+            else if (kcmbBasePaletteMode.Text == "Office2007Black")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.Office2007Black);
+            }
+            else if (kcmbBasePaletteMode.Text == "Office2007Blue")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.Office2007Blue);
+            }
+            else if (kcmbBasePaletteMode.Text == "Office2007Silver")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.Office2007Silver);
+            }
+            else if (kcmbBasePaletteMode.Text == "Office2010Black")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.Office2010Black);
+            }
+            else if (kcmbBasePaletteMode.Text == "Office2010Blue")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.Office2010Blue);
+            }
+            else if (kcmbBasePaletteMode.Text == "Office2010Silver")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.Office2010Silver);
+            }
+            else if (kcmbBasePaletteMode.Text == "Office2013")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.Office2013);
+            }
+            else if (kcmbBasePaletteMode.Text == "Office2013White")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.Office2013White);
+            }
+            else if (kcmbBasePaletteMode.Text == "SparkleBlue")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.SparkleBlue);
+            }
+            else if (kcmbBasePaletteMode.Text == "SparkleOrange")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.SparkleOrange);
+            }
+            else if (kcmbBasePaletteMode.Text == "SparklePurple")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.SparklePurple);
+            }
+            else if (kcmbBasePaletteMode.Text == "Custom")
+            {
+                _globalMethods.SetSelectedPaletteMode(PaletteMode.Custom);
+            }
+
+            GetCurrentSavedPaletteMode();
+        }
+
+        private void tmrUpdateUI_Tick(object sender, EventArgs e)
+        {
+            UpdateUI();
+        }
+
         private void kbtnExportPalette_Click(object sender, EventArgs e)
         {
             //PaletteEditorEngine.ExportPaletteTheme(palette, PaletteMode.Office2007Silver, pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, tslStatus);
 
-            PaletteEditorEngine.ExportPalette(PaletteMode.Office2007Silver, pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview, pbxStatusTextColourPreview, tslStatus);
+            PaletteEditorEngine.ExportPalette(_globalMethods.GetSelectedPaletteMode(), pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview, pbxStatusTextColourPreview, tslStatus);
+
+            PaletteEditorEngine.ExportPalette(_globalMethods.GetSelectedPaletteMode(), cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledColourPreview, cbxLinkNormalColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview, tslStatus);
         }
 
-
-        #region Misc
-        private void ExportPaletteColours(KryptonPalette kryptonPalette, PaletteMode paletteMode)
+        #region Misc        
+        /// <summary>
+        /// Gets the current saved palette mode.
+        /// </summary>
+        private void GetCurrentSavedPaletteMode()
         {
+            tslStatus.Text = $"The current palette mode is: { _globalMethods.GetSelectedPaletteMode() }";
+        }
 
+        private void kbtnGetColourInformation_Click(object sender, EventArgs e)
+        {
+            ColourInformation colourInformation = new ColourInformation();
+
+            colourInformation.Show();
+        }
+
+        /// <summary>
+        /// Updates the UI.
+        /// </summary>
+        private void UpdateUI()
+        {
+            if (kcmbBasePaletteMode.Text != string.Empty)
+            {
+                kbtnExportPalette.Enabled = true;
+            }
+            else
+            {
+                kbtnExportPalette.Enabled = false;
+            }
+        }
+
+        /// <summary>
+        /// Updates the colour palette.
+        /// </summary>
+        /// <param name="useCircularPictureBoxes">if set to <c>true</c> [use circular picture boxes].</param>
+        private void UpdateColourPalette(bool useCircularPictureBoxes)
+        {
+            if (useCircularPictureBoxes)
+            {
+                kgbPreviewPane.Visible = false;
+
+                kgbCircularColourPreviewPane.Visible = true;
+
+                ColourUtilities.GrabColourDefinitions(cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledColourPreview, cbxLinkNormalColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview);
+            }
+            else
+            {
+                kgbPreviewPane.Visible = true;
+
+                kgbCircularColourPreviewPane.Visible = false;
+
+                ColourUtilities.GrabColourDefinitions(pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview, pbxStatusTextColourPreview);
+            }
+        }
+
+        /// <summary>
+        /// Shows or hides the circular preview boxes.
+        /// </summary>
+        /// <param name="value">if set to <c>true</c> [value].</param>
+        private void ShowCircularPreviewBoxes(bool value)
+        {
+            pbxBaseColour.Visible = value;
+
+            pbxDarkColour.Visible = value;
+
+            pbxMiddleColour.Visible = value;
+
+            pbxLightColour.Visible = value;
+
+            pbxLightestColour.Visible = value;
+
+            pbxBorderColourPreview.Visible = value;
+
+            pbxAlternativeNormalTextColour.Visible = value;
+
+            pbxNormalTextColourPreview.Visible = value;
+
+            pbxDisabledTextColourPreview.Visible = value;
+
+            pbxFocusedTextColourPreview.Visible = value;
+
+            pbxPressedTextColourPreview.Visible = value;
+
+            pbxDisabledColourPreview.Visible = value;
+
+            pbxLinkNormalColourPreview.Visible = value;
+
+            pbxLinkHoverColourPreview.Visible = value;
+
+            pbxLinkVisitedColourPreview.Visible = value;
+
+            pbxCustomColourOnePreview.Visible = value;
+
+            pbxCustomColourTwoPreview.Visible = value;
+
+            pbxCustomColourThreePreview.Visible = value;
+
+            pbxCustomColourFourPreview.Visible = value;
+
+            pbxCustomColourFivePreview.Visible = value;
+
+            pbxCustomTextColourOnePreview.Visible = value;
+
+            pbxCustomTextColourTwoPreview.Visible = value;
+
+            pbxCustomTextColourThreePreview.Visible = value;
+
+            pbxCustomTextColourFourPreview.Visible = value;
+
+            pbxCustomTextColourFivePreview.Visible = value;
+
+            pbxMenuTextColourPreview.Visible = value;
+
+            pbxStatusTextColourPreview.Visible = value;
         }
         #endregion
     }

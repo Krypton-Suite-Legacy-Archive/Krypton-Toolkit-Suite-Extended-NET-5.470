@@ -8,6 +8,15 @@
 
 ======
 
+## 2018-08-27 Colour Controls & Palette Editor
+* New colour controls and UI options have been implemented to easily create brand new themes
+* New application named `Palette Editor` has been implemented to create new themes (89% completed) - feedback would be welcome
+* New debugging options
+* A new circular picture box
+* Tidy up code
+
+======
+
 ## 2018-08-07 Palette colour generator
 * New API to allow a complementary colour set to be generated.
 * Begun work on a slimmed down version of a palette designer

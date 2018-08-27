@@ -145,6 +145,7 @@
     </Compile>
     <Compile Include="Settings\Classes\ColourIntegerSettingsManager.cs" />
     <Compile Include="Settings\Classes\ColourSettingsManager.cs" />
+    <Compile Include="Settings\Classes\CombineColourSettings.cs" />
     <Compile Include="Settings\Classes\GlobalBooleanSettingsManager.cs" />
     <Compile Include="Settings\ColourIntegerSettings.Designer.cs">
       <AutoGen>True</AutoGen>

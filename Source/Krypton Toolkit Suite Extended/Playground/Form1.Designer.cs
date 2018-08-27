@@ -77,6 +77,7 @@
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnMessageboxTest = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kcbtnBackwardDiagonal = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.kcbtnForwardDiagonal = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
@@ -120,7 +121,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
-            this.kbtnMessageboxTest = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnPaletteEditor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -197,6 +198,10 @@
             this.kuacsbElevate.TabIndex = 0;
             this.kuacsbElevate.Values.Image = ((System.Drawing.Image)(resources.GetObject("kuacsbElevate.Values.Image")));
             this.kuacsbElevate.Values.Text = "Elevate";
+            // 
+            // kryptonManager1
+            // 
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
             // 
             // kPal
             // 
@@ -478,6 +483,7 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnPaletteEditor);
             this.kryptonPanel1.Controls.Add(this.kbtnMessageboxTest);
             this.kryptonPanel1.Controls.Add(this.kryptonButton2);
             this.kryptonPanel1.Controls.Add(this.kcbtnBackwardDiagonal);
@@ -505,6 +511,15 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 659);
             this.kryptonPanel1.TabIndex = 2;
+            // 
+            // kbtnMessageboxTest
+            // 
+            this.kbtnMessageboxTest.Location = new System.Drawing.Point(634, 164);
+            this.kbtnMessageboxTest.Name = "kbtnMessageboxTest";
+            this.kbtnMessageboxTest.Size = new System.Drawing.Size(218, 25);
+            this.kbtnMessageboxTest.TabIndex = 21;
+            this.kbtnMessageboxTest.Values.Text = "Messagebox Test";
+            this.kbtnMessageboxTest.Click += new System.EventHandler(this.kbtnMessageboxTest_Click);
             // 
             // kryptonButton2
             // 
@@ -922,14 +937,14 @@
             this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnBackwardDiagonal);
             this.kryptonCheckSet1.CheckedButton = this.kcbtnForwardDiagonal;
             // 
-            // kbtnMessageboxTest
+            // kbtnPaletteEditor
             // 
-            this.kbtnMessageboxTest.Location = new System.Drawing.Point(634, 164);
-            this.kbtnMessageboxTest.Name = "kbtnMessageboxTest";
-            this.kbtnMessageboxTest.Size = new System.Drawing.Size(218, 25);
-            this.kbtnMessageboxTest.TabIndex = 21;
-            this.kbtnMessageboxTest.Values.Text = "Messagebox Test";
-            this.kbtnMessageboxTest.Click += new System.EventHandler(this.kbtnMessageboxTest_Click);
+            this.kbtnPaletteEditor.Location = new System.Drawing.Point(633, 195);
+            this.kbtnPaletteEditor.Name = "kbtnPaletteEditor";
+            this.kbtnPaletteEditor.Size = new System.Drawing.Size(218, 25);
+            this.kbtnPaletteEditor.TabIndex = 22;
+            this.kbtnPaletteEditor.Values.Text = "Palette Editor";
+            this.kbtnPaletteEditor.Click += new System.EventHandler(this.kbtnPaletteEditor_Click);
             // 
             // Form1
             // 
@@ -1057,6 +1072,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonCheckSet kryptonCheckSet1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnMessageboxTest;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnPaletteEditor;
     }
 }
 

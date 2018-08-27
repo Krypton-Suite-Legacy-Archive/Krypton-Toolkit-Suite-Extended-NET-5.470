@@ -37,13 +37,37 @@
             this.kbtnClose = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblColourOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kbtnViewPaletteFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kcmbBasePaletteMode = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.kryptonLabel32 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kbtnExportPalette = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnGetColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kgbCircularColourPreviewPane = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.circularPictureBox26 = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomTextColourThreePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomColourTwoPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxPressedTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLightestColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.circularPictureBox21 = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomTextColourTwoPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomColourOnePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxFocusedTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLightColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxStatusTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomTextColourOnePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLinkVisitedColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxDisabledTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxMiddleColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxMenuTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomColourFivePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLinkHoverColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxNormalTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxDarkColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.circularPictureBox6 = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomTextColourFourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomColourThreePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxDisabledColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxBorderColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomTextColourFivePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomColourFourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLinkNormalColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxAlternativeNormalTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxBaseColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.kgbPreviewPane = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -75,6 +99,14 @@
             this.pbxDarkColour = new System.Windows.Forms.PictureBox();
             this.pbxLightColour = new System.Windows.Forms.PictureBox();
             this.pbxMiddleColour = new System.Windows.Forms.PictureBox();
+            this.kbtnGenerateContrastColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnViewPaletteFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kcmbBasePaletteMode = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.kryptonLabel32 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kbtnExportPalette = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnGetColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.labelGridNormal = new System.Windows.Forms.PropertyGrid();
             this.ms = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,13 +121,47 @@
             this.ttInformation = new System.Windows.Forms.ToolTip(this.components);
             this.palette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kbtnGenerateContrastColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.tmrUpdateUI = new System.Windows.Forms.Timer(this.components);
+            this.kbtnGetColourInformation = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.ss.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kcmbBasePaletteMode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kgbCircularColourPreviewPane)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kgbCircularColourPreviewPane.Panel)).BeginInit();
+            this.kgbCircularColourPreviewPane.Panel.SuspendLayout();
+            this.kgbCircularColourPreviewPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomTextColourThreePreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomColourTwoPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxPressedTextColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLightestColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomTextColourTwoPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomColourOnePreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxFocusedTextColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLightColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxStatusTextColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomTextColourOnePreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLinkVisitedColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDisabledTextColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxMiddleColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxMenuTextColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomColourFivePreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLinkHoverColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxNormalTextColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDarkColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomTextColourFourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomColourThreePreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDisabledColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxBorderColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomTextColourFivePreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomColourFourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLinkNormalColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxAlternativeNormalTextColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxBaseColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kgbPreviewPane)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kgbPreviewPane.Panel)).BeginInit();
             this.kgbPreviewPane.Panel.SuspendLayout();
@@ -130,12 +196,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxDarkColour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLightColour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMiddleColour)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kcmbBasePaletteMode)).BeginInit();
             this.ms.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // kMan
-            // 
-            this.kMan.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Custom;
             // 
             // kryptonPanel1
             // 
@@ -191,6 +254,9 @@
             // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.kbtnGetColourInformation);
+            this.kryptonPanel2.Controls.Add(this.kgbCircularColourPreviewPane);
+            this.kryptonPanel2.Controls.Add(this.kgbPreviewPane);
             this.kryptonPanel2.Controls.Add(this.kbtnGenerateContrastColours);
             this.kryptonPanel2.Controls.Add(this.kbtnViewPaletteFile);
             this.kryptonPanel2.Controls.Add(this.kryptonLabel1);
@@ -199,7 +265,6 @@
             this.kryptonPanel2.Controls.Add(this.kbtnExportPalette);
             this.kryptonPanel2.Controls.Add(this.kbtnGetColours);
             this.kryptonPanel2.Controls.Add(this.kbtnGenerate);
-            this.kryptonPanel2.Controls.Add(this.kgbPreviewPane);
             this.kryptonPanel2.Controls.Add(this.labelGridNormal);
             this.kryptonPanel2.Controls.Add(this.ms);
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -208,81 +273,352 @@
             this.kryptonPanel2.Size = new System.Drawing.Size(998, 628);
             this.kryptonPanel2.TabIndex = 1;
             // 
-            // kbtnViewPaletteFile
+            // kgbCircularColourPreviewPane
             // 
-            this.kbtnViewPaletteFile.AutoSize = true;
-            this.kbtnViewPaletteFile.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnViewPaletteFile.Location = new System.Drawing.Point(438, 586);
-            this.kbtnViewPaletteFile.Name = "kbtnViewPaletteFile";
-            this.kbtnViewPaletteFile.Size = new System.Drawing.Size(130, 30);
-            this.kbtnViewPaletteFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnViewPaletteFile.TabIndex = 113;
-            this.kbtnViewPaletteFile.Values.Text = "View Palette &File";
-            this.kbtnViewPaletteFile.Click += new System.EventHandler(this.kbtnViewPaletteFile_Click);
+            this.kgbCircularColourPreviewPane.Location = new System.Drawing.Point(12, 91);
+            this.kgbCircularColourPreviewPane.Name = "kgbCircularColourPreviewPane";
             // 
-            // kryptonLabel1
+            // kgbCircularColourPreviewPane.Panel
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(562, 48);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(150, 26);
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.TabIndex = 112;
-            this.kryptonLabel1.Values.Text = "Palette Properties";
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.circularPictureBox26);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxCustomTextColourThreePreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxCustomColourTwoPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxPressedTextColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxLightestColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.circularPictureBox21);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxCustomTextColourTwoPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxCustomColourOnePreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxFocusedTextColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxLightColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxStatusTextColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxCustomTextColourOnePreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxLinkVisitedColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxDisabledTextColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxMiddleColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxMenuTextColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxCustomColourFivePreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxLinkHoverColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxNormalTextColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxDarkColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.circularPictureBox6);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxCustomTextColourFourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxCustomColourThreePreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxDisabledColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxBorderColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxCustomTextColourFivePreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxCustomColourFourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxLinkNormalColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxAlternativeNormalTextColourPreview);
+            this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxBaseColourPreview);
+            this.kgbCircularColourPreviewPane.Size = new System.Drawing.Size(526, 467);
+            this.kgbCircularColourPreviewPane.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kgbCircularColourPreviewPane.TabIndex = 10;
+            this.kgbCircularColourPreviewPane.Values.Heading = "Colour Preview";
             // 
-            // kcmbBasePaletteMode
+            // circularPictureBox26
             // 
-            this.kcmbBasePaletteMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.kcmbBasePaletteMode.DropDownWidth = 173;
-            this.kcmbBasePaletteMode.Location = new System.Drawing.Point(178, 47);
-            this.kcmbBasePaletteMode.Name = "kcmbBasePaletteMode";
-            this.kcmbBasePaletteMode.Size = new System.Drawing.Size(173, 27);
-            this.kcmbBasePaletteMode.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcmbBasePaletteMode.TabIndex = 111;
+            this.circularPictureBox26.BackColor = System.Drawing.Color.White;
+            this.circularPictureBox26.Location = new System.Drawing.Point(353, 360);
+            this.circularPictureBox26.Name = "circularPictureBox26";
+            this.circularPictureBox26.Size = new System.Drawing.Size(64, 64);
+            this.circularPictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.circularPictureBox26.TabIndex = 29;
+            this.circularPictureBox26.TabStop = false;
+            this.circularPictureBox26.Visible = false;
             // 
-            // kryptonLabel32
+            // cbxCustomTextColourThreePreview
             // 
-            this.kryptonLabel32.Location = new System.Drawing.Point(12, 48);
-            this.kryptonLabel32.Name = "kryptonLabel32";
-            this.kryptonLabel32.Size = new System.Drawing.Size(160, 26);
-            this.kryptonLabel32.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel32.TabIndex = 110;
-            this.kryptonLabel32.Values.Text = "Base Palette Mode:";
+            this.cbxCustomTextColourThreePreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomTextColourThreePreview.Location = new System.Drawing.Point(353, 274);
+            this.cbxCustomTextColourThreePreview.Name = "cbxCustomTextColourThreePreview";
+            this.cbxCustomTextColourThreePreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomTextColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomTextColourThreePreview.TabIndex = 28;
+            this.cbxCustomTextColourThreePreview.TabStop = false;
             // 
-            // kbtnExportPalette
+            // cbxCustomColourTwoPreview
             // 
-            this.kbtnExportPalette.AutoSize = true;
-            this.kbtnExportPalette.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnExportPalette.Location = new System.Drawing.Point(259, 586);
-            this.kbtnExportPalette.Name = "kbtnExportPalette";
-            this.kbtnExportPalette.Size = new System.Drawing.Size(173, 30);
-            this.kbtnExportPalette.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnExportPalette.TabIndex = 25;
-            this.kbtnExportPalette.Values.Text = "Export &Palette Colours";
-            this.kbtnExportPalette.Click += new System.EventHandler(this.kbtnExportPalette_Click);
+            this.cbxCustomColourTwoPreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomColourTwoPreview.Location = new System.Drawing.Point(353, 188);
+            this.cbxCustomColourTwoPreview.Name = "cbxCustomColourTwoPreview";
+            this.cbxCustomColourTwoPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomColourTwoPreview.TabIndex = 27;
+            this.cbxCustomColourTwoPreview.TabStop = false;
             // 
-            // kbtnGetColours
+            // cbxPressedTextColourPreview
             // 
-            this.kbtnGetColours.AutoSize = true;
-            this.kbtnGetColours.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGetColours.Location = new System.Drawing.Point(156, 586);
-            this.kbtnGetColours.Name = "kbtnGetColours";
-            this.kbtnGetColours.Size = new System.Drawing.Size(97, 30);
-            this.kbtnGetColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGetColours.TabIndex = 23;
-            this.kbtnGetColours.Values.Text = "&Get Colours";
-            this.kbtnGetColours.Click += new System.EventHandler(this.kbtnGetColours_Click);
+            this.cbxPressedTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxPressedTextColourPreview.Location = new System.Drawing.Point(353, 102);
+            this.cbxPressedTextColourPreview.Name = "cbxPressedTextColourPreview";
+            this.cbxPressedTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxPressedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxPressedTextColourPreview.TabIndex = 26;
+            this.cbxPressedTextColourPreview.TabStop = false;
             // 
-            // kbtnGenerate
+            // cbxLightestColourPreview
             // 
-            this.kbtnGenerate.AutoSize = true;
-            this.kbtnGenerate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGenerate.Location = new System.Drawing.Point(12, 586);
-            this.kbtnGenerate.Name = "kbtnGenerate";
-            this.kbtnGenerate.Size = new System.Drawing.Size(138, 30);
-            this.kbtnGenerate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGenerate.TabIndex = 22;
-            this.kbtnGenerate.Values.Text = "Gener&ate Colours";
-            this.kbtnGenerate.Click += new System.EventHandler(this.kbtnGenerate_Click);
+            this.cbxLightestColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxLightestColourPreview.Location = new System.Drawing.Point(353, 16);
+            this.cbxLightestColourPreview.Name = "cbxLightestColourPreview";
+            this.cbxLightestColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxLightestColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxLightestColourPreview.TabIndex = 25;
+            this.cbxLightestColourPreview.TabStop = false;
+            // 
+            // circularPictureBox21
+            // 
+            this.circularPictureBox21.BackColor = System.Drawing.Color.White;
+            this.circularPictureBox21.Location = new System.Drawing.Point(270, 360);
+            this.circularPictureBox21.Name = "circularPictureBox21";
+            this.circularPictureBox21.Size = new System.Drawing.Size(64, 64);
+            this.circularPictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.circularPictureBox21.TabIndex = 24;
+            this.circularPictureBox21.TabStop = false;
+            this.circularPictureBox21.Visible = false;
+            // 
+            // cbxCustomTextColourTwoPreview
+            // 
+            this.cbxCustomTextColourTwoPreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(270, 274);
+            this.cbxCustomTextColourTwoPreview.Name = "cbxCustomTextColourTwoPreview";
+            this.cbxCustomTextColourTwoPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomTextColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomTextColourTwoPreview.TabIndex = 23;
+            this.cbxCustomTextColourTwoPreview.TabStop = false;
+            // 
+            // cbxCustomColourOnePreview
+            // 
+            this.cbxCustomColourOnePreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomColourOnePreview.Location = new System.Drawing.Point(270, 188);
+            this.cbxCustomColourOnePreview.Name = "cbxCustomColourOnePreview";
+            this.cbxCustomColourOnePreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomColourOnePreview.TabIndex = 22;
+            this.cbxCustomColourOnePreview.TabStop = false;
+            // 
+            // cbxFocusedTextColourPreview
+            // 
+            this.cbxFocusedTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxFocusedTextColourPreview.Location = new System.Drawing.Point(270, 102);
+            this.cbxFocusedTextColourPreview.Name = "cbxFocusedTextColourPreview";
+            this.cbxFocusedTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxFocusedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxFocusedTextColourPreview.TabIndex = 21;
+            this.cbxFocusedTextColourPreview.TabStop = false;
+            // 
+            // cbxLightColourPreview
+            // 
+            this.cbxLightColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxLightColourPreview.Location = new System.Drawing.Point(270, 16);
+            this.cbxLightColourPreview.Name = "cbxLightColourPreview";
+            this.cbxLightColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxLightColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxLightColourPreview.TabIndex = 20;
+            this.cbxLightColourPreview.TabStop = false;
+            // 
+            // cbxStatusTextColourPreview
+            // 
+            this.cbxStatusTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxStatusTextColourPreview.Location = new System.Drawing.Point(187, 360);
+            this.cbxStatusTextColourPreview.Name = "cbxStatusTextColourPreview";
+            this.cbxStatusTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxStatusTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxStatusTextColourPreview.TabIndex = 19;
+            this.cbxStatusTextColourPreview.TabStop = false;
+            // 
+            // cbxCustomTextColourOnePreview
+            // 
+            this.cbxCustomTextColourOnePreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomTextColourOnePreview.Location = new System.Drawing.Point(187, 274);
+            this.cbxCustomTextColourOnePreview.Name = "cbxCustomTextColourOnePreview";
+            this.cbxCustomTextColourOnePreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomTextColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomTextColourOnePreview.TabIndex = 18;
+            this.cbxCustomTextColourOnePreview.TabStop = false;
+            // 
+            // cbxLinkVisitedColourPreview
+            // 
+            this.cbxLinkVisitedColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxLinkVisitedColourPreview.Location = new System.Drawing.Point(187, 188);
+            this.cbxLinkVisitedColourPreview.Name = "cbxLinkVisitedColourPreview";
+            this.cbxLinkVisitedColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxLinkVisitedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxLinkVisitedColourPreview.TabIndex = 17;
+            this.cbxLinkVisitedColourPreview.TabStop = false;
+            // 
+            // cbxDisabledTextColourPreview
+            // 
+            this.cbxDisabledTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxDisabledTextColourPreview.Location = new System.Drawing.Point(187, 102);
+            this.cbxDisabledTextColourPreview.Name = "cbxDisabledTextColourPreview";
+            this.cbxDisabledTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxDisabledTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxDisabledTextColourPreview.TabIndex = 16;
+            this.cbxDisabledTextColourPreview.TabStop = false;
+            // 
+            // cbxMiddleColourPreview
+            // 
+            this.cbxMiddleColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxMiddleColourPreview.Location = new System.Drawing.Point(187, 16);
+            this.cbxMiddleColourPreview.Name = "cbxMiddleColourPreview";
+            this.cbxMiddleColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxMiddleColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxMiddleColourPreview.TabIndex = 15;
+            this.cbxMiddleColourPreview.TabStop = false;
+            // 
+            // cbxMenuTextColourPreview
+            // 
+            this.cbxMenuTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxMenuTextColourPreview.Location = new System.Drawing.Point(104, 360);
+            this.cbxMenuTextColourPreview.Name = "cbxMenuTextColourPreview";
+            this.cbxMenuTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxMenuTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxMenuTextColourPreview.TabIndex = 14;
+            this.cbxMenuTextColourPreview.TabStop = false;
+            // 
+            // cbxCustomColourFivePreview
+            // 
+            this.cbxCustomColourFivePreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomColourFivePreview.Location = new System.Drawing.Point(104, 274);
+            this.cbxCustomColourFivePreview.Name = "cbxCustomColourFivePreview";
+            this.cbxCustomColourFivePreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomColourFivePreview.TabIndex = 13;
+            this.cbxCustomColourFivePreview.TabStop = false;
+            // 
+            // cbxLinkHoverColourPreview
+            // 
+            this.cbxLinkHoverColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxLinkHoverColourPreview.Location = new System.Drawing.Point(104, 188);
+            this.cbxLinkHoverColourPreview.Name = "cbxLinkHoverColourPreview";
+            this.cbxLinkHoverColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxLinkHoverColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxLinkHoverColourPreview.TabIndex = 12;
+            this.cbxLinkHoverColourPreview.TabStop = false;
+            // 
+            // cbxNormalTextColourPreview
+            // 
+            this.cbxNormalTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxNormalTextColourPreview.Location = new System.Drawing.Point(104, 102);
+            this.cbxNormalTextColourPreview.Name = "cbxNormalTextColourPreview";
+            this.cbxNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxNormalTextColourPreview.TabIndex = 11;
+            this.cbxNormalTextColourPreview.TabStop = false;
+            // 
+            // cbxDarkColourPreview
+            // 
+            this.cbxDarkColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxDarkColourPreview.Location = new System.Drawing.Point(104, 16);
+            this.cbxDarkColourPreview.Name = "cbxDarkColourPreview";
+            this.cbxDarkColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxDarkColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxDarkColourPreview.TabIndex = 10;
+            this.cbxDarkColourPreview.TabStop = false;
+            // 
+            // circularPictureBox6
+            // 
+            this.circularPictureBox6.BackColor = System.Drawing.Color.White;
+            this.circularPictureBox6.Location = new System.Drawing.Point(436, 360);
+            this.circularPictureBox6.Name = "circularPictureBox6";
+            this.circularPictureBox6.Size = new System.Drawing.Size(64, 64);
+            this.circularPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.circularPictureBox6.TabIndex = 9;
+            this.circularPictureBox6.TabStop = false;
+            this.circularPictureBox6.Visible = false;
+            // 
+            // cbxCustomTextColourFourPreview
+            // 
+            this.cbxCustomTextColourFourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomTextColourFourPreview.Location = new System.Drawing.Point(436, 274);
+            this.cbxCustomTextColourFourPreview.Name = "cbxCustomTextColourFourPreview";
+            this.cbxCustomTextColourFourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomTextColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomTextColourFourPreview.TabIndex = 8;
+            this.cbxCustomTextColourFourPreview.TabStop = false;
+            // 
+            // cbxCustomColourThreePreview
+            // 
+            this.cbxCustomColourThreePreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomColourThreePreview.Location = new System.Drawing.Point(436, 188);
+            this.cbxCustomColourThreePreview.Name = "cbxCustomColourThreePreview";
+            this.cbxCustomColourThreePreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomColourThreePreview.TabIndex = 7;
+            this.cbxCustomColourThreePreview.TabStop = false;
+            // 
+            // cbxDisabledColourPreview
+            // 
+            this.cbxDisabledColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxDisabledColourPreview.Location = new System.Drawing.Point(436, 102);
+            this.cbxDisabledColourPreview.Name = "cbxDisabledColourPreview";
+            this.cbxDisabledColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxDisabledColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxDisabledColourPreview.TabIndex = 6;
+            this.cbxDisabledColourPreview.TabStop = false;
+            // 
+            // cbxBorderColourPreview
+            // 
+            this.cbxBorderColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxBorderColourPreview.Location = new System.Drawing.Point(436, 16);
+            this.cbxBorderColourPreview.Name = "cbxBorderColourPreview";
+            this.cbxBorderColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxBorderColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxBorderColourPreview.TabIndex = 5;
+            this.cbxBorderColourPreview.TabStop = false;
+            // 
+            // cbxCustomTextColourFivePreview
+            // 
+            this.cbxCustomTextColourFivePreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomTextColourFivePreview.Location = new System.Drawing.Point(21, 360);
+            this.cbxCustomTextColourFivePreview.Name = "cbxCustomTextColourFivePreview";
+            this.cbxCustomTextColourFivePreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomTextColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomTextColourFivePreview.TabIndex = 4;
+            this.cbxCustomTextColourFivePreview.TabStop = false;
+            // 
+            // cbxCustomColourFourPreview
+            // 
+            this.cbxCustomColourFourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomColourFourPreview.Location = new System.Drawing.Point(21, 274);
+            this.cbxCustomColourFourPreview.Name = "cbxCustomColourFourPreview";
+            this.cbxCustomColourFourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomColourFourPreview.TabIndex = 3;
+            this.cbxCustomColourFourPreview.TabStop = false;
+            // 
+            // cbxLinkNormalColourPreview
+            // 
+            this.cbxLinkNormalColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxLinkNormalColourPreview.Location = new System.Drawing.Point(21, 188);
+            this.cbxLinkNormalColourPreview.Name = "cbxLinkNormalColourPreview";
+            this.cbxLinkNormalColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxLinkNormalColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxLinkNormalColourPreview.TabIndex = 2;
+            this.cbxLinkNormalColourPreview.TabStop = false;
+            // 
+            // cbxAlternativeNormalTextColourPreview
+            // 
+            this.cbxAlternativeNormalTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxAlternativeNormalTextColourPreview.Location = new System.Drawing.Point(21, 102);
+            this.cbxAlternativeNormalTextColourPreview.Name = "cbxAlternativeNormalTextColourPreview";
+            this.cbxAlternativeNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxAlternativeNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxAlternativeNormalTextColourPreview.TabIndex = 1;
+            this.cbxAlternativeNormalTextColourPreview.TabStop = false;
+            // 
+            // cbxBaseColourPreview
+            // 
+            this.cbxBaseColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxBaseColourPreview.Location = new System.Drawing.Point(21, 16);
+            this.cbxBaseColourPreview.Name = "cbxBaseColourPreview";
+            this.cbxBaseColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxBaseColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxBaseColourPreview.TabIndex = 0;
+            this.cbxBaseColourPreview.TabStop = false;
+            this.cbxBaseColourPreview.MouseEnter += new System.EventHandler(this.cbxBaseColourPreview_MouseEnter);
+            this.cbxBaseColourPreview.MouseHover += new System.EventHandler(this.cbxBaseColourPreview_MouseHover);
             // 
             // kgbPreviewPane
             // 
@@ -698,6 +1034,96 @@
             this.pbxMiddleColour.MouseEnter += new System.EventHandler(this.pbxMiddleColour_MouseEnter);
             this.pbxMiddleColour.MouseLeave += new System.EventHandler(this.pbxMiddleColour_MouseLeave);
             // 
+            // kbtnGenerateContrastColours
+            // 
+            this.kbtnGenerateContrastColours.AutoSize = true;
+            this.kbtnGenerateContrastColours.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnGenerateContrastColours.Location = new System.Drawing.Point(574, 586);
+            this.kbtnGenerateContrastColours.Name = "kbtnGenerateContrastColours";
+            this.kbtnGenerateContrastColours.Size = new System.Drawing.Size(204, 30);
+            this.kbtnGenerateContrastColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateContrastColours.TabIndex = 114;
+            this.kbtnGenerateContrastColours.Values.Text = "Generate &Contrast Colours";
+            this.kbtnGenerateContrastColours.Click += new System.EventHandler(this.kbtnGenerateContrastColours_Click);
+            // 
+            // kbtnViewPaletteFile
+            // 
+            this.kbtnViewPaletteFile.AutoSize = true;
+            this.kbtnViewPaletteFile.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnViewPaletteFile.Location = new System.Drawing.Point(438, 586);
+            this.kbtnViewPaletteFile.Name = "kbtnViewPaletteFile";
+            this.kbtnViewPaletteFile.Size = new System.Drawing.Size(130, 30);
+            this.kbtnViewPaletteFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnViewPaletteFile.TabIndex = 113;
+            this.kbtnViewPaletteFile.Values.Text = "View Palette &File";
+            this.kbtnViewPaletteFile.Click += new System.EventHandler(this.kbtnViewPaletteFile_Click);
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(562, 48);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(150, 26);
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.TabIndex = 112;
+            this.kryptonLabel1.Values.Text = "Palette Properties";
+            // 
+            // kcmbBasePaletteMode
+            // 
+            this.kcmbBasePaletteMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.kcmbBasePaletteMode.DropDownWidth = 173;
+            this.kcmbBasePaletteMode.Location = new System.Drawing.Point(178, 47);
+            this.kcmbBasePaletteMode.Name = "kcmbBasePaletteMode";
+            this.kcmbBasePaletteMode.Size = new System.Drawing.Size(173, 27);
+            this.kcmbBasePaletteMode.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbBasePaletteMode.TabIndex = 111;
+            this.kcmbBasePaletteMode.SelectedIndexChanged += new System.EventHandler(this.kcmbBasePaletteMode_SelectedIndexChanged);
+            // 
+            // kryptonLabel32
+            // 
+            this.kryptonLabel32.Location = new System.Drawing.Point(12, 48);
+            this.kryptonLabel32.Name = "kryptonLabel32";
+            this.kryptonLabel32.Size = new System.Drawing.Size(160, 26);
+            this.kryptonLabel32.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel32.TabIndex = 110;
+            this.kryptonLabel32.Values.Text = "Base Palette Mode:";
+            // 
+            // kbtnExportPalette
+            // 
+            this.kbtnExportPalette.AutoSize = true;
+            this.kbtnExportPalette.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnExportPalette.Enabled = false;
+            this.kbtnExportPalette.Location = new System.Drawing.Point(259, 586);
+            this.kbtnExportPalette.Name = "kbtnExportPalette";
+            this.kbtnExportPalette.Size = new System.Drawing.Size(173, 30);
+            this.kbtnExportPalette.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnExportPalette.TabIndex = 25;
+            this.kbtnExportPalette.Values.Text = "Export &Palette Colours";
+            this.kbtnExportPalette.Click += new System.EventHandler(this.kbtnExportPalette_Click);
+            // 
+            // kbtnGetColours
+            // 
+            this.kbtnGetColours.AutoSize = true;
+            this.kbtnGetColours.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnGetColours.Location = new System.Drawing.Point(156, 586);
+            this.kbtnGetColours.Name = "kbtnGetColours";
+            this.kbtnGetColours.Size = new System.Drawing.Size(97, 30);
+            this.kbtnGetColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGetColours.TabIndex = 23;
+            this.kbtnGetColours.Values.Text = "&Get Colours";
+            this.kbtnGetColours.Click += new System.EventHandler(this.kbtnGetColours_Click);
+            // 
+            // kbtnGenerate
+            // 
+            this.kbtnGenerate.AutoSize = true;
+            this.kbtnGenerate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnGenerate.Location = new System.Drawing.Point(12, 586);
+            this.kbtnGenerate.Name = "kbtnGenerate";
+            this.kbtnGenerate.Size = new System.Drawing.Size(138, 30);
+            this.kbtnGenerate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerate.TabIndex = 22;
+            this.kbtnGenerate.Values.Text = "Gener&ate Colours";
+            this.kbtnGenerate.Click += new System.EventHandler(this.kbtnGenerate_Click);
+            // 
             // labelGridNormal
             // 
             this.labelGridNormal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -797,17 +1223,23 @@
             this.panel1.Size = new System.Drawing.Size(998, 2);
             this.panel1.TabIndex = 2;
             // 
-            // kbtnGenerateContrastColours
+            // tmrUpdateUI
             // 
-            this.kbtnGenerateContrastColours.AutoSize = true;
-            this.kbtnGenerateContrastColours.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGenerateContrastColours.Location = new System.Drawing.Point(574, 586);
-            this.kbtnGenerateContrastColours.Name = "kbtnGenerateContrastColours";
-            this.kbtnGenerateContrastColours.Size = new System.Drawing.Size(204, 30);
-            this.kbtnGenerateContrastColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGenerateContrastColours.TabIndex = 114;
-            this.kbtnGenerateContrastColours.Values.Text = "Generate &Contrast Colours";
-            this.kbtnGenerateContrastColours.Click += new System.EventHandler(this.kbtnGenerateContrastColours_Click);
+            this.tmrUpdateUI.Enabled = true;
+            this.tmrUpdateUI.Interval = 250;
+            this.tmrUpdateUI.Tick += new System.EventHandler(this.tmrUpdateUI_Tick);
+            // 
+            // kbtnGetColourInformation
+            // 
+            this.kbtnGetColourInformation.AutoSize = true;
+            this.kbtnGetColourInformation.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnGetColourInformation.Location = new System.Drawing.Point(784, 586);
+            this.kbtnGetColourInformation.Name = "kbtnGetColourInformation";
+            this.kbtnGetColourInformation.Size = new System.Drawing.Size(180, 30);
+            this.kbtnGetColourInformation.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGetColourInformation.TabIndex = 115;
+            this.kbtnGetColourInformation.Values.Text = "Get Colour &Information";
+            this.kbtnGetColourInformation.Click += new System.EventHandler(this.kbtnGetColourInformation_Click);
             // 
             // MainWindow
             // 
@@ -834,7 +1266,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kcmbBasePaletteMode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kgbCircularColourPreviewPane.Panel)).EndInit();
+            this.kgbCircularColourPreviewPane.Panel.ResumeLayout(false);
+            this.kgbCircularColourPreviewPane.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgbCircularColourPreviewPane)).EndInit();
+            this.kgbCircularColourPreviewPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomTextColourThreePreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomColourTwoPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxPressedTextColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLightestColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomTextColourTwoPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomColourOnePreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxFocusedTextColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLightColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxStatusTextColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomTextColourOnePreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLinkVisitedColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDisabledTextColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxMiddleColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxMenuTextColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomColourFivePreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLinkHoverColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxNormalTextColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDarkColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomTextColourFourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomColourThreePreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDisabledColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxBorderColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomTextColourFivePreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCustomColourFourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLinkNormalColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxAlternativeNormalTextColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxBaseColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kgbPreviewPane.Panel)).EndInit();
             this.kgbPreviewPane.Panel.ResumeLayout(false);
             this.kgbPreviewPane.Panel.PerformLayout();
@@ -870,6 +1336,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxDarkColour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLightColour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMiddleColour)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kcmbBasePaletteMode)).EndInit();
             this.ms.ResumeLayout(false);
             this.ms.PerformLayout();
             this.ResumeLayout(false);
@@ -938,5 +1405,38 @@
         private System.Windows.Forms.PictureBox pbxCustomColourOnePreview;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnViewPaletteFile;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGenerateContrastColours;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kgbCircularColourPreviewPane;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox circularPictureBox26;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxCustomTextColourThreePreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxCustomColourTwoPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxPressedTextColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxLightestColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox circularPictureBox21;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxCustomTextColourTwoPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxCustomColourOnePreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxFocusedTextColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxLightColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxStatusTextColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxCustomTextColourOnePreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxLinkVisitedColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxDisabledTextColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxMiddleColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxMenuTextColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxCustomColourFivePreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxLinkHoverColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxNormalTextColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxDarkColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox circularPictureBox6;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxCustomTextColourFourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxCustomColourThreePreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxDisabledColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxBorderColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxCustomTextColourFivePreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxCustomColourFourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxLinkNormalColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxAlternativeNormalTextColourPreview;
+        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxBaseColourPreview;
+        private System.Windows.Forms.Timer tmrUpdateUI;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGetColourInformation;
     }
 }

@@ -95,6 +95,8 @@
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ss = new System.Windows.Forms.StatusStrip();
+            this.tsslStatus = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cpbLightestColourPreview)).BeginInit();
@@ -115,6 +117,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kcsHueValues)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
+            this.ss.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -175,7 +178,7 @@
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1028, 686);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1028, 654);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // cpbLightestColourPreview
@@ -357,7 +360,7 @@
             "Medium Colour",
             "Light Colour",
             "Lightest Colour"});
-            this.kcmbSelectedColour.Location = new System.Drawing.Point(751, 382);
+            this.kcmbSelectedColour.Location = new System.Drawing.Point(799, 394);
             this.kcmbSelectedColour.Name = "kcmbSelectedColour";
             this.kcmbSelectedColour.Size = new System.Drawing.Size(173, 27);
             this.kcmbSelectedColour.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -366,7 +369,7 @@
             // 
             // kryptonLabel11
             // 
-            this.kryptonLabel11.Location = new System.Drawing.Point(616, 382);
+            this.kryptonLabel11.Location = new System.Drawing.Point(616, 396);
             this.kryptonLabel11.Name = "kryptonLabel11";
             this.kryptonLabel11.Size = new System.Drawing.Size(125, 26);
             this.kryptonLabel11.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -377,12 +380,13 @@
             // 
             this.kbtnFileExport.AutoSize = true;
             this.kbtnFileExport.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnFileExport.Location = new System.Drawing.Point(14, 578);
+            this.kbtnFileExport.Location = new System.Drawing.Point(14, 582);
             this.kbtnFileExport.Name = "kbtnFileExport";
             this.kbtnFileExport.Size = new System.Drawing.Size(88, 30);
             this.kbtnFileExport.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnFileExport.TabIndex = 58;
             this.kbtnFileExport.Values.Text = "Export &File";
+            this.kbtnFileExport.Visible = false;
             this.kbtnFileExport.Click += new System.EventHandler(this.kbtnFileExport_Click);
             // 
             // kbtnBrowse
@@ -395,6 +399,7 @@
             this.kbtnBrowse.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnBrowse.TabIndex = 57;
             this.kbtnBrowse.Values.Text = "...";
+            this.kbtnBrowse.Visible = false;
             this.kbtnBrowse.Click += new System.EventHandler(this.kbtnBrowse_Click);
             // 
             // kmtxtFilePath
@@ -404,6 +409,7 @@
             this.kmtxtFilePath.Size = new System.Drawing.Size(366, 29);
             this.kmtxtFilePath.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kmtxtFilePath.TabIndex = 56;
+            this.kmtxtFilePath.Visible = false;
             // 
             // kryptonLabel9
             // 
@@ -413,6 +419,7 @@
             this.kryptonLabel9.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel9.TabIndex = 55;
             this.kryptonLabel9.Values.Text = "Export Colours to:";
+            this.kryptonLabel9.Visible = false;
             // 
             // knumAlphaChannelValue
             // 
@@ -829,14 +836,15 @@
             // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.ss);
             this.kryptonPanel2.Controls.Add(this.kbtnOk);
             this.kryptonPanel2.Controls.Add(this.kbtnGenerate);
             this.kryptonPanel2.Controls.Add(this.kbtnExport);
             this.kryptonPanel2.Controls.Add(this.kchkAutomateColourSwatchValues);
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel2.Location = new System.Drawing.Point(0, 637);
+            this.kryptonPanel2.Location = new System.Drawing.Point(0, 585);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(1028, 49);
+            this.kryptonPanel2.Size = new System.Drawing.Size(1028, 69);
             this.kryptonPanel2.TabIndex = 1;
             // 
             // kbtnOk
@@ -854,17 +862,35 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 635);
+            this.panel1.Location = new System.Drawing.Point(0, 583);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1028, 2);
             this.panel1.TabIndex = 2;
+            // 
+            // ss
+            // 
+            this.ss.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ss.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsslStatus});
+            this.ss.Location = new System.Drawing.Point(0, 47);
+            this.ss.Name = "ss";
+            this.ss.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
+            this.ss.Size = new System.Drawing.Size(1028, 22);
+            this.ss.TabIndex = 60;
+            this.ss.Text = "statusStrip1";
+            // 
+            // tsslStatus
+            // 
+            this.tsslStatus.Name = "tsslStatus";
+            this.tsslStatus.Size = new System.Drawing.Size(39, 17);
+            this.tsslStatus.Text = "Ready";
             // 
             // PaletteColourCreator
             // 
             this.AcceptButton = this.kbtnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 686);
+            this.ClientSize = new System.Drawing.Size(1028, 654);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanel2);
             this.Controls.Add(this.kryptonPanel1);
@@ -899,6 +925,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
+            this.ss.ResumeLayout(false);
+            this.ss.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -970,5 +998,7 @@
         private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cpbMiddleColourPreview;
         private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cpbLightColourPreview;
         private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cpbBaseColourPreview;
+        private System.Windows.Forms.StatusStrip ss;
+        private System.Windows.Forms.ToolStripStatusLabel tsslStatus;
     }
 }
