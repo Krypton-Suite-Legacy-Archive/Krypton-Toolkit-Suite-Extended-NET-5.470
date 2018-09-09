@@ -97,7 +97,9 @@
     <Compile Include="Classes\Other\ColourUtility.cs" />
     <Compile Include="Classes\Other\ConversionMethods.cs" />
     <Compile Include="Classes\Other\FileCreator.cs" />
+    <Compile Include="Classes\Other\GlobalMethods.cs" />
     <Compile Include="Classes\Other\InformationControlManager.cs" />
+    <Compile Include="Classes\Other\PaletteImportManager.cs" />
     <Compile Include="Classes\Other\RandomNumberGenerator.cs" />
     <Compile Include="Classes\Other\SettingsManager.cs" />
     <Compile Include="Classes\Other\ToolStripNonClientRenderer.cs" />
@@ -147,6 +149,7 @@
     <Compile Include="Settings\Classes\ColourSettingsManager.cs" />
     <Compile Include="Settings\Classes\CombineColourSettings.cs" />
     <Compile Include="Settings\Classes\GlobalBooleanSettingsManager.cs" />
+    <Compile Include="Settings\Classes\GlobalStringSettingsManager.cs" />
     <Compile Include="Settings\ColourIntegerSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -166,6 +169,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>GlobalBooleanSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\GlobalStringSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>GlobalStringSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="STRUCTS\HSLColour.cs" />
     <Compile Include="User Controls\Colours\ColourEditor.cs">
@@ -259,6 +267,10 @@
     <None Include="Settings\GlobalBooleanSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>GlobalBooleanSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\GlobalStringSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>GlobalStringSettings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

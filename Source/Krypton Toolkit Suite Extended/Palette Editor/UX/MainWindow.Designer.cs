@@ -32,11 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.kMan = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kchkInvertColours = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kchkUpdateColours = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.ss = new System.Windows.Forms.StatusStrip();
             this.tslStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.kbtnClose = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblColourOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnImportColourScheme = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnGetColourInformation = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kgbCircularColourPreviewPane = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.circularPictureBox26 = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.cbxCustomTextColourThreePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
@@ -118,11 +122,37 @@
             this.savePaletteDefinitionAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generateColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
+            this.getColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportPaletteColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
+            this.viewPaletteFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripSeparator();
+            this.generateContrastColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
+            this.getColourInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripSeparator();
+            this.importColourSchemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripSeparator();
+            this.invertColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripSeparator();
+            this.updateColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripSeparator();
+            this.resetColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripSeparator();
+            this.viewTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.standardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripSeparator();
+            this.circularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ttInformation = new System.Windows.Forms.ToolTip(this.components);
             this.palette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.tmrUpdateUI = new System.Windows.Forms.Timer(this.components);
-            this.kbtnGetColourInformation = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.ctxUtiliseAsBaseColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.utiliseAsBaseColourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.ss.SuspendLayout();
@@ -198,18 +228,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxMiddleColour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbBasePaletteMode)).BeginInit();
             this.ms.SuspendLayout();
+            this.ctxUtiliseAsBaseColour.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kchkInvertColours);
+            this.kryptonPanel1.Controls.Add(this.kchkUpdateColours);
             this.kryptonPanel1.Controls.Add(this.ss);
             this.kryptonPanel1.Controls.Add(this.kbtnClose);
             this.kryptonPanel1.Controls.Add(this.lblColourOutput);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 628);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(998, 75);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1158, 75);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kchkInvertColours
+            // 
+            this.kchkInvertColours.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.kchkInvertColours.Enabled = false;
+            this.kchkInvertColours.Location = new System.Drawing.Point(823, 13);
+            this.kchkInvertColours.Name = "kchkInvertColours";
+            this.kchkInvertColours.Size = new System.Drawing.Size(126, 26);
+            this.kchkInvertColours.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kchkInvertColours.TabIndex = 64;
+            this.kchkInvertColours.Values.Text = "&Invert Colours";
+            this.kchkInvertColours.CheckedChanged += new System.EventHandler(this.kchkInvertColours_CheckedChanged);
+            // 
+            // kchkUpdateColours
+            // 
+            this.kchkUpdateColours.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.kchkUpdateColours.Enabled = false;
+            this.kchkUpdateColours.Location = new System.Drawing.Point(955, 13);
+            this.kchkUpdateColours.Name = "kchkUpdateColours";
+            this.kchkUpdateColours.Size = new System.Drawing.Size(138, 26);
+            this.kchkUpdateColours.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kchkUpdateColours.TabIndex = 63;
+            this.kchkUpdateColours.Values.Text = "&Update Colours";
+            this.kchkUpdateColours.CheckedChanged += new System.EventHandler(this.kchkUpdateColours_CheckedChanged);
             // 
             // ss
             // 
@@ -219,23 +276,24 @@
             this.ss.Location = new System.Drawing.Point(0, 53);
             this.ss.Name = "ss";
             this.ss.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.ss.Size = new System.Drawing.Size(998, 22);
+            this.ss.Size = new System.Drawing.Size(1158, 22);
             this.ss.TabIndex = 45;
             this.ss.Text = "statusStrip1";
             // 
             // tslStatus
             // 
             this.tslStatus.Name = "tslStatus";
-            this.tslStatus.Size = new System.Drawing.Size(983, 17);
+            this.tslStatus.Size = new System.Drawing.Size(1143, 17);
             this.tslStatus.Spring = true;
             this.tslStatus.Text = "Ready";
             this.tslStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // kbtnClose
             // 
+            this.kbtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.kbtnClose.AutoSize = true;
             this.kbtnClose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnClose.Location = new System.Drawing.Point(935, 9);
+            this.kbtnClose.Location = new System.Drawing.Point(1099, 9);
             this.kbtnClose.Name = "kbtnClose";
             this.kbtnClose.Size = new System.Drawing.Size(51, 30);
             this.kbtnClose.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -254,6 +312,7 @@
             // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.kbtnImportColourScheme);
             this.kryptonPanel2.Controls.Add(this.kbtnGetColourInformation);
             this.kryptonPanel2.Controls.Add(this.kgbCircularColourPreviewPane);
             this.kryptonPanel2.Controls.Add(this.kgbPreviewPane);
@@ -270,8 +329,33 @@
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(998, 628);
+            this.kryptonPanel2.Size = new System.Drawing.Size(1158, 628);
             this.kryptonPanel2.TabIndex = 1;
+            // 
+            // kbtnImportColourScheme
+            // 
+            this.kbtnImportColourScheme.AutoSize = true;
+            this.kbtnImportColourScheme.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnImportColourScheme.Location = new System.Drawing.Point(970, 586);
+            this.kbtnImportColourScheme.Name = "kbtnImportColourScheme";
+            this.kbtnImportColourScheme.Size = new System.Drawing.Size(176, 30);
+            this.kbtnImportColourScheme.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnImportColourScheme.TabIndex = 116;
+            this.ttInformation.SetToolTip(this.kbtnImportColourScheme, "Imports colours from a user created palette");
+            this.kbtnImportColourScheme.Values.Text = "Import Colour &Scheme";
+            this.kbtnImportColourScheme.Click += new System.EventHandler(this.kbtnImportColourScheme_Click);
+            // 
+            // kbtnGetColourInformation
+            // 
+            this.kbtnGetColourInformation.AutoSize = true;
+            this.kbtnGetColourInformation.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnGetColourInformation.Location = new System.Drawing.Point(784, 586);
+            this.kbtnGetColourInformation.Name = "kbtnGetColourInformation";
+            this.kbtnGetColourInformation.Size = new System.Drawing.Size(180, 30);
+            this.kbtnGetColourInformation.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGetColourInformation.TabIndex = 115;
+            this.kbtnGetColourInformation.Values.Text = "Get Colour &Information";
+            this.kbtnGetColourInformation.Click += new System.EventHandler(this.kbtnGetColourInformation_Click);
             // 
             // kgbCircularColourPreviewPane
             // 
@@ -310,7 +394,7 @@
             this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxLinkNormalColourPreview);
             this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxAlternativeNormalTextColourPreview);
             this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxBaseColourPreview);
-            this.kgbCircularColourPreviewPane.Size = new System.Drawing.Size(526, 467);
+            this.kgbCircularColourPreviewPane.Size = new System.Drawing.Size(708, 467);
             this.kgbCircularColourPreviewPane.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kgbCircularColourPreviewPane.TabIndex = 10;
             this.kgbCircularColourPreviewPane.Values.Heading = "Colour Preview";
@@ -318,7 +402,7 @@
             // circularPictureBox26
             // 
             this.circularPictureBox26.BackColor = System.Drawing.Color.White;
-            this.circularPictureBox26.Location = new System.Drawing.Point(353, 360);
+            this.circularPictureBox26.Location = new System.Drawing.Point(365, 282);
             this.circularPictureBox26.Name = "circularPictureBox26";
             this.circularPictureBox26.Size = new System.Drawing.Size(64, 64);
             this.circularPictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -329,7 +413,7 @@
             // cbxCustomTextColourThreePreview
             // 
             this.cbxCustomTextColourThreePreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomTextColourThreePreview.Location = new System.Drawing.Point(353, 274);
+            this.cbxCustomTextColourThreePreview.Location = new System.Drawing.Point(537, 187);
             this.cbxCustomTextColourThreePreview.Name = "cbxCustomTextColourThreePreview";
             this.cbxCustomTextColourThreePreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomTextColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -339,7 +423,7 @@
             // cbxCustomColourTwoPreview
             // 
             this.cbxCustomColourTwoPreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomColourTwoPreview.Location = new System.Drawing.Point(353, 188);
+            this.cbxCustomColourTwoPreview.Location = new System.Drawing.Point(21, 187);
             this.cbxCustomColourTwoPreview.Name = "cbxCustomColourTwoPreview";
             this.cbxCustomColourTwoPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -349,7 +433,7 @@
             // cbxPressedTextColourPreview
             // 
             this.cbxPressedTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxPressedTextColourPreview.Location = new System.Drawing.Point(353, 102);
+            this.cbxPressedTextColourPreview.Location = new System.Drawing.Point(193, 100);
             this.cbxPressedTextColourPreview.Name = "cbxPressedTextColourPreview";
             this.cbxPressedTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxPressedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -359,7 +443,7 @@
             // cbxLightestColourPreview
             // 
             this.cbxLightestColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxLightestColourPreview.Location = new System.Drawing.Point(353, 16);
+            this.cbxLightestColourPreview.Location = new System.Drawing.Point(365, 16);
             this.cbxLightestColourPreview.Name = "cbxLightestColourPreview";
             this.cbxLightestColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxLightestColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -369,7 +453,7 @@
             // circularPictureBox21
             // 
             this.circularPictureBox21.BackColor = System.Drawing.Color.White;
-            this.circularPictureBox21.Location = new System.Drawing.Point(270, 360);
+            this.circularPictureBox21.Location = new System.Drawing.Point(279, 282);
             this.circularPictureBox21.Name = "circularPictureBox21";
             this.circularPictureBox21.Size = new System.Drawing.Size(64, 64);
             this.circularPictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -380,7 +464,7 @@
             // cbxCustomTextColourTwoPreview
             // 
             this.cbxCustomTextColourTwoPreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(270, 274);
+            this.cbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(451, 187);
             this.cbxCustomTextColourTwoPreview.Name = "cbxCustomTextColourTwoPreview";
             this.cbxCustomTextColourTwoPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomTextColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -390,7 +474,7 @@
             // cbxCustomColourOnePreview
             // 
             this.cbxCustomColourOnePreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomColourOnePreview.Location = new System.Drawing.Point(270, 188);
+            this.cbxCustomColourOnePreview.Location = new System.Drawing.Point(623, 100);
             this.cbxCustomColourOnePreview.Name = "cbxCustomColourOnePreview";
             this.cbxCustomColourOnePreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -400,7 +484,7 @@
             // cbxFocusedTextColourPreview
             // 
             this.cbxFocusedTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxFocusedTextColourPreview.Location = new System.Drawing.Point(270, 102);
+            this.cbxFocusedTextColourPreview.Location = new System.Drawing.Point(107, 100);
             this.cbxFocusedTextColourPreview.Name = "cbxFocusedTextColourPreview";
             this.cbxFocusedTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxFocusedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -410,7 +494,7 @@
             // cbxLightColourPreview
             // 
             this.cbxLightColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxLightColourPreview.Location = new System.Drawing.Point(270, 16);
+            this.cbxLightColourPreview.Location = new System.Drawing.Point(279, 16);
             this.cbxLightColourPreview.Name = "cbxLightColourPreview";
             this.cbxLightColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxLightColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -420,7 +504,7 @@
             // cbxStatusTextColourPreview
             // 
             this.cbxStatusTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxStatusTextColourPreview.Location = new System.Drawing.Point(187, 360);
+            this.cbxStatusTextColourPreview.Location = new System.Drawing.Point(193, 282);
             this.cbxStatusTextColourPreview.Name = "cbxStatusTextColourPreview";
             this.cbxStatusTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxStatusTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -430,7 +514,7 @@
             // cbxCustomTextColourOnePreview
             // 
             this.cbxCustomTextColourOnePreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomTextColourOnePreview.Location = new System.Drawing.Point(187, 274);
+            this.cbxCustomTextColourOnePreview.Location = new System.Drawing.Point(365, 187);
             this.cbxCustomTextColourOnePreview.Name = "cbxCustomTextColourOnePreview";
             this.cbxCustomTextColourOnePreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomTextColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -440,7 +524,7 @@
             // cbxLinkVisitedColourPreview
             // 
             this.cbxLinkVisitedColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxLinkVisitedColourPreview.Location = new System.Drawing.Point(187, 188);
+            this.cbxLinkVisitedColourPreview.Location = new System.Drawing.Point(537, 102);
             this.cbxLinkVisitedColourPreview.Name = "cbxLinkVisitedColourPreview";
             this.cbxLinkVisitedColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxLinkVisitedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -450,7 +534,7 @@
             // cbxDisabledTextColourPreview
             // 
             this.cbxDisabledTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxDisabledTextColourPreview.Location = new System.Drawing.Point(187, 102);
+            this.cbxDisabledTextColourPreview.Location = new System.Drawing.Point(21, 102);
             this.cbxDisabledTextColourPreview.Name = "cbxDisabledTextColourPreview";
             this.cbxDisabledTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxDisabledTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -460,7 +544,7 @@
             // cbxMiddleColourPreview
             // 
             this.cbxMiddleColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxMiddleColourPreview.Location = new System.Drawing.Point(187, 16);
+            this.cbxMiddleColourPreview.Location = new System.Drawing.Point(193, 16);
             this.cbxMiddleColourPreview.Name = "cbxMiddleColourPreview";
             this.cbxMiddleColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxMiddleColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -470,7 +554,7 @@
             // cbxMenuTextColourPreview
             // 
             this.cbxMenuTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxMenuTextColourPreview.Location = new System.Drawing.Point(104, 360);
+            this.cbxMenuTextColourPreview.Location = new System.Drawing.Point(107, 282);
             this.cbxMenuTextColourPreview.Name = "cbxMenuTextColourPreview";
             this.cbxMenuTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxMenuTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -480,7 +564,7 @@
             // cbxCustomColourFivePreview
             // 
             this.cbxCustomColourFivePreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomColourFivePreview.Location = new System.Drawing.Point(104, 274);
+            this.cbxCustomColourFivePreview.Location = new System.Drawing.Point(279, 187);
             this.cbxCustomColourFivePreview.Name = "cbxCustomColourFivePreview";
             this.cbxCustomColourFivePreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -490,7 +574,7 @@
             // cbxLinkHoverColourPreview
             // 
             this.cbxLinkHoverColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxLinkHoverColourPreview.Location = new System.Drawing.Point(104, 188);
+            this.cbxLinkHoverColourPreview.Location = new System.Drawing.Point(451, 102);
             this.cbxLinkHoverColourPreview.Name = "cbxLinkHoverColourPreview";
             this.cbxLinkHoverColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxLinkHoverColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -500,7 +584,7 @@
             // cbxNormalTextColourPreview
             // 
             this.cbxNormalTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxNormalTextColourPreview.Location = new System.Drawing.Point(104, 102);
+            this.cbxNormalTextColourPreview.Location = new System.Drawing.Point(623, 15);
             this.cbxNormalTextColourPreview.Name = "cbxNormalTextColourPreview";
             this.cbxNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -510,7 +594,7 @@
             // cbxDarkColourPreview
             // 
             this.cbxDarkColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxDarkColourPreview.Location = new System.Drawing.Point(104, 16);
+            this.cbxDarkColourPreview.Location = new System.Drawing.Point(107, 16);
             this.cbxDarkColourPreview.Name = "cbxDarkColourPreview";
             this.cbxDarkColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxDarkColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -520,7 +604,7 @@
             // circularPictureBox6
             // 
             this.circularPictureBox6.BackColor = System.Drawing.Color.White;
-            this.circularPictureBox6.Location = new System.Drawing.Point(436, 360);
+            this.circularPictureBox6.Location = new System.Drawing.Point(451, 282);
             this.circularPictureBox6.Name = "circularPictureBox6";
             this.circularPictureBox6.Size = new System.Drawing.Size(64, 64);
             this.circularPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -531,7 +615,7 @@
             // cbxCustomTextColourFourPreview
             // 
             this.cbxCustomTextColourFourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomTextColourFourPreview.Location = new System.Drawing.Point(436, 274);
+            this.cbxCustomTextColourFourPreview.Location = new System.Drawing.Point(623, 187);
             this.cbxCustomTextColourFourPreview.Name = "cbxCustomTextColourFourPreview";
             this.cbxCustomTextColourFourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomTextColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -541,7 +625,7 @@
             // cbxCustomColourThreePreview
             // 
             this.cbxCustomColourThreePreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomColourThreePreview.Location = new System.Drawing.Point(436, 188);
+            this.cbxCustomColourThreePreview.Location = new System.Drawing.Point(107, 187);
             this.cbxCustomColourThreePreview.Name = "cbxCustomColourThreePreview";
             this.cbxCustomColourThreePreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -551,7 +635,7 @@
             // cbxDisabledColourPreview
             // 
             this.cbxDisabledColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxDisabledColourPreview.Location = new System.Drawing.Point(436, 102);
+            this.cbxDisabledColourPreview.Location = new System.Drawing.Point(279, 100);
             this.cbxDisabledColourPreview.Name = "cbxDisabledColourPreview";
             this.cbxDisabledColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxDisabledColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -561,7 +645,7 @@
             // cbxBorderColourPreview
             // 
             this.cbxBorderColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxBorderColourPreview.Location = new System.Drawing.Point(436, 16);
+            this.cbxBorderColourPreview.Location = new System.Drawing.Point(451, 16);
             this.cbxBorderColourPreview.Name = "cbxBorderColourPreview";
             this.cbxBorderColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxBorderColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -571,7 +655,7 @@
             // cbxCustomTextColourFivePreview
             // 
             this.cbxCustomTextColourFivePreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomTextColourFivePreview.Location = new System.Drawing.Point(21, 360);
+            this.cbxCustomTextColourFivePreview.Location = new System.Drawing.Point(21, 282);
             this.cbxCustomTextColourFivePreview.Name = "cbxCustomTextColourFivePreview";
             this.cbxCustomTextColourFivePreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomTextColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -581,7 +665,7 @@
             // cbxCustomColourFourPreview
             // 
             this.cbxCustomColourFourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomColourFourPreview.Location = new System.Drawing.Point(21, 274);
+            this.cbxCustomColourFourPreview.Location = new System.Drawing.Point(193, 187);
             this.cbxCustomColourFourPreview.Name = "cbxCustomColourFourPreview";
             this.cbxCustomColourFourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -591,7 +675,7 @@
             // cbxLinkNormalColourPreview
             // 
             this.cbxLinkNormalColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxLinkNormalColourPreview.Location = new System.Drawing.Point(21, 188);
+            this.cbxLinkNormalColourPreview.Location = new System.Drawing.Point(365, 102);
             this.cbxLinkNormalColourPreview.Name = "cbxLinkNormalColourPreview";
             this.cbxLinkNormalColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxLinkNormalColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -601,7 +685,7 @@
             // cbxAlternativeNormalTextColourPreview
             // 
             this.cbxAlternativeNormalTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxAlternativeNormalTextColourPreview.Location = new System.Drawing.Point(21, 102);
+            this.cbxAlternativeNormalTextColourPreview.Location = new System.Drawing.Point(537, 15);
             this.cbxAlternativeNormalTextColourPreview.Name = "cbxAlternativeNormalTextColourPreview";
             this.cbxAlternativeNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxAlternativeNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1060,7 +1144,9 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(562, 48);
+            this.kryptonLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonLabel1.Location = new System.Drawing.Point(726, 48);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(150, 26);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1126,9 +1212,11 @@
             // 
             // labelGridNormal
             // 
+            this.labelGridNormal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelGridNormal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGridNormal.HelpVisible = false;
-            this.labelGridNormal.Location = new System.Drawing.Point(562, 91);
+            this.labelGridNormal.Location = new System.Drawing.Point(726, 91);
             this.labelGridNormal.Name = "labelGridNormal";
             this.labelGridNormal.Size = new System.Drawing.Size(424, 489);
             this.labelGridNormal.TabIndex = 2;
@@ -1138,10 +1226,11 @@
             // 
             this.ms.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ms.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.optionsToolStripMenuItem});
             this.ms.Location = new System.Drawing.Point(0, 0);
             this.ms.Name = "ms";
-            this.ms.Size = new System.Drawing.Size(998, 24);
+            this.ms.Size = new System.Drawing.Size(1158, 24);
             this.ms.TabIndex = 3;
             this.ms.Text = "menuStrip1";
             // 
@@ -1210,6 +1299,186 @@
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.generateColoursToolStripMenuItem,
+            this.toolStripMenuItem4,
+            this.getColoursToolStripMenuItem,
+            this.toolStripMenuItem5,
+            this.exportPaletteColoursToolStripMenuItem,
+            this.toolStripMenuItem6,
+            this.viewPaletteFileToolStripMenuItem,
+            this.toolStripMenuItem7,
+            this.generateContrastColoursToolStripMenuItem,
+            this.toolStripMenuItem8,
+            this.getColourInformationToolStripMenuItem,
+            this.toolStripMenuItem9,
+            this.importColourSchemeToolStripMenuItem,
+            this.toolStripMenuItem10,
+            this.invertColoursToolStripMenuItem,
+            this.toolStripMenuItem11,
+            this.updateColoursToolStripMenuItem,
+            this.toolStripMenuItem12,
+            this.resetColoursToolStripMenuItem,
+            this.toolStripMenuItem13,
+            this.viewTypeToolStripMenuItem});
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.optionsToolStripMenuItem.Text = "&Options";
+            // 
+            // generateColoursToolStripMenuItem
+            // 
+            this.generateColoursToolStripMenuItem.Name = "generateColoursToolStripMenuItem";
+            this.generateColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.generateColoursToolStripMenuItem.Text = "&Generate Colours";
+            this.generateColoursToolStripMenuItem.Click += new System.EventHandler(this.generateColoursToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(210, 6);
+            // 
+            // getColoursToolStripMenuItem
+            // 
+            this.getColoursToolStripMenuItem.Name = "getColoursToolStripMenuItem";
+            this.getColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.getColoursToolStripMenuItem.Text = "&Get Colours";
+            this.getColoursToolStripMenuItem.Click += new System.EventHandler(this.getColoursToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(210, 6);
+            // 
+            // exportPaletteColoursToolStripMenuItem
+            // 
+            this.exportPaletteColoursToolStripMenuItem.Name = "exportPaletteColoursToolStripMenuItem";
+            this.exportPaletteColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.exportPaletteColoursToolStripMenuItem.Text = "Export &Palette Colours";
+            this.exportPaletteColoursToolStripMenuItem.Click += new System.EventHandler(this.exportPaletteColoursToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(210, 6);
+            // 
+            // viewPaletteFileToolStripMenuItem
+            // 
+            this.viewPaletteFileToolStripMenuItem.Name = "viewPaletteFileToolStripMenuItem";
+            this.viewPaletteFileToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.viewPaletteFileToolStripMenuItem.Text = "View Palette &File";
+            this.viewPaletteFileToolStripMenuItem.Click += new System.EventHandler(this.viewPaletteFileToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(210, 6);
+            // 
+            // generateContrastColoursToolStripMenuItem
+            // 
+            this.generateContrastColoursToolStripMenuItem.Name = "generateContrastColoursToolStripMenuItem";
+            this.generateContrastColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.generateContrastColoursToolStripMenuItem.Text = "Generate &Contrast Colours";
+            this.generateContrastColoursToolStripMenuItem.Click += new System.EventHandler(this.generateContrastColoursToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(210, 6);
+            // 
+            // getColourInformationToolStripMenuItem
+            // 
+            this.getColourInformationToolStripMenuItem.Name = "getColourInformationToolStripMenuItem";
+            this.getColourInformationToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.getColourInformationToolStripMenuItem.Text = "Get Colour &Information";
+            this.getColourInformationToolStripMenuItem.Click += new System.EventHandler(this.getColourInformationToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem9
+            // 
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(210, 6);
+            // 
+            // importColourSchemeToolStripMenuItem
+            // 
+            this.importColourSchemeToolStripMenuItem.Name = "importColourSchemeToolStripMenuItem";
+            this.importColourSchemeToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.importColourSchemeToolStripMenuItem.Text = "Import Colour &Scheme";
+            this.importColourSchemeToolStripMenuItem.Click += new System.EventHandler(this.importColourSchemeToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(210, 6);
+            // 
+            // invertColoursToolStripMenuItem
+            // 
+            this.invertColoursToolStripMenuItem.CheckOnClick = true;
+            this.invertColoursToolStripMenuItem.Name = "invertColoursToolStripMenuItem";
+            this.invertColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.invertColoursToolStripMenuItem.Text = "I&nvert Colours";
+            this.invertColoursToolStripMenuItem.Click += new System.EventHandler(this.invertColoursToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(210, 6);
+            // 
+            // updateColoursToolStripMenuItem
+            // 
+            this.updateColoursToolStripMenuItem.Name = "updateColoursToolStripMenuItem";
+            this.updateColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.updateColoursToolStripMenuItem.Text = "&Update Colours";
+            this.updateColoursToolStripMenuItem.Click += new System.EventHandler(this.updateColoursToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(210, 6);
+            // 
+            // resetColoursToolStripMenuItem
+            // 
+            this.resetColoursToolStripMenuItem.Name = "resetColoursToolStripMenuItem";
+            this.resetColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.resetColoursToolStripMenuItem.Text = "&Reset Colours";
+            this.resetColoursToolStripMenuItem.Click += new System.EventHandler(this.resetColoursToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem13
+            // 
+            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(210, 6);
+            // 
+            // viewTypeToolStripMenuItem
+            // 
+            this.viewTypeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.standardToolStripMenuItem,
+            this.toolStripMenuItem14,
+            this.circularToolStripMenuItem});
+            this.viewTypeToolStripMenuItem.Name = "viewTypeToolStripMenuItem";
+            this.viewTypeToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.viewTypeToolStripMenuItem.Text = "&View Type";
+            // 
+            // standardToolStripMenuItem
+            // 
+            this.standardToolStripMenuItem.Name = "standardToolStripMenuItem";
+            this.standardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.standardToolStripMenuItem.Text = "&Standard";
+            this.standardToolStripMenuItem.Click += new System.EventHandler(this.standardToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem14
+            // 
+            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(177, 6);
+            // 
+            // circularToolStripMenuItem
+            // 
+            this.circularToolStripMenuItem.Checked = true;
+            this.circularToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.circularToolStripMenuItem.Name = "circularToolStripMenuItem";
+            this.circularToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.circularToolStripMenuItem.Text = "&Circular";
+            this.circularToolStripMenuItem.Click += new System.EventHandler(this.circularToolStripMenuItem_Click);
+            // 
             // palette
             // 
             this.palette.FilePath = null;
@@ -1220,7 +1489,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 626);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(998, 2);
+            this.panel1.Size = new System.Drawing.Size(1158, 2);
             this.panel1.TabIndex = 2;
             // 
             // tmrUpdateUI
@@ -1229,23 +1498,25 @@
             this.tmrUpdateUI.Interval = 250;
             this.tmrUpdateUI.Tick += new System.EventHandler(this.tmrUpdateUI_Tick);
             // 
-            // kbtnGetColourInformation
+            // ctxUtiliseAsBaseColour
             // 
-            this.kbtnGetColourInformation.AutoSize = true;
-            this.kbtnGetColourInformation.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGetColourInformation.Location = new System.Drawing.Point(784, 586);
-            this.kbtnGetColourInformation.Name = "kbtnGetColourInformation";
-            this.kbtnGetColourInformation.Size = new System.Drawing.Size(180, 30);
-            this.kbtnGetColourInformation.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGetColourInformation.TabIndex = 115;
-            this.kbtnGetColourInformation.Values.Text = "Get Colour &Information";
-            this.kbtnGetColourInformation.Click += new System.EventHandler(this.kbtnGetColourInformation_Click);
+            this.ctxUtiliseAsBaseColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxUtiliseAsBaseColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.utiliseAsBaseColourToolStripMenuItem});
+            this.ctxUtiliseAsBaseColour.Name = "ctxUtiliseAsBaseColour";
+            this.ctxUtiliseAsBaseColour.Size = new System.Drawing.Size(187, 26);
+            // 
+            // utiliseAsBaseColourToolStripMenuItem
+            // 
+            this.utiliseAsBaseColourToolStripMenuItem.Name = "utiliseAsBaseColourToolStripMenuItem";
+            this.utiliseAsBaseColourToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.utiliseAsBaseColourToolStripMenuItem.Text = "&Utilise as Base Colour";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 703);
+            this.ClientSize = new System.Drawing.Size(1158, 703);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanel2);
             this.Controls.Add(this.kryptonPanel1);
@@ -1339,6 +1610,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kcmbBasePaletteMode)).EndInit();
             this.ms.ResumeLayout(false);
             this.ms.PerformLayout();
+            this.ctxUtiliseAsBaseColour.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1438,5 +1710,35 @@
         private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxBaseColourPreview;
         private System.Windows.Forms.Timer tmrUpdateUI;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnGetColourInformation;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnImportColourScheme;
+        private System.Windows.Forms.ContextMenuStrip ctxUtiliseAsBaseColour;
+        private System.Windows.Forms.ToolStripMenuItem utiliseAsBaseColourToolStripMenuItem;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kchkUpdateColours;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kchkInvertColours;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem generateColoursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem getColoursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem exportPaletteColoursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem viewPaletteFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem generateContrastColoursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem getColourInformationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem9;
+        private System.Windows.Forms.ToolStripMenuItem importColourSchemeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem10;
+        private System.Windows.Forms.ToolStripMenuItem invertColoursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem11;
+        private System.Windows.Forms.ToolStripMenuItem updateColoursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem12;
+        private System.Windows.Forms.ToolStripMenuItem resetColoursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem13;
+        private System.Windows.Forms.ToolStripMenuItem viewTypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem standardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem14;
+        private System.Windows.Forms.ToolStripMenuItem circularToolStripMenuItem;
     }
 }

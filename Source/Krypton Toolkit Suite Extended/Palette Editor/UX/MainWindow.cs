@@ -2,6 +2,7 @@
 using PaletteEditor.Classes;
 using System;
 using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 using Tooling.Classes.Other;
 using Tooling.Settings.Classes;
@@ -24,12 +25,31 @@ namespace PaletteEditor.UX
 
         private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
 
-        private GlobalMethods _globalMethods = new GlobalMethods();
+        private Classes.GlobalMethods _globalMethods = new Classes.GlobalMethods();
+
+        private GlobalStringSettingsManager _globalStringSettingsManager = new GlobalStringSettingsManager();
+
+        private Version _currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
+
+        private Timer _colourUpdateTimer;
         #endregion
 
         public MainWindow()
         {
             InitializeComponent();
+
+            _colourUpdateTimer = new Timer();
+
+            _colourUpdateTimer.Interval = 250;
+
+            _colourUpdateTimer.Tick += new EventHandler(ColourUpdateTimer_Tick);
+        }
+
+        private void ColourUpdateTimer_Tick(object sender, EventArgs e)
+        {
+            UpdateColourPalette(_useCircularPictureBoxes);
+
+            ShowCircularPreviewBoxes(_useCircularPictureBoxes);
         }
 
         #region Operations
@@ -250,6 +270,8 @@ namespace PaletteEditor.UX
             {
                 ShowCircularPreviewBoxes(false);
             }
+
+            TextExtra = $"(Build: { _currentVersion.Build.ToString() })";
         }
 
         #region Picture Box Mouse Enter Events
@@ -668,6 +690,113 @@ namespace PaletteEditor.UX
             ColourInformation colourInformation = new ColourInformation();
 
             colourInformation.Show();
+        }
+
+        private void kbtnImportColourScheme_Click(object sender, EventArgs e)
+        {
+            tslStatus.Text = "Attempting to inport colours from selected palette. Please wait...";
+
+            PaletteImportManager paletteImportManager = new PaletteImportManager();
+
+            paletteImportManager.ImportColourScheme();
+
+            kchkUpdateColours.Enabled = true;
+
+            kcmbBasePaletteMode.Text = _globalStringSettingsManager.GetBasePaletteMode();
+
+            tslStatus.Text = _globalStringSettingsManager.GetFeedbackText();
+
+            kchkUpdateColours.Checked = true;
+        }
+
+        private void kchkUpdateColours_CheckedChanged(object sender, EventArgs e)
+        {
+            _colourUpdateTimer.Enabled = kchkUpdateColours.Checked;
+        }
+
+        private void ResetColours(bool useCircularPictureBoxes)
+        {
+            if (useCircularPictureBoxes)
+            {
+                kgbPreviewPane.Visible = false;
+
+                kgbCircularColourPreviewPane.Visible = true;
+
+                ColourUtilities.ResetColourDefinitions(cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledColourPreview, cbxLinkNormalColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview);
+            }
+            else
+            {
+                kgbPreviewPane.Visible = true;
+
+                kgbCircularColourPreviewPane.Visible = false;
+
+                ColourUtilities.ResetColourDefinitions(pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview, pbxStatusTextColourPreview);
+            }
+        }
+
+        private void kchkInvertColours_CheckedChanged(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void generateColoursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void getColoursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void exportPaletteColoursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void viewPaletteFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void generateContrastColoursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void getColourInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void importColourSchemeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void invertColoursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void updateColoursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void resetColoursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void standardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void circularToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
         }
 
         /// <summary>

@@ -22,6 +22,8 @@ namespace Tooling.UX
 
         private GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
 
+        private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
+
         private Color _baseColour, _colourDark, _colourNormal, _colourLight, _colourLightness;
         #endregion
 
@@ -275,6 +277,13 @@ namespace Tooling.UX
             customColours.Show();
         }
 
+        private void kbtnImportColours_Click(object sender, EventArgs e)
+        {
+            PaletteImportManager paletteImportManager = new PaletteImportManager();
+
+            paletteImportManager.ImportColourScheme();
+        }
+
         private void kbtnSaveValues_Click(object sender, EventArgs e)
         {
 
@@ -294,7 +303,15 @@ namespace Tooling.UX
 
         private void UpdateUI()
         {
+            cpbBaseColourPreview.BackColor = _colourSettingsManager.GetBaseColour();
 
+            cpbDarkestColourPreview.BackColor = _colourSettingsManager.GetDarkestColour();
+
+            cpbMiddleColourPreview.BackColor = _colourSettingsManager.GetMediumColour();
+
+            cpbLightColourPreview.BackColor = _colourSettingsManager.GetLightColour();
+
+            cpbLightestColourPreview.BackColor = _colourSettingsManager.GetLightestColour();
         }
     }
 }

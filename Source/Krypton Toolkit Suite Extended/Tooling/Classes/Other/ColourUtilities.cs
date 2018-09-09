@@ -1053,6 +1053,138 @@ namespace Tooling.Classes.Other
         }
 
         /// <summary>
+        /// Resets the colour definitions.
+        /// </summary>
+        /// <param name="cbxBaseColourPreview">The CBX base colour preview.</param>
+        /// <param name="cbxDarkColourPreview">The CBX dark colour preview.</param>
+        /// <param name="cbxMiddleColourPreview">The CBX middle colour preview.</param>
+        /// <param name="cbxLightColourPreview">The CBX light colour preview.</param>
+        /// <param name="cbxLightestColourPreview">The CBX lightest colour preview.</param>
+        /// <param name="cbxBorderColourPreview">The CBX border colour preview.</param>
+        /// <param name="cbxAlternativeNormalTextColourPreview">The CBX alternative normal text colour preview.</param>
+        /// <param name="cbxNormalTextColourPreview">The CBX normal text colour preview.</param>
+        /// <param name="cbxDisabledTextColourPreview">The CBX disabled text colour preview.</param>
+        /// <param name="cbxFocusedTextColourPreview">The CBX focused text colour preview.</param>
+        /// <param name="cbxPressedTextColourPreview">The CBX pressed text colour preview.</param>
+        /// <param name="cbxDisabledColourPreview">The CBX disabled colour preview.</param>
+        /// <param name="cbxLinkNormalColourPreview">The CBX link normal colour preview.</param>
+        /// <param name="cbxLinkHoverColourPreview">The CBX link hover colour preview.</param>
+        /// <param name="cbxLinkVisitedColourPreview">The CBX link visited colour preview.</param>
+        /// <param name="cbxCustomColourOnePreview">The CBX custom colour one preview.</param>
+        /// <param name="cbxCustomColourTwoPreview">The CBX custom colour two preview.</param>
+        /// <param name="cbxCustomColourThreePreview">The CBX custom colour three preview.</param>
+        /// <param name="cbxCustomColourFourPreview">The CBX custom colour four preview.</param>
+        /// <param name="cbxCustomColourFivePreview">The CBX custom colour five preview.</param>
+        /// <param name="cbxCustomTextColourOnePreview">The CBX custom text colour one preview.</param>
+        /// <param name="cbxCustomTextColourTwoPreview">The CBX custom text colour two preview.</param>
+        /// <param name="cbxCustomTextColourThreePreview">The CBX custom text colour three preview.</param>
+        /// <param name="cbxCustomTextColourFourPreview">The CBX custom text colour four preview.</param>
+        /// <param name="cbxCustomTextColourFivePreview">The CBX custom text colour five preview.</param>
+        /// <param name="cbxMenuTextColourPreview">The CBX menu text colour preview.</param>
+        /// <param name="cbxStatusTextColourPreview">The CBX status text colour preview.</param>
+        /// <exception cref="NotImplementedException"></exception>
+        public static void ResetColourDefinitions(CircularPictureBox cbxBaseColourPreview, CircularPictureBox cbxDarkColourPreview, CircularPictureBox cbxMiddleColourPreview, CircularPictureBox cbxLightColourPreview, CircularPictureBox cbxLightestColourPreview, CircularPictureBox cbxBorderColourPreview, CircularPictureBox cbxAlternativeNormalTextColourPreview, CircularPictureBox cbxNormalTextColourPreview, CircularPictureBox cbxDisabledTextColourPreview, CircularPictureBox cbxFocusedTextColourPreview, CircularPictureBox cbxPressedTextColourPreview, CircularPictureBox cbxDisabledColourPreview, CircularPictureBox cbxLinkNormalColourPreview, CircularPictureBox cbxLinkHoverColourPreview, CircularPictureBox cbxLinkVisitedColourPreview, CircularPictureBox cbxCustomColourOnePreview, CircularPictureBox cbxCustomColourTwoPreview, CircularPictureBox cbxCustomColourThreePreview, CircularPictureBox cbxCustomColourFourPreview, CircularPictureBox cbxCustomColourFivePreview, CircularPictureBox cbxCustomTextColourOnePreview, CircularPictureBox cbxCustomTextColourTwoPreview, CircularPictureBox cbxCustomTextColourThreePreview, CircularPictureBox cbxCustomTextColourFourPreview, CircularPictureBox cbxCustomTextColourFivePreview, CircularPictureBox cbxMenuTextColourPreview, CircularPictureBox cbxStatusTextColourPreview)
+        {
+            Color resetColour = Color.White;
+
+            cbxBaseColourPreview.BackColor = resetColour;
+
+            cbxDarkColourPreview.BackColor = resetColour;
+
+            cbxMiddleColourPreview.BackColor = resetColour;
+
+            cbxLightColourPreview.BackColor = resetColour;
+
+            cbxLightestColourPreview.BackColor = resetColour;
+
+            cbxBorderColourPreview.BackColor = resetColour;
+
+            cbxAlternativeNormalTextColourPreview.BackColor = resetColour;
+
+            cbxNormalTextColourPreview.BackColor = resetColour;
+
+            cbxDisabledTextColourPreview.BackColor = resetColour;
+
+            cbxFocusedTextColourPreview.BackColor = resetColour;
+
+            cbxPressedTextColourPreview.BackColor = resetColour;
+
+            cbxDisabledColourPreview.BackColor = resetColour;
+
+            cbxLinkNormalColourPreview.BackColor = resetColour;
+
+            cbxLinkHoverColourPreview.BackColor = resetColour;
+
+            cbxLinkVisitedColourPreview.BackColor = resetColour;
+
+            cbxCustomColourOnePreview.BackColor = resetColour;
+
+            cbxCustomColourTwoPreview.BackColor = resetColour;
+
+            cbxCustomColourThreePreview.BackColor = resetColour;
+
+            cbxCustomColourFourPreview.BackColor = resetColour;
+
+            cbxCustomColourFivePreview.BackColor = resetColour;
+
+            cbxCustomTextColourOnePreview.BackColor = resetColour;
+
+            cbxCustomTextColourTwoPreview.BackColor = resetColour;
+
+            cbxCustomTextColourThreePreview.BackColor = resetColour;
+
+            cbxCustomTextColourFourPreview.BackColor = resetColour;
+
+            cbxCustomTextColourFivePreview.BackColor = resetColour;
+
+            cbxMenuTextColourPreview.BackColor = resetColour;
+
+            cbxStatusTextColourPreview.BackColor = resetColour;
+        }
+
+        /// <summary>
+        /// Resets the colour definitions.
+        /// </summary>
+        /// <param name="baseColour">The base colour.</param>
+        /// <param name="darkColour">The dark colour.</param>
+        /// <param name="middleColour">The middle colour.</param>
+        /// <param name="lightColour">The light colour.</param>
+        /// <param name="lightestColour">The lightest colour.</param>
+        /// <param name="borderColourPreview">The border colour preview.</param>
+        /// <param name="alternativeNormalTextColourPreview">The alternative normal text colour preview.</param>
+        /// <param name="normalTextColourPreview">The normal text colour preview.</param>
+        /// <param name="disabledTextColourPreview">The disabled text colour preview.</param>
+        /// <param name="focusedTextColourPreview">The focused text colour preview.</param>
+        /// <param name="pressedTextColourPreview">The pressed text colour preview.</param>
+        /// <param name="disabledColourPreview">The disabled colour preview.</param>
+        /// <param name="linkNormalColourPreview">The link normal colour preview.</param>
+        /// <param name="linkHoverColourPreview">The link hover colour preview.</param>
+        /// <param name="linkVisitedColourPreview">The link visited colour preview.</param>
+        /// <param name="customColourOne">The custom colour one.</param>
+        /// <param name="customColourTwo">The custom colour two.</param>
+        /// <param name="customColourThree">The custom colour three.</param>
+        /// <param name="customColourFour">The custom colour four.</param>
+        /// <param name="customColourFive">The custom colour five.</param>
+        /// <param name="customTextColourOne">The custom text colour one.</param>
+        /// <param name="customTextColourTwo">The custom text colour two.</param>
+        /// <param name="customTextColourThree">The custom text colour three.</param>
+        /// <param name="customTextColourFour">The custom text colour four.</param>
+        /// <param name="customTextColourFive">The custom text colour five.</param>
+        /// <param name="menuTextColour">The menu text colour.</param>
+        /// <param name="statusTextColour">The status text colour.</param>
+        public static void ResetColourDefinitions(PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour, PictureBox statusTextColour)
+        {
+
+        }
+
+        public static void InvertColours(CircularPictureBox cbxBaseColourPreview, CircularPictureBox cbxDarkColourPreview, CircularPictureBox cbxMiddleColourPreview, CircularPictureBox cbxLightColourPreview, CircularPictureBox cbxLightestColourPreview, CircularPictureBox cbxBorderColourPreview, CircularPictureBox cbxAlternativeNormalTextColourPreview, CircularPictureBox cbxNormalTextColourPreview, CircularPictureBox cbxDisabledTextColourPreview, CircularPictureBox cbxFocusedTextColourPreview, CircularPictureBox cbxPressedTextColourPreview, CircularPictureBox cbxDisabledColourPreview, CircularPictureBox cbxLinkNormalColourPreview, CircularPictureBox cbxLinkHoverColourPreview, CircularPictureBox cbxLinkVisitedColourPreview, CircularPictureBox cbxCustomColourOnePreview, CircularPictureBox cbxCustomColourTwoPreview, CircularPictureBox cbxCustomColourThreePreview, CircularPictureBox cbxCustomColourFourPreview, CircularPictureBox cbxCustomColourFivePreview, CircularPictureBox cbxCustomTextColourOnePreview, CircularPictureBox cbxCustomTextColourTwoPreview, CircularPictureBox cbxCustomTextColourThreePreview, CircularPictureBox cbxCustomTextColourFourPreview, CircularPictureBox cbxCustomTextColourFivePreview, CircularPictureBox cbxMenuTextColourPreview, CircularPictureBox cbxStatusTextColourPreview)
+        {
+            #region Backup Values
+
+            #endregion
+        }
+
+        /// <summary>
         /// Updates the colour.
         /// </summary>
         /// <param name="colourPreview">The colour preview.</param>

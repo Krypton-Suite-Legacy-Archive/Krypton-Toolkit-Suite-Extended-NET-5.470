@@ -93,10 +93,11 @@
             this.tmrUpdateUI = new System.Windows.Forms.Timer(this.components);
             this.tmrAutomateColourSwatchValues = new System.Windows.Forms.Timer(this.components);
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.ss = new System.Windows.Forms.StatusStrip();
             this.tsslStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.kbtnImportColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cpbLightestColourPreview)).BeginInit();
@@ -786,7 +787,7 @@
             // 
             // kchkAutomateColourSwatchValues
             // 
-            this.kchkAutomateColourSwatchValues.Location = new System.Drawing.Point(282, 9);
+            this.kchkAutomateColourSwatchValues.Location = new System.Drawing.Point(409, 9);
             this.kchkAutomateColourSwatchValues.Name = "kchkAutomateColourSwatchValues";
             this.kchkAutomateColourSwatchValues.Size = new System.Drawing.Size(258, 26);
             this.kchkAutomateColourSwatchValues.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -836,6 +837,7 @@
             // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.kbtnImportColours);
             this.kryptonPanel2.Controls.Add(this.ss);
             this.kryptonPanel2.Controls.Add(this.kbtnOk);
             this.kryptonPanel2.Controls.Add(this.kbtnGenerate);
@@ -846,6 +848,24 @@
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.Size = new System.Drawing.Size(1028, 69);
             this.kryptonPanel2.TabIndex = 1;
+            // 
+            // ss
+            // 
+            this.ss.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ss.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsslStatus});
+            this.ss.Location = new System.Drawing.Point(0, 47);
+            this.ss.Name = "ss";
+            this.ss.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
+            this.ss.Size = new System.Drawing.Size(1028, 22);
+            this.ss.TabIndex = 60;
+            this.ss.Text = "statusStrip1";
+            // 
+            // tsslStatus
+            // 
+            this.tsslStatus.Name = "tsslStatus";
+            this.tsslStatus.Size = new System.Drawing.Size(39, 17);
+            this.tsslStatus.Text = "Ready";
             // 
             // kbtnOk
             // 
@@ -867,23 +887,17 @@
             this.panel1.Size = new System.Drawing.Size(1028, 2);
             this.panel1.TabIndex = 2;
             // 
-            // ss
+            // kbtnImportColours
             // 
-            this.ss.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ss.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsslStatus});
-            this.ss.Location = new System.Drawing.Point(0, 47);
-            this.ss.Name = "ss";
-            this.ss.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.ss.Size = new System.Drawing.Size(1028, 22);
-            this.ss.TabIndex = 60;
-            this.ss.Text = "statusStrip1";
-            // 
-            // tsslStatus
-            // 
-            this.tsslStatus.Name = "tsslStatus";
-            this.tsslStatus.Size = new System.Drawing.Size(39, 17);
-            this.tsslStatus.Text = "Ready";
+            this.kbtnImportColours.AutoSize = true;
+            this.kbtnImportColours.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnImportColours.Location = new System.Drawing.Point(282, 7);
+            this.kbtnImportColours.Name = "kbtnImportColours";
+            this.kbtnImportColours.Size = new System.Drawing.Size(121, 30);
+            this.kbtnImportColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnImportColours.TabIndex = 61;
+            this.kbtnImportColours.Values.Text = "&Import Colours";
+            this.kbtnImportColours.Click += new System.EventHandler(this.kbtnImportColours_Click);
             // 
             // PaletteColourCreator
             // 
@@ -1000,5 +1014,6 @@
         private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cpbBaseColourPreview;
         private System.Windows.Forms.StatusStrip ss;
         private System.Windows.Forms.ToolStripStatusLabel tsslStatus;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnImportColours;
     }
 }
