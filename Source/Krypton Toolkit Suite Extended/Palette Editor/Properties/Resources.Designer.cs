@@ -69,5 +69,15 @@ namespace PaletteEditor.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PE_Icon_512_x_512 {
+            get {
+                object obj = ResourceManager.GetObject("PE_Icon_512_x_512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

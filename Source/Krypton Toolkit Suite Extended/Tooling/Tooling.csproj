@@ -132,6 +132,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Enumerations\Enumerations.cs" />
+    <Compile Include="Interfaces\IAbout.cs" />
     <Compile Include="Interfaces\IColourEditor.cs" />
     <Compile Include="Interfaces\IPaletteSerialiser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -181,6 +182,12 @@
     </Compile>
     <Compile Include="User Controls\Colours\ColourEditor.Designer.cs">
       <DependentUpon>ColourEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UX\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="UX\ColourHexadecimalToRGBConverter.cs">
       <SubType>Form</SubType>
@@ -277,6 +284,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\AboutDialog.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\ColourHexadecimalToRGBConverter.resx">
       <DependentUpon>ColourHexadecimalToRGBConverter.cs</DependentUpon>

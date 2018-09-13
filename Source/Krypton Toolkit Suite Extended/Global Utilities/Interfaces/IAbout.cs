@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace GlobalUtilities.Interfaces
 {
@@ -51,5 +52,13 @@ namespace GlobalUtilities.Interfaces
         /// The framework version.
         /// </value>
         Version FrameworkVersion { get; set; }
+
+        Icon ApplicationIcon { get; set; }
+
+        Bitmap ApplicationIconImage { get; set; }
+
+        string AuthourName { get; set; }
+
+        string InstallLocation { get; set; }
     }
 }

@@ -1179,9 +1179,43 @@ namespace Tooling.Classes.Other
 
         public static void InvertColours(CircularPictureBox cbxBaseColourPreview, CircularPictureBox cbxDarkColourPreview, CircularPictureBox cbxMiddleColourPreview, CircularPictureBox cbxLightColourPreview, CircularPictureBox cbxLightestColourPreview, CircularPictureBox cbxBorderColourPreview, CircularPictureBox cbxAlternativeNormalTextColourPreview, CircularPictureBox cbxNormalTextColourPreview, CircularPictureBox cbxDisabledTextColourPreview, CircularPictureBox cbxFocusedTextColourPreview, CircularPictureBox cbxPressedTextColourPreview, CircularPictureBox cbxDisabledColourPreview, CircularPictureBox cbxLinkNormalColourPreview, CircularPictureBox cbxLinkHoverColourPreview, CircularPictureBox cbxLinkVisitedColourPreview, CircularPictureBox cbxCustomColourOnePreview, CircularPictureBox cbxCustomColourTwoPreview, CircularPictureBox cbxCustomColourThreePreview, CircularPictureBox cbxCustomColourFourPreview, CircularPictureBox cbxCustomColourFivePreview, CircularPictureBox cbxCustomTextColourOnePreview, CircularPictureBox cbxCustomTextColourTwoPreview, CircularPictureBox cbxCustomTextColourThreePreview, CircularPictureBox cbxCustomTextColourFourPreview, CircularPictureBox cbxCustomTextColourFivePreview, CircularPictureBox cbxMenuTextColourPreview, CircularPictureBox cbxStatusTextColourPreview)
         {
+            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+
             #region Backup Values
+            Color baseColour = colourSettingsManager.GetBaseColour(), darkColour = colourSettingsManager.GetDarkestColour(), middleColour = colourSettingsManager.GetMediumColour(), lightColour = colourSettingsManager.GetLightColour(), lightestColour = colourSettingsManager.GetLightestColour(), borderColourPreview = colourSettingsManager.GetBorderColour(), alternativeNormalTextColourPreview = colourSettingsManager.GetAlternativeNormalTextColour(), normalTextColourPreview = colourSettingsManager.GetNormalTextColour(), disabledTextColourPreview = colourSettingsManager.GetDisabledTextColour(), focusedTextColourPreview = colourSettingsManager.GetFocusTextColour(), pressedTextColourPreview = colourSettingsManager.GetPressedTextColour(), disabledColourPreview = colourSettingsManager.GetDisabledColour(), linkNormalColourPreview = colourSettingsManager.GetLinkNormalColour(), linkHoverColourPreview = colourSettingsManager.GetLinkHoverColour(), linkVisitedColourPreview = colourSettingsManager.GetLinkVisitedColour(), customColourOne, customColourTwo, customColourThree, customColourFour, customColourFive, customTextColourOne, customTextColourTwo, customTextColourThree, customTextColourFour, customTextColourFive, menuTextColour, statusTextColour;
+            #endregion
+
+            // Reset back to white
+            ResetColourDefinitions(cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledColourPreview, cbxLinkNormalColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview);
+
+            #region Set Settings
 
             #endregion
+
+            cbxBaseColourPreview.BackColor = middleColour;
+
+            cbxDarkColourPreview.BackColor = lightestColour;
+
+            cbxMiddleColourPreview.BackColor = lightColour;
+
+            cbxLightColourPreview.BackColor = baseColour;
+
+            cbxLightestColourPreview.BackColor = darkColour;
+        }
+
+        public static void InvertColours(PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour, PictureBox statusTextColour)
+        {
+
+        }
+
+        public static void RevertColours(CircularPictureBox cbxBaseColourPreview, CircularPictureBox cbxDarkColourPreview, CircularPictureBox cbxMiddleColourPreview, CircularPictureBox cbxLightColourPreview, CircularPictureBox cbxLightestColourPreview, CircularPictureBox cbxBorderColourPreview, CircularPictureBox cbxAlternativeNormalTextColourPreview, CircularPictureBox cbxNormalTextColourPreview, CircularPictureBox cbxDisabledTextColourPreview, CircularPictureBox cbxFocusedTextColourPreview, CircularPictureBox cbxPressedTextColourPreview, CircularPictureBox cbxDisabledColourPreview, CircularPictureBox cbxLinkNormalColourPreview, CircularPictureBox cbxLinkHoverColourPreview, CircularPictureBox cbxLinkVisitedColourPreview, CircularPictureBox cbxCustomColourOnePreview, CircularPictureBox cbxCustomColourTwoPreview, CircularPictureBox cbxCustomColourThreePreview, CircularPictureBox cbxCustomColourFourPreview, CircularPictureBox cbxCustomColourFivePreview, CircularPictureBox cbxCustomTextColourOnePreview, CircularPictureBox cbxCustomTextColourTwoPreview, CircularPictureBox cbxCustomTextColourThreePreview, CircularPictureBox cbxCustomTextColourFourPreview, CircularPictureBox cbxCustomTextColourFivePreview, CircularPictureBox cbxMenuTextColourPreview, CircularPictureBox cbxStatusTextColourPreview)
+        {
+
+        }
+
+        public static void RevertColours(PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour, PictureBox statusTextColour)
+        {
+
         }
 
         /// <summary>

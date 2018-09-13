@@ -1,6 +1,9 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using GlobalUtilities.Interfaces;
 using PaletteEditor.Classes;
 using System;
+using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
@@ -15,7 +18,7 @@ namespace PaletteEditor.UX
         #region Variables
         private bool _dirty, _loaded, _debugMode = true, _useCircularPictureBoxes = true;
 
-        private string _filename;
+        private string _fileName;
 
         private KryptonPalette _palette;
 
@@ -32,6 +35,24 @@ namespace PaletteEditor.UX
         private Version _currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
 
         private Timer _colourUpdateTimer;
+
+        private IAbout _about;
+        #endregion
+
+        #region Properties
+        public bool DebugMode { get { return _debugMode; } set { _debugMode = value; } }
+
+        public bool Dirty { get { return _dirty; } set { _dirty = value; } }
+
+        public bool Loaded { get { return _loaded; } set { _loaded = value; } }
+
+        public bool UseCircularPictureBoxes { get { return _useCircularPictureBoxes; } set { _useCircularPictureBoxes = value; } }
+
+        public string FileName { get { return _fileName; } set { _fileName = value; } }
+
+        public new KryptonPalette Palette { get { return _palette; } set { _palette = value; } }
+
+        public new PaletteMode PaletteMode { get { return _paletteMode; } set { _paletteMode = value; } }
         #endregion
 
         public MainWindow()
@@ -43,20 +64,26 @@ namespace PaletteEditor.UX
             _colourUpdateTimer.Interval = 250;
 
             _colourUpdateTimer.Tick += new EventHandler(ColourUpdateTimer_Tick);
+
+            //IAbout.ApplicationIcon = Icon;
+
+            //IAbout.ApplicationIconImage = new Bitmap("Resources\\PE Icon 512 x 512.png");
+
+            //IAbout.ApplicationName = "Palette Editor";
         }
 
         private void ColourUpdateTimer_Tick(object sender, EventArgs e)
         {
-            UpdateColourPalette(_useCircularPictureBoxes);
+            UpdateColourPalette(UseCircularPictureBoxes);
 
-            ShowCircularPreviewBoxes(_useCircularPictureBoxes);
+            ShowCircularPreviewBoxes(UseCircularPictureBoxes);
         }
 
         #region Operations
         private void New()
         {
             // If the current palette has been changed
-            if (_dirty)
+            if (Dirty)
             {
                 // Ask user if the current palette should be saved
                 switch (KryptonMessageBox.Show(this,
@@ -81,8 +108,10 @@ namespace PaletteEditor.UX
 
         private void Open()
         {
+            tslStatus.Text = "Attempting to inport colours from selected palette. Please wait...";
+
             // If the current palette has been changed
-            if (_dirty)
+            if (Dirty)
             {
                 // Ask user if the current palette should be saved
                 switch (KryptonMessageBox.Show(this,
@@ -114,43 +143,59 @@ namespace PaletteEditor.UX
             if (filename.Length > 0)
             {
                 // Need to unhook from any existing palette
-                if (_palette != null)
-                    _palette.PalettePaint -= new EventHandler<PaletteLayoutEventArgs>(OnPalettePaint);
+                if (Palette != null)
+                    Palette.PalettePaint -= new EventHandler<PaletteLayoutEventArgs>(OnPalettePaint);
 
                 // Use the new instance instead
-                _palette = palette;
+                Palette = palette;
 
                 // We need to know when a change occurs to the palette settings
-                _palette.PalettePaint += new EventHandler<PaletteLayoutEventArgs>(OnPalettePaint);
+                Palette.PalettePaint += new EventHandler<PaletteLayoutEventArgs>(OnPalettePaint);
 
                 // Hook up the property grid to the palette
-                labelGridNormal.SelectedObject = _palette;
+                labelGridNormal.SelectedObject = Palette;
 
                 // Use the loaded filename
-                _filename = filename;
+                FileName = filename;
 
                 // Reset the state flags
-                _loaded = true;
-                _dirty = false;
+                Loaded = true;
+                Dirty = false;
 
                 // Define the initial title bar string
                 UpdateTitlebar();
             }
+
+            PaletteImportManager paletteImportManager = new PaletteImportManager();
+
+            paletteImportManager.ImportColourScheme(palette);
+
+            kchkUpdateColours.Enabled = true;
+
+            kcmbBasePaletteMode.Text = _globalStringSettingsManager.GetBasePaletteMode();
+
+            tslStatus.Text = _globalStringSettingsManager.GetFeedbackText();
+
+            kchkUpdateColours.Checked = true;
+
+            invertColoursToolStripMenuItem.Enabled = true;
+
+            kchkInvertColours.Enabled = true;
         }
 
         private void Save()
         {
             // If we already have a file associated with the palette...
-            if (_loaded)
+            if (Loaded)
             {
                 // ...then just save it straight away
                 Cursor = Cursors.WaitCursor;
                 Application.DoEvents();
-                _palette.Export(_filename, true, false);
+                Palette.Export(FileName, true, false);
                 Cursor = Cursors.Default;
 
                 // No longer dirty
-                _dirty = false;
+                Dirty = false;
 
                 // Define the initial title bar string
                 UpdateTitlebar();
@@ -167,18 +212,18 @@ namespace PaletteEditor.UX
             // Get back the filename selected by the user
             Cursor = Cursors.WaitCursor;
             Application.DoEvents();
-            string filename = _palette.Export();
+            string filename = Palette.Export();
             Cursor = Cursors.Default;
 
             // If the save succeeded
             if (filename.Length > 0)
             {
                 // Remember associated file details
-                _filename = filename;
-                _loaded = true;
+                FileName = filename;
+                Loaded = true;
 
                 // No longer dirty
-                _dirty = false;
+                Dirty = false;
 
                 // Define the initial title bar string
                 UpdateTitlebar();
@@ -188,7 +233,7 @@ namespace PaletteEditor.UX
         private void Exit()
         {
             // If the current palette has been changed
-            if (_dirty)
+            if (Dirty)
             {
                 // Ask user if the current palette should be saved
                 switch (KryptonMessageBox.Show(this,
@@ -215,24 +260,24 @@ namespace PaletteEditor.UX
         private void CreateNewPalette()
         {
             // Need to unhook from any existing palette
-            if (_palette != null)
-                _palette.PalettePaint -= new EventHandler<PaletteLayoutEventArgs>(OnPalettePaint);
+            if (Palette != null)
+                Palette.PalettePaint -= new EventHandler<PaletteLayoutEventArgs>(OnPalettePaint);
 
             // Create a fresh palette instance
-            _palette = new KryptonPalette();
+            Palette = new KryptonPalette();
 
             // We need to know when a change occurs to the palette settings
-            _palette.PalettePaint += new EventHandler<PaletteLayoutEventArgs>(OnPalettePaint);
+            Palette.PalettePaint += new EventHandler<PaletteLayoutEventArgs>(OnPalettePaint);
 
             // Hook up the property grid to the palette
-            labelGridNormal.SelectedObject = _palette;
+            labelGridNormal.SelectedObject = Palette;
 
             // Does not have a filename as yet
-            _filename = "(New Palette)";
+            FileName = "(New Palette)";
 
             // Reset the state flags
-            _dirty = false;
-            _loaded = false;
+            Dirty = false;
+            Loaded = false;
 
             // Define the initial title bar string
             UpdateTitlebar();
@@ -241,9 +286,9 @@ namespace PaletteEditor.UX
         private void OnPalettePaint(object sender, PaletteLayoutEventArgs e)
         {
             // Only interested the first time the palette is changed
-            if (!_dirty)
+            if (!Dirty)
             {
-                _dirty = true;
+                Dirty = true;
                 UpdateTitlebar();
             }
 
@@ -254,7 +299,7 @@ namespace PaletteEditor.UX
         private void UpdateTitlebar()
         {
             // Mark a changed file with a star
-            Text = "Palette Editor - " + _filename + (_dirty ? "*" : string.Empty);
+            Text = "Palette Editor - " + FileName + (Dirty ? "*" : string.Empty);
         }
         #endregion
 
@@ -264,9 +309,9 @@ namespace PaletteEditor.UX
 
             ColourUtilities.PropagateBasePaletteModes(kcmbBasePaletteMode);
 
-            _colourSettingsManager.ResetSettings(_debugMode);
+            _colourSettingsManager.ResetSettings(DebugMode);
 
-            if (_useCircularPictureBoxes)
+            if (UseCircularPictureBoxes)
             {
                 ShowCircularPreviewBoxes(false);
             }
@@ -420,9 +465,14 @@ namespace PaletteEditor.UX
 
         private void kbtnGenerate_Click(object sender, EventArgs e)
         {
-            ColourMixer colourMixer = new ColourMixer();
-
-            colourMixer.Show();
+            if (UseCircularPictureBoxes)
+            {
+                GenerateColourScheme(cbxBaseColourPreview.BackColor);
+            }
+            else
+            {
+                GenerateColourScheme(pbxBaseColour.BackColor);
+            }
         }
 
         private void newPaletteDefinitionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -457,13 +507,7 @@ namespace PaletteEditor.UX
 
         private void kbtnGetColours_Click(object sender, EventArgs e)
         {
-
-            if (_useCircularPictureBoxes)
-            {
-                UpdateColourPalette(_useCircularPictureBoxes);
-
-                ShowCircularPreviewBoxes(true);
-            }
+            GrabPaletteColours(UseCircularPictureBoxes);
         }
 
         private void pbxBaseColour_MouseLeave(object sender, EventArgs e)
@@ -493,13 +537,13 @@ namespace PaletteEditor.UX
 
         private void ExitPaletteEditor()
         {
-            if (_dirty)
+            if (Dirty)
             {
                 DialogResult result = KryptonMessageBox.Show("The palette has not yet been saved.\nDo you want to save now?", "Palette Editor Save Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
-                    if (_loaded)
+                    if (Loaded)
                     {
                         Save();
 
@@ -671,9 +715,7 @@ namespace PaletteEditor.UX
         {
             //PaletteEditorEngine.ExportPaletteTheme(palette, PaletteMode.Office2007Silver, pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, tslStatus);
 
-            PaletteEditorEngine.ExportPalette(_globalMethods.GetSelectedPaletteMode(), pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview, pbxStatusTextColourPreview, tslStatus);
-
-            PaletteEditorEngine.ExportPalette(_globalMethods.GetSelectedPaletteMode(), cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledColourPreview, cbxLinkNormalColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview, tslStatus);
+            ExportPaletteColours(UseCircularPictureBoxes);
         }
 
         #region Misc        
@@ -685,6 +727,18 @@ namespace PaletteEditor.UX
             tslStatus.Text = $"The current palette mode is: { _globalMethods.GetSelectedPaletteMode() }";
         }
 
+        private void ExportPaletteColours(bool useCircularPictureBoxes)
+        {
+            if (useCircularPictureBoxes)
+            {
+                PaletteEditorEngine.ExportPalette(_globalMethods.GetSelectedPaletteMode(), cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledColourPreview, cbxLinkNormalColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview, tslStatus);
+            }
+            else
+            {
+                PaletteEditorEngine.ExportPalette(_globalMethods.GetSelectedPaletteMode(), pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview, pbxStatusTextColourPreview, tslStatus);
+            }
+        }
+
         private void kbtnGetColourInformation_Click(object sender, EventArgs e)
         {
             ColourInformation colourInformation = new ColourInformation();
@@ -694,19 +748,7 @@ namespace PaletteEditor.UX
 
         private void kbtnImportColourScheme_Click(object sender, EventArgs e)
         {
-            tslStatus.Text = "Attempting to inport colours from selected palette. Please wait...";
-
-            PaletteImportManager paletteImportManager = new PaletteImportManager();
-
-            paletteImportManager.ImportColourScheme();
-
-            kchkUpdateColours.Enabled = true;
-
-            kcmbBasePaletteMode.Text = _globalStringSettingsManager.GetBasePaletteMode();
-
-            tslStatus.Text = _globalStringSettingsManager.GetFeedbackText();
-
-            kchkUpdateColours.Checked = true;
+            Open();
         }
 
         private void kchkUpdateColours_CheckedChanged(object sender, EventArgs e)
@@ -736,22 +778,52 @@ namespace PaletteEditor.UX
 
         private void kchkInvertColours_CheckedChanged(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            if (kchkInvertColours.Checked)
+            {
+                InvertColours(UseCircularPictureBoxes);
+            }
+        }
+
+        private void InvertColours(bool useCircularPictureBoxes)
+        {
+            if (UseCircularPictureBoxes)
+            {
+                ColourUtilities.InvertColours(cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledColourPreview, cbxLinkNormalColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview);
+
+                invertColoursToolStripMenuItem.Checked = true;
+
+                kchkInvertColours.Checked = true;
+            }
+            else
+            {
+                ColourUtilities.InvertColours(pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview, pbxStatusTextColourPreview);
+
+                invertColoursToolStripMenuItem.Checked = true;
+
+                kchkInvertColours.Checked = true;
+            }
         }
 
         private void generateColoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            if (UseCircularPictureBoxes)
+            {
+                GenerateColourScheme(cbxBaseColourPreview.BackColor);
+            }
+            else
+            {
+                GenerateColourScheme(pbxBaseColour.BackColor);
+            }
         }
 
         private void getColoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            GrabPaletteColours(UseCircularPictureBoxes);
         }
 
         private void exportPaletteColoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            ExportPaletteColours(UseCircularPictureBoxes);
         }
 
         private void viewPaletteFileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -771,12 +843,12 @@ namespace PaletteEditor.UX
 
         private void importColourSchemeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            Open();
         }
 
         private void invertColoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            InvertColours(UseCircularPictureBoxes);
         }
 
         private void updateColoursToolStripMenuItem_Click(object sender, EventArgs e)
@@ -786,7 +858,7 @@ namespace PaletteEditor.UX
 
         private void resetColoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            ResetColours(UseCircularPictureBoxes);
         }
 
         private void standardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -797,6 +869,18 @@ namespace PaletteEditor.UX
         private void circularToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+        }
+
+        private void submitFeedbackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-4.70/issues/35");
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutDialog aboutDialog = new AboutDialog();
+
+            aboutDialog.Show();
         }
 
         /// <summary>
@@ -897,6 +981,23 @@ namespace PaletteEditor.UX
             pbxMenuTextColourPreview.Visible = value;
 
             pbxStatusTextColourPreview.Visible = value;
+        }
+
+        private void GenerateColourScheme(Color baseColour)
+        {
+            ColourMixer colourMixer = new ColourMixer(baseColour);
+
+            colourMixer.Show();
+        }
+
+        private void GrabPaletteColours(bool useCircularPictureBoxes)
+        {
+            if (useCircularPictureBoxes)
+            {
+                UpdateColourPalette(useCircularPictureBoxes);
+
+                ShowCircularPreviewBoxes(true);
+            }
         }
         #endregion
     }

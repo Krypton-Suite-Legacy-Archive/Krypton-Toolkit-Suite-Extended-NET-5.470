@@ -120,6 +120,8 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.savePaletteDefinitionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.savePaletteDefinitionAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripSeparator();
+            this.recentPaletteDefinitionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -147,6 +149,10 @@
             this.standardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripSeparator();
             this.circularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripSeparator();
+            this.submitFeedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ttInformation = new System.Windows.Forms.ToolTip(this.components);
             this.palette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -1227,7 +1233,8 @@
             this.ms.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ms.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.optionsToolStripMenuItem});
+            this.optionsToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.ms.Location = new System.Drawing.Point(0, 0);
             this.ms.Name = "ms";
             this.ms.Size = new System.Drawing.Size(1158, 24);
@@ -1243,6 +1250,8 @@
             this.toolStripMenuItem2,
             this.savePaletteDefinitionToolStripMenuItem,
             this.savePaletteDefinitionAsToolStripMenuItem,
+            this.toolStripMenuItem16,
+            this.recentPaletteDefinitionsToolStripMenuItem,
             this.toolStripMenuItem3,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -1286,6 +1295,17 @@
             this.savePaletteDefinitionAsToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.savePaletteDefinitionAsToolStripMenuItem.Text = "Save Palette Definition &As";
             this.savePaletteDefinitionAsToolStripMenuItem.Click += new System.EventHandler(this.savePaletteDefinitionAsToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem16
+            // 
+            this.toolStripMenuItem16.Name = "toolStripMenuItem16";
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(237, 6);
+            // 
+            // recentPaletteDefinitionsToolStripMenuItem
+            // 
+            this.recentPaletteDefinitionsToolStripMenuItem.Name = "recentPaletteDefinitionsToolStripMenuItem";
+            this.recentPaletteDefinitionsToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.recentPaletteDefinitionsToolStripMenuItem.Text = "&Recent Palette Definitions";
             // 
             // toolStripMenuItem3
             // 
@@ -1414,6 +1434,7 @@
             // invertColoursToolStripMenuItem
             // 
             this.invertColoursToolStripMenuItem.CheckOnClick = true;
+            this.invertColoursToolStripMenuItem.Enabled = false;
             this.invertColoursToolStripMenuItem.Name = "invertColoursToolStripMenuItem";
             this.invertColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.invertColoursToolStripMenuItem.Text = "I&nvert Colours";
@@ -1461,23 +1482,52 @@
             // standardToolStripMenuItem
             // 
             this.standardToolStripMenuItem.Name = "standardToolStripMenuItem";
-            this.standardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.standardToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.standardToolStripMenuItem.Text = "&Standard";
             this.standardToolStripMenuItem.Click += new System.EventHandler(this.standardToolStripMenuItem_Click);
             // 
             // toolStripMenuItem14
             // 
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(118, 6);
             // 
             // circularToolStripMenuItem
             // 
             this.circularToolStripMenuItem.Checked = true;
             this.circularToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.circularToolStripMenuItem.Name = "circularToolStripMenuItem";
-            this.circularToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.circularToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.circularToolStripMenuItem.Text = "&Circular";
             this.circularToolStripMenuItem.Click += new System.EventHandler(this.circularToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
+            this.toolStripMenuItem15,
+            this.submitFeedbackToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "H&elp";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.aboutToolStripMenuItem.Text = "A&bout...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem15
+            // 
+            this.toolStripMenuItem15.Name = "toolStripMenuItem15";
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(162, 6);
+            // 
+            // submitFeedbackToolStripMenuItem
+            // 
+            this.submitFeedbackToolStripMenuItem.Name = "submitFeedbackToolStripMenuItem";
+            this.submitFeedbackToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.submitFeedbackToolStripMenuItem.Text = "Submit &Feedback";
+            this.submitFeedbackToolStripMenuItem.Click += new System.EventHandler(this.submitFeedbackToolStripMenuItem_Click);
             // 
             // palette
             // 
@@ -1740,5 +1790,11 @@
         private System.Windows.Forms.ToolStripMenuItem standardToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem14;
         private System.Windows.Forms.ToolStripMenuItem circularToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem15;
+        private System.Windows.Forms.ToolStripMenuItem submitFeedbackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem16;
+        private System.Windows.Forms.ToolStripMenuItem recentPaletteDefinitionsToolStripMenuItem;
     }
 }

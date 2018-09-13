@@ -24,6 +24,64 @@ namespace Tooling.Classes.Other
         #endregion
 
         #region Methods
+        public void ImportColourScheme(KryptonPalette palette)
+        {
+            try
+            {
+                //palette = new KryptonPalette();
+
+                //palette.Import();
+
+                _colourSettingsManager.SetBaseColour(palette.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color1);
+
+                _colourSettingsManager.SetDarkestColour(palette.ButtonStyles.ButtonCluster.StatePressed.Back.Color1);
+
+                _colourSettingsManager.SetMediumColour(palette.ButtonStyles.ButtonCluster.StateNormal.Back.Color1);
+
+                _colourSettingsManager.SetLightColour(palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Back.Color2);
+
+                _colourSettingsManager.SetLightestColour(palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Back.Color1);
+
+                _colourSettingsManager.SetBorderColour(Color.Gray); // Need work
+
+                _colourSettingsManager.SetAlternativeNormalTextColour(palette.ButtonStyles.ButtonCommon.OverrideDefault.Content.LongText.Color1);
+
+                _colourSettingsManager.SetNormalTextColour(palette.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.LongText.Color1);
+
+                _colourSettingsManager.SetDisabledTextColour(palette.ButtonStyles.ButtonCommon.StateDisabled.Content.LongText.Color1);
+
+                _colourSettingsManager.SetDisabledColour(palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1);
+
+                _colourSettingsManager.SetLinkNormalColour(palette.LabelStyles.LabelNormalControl.OverrideNotVisited.LongText.Color1);
+
+                _colourSettingsManager.SetLinkHoverColour(palette.LabelStyles.LabelNormalControl.OverridePressed.LongText.Color1);
+
+                _colourSettingsManager.SetLinkVisitedColour(palette.LabelStyles.LabelNormalControl.OverrideVisited.LongText.Color1);
+
+
+
+                _colourSettingsManager.SetMenuTextColour(palette.ToolMenuStatus.Menu.MenuItemText);
+
+                _colourSettingsManager.SetStatusTextColour(palette.ToolMenuStatus.StatusStrip.StatusStripText);
+
+                _colourSettingsManager.SaveColourSettings();
+
+                _globalStringSettingsManager.SetBasePaletteMode(palette.BasePaletteMode.ToString());
+
+                _globalStringSettingsManager.SetFeedbackText("The import was successful.");
+
+                _globalStringSettingsManager.SaveStringSettings();
+            }
+            catch (Exception exc)
+            {
+                KryptonMessageBox.Show($"Error: { exc.Message }", "Palette Import Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                _globalStringSettingsManager.SetFeedbackText("Failed to import colours!");
+
+                _globalStringSettingsManager.SaveStringSettings();
+            }
+        }
+
         public void ImportColourScheme()
         {
             try
@@ -74,7 +132,7 @@ namespace Tooling.Classes.Other
             }
             catch (Exception exc)
             {
-                KryptonMessageBox.Show($"Error: { exc.Message }", "Palette Import Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                KryptonMessageBox.Show($"Error: { exc.Message }", "_palette Import Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 _globalStringSettingsManager.SetFeedbackText("Failed to import colours!");
 

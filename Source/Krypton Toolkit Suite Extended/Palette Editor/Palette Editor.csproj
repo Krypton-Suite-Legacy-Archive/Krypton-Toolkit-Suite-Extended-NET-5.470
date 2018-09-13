@@ -40,12 +40,16 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Global Utilities\bin\Debug\Global Utilities.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Outlook Grid, Version=4.7.455.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Krypton Navigator, Version=4.70.581.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Krypton Outlook Grid\bin\Debug\Krypton Outlook Grid.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Toolkit">
-      <HintPath>..\..\Required\Krypton Toolkit.dll</HintPath>
+    <Reference Include="Krypton Toolkit, Version=4.70.636.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Workspace">
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Workspace.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -81,6 +85,12 @@
     <Compile Include="UX\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="UX\Viewer\PaletteViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\Viewer\PaletteViewer.Designer.cs">
+      <DependentUpon>PaletteViewer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -96,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Viewer\PaletteViewer.resx">
+      <DependentUpon>PaletteViewer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,6 +128,10 @@
       <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
       <Name>Extended Controls</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Krypton Outlook Grid\Krypton Outlook Grid.csproj">
+      <Project>{2a10c696-45ad-48aa-8ead-2cb322672972}</Project>
+      <Name>Krypton Outlook Grid</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tooling\Tooling.csproj">
       <Project>{efb997fb-1e05-444b-ba02-16c004e1a111}</Project>
       <Name>Tooling</Name>
@@ -123,5 +140,9 @@
   <ItemGroup>
     <None Include="Resources\PE Icon 256 x 256.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PE Icon 512 x 512.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

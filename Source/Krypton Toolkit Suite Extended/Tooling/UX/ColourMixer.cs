@@ -64,6 +64,21 @@ namespace Tooling.UX
 
             SetBlueColourChannelValue(blue);
         }
+
+        public ColourMixer(Color baseColour)
+        {
+            InitializeComponent();
+
+            cpbColourPreview.BackColor = baseColour;
+
+            SetAlphaChannelValue(cpbColourPreview.BackColor.A);
+
+            SetRedColourChannelValue(cpbColourPreview.BackColor.R);
+
+            SetGreenColourChannelValue(cpbColourPreview.BackColor.G);
+
+            SetBlueColourChannelValue(cpbColourPreview.BackColor.B);
+        }
         #endregion
 
         #region Setters & Getters        
