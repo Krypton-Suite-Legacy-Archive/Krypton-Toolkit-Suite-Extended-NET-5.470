@@ -123,9 +123,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 555);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 558);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(879, 5);
+            this.pictureBox1.Size = new System.Drawing.Size(879, 2);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -165,7 +165,7 @@
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(879, 555);
+            this.kryptonPanel2.Size = new System.Drawing.Size(879, 558);
             this.kryptonPanel2.TabIndex = 2;
             // 
             // kbtnUtiliseContrastColour

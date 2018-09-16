@@ -124,16 +124,22 @@ namespace Tooling.UX
         private void knumRedChannelValue_ValueChanged(object sender, EventArgs e)
         {
             pbxBaseColour.BackColor = Color.FromArgb(Convert.ToInt32(knumRedChannelValue.Value), Convert.ToInt32(knumGreenChannelValue.Value), Convert.ToInt32(knumBlueChannelValue.Value));
+
+            ktbRed.Value = Convert.ToInt32(knumRedChannelValue.Value);
         }
 
         private void knumGreenChannelValue_ValueChanged(object sender, EventArgs e)
         {
             pbxBaseColour.BackColor = Color.FromArgb(Convert.ToInt32(knumRedChannelValue.Value), Convert.ToInt32(knumGreenChannelValue.Value), Convert.ToInt32(knumBlueChannelValue.Value));
+
+            ktbGreen.Value = Convert.ToInt32(knumGreenChannelValue.Value);
         }
 
         private void knumBlueChannelValue_ValueChanged(object sender, EventArgs e)
         {
             pbxBaseColour.BackColor = Color.FromArgb(Convert.ToInt32(knumRedChannelValue.Value), Convert.ToInt32(knumGreenChannelValue.Value), Convert.ToInt32(knumBlueChannelValue.Value));
+
+            ktbBlue.Value = Convert.ToInt32(knumBlueChannelValue.Value);
         }
 
         private void kcmbNormalTextColour_SelectedIndexChanged(object sender, EventArgs e)
@@ -282,6 +288,96 @@ namespace Tooling.UX
             PaletteImportManager paletteImportManager = new PaletteImportManager();
 
             paletteImportManager.ImportColourScheme();
+        }
+
+        private void knumAlphaChannelValue_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cpbBaseColourPreview_Click(object sender, EventArgs e)
+        {
+            knumAlphaChannelValue.Value = Convert.ToInt32(cpbBaseColourPreview.BackColor.A);
+
+            knumRedChannelValue.Value = Convert.ToInt32(cpbBaseColourPreview.BackColor.R);
+
+            knumGreenChannelValue.Value = Convert.ToInt32(cpbBaseColourPreview.BackColor.G);
+
+            knumBlueChannelValue.Value = Convert.ToInt32(cpbBaseColourPreview.BackColor.B);
+
+            knumHueValue.Value = Convert.ToDecimal(cpbBaseColourPreview.BackColor.GetHue());
+
+            knumSaturation.Value = Convert.ToDecimal(cpbBaseColourPreview.BackColor.GetSaturation());
+
+            knumBrightness.Value = Convert.ToDecimal(cpbBaseColourPreview.BackColor.GetBrightness());
+        }
+
+        private void cpbDarkestColourPreview_Click(object sender, EventArgs e)
+        {
+            knumAlphaChannelValue.Value = Convert.ToInt32(cpbDarkestColourPreview.BackColor.A);
+
+            knumRedChannelValue.Value = Convert.ToInt32(cpbDarkestColourPreview.BackColor.R);
+
+            knumGreenChannelValue.Value = Convert.ToInt32(cpbDarkestColourPreview.BackColor.G);
+
+            knumBlueChannelValue.Value = Convert.ToInt32(cpbDarkestColourPreview.BackColor.B);
+
+            knumHueValue.Value = Convert.ToDecimal(cpbDarkestColourPreview.BackColor.GetHue());
+
+            knumSaturation.Value = Convert.ToDecimal(cpbDarkestColourPreview.BackColor.GetSaturation());
+
+            knumBrightness.Value = Convert.ToDecimal(cpbDarkestColourPreview.BackColor.GetBrightness());
+        }
+
+        private void cpbMiddleColourPreview_Click(object sender, EventArgs e)
+        {
+            knumAlphaChannelValue.Value = Convert.ToInt32(cpbMiddleColourPreview.BackColor.A);
+
+            knumRedChannelValue.Value = Convert.ToInt32(cpbMiddleColourPreview.BackColor.R);
+
+            knumGreenChannelValue.Value = Convert.ToInt32(cpbMiddleColourPreview.BackColor.G);
+
+            knumBlueChannelValue.Value = Convert.ToInt32(cpbMiddleColourPreview.BackColor.B);
+
+            knumHueValue.Value = Convert.ToDecimal(cpbMiddleColourPreview.BackColor.GetHue());
+
+            knumSaturation.Value = Convert.ToDecimal(cpbMiddleColourPreview.BackColor.GetSaturation());
+
+            knumBrightness.Value = Convert.ToDecimal(cpbMiddleColourPreview.BackColor.GetBrightness());
+        }
+
+        private void cpbLightColourPreview_Click(object sender, EventArgs e)
+        {
+            knumAlphaChannelValue.Value = Convert.ToInt32(cpbLightColourPreview.BackColor.A);
+
+            knumRedChannelValue.Value = Convert.ToInt32(cpbLightColourPreview.BackColor.R);
+
+            knumGreenChannelValue.Value = Convert.ToInt32(cpbLightColourPreview.BackColor.G);
+
+            knumBlueChannelValue.Value = Convert.ToInt32(cpbLightColourPreview.BackColor.B);
+
+            knumHueValue.Value = Convert.ToDecimal(cpbLightColourPreview.BackColor.GetHue());
+
+            knumSaturation.Value = Convert.ToDecimal(cpbLightColourPreview.BackColor.GetSaturation());
+
+            knumBrightness.Value = Convert.ToDecimal(cpbLightColourPreview.BackColor.GetBrightness());
+        }
+
+        private void cpbLightestColourPreview_Click(object sender, EventArgs e)
+        {
+            knumAlphaChannelValue.Value = Convert.ToInt32(cpbLightestColourPreview.BackColor.A);
+
+            knumRedChannelValue.Value = Convert.ToInt32(cpbLightestColourPreview.BackColor.R);
+
+            knumGreenChannelValue.Value = Convert.ToInt32(cpbLightestColourPreview.BackColor.G);
+
+            knumBlueChannelValue.Value = Convert.ToInt32(cpbLightestColourPreview.BackColor.B);
+
+            knumHueValue.Value = Convert.ToDecimal(cpbLightestColourPreview.BackColor.GetHue());
+
+            knumSaturation.Value = Convert.ToDecimal(cpbLightestColourPreview.BackColor.GetSaturation());
+
+            knumBrightness.Value = Convert.ToDecimal(cpbLightestColourPreview.BackColor.GetBrightness());
         }
 
         private void kbtnSaveValues_Click(object sender, EventArgs e)

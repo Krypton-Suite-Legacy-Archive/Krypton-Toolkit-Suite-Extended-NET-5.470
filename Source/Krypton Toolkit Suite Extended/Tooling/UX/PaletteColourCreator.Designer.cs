@@ -93,11 +93,11 @@
             this.tmrUpdateUI = new System.Windows.Forms.Timer(this.components);
             this.tmrAutomateColourSwatchValues = new System.Windows.Forms.Timer(this.components);
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnImportColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.ss = new System.Windows.Forms.StatusStrip();
             this.tsslStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kbtnImportColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cpbLightestColourPreview)).BeginInit();
@@ -190,6 +190,7 @@
             this.cpbLightestColourPreview.Size = new System.Drawing.Size(128, 128);
             this.cpbLightestColourPreview.TabIndex = 4;
             this.cpbLightestColourPreview.TabStop = false;
+            this.cpbLightestColourPreview.Click += new System.EventHandler(this.cpbLightestColourPreview_Click);
             // 
             // cpbDarkestColourPreview
             // 
@@ -199,6 +200,7 @@
             this.cpbDarkestColourPreview.Size = new System.Drawing.Size(128, 128);
             this.cpbDarkestColourPreview.TabIndex = 74;
             this.cpbDarkestColourPreview.TabStop = false;
+            this.cpbDarkestColourPreview.Click += new System.EventHandler(this.cpbDarkestColourPreview_Click);
             // 
             // cpbMiddleColourPreview
             // 
@@ -208,6 +210,7 @@
             this.cpbMiddleColourPreview.Size = new System.Drawing.Size(128, 128);
             this.cpbMiddleColourPreview.TabIndex = 73;
             this.cpbMiddleColourPreview.TabStop = false;
+            this.cpbMiddleColourPreview.Click += new System.EventHandler(this.cpbMiddleColourPreview_Click);
             // 
             // cpbLightColourPreview
             // 
@@ -217,6 +220,7 @@
             this.cpbLightColourPreview.Size = new System.Drawing.Size(128, 128);
             this.cpbLightColourPreview.TabIndex = 72;
             this.cpbLightColourPreview.TabStop = false;
+            this.cpbLightColourPreview.Click += new System.EventHandler(this.cpbLightColourPreview_Click);
             // 
             // cpbBaseColourPreview
             // 
@@ -226,6 +230,7 @@
             this.cpbBaseColourPreview.Size = new System.Drawing.Size(128, 128);
             this.cpbBaseColourPreview.TabIndex = 3;
             this.cpbBaseColourPreview.TabStop = false;
+            this.cpbBaseColourPreview.Click += new System.EventHandler(this.cpbBaseColourPreview_Click);
             // 
             // ktbRed
             // 
@@ -434,6 +439,7 @@
             this.knumAlphaChannelValue.Size = new System.Drawing.Size(120, 28);
             this.knumAlphaChannelValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knumAlphaChannelValue.TabIndex = 53;
+            this.knumAlphaChannelValue.ValueChanged += new System.EventHandler(this.knumAlphaChannelValue_ValueChanged);
             // 
             // kryptonLabel10
             // 
@@ -849,6 +855,18 @@
             this.kryptonPanel2.Size = new System.Drawing.Size(1028, 69);
             this.kryptonPanel2.TabIndex = 1;
             // 
+            // kbtnImportColours
+            // 
+            this.kbtnImportColours.AutoSize = true;
+            this.kbtnImportColours.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnImportColours.Location = new System.Drawing.Point(282, 7);
+            this.kbtnImportColours.Name = "kbtnImportColours";
+            this.kbtnImportColours.Size = new System.Drawing.Size(121, 30);
+            this.kbtnImportColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnImportColours.TabIndex = 61;
+            this.kbtnImportColours.Values.Text = "&Import Colours";
+            this.kbtnImportColours.Click += new System.EventHandler(this.kbtnImportColours_Click);
+            // 
             // ss
             // 
             this.ss.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -886,18 +904,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1028, 2);
             this.panel1.TabIndex = 2;
-            // 
-            // kbtnImportColours
-            // 
-            this.kbtnImportColours.AutoSize = true;
-            this.kbtnImportColours.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnImportColours.Location = new System.Drawing.Point(282, 7);
-            this.kbtnImportColours.Name = "kbtnImportColours";
-            this.kbtnImportColours.Size = new System.Drawing.Size(121, 30);
-            this.kbtnImportColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnImportColours.TabIndex = 61;
-            this.kbtnImportColours.Values.Text = "&Import Colours";
-            this.kbtnImportColours.Click += new System.EventHandler(this.kbtnImportColours_Click);
             // 
             // PaletteColourCreator
             // 

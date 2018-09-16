@@ -32,6 +32,8 @@ namespace PaletteEditor.UX
 
         private GlobalStringSettingsManager _globalStringSettingsManager = new GlobalStringSettingsManager();
 
+        private GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
+
         private Version _currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
 
         private Timer _colourUpdateTimer;
@@ -313,7 +315,7 @@ namespace PaletteEditor.UX
 
             if (UseCircularPictureBoxes)
             {
-                ShowCircularPreviewBoxes(false);
+                ShowCircularPreviewBoxes(_globalBooleanSettingsManager.GetUseCircularPictureBoxes());
             }
 
             TextExtra = $"(Build: { _currentVersion.Build.ToString() })";
@@ -782,11 +784,27 @@ namespace PaletteEditor.UX
             {
                 InvertColours(UseCircularPictureBoxes);
             }
+            else
+            {
+                RevertColours(UseCircularPictureBoxes);
+            }
+        }
+
+        private void RevertColours(bool useCircularPictureBoxes)
+        {
+            if (useCircularPictureBoxes)
+            {
+                ColourUtilities.RevertColours(cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledColourPreview, cbxLinkNormalColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview);
+
+                invertColoursToolStripMenuItem.Checked = false;
+
+                kchkInvertColours.Checked = false;
+            }
         }
 
         private void InvertColours(bool useCircularPictureBoxes)
         {
-            if (UseCircularPictureBoxes)
+            if (useCircularPictureBoxes)
             {
                 ColourUtilities.InvertColours(cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledColourPreview, cbxLinkNormalColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview);
 
@@ -863,12 +881,20 @@ namespace PaletteEditor.UX
 
         private void standardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            ShowCircularPreviewBoxes(false);
+
+            standardToolStripMenuItem.Checked = true;
+
+            circularToolStripMenuItem.Checked = UseCircularPictureBoxes;
         }
 
         private void circularToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            ShowCircularPreviewBoxes(true);
+
+            standardToolStripMenuItem.Checked = false;
+
+            circularToolStripMenuItem.Checked = UseCircularPictureBoxes;
         }
 
         private void submitFeedbackToolStripMenuItem_Click(object sender, EventArgs e)
@@ -922,65 +948,156 @@ namespace PaletteEditor.UX
             }
         }
 
+        private void utiliseAsBaseColourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (UseCircularPictureBoxes)
+            {
+                GenerateColourScheme(cbxBaseColourPreview.BackColor);
+            }
+            else
+            {
+                GenerateColourScheme(pbxBaseColour.BackColor);
+            }
+        }
+
+        private void toolStripMenuItem17_Click(object sender, EventArgs e)
+        {
+            if (UseCircularPictureBoxes)
+            {
+                GenerateColourScheme(cbxDarkColourPreview.BackColor);
+            }
+            else
+            {
+                GenerateColourScheme(pbxDarkColour.BackColor);
+            }
+        }
+
+        private void toolStripMenuItem18_Click(object sender, EventArgs e)
+        {
+            if (UseCircularPictureBoxes)
+            {
+                GenerateColourScheme(cbxMiddleColourPreview.BackColor);
+            }
+            else
+            {
+                GenerateColourScheme(pbxMiddleColour.BackColor);
+            }
+        }
+
+        private void toolStripMenuItem19_Click(object sender, EventArgs e)
+        {
+            if (UseCircularPictureBoxes)
+            {
+                GenerateColourScheme(cbxLightColourPreview.BackColor);
+            }
+            else
+            {
+                GenerateColourScheme(pbxLightColour.BackColor);
+            }
+        }
+
+        private void toolStripMenuItem20_Click(object sender, EventArgs e)
+        {
+            if (UseCircularPictureBoxes)
+            {
+                GenerateColourScheme(cbxLightestColourPreview.BackColor);
+            }
+            else
+            {
+                GenerateColourScheme(pbxLightestColour.BackColor);
+            }
+        }
+
         /// <summary>
         /// Shows or hides the circular preview boxes.
         /// </summary>
         /// <param name="value">if set to <c>true</c> [value].</param>
         private void ShowCircularPreviewBoxes(bool value)
         {
-            pbxBaseColour.Visible = value;
+            GlobalBooleanSettingsManager globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
 
-            pbxDarkColour.Visible = value;
+            #region Old Code
+            //pbxBaseColour.Visible = value;
 
-            pbxMiddleColour.Visible = value;
+            //pbxDarkColour.Visible = value;
 
-            pbxLightColour.Visible = value;
+            //pbxMiddleColour.Visible = value;
 
-            pbxLightestColour.Visible = value;
+            //pbxLightColour.Visible = value;
 
-            pbxBorderColourPreview.Visible = value;
+            //pbxLightestColour.Visible = value;
 
-            pbxAlternativeNormalTextColour.Visible = value;
+            //pbxBorderColourPreview.Visible = value;
 
-            pbxNormalTextColourPreview.Visible = value;
+            //pbxAlternativeNormalTextColour.Visible = value;
 
-            pbxDisabledTextColourPreview.Visible = value;
+            //pbxNormalTextColourPreview.Visible = value;
 
-            pbxFocusedTextColourPreview.Visible = value;
+            //pbxDisabledTextColourPreview.Visible = value;
 
-            pbxPressedTextColourPreview.Visible = value;
+            //pbxFocusedTextColourPreview.Visible = value;
 
-            pbxDisabledColourPreview.Visible = value;
+            //pbxPressedTextColourPreview.Visible = value;
 
-            pbxLinkNormalColourPreview.Visible = value;
+            //pbxDisabledColourPreview.Visible = value;
 
-            pbxLinkHoverColourPreview.Visible = value;
+            //pbxLinkNormalColourPreview.Visible = value;
 
-            pbxLinkVisitedColourPreview.Visible = value;
+            //pbxLinkHoverColourPreview.Visible = value;
 
-            pbxCustomColourOnePreview.Visible = value;
+            //pbxLinkVisitedColourPreview.Visible = value;
 
-            pbxCustomColourTwoPreview.Visible = value;
+            //pbxCustomColourOnePreview.Visible = value;
 
-            pbxCustomColourThreePreview.Visible = value;
+            //pbxCustomColourTwoPreview.Visible = value;
 
-            pbxCustomColourFourPreview.Visible = value;
+            //pbxCustomColourThreePreview.Visible = value;
 
-            pbxCustomColourFivePreview.Visible = value;
+            //pbxCustomColourFourPreview.Visible = value;
 
-            pbxCustomTextColourOnePreview.Visible = value;
+            //pbxCustomColourFivePreview.Visible = value;
 
-            pbxCustomTextColourTwoPreview.Visible = value;
+            //pbxCustomTextColourOnePreview.Visible = value;
 
-            pbxCustomTextColourThreePreview.Visible = value;
+            //pbxCustomTextColourTwoPreview.Visible = value;
 
-            pbxCustomTextColourFourPreview.Visible = value;
+            //pbxCustomTextColourThreePreview.Visible = value;
 
-            pbxCustomTextColourFivePreview.Visible = value;
+            //pbxCustomTextColourFourPreview.Visible = value;
 
-            pbxMenuTextColourPreview.Visible = value;
+            //pbxCustomTextColourFivePreview.Visible = value;
 
-            pbxStatusTextColourPreview.Visible = value;
+            //pbxMenuTextColourPreview.Visible = value;
+
+            //pbxStatusTextColourPreview.Visible = value;
+            #endregion
+
+            if (value)
+            {
+                kgbCircularColourPreviewPane.Visible = true;
+
+                kgbPreviewPane.Visible = false;
+
+                standardToolStripMenuItem.Checked = false;
+
+                circularToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                kgbCircularColourPreviewPane.Visible = false;
+
+                kgbPreviewPane.Visible = true;
+
+                standardToolStripMenuItem.Checked = true;
+
+                circularToolStripMenuItem.Checked = false;
+            }
+
+            globalBooleanSettingsManager.SetUseCircularPictureBoxes(value);
+
+            UseCircularPictureBoxes = globalBooleanSettingsManager.GetUseCircularPictureBoxes();
+
+            globalBooleanSettingsManager.SaveBooleanSettings();
         }
 
         private void GenerateColourScheme(Color baseColour)
