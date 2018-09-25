@@ -318,4 +318,13 @@
         /// </summary>
         STATUSTEXTCOLOUR
     }
+
+    public enum BasicPaletteColourDefinitions
+    {
+        BASECOLOUR = 0,
+        DARKESTCOLOUR = 1,
+        MIDDLECOLOUR = 2,
+        LIGHTCOLOUR = 3,
+        LIGHTESTCOLOUR = 4
+    }
 }

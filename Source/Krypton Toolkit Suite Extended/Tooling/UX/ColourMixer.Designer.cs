@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColourMixer));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.cpbColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.ktxtHexValue = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kchkGenerateAlphaValue = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kbtnGenerateColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -58,21 +59,18 @@
             this.kbtnDefineCustomColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cpbColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbColourPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
             this.kryptonPanel1.Controls.Add(this.cpbColourPreview);
             this.kryptonPanel1.Controls.Add(this.ktxtHexValue);
-            this.kryptonPanel1.Controls.Add(this.kchkGenerateAlphaValue);
-            this.kryptonPanel1.Controls.Add(this.kbtnGenerateColour);
             this.kryptonPanel1.Controls.Add(this.kbtnGenerateBlueValue);
             this.kryptonPanel1.Controls.Add(this.kbtnGenerateGreenValue);
             this.kryptonPanel1.Controls.Add(this.kbtnGenerateRedValue);
@@ -96,6 +94,15 @@
             this.kryptonPanel1.Size = new System.Drawing.Size(1204, 314);
             this.kryptonPanel1.TabIndex = 0;
             // 
+            // cpbColourPreview
+            // 
+            this.cpbColourPreview.BackColor = System.Drawing.Color.Transparent;
+            this.cpbColourPreview.Location = new System.Drawing.Point(13, 12);
+            this.cpbColourPreview.Name = "cpbColourPreview";
+            this.cpbColourPreview.Size = new System.Drawing.Size(206, 195);
+            this.cpbColourPreview.TabIndex = 3;
+            this.cpbColourPreview.TabStop = false;
+            // 
             // ktxtHexValue
             // 
             this.ktxtHexValue.Location = new System.Drawing.Point(140, 226);
@@ -108,7 +115,7 @@
             // 
             // kchkGenerateAlphaValue
             // 
-            this.kchkGenerateAlphaValue.Location = new System.Drawing.Point(987, 227);
+            this.kchkGenerateAlphaValue.Location = new System.Drawing.Point(759, 9);
             this.kchkGenerateAlphaValue.Name = "kchkGenerateAlphaValue";
             this.kchkGenerateAlphaValue.Size = new System.Drawing.Size(205, 26);
             this.kchkGenerateAlphaValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,7 +126,7 @@
             // 
             this.kbtnGenerateColour.AutoSize = true;
             this.kbtnGenerateColour.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGenerateColour.Location = new System.Drawing.Point(784, 223);
+            this.kbtnGenerateColour.Location = new System.Drawing.Point(556, 6);
             this.kbtnGenerateColour.Name = "kbtnGenerateColour";
             this.kbtnGenerateColour.Size = new System.Drawing.Size(197, 30);
             this.kbtnGenerateColour.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -377,7 +384,9 @@
             // 
             this.kryptonPanel2.Controls.Add(this.kbtnDefineCustomColours);
             this.kryptonPanel2.Controls.Add(this.kbtnOk);
+            this.kryptonPanel2.Controls.Add(this.kchkGenerateAlphaValue);
             this.kryptonPanel2.Controls.Add(this.kbtnUtiliseAsBaseColour);
+            this.kryptonPanel2.Controls.Add(this.kbtnGenerateColour);
             this.kryptonPanel2.Controls.Add(this.kbtnGenerate);
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 269);
@@ -417,15 +426,6 @@
             this.panel1.Size = new System.Drawing.Size(1204, 2);
             this.panel1.TabIndex = 2;
             // 
-            // cpbColourPreview
-            // 
-            this.cpbColourPreview.BackColor = System.Drawing.Color.Transparent;
-            this.cpbColourPreview.Location = new System.Drawing.Point(13, 12);
-            this.cpbColourPreview.Name = "cpbColourPreview";
-            this.cpbColourPreview.Size = new System.Drawing.Size(206, 195);
-            this.cpbColourPreview.TabIndex = 3;
-            this.cpbColourPreview.TabStop = false;
-            // 
             // ColourMixer
             // 
             this.AcceptButton = this.kbtnOk;
@@ -447,11 +447,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbColourPreview)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -40,16 +40,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Global Utilities\bin\Debug\Global Utilities.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Navigator, Version=4.70.581.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="Krypton Navigator, Version=4.70.588.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Toolkit, Version=4.70.636.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="Krypton Toolkit, Version=4.70.641.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Workspace">
-      <HintPath>..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Workspace.dll</HintPath>
+    <Reference Include="Krypton Workspace, Version=4.70.590.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Workspace.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

@@ -25,10 +25,14 @@ namespace Tooling.UX
         private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
 
         private Color _baseColour, _colourDark, _colourNormal, _colourLight, _colourLightness;
+
+        private bool _paletteColourSelector;
         #endregion
 
         #region Properties
         public Color BaseColour { get { return _baseColour; } set { _baseColour = value; } }
+
+        public bool PaletteColourSelector { get { return _paletteColourSelector; } set { _paletteColourSelector = value; } }
         #endregion
 
         #region Constructors
@@ -67,7 +71,57 @@ namespace Tooling.UX
 
             BaseColour = baseColour;
 
-            cpbBaseColourPreview.BackColor = baseColour;
+            cpbBaseColourPreview.BackColor = BaseColour;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaletteColourCreator"/> class.
+        /// </summary>
+        /// <param name="paletteColourSelector">if set to <c>true</c> [palette colour selector].</param>
+        public PaletteColourCreator(bool paletteColourSelector)
+        {
+            InitializeComponent();
+
+            PaletteColourSelector = paletteColourSelector;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaletteColourCreator"/> class.
+        /// </summary>
+        /// <param name="paletteColourSelector">if set to <c>true</c> [palette colour selector].</param>
+        /// <param name="alphaValue">The alpha value.</param>
+        /// <param name="redValue">The red value.</param>
+        /// <param name="greenValue">The green value.</param>
+        /// <param name="blueValue">The blue value.</param>
+        public PaletteColourCreator(bool paletteColourSelector, int alphaValue, int redValue, int greenValue, int blueValue)
+        {
+            InitializeComponent();
+
+            PaletteColourSelector = paletteColourSelector;
+
+            knumAlphaChannelValue.Value = alphaValue;
+
+            knumRedChannelValue.Value = redValue;
+
+            knumGreenChannelValue.Value = greenValue;
+
+            knumBlueChannelValue.Value = blueValue;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PaletteColourCreator"/> class.
+        /// </summary>
+        /// <param name="paletteColourSelector">if set to <c>true</c> [palette colour selector].</param>
+        /// <param name="baseColour">The base colour.</param>
+        public PaletteColourCreator(bool paletteColourSelector, Color baseColour)
+        {
+            InitializeComponent();
+
+            PaletteColourSelector = paletteColourSelector;
+
+            BaseColour = BaseColour;
+
+            cpbBaseColourPreview.BackColor = BaseColour;
         }
         #endregion
 
@@ -82,6 +136,23 @@ namespace Tooling.UX
                 kcmbDisabledTextColour.AutoCompleteCustomSource.Add(colour.ToString());
 
                 kcmbDisabledTextColour.Items.Add(colour);
+            }
+
+            if (PaletteColourSelector)
+            {
+                kbtnDefineIndividualColours.Visible = true;
+
+                kbtnDefineIndividualColours.Enabled = true;
+
+                kchkAutomateColourSwatchValues.Location = new Point(609, 9);
+            }
+            else
+            {
+                kbtnDefineIndividualColours.Visible = false;
+
+                kbtnDefineIndividualColours.Enabled = false;
+
+                kchkAutomateColourSwatchValues.Location = new Point(409, 9);
             }
         }
 
@@ -378,6 +449,13 @@ namespace Tooling.UX
             knumSaturation.Value = Convert.ToDecimal(cpbLightestColourPreview.BackColor.GetSaturation());
 
             knumBrightness.Value = Convert.ToDecimal(cpbLightestColourPreview.BackColor.GetBrightness());
+        }
+
+        private void kbtnDefineIndividualColours_Click(object sender, EventArgs e)
+        {
+            DefineIndividualColoursDialog defineIndividualColours = new DefineIndividualColoursDialog();
+
+            defineIndividualColours.Show();
         }
 
         private void kbtnSaveValues_Click(object sender, EventArgs e)

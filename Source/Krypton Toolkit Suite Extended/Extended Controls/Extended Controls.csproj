@@ -36,25 +36,25 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Docking, Version=4.70.570.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="Krypton Docking, Version=4.70.588.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\Krypton Docking.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Docking.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Navigator, Version=4.70.570.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="Krypton Navigator, Version=4.70.587.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\Krypton Navigator.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Ribbon, Version=4.70.571.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="Krypton Ribbon, Version=4.70.588.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\Krypton Ribbon.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Ribbon.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Toolkit, Version=4.70.593.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="Krypton Toolkit, Version=4.70.641.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\Krypton Toolkit.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Workspace, Version=4.70.571.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="Krypton Workspace, Version=4.70.589.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\Krypton Workspace.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Workspace.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\PresentationCore.dll</HintPath>
@@ -62,6 +62,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
@@ -87,6 +88,7 @@
     <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
     <Compile Include="Base\Code\MostRecentlyUsedFileManager.cs" />
     <Compile Include="Base\Code\PI.cs" />
+    <Compile Include="Base\Code\TypefaceHelper.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
     <Compile Include="Base\Enumerations\Enumerations.cs" />
     <Compile Include="Base\UI\KryptonFormBase.cs">
@@ -179,6 +181,12 @@
     <Compile Include="ExtendedToolkit\ToolstripControls\ToolStripMenuItemUACSheld.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.Designer.cs">
+      <DependentUpon>TypefaceSelectionDialogue.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\KryptonFormWithDropShadow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +277,15 @@
     <None Include="Resources\Question 128 x 128.png" />
     <None Include="Resources\Stop 128 x 128.png" />
     <None Include="Resources\Warning 128 x 128.png" />
+    <None Include="Resources\Class_16x.png" />
+    <None Include="Resources\Cube_16x.png" />
+    <None Include="Resources\Event_16x.png" />
+    <None Include="Resources\Interface_16x.png" />
+    <None Include="Resources\Namespace_16x.png" />
+    <None Include="Resources\Property_16x.png" />
+    <None Include="Resources\download.jpg" />
+    <None Include="Resources\ttf-2.png" />
+    <None Include="Resources\ttf-2_16_x_16.png" />
     <Content Include="ToolboxBitmaps\KryptonForm.bmp" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
@@ -284,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\KryptonSaveFileDialog.resx">
       <DependentUpon>KryptonSaveFileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.resx">
+      <DependentUpon>TypefaceSelectionDialogue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\KryptonSplashScreen.resx">
       <DependentUpon>KryptonSplashScreen.cs</DependentUpon>

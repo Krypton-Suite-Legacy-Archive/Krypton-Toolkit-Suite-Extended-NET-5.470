@@ -16,7 +16,7 @@ namespace PaletteEditor.UX
     public partial class MainWindow : KryptonForm
     {
         #region Variables
-        private bool _dirty, _loaded, _debugMode = true, _useCircularPictureBoxes = true;
+        private bool _dirty, _loaded, _debugMode, _useCircularPictureBoxes;
 
         private string _fileName;
 
@@ -66,6 +66,10 @@ namespace PaletteEditor.UX
             _colourUpdateTimer.Interval = 250;
 
             _colourUpdateTimer.Tick += new EventHandler(ColourUpdateTimer_Tick);
+
+            DebugMode = _globalBooleanSettingsManager.GetDevelopmentMode();
+
+            UseCircularPictureBoxes = _globalBooleanSettingsManager.GetUseCircularPictureBoxes();
 
             //IAbout.ApplicationIcon = Icon;
 
@@ -1102,7 +1106,7 @@ namespace PaletteEditor.UX
 
         private void GenerateColourScheme(Color baseColour)
         {
-            ColourMixer colourMixer = new ColourMixer(baseColour);
+            ColourMixer colourMixer = new ColourMixer(true, baseColour);
 
             colourMixer.Show();
         }

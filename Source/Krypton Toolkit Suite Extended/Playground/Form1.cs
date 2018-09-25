@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Enumerations;
+using ExtendedControls.ExtendedToolkit.UI.Dialogues;
 using KryptonApplicationUpdater.Classes.SettingsManager;
 using KryptonApplicationUpdater.Interfaces;
 using KryptonExtendedToolkit.Base.Code;
@@ -306,6 +307,13 @@ namespace Playground
             PaletteEditor.UX.MainWindow _paletteEditor = new PaletteEditor.UX.MainWindow();
 
             _paletteEditor.Show();
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            TypefaceSelectionDialogue typefaceSelectionDialogue = new TypefaceSelectionDialogue();
+
+            typefaceSelectionDialogue.Show();
         }
     }
 }

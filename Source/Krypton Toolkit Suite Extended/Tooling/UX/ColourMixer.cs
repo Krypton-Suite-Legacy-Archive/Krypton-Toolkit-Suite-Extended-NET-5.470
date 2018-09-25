@@ -22,6 +22,8 @@ namespace Tooling.UX
         private Random randomColour = new Random();
 
         private ColourUtility _colourUtility = new ColourUtility();
+
+        private bool _paletteColourSelector;
         #endregion
 
         #region Properties
@@ -32,6 +34,8 @@ namespace Tooling.UX
         public int GreenColourChannelValue { get { return _greenColourChannelValue; } set { _greenColourChannelValue = value; } }
 
         public int BlueColourChannelValue { get { return _blueColourChannelValue; } set { _blueColourChannelValue = value; } }
+
+        public bool PaletteColourSelector { get { return _paletteColourSelector; } set { _paletteColourSelector = value; } }
         #endregion
 
         #region Constructors        
@@ -68,6 +72,45 @@ namespace Tooling.UX
         public ColourMixer(Color baseColour)
         {
             InitializeComponent();
+
+            cpbColourPreview.BackColor = baseColour;
+
+            SetAlphaChannelValue(cpbColourPreview.BackColor.A);
+
+            SetRedColourChannelValue(cpbColourPreview.BackColor.R);
+
+            SetGreenColourChannelValue(cpbColourPreview.BackColor.G);
+
+            SetBlueColourChannelValue(cpbColourPreview.BackColor.B);
+        }
+
+        public ColourMixer(bool paletteColourSelector)
+        {
+            InitializeComponent();
+
+            PaletteColourSelector = paletteColourSelector;
+        }
+
+        public ColourMixer(bool paletteColourSelector, int alpha, int red, int green, int blue)
+        {
+            InitializeComponent();
+
+            PaletteColourSelector = paletteColourSelector;
+
+            SetAlphaChannelValue(alpha);
+
+            SetRedColourChannelValue(red);
+
+            SetGreenColourChannelValue(green);
+
+            SetBlueColourChannelValue(blue);
+        }
+
+        public ColourMixer(bool paletteColourSelector, Color baseColour)
+        {
+            InitializeComponent();
+
+            PaletteColourSelector = paletteColourSelector;
 
             cpbColourPreview.BackColor = baseColour;
 
@@ -332,7 +375,7 @@ namespace Tooling.UX
 
         private void kbtnUtiliseAsBaseColour_Click(object sender, EventArgs e)
         {
-            PaletteColourCreator paletteColourCreator = new PaletteColourCreator(Convert.ToInt32(knumAlphaChannelValue.Value), Convert.ToInt32(knumRedChannelValue.Value), Convert.ToInt32(knumGreenChannelValue.Value), Convert.ToInt32(knumBlueChannelValue.Value));
+            PaletteColourCreator paletteColourCreator = new PaletteColourCreator(PaletteColourSelector, Convert.ToInt32(knumAlphaChannelValue.Value), Convert.ToInt32(knumRedChannelValue.Value), Convert.ToInt32(knumGreenChannelValue.Value), Convert.ToInt32(knumBlueChannelValue.Value));
 
             paletteColourCreator.Show();
         }

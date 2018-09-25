@@ -83,6 +83,16 @@ namespace ExtendedControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Class_16x {
+            get {
+                object obj = ResourceManager.GetObject("Class_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ColumnHeader_Filtered {
             get {
                 object obj = ResourceManager.GetObject("ColumnHeader_Filtered", resourceCulture);
@@ -173,9 +183,39 @@ namespace ExtendedControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cube_16x {
+            get {
+                object obj = ResourceManager.GetObject("Cube_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap error {
             get {
                 object obj = ResourceManager.GetObject("error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Event_16x {
+            get {
+                object obj = ResourceManager.GetObject("Event_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,6 +393,16 @@ namespace ExtendedControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Interface_16x {
+            get {
+                object obj = ResourceManager.GetObject("Interface_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MenuStrip_OrderASCbool {
             get {
                 object obj = ResourceManager.GetObject("MenuStrip_OrderASCbool", resourceCulture);
@@ -423,6 +473,16 @@ namespace ExtendedControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Namespace_16x {
+            get {
+                object obj = ResourceManager.GetObject("Namespace_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ok {
             get {
                 object obj = ResourceManager.GetObject("Ok", resourceCulture);
@@ -447,6 +507,16 @@ namespace ExtendedControls.Properties {
             get {
                 object obj = ResourceManager.GetObject("progress_bar", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Property_16x {
+            get {
+                object obj = ResourceManager.GetObject("Property_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -646,6 +716,26 @@ namespace ExtendedControls.Properties {
         internal static System.Drawing.Bitmap Symbol_Error {
             get {
                 object obj = ResourceManager.GetObject("Symbol_Error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ttf_2 {
+            get {
+                object obj = ResourceManager.GetObject("ttf_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ttf_2_16_x_16 {
+            get {
+                object obj = ResourceManager.GetObject("ttf_2_16_x_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

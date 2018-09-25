@@ -39,18 +39,16 @@
     <Reference Include="Global Utilities">
       <HintPath>..\Global Utilities\bin\Debug\Global Utilities.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Navigator">
-      <HintPath>..\..\Required\Krypton Navigator.dll</HintPath>
+    <Reference Include="Krypton Navigator, Version=4.70.587.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
     </Reference>
     <Reference Include="Krypton Outlook Grid">
       <HintPath>..\Krypton Outlook Grid\bin\Debug\Krypton Outlook Grid.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Toolkit, Version=4.70.633.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+    <Reference Include="Krypton Toolkit, Version=4.70.641.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Required\Krypton Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack.Shell">
       <HintPath>C:\Users\Peter William Wagner\.nuget\packages\windowsapicodepack\1.1.0\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
@@ -104,6 +102,7 @@
     <Compile Include="Classes\Other\SettingsManager.cs" />
     <Compile Include="Classes\Other\ToolStripNonClientRenderer.cs" />
     <Compile Include="Classes\Other\ToolTipManager.cs" />
+    <Compile Include="Classes\Other\TypefaceHelper.cs" />
     <Compile Include="Controls\Colours\ColourEditorManager.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -231,6 +230,12 @@
     <Compile Include="UX\CustomColoursOld.Designer.cs">
       <DependentUpon>CustomColoursOld.cs</DependentUpon>
     </Compile>
+    <Compile Include="UX\DefineIndividualColoursDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\DefineIndividualColoursDialog.Designer.cs">
+      <DependentUpon>DefineIndividualColoursDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="UX\PaletteColourCreator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,6 +314,9 @@
     <EmbeddedResource Include="UX\CustomColoursOld.resx">
       <DependentUpon>CustomColoursOld.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UX\DefineIndividualColoursDialog.resx">
+      <DependentUpon>DefineIndividualColoursDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UX\PaletteColourCreator.resx">
       <DependentUpon>PaletteColourCreator.cs</DependentUpon>
     </EmbeddedResource>
@@ -360,23 +368,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\10-large-opt.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="AutoCompleteMenu-ScintillaNET">
-      <Version>1.6.1</Version>
-    </PackageReference>
-    <PackageReference Include="EasyScintilla">
-      <Version>1.0.4</Version>
-    </PackageReference>
-    <PackageReference Include="jacobslusser.ScintillaNET">
-      <Version>3.6.3</Version>
-    </PackageReference>
-    <PackageReference Include="log4net">
-      <Version>2.0.8</Version>
-    </PackageReference>
-    <PackageReference Include="ScintillaNet.SearchBox">
-      <Version>1.0.3</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

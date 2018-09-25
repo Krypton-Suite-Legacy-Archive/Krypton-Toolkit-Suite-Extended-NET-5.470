@@ -8,6 +8,16 @@
 
 ======
 
+## 2018-09-25 September Update
+* Refined `Palette Editor` UI
+* Allow users to define **any** colour in the `Palette Editor` using a context menu
+* Begun work on a new typeface/font dialog box
+* Begun work on a new `Define Basic Palette Colours` UI to allow users to define custom basic palette colours (currently in pre-alpha stages)
+* Updated the required Krypton DLLs to build 643 (build date Tuesday 25th September, 2018)
+* General code updates
+
+======
+
 ## 2018-08-27 Colour Controls & Palette Editor
 * New colour controls and UI options have been implemented to easily create brand new themes
 * New application named `Palette Editor` has been implemented to create new themes (89% completed) - feedback would be welcome
