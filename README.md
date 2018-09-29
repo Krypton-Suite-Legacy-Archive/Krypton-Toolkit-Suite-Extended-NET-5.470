@@ -4,7 +4,14 @@
 
 ## An extension to the Krypton Toolkit suite of controls for .NET framework 4.7 
 
+=======
+
 ## NOTE: 20/06/2018 Background menu colours will be implemented in the comming weeks. Stay tuned for updates!
+
+======
+
+# Building this repository from code
+## In order to compile the code, you MUST restore the NuGet packages in order to build successfuly!
 
 ======
 
