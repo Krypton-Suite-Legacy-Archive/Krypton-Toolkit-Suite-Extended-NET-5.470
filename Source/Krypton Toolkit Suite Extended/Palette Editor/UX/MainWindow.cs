@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using GlobalUtilities.Interfaces;
+using KryptonExtendedToolkit.Base.Code;
 using PaletteEditor.Classes;
 using System;
 using System.Diagnostics;
@@ -33,6 +34,8 @@ namespace PaletteEditor.UX
         private GlobalStringSettingsManager _globalStringSettingsManager = new GlobalStringSettingsManager();
 
         private GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
+
+        private MostRecentlyUsedFileManager _mostRecentlyUsedFileManager;
 
         private Version _currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
 
@@ -187,6 +190,8 @@ namespace PaletteEditor.UX
             invertColoursToolStripMenuItem.Enabled = true;
 
             kchkInvertColours.Enabled = true;
+
+            _mostRecentlyUsedFileManager.AddRecentFile(filename);
         }
 
         private void Save()
@@ -312,6 +317,8 @@ namespace PaletteEditor.UX
         private void MainWindow_Load(object sender, EventArgs e)
         {
             New();
+
+            _mostRecentlyUsedFileManager = new MostRecentlyUsedFileManager(recentPaletteDefinitionsToolStripMenuItem, "Palette Editor", MyOwnRecentPaletteFileGotClicked_Handler, MyOwnRecentPaletteFilesGotCleared_Handler);
 
             ColourUtilities.PropagateBasePaletteModes(kcmbBasePaletteMode);
 
@@ -1119,6 +1126,32 @@ namespace PaletteEditor.UX
 
                 ShowCircularPreviewBoxes(true);
             }
+        }
+
+        private void MyOwnRecentPaletteFileGotClicked_Handler(object sender, EventArgs e)
+        {
+            string fileName = (sender as ToolStripItem).Text;
+
+            if (!File.Exists(fileName))
+            {
+                if (KryptonMessageBox.Show($"{ fileName } doesn't exist. Remove from recent workspaces?", "File not found", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    _mostRecentlyUsedFileManager.RemoveRecentFile(fileName);
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            _palette.Import(fileName);
+
+            //OpenFile(fileName);
+        }
+
+        private void MyOwnRecentPaletteFilesGotCleared_Handler(object sender, EventArgs e)
+        {
+
         }
         #endregion
     }

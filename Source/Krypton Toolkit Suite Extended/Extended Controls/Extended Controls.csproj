@@ -318,6 +318,9 @@
     <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5470">
+      <Version>5.470.700</Version>
+    </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>
     </PackageReference>

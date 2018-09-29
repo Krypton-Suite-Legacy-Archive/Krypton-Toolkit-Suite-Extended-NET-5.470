@@ -33,8 +33,6 @@
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.cpbColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.ktxtHexValue = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kchkGenerateAlphaValue = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
-            this.kbtnGenerateColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnGenerateBlueValue = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnGenerateGreenValue = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnGenerateRedValue = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -52,6 +50,8 @@
             this.ktbGreen = new ComponentFactory.Krypton.Toolkit.KryptonTrackBar();
             this.ktbBlue = new ComponentFactory.Krypton.Toolkit.KryptonTrackBar();
             this.ktbAlpha = new ComponentFactory.Krypton.Toolkit.KryptonTrackBar();
+            this.kchkGenerateAlphaValue = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kbtnGenerateColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnUtiliseAsBaseColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tmrUpdate = new System.Windows.Forms.Timer(this.components);
@@ -112,27 +112,6 @@
             this.ktxtHexValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ktxtHexValue.TabIndex = 10;
             this.ktxtHexValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // kchkGenerateAlphaValue
-            // 
-            this.kchkGenerateAlphaValue.Location = new System.Drawing.Point(759, 9);
-            this.kchkGenerateAlphaValue.Name = "kchkGenerateAlphaValue";
-            this.kchkGenerateAlphaValue.Size = new System.Drawing.Size(205, 26);
-            this.kchkGenerateAlphaValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kchkGenerateAlphaValue.TabIndex = 30;
-            this.kchkGenerateAlphaValue.Values.Text = "&Generate an Alpha Value";
-            // 
-            // kbtnGenerateColour
-            // 
-            this.kbtnGenerateColour.AutoSize = true;
-            this.kbtnGenerateColour.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGenerateColour.Location = new System.Drawing.Point(556, 6);
-            this.kbtnGenerateColour.Name = "kbtnGenerateColour";
-            this.kbtnGenerateColour.Size = new System.Drawing.Size(197, 30);
-            this.kbtnGenerateColour.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGenerateColour.TabIndex = 29;
-            this.kbtnGenerateColour.Values.Text = "Generate Random &Colour";
-            this.kbtnGenerateColour.Click += new System.EventHandler(this.kbtnGenerateColour_Click);
             // 
             // kbtnGenerateBlueValue
             // 
@@ -349,6 +328,29 @@
             this.ktbAlpha.TabIndex = 0;
             this.ktbAlpha.TickStyle = System.Windows.Forms.TickStyle.None;
             this.ktbAlpha.ValueChanged += new System.EventHandler(this.ktbAlpha_ValueChanged);
+            // 
+            // kchkGenerateAlphaValue
+            // 
+            this.kchkGenerateAlphaValue.Location = new System.Drawing.Point(759, 9);
+            this.kchkGenerateAlphaValue.Name = "kchkGenerateAlphaValue";
+            this.kchkGenerateAlphaValue.Size = new System.Drawing.Size(205, 26);
+            this.kchkGenerateAlphaValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kchkGenerateAlphaValue.TabIndex = 30;
+            this.kchkGenerateAlphaValue.Values.Text = "&Generate an Alpha Value";
+            this.kchkGenerateAlphaValue.Visible = false;
+            // 
+            // kbtnGenerateColour
+            // 
+            this.kbtnGenerateColour.AutoSize = true;
+            this.kbtnGenerateColour.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnGenerateColour.Location = new System.Drawing.Point(556, 6);
+            this.kbtnGenerateColour.Name = "kbtnGenerateColour";
+            this.kbtnGenerateColour.Size = new System.Drawing.Size(197, 30);
+            this.kbtnGenerateColour.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateColour.TabIndex = 29;
+            this.kbtnGenerateColour.Values.Text = "Generate Random &Colour";
+            this.kbtnGenerateColour.Visible = false;
+            this.kbtnGenerateColour.Click += new System.EventHandler(this.kbtnGenerateColour_Click);
             // 
             // kbtnGenerate
             // 
