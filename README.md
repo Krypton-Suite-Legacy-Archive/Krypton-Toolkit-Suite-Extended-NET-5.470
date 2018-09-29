@@ -11,7 +11,7 @@
 ======
 
 # Building this repository from code
-## In order to compile the code, you MUST restore the NuGet packages in order to build successfuly!
+## In order to compile the code, you MUST restore/update the NuGet packages in order to build successfuly!
 
 ======
 
