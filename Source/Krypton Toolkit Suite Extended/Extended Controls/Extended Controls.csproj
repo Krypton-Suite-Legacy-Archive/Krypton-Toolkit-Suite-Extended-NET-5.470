@@ -35,27 +35,11 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Docking, Version=4.70.588.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Docking.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Navigator, Version=4.70.587.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Navigator.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Ribbon, Version=4.70.588.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Ribbon.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Toolkit, Version=4.70.641.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Workspace, Version=4.70.589.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Developer DLLs\Krypton DLLs\Versions\4.70\Krypton Workspace.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\PresentationCore.dll</HintPath>
     </Reference>
@@ -126,6 +110,24 @@
     <Compile Include="ExtendedToolkit\Controls\KryptonSlideButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\FloatingFramework\Controls\DockingHostToolStripPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\FloatingFramework\Controls\DockingHostToolStripPanel.Designer.cs">
+      <DependentUpon>DockingHostToolStripPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\FloatingFramework\Controls\TearOffToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\FloatingFramework\Controls\TearOffToolStrip.Designer.cs">
+      <DependentUpon>TearOffToolStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\FloatingFramework\UX\KryptonFloatingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\FloatingFramework\UX\KryptonFloatingForm.Designer.cs">
+      <DependentUpon>KryptonFloatingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExtendedToolkit\Messageboxes\Classes\ExtendedKryptonMessagebox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +188,12 @@
     </Compile>
     <Compile Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.Designer.cs">
       <DependentUpon>TypefaceSelectionDialogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\FileDownloader\FileDownloaderBasic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\FileDownloader\FileDownloaderBasic.Designer.cs">
+      <DependentUpon>FileDownloaderBasic.cs</DependentUpon>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\KryptonFormWithDropShadow.cs">
       <SubType>Form</SubType>
@@ -296,6 +304,9 @@
     <EmbeddedResource Include="ExtendedToolkit\Controls\ModernProgressBar.resx">
       <DependentUpon>ModernProgressBar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\FloatingFramework\UX\KryptonFloatingForm.resx">
+      <DependentUpon>KryptonFloatingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Messageboxes\Classes\ExtendedKryptonMessagebox.resx">
       <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.resx">
       <DependentUpon>TypefaceSelectionDialogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\FileDownloader\FileDownloaderBasic.resx">
+      <DependentUpon>FileDownloaderBasic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\KryptonSplashScreen.resx">
       <DependentUpon>KryptonSplashScreen.cs</DependentUpon>

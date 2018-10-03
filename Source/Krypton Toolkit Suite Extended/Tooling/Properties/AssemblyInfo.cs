@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Tooling")]
-[assembly: AssemblyDescription("Some core code for the Krypton Extended Toolkit 4.70")]
+[assembly: AssemblyDescription("Some core code for the Krypton Extended Toolkit 5.470")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Tooling")]
@@ -33,7 +33,7 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("4.70.569.0")]
-[assembly: AssemblyFileVersion("4.70.569.0")]
+[assembly: AssemblyVersion("5.470.572.0")]
+[assembly: AssemblyFileVersion("5.470.572.0")]
 [assembly: NeutralResourcesLanguage("en-GB")]
 

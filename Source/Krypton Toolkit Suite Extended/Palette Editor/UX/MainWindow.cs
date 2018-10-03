@@ -910,7 +910,7 @@ namespace PaletteEditor.UX
 
         private void submitFeedbackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-4.70/issues/35");
+            Process.Start("https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/35");
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)

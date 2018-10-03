@@ -139,7 +139,7 @@
     <value>kbtnCancel</value>
   </data>
   <data name="&gt;&gt;kbtnCancel.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=5.470.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
   <data name="&gt;&gt;kbtnCancel.Parent" xml:space="preserve">
     <value>kpnlBackdrop</value>
@@ -163,7 +163,7 @@
     <value>kryptonButton1</value>
   </data>
   <data name="&gt;&gt;kryptonButton1.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=5.470.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
   <data name="&gt;&gt;kryptonButton1.Parent" xml:space="preserve">
     <value>kpnlBackdrop</value>
@@ -193,7 +193,7 @@
     <value>kcolMin</value>
   </data>
   <data name="&gt;&gt;kcolMin.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonColorButton, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonColorButton, ComponentFactory.Krypton.Toolkit, Version=5.470.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
   <data name="&gt;&gt;kcolMin.Parent" xml:space="preserve">
     <value>kpnlBackdrop</value>
@@ -223,7 +223,7 @@
     <value>kcolMed</value>
   </data>
   <data name="&gt;&gt;kcolMed.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonColorButton, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonColorButton, ComponentFactory.Krypton.Toolkit, Version=5.470.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
   <data name="&gt;&gt;kcolMed.Parent" xml:space="preserve">
     <value>kpnlBackdrop</value>
@@ -253,7 +253,7 @@
     <value>kcolMax</value>
   </data>
   <data name="&gt;&gt;kcolMax.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonColorButton, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonColorButton, ComponentFactory.Krypton.Toolkit, Version=5.470.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
   <data name="&gt;&gt;kcolMax.Parent" xml:space="preserve">
     <value>kpnlBackdrop</value>
@@ -274,7 +274,7 @@
     <value>kcmbFill</value>
   </data>
   <data name="&gt;&gt;kcmbFill.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=5.470.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
   <data name="&gt;&gt;kcmbFill.Parent" xml:space="preserve">
     <value>kpnlBackdrop</value>
@@ -316,7 +316,7 @@
     <value>kcmbFormat</value>
   </data>
   <data name="&gt;&gt;kcmbFormat.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=5.470.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
   <data name="&gt;&gt;kcmbFormat.Parent" xml:space="preserve">
     <value>kpnlBackdrop</value>
@@ -340,7 +340,7 @@
     <value>klblFill</value>
   </data>
   <data name="&gt;&gt;klblFill.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=5.470.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
   <data name="&gt;&gt;klblFill.Parent" xml:space="preserve">
     <value>kpnlBackdrop</value>
@@ -364,7 +364,7 @@
     <value>klblPreview</value>
   </data>
   <data name="&gt;&gt;klblPreview.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=5.470.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
   <data name="&gt;&gt;klblPreview.Parent" xml:space="preserve">
     <value>kpnlBackdrop</value>
@@ -388,7 +388,7 @@
     <value>klblFormat</value>
   </data>
   <data name="&gt;&gt;klblFormat.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=5.470.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
   <data name="&gt;&gt;klblFormat.Parent" xml:space="preserve">
     <value>kpnlBackdrop</value>
@@ -415,7 +415,7 @@
     <value>kpnlBackdrop</value>
   </data>
   <data name="&gt;&gt;kpnlBackdrop.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonPanel, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonPanel, ComponentFactory.Krypton.Toolkit, Version=5.470.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
   <data name="&gt;&gt;kpnlBackdrop.Parent" xml:space="preserve">
     <value>$this</value>
@@ -448,6 +448,6 @@
     <value>CustomFormatRule</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonForm, ComponentFactory.Krypton.Toolkit, Version=4.70.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonForm, ComponentFactory.Krypton.Toolkit, Version=5.470.546.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
 </root>

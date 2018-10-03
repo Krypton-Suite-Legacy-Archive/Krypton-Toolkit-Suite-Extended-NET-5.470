@@ -328,9 +328,6 @@
     <EmbeddedResource Include="UX\PaletteColourCreator.resx">
       <DependentUpon>PaletteColourCreator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UX\PaletteFileEditor.resx">
-      <DependentUpon>PaletteFileEditor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UX\SysInfo\SystemInformationWindow.resx">
       <DependentUpon>SystemInformationWindow.cs</DependentUpon>
     </EmbeddedResource>

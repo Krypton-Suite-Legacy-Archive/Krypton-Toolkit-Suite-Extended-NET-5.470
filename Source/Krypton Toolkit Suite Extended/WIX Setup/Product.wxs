@@ -7,10 +7,10 @@
     <?define UpgradeCode = "79D7D79C-61E2-4BA4-B9D2-422A5BFADAFF" ?>
 
     <?define Version = "!(bind.FileVersion.GlobalUtilities.File)" ?>
-    <?define ProductName = "Krypton Toolkit Suite Extended NET 4.70"?>
+    <?define ProductName = "Krypton Toolkit Suite Extended NET 5.470"?>
 
     <Product Version="$(var.Version)" Id="*" UpgradeCode="$(var.UpgradeCode)"
-             Name="$(var.ProductName)" Language="1033" Manufacturer="https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-4.70">
+             Name="$(var.ProductName)" Language="1033" Manufacturer="https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470">
 
         <Package Id="*" Keywords='Installer'
                  InstallScope='perMachine'
@@ -76,7 +76,7 @@
 
         <Directory Id="TARGETDIR" Name="SourceDir">
             <Directory Id="ProgramFilesFolder">
-                <Directory Id="INSTALLDIR" Name="Krypton-Toolkit-Suite-Extended-NET-4.70" />
+                <Directory Id="INSTALLDIR" Name="Krypton-Toolkit-Suite-Extended-NET-5.470" />
             </Directory>
             <Directory Id="ProgramMenuFolder" />
         </Directory>

@@ -54,7 +54,7 @@
 
 ## 2018-06-11 New palettes & gradeint toolstrip label
 * There are now 50+ **new** palettes to choose from.
-* A new toolstrip label capable of background gradeints is now available to use, as per [#28](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-4.70/issues/28).
+* A new toolstrip label capable of background gradeints is now available to use, as per [#28](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/28).
 
 ======
 
