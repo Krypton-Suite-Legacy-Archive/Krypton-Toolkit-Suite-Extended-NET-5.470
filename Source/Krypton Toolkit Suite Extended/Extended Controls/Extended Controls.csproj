@@ -88,11 +88,6 @@
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Enumerations\Enumerations.cs" />
-    <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Classes\AdvancedKryptonOutlookGrid.cs" />
-    <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.cs" />
-    <Compile Include="ExtendedToolkit\Controls\Advanced Krypton Outlook Grid\Controls\AdvancedDataGridViewSearchToolBar.Designer.cs">
-      <DependentUpon>AdvancedDataGridViewSearchToolBar.cs</DependentUpon>
-    </Compile>
     <Compile Include="ExtendedToolkit\Controls\CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>

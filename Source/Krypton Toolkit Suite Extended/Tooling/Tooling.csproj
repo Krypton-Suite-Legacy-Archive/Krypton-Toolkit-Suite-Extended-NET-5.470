@@ -34,7 +34,7 @@
       <HintPath>..\packages\AutoCompleteMenu-ScintillaNET.1.6.1\lib\net40\AutocompleteMenu-ScintillaNET.dll</HintPath>
     </Reference>
     <Reference Include="EasyScintilla, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EasyScintilla.1.0.4\lib\net40\EasyScintilla.dll</HintPath>
+      <HintPath>..\packages\EasyScintilla.1.0.5\lib\net40\EasyScintilla.dll</HintPath>
     </Reference>
     <Reference Include="Global Utilities">
       <HintPath>..\Global Utilities\bin\Debug\Global Utilities.dll</HintPath>
