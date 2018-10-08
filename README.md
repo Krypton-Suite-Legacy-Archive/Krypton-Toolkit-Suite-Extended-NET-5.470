@@ -15,6 +15,11 @@
 
 ======
 
+## 2018-10-08 NuGet package
+* A new NuGet package is available from [here](https://www.nuget.org/packages/KryptonExtendedToolkit5470/5.470.513) (please note that the `Palette Editor` binary or themes are **not** included)
+
+======
+
 ## 2018-09-25 September Update
 * Refined `Palette Editor` UI
 * Allow users to define **any** colour in the `Palette Editor` using a context menu
