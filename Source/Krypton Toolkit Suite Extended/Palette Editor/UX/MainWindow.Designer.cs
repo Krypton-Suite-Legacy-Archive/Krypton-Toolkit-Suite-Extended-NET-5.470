@@ -199,10 +199,17 @@
             this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripSeparator();
             this.resetColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripSeparator();
+            this.defineTypefacesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem43 = new System.Windows.Forms.ToolStripSeparator();
             this.viewTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.standardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripSeparator();
             this.circularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem44 = new System.Windows.Forms.ToolStripSeparator();
+            this.experimentalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newUXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.utilitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.palettePreviewerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripSeparator();
@@ -211,10 +218,6 @@
             this.palette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.tmrUpdateUI = new System.Windows.Forms.Timer(this.components);
-            this.toolStripMenuItem43 = new System.Windows.Forms.ToolStripSeparator();
-            this.defineTypefacesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.utilitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.palettePreviewerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.ss.SuspendLayout();
@@ -319,10 +322,6 @@
             this.ms.SuspendLayout();
             this.SuspendLayout();
             // 
-            // kMan
-            // 
-            this.kMan.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2010Blue;
-            // 
             // kryptonPanel1
             // 
             this.kryptonPanel1.Controls.Add(this.kchkInvertColours);
@@ -344,8 +343,6 @@
             this.kchkInvertColours.Name = "kchkInvertColours";
             this.kchkInvertColours.Size = new System.Drawing.Size(126, 26);
             this.kchkInvertColours.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kchkInvertColours.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kchkInvertColours.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kchkInvertColours.TabIndex = 64;
             this.kchkInvertColours.Values.Text = "&Invert Colours";
             this.kchkInvertColours.CheckedChanged += new System.EventHandler(this.kchkInvertColours_CheckedChanged);
@@ -358,8 +355,6 @@
             this.kchkUpdateColours.Name = "kchkUpdateColours";
             this.kchkUpdateColours.Size = new System.Drawing.Size(138, 26);
             this.kchkUpdateColours.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kchkUpdateColours.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kchkUpdateColours.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kchkUpdateColours.TabIndex = 63;
             this.kchkUpdateColours.Values.Text = "&Update Colours";
             this.kchkUpdateColours.CheckedChanged += new System.EventHandler(this.kchkUpdateColours_CheckedChanged);
@@ -393,8 +388,6 @@
             this.kbtnClose.Name = "kbtnClose";
             this.kbtnClose.Size = new System.Drawing.Size(51, 30);
             this.kbtnClose.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnClose.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnClose.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnClose.TabIndex = 44;
             this.kbtnClose.Values.Text = "&Close";
             this.kbtnClose.Click += new System.EventHandler(this.kbtnClose_Click);
@@ -405,8 +398,6 @@
             this.lblColourOutput.Name = "lblColourOutput";
             this.lblColourOutput.Size = new System.Drawing.Size(6, 2);
             this.lblColourOutput.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblColourOutput.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.lblColourOutput.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.lblColourOutput.TabIndex = 62;
             this.lblColourOutput.Values.Text = "";
             // 
@@ -434,9 +425,6 @@
             // 
             // kgbCircularColourPreviewPane
             // 
-            this.kgbCircularColourPreviewPane.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kgbCircularColourPreviewPane.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kgbCircularColourPreviewPane.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kgbCircularColourPreviewPane.Location = new System.Drawing.Point(12, 91);
             this.kgbCircularColourPreviewPane.Name = "kgbCircularColourPreviewPane";
             // 
@@ -474,8 +462,6 @@
             this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxBaseColourPreview);
             this.kgbCircularColourPreviewPane.Size = new System.Drawing.Size(708, 467);
             this.kgbCircularColourPreviewPane.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kgbCircularColourPreviewPane.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kgbCircularColourPreviewPane.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kgbCircularColourPreviewPane.TabIndex = 10;
             this.kgbCircularColourPreviewPane.Values.Heading = "Colour Preview";
             // 
@@ -1196,9 +1182,6 @@
             // 
             // kgbPreviewPane
             // 
-            this.kgbPreviewPane.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kgbPreviewPane.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kgbPreviewPane.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kgbPreviewPane.Location = new System.Drawing.Point(12, 91);
             this.kgbPreviewPane.Name = "kgbPreviewPane";
             // 
@@ -1236,8 +1219,6 @@
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxMiddleColour);
             this.kgbPreviewPane.Size = new System.Drawing.Size(708, 467);
             this.kgbPreviewPane.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kgbPreviewPane.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kgbPreviewPane.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kgbPreviewPane.TabIndex = 9;
             this.kgbPreviewPane.Values.Heading = "Colour Preview";
             // 
@@ -1648,8 +1629,6 @@
             this.kbtnImportColourScheme.Name = "kbtnImportColourScheme";
             this.kbtnImportColourScheme.Size = new System.Drawing.Size(176, 30);
             this.kbtnImportColourScheme.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnImportColourScheme.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnImportColourScheme.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnImportColourScheme.TabIndex = 116;
             this.ttInformation.SetToolTip(this.kbtnImportColourScheme, "Imports colours from a user created palette");
             this.kbtnImportColourScheme.Values.Text = "Import Colour &Scheme";
@@ -1663,8 +1642,6 @@
             this.kbtnGetColourInformation.Name = "kbtnGetColourInformation";
             this.kbtnGetColourInformation.Size = new System.Drawing.Size(180, 30);
             this.kbtnGetColourInformation.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGetColourInformation.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnGetColourInformation.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnGetColourInformation.TabIndex = 115;
             this.kbtnGetColourInformation.Values.Text = "Get Colour &Information";
             this.kbtnGetColourInformation.Click += new System.EventHandler(this.kbtnGetColourInformation_Click);
@@ -1677,8 +1654,6 @@
             this.kbtnGenerateContrastColours.Name = "kbtnGenerateContrastColours";
             this.kbtnGenerateContrastColours.Size = new System.Drawing.Size(204, 30);
             this.kbtnGenerateContrastColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGenerateContrastColours.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnGenerateContrastColours.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnGenerateContrastColours.TabIndex = 114;
             this.kbtnGenerateContrastColours.Values.Text = "Generate &Contrast Colours";
             this.kbtnGenerateContrastColours.Click += new System.EventHandler(this.kbtnGenerateContrastColours_Click);
@@ -1691,8 +1666,6 @@
             this.kbtnViewPaletteFile.Name = "kbtnViewPaletteFile";
             this.kbtnViewPaletteFile.Size = new System.Drawing.Size(130, 30);
             this.kbtnViewPaletteFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnViewPaletteFile.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnViewPaletteFile.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnViewPaletteFile.TabIndex = 113;
             this.kbtnViewPaletteFile.Values.Text = "View Palette &File";
             this.kbtnViewPaletteFile.Click += new System.EventHandler(this.kbtnViewPaletteFile_Click);
@@ -1705,8 +1678,6 @@
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(150, 26);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel1.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel1.TabIndex = 112;
             this.kryptonLabel1.Values.Text = "Palette Properties";
             // 
@@ -1727,8 +1698,6 @@
             this.kryptonLabel32.Name = "kryptonLabel32";
             this.kryptonLabel32.Size = new System.Drawing.Size(160, 26);
             this.kryptonLabel32.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel32.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel32.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel32.TabIndex = 110;
             this.kryptonLabel32.Values.Text = "Base Palette Mode:";
             // 
@@ -1741,8 +1710,6 @@
             this.kbtnExportPalette.Name = "kbtnExportPalette";
             this.kbtnExportPalette.Size = new System.Drawing.Size(173, 30);
             this.kbtnExportPalette.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnExportPalette.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnExportPalette.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnExportPalette.TabIndex = 25;
             this.kbtnExportPalette.Values.Text = "Export &Palette Colours";
             this.kbtnExportPalette.Click += new System.EventHandler(this.kbtnExportPalette_Click);
@@ -1755,8 +1722,6 @@
             this.kbtnGetColours.Name = "kbtnGetColours";
             this.kbtnGetColours.Size = new System.Drawing.Size(97, 30);
             this.kbtnGetColours.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGetColours.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnGetColours.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnGetColours.TabIndex = 23;
             this.kbtnGetColours.Values.Text = "&Get Colours";
             this.kbtnGetColours.Click += new System.EventHandler(this.kbtnGetColours_Click);
@@ -1769,8 +1734,6 @@
             this.kbtnGenerate.Name = "kbtnGenerate";
             this.kbtnGenerate.Size = new System.Drawing.Size(138, 30);
             this.kbtnGenerate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGenerate.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnGenerate.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnGenerate.TabIndex = 22;
             this.kbtnGenerate.Values.Text = "Gener&ate Colours";
             this.kbtnGenerate.Click += new System.EventHandler(this.kbtnGenerate_Click);
@@ -1821,61 +1784,66 @@
             // newPaletteDefinitionToolStripMenuItem
             // 
             this.newPaletteDefinitionToolStripMenuItem.Name = "newPaletteDefinitionToolStripMenuItem";
-            this.newPaletteDefinitionToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.newPaletteDefinitionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newPaletteDefinitionToolStripMenuItem.Size = new System.Drawing.Size(315, 22);
             this.newPaletteDefinitionToolStripMenuItem.Text = "N&ew Palette Definition";
             this.newPaletteDefinitionToolStripMenuItem.Click += new System.EventHandler(this.newPaletteDefinitionToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(237, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(312, 6);
             // 
             // openExistingPaletteDefinitionToolStripMenuItem
             // 
             this.openExistingPaletteDefinitionToolStripMenuItem.Name = "openExistingPaletteDefinitionToolStripMenuItem";
-            this.openExistingPaletteDefinitionToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.openExistingPaletteDefinitionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.O)));
+            this.openExistingPaletteDefinitionToolStripMenuItem.Size = new System.Drawing.Size(315, 22);
             this.openExistingPaletteDefinitionToolStripMenuItem.Text = "Open E&xisting Palette Definition";
             this.openExistingPaletteDefinitionToolStripMenuItem.Click += new System.EventHandler(this.openExistingPaletteDefinitionToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(237, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(312, 6);
             // 
             // savePaletteDefinitionToolStripMenuItem
             // 
             this.savePaletteDefinitionToolStripMenuItem.Name = "savePaletteDefinitionToolStripMenuItem";
-            this.savePaletteDefinitionToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.savePaletteDefinitionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.savePaletteDefinitionToolStripMenuItem.Size = new System.Drawing.Size(315, 22);
             this.savePaletteDefinitionToolStripMenuItem.Text = "&Save Palette Definition";
             this.savePaletteDefinitionToolStripMenuItem.Click += new System.EventHandler(this.savePaletteDefinitionToolStripMenuItem_Click);
             // 
             // savePaletteDefinitionAsToolStripMenuItem
             // 
             this.savePaletteDefinitionAsToolStripMenuItem.Name = "savePaletteDefinitionAsToolStripMenuItem";
-            this.savePaletteDefinitionAsToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.savePaletteDefinitionAsToolStripMenuItem.Size = new System.Drawing.Size(315, 22);
             this.savePaletteDefinitionAsToolStripMenuItem.Text = "Save Palette Definition &As";
             this.savePaletteDefinitionAsToolStripMenuItem.Click += new System.EventHandler(this.savePaletteDefinitionAsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem16
             // 
             this.toolStripMenuItem16.Name = "toolStripMenuItem16";
-            this.toolStripMenuItem16.Size = new System.Drawing.Size(237, 6);
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(312, 6);
             // 
             // recentPaletteDefinitionsToolStripMenuItem
             // 
             this.recentPaletteDefinitionsToolStripMenuItem.Name = "recentPaletteDefinitionsToolStripMenuItem";
-            this.recentPaletteDefinitionsToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.recentPaletteDefinitionsToolStripMenuItem.Size = new System.Drawing.Size(315, 22);
             this.recentPaletteDefinitionsToolStripMenuItem.Text = "&Recent Palette Definitions";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(237, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(312, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(315, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -1904,7 +1872,9 @@
             this.toolStripMenuItem13,
             this.defineTypefacesToolStripMenuItem,
             this.toolStripMenuItem43,
-            this.viewTypeToolStripMenuItem});
+            this.viewTypeToolStripMenuItem,
+            this.toolStripMenuItem44,
+            this.experimentalToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "&Options";
@@ -1912,124 +1882,144 @@
             // generateColoursToolStripMenuItem
             // 
             this.generateColoursToolStripMenuItem.Name = "generateColoursToolStripMenuItem";
-            this.generateColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.generateColoursToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.generateColoursToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.generateColoursToolStripMenuItem.Text = "&Generate Colours";
             this.generateColoursToolStripMenuItem.Click += new System.EventHandler(this.generateColoursToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(210, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(282, 6);
             // 
             // getColoursToolStripMenuItem
             // 
             this.getColoursToolStripMenuItem.Name = "getColoursToolStripMenuItem";
-            this.getColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.getColoursToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.getColoursToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.getColoursToolStripMenuItem.Text = "&Get Colours";
             this.getColoursToolStripMenuItem.Click += new System.EventHandler(this.getColoursToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(210, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(282, 6);
             // 
             // exportPaletteColoursToolStripMenuItem
             // 
             this.exportPaletteColoursToolStripMenuItem.Name = "exportPaletteColoursToolStripMenuItem";
-            this.exportPaletteColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.exportPaletteColoursToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.exportPaletteColoursToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.exportPaletteColoursToolStripMenuItem.Text = "Export &Palette Colours";
             this.exportPaletteColoursToolStripMenuItem.Click += new System.EventHandler(this.exportPaletteColoursToolStripMenuItem_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(210, 6);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(282, 6);
             // 
             // viewPaletteFileToolStripMenuItem
             // 
             this.viewPaletteFileToolStripMenuItem.Name = "viewPaletteFileToolStripMenuItem";
-            this.viewPaletteFileToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.viewPaletteFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.V)));
+            this.viewPaletteFileToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.viewPaletteFileToolStripMenuItem.Text = "View Palette &File";
             this.viewPaletteFileToolStripMenuItem.Click += new System.EventHandler(this.viewPaletteFileToolStripMenuItem_Click);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(210, 6);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(282, 6);
             // 
             // generateContrastColoursToolStripMenuItem
             // 
             this.generateContrastColoursToolStripMenuItem.Name = "generateContrastColoursToolStripMenuItem";
-            this.generateContrastColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.generateContrastColoursToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.L)));
+            this.generateContrastColoursToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.generateContrastColoursToolStripMenuItem.Text = "Generate &Contrast Colours";
             this.generateContrastColoursToolStripMenuItem.Click += new System.EventHandler(this.generateContrastColoursToolStripMenuItem_Click);
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(210, 6);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(282, 6);
             // 
             // getColourInformationToolStripMenuItem
             // 
             this.getColourInformationToolStripMenuItem.Name = "getColourInformationToolStripMenuItem";
-            this.getColourInformationToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.getColourInformationToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.getColourInformationToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.getColourInformationToolStripMenuItem.Text = "Get Colour &Information";
             this.getColourInformationToolStripMenuItem.Click += new System.EventHandler(this.getColourInformationToolStripMenuItem_Click);
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(210, 6);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(282, 6);
             // 
             // importColourSchemeToolStripMenuItem
             // 
             this.importColourSchemeToolStripMenuItem.Name = "importColourSchemeToolStripMenuItem";
-            this.importColourSchemeToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.importColourSchemeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
+            this.importColourSchemeToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.importColourSchemeToolStripMenuItem.Text = "Import Colour &Scheme";
             this.importColourSchemeToolStripMenuItem.Click += new System.EventHandler(this.importColourSchemeToolStripMenuItem_Click);
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(210, 6);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(282, 6);
             // 
             // invertColoursToolStripMenuItem
             // 
             this.invertColoursToolStripMenuItem.CheckOnClick = true;
             this.invertColoursToolStripMenuItem.Enabled = false;
             this.invertColoursToolStripMenuItem.Name = "invertColoursToolStripMenuItem";
-            this.invertColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.invertColoursToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.invertColoursToolStripMenuItem.Text = "I&nvert Colours";
             this.invertColoursToolStripMenuItem.Click += new System.EventHandler(this.invertColoursToolStripMenuItem_Click);
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(210, 6);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(282, 6);
             // 
             // updateColoursToolStripMenuItem
             // 
             this.updateColoursToolStripMenuItem.Name = "updateColoursToolStripMenuItem";
-            this.updateColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.updateColoursToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.updateColoursToolStripMenuItem.Text = "&Update Colours";
             this.updateColoursToolStripMenuItem.Click += new System.EventHandler(this.updateColoursToolStripMenuItem_Click);
             // 
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(210, 6);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(282, 6);
             // 
             // resetColoursToolStripMenuItem
             // 
             this.resetColoursToolStripMenuItem.Name = "resetColoursToolStripMenuItem";
-            this.resetColoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.resetColoursToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.resetColoursToolStripMenuItem.Text = "&Reset Colours";
             this.resetColoursToolStripMenuItem.Click += new System.EventHandler(this.resetColoursToolStripMenuItem_Click);
             // 
             // toolStripMenuItem13
             // 
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(210, 6);
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(282, 6);
+            // 
+            // defineTypefacesToolStripMenuItem
+            // 
+            this.defineTypefacesToolStripMenuItem.Name = "defineTypefacesToolStripMenuItem";
+            this.defineTypefacesToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.defineTypefacesToolStripMenuItem.Text = "D&efine Typefaces";
+            // 
+            // toolStripMenuItem43
+            // 
+            this.toolStripMenuItem43.Name = "toolStripMenuItem43";
+            this.toolStripMenuItem43.Size = new System.Drawing.Size(282, 6);
             // 
             // viewTypeToolStripMenuItem
             // 
@@ -2038,7 +2028,7 @@
             this.toolStripMenuItem14,
             this.circularToolStripMenuItem});
             this.viewTypeToolStripMenuItem.Name = "viewTypeToolStripMenuItem";
-            this.viewTypeToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.viewTypeToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.viewTypeToolStripMenuItem.Text = "&View Type";
             // 
             // standardToolStripMenuItem
@@ -2061,6 +2051,40 @@
             this.circularToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.circularToolStripMenuItem.Text = "&Circular";
             this.circularToolStripMenuItem.Click += new System.EventHandler(this.circularToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem44
+            // 
+            this.toolStripMenuItem44.Name = "toolStripMenuItem44";
+            this.toolStripMenuItem44.Size = new System.Drawing.Size(282, 6);
+            // 
+            // experimentalToolStripMenuItem
+            // 
+            this.experimentalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newUXToolStripMenuItem});
+            this.experimentalToolStripMenuItem.Name = "experimentalToolStripMenuItem";
+            this.experimentalToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.experimentalToolStripMenuItem.Text = "Experimen&tal";
+            // 
+            // newUXToolStripMenuItem
+            // 
+            this.newUXToolStripMenuItem.Name = "newUXToolStripMenuItem";
+            this.newUXToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.newUXToolStripMenuItem.Text = "N&ew UX";
+            this.newUXToolStripMenuItem.Click += new System.EventHandler(this.newUXToolStripMenuItem_Click);
+            // 
+            // utilitiesToolStripMenuItem
+            // 
+            this.utilitiesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.palettePreviewerToolStripMenuItem});
+            this.utilitiesToolStripMenuItem.Name = "utilitiesToolStripMenuItem";
+            this.utilitiesToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.utilitiesToolStripMenuItem.Text = "U&tilities";
+            // 
+            // palettePreviewerToolStripMenuItem
+            // 
+            this.palettePreviewerToolStripMenuItem.Name = "palettePreviewerToolStripMenuItem";
+            this.palettePreviewerToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.palettePreviewerToolStripMenuItem.Text = "Palette &Previewer";
             // 
             // helpToolStripMenuItem
             // 
@@ -2093,7 +2117,6 @@
             // 
             // palette
             // 
-            this.palette.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.palette.FilePath = null;
             // 
             // panel1
@@ -2110,31 +2133,6 @@
             this.tmrUpdateUI.Enabled = true;
             this.tmrUpdateUI.Interval = 250;
             this.tmrUpdateUI.Tick += new System.EventHandler(this.tmrUpdateUI_Tick);
-            // 
-            // toolStripMenuItem43
-            // 
-            this.toolStripMenuItem43.Name = "toolStripMenuItem43";
-            this.toolStripMenuItem43.Size = new System.Drawing.Size(210, 6);
-            // 
-            // defineTypefacesToolStripMenuItem
-            // 
-            this.defineTypefacesToolStripMenuItem.Name = "defineTypefacesToolStripMenuItem";
-            this.defineTypefacesToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.defineTypefacesToolStripMenuItem.Text = "D&efine Typefaces";
-            // 
-            // utilitiesToolStripMenuItem
-            // 
-            this.utilitiesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.palettePreviewerToolStripMenuItem});
-            this.utilitiesToolStripMenuItem.Name = "utilitiesToolStripMenuItem";
-            this.utilitiesToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.utilitiesToolStripMenuItem.Text = "U&tilities";
-            // 
-            // palettePreviewerToolStripMenuItem
-            // 
-            this.palettePreviewerToolStripMenuItem.Name = "palettePreviewerToolStripMenuItem";
-            this.palettePreviewerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.palettePreviewerToolStripMenuItem.Text = "Palette &Previewer";
             // 
             // MainWindow
             // 
@@ -2452,5 +2450,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem43;
         private System.Windows.Forms.ToolStripMenuItem utilitiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem palettePreviewerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem44;
+        private System.Windows.Forms.ToolStripMenuItem experimentalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newUXToolStripMenuItem;
     }
 }

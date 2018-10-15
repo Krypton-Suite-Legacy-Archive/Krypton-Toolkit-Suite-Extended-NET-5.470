@@ -315,5 +315,12 @@ namespace Playground
 
             typefaceSelectionDialogue.Show();
         }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+
+            mainWindow.Show();
+        }
     }
 }

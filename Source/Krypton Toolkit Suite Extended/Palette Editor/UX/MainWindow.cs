@@ -1104,11 +1104,11 @@ namespace PaletteEditor.UX
                 circularToolStripMenuItem.Checked = false;
             }
 
-            globalBooleanSettingsManager.SetUseCircularPictureBoxes(value);
+            _globalBooleanSettingsManager.SetUseCircularPictureBoxes(value);
 
-            UseCircularPictureBoxes = globalBooleanSettingsManager.GetUseCircularPictureBoxes();
+            UseCircularPictureBoxes = _globalBooleanSettingsManager.GetUseCircularPictureBoxes();
 
-            globalBooleanSettingsManager.SaveBooleanSettings();
+            _globalBooleanSettingsManager.SaveBooleanSettings();
         }
 
         private void GenerateColourScheme(Color baseColour)
@@ -1116,6 +1116,13 @@ namespace PaletteEditor.UX
             ColourMixer colourMixer = new ColourMixer(true, baseColour);
 
             colourMixer.Show();
+        }
+
+        private void newUXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            New.MainWindow mainWindow = new New.MainWindow();
+
+            mainWindow.Show();
         }
 
         private void GrabPaletteColours(bool useCircularPictureBoxes)

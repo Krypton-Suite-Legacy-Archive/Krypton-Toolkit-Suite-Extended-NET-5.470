@@ -70,6 +70,24 @@ namespace Tooling.Settings.Classes
         {
             return _globalBooleanSettings.UseCircularPictureBoxes;
         }
+
+        /// <summary>
+        /// Sets the LoadColoursOnOpenPalette to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetLoadColoursOnOpenPalette(bool value)
+        {
+            _globalBooleanSettings.LoadColoursOnOpenPalette = value;
+        }
+
+        /// <summary>
+        /// Gets the LoadColoursOnOpenPalette value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetLoadColoursOnOpenPalette()
+        {
+            return _globalBooleanSettings.LoadColoursOnOpenPalette;
+        }
         #endregion
 
         #region Methods 
@@ -130,6 +148,8 @@ namespace Tooling.Settings.Classes
             SetDisableListItem(false);
 
             SetUseCircularPictureBoxes(true);
+
+            SetLoadColoursOnOpenPalette(true);
         }
         #endregion
     }

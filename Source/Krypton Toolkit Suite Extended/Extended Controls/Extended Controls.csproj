@@ -105,6 +105,44 @@
     <Compile Include="ExtendedToolkit\Controls\KryptonSlideButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\BrowserWrappers\Classes\BrowserTVContextMenuWrapper.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Components\KryptonBrowserTreeView.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Components\KryptonBrowserTreeView.Designer.cs">
+      <DependentUpon>KryptonBrowserTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Resources\FileBrowserResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FileBrowserResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Classes\PIDL.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Classes\ShellAPI.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Classes\ShellBrowserUpdater.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Classes\ShellHelper.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Classes\ShellImageList.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Classes\ShellItem.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Classes\StreamStorage.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Components\ShellBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Interfaces\IContextMenu.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Interfaces\IDragSourceHelper.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Interfaces\IDropSource.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Interfaces\IDropTarget.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Interfaces\IDropTargetHelper.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Interfaces\IEnumIDList.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Interfaces\IEnumSTATSTG.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Interfaces\IQueryInfo.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Interfaces\IShellExtInit.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Interfaces\IShellFolder.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Interfaces\IStorage.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\Shell\Interfaces\IStream.cs" />
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\UserControl\Browser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\FileBrowserExtensions\UserControl\Browser.Designer.cs">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExtendedToolkit\FloatingFramework\Controls\DockingHostToolStripPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -289,6 +327,18 @@
     <None Include="Resources\download.jpg" />
     <None Include="Resources\ttf-2.png" />
     <None Include="Resources\ttf-2_16_x_16.png" />
+    <None Include="Resources\BrowseFolders 32.png" />
+    <None Include="Resources\BrowseFolders 64.png" />
+    <None Include="Resources\BrowseFolders 256.png" />
+    <None Include="Resources\BrowserBackward 32.png" />
+    <None Include="Resources\BrowserBackward 64.png" />
+    <None Include="Resources\BrowserBackward 256.png" />
+    <None Include="Resources\BrowserForward 32.png" />
+    <None Include="Resources\BrowserForward 64.png" />
+    <None Include="Resources\BrowserForward 256.png" />
+    <None Include="Resources\BrowserUp 32.png" />
+    <None Include="Resources\BrowserUp 64.png" />
+    <None Include="Resources\BrowserUp 256.png" />
     <Content Include="ToolboxBitmaps\KryptonForm.bmp" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
@@ -298,6 +348,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\ModernProgressBar.resx">
       <DependentUpon>ModernProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\FileBrowserExtensions\Resources\FileBrowserResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FileBrowserResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\FloatingFramework\UX\KryptonFloatingForm.resx">
       <DependentUpon>KryptonFloatingForm.cs</DependentUpon>
