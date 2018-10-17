@@ -12,6 +12,9 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="LoadColoursOnOpenPalette" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="IsInBetaMode" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>

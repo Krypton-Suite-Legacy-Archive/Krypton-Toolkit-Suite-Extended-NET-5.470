@@ -61,13 +61,25 @@ namespace Tooling.Settings {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool LoadColoursOnOpenPalette {
             get {
                 return ((bool)(this["LoadColoursOnOpenPalette"]));
             }
             set {
                 this["LoadColoursOnOpenPalette"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsInBetaMode {
+            get {
+                return ((bool)(this["IsInBetaMode"]));
+            }
+            set {
+                this["IsInBetaMode"] = value;
             }
         }
     }

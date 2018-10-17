@@ -95,6 +95,9 @@
     <Compile Include="UX\New\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="UX\PaletteEditorSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UX\Viewer\PaletteViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\New\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\PaletteEditorSplash.resx">
+      <DependentUpon>PaletteEditorSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\Viewer\PaletteViewer.resx">
       <DependentUpon>PaletteViewer.cs</DependentUpon>

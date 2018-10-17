@@ -113,6 +113,9 @@
     <Compile Include="Controls\Colours\ScreenColourPicker.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Debug Tools\UX\SettingsCopier.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="Interfaces\IAbout.cs" />
     <Compile Include="Interfaces\IColourEditor.cs" />
@@ -269,6 +272,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Debug Tools\UX\SettingsCopier.resx">
+      <DependentUpon>SettingsCopier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

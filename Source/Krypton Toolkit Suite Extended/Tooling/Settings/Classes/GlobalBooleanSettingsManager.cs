@@ -88,6 +88,24 @@ namespace Tooling.Settings.Classes
         {
             return _globalBooleanSettings.LoadColoursOnOpenPalette;
         }
+
+        /// <summary>
+        /// Sets the IsInBetaMode to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetIsInBetaMode(bool value)
+        {
+            _globalBooleanSettings.IsInBetaMode = value;
+        }
+
+        /// <summary>
+        /// Gets the IsInBetaMode value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetIsInBetaMode()
+        {
+            return _globalBooleanSettings.IsInBetaMode;
+        }
         #endregion
 
         #region Methods 
@@ -150,6 +168,8 @@ namespace Tooling.Settings.Classes
             SetUseCircularPictureBoxes(true);
 
             SetLoadColoursOnOpenPalette(true);
+
+            SetIsInBetaMode(false);
         }
         #endregion
     }
