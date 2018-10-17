@@ -15,6 +15,15 @@
 
 ======
 
+## 2018-10-17 October 2018 Update (New NuGet package to follow soon)
+* New floating toolbar/window feature
+* Re-work of `Palette Editor` UI to tidy up (ribbon UI is a possibility)
+* Started feasibility work on a "Kryptonised" common file dialog (any help is appreciated)
+* New splash screen for `Palette Editor` application
+* General bug fixes
+
+======
+
 ## 2018-10-08 NuGet package
 * A new NuGet package is available from [here](https://www.nuget.org/packages/KryptonExtendedToolkit5470/5.470.513) (please note that the `Palette Editor` binary or themes are **not** included)
 
