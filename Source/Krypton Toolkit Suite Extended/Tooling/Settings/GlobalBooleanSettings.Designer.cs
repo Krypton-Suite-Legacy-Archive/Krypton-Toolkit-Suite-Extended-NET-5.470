@@ -82,5 +82,17 @@ namespace Tooling.Settings {
                 this["IsInBetaMode"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool HidePropertiesPane {
+            get {
+                return ((bool)(this["HidePropertiesPane"]));
+            }
+            set {
+                this["HidePropertiesPane"] = value;
+            }
+        }
     }
 }

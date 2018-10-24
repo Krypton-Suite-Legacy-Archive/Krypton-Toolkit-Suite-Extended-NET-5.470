@@ -1,4 +1,5 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using ComponentFactory.Krypton.Ribbon;
+using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.ExtendedToolkit.Controls;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace Tooling.Classes.Other
 {
     public static class ColourUtilities
     {
+        #region Methods
         /// <summary>
         /// Converts the HSL values to a Color.
         /// </summary>
@@ -296,6 +298,16 @@ namespace Tooling.Classes.Other
         }
 
         public static void PropagateBasePaletteModes(KryptonComboBox basePaletteModeSelection)
+        {
+            List<PaletteMode> allPaletteModes = new List<PaletteMode>();
+
+            foreach (string mode in Enum.GetNames(typeof(PaletteMode)))
+            {
+                basePaletteModeSelection.Items.Add(mode);
+            }
+        }
+
+        public static void PropagateBasePaletteModes(KryptonRibbonGroupComboBox basePaletteModeSelection)
         {
             List<PaletteMode> allPaletteModes = new List<PaletteMode>();
 
@@ -1259,5 +1271,6 @@ namespace Tooling.Classes.Other
         {
             colourPreview.BackColor = Color.FromArgb(alpha, red, green, blue);
         }
+        #endregion
     }
 }

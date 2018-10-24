@@ -15,6 +15,11 @@
 
 ======
 
+## 2018-10-24 Version 540
+* Version 540 (build date Wednesday 24 October, 2018) is now available through NuGet
+
+======
+
 ## 2018-10-17 October 2018 Update (New NuGet package to follow soon)
 * New floating toolbar/window feature
 * Re-work of `Palette Editor` UI to tidy up (ribbon UI is a possibility)

@@ -2,6 +2,7 @@
 using GlobalUtilities.Interfaces;
 using KryptonExtendedToolkit.Base.Code;
 using PaletteEditor.Classes;
+using PaletteEditor.UX.New;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -1123,6 +1124,13 @@ namespace PaletteEditor.UX
             New.MainWindow mainWindow = new New.MainWindow();
 
             mainWindow.Show();
+        }
+
+        private void ribbonUXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RibbonWindow ribbonWindow = new RibbonWindow();
+
+            ribbonWindow.Show();
         }
 
         private void GrabPaletteColours(bool useCircularPictureBoxes)

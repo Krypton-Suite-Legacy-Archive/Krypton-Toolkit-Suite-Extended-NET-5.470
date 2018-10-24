@@ -1,7 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using GlobalUtilities.Classes.SpecialEffects;
-using PaletteEditor.UX.New;
 using System;
+using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using Tooling.Settings.Classes;
@@ -18,6 +18,10 @@ namespace PaletteEditor.UX
         private Version _currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
 
         private GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
+
+        #region Temporary File
+        private string _fileContent = $"";
+        #endregion
         #endregion
 
         #region Components
@@ -154,6 +158,14 @@ namespace PaletteEditor.UX
         private void Update_Tick(object sender, EventArgs e)
         {
             pbProgress.Increment(1);
+
+            if (pbProgress.Value == 25)
+            {
+                if (!Directory.Exists(Application.ExecutablePath + "\\Files"))
+                {
+                    //Directory.CreateDirectory(Application.ExecutablePath + "\\Files");
+                }
+            }
 
             if (pbProgress.Value == 100)
             {

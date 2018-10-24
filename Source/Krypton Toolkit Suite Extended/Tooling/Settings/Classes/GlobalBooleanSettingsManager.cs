@@ -106,6 +106,24 @@ namespace Tooling.Settings.Classes
         {
             return _globalBooleanSettings.IsInBetaMode;
         }
+
+        /// <summary>
+        /// Sets the HidePropertiesPane to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetHidePropertiesPane(bool value)
+        {
+            _globalBooleanSettings.HidePropertiesPane = value;
+        }
+
+        /// <summary>
+        /// Gets the HidePropertiesPane value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetHidePropertiesPane()
+        {
+            return _globalBooleanSettings.HidePropertiesPane;
+        }
         #endregion
 
         #region Methods 
@@ -170,6 +188,8 @@ namespace Tooling.Settings.Classes
             SetLoadColoursOnOpenPalette(true);
 
             SetIsInBetaMode(false);
+
+            SetHidePropertiesPane(false);
         }
         #endregion
     }

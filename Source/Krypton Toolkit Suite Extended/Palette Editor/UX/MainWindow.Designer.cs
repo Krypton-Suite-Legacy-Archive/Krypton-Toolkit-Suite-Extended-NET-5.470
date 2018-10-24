@@ -208,6 +208,8 @@
             this.toolStripMenuItem44 = new System.Windows.Forms.ToolStripSeparator();
             this.experimentalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newUXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem45 = new System.Windows.Forms.ToolStripSeparator();
+            this.ribbonUXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utilitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.palettePreviewerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -2060,7 +2062,9 @@
             // experimentalToolStripMenuItem
             // 
             this.experimentalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newUXToolStripMenuItem});
+            this.newUXToolStripMenuItem,
+            this.toolStripMenuItem45,
+            this.ribbonUXToolStripMenuItem});
             this.experimentalToolStripMenuItem.Name = "experimentalToolStripMenuItem";
             this.experimentalToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.experimentalToolStripMenuItem.Text = "Experimen&tal";
@@ -2068,9 +2072,21 @@
             // newUXToolStripMenuItem
             // 
             this.newUXToolStripMenuItem.Name = "newUXToolStripMenuItem";
-            this.newUXToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.newUXToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.newUXToolStripMenuItem.Text = "N&ew UX";
             this.newUXToolStripMenuItem.Click += new System.EventHandler(this.newUXToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem45
+            // 
+            this.toolStripMenuItem45.Name = "toolStripMenuItem45";
+            this.toolStripMenuItem45.Size = new System.Drawing.Size(127, 6);
+            // 
+            // ribbonUXToolStripMenuItem
+            // 
+            this.ribbonUXToolStripMenuItem.Name = "ribbonUXToolStripMenuItem";
+            this.ribbonUXToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.ribbonUXToolStripMenuItem.Text = "Ri&bbon UX";
+            this.ribbonUXToolStripMenuItem.Click += new System.EventHandler(this.ribbonUXToolStripMenuItem_Click);
             // 
             // utilitiesToolStripMenuItem
             // 
@@ -2453,5 +2469,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem44;
         private System.Windows.Forms.ToolStripMenuItem experimentalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newUXToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem45;
+        private System.Windows.Forms.ToolStripMenuItem ribbonUXToolStripMenuItem;
     }
 }
