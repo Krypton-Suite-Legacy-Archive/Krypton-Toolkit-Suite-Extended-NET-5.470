@@ -25,7 +25,7 @@
 * Re-work of `Palette Editor` UI to tidy up (ribbon UI is a possibility)
 * Started feasibility work on a "Kryptonised" common file dialog (any help is appreciated)
 * New splash screen for `Palette Editor` application
-* Removed requirement for DLLs in favour of NuGet management
+* Removed requirement for DLLs in favor of NuGet management
 * General bug fixes
 
 ======

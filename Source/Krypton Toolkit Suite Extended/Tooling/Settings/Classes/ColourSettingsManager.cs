@@ -1,6 +1,4 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.ExtendedToolkit.Messageboxes.Classes;
-using ExtendedControls.ExtendedToolkit.Messageboxes.Enumerations;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -288,6 +286,24 @@ namespace Tooling.Settings.Classes
         public Color GetLinkVisitedColour()
         {
             return _colourSettings.LinkVisitedColour;
+        }
+
+        /// <summary>
+        /// Sets the LinkDisabledColour to the value of linkDisabledColour.
+        /// </summary>
+        /// <param name="linkDisabledColour">The value of linkDisabledColour.</param>
+        public void SetLinkDisabledColour(Color linkDisabledColour)
+        {
+            _colourSettings.LinkDisabledColour = linkDisabledColour;
+        }
+
+        /// <summary>
+        /// Gets the LinkDisabledColour value.
+        /// </summary>
+        /// <returns>The value of linkDisabledColour.</returns>
+        public Color GetLinkDisabledColour()
+        {
+            return _colourSettings.LinkDisabledColour;
         }
 
         /// <summary>

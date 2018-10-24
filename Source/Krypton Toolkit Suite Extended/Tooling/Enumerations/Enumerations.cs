@@ -258,6 +258,10 @@
         /// </summary>
         LINKNORMALTEXTCOLOUR,
         /// <summary>
+        /// The link disabled text colour
+        /// </summary>
+        LINKDISABLEDTEXTCOLOUR,
+        /// <summary>
         /// The link hover text colour
         /// </summary>
         LINKHOVERTEXTCOLOUR,
@@ -326,5 +330,37 @@
         MIDDLECOLOUR = 2,
         LIGHTCOLOUR = 3,
         LIGHTESTCOLOUR = 4
+    }
+
+    public enum AllAvailableColourTypes
+    {
+        ALTERNATIVENORMALTEXTCOLOUR,
+        BASECOLOUR,
+        BORDERCOLOUR,
+        CUSTOMCOLOURONE,
+        CUSTOMCOLOURTWO,
+        CUSTOMCOLOURTHREE,
+        CUSTOMCOLOURFOUR,
+        CUSTOMCOLOURFIVE,
+        CUSTOMTEXTCOLOURONE,
+        CUSTOMTEXTCOLOURTWO,
+        CUSTOMTEXTCOLOURTHREE,
+        CUSTOMTEXTCOLOURFOUR,
+        CUSTOMTEXTCOLOURFIVE,
+        DARKESTCOLOUR,
+        DISABLEDCOLOUR,
+        DISABLEDTEXTCOLOUR,
+        FOCUSEDTEXTCOLOUR,
+        LIGHTCOLOUR,
+        LIGHTESTCOLOUR,
+        LINKDISABLEDCOLOUR,
+        LINKHOVERCOLOUR,
+        LINKNORMALCOLOUR,
+        LINKVISITEDCOLOUR,
+        MEDIUMCOLOUR,
+        MENUTEXTCOLOUR,
+        NORMALTEXTCOLOUR,
+        PRESSEDTEXTCOLOUR,
+        STATUSTEXTCOLOUR
     }
 }

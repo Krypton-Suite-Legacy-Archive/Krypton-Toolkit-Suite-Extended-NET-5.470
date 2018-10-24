@@ -12,7 +12,7 @@ namespace Tooling.Settings {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class ColourSettings : global::System.Configuration.ApplicationSettingsBase {
         
         private static ColourSettings defaultInstance = ((ColourSettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new ColourSettings())));
@@ -317,6 +317,17 @@ namespace Tooling.Settings {
             }
             set {
                 this["StatusTextColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color LinkDisabledColour {
+            get {
+                return ((global::System.Drawing.Color)(this["LinkDisabledColour"]));
+            }
+            set {
+                this["LinkDisabledColour"] = value;
             }
         }
     }

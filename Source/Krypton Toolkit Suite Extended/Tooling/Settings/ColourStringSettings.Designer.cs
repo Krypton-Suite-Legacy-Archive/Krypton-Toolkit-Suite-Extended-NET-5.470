@@ -12,7 +12,7 @@ namespace Tooling.Settings {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class ColourStringSettings : global::System.Configuration.ApplicationSettingsBase {
         
         private static ColourStringSettings defaultInstance = ((ColourStringSettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new ColourStringSettings())));
@@ -140,6 +140,222 @@ namespace Tooling.Settings {
             }
             set {
                 this["LinkNormalColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LinkHoverColour {
+            get {
+                return ((string)(this["LinkHoverColour"]));
+            }
+            set {
+                this["LinkHoverColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LinkVisitedColour {
+            get {
+                return ((string)(this["LinkVisitedColour"]));
+            }
+            set {
+                this["LinkVisitedColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LinkDisabledColour {
+            get {
+                return ((string)(this["LinkDisabledColour"]));
+            }
+            set {
+                this["LinkDisabledColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FocusTextColour {
+            get {
+                return ((string)(this["FocusTextColour"]));
+            }
+            set {
+                this["FocusTextColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PressedTextColour {
+            get {
+                return ((string)(this["PressedTextColour"]));
+            }
+            set {
+                this["PressedTextColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AlternativeNormalTextColour {
+            get {
+                return ((string)(this["AlternativeNormalTextColour"]));
+            }
+            set {
+                this["AlternativeNormalTextColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomColourOne {
+            get {
+                return ((string)(this["CustomColourOne"]));
+            }
+            set {
+                this["CustomColourOne"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomColourTwo {
+            get {
+                return ((string)(this["CustomColourTwo"]));
+            }
+            set {
+                this["CustomColourTwo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomColourThree {
+            get {
+                return ((string)(this["CustomColourThree"]));
+            }
+            set {
+                this["CustomColourThree"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomColourFour {
+            get {
+                return ((string)(this["CustomColourFour"]));
+            }
+            set {
+                this["CustomColourFour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomColourFive {
+            get {
+                return ((string)(this["CustomColourFive"]));
+            }
+            set {
+                this["CustomColourFive"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomTextColourOne {
+            get {
+                return ((string)(this["CustomTextColourOne"]));
+            }
+            set {
+                this["CustomTextColourOne"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomTextColourTwo {
+            get {
+                return ((string)(this["CustomTextColourTwo"]));
+            }
+            set {
+                this["CustomTextColourTwo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomTextColourThree {
+            get {
+                return ((string)(this["CustomTextColourThree"]));
+            }
+            set {
+                this["CustomTextColourThree"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomTextColourFour {
+            get {
+                return ((string)(this["CustomTextColourFour"]));
+            }
+            set {
+                this["CustomTextColourFour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomTextColourFive {
+            get {
+                return ((string)(this["CustomTextColourFive"]));
+            }
+            set {
+                this["CustomTextColourFive"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MenuTextColour {
+            get {
+                return ((string)(this["MenuTextColour"]));
+            }
+            set {
+                this["MenuTextColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string StatusTextColour {
+            get {
+                return ((string)(this["StatusTextColour"]));
+            }
+            set {
+                this["StatusTextColour"] = value;
             }
         }
     }

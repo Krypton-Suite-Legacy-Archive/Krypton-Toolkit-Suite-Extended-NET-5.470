@@ -2,8 +2,9 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Tooling.Settings.Classes;
 
-namespace Tooling.Settings.Classes
+namespace Tooling.Classes.Other
 {
     public class CombineColourSettings
     {
