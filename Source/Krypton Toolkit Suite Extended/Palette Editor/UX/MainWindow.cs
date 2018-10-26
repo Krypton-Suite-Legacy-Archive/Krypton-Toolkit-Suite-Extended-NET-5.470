@@ -755,7 +755,7 @@ namespace PaletteEditor.UX
 
         private void kbtnGetColourInformation_Click(object sender, EventArgs e)
         {
-            ColourInformation colourInformation = new ColourInformation();
+            ColourInformation colourInformation = new ColourInformation(DebugMode);
 
             colourInformation.Show();
         }
@@ -1131,6 +1131,11 @@ namespace PaletteEditor.UX
             RibbonWindow ribbonWindow = new RibbonWindow();
 
             ribbonWindow.Show();
+        }
+
+        private void factoryResetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _colourSettingsManager.ResetSettings(DebugMode);
         }
 
         private void GrabPaletteColours(bool useCircularPictureBoxes)

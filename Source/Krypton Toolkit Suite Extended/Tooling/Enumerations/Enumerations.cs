@@ -363,4 +363,14 @@
         PRESSEDTEXTCOLOUR,
         STATUSTEXTCOLOUR
     }
+
+    public enum SettingTypes
+    {
+        BOOLEAN,
+        COLOUR,
+        COLOURSTRING,
+        COLOURINTEGER,
+        STRING,
+        INTEGER
+    }
 }

@@ -283,9 +283,7 @@ namespace PaletteEditor.UX.New
                 UpdateTitlebar();
             }
 
-            PaletteImportManager paletteImportManager = new PaletteImportManager();
-
-            paletteImportManager.ImportColourScheme(palette);
+            PaletteImportManager.ImportPaletteColourScheme(palette);
 
             krgbUpdateColours.Enabled = true;
 

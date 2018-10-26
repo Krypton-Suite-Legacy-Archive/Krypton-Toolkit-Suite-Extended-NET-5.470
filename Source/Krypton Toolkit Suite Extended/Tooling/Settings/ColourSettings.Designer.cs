@@ -135,12 +135,12 @@ namespace Tooling.Settings {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Drawing.Color FocusTextColour {
+        public global::System.Drawing.Color FocusedTextColour {
             get {
-                return ((global::System.Drawing.Color)(this["FocusTextColour"]));
+                return ((global::System.Drawing.Color)(this["FocusedTextColour"]));
             }
             set {
-                this["FocusTextColour"] = value;
+                this["FocusedTextColour"] = value;
             }
         }
         

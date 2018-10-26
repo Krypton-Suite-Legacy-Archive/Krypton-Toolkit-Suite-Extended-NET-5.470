@@ -14,9 +14,14 @@ namespace PaletteEditor.UX
         private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
         #endregion
 
-        public ColourInformation()
+        public ColourInformation(bool debugMode = false)
         {
             InitializeComponent();
+
+            if (debugMode)
+            {
+                TextExtra = "(Debug Console)";
+            }
         }
 
         private void kbtnGetColourInformation_Click(object sender, EventArgs e)
@@ -44,6 +49,50 @@ namespace PaletteEditor.UX
             _colourSettingsArray.Add($"Lightest Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetLightestColour()) }");
 
             _colourSettingsArray.Add($"Border Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetBorderColour()) }");
+
+            _colourSettingsArray.Add($"Disabled Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetDisabledColour()) }");
+
+            _colourSettingsArray.Add($"Alternative Normal Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetAlternativeNormalTextColour()) }");
+
+            _colourSettingsArray.Add($"Disabled Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetDisabledTextColour()) }");
+
+            _colourSettingsArray.Add($"Normal Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetNormalTextColour()) }");
+
+            _colourSettingsArray.Add($"Focused Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetFocusTextColour()) }");
+
+            _colourSettingsArray.Add($"Pressed Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetPressedTextColour()) }");
+
+            _colourSettingsArray.Add($"Link Disabled Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetLinkDisabledColour()) }");
+
+            _colourSettingsArray.Add($"Link Normal Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetLinkNormalColour()) }");
+
+            _colourSettingsArray.Add($"Link Hover Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetLinkHoverColour()) }");
+
+            _colourSettingsArray.Add($"Link Visited Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetLinkVisitedColour()) }");
+
+            _colourSettingsArray.Add($"Custom Colour One: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomColourOne()) }");
+
+            _colourSettingsArray.Add($"Custom Colour Two: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomColourTwo()) }");
+
+            _colourSettingsArray.Add($"Custom Colour Three: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomColourThree()) }");
+
+            _colourSettingsArray.Add($"Custom Colour Four: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomColourFour()) }");
+
+            _colourSettingsArray.Add($"Custom Colour Five: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomColourFive()) }");
+
+            _colourSettingsArray.Add($"Custom Text Colour One: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomTextColourOne()) }");
+
+            _colourSettingsArray.Add($"Custom Text Colour Two: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomTextColourTwo()) }");
+
+            _colourSettingsArray.Add($"Custom Text Colour Three: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomTextColourThree()) }");
+
+            _colourSettingsArray.Add($"Custom Text Colour Four: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomTextColourFour()) }");
+
+            _colourSettingsArray.Add($"Custom Text Colour Five: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomTextColourFive()) }");
+
+            _colourSettingsArray.Add($"Menu Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetMenuTextColour()) }");
+
+            _colourSettingsArray.Add($"Status Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetStatusTextColour()) }");
         }
 
         private void AddColourDetails(string colourDescription, string colour)

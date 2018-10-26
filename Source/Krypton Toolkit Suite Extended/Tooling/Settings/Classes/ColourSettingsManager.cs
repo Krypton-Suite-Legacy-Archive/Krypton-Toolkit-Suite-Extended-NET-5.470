@@ -222,7 +222,7 @@ namespace Tooling.Settings.Classes
         /// <param name="focusTextColour">The value of focusTextColour.</param>
         public void SetFocusTextColour(Color focusTextColour)
         {
-            _colourSettings.FocusTextColour = focusTextColour;
+            _colourSettings.FocusedTextColour = focusTextColour;
         }
 
         /// <summary>
@@ -231,7 +231,7 @@ namespace Tooling.Settings.Classes
         /// <returns>The value of focusTextColour.</returns>
         public Color GetFocusTextColour()
         {
-            return _colourSettings.FocusTextColour;
+            return _colourSettings.FocusedTextColour;
         }
 
         /// <summary>

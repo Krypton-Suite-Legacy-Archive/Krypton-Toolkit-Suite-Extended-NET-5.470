@@ -139,6 +139,7 @@
     <Compile Include="Settings\Classes\ColourStringSettingsManager.cs" />
     <Compile Include="Settings\Classes\GlobalBooleanSettingsManager.cs" />
     <Compile Include="Settings\Classes\GlobalStringSettingsManager.cs" />
+    <Compile Include="Settings\Classes\PaletteTypefaceSettingsManager.cs" />
     <Compile Include="Settings\ColourIntegerSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -163,6 +164,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>GlobalStringSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\PaletteTypefaceSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>PaletteTypefaceSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="STRUCTS\HSLColour.cs" />
     <Compile Include="User Controls\Colours\ColourEditor.cs">
@@ -272,6 +278,10 @@
     <None Include="Settings\GlobalStringSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>GlobalStringSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\PaletteTypefaceSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>PaletteTypefaceSettings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

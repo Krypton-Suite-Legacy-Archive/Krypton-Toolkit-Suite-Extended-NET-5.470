@@ -32,7 +32,7 @@
     <Setting Name="LinkNormalColour" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="FocusTextColour" Type="System.Drawing.Color" Scope="User">
+    <Setting Name="FocusedTextColour" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="PressedTextColour" Type="System.Drawing.Color" Scope="User">

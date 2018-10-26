@@ -409,7 +409,8 @@
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
+            this.kryptonRibbon1.SelectedContext = null;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1236, 115);
             this.kryptonRibbon1.TabIndex = 0;
             // 
@@ -1002,10 +1003,10 @@
             // 
             this.lblColourOutput.Location = new System.Drawing.Point(12, 13);
             this.lblColourOutput.Name = "lblColourOutput";
-            this.lblColourOutput.Size = new System.Drawing.Size(40, 26);
+            this.lblColourOutput.Size = new System.Drawing.Size(6, 2);
             this.lblColourOutput.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColourOutput.TabIndex = 63;
-            this.lblColourOutput.Values.Text = "000";
+            this.lblColourOutput.Values.Text = "";
             // 
             // kryptonPanel3
             // 
