@@ -210,7 +210,7 @@ namespace Tooling.Classes.Other
 
                     _colourSettingsManager.SetDisabledTextColour(DisabledTextColourPreview);
 
-                    _colourSettingsManager.SetFocusTextColour(FocusedTextColourPreview);
+                    _colourSettingsManager.SetFocusedTextColour(FocusedTextColourPreview);
 
                     _colourSettingsManager.SetPressedTextColour(PressedTextColourPreview);
 
@@ -368,7 +368,7 @@ namespace Tooling.Classes.Other
 
             colourSettingsManager.SetDisabledTextColour(disabledTextColourPreview);
 
-            colourSettingsManager.SetFocusTextColour(focusedTextColourPreview);
+            colourSettingsManager.SetFocusedTextColour(focusedTextColourPreview);
 
             colourSettingsManager.SetPressedTextColour(pressedTextColourPreview);
 

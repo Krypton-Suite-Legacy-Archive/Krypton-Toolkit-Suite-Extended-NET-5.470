@@ -363,6 +363,26 @@ namespace PaletteExplorer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Property_New_16_x_16 {
+            get {
+                object obj = ResourceManager.GetObject("Property_New_16_x_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Property_New_32_x_32 {
+            get {
+                object obj = ResourceManager.GetObject("Property_New_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Refresh_16_x_16 {
             get {
                 object obj = ResourceManager.GetObject("Refresh_16_x_16", resourceCulture);
@@ -446,6 +466,26 @@ namespace PaletteExplorer.Properties {
         internal static System.Drawing.Bitmap Text_Colour_v1_32_x_32 {
             get {
                 object obj = ResourceManager.GetObject("Text_Colour_v1_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Warning_16_x_16 {
+            get {
+                object obj = ResourceManager.GetObject("Warning_16_x_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Warning_32_x_32 {
+            get {
+                object obj = ResourceManager.GetObject("Warning_32_x_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

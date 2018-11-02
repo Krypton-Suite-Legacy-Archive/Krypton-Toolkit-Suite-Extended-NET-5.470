@@ -217,19 +217,37 @@ namespace Tooling.Settings.Classes
         }
 
         /// <summary>
+        /// Sets the LinkFocusedColour to the value of linkFocusedColour.
+        /// </summary>
+        /// <param name="linkFocusedColour">The value of linkFocusedColour.</param>
+        public void SetLinkFocusedColour(Color linkFocusedColour)
+        {
+            _colourSettings.LinkFocusedColour = linkFocusedColour;
+        }
+
+        /// <summary>
+        /// Gets the LinkFocusedColour value.
+        /// </summary>
+        /// <returns>The value of linkFocusedColour.</returns>
+        public Color GetLinkFocusedColour()
+        {
+            return _colourSettings.LinkFocusedColour;
+        }
+
+        /// <summary>
         /// Sets the FocusTextColour to the value of focusTextColour.
         /// </summary>
-        /// <param name="focusTextColour">The value of focusTextColour.</param>
-        public void SetFocusTextColour(Color focusTextColour)
+        /// <param name="focusedTextColour">The value of focusTextColour.</param>
+        public void SetFocusedTextColour(Color focusedTextColour)
         {
-            _colourSettings.FocusedTextColour = focusTextColour;
+            _colourSettings.FocusedTextColour = focusedTextColour;
         }
 
         /// <summary>
         /// Gets the FocusTextColour value.
         /// </summary>
         /// <returns>The value of focusTextColour.</returns>
-        public Color GetFocusTextColour()
+        public Color GetFocusedTextColour()
         {
             return _colourSettings.FocusedTextColour;
         }
@@ -598,7 +616,7 @@ namespace Tooling.Settings.Classes
 
             SetNormalTextColour(Color.Black);
 
-            SetFocusTextColour(Color.White);
+            SetFocusedTextColour(Color.White);
 
             SetPressedTextColour(Color.Black);
 
@@ -607,6 +625,8 @@ namespace Tooling.Settings.Classes
             SetDisabledColour(Color.Silver);
 
             SetLinkNormalColour(Color.Blue);
+
+            SetLinkFocusedColour(Color.Gray);
 
             SetLinkHoverColour(Color.Red);
 

@@ -49,6 +49,8 @@ namespace Tooling.Classes.Other
 
                 _colourSettingsManager.SetNormalTextColour(palette.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.LongText.Color1);
 
+                _colourSettingsManager.SetFocusedTextColour(palette.ButtonStyles.ButtonCommon.OverrideFocus.Content.LongText.Color1);
+
                 _colourSettingsManager.SetDisabledTextColour(palette.ButtonStyles.ButtonCommon.StateDisabled.Content.LongText.Color1);
 
                 _colourSettingsManager.SetDisabledColour(palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1);
@@ -56,6 +58,8 @@ namespace Tooling.Classes.Other
                 _colourSettingsManager.SetLinkNormalColour(palette.LabelStyles.LabelNormalControl.OverrideNotVisited.LongText.Color1);
 
                 _colourSettingsManager.SetLinkHoverColour(palette.LabelStyles.LabelNormalControl.OverridePressed.LongText.Color1);
+
+                _colourSettingsManager.SetLinkFocusedColour(palette.LabelStyles.LabelNormalControl.OverrideFocus.LongText.Color1);
 
                 _colourSettingsManager.SetLinkVisitedColour(palette.LabelStyles.LabelNormalControl.OverrideVisited.LongText.Color1);
 

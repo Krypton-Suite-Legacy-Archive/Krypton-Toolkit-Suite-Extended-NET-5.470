@@ -58,7 +58,7 @@ namespace PaletteEditor.UX
 
             _colourSettingsArray.Add($"Normal Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetNormalTextColour()) }");
 
-            _colourSettingsArray.Add($"Focused Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetFocusTextColour()) }");
+            _colourSettingsArray.Add($"Focused Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetFocusedTextColour()) }");
 
             _colourSettingsArray.Add($"Pressed Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetPressedTextColour()) }");
 

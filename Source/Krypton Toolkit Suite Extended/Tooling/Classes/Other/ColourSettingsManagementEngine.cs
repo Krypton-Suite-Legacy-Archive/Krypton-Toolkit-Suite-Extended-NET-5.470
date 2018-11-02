@@ -77,7 +77,7 @@ namespace Tooling.Classes.Other
                     colourSettingsManager.SetDisabledTextColour(colour);
                     break;
                 case AllAvailableColourTypes.FOCUSEDTEXTCOLOUR:
-                    colourSettingsManager.SetFocusTextColour(colour);
+                    colourSettingsManager.SetFocusedTextColour(colour);
                     break;
                 case AllAvailableColourTypes.LIGHTCOLOUR:
                     colourSettingsManager.SetLightColour(colour);
@@ -307,7 +307,7 @@ namespace Tooling.Classes.Other
                         tempColour = colourSettingsManager.GetDisabledTextColour();
                         break;
                     case AllAvailableColourTypes.FOCUSEDTEXTCOLOUR:
-                        tempColour = colourSettingsManager.GetFocusTextColour();
+                        tempColour = colourSettingsManager.GetFocusedTextColour();
                         break;
                     case AllAvailableColourTypes.LIGHTCOLOUR:
                         tempColour = colourSettingsManager.GetLightColour();

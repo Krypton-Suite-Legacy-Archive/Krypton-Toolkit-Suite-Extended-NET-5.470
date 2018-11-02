@@ -330,5 +330,16 @@ namespace Tooling.Settings {
                 this["LinkDisabledColour"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color LinkFocusedColour {
+            get {
+                return ((global::System.Drawing.Color)(this["LinkFocusedColour"]));
+            }
+            set {
+                this["LinkFocusedColour"] = value;
+            }
+        }
     }
 }

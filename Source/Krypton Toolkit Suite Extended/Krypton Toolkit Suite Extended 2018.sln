@@ -58,8 +58,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IMG", "IMG", "{3FBD4A85-FA0
 		..\..\Updates\Changelog\IMG\Krypton.ico = ..\..\Updates\Changelog\IMG\Krypton.ico
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Renderer", "Palette Renderer\Palette Renderer.csproj", "{87182631-9FEB-4250-B39F-63BB6714AEA5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Composer", "Palette Composer\Palette Composer.csproj", "{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colour Creator", "Colour Creator\Colour Creator.csproj", "{EEC1BBB0-C57D-4A84-960E-C43069190F6F}"
@@ -67,8 +65,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Creator", "Palette Creator\Palette Creator.csproj", "{E668A872-620B-4247-9629-28F12F7B0FD7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global Utilities", "Global Utilities\Global Utilities.csproj", "{EDB87D0C-A37C-48B5-9857-F014C438A4C5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colour Composer", "Colour Composer\Colour Composer.csproj", "{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extended File Dialogs", "Extended File Dialogs\Extended File Dialogs.csproj", "{D4644D8A-1C7A-43B6-8461-AB0B56FD6463}"
 EndProject
@@ -187,18 +183,6 @@ Global
 		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Release|Any CPU.ActiveCfg = Release|x86
 		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Release|x86.ActiveCfg = Release|x86
 		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Release|x86.Build.0 = Release|x86
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Debug|x86.Build.0 = Debug|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Installer Only|Any CPU.Build.0 = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Installer Only|x86.ActiveCfg = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Installer Only|x86.Build.0 = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Release|x86.ActiveCfg = Release|Any CPU
-		{87182631-9FEB-4250-B39F-63BB6714AEA5}.Release|x86.Build.0 = Release|Any CPU
 		{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -247,18 +231,6 @@ Global
 		{EDB87D0C-A37C-48B5-9857-F014C438A4C5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EDB87D0C-A37C-48B5-9857-F014C438A4C5}.Release|x86.ActiveCfg = Release|Any CPU
 		{EDB87D0C-A37C-48B5-9857-F014C438A4C5}.Release|x86.Build.0 = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Debug|x86.Build.0 = Debug|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Installer Only|Any CPU.Build.0 = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Installer Only|x86.ActiveCfg = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Installer Only|x86.Build.0 = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Release|x86.ActiveCfg = Release|Any CPU
-		{4BC3370D-D8CF-44E9-9D82-439AA9E937C2}.Release|x86.Build.0 = Release|Any CPU
 		{D4644D8A-1C7A-43B6-8461-AB0B56FD6463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4644D8A-1C7A-43B6-8461-AB0B56FD6463}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4644D8A-1C7A-43B6-8461-AB0B56FD6463}.Debug|x86.ActiveCfg = Debug|Any CPU
