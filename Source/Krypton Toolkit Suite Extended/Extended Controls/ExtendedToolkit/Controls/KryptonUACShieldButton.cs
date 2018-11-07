@@ -1,13 +1,10 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using GlobalUtilities.Classes;
+using KryptonExtendedToolkit.Base.Code;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-
-using ComponentFactory.Krypton.Toolkit;
-
-using GlobalUtilities.Classes;
-
-using KryptonExtendedToolkit.Base.Code;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 {
@@ -20,10 +17,10 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
     /// If the operating system is not Windows Vista or higher, no shield will be displayed as there's no such thing as UAC on the target system -> the shield is obsolete.
     /// </remarks>
     [DesignerCategory("Code")]
-    [DisplayName("Krypton UAC Shield Button")]
+    [DisplayName("Krypton UAC Elevated Button")]
     [ToolboxItem(true)]
     [ToolboxBitmap(typeof(KryptonButton))]
-    public partial class KryptonUACShieldButton : KryptonButton
+    public partial class KryptonUACElevatedButton : KryptonButton
     {
         #region Variables
         private bool _elevateApplicationOnClick = true;
@@ -87,9 +84,9 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 
         #region Constructor
         /// <summary>
-        /// Initialises a new instance of the <see cref="KryptonUACShieldButton"/> class.
+        /// Initialises a new instance of the <see cref="KryptonUACElevatedButton"/> class.
         /// </summary>
-        public KryptonUACShieldButton() : base()
+        public KryptonUACElevatedButton() : base()
         {
             Size = new Size((int)(Width * 1.5), Height + 1);
 

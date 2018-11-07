@@ -38,7 +38,7 @@
             this.lblIsAdminMode = new System.Windows.Forms.Label();
             this.rtbTextPad = new System.Windows.Forms.RichTextBox();
             this.lblVersion = new System.Windows.Forms.Label();
-            this.kuacsbElevate = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACShieldButton();
+            this.kuacsbElevate = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.kPal = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
@@ -1008,7 +1008,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
         private System.Windows.Forms.Label lblVersion;
-        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACShieldButton kuacsbElevate;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton kuacsbElevate;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem1;

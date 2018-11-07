@@ -105,6 +105,7 @@
     <Compile Include="ExtendedToolkit\Controls\KryptonSlideButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonUACShieldButton.cs" />
     <Compile Include="ExtendedToolkit\FloatingFramework\Controls\DockingHostToolStripPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -141,7 +142,6 @@
     <Compile Include="ExtendedToolkit\Controls\KryptonSearchBox.Designer.cs">
       <DependentUpon>KryptonSearchBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExtendedToolkit\Controls\KryptonUACShieldButton.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonWaterMarkTextBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\ModernProgressBar.cs">
       <SubType>UserControl</SubType>

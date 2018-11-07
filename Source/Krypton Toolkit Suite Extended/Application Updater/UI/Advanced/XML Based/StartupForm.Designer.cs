@@ -34,7 +34,7 @@
             this.kbtOptions = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pbWait = new System.Windows.Forms.ProgressBar();
             this.kbtnCheckForUpdates = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kuacsbtnCheckForUpdates = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACShieldButton();
+            this.kuacsbtnCheckForUpdates = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.klblDetails = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tmrWaiting = new System.Windows.Forms.Timer(this.components);
@@ -150,7 +150,7 @@
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACShieldButton kuacsbtnCheckForUpdates;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton kuacsbtnCheckForUpdates;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel klblDetails;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnCancel;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnCheckForUpdates;

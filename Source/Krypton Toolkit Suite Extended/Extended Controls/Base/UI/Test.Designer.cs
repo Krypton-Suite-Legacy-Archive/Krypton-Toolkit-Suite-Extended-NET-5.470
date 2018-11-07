@@ -64,7 +64,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemUACSheld2 = new KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
             this.toolStripMenuItemUACSheld3 = new KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld();
-            this.kryptonUACShieldButton1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACShieldButton();
+            this.kryptonUACShieldButton1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -401,6 +401,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld toolStripMenuItemUACSheld2;
         private ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld toolStripMenuItemUACSheld3;
-        private ExtendedToolkit.Controls.KryptonUACShieldButton kryptonUACShieldButton1;
+        private ExtendedToolkit.Controls.KryptonUACElevatedButton kryptonUACShieldButton1;
     }
 }
