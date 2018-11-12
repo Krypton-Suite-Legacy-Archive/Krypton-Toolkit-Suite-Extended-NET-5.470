@@ -18,6 +18,24 @@ namespace Tooling.Settings.Classes
 
         #region Setters & Getters
         /// <summary>
+        /// Sets the AutomaticallyUpdateColours to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetAutomaticallyUpdateColours(bool value)
+        {
+            _globalBooleanSettings.AutomaticallyUpdateColours = value;
+        }
+
+        /// <summary>
+        /// Gets the AutomaticallyUpdateColours value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetAutomaticallyUpdateColours()
+        {
+            return _globalBooleanSettings.AutomaticallyUpdateColours;
+        }
+
+        /// <summary>
         /// Sets the DevelopmentMode to the value of value.
         /// </summary>
         /// <param name="value">The value of value.</param>
@@ -179,6 +197,8 @@ namespace Tooling.Settings.Classes
 
         private void ResetBooleanSettings()
         {
+            SetAutomaticallyUpdateColours(true);
+
             SetDevelopmentMode(false);
 
             SetDisableListItem(false);

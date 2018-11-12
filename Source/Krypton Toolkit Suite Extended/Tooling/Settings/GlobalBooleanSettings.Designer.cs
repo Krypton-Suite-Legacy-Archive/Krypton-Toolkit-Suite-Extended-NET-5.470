@@ -94,5 +94,17 @@ namespace Tooling.Settings {
                 this["HidePropertiesPane"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AutomaticallyUpdateColours {
+            get {
+                return ((bool)(this["AutomaticallyUpdateColours"]));
+            }
+            set {
+                this["AutomaticallyUpdateColours"] = value;
+            }
+        }
     }
 }

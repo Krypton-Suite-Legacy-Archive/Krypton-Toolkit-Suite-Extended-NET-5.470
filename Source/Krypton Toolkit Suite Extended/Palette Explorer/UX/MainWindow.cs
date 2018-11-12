@@ -377,6 +377,7 @@ namespace PaletteExplorer.UX
             this.kcmGenerateColours = new ComponentFactory.Krypton.Toolkit.KryptonContextMenu();
             this.kryptonContextMenuItems4 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuItem9 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.kcDefineIndividualColours = new ComponentFactory.Krypton.Toolkit.KryptonCommand();
             this.kryptonRibbonGroupSeparator4 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple7 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbGetColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -580,7 +581,6 @@ namespace PaletteExplorer.UX
             this.kcSavePaletteAs = new ComponentFactory.Krypton.Toolkit.KryptonCommand();
             this.kcExitApplication = new ComponentFactory.Krypton.Toolkit.KryptonCommand();
             this.kryptonContextMenuItems2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
-            this.kcDefineIndividualColours = new ComponentFactory.Krypton.Toolkit.KryptonCommand();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -735,7 +735,6 @@ namespace PaletteExplorer.UX
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
-            this.kryptonRibbon1.SelectedContext = null;
             this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1219, 115);
             this.kryptonRibbon1.TabIndex = 1;
@@ -964,6 +963,7 @@ namespace PaletteExplorer.UX
             this.krgbGenerateColours.KryptonContextMenu = this.kcmGenerateColours;
             this.krgbGenerateColours.TextLine1 = "Generate";
             this.krgbGenerateColours.TextLine2 = "Colours";
+            this.krgbGenerateColours.Click += new System.EventHandler(this.krgbGenerateColours_Click);
             // 
             // kcmGenerateColours
             // 
@@ -979,6 +979,11 @@ namespace PaletteExplorer.UX
             // 
             this.kryptonContextMenuItem9.KryptonCommand = this.kcDefineIndividualColours;
             this.kryptonContextMenuItem9.Text = "&Define Individual Colours";
+            // 
+            // kcDefineIndividualColours
+            // 
+            this.kcDefineIndividualColours.Text = "Define Individual Colours";
+            this.kcDefineIndividualColours.Execute += new System.EventHandler(this.kcDefineIndividualColours_Execute);
             // 
             // kryptonRibbonGroupTriple7
             // 
@@ -2484,7 +2489,7 @@ namespace PaletteExplorer.UX
             // 
             // labelGridNormal
             // 
-            this.labelGridNormal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.labelGridNormal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelGridNormal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGridNormal.HelpVisible = false;
@@ -2556,11 +2561,6 @@ namespace PaletteExplorer.UX
             // kcExitApplication
             // 
             this.kcExitApplication.Text = "Exit Application";
-            // 
-            // kcDefineIndividualColours
-            // 
-            this.kcDefineIndividualColours.Text = "Define Individual Colours";
-            this.kcDefineIndividualColours.Execute += new System.EventHandler(this.kcDefineIndividualColours_Execute);
             // 
             // MainWindow
             // 
@@ -2797,6 +2797,13 @@ namespace PaletteExplorer.UX
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             Exit();
+        }
+
+        private void krgbGenerateColours_Click(object sender, EventArgs e)
+        {
+            PaletteColourCreator paletteColourCreator = new PaletteColourCreator();
+
+            paletteColourCreator.Show();
         }
         #endregion
 

@@ -24,7 +24,7 @@ namespace KryptonExtendedToolkit.Base.Code
         /// Elevates the application to use administrative privileges. To be used with <see cref="ExtendedToolkit.Controls.KryptonUACElevatedButton"/> or <see cref="ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld"/> button click.
         /// </summary>
         /// <param name="processName">The process name that you wish to elevate.</param>
-        public void ElevateProcessWithAdministrativeRights(string processName)
+        public static void ElevateProcessWithAdministrativeRights(string processName)
         {
             WindowsPrincipal principal = new WindowsPrincipal(WindowsIdentity.GetCurrent());
 
@@ -59,7 +59,7 @@ namespace KryptonExtendedToolkit.Base.Code
         /// Use this method in your 'Load' event.
         /// </remarks>
         /// <returns>True if the current process has launched with administrative rights, false if not.</returns>
-        public bool GetHasElevateProcessWithAdministrativeRights()
+        public static bool GetHasElevateProcessWithAdministrativeRights()
         {
             WindowsPrincipal principal = new WindowsPrincipal(WindowsIdentity.GetCurrent());
 

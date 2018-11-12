@@ -149,7 +149,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
                     {
                         if (ProcessName != string.Empty)
                         {
-                            _utilityMethods.ElevateProcessWithAdministrativeRights(ProcessName);
+                            UtilityMethods.ElevateProcessWithAdministrativeRights(ProcessName);
                         }
                     }
                 }

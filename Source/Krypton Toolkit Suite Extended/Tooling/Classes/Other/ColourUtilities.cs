@@ -153,15 +153,17 @@ namespace Tooling.Classes.Other
         /// <param name="lightestColour">The lightest colour.</param>
         public static void GenerateColourShades(Color baseColour, PictureBox darkestColour, PictureBox mediumColour, PictureBox lightColour, PictureBox lightestColour)
         {
+            ColourBlendingSettingsManager colourBlendingSettingsManager = new ColourBlendingSettingsManager();
+
             if (baseColour != null)
             {
-                darkestColour.BackColor = Darken(baseColour, 0.5f);
+                darkestColour.BackColor = Darken(baseColour, colourBlendingSettingsManager.GetDarkestColourIntensity());
 
-                mediumColour.BackColor = Darken(baseColour, 0.25f);
+                mediumColour.BackColor = Darken(baseColour, colourBlendingSettingsManager.GetMediumColourIntensity());
 
-                lightColour.BackColor = Lighten(baseColour, 0.25f);
+                lightColour.BackColor = Lighten(baseColour, colourBlendingSettingsManager.GetLightColourIntensity());
 
-                lightestColour.BackColor = Lighten(baseColour, 0.5f);
+                lightestColour.BackColor = Lighten(baseColour, colourBlendingSettingsManager.GetLightestColourIntensity());
 
                 if (lightestColour.BackColor == lightColour.BackColor)
                 {
@@ -181,20 +183,22 @@ namespace Tooling.Classes.Other
         /// </summary>
         /// <param name="baseColour">The base colour.</param>
         /// <param name="darkestColour">The darkest colour.</param>
-        /// <param name="middleColour">The middle colour.</param>
+        /// <param name="mediumColour">The middle colour.</param>
         /// <param name="lightColour">The light colour.</param>
         /// <param name="lightestColour">The lightest colour.</param>
-        public static void GenerateColourShades(Color baseColour, CircularPictureBox darkestColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour)
+        public static void GenerateColourShades(Color baseColour, CircularPictureBox darkestColour, CircularPictureBox mediumColour, CircularPictureBox lightColour, CircularPictureBox lightestColour)
         {
+            ColourBlendingSettingsManager colourBlendingSettingsManager = new ColourBlendingSettingsManager();
+
             if (baseColour != null)
             {
-                darkestColour.BackColor = Darken(baseColour, 0.5f);
+                darkestColour.BackColor = Darken(baseColour, colourBlendingSettingsManager.GetDarkestColourIntensity());
 
-                middleColour.BackColor = Darken(baseColour, 0.25f);
+                mediumColour.BackColor = Darken(baseColour, colourBlendingSettingsManager.GetMediumColourIntensity());
 
-                lightColour.BackColor = Lighten(baseColour, 0.25f);
+                lightColour.BackColor = Lighten(baseColour, colourBlendingSettingsManager.GetLightColourIntensity());
 
-                lightestColour.BackColor = Lighten(baseColour, 0.5f);
+                lightestColour.BackColor = Lighten(baseColour, colourBlendingSettingsManager.GetLightestColourIntensity());
 
                 if (lightestColour.BackColor == lightColour.BackColor)
                 {
@@ -206,6 +210,37 @@ namespace Tooling.Classes.Other
                 {
                     lightestColour.Enabled = true;
                 }
+            }
+        }
+
+        /// <summary>
+        /// Generates the colour shades.
+        /// </summary>
+        /// <param name="darkestColour">The darkest colour.</param>
+        /// <param name="mediumColour">The medium colour.</param>
+        /// <param name="lightColour">The light colour.</param>
+        /// <param name="lightestColour">The lightest colour.</param>
+        /// <param name="darkColourValue">The dark colour value.</param>
+        /// <param name="mediumColourValue">The medium colour value.</param>
+        /// <param name="lightColourValue">The light colour value.</param>
+        /// <param name="lightestColourValue">The lightest colour value.</param>
+        /// <param name="baseColour">The base colour.</param>
+        public static void GenerateColourShades(CircularPictureBox darkestColour, CircularPictureBox mediumColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, float darkColourValue, float mediumColourValue, float lightColourValue, float lightestColourValue, Color baseColour)
+        {
+            try
+            {
+                darkestColour.BackColor = Darken(baseColour, darkColourValue);
+
+                mediumColour.BackColor = Darken(baseColour, mediumColourValue);
+
+                lightColour.BackColor = Lighten(baseColour, lightColourValue);
+
+                lightestColour.BackColor = Lighten(baseColour, lightestColourValue);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
             }
         }
 

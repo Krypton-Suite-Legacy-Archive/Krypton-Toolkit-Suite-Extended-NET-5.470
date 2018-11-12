@@ -79,6 +79,7 @@
     <Compile Include="Classes\Other\ColourUtilities.cs" />
     <Compile Include="Classes\Other\ColourUtility.cs" />
     <Compile Include="Classes\Other\ConversionMethods.cs" />
+    <Compile Include="Classes\Other\ExceptionHandler.cs" />
     <Compile Include="Classes\Other\FileCreator.cs" />
     <Compile Include="Classes\Other\GlobalMethods.cs" />
     <Compile Include="Classes\Other\InformationControlManager.cs" />
@@ -133,6 +134,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Classes\ColourBlendingSettingsManager.cs" />
     <Compile Include="Settings\Classes\ColourIntegerSettingsManager.cs" />
     <Compile Include="Settings\Classes\ColourSettingsManager.cs" />
     <Compile Include="Classes\Other\CombineColourSettings.cs" />
@@ -140,6 +142,11 @@
     <Compile Include="Settings\Classes\GlobalBooleanSettingsManager.cs" />
     <Compile Include="Settings\Classes\GlobalStringSettingsManager.cs" />
     <Compile Include="Settings\Classes\PaletteTypefaceSettingsManager.cs" />
+    <Compile Include="Settings\ColourBlendingSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ColourBlendingSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Settings\ColourIntegerSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -231,6 +238,9 @@
     <Compile Include="UX\DefineIndividualColoursDialog.Designer.cs">
       <DependentUpon>DefineIndividualColoursDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="UX\Options\ColourBlendingOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UX\PaletteColourCreator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +269,10 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Resources\color.ico" />
+    <None Include="Settings\ColourBlendingSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ColourBlendingSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Settings\ColourIntegerSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>ColourIntegerSettings.Designer.cs</LastGenOutput>
@@ -318,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\DefineIndividualColoursDialog.resx">
       <DependentUpon>DefineIndividualColoursDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Options\ColourBlendingOptions.resx">
+      <DependentUpon>ColourBlendingOptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\PaletteColourCreator.resx">
       <DependentUpon>PaletteColourCreator.cs</DependentUpon>

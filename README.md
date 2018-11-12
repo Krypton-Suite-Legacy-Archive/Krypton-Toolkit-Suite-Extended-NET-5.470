@@ -11,7 +11,17 @@
 ======
 
 # Building this repository from code
+
 ## In order to compile the code, you MUST restore/update the NuGet packages in order to build successfuly!
+
+======
+
+## 2018-11-12 November 2018 Update
+* Refinements to code
+* Set your own colour intensity
+* Automatic updating of colours has been centralised
+* Work on a new ribonised `Palette Explorer` is in progress
+* Going forward: possibility of merging the now defunct `ExtendedRenderer` project into this project in order to keep code maintained
 
 ======
 

@@ -84,7 +84,6 @@
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pbxBaseColour = new System.Windows.Forms.PictureBox();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kchkAutomateColourSwatchValues = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kbtnExport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tmrUpdate = new System.Windows.Forms.Timer(this.components);
@@ -93,6 +92,7 @@
             this.tmrUpdateUI = new System.Windows.Forms.Timer(this.components);
             this.tmrAutomateColourSwatchValues = new System.Windows.Forms.Timer(this.components);
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnOptions = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnDefineIndividualColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnImportColours = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.ss = new System.Windows.Forms.StatusStrip();
@@ -792,16 +792,6 @@
             this.kryptonLabel2.TabIndex = 15;
             this.kryptonLabel2.Values.Text = "Red:";
             // 
-            // kchkAutomateColourSwatchValues
-            // 
-            this.kchkAutomateColourSwatchValues.Location = new System.Drawing.Point(609, 7);
-            this.kchkAutomateColourSwatchValues.Name = "kchkAutomateColourSwatchValues";
-            this.kchkAutomateColourSwatchValues.Size = new System.Drawing.Size(258, 26);
-            this.kchkAutomateColourSwatchValues.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kchkAutomateColourSwatchValues.TabIndex = 54;
-            this.kchkAutomateColourSwatchValues.Values.Text = "&Automate Colour Swatch Values";
-            this.kchkAutomateColourSwatchValues.CheckedChanged += new System.EventHandler(this.kchkAutomateColourSwatchValues_CheckedChanged);
-            // 
             // kbtnExport
             // 
             this.kbtnExport.AutoSize = true;
@@ -844,18 +834,30 @@
             // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.kbtnOptions);
             this.kryptonPanel2.Controls.Add(this.kbtnDefineIndividualColours);
             this.kryptonPanel2.Controls.Add(this.kbtnImportColours);
             this.kryptonPanel2.Controls.Add(this.ss);
             this.kryptonPanel2.Controls.Add(this.kbtnOk);
             this.kryptonPanel2.Controls.Add(this.kbtnGenerate);
             this.kryptonPanel2.Controls.Add(this.kbtnExport);
-            this.kryptonPanel2.Controls.Add(this.kchkAutomateColourSwatchValues);
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 585);
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.Size = new System.Drawing.Size(1028, 69);
             this.kryptonPanel2.TabIndex = 1;
+            // 
+            // kbtnOptions
+            // 
+            this.kbtnOptions.AutoSize = true;
+            this.kbtnOptions.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnOptions.Location = new System.Drawing.Point(609, 7);
+            this.kbtnOptions.Name = "kbtnOptions";
+            this.kbtnOptions.Size = new System.Drawing.Size(69, 30);
+            this.kbtnOptions.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnOptions.TabIndex = 63;
+            this.kbtnOptions.Values.Text = "Op&tions";
+            this.kbtnOptions.Click += new System.EventHandler(this.kbtnOptions_Click);
             // 
             // kbtnDefineIndividualColours
             // 
@@ -1005,7 +1007,6 @@
         private System.Windows.Forms.Timer tmrUpdateUI;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown knumAlphaChannelValue;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel10;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kchkAutomateColourSwatchValues;
         private System.Windows.Forms.Timer tmrAutomateColourSwatchValues;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnFileExport;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnBrowse;
@@ -1036,5 +1037,6 @@
         private System.Windows.Forms.ToolStripStatusLabel tsslStatus;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnImportColours;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnDefineIndividualColours;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnOptions;
     }
 }

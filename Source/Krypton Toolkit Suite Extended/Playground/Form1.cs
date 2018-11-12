@@ -51,12 +51,12 @@ namespace Playground
                 internalApplicationUpdaterSettingsManager.SetXMLFileURL(ServerXMLFileURL);
             }
 
-            if (utilityMethods.GetHasElevateProcessWithAdministrativeRights())
+            if (UtilityMethods.GetHasElevateProcessWithAdministrativeRights())
             {
                 Text = Text + " (Administrator)";
             }
 
-            klblAdminMode.Text = $"Is running in Administrator mode: { utilityMethods.GetHasElevateProcessWithAdministrativeRights().ToString() }";
+            klblAdminMode.Text = $"Is running in Administrator mode: { UtilityMethods.GetHasElevateProcessWithAdministrativeRights().ToString() }";
 
             //kctb1.CueText = "Hello";
 
@@ -321,6 +321,11 @@ namespace Playground
             MainWindow mainWindow = new MainWindow();
 
             mainWindow.Show();
+        }
+
+        private void kuacsbElevate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -67,33 +67,23 @@ namespace ExtendedFileDialogs.Controls
         #endregion
 
         #region Variables Declaration
-        FileDialog _MSdialog;
-
-        NativeWindow _dlgWrapper;
+        private FileDialog _MSdialog;
+        private NativeWindow _dlgWrapper;
 
         private AddonWindowLocation _StartLocation = AddonWindowLocation.Right;
 
         private FolderViewMode _DefaultViewMode = FolderViewMode.Default;
-
-        IntPtr _hFileDialogHandle = IntPtr.Zero;
-
-        FileDialogType _FileDlgType;
-
-        string _InitialDirectory = string.Empty, _Filter = "All files (*.*)|*.*", _DefaultExt = "jpg", _FileName = string.Empty, _Caption = "Save", _OKCaption = "&Open";
-
-        int _FilterIndex = 1;
-
-        bool _AddExtension = true, _CheckFileExists = true, _EnableOkBtn = true, _DereferenceLinks = true, _ShowHelp, _hasRunInitMSDialog;
-
-        RECT _OpenDialogWindowRect = new RECT();
-
-        IntPtr _hOKButton = IntPtr.Zero;
+        private IntPtr _hFileDialogHandle = IntPtr.Zero;
+        private FileDialogType _FileDlgType;
+        private string _InitialDirectory = string.Empty, _Filter = "All files (*.*)|*.*", _DefaultExt = "jpg", _FileName = string.Empty, _Caption = "Save", _OKCaption = "&Open";
+        private int _FilterIndex = 1;
+        private bool _AddExtension = true, _CheckFileExists = true, _EnableOkBtn = true, _DereferenceLinks = true, _ShowHelp, _hasRunInitMSDialog;
+        private RECT _OpenDialogWindowRect = new RECT();
+        private IntPtr _hOKButton = IntPtr.Zero;
 
         [SuppressMessage("Microsoft.Reliability", "CA2006:UseSafeHandleToEncapsulateNativeResources")]
-
-        IntPtr _hListViewPtr;
-
-        ExceptionHandler _eh = new ExceptionHandler();
+        private IntPtr _hListViewPtr;
+        private ExceptionHandler _eh = new ExceptionHandler();
         #endregion
 
         #region Constructors
@@ -107,7 +97,7 @@ namespace ExtendedFileDialogs.Controls
         #endregion
 
         #region Properties
-        static uint _originalDlgHeight, _originalDlgWidth;
+        private static uint _originalDlgHeight, _originalDlgWidth;
 
         internal static uint OriginalDlgWidth
         {
@@ -149,7 +139,7 @@ namespace ExtendedFileDialogs.Controls
             }
         }
 
-        Size _OriginalCtrlSize;
+        private Size _OriginalCtrlSize;
         internal Size OriginalCtrlSize
         {
             get { return _OriginalCtrlSize; }
@@ -370,7 +360,7 @@ namespace ExtendedFileDialogs.Controls
             }
             catch (Exception exc)
             {
-                _eh.ThrowException(MessageBoxIcon.Error, $"An error has occurred: { exc.Message }", "Error Thrown", MessageBoxButtons.OK);
+                ExceptionHandler.ThrowException(MessageBoxIcon.Error, $"An error has occurred: { exc.Message }", "Error Thrown", MessageBoxButtons.OK);
             }
         }
 
@@ -491,7 +481,7 @@ namespace ExtendedFileDialogs.Controls
                     }
                     catch (Exception exc)
                     {
-                        _eh.ThrowException(MessageBoxIcon.Error, $"An error has occurred: { exc.Message }", "Error Thrown", MessageBoxButtons.OK);
+                        ExceptionHandler.ThrowException(MessageBoxIcon.Error, $"An error has occurred: { exc.Message }", "Error Thrown", MessageBoxButtons.OK);
                     }
                     finally
                     {
@@ -590,7 +580,7 @@ namespace ExtendedFileDialogs.Controls
             }
             catch (Exception ex)
             {
-                _eh.ThrowException(MessageBoxIcon.Error, $"Unable to get the modal dialog handle: { ex.Message }", "Error", MessageBoxButtons.OK);
+                ExceptionHandler.ThrowException(MessageBoxIcon.Error, $"Unable to get the modal dialog handle: { ex.Message }", "Error", MessageBoxButtons.OK);
             }
             return returnDialogResult;
         }
@@ -634,7 +624,7 @@ namespace ExtendedFileDialogs.Controls
             }
             catch (Exception ex)
             {
-                _eh.ThrowException(MessageBoxIcon.Error, $"Unable to get the modal dialog handle: { ex.Message }", "Error", MessageBoxButtons.OK);
+                ExceptionHandler.ThrowException(MessageBoxIcon.Error, $"Unable to get the modal dialog handle: { ex.Message }", "Error", MessageBoxButtons.OK);
             }
 
             return returnDialogResult;

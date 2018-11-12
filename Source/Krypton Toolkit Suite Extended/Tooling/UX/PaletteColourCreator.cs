@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Tooling.Classes.Colours.Extended;
 using Tooling.Classes.Other;
 using Tooling.Settings.Classes;
+using Tooling.UX.Options;
 
 namespace Tooling.UX
 {
@@ -144,7 +145,9 @@ namespace Tooling.UX
 
                 kbtnDefineIndividualColours.Enabled = true;
 
-                kchkAutomateColourSwatchValues.Location = new Point(609, 9);
+                kbtnOptions.Location = new Point(609, 7);
+
+                //kchkAutomateColourSwatchValues.Location = new Point(609, 9);
             }
             else
             {
@@ -152,8 +155,12 @@ namespace Tooling.UX
 
                 kbtnDefineIndividualColours.Enabled = false;
 
-                kchkAutomateColourSwatchValues.Location = new Point(409, 9);
+                kbtnOptions.Location = new Point(409, 7);
+
+                //kchkAutomateColourSwatchValues.Location = new Point(409, 9);
             }
+
+            tmrAutomateColourSwatchValues.Enabled = _globalBooleanSettingsManager.GetAutomaticallyUpdateColours();
         }
 
         #region Event Handlers
@@ -302,7 +309,7 @@ namespace Tooling.UX
 
         private void kchkAutomateColourSwatchValues_CheckedChanged(object sender, EventArgs e)
         {
-            tmrAutomateColourSwatchValues.Enabled = kchkAutomateColourSwatchValues.Checked;
+            tmrAutomateColourSwatchValues.Enabled = _globalBooleanSettingsManager.GetAutomaticallyUpdateColours();
         }
 
         private void tmrAutomateColourSwatchValues_Tick(object sender, EventArgs e)
@@ -456,6 +463,13 @@ namespace Tooling.UX
             DefineIndividualColoursDialog defineIndividualColours = new DefineIndividualColoursDialog();
 
             defineIndividualColours.Show();
+        }
+
+        private void kbtnOptions_Click(object sender, EventArgs e)
+        {
+            ColourBlendingOptions colourBlendingOptions = new ColourBlendingOptions();
+
+            colourBlendingOptions.Show();
         }
 
         private void kbtnSaveValues_Click(object sender, EventArgs e)
