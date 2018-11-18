@@ -101,7 +101,7 @@ namespace Tooling.Settings.Classes
                 }
                 else
                 {
-                    ResetSettings(usePrompt);
+                    ResetColourIntegerSettings(usePrompt);
                 }
             }
             else
@@ -114,7 +114,7 @@ namespace Tooling.Settings.Classes
         /// Resets the settings.
         /// </summary>
         /// <param name="usePrompt">if set to <c>true</c> [use prompt].</param>
-        private void ResetSettings(bool usePrompt = false)
+        public void ResetColourIntegerSettings(bool usePrompt = false)
         {
             if (usePrompt)
             {

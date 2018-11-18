@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Windows.Forms;
 
 namespace Tooling.Settings.Classes
@@ -36,6 +37,24 @@ namespace Tooling.Settings.Classes
         {
             return _globalStringSettings.FeedbackText;
         }
+
+        /// <summary>
+        /// Sets the PaletteExportPath to the value of pathValue.
+        /// </summary>
+        /// <param name="pathValue">The value of pathValue.</param>
+        public void SetPaletteExportPath(string pathValue)
+        {
+            _globalStringSettings.PaletteExportPath = pathValue;
+        }
+
+        /// <summary>
+        /// Gets the PaletteExportPath value.
+        /// </summary>
+        /// <returns>The value of pathValue.</returns>
+        public string GetPaletteExportPath()
+        {
+            return _globalStringSettings.PaletteExportPath;
+        }
         #endregion
 
         #region Save & Reset Methods
@@ -62,7 +81,7 @@ namespace Tooling.Settings.Classes
             }
         }
 
-        public void ResetSettings(bool usePrompt)
+        public void ResetSettings(bool usePrompt = false)
         {
             if (usePrompt)
             {
@@ -84,6 +103,8 @@ namespace Tooling.Settings.Classes
             SetBasePaletteMode(string.Empty);
 
             SetFeedbackText("This will become informative...");
+
+            SetPaletteExportPath(Environment.SpecialFolder.MyDocuments + "\\Krypton Palettes");
         }
         #endregion
     }

@@ -128,17 +128,6 @@ namespace Tooling.UX
 
         private void PaletteColourCreator_Load(object sender, EventArgs e)
         {
-            foreach (KnownColor colour in Enum.GetValues(typeof(KnownColor)))
-            {
-                kcmbNormalTextColour.AutoCompleteCustomSource.Add(colour.ToString());
-
-                kcmbNormalTextColour.Items.Add(colour);
-
-                kcmbDisabledTextColour.AutoCompleteCustomSource.Add(colour.ToString());
-
-                kcmbDisabledTextColour.Items.Add(colour);
-            }
-
             if (PaletteColourSelector)
             {
                 kbtnDefineIndividualColours.Visible = true;
@@ -191,12 +180,12 @@ namespace Tooling.UX
 
         private void pbxNormalTextColour_MouseEnter(object sender, EventArgs e)
         {
-            ttInformation.SetToolTip(pbxNormalTextColour, $"Normal Text Colour\nARGB: ({ pbxNormalTextColour.BackColor.A.ToString() }, { pbxNormalTextColour.BackColor.R.ToString() }, { pbxNormalTextColour.BackColor.G.ToString() }, { pbxNormalTextColour.BackColor.B.ToString() })\nRGB: ({ pbxNormalTextColour.BackColor.R.ToString() }, { pbxNormalTextColour.BackColor.G.ToString() }, { pbxNormalTextColour.BackColor.B.ToString() })\nHexadecimal Value: #{ _conversionMethods.ConvertRGBToHexadecimal(Convert.ToInt32(pbxNormalTextColour.BackColor.R), Convert.ToInt32(pbxNormalTextColour.BackColor.G), Convert.ToInt32(pbxNormalTextColour.BackColor.B)).ToUpper() }");
+            //ttInformation.SetToolTip(pbxNormalTextColour, $"Normal Text Colour\nARGB: ({ pbxNormalTextColour.BackColor.A.ToString() }, { pbxNormalTextColour.BackColor.R.ToString() }, { pbxNormalTextColour.BackColor.G.ToString() }, { pbxNormalTextColour.BackColor.B.ToString() })\nRGB: ({ pbxNormalTextColour.BackColor.R.ToString() }, { pbxNormalTextColour.BackColor.G.ToString() }, { pbxNormalTextColour.BackColor.B.ToString() })\nHexadecimal Value: #{ _conversionMethods.ConvertRGBToHexadecimal(Convert.ToInt32(pbxNormalTextColour.BackColor.R), Convert.ToInt32(pbxNormalTextColour.BackColor.G), Convert.ToInt32(pbxNormalTextColour.BackColor.B)).ToUpper() }");
         }
 
         private void pbxDisabledTextColour_MouseEnter(object sender, EventArgs e)
         {
-            ttInformation.SetToolTip(pbxDisabledTextColour, $"Disabled Text Colour\nARGB: ({ pbxDisabledTextColour.BackColor.A.ToString() }, { pbxDisabledTextColour.BackColor.R.ToString() }, { pbxDisabledTextColour.BackColor.G.ToString() }, { pbxDisabledTextColour.BackColor.B.ToString() })\nRGB: ({ pbxDisabledTextColour.BackColor.R.ToString() }, { pbxDisabledTextColour.BackColor.G.ToString() }, { pbxDisabledTextColour.BackColor.B.ToString() })\nHexadecimal Value: #{ _conversionMethods.ConvertRGBToHexadecimal(Convert.ToInt32(pbxDisabledTextColour.BackColor.R), Convert.ToInt32(pbxDisabledTextColour.BackColor.G), Convert.ToInt32(pbxDisabledTextColour.BackColor.B)).ToUpper() }");
+            //ttInformation.SetToolTip(pbxDisabledTextColour, $"Disabled Text Colour\nARGB: ({ pbxDisabledTextColour.BackColor.A.ToString() }, { pbxDisabledTextColour.BackColor.R.ToString() }, { pbxDisabledTextColour.BackColor.G.ToString() }, { pbxDisabledTextColour.BackColor.B.ToString() })\nRGB: ({ pbxDisabledTextColour.BackColor.R.ToString() }, { pbxDisabledTextColour.BackColor.G.ToString() }, { pbxDisabledTextColour.BackColor.B.ToString() })\nHexadecimal Value: #{ _conversionMethods.ConvertRGBToHexadecimal(Convert.ToInt32(pbxDisabledTextColour.BackColor.R), Convert.ToInt32(pbxDisabledTextColour.BackColor.G), Convert.ToInt32(pbxDisabledTextColour.BackColor.B)).ToUpper() }");
         }
 
         private void knumRedChannelValue_ValueChanged(object sender, EventArgs e)
@@ -218,16 +207,6 @@ namespace Tooling.UX
             pbxBaseColour.BackColor = Color.FromArgb(Convert.ToInt32(knumRedChannelValue.Value), Convert.ToInt32(knumGreenChannelValue.Value), Convert.ToInt32(knumBlueChannelValue.Value));
 
             ktbBlue.Value = Convert.ToInt32(knumBlueChannelValue.Value);
-        }
-
-        private void kcmbNormalTextColour_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            pbxNormalTextColour.BackColor = Color.FromName(kcmbNormalTextColour.SelectedItem.ToString());
-        }
-
-        private void kcmbDisabledTextColour_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            pbxDisabledTextColour.BackColor = Color.FromName(kcmbDisabledTextColour.SelectedItem.ToString());
         }
 
         private void kbtnGenerateRedValue_Click(object sender, EventArgs e)
@@ -321,37 +300,12 @@ namespace Tooling.UX
 
         private void pbxDarkColour_Click(object sender, EventArgs e)
         {
-            ColourUtilities.PropagateHSBValues(knumHueValue, knumSaturation, knumBrightness, (decimal)Math.Round(pbxDarkColour.BackColor.GetHue()), (decimal)Math.Round(pbxDarkColour.BackColor.GetSaturation()), (decimal)Math.Round(pbxDarkColour.BackColor.GetBrightness()));
-        }
-
-        private void kbtnBrowse_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-            saveFileDialog.Filter = "Text Files (*.txt)|*.txt";
-
-            if (saveFileDialog.ShowDialog() == DialogResult.Yes)
-            {
-                kmtxtFilePath.Text = Path.GetFullPath(saveFileDialog.FileName);
-            }
+            //ColourUtilities.PropagateHSBValues(knumHueValue, knumSaturation, knumBrightness, (decimal)Math.Round(pbxDarkColour.BackColor.GetHue()), (decimal)Math.Round(pbxDarkColour.BackColor.GetSaturation()), (decimal)Math.Round(pbxDarkColour.BackColor.GetBrightness()));
         }
 
         private void kbtnFileExport_Click(object sender, EventArgs e)
         {
-            if (kmtxtFilePath.Text != "")
-            {
-                FileCreator fileCreator = new FileCreator();
-
-                fileCreator.WriteColourFile("A:\\Test Colour.txt", ColourUtilities.FormatColourARGBString(pbxDarkColour.BackColor), ColourUtilities.FormatColourARGBString(pbxMiddleColour.BackColor), ColourUtilities.FormatColourARGBString(pbxLightColour.BackColor), ColourUtilities.FormatColourARGBString(pbxLightestColour.BackColor));
-            }
-        }
-
-        private void kcmbSelectedColour_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (kcmbSelectedColour.Text == "Base Colour")
-            {
-                lblColourOutput.Text = $"{ ColourUtilities.FormatColourARGBString(pbxBaseColour.BackColor) }";
-            }
+           
         }
 
         private void kbtnDefineCustomColours_Click(object sender, EventArgs e)
@@ -382,12 +336,6 @@ namespace Tooling.UX
             knumGreenChannelValue.Value = Convert.ToInt32(cpbBaseColourPreview.BackColor.G);
 
             knumBlueChannelValue.Value = Convert.ToInt32(cpbBaseColourPreview.BackColor.B);
-
-            knumHueValue.Value = Convert.ToDecimal(cpbBaseColourPreview.BackColor.GetHue());
-
-            knumSaturation.Value = Convert.ToDecimal(cpbBaseColourPreview.BackColor.GetSaturation());
-
-            knumBrightness.Value = Convert.ToDecimal(cpbBaseColourPreview.BackColor.GetBrightness());
         }
 
         private void cpbDarkestColourPreview_Click(object sender, EventArgs e)
@@ -399,12 +347,6 @@ namespace Tooling.UX
             knumGreenChannelValue.Value = Convert.ToInt32(cpbDarkestColourPreview.BackColor.G);
 
             knumBlueChannelValue.Value = Convert.ToInt32(cpbDarkestColourPreview.BackColor.B);
-
-            knumHueValue.Value = Convert.ToDecimal(cpbDarkestColourPreview.BackColor.GetHue());
-
-            knumSaturation.Value = Convert.ToDecimal(cpbDarkestColourPreview.BackColor.GetSaturation());
-
-            knumBrightness.Value = Convert.ToDecimal(cpbDarkestColourPreview.BackColor.GetBrightness());
         }
 
         private void cpbMiddleColourPreview_Click(object sender, EventArgs e)
@@ -416,12 +358,6 @@ namespace Tooling.UX
             knumGreenChannelValue.Value = Convert.ToInt32(cpbMiddleColourPreview.BackColor.G);
 
             knumBlueChannelValue.Value = Convert.ToInt32(cpbMiddleColourPreview.BackColor.B);
-
-            knumHueValue.Value = Convert.ToDecimal(cpbMiddleColourPreview.BackColor.GetHue());
-
-            knumSaturation.Value = Convert.ToDecimal(cpbMiddleColourPreview.BackColor.GetSaturation());
-
-            knumBrightness.Value = Convert.ToDecimal(cpbMiddleColourPreview.BackColor.GetBrightness());
         }
 
         private void cpbLightColourPreview_Click(object sender, EventArgs e)
@@ -433,12 +369,6 @@ namespace Tooling.UX
             knumGreenChannelValue.Value = Convert.ToInt32(cpbLightColourPreview.BackColor.G);
 
             knumBlueChannelValue.Value = Convert.ToInt32(cpbLightColourPreview.BackColor.B);
-
-            knumHueValue.Value = Convert.ToDecimal(cpbLightColourPreview.BackColor.GetHue());
-
-            knumSaturation.Value = Convert.ToDecimal(cpbLightColourPreview.BackColor.GetSaturation());
-
-            knumBrightness.Value = Convert.ToDecimal(cpbLightColourPreview.BackColor.GetBrightness());
         }
 
         private void cpbLightestColourPreview_Click(object sender, EventArgs e)
@@ -450,12 +380,6 @@ namespace Tooling.UX
             knumGreenChannelValue.Value = Convert.ToInt32(cpbLightestColourPreview.BackColor.G);
 
             knumBlueChannelValue.Value = Convert.ToInt32(cpbLightestColourPreview.BackColor.B);
-
-            knumHueValue.Value = Convert.ToDecimal(cpbLightestColourPreview.BackColor.GetHue());
-
-            knumSaturation.Value = Convert.ToDecimal(cpbLightestColourPreview.BackColor.GetSaturation());
-
-            knumBrightness.Value = Convert.ToDecimal(cpbLightestColourPreview.BackColor.GetBrightness());
         }
 
         private void kbtnDefineIndividualColours_Click(object sender, EventArgs e)

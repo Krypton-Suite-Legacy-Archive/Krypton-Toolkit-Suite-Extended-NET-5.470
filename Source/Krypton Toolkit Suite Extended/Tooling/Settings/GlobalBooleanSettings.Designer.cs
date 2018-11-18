@@ -106,5 +106,17 @@ namespace Tooling.Settings {
                 this["AutomaticallyUpdateColours"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool UsePromptFeedback {
+            get {
+                return ((bool)(this["UsePromptFeedback"]));
+            }
+            set {
+                this["UsePromptFeedback"] = value;
+            }
+        }
     }
 }

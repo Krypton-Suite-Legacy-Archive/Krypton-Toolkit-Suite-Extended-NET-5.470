@@ -89,6 +89,8 @@
     <Compile Include="Classes\Other\ToolStripNonClientRenderer.cs" />
     <Compile Include="Classes\Other\ToolTipManager.cs" />
     <Compile Include="Classes\Other\TypefaceHelper.cs" />
+    <Compile Include="Classes\Utilities\Utility.cs" />
+    <Compile Include="Classes\Utilities\WIN32.cs" />
     <Compile Include="Controls\Colours\ColourEditorManager.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -114,6 +116,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\Colours\ScreenColourPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Utilities\ToolStripControlHostFixed.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Debug Tools\UX\SettingsCopier.cs">
@@ -241,6 +246,9 @@
     <Compile Include="UX\Options\ColourBlendingOptions.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UX\Options\SettingsManagementOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UX\PaletteColourCreator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +266,9 @@
     </Compile>
     <Compile Include="UX\SysInfo\SystemInformationWindow.Designer.cs">
       <DependentUpon>SystemInformationWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UX\Utilities\KryptonFadeForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Version Framework\Classes\AssemblyInformation.cs" />
     <Compile Include="Version Framework\Classes\AssemblyVersion.cs" />
@@ -336,6 +347,9 @@
     <EmbeddedResource Include="UX\Options\ColourBlendingOptions.resx">
       <DependentUpon>ColourBlendingOptions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UX\Options\SettingsManagementOptions.resx">
+      <DependentUpon>SettingsManagementOptions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UX\PaletteColourCreator.resx">
       <DependentUpon>PaletteColourCreator.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,6 +412,9 @@
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colour_Wheel_16_x_16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
+using System.Windows.Forms;
 
 namespace Tooling.Settings.Classes
 {
@@ -143,6 +145,24 @@ namespace Tooling.Settings.Classes
         }
 
         /// <summary>
+        /// Sets the FocusedTextColour to the value of focusedTextColour.
+        /// </summary>
+        /// <param name="focusedTextColour">The value of focusedTextColour.</param>
+        public void SetFocusedTextColour(string focusedTextColour)
+        {
+            _colourStringSettings.FocusTextColour = focusedTextColour;
+        }
+
+        /// <summary>
+        /// Gets the FocusedTextColour value.
+        /// </summary>
+        /// <returns>The value of focusedTextColour.</returns>
+        public string GetFocusedTextColour()
+        {
+            return _colourStringSettings.FocusTextColour;
+        }
+
+        /// <summary>
         /// Sets the AlternativeNormalTextColour to the value of alternativeNormalTextColour.
         /// </summary>
         /// <param name="alternativeNormalTextColour">The value of alternativeNormalTextColour.</param>
@@ -212,6 +232,24 @@ namespace Tooling.Settings.Classes
         public string GetLinkNormalColour()
         {
             return _colourStringSettings.LinkNormalColour;
+        }
+
+        /// <summary>
+        /// Sets the LinkFocusedColour to the value of linkFocusedColour.
+        /// </summary>
+        /// <param name="linkFocusedColour">The value of linkFocusedColour.</param>
+        public void SetLinkFocusedColour(string linkFocusedColour)
+        {
+            _colourStringSettings.LinkFocusedColour = linkFocusedColour;
+        }
+
+        /// <summary>
+        /// Gets the LinkFocusedColour value.
+        /// </summary>
+        /// <returns>The value of linkFocusedColour.</returns>
+        public string GetLinkFocusedColour()
+        {
+            return _colourStringSettings.LinkFocusedColour;
         }
 
         /// <summary>
@@ -524,7 +562,105 @@ namespace Tooling.Settings.Classes
         #region Save Settings
         public void SaveColourStringSettings(bool usePrompt = false)
         {
-            throw new NotImplementedException();
+            if (usePrompt)
+            {
+                DialogResult result = KryptonMessageBox.Show("Do you want to save the current colour string settings?", "Save Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                //KryptonMessageBoxExtendedResult result = ExtendedKryptonMessagebox.Show("Do you want to save the current colour settings?", "Save Confirmation", KryptonMessageBoxExtendedButtons.YESNO, KryptonMessageBoxExtendedIcon.QUESTION);
+
+                if (result == DialogResult.Yes)
+                {
+                    _colourStringSettings.Save();
+                }
+                else
+                {
+                    ResetColourStringSettings(usePrompt);
+                }
+            }
+            else
+            {
+                _colourStringSettings.Save();
+            }
+        }
+
+        public void ResetColourStringSettings(bool usePrompt = false)
+        {
+            if (usePrompt)
+            {
+                DialogResult result = KryptonMessageBox.Show("This action will reset the colour string values. Do you want to continue?", "Reset Colour String Values", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    ResetColourStringSettings();
+
+                    SaveColourStringSettings(usePrompt);
+                }
+                else
+                {
+                    ResetColourStringSettings();
+
+                    SaveColourStringSettings();
+                }
+            }
+        }
+
+        private void ResetColourStringSettings()
+        {
+            SetBaseColour("");
+
+            SetDarkestColour("");
+
+            SetMediumColour("");
+
+            SetLightColour("");
+
+            SetLightestColour("");
+
+            SetBorderColour("");
+
+            SetAlternativeNormalTextColour("");
+
+            SetNormalTextColour("");
+
+            SetFocusedTextColour("");
+
+            SetPressedTextColour("");
+
+            SetDisabledTextColour("");
+
+            SetDisabledColour("");
+
+            SetLinkNormalColour("");
+
+            SetLinkFocusedColour("");
+
+            SetLinkHoverColour("");
+
+            SetLinkVisitedColour("");
+
+            SetCustomColourOne("");
+
+            SetCustomColourTwo("");
+
+            SetCustomColourThree("");
+
+            SetCustomColourFour("");
+
+            SetCustomColourFive("");
+
+            SetMenuTextColour("");
+
+            SetCustomTextColourOne("");
+
+            SetCustomTextColourTwo("");
+
+            SetCustomTextColourThree("");
+
+            SetCustomTextColourFour("");
+
+            SetCustomTextColourFive("");
+
+            SetStatusTextColour("");
         }
         #endregion
     }

@@ -1,6 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Enumerations;
 using ExtendedControls.ExtendedToolkit.UI.Dialogues;
+using ExtendedControls.ExtendedToolkit.UI.Drawing;
 using KryptonApplicationUpdater.Classes.SettingsManager;
 using KryptonApplicationUpdater.Interfaces;
 using KryptonExtendedToolkit.Base.Code;
@@ -13,6 +14,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using Tooling.Classes.Other;
 using Tooling.UX;
+using Tooling.UX.Options;
 
 namespace Playground
 {
@@ -326,6 +328,34 @@ namespace Playground
         private void kuacsbElevate_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            Scrollbars scrollbars = new Scrollbars();
+
+            scrollbars.Show();
+        }
+
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            KryptonColourChooser1 kryptonColourChooser1 = new KryptonColourChooser1();
+
+            kryptonColourChooser1.Show();
+        }
+
+        private void kryptonButton6_Click(object sender, EventArgs e)
+        {
+            KryptonColourChooser2 kryptonColourChooser2 = new KryptonColourChooser2();
+
+            kryptonColourChooser2.Show();
+        }
+
+        private void kryptonButton8_Click(object sender, EventArgs e)
+        {
+            SettingsManagementOptions settingsManagementOptions = new SettingsManagementOptions();
+
+            settingsManagementOptions.Show();
         }
     }
 }

@@ -358,5 +358,17 @@ namespace Tooling.Settings {
                 this["StatusTextColour"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LinkFocusedColour {
+            get {
+                return ((string)(this["LinkFocusedColour"]));
+            }
+            set {
+                this["LinkFocusedColour"] = value;
+            }
+        }
     }
 }

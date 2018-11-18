@@ -47,6 +47,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
@@ -68,11 +69,25 @@
     <Compile Include="Base\ButtonSpec\ButtonSpecFormWindowMin.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Base\Code\Drawing\ColourChangedEventArgs.cs" />
+    <Compile Include="Base\Code\Drawing\ColourHandler.cs" />
+    <Compile Include="Base\Code\Drawing\ColourWheel.cs" />
+    <Compile Include="Base\Code\Drawing\DrawingMethods.cs" />
     <Compile Include="Base\Code\ExceptionHandler.cs" />
     <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
+    <Compile Include="Base\Code\ListViewColumnSorter.cs" />
     <Compile Include="Base\Code\MostRecentlyUsedFileManager.cs" />
     <Compile Include="Base\Code\PI.cs" />
+    <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarArrowButtonState.cs" />
+    <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarControlDesigner.cs" />
+    <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarExtendedRenderer.cs" />
+    <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarKryptonRenderer.cs" />
+    <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarOrientation.cs" />
+    <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarState.cs" />
+    <Compile Include="Base\Code\ScrollBar\WIN32.cs" />
     <Compile Include="Base\Code\TypefaceHelper.cs" />
+    <Compile Include="Base\Code\Utilities\Utility.cs" />
+    <Compile Include="Base\Code\Utilities\WIN32.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
     <Compile Include="Base\Enumerations\Enumerations.cs" />
     <Compile Include="Base\UI\KryptonFormBase.cs">
@@ -101,11 +116,39 @@
     <Compile Include="ExtendedToolkit\Controls\ExtendedProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\GlassButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\GroupableKryptonListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonBorderedLabel.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonCollapseContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\KryptonColourComboBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\KryptonSlideButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\KryptonUACShieldButton.cs" />
+    <Compile Include="ExtendedToolkit\Controls\ScrollBar\CustomScrollBar\KryptonScrollBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\ScrollBar\CustomScrollBar\ScrollBarExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\ScrollBar\HScrollSkin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\ScrollBar\VScrollSkin.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\FloatingFramework\Controls\DockingHostToolStripPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -183,6 +226,12 @@
     </Compile>
     <Compile Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.Designer.cs">
       <DependentUpon>TypefaceSelectionDialogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Drawing\KryptonColourChooser1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Drawing\KryptonColourChooser2.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\FileDownloader\FileDownloaderBasic.cs">
       <SubType>Form</SubType>
@@ -304,12 +353,24 @@
     <None Include="Resources\BrowserUp 32.png" />
     <None Include="Resources\BrowserUp 64.png" />
     <None Include="Resources\BrowserUp 256.png" />
+    <None Include="Resources\Down.png" />
+    <None Include="Resources\Fail.bmp" />
+    <None Include="Resources\Ok.bmp" />
+    <None Include="Resources\palette.bmp" />
+    <None Include="Resources\Up.png" />
+    <Content Include="ToolboxBitmaps\GlassButton.bmp" />
     <Content Include="ToolboxBitmaps\KryptonForm.bmp" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Base\UI\Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\GlassButton.resx">
+      <DependentUpon>GlassButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\KryptonCollapseContainer.resx">
+      <DependentUpon>KryptonCollapseContainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\ModernProgressBar.resx">
       <DependentUpon>ModernProgressBar.cs</DependentUpon>
@@ -328,6 +389,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.resx">
       <DependentUpon>TypefaceSelectionDialogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Drawing\KryptonColourChooser1.resx">
+      <DependentUpon>KryptonColourChooser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Drawing\KryptonColourChooser2.resx">
+      <DependentUpon>KryptonColourChooser2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\FileDownloader\FileDownloaderBasic.resx">
       <DependentUpon>FileDownloaderBasic.cs</DependentUpon>

@@ -70,5 +70,17 @@ namespace Tooling.Settings {
                 this["LightestColourIntensity"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
+        public global::System.Drawing.Color BaseColour {
+            get {
+                return ((global::System.Drawing.Color)(this["BaseColour"]));
+            }
+            set {
+                this["BaseColour"] = value;
+            }
+        }
     }
 }

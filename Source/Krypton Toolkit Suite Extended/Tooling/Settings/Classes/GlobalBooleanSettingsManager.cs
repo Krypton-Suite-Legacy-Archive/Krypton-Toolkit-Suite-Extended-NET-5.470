@@ -142,6 +142,24 @@ namespace Tooling.Settings.Classes
         {
             return _globalBooleanSettings.HidePropertiesPane;
         }
+
+        /// <summary>
+        /// Sets the UsePromptFeedback to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetUsePromptFeedback(bool value)
+        {
+            _globalBooleanSettings.UsePromptFeedback = value;
+        }
+
+        /// <summary>
+        /// Gets the UsePromptFeedback value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetUsePromptFeedback()
+        {
+            return _globalBooleanSettings.UsePromptFeedback;
+        }
         #endregion
 
         #region Methods 
@@ -210,6 +228,8 @@ namespace Tooling.Settings.Classes
             SetIsInBetaMode(false);
 
             SetHidePropertiesPane(false);
+
+            SetUsePromptFeedback(true);
         }
         #endregion
     }

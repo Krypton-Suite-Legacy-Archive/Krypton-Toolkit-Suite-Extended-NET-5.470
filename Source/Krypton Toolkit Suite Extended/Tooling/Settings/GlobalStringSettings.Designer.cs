@@ -46,5 +46,17 @@ namespace Tooling.Settings {
                 this["FeedbackText"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PaletteExportPath {
+            get {
+                return ((string)(this["PaletteExportPath"]));
+            }
+            set {
+                this["PaletteExportPath"] = value;
+            }
+        }
     }
 }

@@ -8,5 +8,8 @@
     <Setting Name="FeedbackText" Type="System.String" Scope="User">
       <Value Profile="(Default)">This will become informative...</Value>
     </Setting>
+    <Setting Name="PaletteExportPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
