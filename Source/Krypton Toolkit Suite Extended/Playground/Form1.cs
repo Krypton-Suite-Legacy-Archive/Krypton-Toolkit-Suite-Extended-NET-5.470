@@ -357,5 +357,12 @@ namespace Playground
 
             settingsManagementOptions.Show();
         }
+
+        private void kryptonButton9_Click(object sender, EventArgs e)
+        {
+            ThemeOptions themeOptions = new ThemeOptions();
+
+            themeOptions.Show();
+        }
     }
 }

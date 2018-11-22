@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Tooling.Settings" GeneratedClassName="PaletteThemeSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Theme" Type="ComponentFactory.Krypton.Toolkit.PaletteMode" Scope="User">
+      <Value Profile="(Default)">Global</Value>
+    </Setting>
+    <Setting Name="CustomThemeFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

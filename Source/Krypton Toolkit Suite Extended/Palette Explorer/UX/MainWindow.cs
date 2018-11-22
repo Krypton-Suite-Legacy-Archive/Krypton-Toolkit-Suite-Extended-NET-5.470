@@ -687,10 +687,6 @@ namespace PaletteExplorer.UX
             this.cmsViewType.SuspendLayout();
             this.SuspendLayout();
             // 
-            // kMan
-            // 
-            this.kMan.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Blue;
-            // 
             // kcmiNewPalette
             // 
             this.kcmiNewPalette.Text = "New Palette";
@@ -735,6 +731,7 @@ namespace PaletteExplorer.UX
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
+            this.kryptonRibbon1.SelectedContext = null;
             this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1219, 115);
             this.kryptonRibbon1.TabIndex = 1;

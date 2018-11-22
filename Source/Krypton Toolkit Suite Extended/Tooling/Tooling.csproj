@@ -72,6 +72,7 @@
     <Compile Include="Classes\Colours\PaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\RawPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\WIN32.cs" />
+    <Compile Include="Classes\Options\Theming\ThemingLogic.cs" />
     <Compile Include="Classes\Other\ColourControlManager.cs" />
     <Compile Include="Classes\Other\ColourExtensions.cs" />
     <Compile Include="Classes\Other\ColourFormatting.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="Interfaces\IAbout.cs" />
     <Compile Include="Interfaces\IColourEditor.cs" />
     <Compile Include="Interfaces\IPaletteSerialiser.cs" />
+    <Compile Include="Interfaces\Theming\IThemeOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -146,6 +148,7 @@
     <Compile Include="Settings\Classes\ColourStringSettingsManager.cs" />
     <Compile Include="Settings\Classes\GlobalBooleanSettingsManager.cs" />
     <Compile Include="Settings\Classes\GlobalStringSettingsManager.cs" />
+    <Compile Include="Settings\Classes\PaletteThemeSettingsManager.cs" />
     <Compile Include="Settings\Classes\PaletteTypefaceSettingsManager.cs" />
     <Compile Include="Settings\ColourBlendingSettings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -177,6 +180,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>GlobalStringSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\PaletteThemeSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>PaletteThemeSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Settings\PaletteTypefaceSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -195,52 +203,52 @@
     <Compile Include="UX\AboutDialog.Designer.cs">
       <DependentUpon>AboutDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="UX\ColourHexadecimalToRGBConverter.cs">
+    <Compile Include="UX\Colours\ColourHexadecimalToRGBConverter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\ColourHexadecimalToRGBConverter.Designer.cs">
+    <Compile Include="UX\Colours\ColourHexadecimalToRGBConverter.Designer.cs">
       <DependentUpon>ColourHexadecimalToRGBConverter.cs</DependentUpon>
     </Compile>
-    <Compile Include="UX\ColourMixer.cs">
+    <Compile Include="UX\Colours\ColourMixer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\ColourMixer.Designer.cs">
+    <Compile Include="UX\Colours\ColourMixer.Designer.cs">
       <DependentUpon>ColourMixer.cs</DependentUpon>
     </Compile>
-    <Compile Include="UX\ColourPickerDialog.cs">
+    <Compile Include="UX\Colours\ColourPickerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\ColourPickerDialog.Designer.cs">
+    <Compile Include="UX\Colours\ColourPickerDialog.Designer.cs">
       <DependentUpon>ColourPickerDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="UX\ColourRGBToHexadecimalConverter.cs">
+    <Compile Include="UX\Colours\ColourRGBToHexadecimalConverter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\ColourRGBToHexadecimalConverter.Designer.cs">
+    <Compile Include="UX\Colours\ColourRGBToHexadecimalConverter.Designer.cs">
       <DependentUpon>ColourRGBToHexadecimalConverter.cs</DependentUpon>
     </Compile>
-    <Compile Include="UX\ContrastColourGenerator.cs">
+    <Compile Include="UX\Colours\ContrastColourGenerator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\ContrastColourGenerator.Designer.cs">
+    <Compile Include="UX\Colours\ContrastColourGenerator.Designer.cs">
       <DependentUpon>ContrastColourGenerator.cs</DependentUpon>
     </Compile>
-    <Compile Include="UX\CustomColours.cs">
+    <Compile Include="UX\Colours\CustomColours.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\CustomColours.Designer.cs">
+    <Compile Include="UX\Colours\CustomColours.Designer.cs">
       <DependentUpon>CustomColours.cs</DependentUpon>
     </Compile>
-    <Compile Include="UX\CustomColoursOld.cs">
+    <Compile Include="UX\Colours\CustomColoursOld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\CustomColoursOld.Designer.cs">
+    <Compile Include="UX\Colours\CustomColoursOld.Designer.cs">
       <DependentUpon>CustomColoursOld.cs</DependentUpon>
     </Compile>
-    <Compile Include="UX\DefineIndividualColoursDialog.cs">
+    <Compile Include="UX\Colours\DefineIndividualColoursDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\DefineIndividualColoursDialog.Designer.cs">
+    <Compile Include="UX\Colours\DefineIndividualColoursDialog.Designer.cs">
       <DependentUpon>DefineIndividualColoursDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="UX\Options\ColourBlendingOptions.cs">
@@ -249,16 +257,19 @@
     <Compile Include="UX\Options\SettingsManagementOptions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\PaletteColourCreator.cs">
+    <Compile Include="UX\Options\ThemeOptions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\PaletteColourCreator.Designer.cs">
+    <Compile Include="UX\Colours\PaletteColourCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\Colours\PaletteColourCreator.Designer.cs">
       <DependentUpon>PaletteColourCreator.cs</DependentUpon>
     </Compile>
-    <Compile Include="UX\PaletteFileEditor.cs">
+    <Compile Include="UX\Colours\PaletteFileEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\PaletteFileEditor.Designer.cs">
+    <Compile Include="UX\Colours\PaletteFileEditor.Designer.cs">
       <DependentUpon>PaletteFileEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="UX\SysInfo\SystemInformationWindow.cs">
@@ -304,6 +315,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>GlobalStringSettings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Settings\PaletteThemeSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>PaletteThemeSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Settings\PaletteTypefaceSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>PaletteTypefaceSettings.Designer.cs</LastGenOutput>
@@ -320,28 +335,28 @@
     <EmbeddedResource Include="UX\AboutDialog.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UX\ColourHexadecimalToRGBConverter.resx">
+    <EmbeddedResource Include="UX\Colours\ColourHexadecimalToRGBConverter.resx">
       <DependentUpon>ColourHexadecimalToRGBConverter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UX\ColourMixer.resx">
+    <EmbeddedResource Include="UX\Colours\ColourMixer.resx">
       <DependentUpon>ColourMixer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UX\ColourPickerDialog.resx">
+    <EmbeddedResource Include="UX\Colours\ColourPickerDialog.resx">
       <DependentUpon>ColourPickerDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UX\ColourRGBToHexadecimalConverter.resx">
+    <EmbeddedResource Include="UX\Colours\ColourRGBToHexadecimalConverter.resx">
       <DependentUpon>ColourRGBToHexadecimalConverter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UX\ContrastColourGenerator.resx">
+    <EmbeddedResource Include="UX\Colours\ContrastColourGenerator.resx">
       <DependentUpon>ContrastColourGenerator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UX\CustomColours.resx">
+    <EmbeddedResource Include="UX\Colours\CustomColours.resx">
       <DependentUpon>CustomColours.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UX\CustomColoursOld.resx">
+    <EmbeddedResource Include="UX\Colours\CustomColoursOld.resx">
       <DependentUpon>CustomColoursOld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UX\DefineIndividualColoursDialog.resx">
+    <EmbeddedResource Include="UX\Colours\DefineIndividualColoursDialog.resx">
       <DependentUpon>DefineIndividualColoursDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\Options\ColourBlendingOptions.resx">
@@ -350,7 +365,10 @@
     <EmbeddedResource Include="UX\Options\SettingsManagementOptions.resx">
       <DependentUpon>SettingsManagementOptions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UX\PaletteColourCreator.resx">
+    <EmbeddedResource Include="UX\Options\ThemeOptions.resx">
+      <DependentUpon>ThemeOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Colours\PaletteColourCreator.resx">
       <DependentUpon>PaletteColourCreator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\SysInfo\SystemInformationWindow.resx">
@@ -416,5 +434,6 @@
   <ItemGroup>
     <None Include="Resources\Colour_Wheel_16_x_16.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
