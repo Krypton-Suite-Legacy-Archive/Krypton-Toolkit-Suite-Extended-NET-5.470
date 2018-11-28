@@ -86,6 +86,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krypton Explorer", "Krypton
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Explorer", "Palette Explorer\Palette Explorer.csproj", "{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TXT", "TXT", "{DE81BC2A-EC33-4847-A34E-62B5849C2A93}"
+	ProjectSection(SolutionItems) = preProject
+		KryptonCalendar-how to Kryptonize.txt = KryptonCalendar-how to Kryptonize.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -314,6 +319,7 @@ Global
 		{CC796EB8-B522-4FA7-A0D5-9F35BF737D85} = {F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}
 		{D12038C3-B795-4BF0-9E03-8EC282FED476} = {F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}
 		{68CF0D41-4A18-47AA-A4DD-2C5031AD67CB} = {F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}
+		{DE81BC2A-EC33-4847-A34E-62B5849C2A93} = {F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4D1018D-143A-451D-8FC0-F63E4923F552}

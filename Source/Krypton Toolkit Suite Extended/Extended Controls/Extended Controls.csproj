@@ -40,6 +40,7 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\PresentationCore.dll</HintPath>
     </Reference>
@@ -103,6 +104,31 @@
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Enumerations\Enumerations.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\Calendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Calendar Library\Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Calendar Library\CalendarItem.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\CalendarTimeSpan.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\ColourTable.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\DayCell.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\DayColumn.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\DayColumnHeaderCell.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\DayRowHeaderCell.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\HalfHourCell.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\HalfHourRowHeaderCell.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\HalfWeekColumn.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\KryptonCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Calendar Library\KryptonPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Calendar Library\WeekDayColumn.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\WeekRow.cs" />
+    <Compile Include="ExtendedToolkit\Calendar Library\WeekRowHeaderCell.cs" />
     <Compile Include="ExtendedToolkit\Controls\CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -220,6 +246,9 @@
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\ToolStripMenuItemUACSheld.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Calendar Library\AddAppointment.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.cs">
       <SubType>Form</SubType>
@@ -387,6 +416,9 @@
     <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\KryptonSaveFileDialog.resx">
       <DependentUpon>KryptonSaveFileDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Calendar Library\AddAppointment.resx">
+      <DependentUpon>AddAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.resx">
       <DependentUpon>TypefaceSelectionDialogue.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,6 +443,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ExtendedToolkit\Calendar\" />
     <Folder Include="ExtendedToolkit\Messageboxes\UI\" />
     <Folder Include="ExtendedToolkit\UI\SoftwareUpdater\Classes\" />
     <Folder Include="Interfaces\" />

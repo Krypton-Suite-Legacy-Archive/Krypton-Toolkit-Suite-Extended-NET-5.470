@@ -1,6 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Drawing;
+using Tooling.Classes.Colours;
 using Tooling.Classes.Other;
 
 namespace Tooling.UX
@@ -32,7 +33,7 @@ namespace Tooling.UX
 
         private void kbtnGenerateComplementaryColour_Click(object sender, EventArgs e)
         {
-            cpbContrastColour.BackColor = ColourExtensions.RetrieveContrastColour(cpbBaseColour.BackColor, kchkKeepOpacityValues.Checked);
+            cpbContrastColour.BackColor = ColourExtensions.GetContrast(cpbBaseColour.BackColor, kchkKeepOpacityValues.Checked);
         }
 
         private void tmrUpdateUI_Tick(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace Tooling.UX
 
             if (kchkAutomateColourContrastValues.Checked)
             {
-                cpbContrastColour.BackColor = ColourExtensions.RetrieveContrastColour(cpbBaseColour.BackColor, kchkKeepOpacityValues.Checked);
+                cpbContrastColour.BackColor = ColourExtensions.GetContrast(cpbBaseColour.BackColor, kchkKeepOpacityValues.Checked);
             }
         }
 

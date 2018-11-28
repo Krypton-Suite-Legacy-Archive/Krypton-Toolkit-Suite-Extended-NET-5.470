@@ -1,9 +1,9 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using Classes.Colours;
+using ComponentFactory.Krypton.Toolkit;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.IO;
 using System.Windows.Forms;
-using Tooling.Classes.Other;
 using Tooling.Settings.Classes;
 
 namespace Tooling.UX.Options

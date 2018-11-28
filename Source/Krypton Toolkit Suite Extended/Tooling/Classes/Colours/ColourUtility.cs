@@ -2,7 +2,7 @@
 using System.Drawing;
 using Tooling.Settings.Classes;
 
-namespace Tooling.Classes.Other
+namespace Classes.Colours
 {
     /// <summary>
     /// https://stackoverflow.com/questions/7255514/generating-colours-after-applying-opacity-of-black-and-white

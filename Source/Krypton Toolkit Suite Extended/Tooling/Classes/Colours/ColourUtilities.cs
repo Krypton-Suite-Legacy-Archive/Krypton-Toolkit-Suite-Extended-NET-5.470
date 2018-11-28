@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using Tooling.Enumerations;
 using Tooling.Settings.Classes;
 
-namespace Tooling.Classes.Other
+namespace Classes.Colours
 {
     public static class ColourUtilities
     {

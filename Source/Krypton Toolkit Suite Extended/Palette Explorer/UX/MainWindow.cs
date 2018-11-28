@@ -1,4 +1,5 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using Classes.Colours;
+using ComponentFactory.Krypton.Toolkit;
 using GlobalUtilities.Interfaces;
 using PaletteExplorer.Classes;
 using System;
@@ -2486,7 +2487,7 @@ namespace PaletteExplorer.UX
             // 
             // labelGridNormal
             // 
-            this.labelGridNormal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelGridNormal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelGridNormal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGridNormal.HelpVisible = false;

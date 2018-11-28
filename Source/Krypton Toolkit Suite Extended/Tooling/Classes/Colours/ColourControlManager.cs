@@ -1,6 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 
-namespace Tooling.Classes.Other
+namespace Classes.Colours
 {
     public class ColourControlManager
     {

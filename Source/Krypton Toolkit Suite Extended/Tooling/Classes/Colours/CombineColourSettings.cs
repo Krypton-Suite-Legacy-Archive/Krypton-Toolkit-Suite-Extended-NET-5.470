@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Tooling.Settings.Classes;
 
-namespace Tooling.Classes.Other
+namespace Classes.Colours
 {
     public class CombineColourSettings
     {

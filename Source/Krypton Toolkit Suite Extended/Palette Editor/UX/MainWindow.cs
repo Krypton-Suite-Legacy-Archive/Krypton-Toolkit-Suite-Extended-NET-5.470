@@ -1,4 +1,5 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using Classes.Colours;
+using ComponentFactory.Krypton.Toolkit;
 using GlobalUtilities.Interfaces;
 using KryptonExtendedToolkit.Base.Code;
 using PaletteEditor.Classes;

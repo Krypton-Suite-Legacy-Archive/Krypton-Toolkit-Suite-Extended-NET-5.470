@@ -1,8 +1,8 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using Classes.Colours;
+using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Collections;
 using System.Windows.Forms;
-using Tooling.Classes.Other;
 using Tooling.Settings.Classes;
 
 namespace PaletteEditor.UX

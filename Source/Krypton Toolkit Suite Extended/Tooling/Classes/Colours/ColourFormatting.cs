@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace Tooling.Classes.Other
+namespace Classes.Colours
 {
     public class ColourFormatting
     {

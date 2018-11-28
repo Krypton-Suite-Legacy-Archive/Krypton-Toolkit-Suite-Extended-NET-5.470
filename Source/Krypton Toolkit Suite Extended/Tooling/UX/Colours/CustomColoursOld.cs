@@ -1,6 +1,6 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using Classes.Colours;
+using ComponentFactory.Krypton.Toolkit;
 using System;
-using Tooling.Classes.Other;
 
 namespace Tooling.UX
 {

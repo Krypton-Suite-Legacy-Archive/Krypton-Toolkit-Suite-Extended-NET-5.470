@@ -1,8 +1,7 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using Classes.Colours;
+using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
 using Tooling.Classes.Colours.Extended;
 using Tooling.Classes.Other;
 using Tooling.Settings.Classes;
@@ -305,7 +304,7 @@ namespace Tooling.UX
 
         private void kbtnFileExport_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void kbtnDefineCustomColours_Click(object sender, EventArgs e)
