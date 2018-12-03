@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
-using Tooling.Classes.Colours;
-using Tooling.Enumerations;
-using Tooling.STRUCTS;
+using Core.Classes.Colours;
+using Core.Enumerations;
+using Core.STRUCTS;
 
-namespace Tooling.Controls.Colours
+namespace Core.Controls.Colours
 {
     public class HueColourSlider : ColourSlider
     {

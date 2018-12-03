@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Tooling.Settings" GeneratedClassName="ColourStringSettings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Core.Settings" GeneratedClassName="ColourStringSettings">
   <Profiles />
   <Settings>
     <Setting Name="BaseColour" Type="System.String" Scope="User">

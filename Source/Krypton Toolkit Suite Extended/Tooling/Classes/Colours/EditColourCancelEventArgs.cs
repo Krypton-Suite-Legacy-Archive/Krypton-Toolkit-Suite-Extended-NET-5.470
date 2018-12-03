@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Drawing;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     public class EditColourCancelEventArgs : CancelEventArgs
     {

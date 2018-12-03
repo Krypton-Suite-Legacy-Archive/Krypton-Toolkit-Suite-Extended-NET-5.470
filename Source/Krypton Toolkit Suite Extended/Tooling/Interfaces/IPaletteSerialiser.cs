@@ -1,7 +1,7 @@
 ﻿using System.IO;
-using Tooling.Classes.Colours;
+using Core.Classes.Colours;
 
-namespace Tooling.Interfaces
+namespace Core.Interfaces
 {
     public interface IPaletteSerialiser
     {

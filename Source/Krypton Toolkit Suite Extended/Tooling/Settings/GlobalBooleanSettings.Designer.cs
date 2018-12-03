@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tooling.Settings {
+namespace Core.Settings {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -116,6 +116,18 @@ namespace Tooling.Settings {
             }
             set {
                 this["UsePromptFeedback"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowBuildTag {
+            get {
+                return ((bool)(this["ShowBuildTag"]));
+            }
+            set {
+                this["ShowBuildTag"] = value;
             }
         }
     }

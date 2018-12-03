@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Tooling.Settings.Classes
+namespace Core.Settings.Classes
 {
     public class ColourBlendingSettingsManager
     {

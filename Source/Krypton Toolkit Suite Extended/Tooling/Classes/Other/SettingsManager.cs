@@ -1,13 +1,13 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System.Windows.Forms;
-using Tooling.Properties;
+using Core.Properties;
 
-namespace Tooling.Classes.Other
+namespace Core.Classes.Other
 {
     public class SettingsManager
     {
         #region Variables
-        private Tooling.Properties.Settings _mySettings = new Properties.Settings();
+        private Core.Properties.Settings _mySettings = new Properties.Settings();
         #endregion
 
         #region Constructor

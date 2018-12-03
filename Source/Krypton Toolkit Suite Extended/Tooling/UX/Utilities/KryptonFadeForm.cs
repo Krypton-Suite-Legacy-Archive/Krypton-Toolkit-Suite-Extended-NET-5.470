@@ -2,7 +2,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Tooling.UX.Utilities
+namespace Core.UX.Utilities
 {
     public class KryptonFadeForm : KryptonForm
     {

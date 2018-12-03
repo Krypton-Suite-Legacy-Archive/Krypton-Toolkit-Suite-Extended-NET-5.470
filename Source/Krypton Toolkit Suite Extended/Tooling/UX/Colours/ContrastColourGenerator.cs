@@ -1,10 +1,10 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Drawing;
-using Tooling.Classes.Colours;
-using Tooling.Classes.Other;
+using Core.Classes.Colours;
+using Core.Classes.Other;
 
-namespace Tooling.UX
+namespace Core.UX
 {
     public partial class ContrastColourGenerator : KryptonForm
     {

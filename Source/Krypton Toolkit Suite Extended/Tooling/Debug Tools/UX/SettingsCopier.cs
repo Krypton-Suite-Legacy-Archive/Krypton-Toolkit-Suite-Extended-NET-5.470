@@ -1,6 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 
-namespace Tooling.DebugTools.UX
+namespace Core.DebugTools.UX
 {
     public class SettingsCopier : KryptonForm
     {

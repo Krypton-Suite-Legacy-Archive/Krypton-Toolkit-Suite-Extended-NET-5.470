@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Drawing;
-using Tooling.Settings.Classes;
+using Core.Settings.Classes;
 
 namespace Classes.Colours
 {

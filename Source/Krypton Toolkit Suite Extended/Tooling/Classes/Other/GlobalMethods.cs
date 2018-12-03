@@ -1,7 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System.Windows.Forms;
 
-namespace Tooling.Classes.Other
+namespace Core.Classes.Other
 {
     public class GlobalMethods
     {

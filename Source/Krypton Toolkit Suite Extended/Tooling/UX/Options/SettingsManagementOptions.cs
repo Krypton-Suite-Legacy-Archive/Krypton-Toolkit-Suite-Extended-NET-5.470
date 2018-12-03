@@ -1,9 +1,9 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Windows.Forms;
-using Tooling.Settings.Classes;
+using Core.Settings.Classes;
 
-namespace Tooling.UX.Options
+namespace Core.UX.Options
 {
     public partial class SettingsManagementOptions : KryptonForm
     {

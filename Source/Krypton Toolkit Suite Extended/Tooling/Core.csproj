@@ -7,8 +7,8 @@
     <ProjectGuid>{EFB997FB-1E05-444B-BA02-16C004E1A111}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tooling</RootNamespace>
-    <AssemblyName>Tooling</AssemblyName>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -90,6 +90,7 @@
     <Compile Include="Classes\Other\ToolStripNonClientRenderer.cs" />
     <Compile Include="Classes\Other\ToolTipManager.cs" />
     <Compile Include="Classes\Other\TypefaceHelper.cs" />
+    <Compile Include="Classes\Theming\ThemeManager.cs" />
     <Compile Include="Classes\Utilities\Utility.cs" />
     <Compile Include="Classes\Utilities\WIN32.cs" />
     <Compile Include="Controls\Colours\ColourEditorManager.cs">
@@ -215,12 +216,6 @@
     <Compile Include="UX\Colours\ColourMixer.Designer.cs">
       <DependentUpon>ColourMixer.cs</DependentUpon>
     </Compile>
-    <Compile Include="UX\Colours\ColourPickerDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UX\Colours\ColourPickerDialog.Designer.cs">
-      <DependentUpon>ColourPickerDialog.cs</DependentUpon>
-    </Compile>
     <Compile Include="UX\Colours\ColourRGBToHexadecimalConverter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +247,9 @@
       <DependentUpon>DefineIndividualColoursDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="UX\Options\ColourBlendingOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\Options\GlobalOptionsMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UX\Options\SettingsManagementOptions.cs">
@@ -341,9 +339,6 @@
     <EmbeddedResource Include="UX\Colours\ColourMixer.resx">
       <DependentUpon>ColourMixer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UX\Colours\ColourPickerDialog.resx">
-      <DependentUpon>ColourPickerDialog.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UX\Colours\ColourRGBToHexadecimalConverter.resx">
       <DependentUpon>ColourRGBToHexadecimalConverter.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\Options\ColourBlendingOptions.resx">
       <DependentUpon>ColourBlendingOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Options\GlobalOptionsMenu.resx">
+      <DependentUpon>GlobalOptionsMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\Options\SettingsManagementOptions.resx">
       <DependentUpon>SettingsManagementOptions.cs</DependentUpon>

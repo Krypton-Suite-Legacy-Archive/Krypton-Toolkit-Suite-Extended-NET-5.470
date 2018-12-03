@@ -1,4 +1,4 @@
-﻿namespace Tooling.UX
+﻿namespace Core.UX
 {
     partial class AboutDialog
     {

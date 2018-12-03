@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
-using Tooling.Interfaces;
-using Tooling.STRUCTS;
-using Tooling.UserControls.Colours;
+using Core.Interfaces;
+using Core.STRUCTS;
+using Core.UserControls.Colours;
 
-namespace Tooling.Controls.Colours
+namespace Core.Controls.Colours
 {
     /// <summary>
     /// Represents a control that binds multiple editors together as a single composite unit.

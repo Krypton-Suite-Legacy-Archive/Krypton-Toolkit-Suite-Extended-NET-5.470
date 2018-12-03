@@ -5,10 +5,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tooling.Enumerations;
-using Tooling.STRUCTS;
+using Core.Enumerations;
+using Core.STRUCTS;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     /// <summary>
     /// Deserialises colour palettes into and from the images and palettes using the  ILBM (IFF Interleaved Bitmap) format.

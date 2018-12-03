@@ -1,7 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System.Windows.Forms;
 
-namespace Tooling.Interfaces.Theming
+namespace Core.Interfaces.Theming
 {
     public interface IThemeOptions
     {

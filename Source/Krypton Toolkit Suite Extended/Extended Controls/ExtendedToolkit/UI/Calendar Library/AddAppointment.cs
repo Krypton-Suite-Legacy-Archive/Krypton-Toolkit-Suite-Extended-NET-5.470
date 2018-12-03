@@ -263,11 +263,11 @@ namespace ExtendedControls.ExtendedToolkit.UI.CalendarLibrary
         #endregion
 
         #region Variables
-        private Calendar _calendar;
+        private ExtendedToolkit.CalendarLibrary.Calendar _calendar;
         #endregion
 
         #region Constructors
-        public AddAppointment(ref Calendar calendar)
+        public AddAppointment(ref ExtendedToolkit.CalendarLibrary.Calendar calendar)
         {
             InitializeComponent();
 

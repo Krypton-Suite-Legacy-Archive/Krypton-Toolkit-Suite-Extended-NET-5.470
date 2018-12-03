@@ -1,9 +1,9 @@
 ﻿using EasyScintilla;
 using System;
 using System.IO;
-using Tooling.Properties;
+using Core.Properties;
 
-namespace Tooling.Classes.Other
+namespace Core.Classes.Other
 {
     public class FileCreator
     {

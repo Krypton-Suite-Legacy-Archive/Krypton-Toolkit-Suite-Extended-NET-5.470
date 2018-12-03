@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tooling.Settings {
+namespace Core.Settings {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -25,10 +25,10 @@ namespace Tooling.Settings {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Global")]
-        public global::ComponentFactory.Krypton.Toolkit.PaletteMode Theme {
+        [global::System.Configuration.DefaultSettingValueAttribute("Professional - System")]
+        public global::ComponentFactory.Krypton.Toolkit.PaletteModeManager Theme {
             get {
-                return ((global::ComponentFactory.Krypton.Toolkit.PaletteMode)(this["Theme"]));
+                return ((global::ComponentFactory.Krypton.Toolkit.PaletteModeManager)(this["Theme"]));
             }
             set {
                 this["Theme"] = value;

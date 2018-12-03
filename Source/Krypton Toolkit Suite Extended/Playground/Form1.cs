@@ -12,9 +12,9 @@ using System.Drawing.Drawing2D;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using Tooling.Classes.Other;
-using Tooling.UX;
-using Tooling.UX.Options;
+using Core.Classes.Other;
+using Core.UX;
+using Core.UX.Options;
 
 namespace Playground
 {
@@ -363,6 +363,13 @@ namespace Playground
             ThemeOptions themeOptions = new ThemeOptions();
 
             themeOptions.Show();
+        }
+
+        private void kryptonButton10_Click(object sender, EventArgs e)
+        {
+            GlobalOptionsMenu globalOptionsMenu = new GlobalOptionsMenu();
+
+            globalOptionsMenu.Show();
         }
     }
 }

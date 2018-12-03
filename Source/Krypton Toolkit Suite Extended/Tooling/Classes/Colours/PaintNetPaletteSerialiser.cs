@@ -4,7 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     public class PaintNetPaletteSerialiser : PaletteSerialiser
     {

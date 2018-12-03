@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
-using Tooling.Enumerations;
+using Core.Enumerations;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     public class ColourHitTestInfo
     {

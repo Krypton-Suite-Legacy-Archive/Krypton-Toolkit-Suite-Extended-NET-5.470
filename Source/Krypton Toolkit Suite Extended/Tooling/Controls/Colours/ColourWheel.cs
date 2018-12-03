@@ -5,10 +5,10 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
-using Tooling.Interfaces;
-using Tooling.STRUCTS;
+using Core.Interfaces;
+using Core.STRUCTS;
 
-namespace Tooling.Controls.Colours
+namespace Core.Controls.Colours
 {
     [DefaultProperty("Colour")]
     [DefaultEvent("ColourChanged")]

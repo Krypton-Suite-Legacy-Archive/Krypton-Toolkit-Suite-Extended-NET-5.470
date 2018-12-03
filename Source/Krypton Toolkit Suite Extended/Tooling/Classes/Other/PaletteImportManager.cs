@@ -3,10 +3,10 @@ using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Tooling.Enumerations;
-using Tooling.Settings.Classes;
+using Core.Enumerations;
+using Core.Settings.Classes;
 
-namespace Tooling.Classes.Other
+namespace Core.Classes.Other
 {
     public class PaletteImportManager
     {

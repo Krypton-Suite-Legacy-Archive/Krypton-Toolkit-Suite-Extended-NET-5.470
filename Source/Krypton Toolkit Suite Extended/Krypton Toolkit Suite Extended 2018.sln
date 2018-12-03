@@ -68,7 +68,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global Utilities", "Global 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extended File Dialogs", "Extended File Dialogs\Extended File Dialogs.csproj", "{D4644D8A-1C7A-43B6-8461-AB0B56FD6463}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tooling", "Tooling\Tooling.csproj", "{EFB997FB-1E05-444B-BA02-16C004E1A111}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Tooling\Core.csproj", "{EFB997FB-1E05-444B-BA02-16C004E1A111}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}"
 EndProject

@@ -3,7 +3,7 @@ using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Collections;
 using System.Windows.Forms;
-using Tooling.Settings.Classes;
+using Core.Settings.Classes;
 
 namespace PaletteEditor.UX
 {

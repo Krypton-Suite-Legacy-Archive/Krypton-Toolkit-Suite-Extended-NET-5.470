@@ -1,4 +1,4 @@
-﻿namespace Tooling.VersionFramework.Classes
+﻿namespace Core.VersionFramework.Classes
 {
     public class AssemblyInformation
     {

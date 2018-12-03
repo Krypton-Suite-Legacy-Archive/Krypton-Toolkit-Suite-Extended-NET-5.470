@@ -3,7 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     /// <summary>
     /// Serializes and deserializes color palettes into and from the Gimp palette format.

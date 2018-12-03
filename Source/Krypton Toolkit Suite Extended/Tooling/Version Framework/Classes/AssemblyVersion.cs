@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace Tooling.VersionFramework.Classes
+namespace Core.VersionFramework.Classes
 {
     public class AssemblyVersion
     {

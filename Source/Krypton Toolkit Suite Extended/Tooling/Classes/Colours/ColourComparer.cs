@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     /// <summary>
     /// Provides access to colour comparison operations.

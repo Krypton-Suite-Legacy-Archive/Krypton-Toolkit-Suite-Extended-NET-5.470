@@ -2,7 +2,7 @@
 using GlobalUtilities.Interfaces;
 using System;
 
-namespace Tooling.UX
+namespace Core.UX
 {
     public partial class AboutDialog : KryptonForm
     {

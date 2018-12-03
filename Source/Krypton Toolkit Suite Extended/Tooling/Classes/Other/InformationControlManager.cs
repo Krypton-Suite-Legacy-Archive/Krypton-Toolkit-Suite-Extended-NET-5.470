@@ -3,7 +3,7 @@ using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Windows.Forms;
 
-namespace Tooling.Classes.Other
+namespace Core.Classes.Other
 {
     public static class InformationControlManager
     {

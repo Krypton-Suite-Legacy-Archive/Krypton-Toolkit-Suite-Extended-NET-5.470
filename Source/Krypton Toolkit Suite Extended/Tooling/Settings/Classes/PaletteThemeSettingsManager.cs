@@ -1,7 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System.Windows.Forms;
 
-namespace Tooling.Settings.Classes
+namespace Core.Settings.Classes
 {
     public class PaletteThemeSettingsManager
     {
@@ -21,7 +21,7 @@ namespace Tooling.Settings.Classes
         /// Sets the Theme to the value of themeValue.
         /// </summary>
         /// <param name="themeValue">The value of themeValue.</param>
-        public void SetTheme(PaletteMode themeValue)
+        public void SetTheme(PaletteModeManager themeValue)
         {
             _paletteThemeSettings.Theme = themeValue;
         }
@@ -30,7 +30,7 @@ namespace Tooling.Settings.Classes
         /// Gets the Theme value.
         /// </summary>
         /// <returns>The value of themeValue.</returns>
-        public PaletteMode GetTheme()
+        public PaletteModeManager GetTheme()
         {
             return _paletteThemeSettings.Theme;
         }
@@ -97,7 +97,7 @@ namespace Tooling.Settings.Classes
 
         private void ResetPaletteThemeSettings()
         {
-            SetTheme(PaletteMode.Office2010Blue);
+            SetTheme(PaletteModeManager.Office2010Blue);
 
             SetCustomThemeFilePath("");
         }

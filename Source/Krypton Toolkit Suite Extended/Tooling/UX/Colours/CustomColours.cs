@@ -2,11 +2,11 @@
 using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Drawing;
-using Tooling.Classes.Other;
-using Tooling.Enumerations;
-using Tooling.Settings.Classes;
+using Core.Classes.Other;
+using Core.Enumerations;
+using Core.Settings.Classes;
 
-namespace Tooling.UX
+namespace Core.UX
 {
     public partial class CustomColours : KryptonForm
     {

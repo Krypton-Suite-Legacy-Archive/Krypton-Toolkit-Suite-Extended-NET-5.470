@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
-using Tooling.Enumerations;
-using Tooling.Interfaces;
-using Tooling.STRUCTS;
+using Core.Enumerations;
+using Core.Interfaces;
+using Core.STRUCTS;
 
-namespace Tooling.Controls.Colours
+namespace Core.Controls.Colours
 {
     public class LightnessColourSlider : ColourSlider, IColourEditor
     {

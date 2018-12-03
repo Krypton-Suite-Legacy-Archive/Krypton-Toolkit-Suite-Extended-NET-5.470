@@ -4,9 +4,9 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
-using Tooling.Interfaces;
+using Core.Interfaces;
 
-namespace Tooling.Controls.Colours
+namespace Core.Controls.Colours
 {
     /// <summary>
     /// Represents a control that allows the selection of a colour by dragging the mouse across the desktop

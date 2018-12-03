@@ -2,7 +2,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Tooling.Settings.Classes;
+using Core.Settings.Classes;
 
 namespace Classes.Colours
 {

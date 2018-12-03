@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace Tooling.Interfaces
+namespace Core.Interfaces
 {
     /// <summary>
     /// Provides functionality required by colour editors that are bindable

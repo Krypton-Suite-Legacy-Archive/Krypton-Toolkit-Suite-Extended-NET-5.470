@@ -2,8 +2,8 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Tooling.Enumerations;
-using Tooling.Settings.Classes;
+using Core.Enumerations;
+using Core.Settings.Classes;
 
 namespace Classes.Colours
 {

@@ -4,7 +4,7 @@ using System;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using Tooling.Settings.Classes;
+using Core.Settings.Classes;
 
 namespace PaletteEditor.UX
 {

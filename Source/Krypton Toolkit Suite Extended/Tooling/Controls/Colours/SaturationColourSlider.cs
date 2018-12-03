@@ -5,10 +5,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tooling.Enumerations;
-using Tooling.STRUCTS;
+using Core.Enumerations;
+using Core.STRUCTS;
 
-namespace Tooling.Controls.Colours
+namespace Core.Controls.Colours
 {
     /// <summary>
     /// Represents a control for selecting the saturation of a color

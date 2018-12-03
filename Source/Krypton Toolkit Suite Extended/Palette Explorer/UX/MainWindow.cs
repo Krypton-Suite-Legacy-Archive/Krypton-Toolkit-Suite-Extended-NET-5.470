@@ -7,9 +7,9 @@ using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using Tooling.Classes.Other;
-using Tooling.Settings.Classes;
-using Tooling.UX;
+using Core.Classes.Other;
+using Core.Settings.Classes;
+using Core.UX;
 
 namespace PaletteExplorer.UX
 {

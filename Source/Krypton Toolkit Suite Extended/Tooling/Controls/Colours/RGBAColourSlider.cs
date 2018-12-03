@@ -3,10 +3,10 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
-using Tooling.Classes.Colours;
-using Tooling.Enumerations;
+using Core.Classes.Colours;
+using Core.Enumerations;
 
-namespace Tooling.Controls.Colours
+namespace Core.Controls.Colours
 {
     public class RGBAColourSlider : ColourSlider
     {

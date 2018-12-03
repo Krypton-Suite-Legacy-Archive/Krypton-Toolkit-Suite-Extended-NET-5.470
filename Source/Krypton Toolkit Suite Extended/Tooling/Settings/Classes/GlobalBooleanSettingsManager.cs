@@ -1,7 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System.Windows.Forms;
 
-namespace Tooling.Settings.Classes
+namespace Core.Settings.Classes
 {
     public class GlobalBooleanSettingsManager
     {
@@ -160,6 +160,24 @@ namespace Tooling.Settings.Classes
         {
             return _globalBooleanSettings.UsePromptFeedback;
         }
+
+        /// <summary>
+        /// Sets the ShowBuildTag to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetShowBuildTag(bool value)
+        {
+            _globalBooleanSettings.ShowBuildTag = value;
+        }
+
+        /// <summary>
+        /// Gets the ShowBuildTag value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetShowBuildTag()
+        {
+            return _globalBooleanSettings.ShowBuildTag;
+        }
         #endregion
 
         #region Methods 
@@ -230,6 +248,8 @@ namespace Tooling.Settings.Classes
             SetHidePropertiesPane(false);
 
             SetUsePromptFeedback(true);
+
+            SetShowBuildTag(false);
         }
         #endregion
     }

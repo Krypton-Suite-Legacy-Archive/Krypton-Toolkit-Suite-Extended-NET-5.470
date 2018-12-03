@@ -5,9 +5,9 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using Tooling.Interfaces;
+using Core.Interfaces;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     public abstract class PaletteSerialiser : IPaletteSerialiser
     {

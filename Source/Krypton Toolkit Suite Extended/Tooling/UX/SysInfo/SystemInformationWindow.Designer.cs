@@ -1,4 +1,4 @@
-﻿namespace Tooling.UX.SysInfo
+﻿namespace Core.UX.SysInfo
 {
     partial class SystemInformationWindow
     {

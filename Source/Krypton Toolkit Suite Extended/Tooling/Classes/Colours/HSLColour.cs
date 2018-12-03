@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace Tooling.Classes.Colours.Extended
+namespace Core.Classes.Colours.Extended
 {
     /// <summary>
     /// Code adapted from: https://richnewman.wordpress.com/2007/04/29/using-hsl-color-hue-saturation-luminosity-to-create-better-looking-guis-part-1/

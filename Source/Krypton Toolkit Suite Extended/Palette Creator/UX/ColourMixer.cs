@@ -2,7 +2,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Tooling.Classes.Other;
+using Core.Classes.Other;
 
 namespace PaletteCreator.UX
 {
@@ -11,7 +11,7 @@ namespace PaletteCreator.UX
         #region Variables
         private RandomNumberGenerator _randomNumberGenerator = new RandomNumberGenerator();
 
-        private Tooling.Classes.Other.ToolTipManager _toolTipManager = new Tooling.Classes.Other.ToolTipManager();
+        private Core.Classes.Other.ToolTipManager _toolTipManager = new Core.Classes.Other.ToolTipManager();
 
         private ConversionMethods _conversionMethods = new ConversionMethods();
 

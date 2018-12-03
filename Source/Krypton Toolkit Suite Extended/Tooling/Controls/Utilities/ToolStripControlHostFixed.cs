@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Tooling.Controls.Utilities
+namespace Core.Controls.Utilities
 {
     public class ToolStripControlHostFixed : ToolStripControlHost
     {

@@ -4,10 +4,10 @@ using System.Collections.ObjectModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using Tooling.Enumerations;
-using Tooling.Interfaces;
+using Core.Enumerations;
+using Core.Interfaces;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     /// <summary>
     /// Represents a collection of colors

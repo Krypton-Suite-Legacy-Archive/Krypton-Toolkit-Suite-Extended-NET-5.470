@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace Tooling.Classes.Other
+namespace Core.Classes.Other
 {
     /// <summary>
     /// Provides base functions for drawing a <see cref="ToolStrip"/> on a window titlebar.

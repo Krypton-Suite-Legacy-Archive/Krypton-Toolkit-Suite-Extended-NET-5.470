@@ -5,10 +5,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
-using Tooling.Interfaces;
-using Tooling.STRUCTS;
+using Core.Interfaces;
+using Core.STRUCTS;
 
-namespace Tooling.UserControls.Colours
+namespace Core.UserControls.Colours
 {
     /// <summary>
     /// Represents a control that allows the editing of a color in a variety of ways.

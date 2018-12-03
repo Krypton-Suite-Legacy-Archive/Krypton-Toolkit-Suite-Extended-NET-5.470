@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Tooling.UX.SysInfo
+namespace Core.UX.SysInfo
 {
     public partial class SystemInformationWindow : KryptonForm
     {

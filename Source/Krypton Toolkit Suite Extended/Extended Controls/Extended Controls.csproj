@@ -70,6 +70,14 @@
     <Compile Include="Base\ButtonSpec\ButtonSpecFormWindowMin.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Base\Code\Colours\ColourConverting.cs" />
+    <Compile Include="Base\Code\Colours\ColourTypeDialogConverter.cs" />
+    <Compile Include="Base\Code\Colours\ColourTypeDropDownConverter.cs" />
+    <Compile Include="Base\Code\Colours\ColourTypeEditorDialog.cs" />
+    <Compile Include="Base\Code\Colours\ColourTypeEditorDropDown.cs" />
+    <Compile Include="Base\Code\Colours\HSBColour.cs" />
+    <Compile Include="Base\Code\Colours\HSLColour.cs" />
+    <Compile Include="Base\Code\Colours\RGBColour.cs" />
     <Compile Include="Base\Code\Drawing\ColourChangedEventArgs.cs" />
     <Compile Include="Base\Code\Drawing\ColourHandler.cs" />
     <Compile Include="Base\Code\Drawing\ColourWheel.cs" />
@@ -129,11 +137,45 @@
     <Compile Include="ExtendedToolkit\Calendar Library\WeekDayColumn.cs" />
     <Compile Include="ExtendedToolkit\Calendar Library\WeekRow.cs" />
     <Compile Include="ExtendedToolkit\Calendar Library\WeekRowHeaderCell.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\KryptonCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\ColourComboBox.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\BrowserSafeColourEditorUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\ColourAreaAndSliderUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\ColourAreaUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\ColourEditorUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\ColourSliderPanel.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Colours\ColourSliderUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\ColourUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\CustomColourEditorUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\SchemesColourEditorUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\SystemColourEditorUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\WebColourEditorUserControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Experimental\Toggle Switches\KryptonToggleSwitchV1.cs">
       <SubType>Component</SubType>
@@ -152,11 +194,17 @@
     <Compile Include="ExtendedToolkit\Controls\KryptonCollapseContainer.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonColourButtonExtended.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonColourComboBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\KryptonExtendedNumericUpDownControl.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonGrid.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonHexadecimalColourTextBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\KryptonListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\KryptonPromptTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\KryptonSlideButton.cs">
@@ -250,6 +298,12 @@
     <Compile Include="ExtendedToolkit\UI\Calendar Library\AddAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Colours\ColourEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Colours\ColourPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +321,9 @@
     </Compile>
     <Compile Include="ExtendedToolkit\UI\FileDownloader\FileDownloaderBasic.Designer.cs">
       <DependentUpon>FileDownloaderBasic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Find and Replace\KryptonFindAndReplaceDialog.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\KryptonFormWithDropShadow.cs">
       <SubType>Form</SubType>
@@ -286,6 +343,8 @@
     <Compile Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Interfaces\Colour Schemes\IColourScheme.cs" />
+    <Compile Include="Interfaces\Colours\IExternalColourEditorInformationProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -387,6 +446,7 @@
     <None Include="Resources\Ok.bmp" />
     <None Include="Resources\palette.bmp" />
     <None Include="Resources\Up.png" />
+    <None Include="Resources\arrowControl.Image.png" />
     <Content Include="ToolboxBitmaps\GlassButton.bmp" />
     <Content Include="ToolboxBitmaps\KryptonForm.bmp" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
@@ -419,6 +479,9 @@
     <EmbeddedResource Include="ExtendedToolkit\UI\Calendar Library\AddAppointment.resx">
       <DependentUpon>AddAppointment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Colours\ColourPickerDialog.resx">
+      <DependentUpon>ColourPickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.resx">
       <DependentUpon>TypefaceSelectionDialogue.cs</DependentUpon>
     </EmbeddedResource>
@@ -430,6 +493,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\FileDownloader\FileDownloaderBasic.resx">
       <DependentUpon>FileDownloaderBasic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Find and Replace\KryptonFindAndReplaceDialog.resx">
+      <DependentUpon>KryptonFindAndReplaceDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\KryptonSplashScreen.resx">
       <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
@@ -443,10 +509,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ExtendedToolkit\Calendar\" />
     <Folder Include="ExtendedToolkit\Messageboxes\UI\" />
     <Folder Include="ExtendedToolkit\UI\SoftwareUpdater\Classes\" />
-    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">

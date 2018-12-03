@@ -2,9 +2,9 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Tooling.Classes.Other;
+using Core.Classes.Other;
 
-namespace Tooling.UX
+namespace Core.UX
 {
     public partial class ColourHexadecimalToRGBConverter : KryptonForm
     {

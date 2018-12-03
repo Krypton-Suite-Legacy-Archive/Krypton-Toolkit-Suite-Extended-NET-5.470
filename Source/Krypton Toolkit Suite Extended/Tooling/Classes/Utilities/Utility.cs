@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Drawing;
 
-namespace Tooling.Classes.Utilities
+namespace Core.Classes.Utilities
 {
     public class Utility
     {

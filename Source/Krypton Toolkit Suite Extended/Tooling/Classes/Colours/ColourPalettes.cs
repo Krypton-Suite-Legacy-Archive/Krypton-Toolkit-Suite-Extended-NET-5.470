@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
-using Tooling.Enumerations;
-using Tooling.STRUCTS;
+using Core.Enumerations;
+using Core.STRUCTS;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     public static class ColourPalettes
     {

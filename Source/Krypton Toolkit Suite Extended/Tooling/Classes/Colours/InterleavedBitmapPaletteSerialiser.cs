@@ -3,7 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     /// <summary>
     /// Deserializes color palettes into and from the images and palettes using the  ILBM (IFF Interleaved Bitmap) format.

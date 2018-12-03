@@ -1,4 +1,4 @@
-﻿namespace Tooling.UserControls.Colours
+﻿namespace Core.UserControls.Colours
 {
     partial class ColourEditor
     {
@@ -31,27 +31,27 @@
             this.rgbHeaderLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.rLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.rNumericUpDown = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.rColourBar = new Tooling.Controls.Colours.RGBAColourSlider();
+            this.rColourBar = new Core.Controls.Colours.RGBAColourSlider();
             this.gLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.gColourBar = new Tooling.Controls.Colours.RGBAColourSlider();
+            this.gColourBar = new Core.Controls.Colours.RGBAColourSlider();
             this.gNumericUpDown = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.bLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.bColourBar = new Tooling.Controls.Colours.RGBAColourSlider();
+            this.bColourBar = new Core.Controls.Colours.RGBAColourSlider();
             this.bNumericUpDown = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.hexLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.hexTextBox = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.lNumericUpDown = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.lColourBar = new Tooling.Controls.Colours.LightnessColourSlider();
+            this.lColourBar = new Core.Controls.Colours.LightnessColourSlider();
             this.lLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.sNumericUpDown = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.sColourBar = new Tooling.Controls.Colours.SaturationColourSlider();
+            this.sColourBar = new Core.Controls.Colours.SaturationColourSlider();
             this.sLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.hColourBar = new Tooling.Controls.Colours.HueColourSlider();
+            this.hColourBar = new Core.Controls.Colours.HueColourSlider();
             this.hNumericUpDown = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.hLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.hslLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.aNumericUpDown = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.aColourBar = new Tooling.Controls.Colours.RGBAColourSlider();
+            this.aColourBar = new Core.Controls.Colours.RGBAColourSlider();
             this.aLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kpnlBackdrop = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             ((System.ComponentModel.ISupportInitialize)(this.rNumericUpDown)).BeginInit();
@@ -114,7 +114,7 @@
             // 
             // gColourBar
             // 
-            this.gColourBar.Channel = Tooling.Enumerations.RGBAChannel.GREEN;
+            this.gColourBar.Channel = Core.Enumerations.RGBAChannel.GREEN;
             this.gColourBar.Location = new System.Drawing.Point(27, 39);
             this.gColourBar.Name = "gColourBar";
             this.gColourBar.Size = new System.Drawing.Size(72, 20);
@@ -146,7 +146,7 @@
             // 
             // bColourBar
             // 
-            this.bColourBar.Channel = Tooling.Enumerations.RGBAChannel.BLUE;
+            this.bColourBar.Channel = Core.Enumerations.RGBAChannel.BLUE;
             this.bColourBar.Location = new System.Drawing.Point(27, 65);
             this.bColourBar.Name = "bColourBar";
             this.bColourBar.Size = new System.Drawing.Size(72, 20);
@@ -297,7 +297,7 @@
             // 
             // aColourBar
             // 
-            this.aColourBar.Channel = Tooling.Enumerations.RGBAChannel.ALPHA;
+            this.aColourBar.Channel = Core.Enumerations.RGBAChannel.ALPHA;
             this.aColourBar.Location = new System.Drawing.Point(27, 216);
             this.aColourBar.Name = "aColourBar";
             this.aColourBar.Size = new System.Drawing.Size(72, 20);
@@ -396,27 +396,27 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel rgbHeaderLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel rLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown rNumericUpDown;
-        private Tooling.Controls.Colours.RGBAColourSlider rColourBar;
+        private Core.Controls.Colours.RGBAColourSlider rColourBar;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel gLabel;
-        private Tooling.Controls.Colours.RGBAColourSlider gColourBar;
+        private Core.Controls.Colours.RGBAColourSlider gColourBar;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown gNumericUpDown;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel bLabel;
-        private Tooling.Controls.Colours.RGBAColourSlider bColourBar;
+        private Core.Controls.Colours.RGBAColourSlider bColourBar;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown bNumericUpDown;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel hexLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox hexTextBox;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown lNumericUpDown;
-        private Tooling.Controls.Colours.LightnessColourSlider lColourBar;
+        private Core.Controls.Colours.LightnessColourSlider lColourBar;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown sNumericUpDown;
-        private Tooling.Controls.Colours.SaturationColourSlider sColourBar;
+        private Core.Controls.Colours.SaturationColourSlider sColourBar;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel sLabel;
-        private Tooling.Controls.Colours.HueColourSlider hColourBar;
+        private Core.Controls.Colours.HueColourSlider hColourBar;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown hNumericUpDown;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel hLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel hslLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown aNumericUpDown;
-        private Tooling.Controls.Colours.RGBAColourSlider aColourBar;
+        private Core.Controls.Colours.RGBAColourSlider aColourBar;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel aLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlBackdrop;
     }

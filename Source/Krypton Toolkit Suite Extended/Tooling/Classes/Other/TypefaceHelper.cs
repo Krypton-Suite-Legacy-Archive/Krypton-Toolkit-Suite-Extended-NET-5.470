@@ -2,7 +2,7 @@
 using System;
 using System.Drawing;
 
-namespace Tooling.Classes.Other
+namespace Core.Classes.Other
 {
     public static class TypefaceHelper
     {

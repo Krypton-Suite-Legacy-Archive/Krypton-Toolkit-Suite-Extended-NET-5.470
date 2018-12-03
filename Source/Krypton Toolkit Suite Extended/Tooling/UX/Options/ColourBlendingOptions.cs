@@ -4,9 +4,9 @@ using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.IO;
 using System.Windows.Forms;
-using Tooling.Settings.Classes;
+using Core.Settings.Classes;
 
-namespace Tooling.UX.Options
+namespace Core.UX.Options
 {
     public partial class ColourBlendingOptions : KryptonForm
     {
@@ -67,6 +67,9 @@ namespace Tooling.UX.Options
         private KryptonLabel kryptonLabel10;
         private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbxCircular;
         private PictureBox pbxStandard;
+        private KryptonCheckBox kchkGenerateAlphaValue;
+        private KryptonCheckBox kcbConvertToHexadecimalValue;
+        private KryptonCheckBox kchkConvertToRGBValue;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
@@ -110,6 +113,9 @@ namespace Tooling.UX.Options
             this.kbtnMiddleColourIntensityValuePlus = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnLightColourIntensityValueMinus = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kchkConvertToRGBValue = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbConvertToHexadecimalValue = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kchkGenerateAlphaValue = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.cbxCircular = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.pbxStandard = new System.Windows.Forms.PictureBox();
             this.kcmbDisplayType = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -312,7 +318,7 @@ namespace Tooling.UX.Options
             this.kcbBaseColour.Size = new System.Drawing.Size(199, 30);
             this.kcbBaseColour.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcbBaseColour.TabIndex = 32;
-            this.kcbBaseColour.Values.Image = global::Tooling.Properties.Resources.Colour_Wheel_16_x_16;
+            this.kcbBaseColour.Values.Image = global::Core.Properties.Resources.Colour_Wheel_16_x_16;
             this.kcbBaseColour.Values.Text = "&Choose a Base Colour";
             // 
             // kryptonLabel4
@@ -575,6 +581,9 @@ namespace Tooling.UX.Options
             // kryptonPage2
             // 
             this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage2.Controls.Add(this.kchkConvertToRGBValue);
+            this.kryptonPage2.Controls.Add(this.kcbConvertToHexadecimalValue);
+            this.kryptonPage2.Controls.Add(this.kchkGenerateAlphaValue);
             this.kryptonPage2.Controls.Add(this.cbxCircular);
             this.kryptonPage2.Controls.Add(this.pbxStandard);
             this.kryptonPage2.Controls.Add(this.kcmbDisplayType);
@@ -588,6 +597,33 @@ namespace Tooling.UX.Options
             this.kryptonPage2.Text = "UI Options";
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
             this.kryptonPage2.UniqueName = "FA50690FF4D649BA9E9ED453E8E571B5";
+            // 
+            // kchkConvertToRGBValue
+            // 
+            this.kchkConvertToRGBValue.Location = new System.Drawing.Point(43, 253);
+            this.kchkConvertToRGBValue.Name = "kchkConvertToRGBValue";
+            this.kchkConvertToRGBValue.Size = new System.Drawing.Size(286, 26);
+            this.kchkConvertToRGBValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kchkConvertToRGBValue.TabIndex = 42;
+            this.kchkConvertToRGBValue.Values.Text = "Automatically Convert to &RGB Value";
+            // 
+            // kcbConvertToHexadecimalValue
+            // 
+            this.kcbConvertToHexadecimalValue.Location = new System.Drawing.Point(43, 200);
+            this.kcbConvertToHexadecimalValue.Name = "kcbConvertToHexadecimalValue";
+            this.kcbConvertToHexadecimalValue.Size = new System.Drawing.Size(348, 26);
+            this.kcbConvertToHexadecimalValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbConvertToHexadecimalValue.TabIndex = 41;
+            this.kcbConvertToHexadecimalValue.Values.Text = "Automatically Convert to &Hexadecimal Value";
+            // 
+            // kchkGenerateAlphaValue
+            // 
+            this.kchkGenerateAlphaValue.Location = new System.Drawing.Point(43, 147);
+            this.kchkGenerateAlphaValue.Name = "kchkGenerateAlphaValue";
+            this.kchkGenerateAlphaValue.Size = new System.Drawing.Size(205, 26);
+            this.kchkGenerateAlphaValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kchkGenerateAlphaValue.TabIndex = 40;
+            this.kchkGenerateAlphaValue.Values.Text = "&Generate an Alpha Value";
             // 
             // cbxCircular
             // 

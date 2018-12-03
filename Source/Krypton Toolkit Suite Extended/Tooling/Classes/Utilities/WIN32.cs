@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace Tooling.Classes.Utilities
+namespace Core.Classes.Utilities
 {
     public class WIN32
     {

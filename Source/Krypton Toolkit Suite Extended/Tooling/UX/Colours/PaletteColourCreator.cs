@@ -2,12 +2,12 @@
 using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Drawing;
-using Tooling.Classes.Colours.Extended;
-using Tooling.Classes.Other;
-using Tooling.Settings.Classes;
-using Tooling.UX.Options;
+using Core.Classes.Colours.Extended;
+using Core.Classes.Other;
+using Core.Settings.Classes;
+using Core.UX.Options;
 
-namespace Tooling.UX
+namespace Core.UX
 {
     public partial class PaletteColourCreator : KryptonForm
     {
@@ -393,6 +393,43 @@ namespace Tooling.UX
             ColourBlendingOptions colourBlendingOptions = new ColourBlendingOptions();
 
             colourBlendingOptions.Show();
+        }
+
+        private void ktbAlpha_ValueChanged(object sender, EventArgs e)
+        {
+            knumAlphaChannelValue.Value = ktbAlpha.Value;
+
+            ttInformation.SetToolTip(ktbAlpha, ktbAlpha.Value.ToString());
+        }
+
+        private void ktbRed_ValueChanged(object sender, EventArgs e)
+        {
+            knumRedChannelValue.Value = ktbRed.Value;
+
+            ttInformation.SetToolTip(ktbRed, ktbRed.Value.ToString());
+        }
+
+        private void ktbGreen_ValueChanged(object sender, EventArgs e)
+        {
+            knumGreenChannelValue.Value = ktbGreen.Value;
+
+            ttInformation.SetToolTip(ktbGreen, ktbGreen.Value.ToString());
+        }
+
+        private void ktbBlue_ValueChanged(object sender, EventArgs e)
+        {
+            knumBlueChannelValue.Value = ktbBlue.Value;
+
+            ttInformation.SetToolTip(ktbBlue, ktbBlue.Value.ToString());
+        }
+
+        private void kcbBaseColour_SelectedColorChanged(object sender, ColorEventArgs e)
+        {
+            knumRedChannelValue.Value = kcbBaseColour.SelectedColor.R;
+
+            knumGreenChannelValue.Value = kcbBaseColour.SelectedColor.G;
+
+            knumBlueChannelValue.Value = kcbBaseColour.SelectedColor.B;
         }
 
         private void kbtnSaveValues_Click(object sender, EventArgs e)

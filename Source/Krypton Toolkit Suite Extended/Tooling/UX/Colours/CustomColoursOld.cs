@@ -2,7 +2,7 @@
 using ComponentFactory.Krypton.Toolkit;
 using System;
 
-namespace Tooling.UX
+namespace Core.UX
 {
     public partial class CustomColoursOld : KryptonForm
     {

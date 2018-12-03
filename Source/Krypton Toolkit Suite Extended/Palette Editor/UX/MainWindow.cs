@@ -10,9 +10,9 @@ using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using Tooling.Classes.Other;
-using Tooling.Settings.Classes;
-using Tooling.UX;
+using Core.Classes.Other;
+using Core.Settings.Classes;
+using Core.UX;
 
 namespace PaletteEditor.UX
 {
@@ -652,7 +652,7 @@ namespace PaletteEditor.UX
 
         private void cbxBaseColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.ToolTipManager.DisplayToolTip(ttInformation, cbxBaseColourPreview, "Base", cbxBaseColourPreview.BackColor, true);
+            Core.Classes.Other.ToolTipManager.DisplayToolTip(ttInformation, cbxBaseColourPreview, "Base", cbxBaseColourPreview.BackColor, true);
         }
 
         private void kcmbBasePaletteMode_SelectedIndexChanged(object sender, EventArgs e)
@@ -859,17 +859,17 @@ namespace PaletteEditor.UX
 
         private void viewPaletteFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            Core.Classes.Other.GlobalMethods.NotImplementedYet();
         }
 
         private void generateContrastColoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            Core.Classes.Other.GlobalMethods.NotImplementedYet();
         }
 
         private void getColourInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            Core.Classes.Other.GlobalMethods.NotImplementedYet();
         }
 
         private void importColourSchemeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -884,7 +884,7 @@ namespace PaletteEditor.UX
 
         private void updateColoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tooling.Classes.Other.GlobalMethods.NotImplementedYet();
+            Core.Classes.Other.GlobalMethods.NotImplementedYet();
         }
 
         private void resetColoursToolStripMenuItem_Click(object sender, EventArgs e)

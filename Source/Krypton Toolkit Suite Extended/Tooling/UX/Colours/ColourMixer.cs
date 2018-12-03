@@ -2,10 +2,11 @@
 using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Drawing;
-using Tooling.Classes.Other;
-using Tooling.Settings.Classes;
+using Core.Classes.Other;
+using Core.Settings.Classes;
+using Core.UX.Options;
 
-namespace Tooling.UX
+namespace Core.UX
 {
     public partial class ColourMixer : KryptonForm
     {
@@ -388,9 +389,16 @@ namespace Tooling.UX
             customColours.Show();
         }
 
+        private void kbtnOptions_Click(object sender, EventArgs e)
+        {
+            ColourBlendingOptions colourBlendingOptions = new ColourBlendingOptions();
+
+            colourBlendingOptions.Show();
+        }
+
         private void kbtnGenerateColour_Click(object sender, EventArgs e)
         {
-            pbColourPreview.BackColor = _colourUtility.GenerateRandomColour(kchkGenerateAlphaValue.Checked);
+           // pbColourPreview.BackColor = _colourUtility.GenerateRandomColour(kchkGenerateAlphaValue.Checked);
 
             //int a = randomColour.Next(_max), r = randomColour.Next(_max), g = randomColour.Next(_max), b = randomColour.Next(_max); 
 

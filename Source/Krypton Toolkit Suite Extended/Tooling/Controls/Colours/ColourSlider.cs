@@ -8,10 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tooling.Classes.Colours;
-using Tooling.Enumerations;
+using Core.Classes.Colours;
+using Core.Enumerations;
 
-namespace Tooling.Controls.Colours
+namespace Core.Controls.Colours
 {
     /// <summary>
     /// Represents a control for selecting a value from a scale

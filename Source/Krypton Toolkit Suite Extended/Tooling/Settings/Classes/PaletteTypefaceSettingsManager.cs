@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace Tooling.Settings.Classes
+namespace Core.Settings.Classes
 {
     public class PaletteTypefaceSettingsManager
     {

@@ -22,4 +22,22 @@
         /// </summary>
         JUSTIFY = 4
     }
+
+    /// <summary>
+    /// The elements to look up when setting a color.
+    /// </summary>
+    public enum ColourLookupElement
+    {
+        #region Enum members.
+        // ------------------------------------------------------------------
+
+        CUSTOMCOLOURS,
+        BROWSERSAFECOLOURS,
+        WEBCOLOURS,
+        SYSTEMCOLOURS,
+        SCHEMECOLOURS
+
+        // ------------------------------------------------------------------
+        #endregion
+    }
 }

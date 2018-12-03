@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     /// <summary>Provides data for the <see cref="ColourCollection.CollectionChanged"/> event of a <see cref="ColourCollection"/> instance.</summary>
     public class ColourCollectionEventArgs : EventArgs

@@ -1,4 +1,4 @@
-﻿namespace Tooling.Enumerations
+﻿namespace Core.Enumerations
 {
     /// <summary>
     /// The RGBA channel

@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     internal class NativeMethods
     {

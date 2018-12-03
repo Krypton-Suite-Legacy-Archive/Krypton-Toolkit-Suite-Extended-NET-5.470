@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Text;
 
-namespace Tooling.STRUCTS
+namespace Core.STRUCTS
 {
     [Serializable]
     public struct HSLColour

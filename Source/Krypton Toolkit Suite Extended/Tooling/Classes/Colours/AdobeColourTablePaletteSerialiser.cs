@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.IO;
 
-namespace Tooling.Classes.Colours
+namespace Core.Classes.Colours
 {
     /// <summary>
     /// Serializes and deserializes 8bit color palettes from raw byte data.

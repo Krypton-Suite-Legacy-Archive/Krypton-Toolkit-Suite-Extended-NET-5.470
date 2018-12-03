@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExtendedControls.ExtendedToolkit.UI.Colours;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -8,13 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tooling.Classes.Colours;
-using Tooling.Enumerations;
-using Tooling.Interfaces;
-using Tooling.STRUCTS;
-using Tooling.UX;
+using Core.Classes.Colours;
+using Core.Enumerations;
+using Core.Interfaces;
+using Core.STRUCTS;
+using Core.UX;
 
-namespace Tooling.Controls.Colours
+namespace Core.Controls.Colours
 {
     /// <summary>
     /// Represents a grid control, which displays a collection of colors using different styles.
@@ -981,17 +982,17 @@ namespace Tooling.Controls.Colours
 
         protected virtual void EditColour(int colourIndex)
         {
-            using (ColourPickerDialog dialog = new ColourPickerDialog())
-            {
-                dialog.Colour = this.GetColour(colourIndex);
-                if (dialog.ShowDialog(this) == DialogResult.OK)
-                {
-                    this.BeginUpdate();
-                    this.SetColour(colourIndex, dialog.Colour);
-                    this.Colour = dialog.Colour;
-                    this.EndUpdate();
-                }
-            }
+            //using (ColorPickerDialog dialog = new ColorPickerDialog())
+            //{
+            //    dialog.Colour = this.GetColour(colourIndex);
+            //    if (dialog.ShowDialog(this) == DialogResult.OK)
+            //    {
+            //        this.BeginUpdate();
+            //        this.SetColour(colourIndex, dialog.Colour);
+            //        this.Colour = dialog.Colour;
+            //        this.EndUpdate();
+            //    }
+            //}
         }
 
         protected Size GetAutoSize()

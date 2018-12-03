@@ -234,9 +234,9 @@
       <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
       <Name>Extended Controls</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Tooling\Tooling.csproj">
+    <ProjectReference Include="..\Tooling\Core.csproj">
       <Project>{efb997fb-1e05-444b-ba02-16c004e1a111}</Project>
-      <Name>Tooling</Name>
+      <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

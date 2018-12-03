@@ -2,10 +2,10 @@
 using System;
 using System.Collections;
 using System.Windows.Forms;
-using Tooling.Interfaces.Theming;
-using Tooling.Settings.Classes;
+using Core.Interfaces.Theming;
+using Core.Settings.Classes;
 
-namespace Tooling.Classes.Options.Theming
+namespace Core.Classes.Options.Theming
 {
     public class ThemingLogic
     {
@@ -141,18 +141,12 @@ namespace Tooling.Classes.Options.Theming
             {
                 case PaletteMode.Global:
                     _themeOptions.KryptonManager.GlobalPaletteMode = PaletteModeManager.Custom;
-
-                    _paletteThemeSettingsManager.SetTheme(PaletteMode.Global);
                     break;
                 case PaletteMode.ProfessionalSystem:
                     _themeOptions.KryptonManager.GlobalPaletteMode = PaletteModeManager.ProfessionalSystem;
-
-                    _paletteThemeSettingsManager.SetTheme(PaletteMode.ProfessionalSystem);
                     break;
                 case PaletteMode.ProfessionalOffice2003:
                     _themeOptions.KryptonManager.GlobalPaletteMode = PaletteModeManager.ProfessionalOffice2003;
-
-                    _paletteThemeSettingsManager.SetTheme(PaletteMode.ProfessionalOffice2003);
                     break;
                 case PaletteMode.Office2007Blue:
                     _themeOptions.KryptonManager.GlobalPaletteMode = PaletteModeManager.Office2007Blue;
@@ -180,25 +174,15 @@ namespace Tooling.Classes.Options.Theming
                     break;
                 case PaletteMode.SparkleBlue:
                     _themeOptions.KryptonManager.GlobalPaletteMode = PaletteModeManager.SparkleBlue;
-
-                    _paletteThemeSettingsManager.SetTheme(PaletteMode.SparkleBlue);
                     break;
                 case PaletteMode.SparkleOrange:
                     _themeOptions.KryptonManager.GlobalPaletteMode = PaletteModeManager.SparkleOrange;
-
-                    _paletteThemeSettingsManager.SetTheme(PaletteMode.SparkleOrange);
                     break;
                 case PaletteMode.SparklePurple:
                     _themeOptions.KryptonManager.GlobalPaletteMode = PaletteModeManager.SparklePurple;
-
-                    _paletteThemeSettingsManager.SetTheme(PaletteMode.SparklePurple);
                     break;
                 case PaletteMode.Custom:
                     _themeOptions.KryptonManager.GlobalPaletteMode = PaletteModeManager.Custom;
-
-                    //_palette.Import(ktxtCustomPath.Text);
-
-                    _paletteThemeSettingsManager.SetTheme(PaletteMode.Custom);
 
                     _paletteThemeSettingsManager.SetCustomThemeFilePath(_themeOptions.PaletteFilePathControl.Text);
                     break;
