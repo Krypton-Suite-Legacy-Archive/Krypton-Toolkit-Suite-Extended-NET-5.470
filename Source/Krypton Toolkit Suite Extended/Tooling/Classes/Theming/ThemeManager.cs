@@ -132,18 +132,25 @@ namespace Core.Classes.Theming
                     manager.GlobalPaletteMode = PaletteModeManager.ProfessionalOffice2003;
                     break;
                 case PaletteModeManager.Office2007Blue:
+                    manager.GlobalPaletteMode = PaletteModeManager.Office2007Blue;
                     break;
                 case PaletteModeManager.Office2007Silver:
+                    manager.GlobalPaletteMode = PaletteModeManager.Office2007Silver;
                     break;
                 case PaletteModeManager.Office2007Black:
+                    manager.GlobalPaletteMode = PaletteModeManager.Office2007Black;
                     break;
                 case PaletteModeManager.Office2010Blue:
+                    manager.GlobalPaletteMode = PaletteModeManager.Office2010Blue;
                     break;
                 case PaletteModeManager.Office2010Silver:
+                    manager.GlobalPaletteMode = PaletteModeManager.Office2010Silver;
                     break;
                 case PaletteModeManager.Office2010Black:
+                    manager.GlobalPaletteMode = PaletteModeManager.Office2010Black;
                     break;
                 case PaletteModeManager.Office2013:
+                    manager.GlobalPaletteMode = PaletteModeManager.Office2013;
                     break;
                 case PaletteModeManager.Office2013White:
                     manager.GlobalPaletteMode = PaletteModeManager.Office2013White;

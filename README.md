@@ -16,6 +16,16 @@
 
 ======
 
+## 2018/12/03 December 2018 Update
+* New controls, including a new, themeable scrollbar - need help implementing it into controls i.e ComboBox, rich textbox etc.
+* Partially implemented the `ExtendedRenderer` project - due to be completed in early 2019.
+* **Tooling.dll** has now been renamed to **Core.dll**
+* Consolidate settings
+* Begun work on a new colour dialog
+* Build 580 (build date Monday 3rd December 2018) is now available through NuGet
+
+======
+
 ## 2018-11-12 November 2018 Update
 * Refinements to code
 * Set your own colour intensity
