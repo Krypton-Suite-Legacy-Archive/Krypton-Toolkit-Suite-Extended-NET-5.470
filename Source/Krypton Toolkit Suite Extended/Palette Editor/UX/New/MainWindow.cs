@@ -384,7 +384,7 @@ namespace PaletteEditor.UX.New
                 {
                     if (useFileName)
                     {
-                        string fileName = Path.GetFileName(_palette.GetFilePath());
+                        string fileName = Path.GetFileName(_palette.GetCustomisedKryptonPaletteFilePath());
 
                         DialogResult result = KryptonMessageBox.Show($"The current palette: { fileName } has not yet been saved. Save now?", "Unsaved Palette", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 

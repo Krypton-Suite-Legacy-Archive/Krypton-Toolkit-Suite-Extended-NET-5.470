@@ -83,7 +83,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.SoftwareUpdater.UX
             // 
             // kryptonPalette1
             // 
-            this.kryptonPalette1.FilePath = "";
+            this.kryptonPalette1.CustomisedKryptonPaletteFilePath = "";
             // 
             // klblCurrentState
             // 

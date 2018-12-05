@@ -578,7 +578,7 @@ namespace PaletteEditor.Classes
 
             palette.Export();
 
-            statusState.Text = $"Palette exported to: { palette.GetFilePath() }";
+            statusState.Text = $"Palette exported to: { palette.GetCustomisedKryptonPaletteFilePath() }";
             //}
             //catch (Exception exc)
             //{
@@ -1559,7 +1559,7 @@ namespace PaletteEditor.Classes
 
                 palette.Export();
 
-                statusState.Text = $"Palette exported to: { palette.GetFilePath() }";
+                statusState.Text = $"Palette exported to: { palette.GetCustomisedKryptonPaletteFilePath() }";
             }
             catch (Exception exc)
             {
@@ -2066,7 +2066,7 @@ namespace PaletteEditor.Classes
 
                 palette.Export();
 
-                statusState.Text = $"Palette exported to: { palette.GetFilePath() }";
+                statusState.Text = $"Palette exported to: { palette.GetCustomisedKryptonPaletteFilePath() }";
             }
             catch (Exception exc)
             {

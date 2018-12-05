@@ -77,6 +77,7 @@
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonButton10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPromptTextBox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             this.kryptonButton9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -130,7 +131,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
-            this.kryptonButton10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -216,7 +217,7 @@
             // kPal
             // 
             this.kPal.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            this.kPal.FilePath = null;
+            this.kPal.CustomisedKryptonPaletteFilePath = null;
             // 
             // menuStrip2
             // 
@@ -495,6 +496,7 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonButton11);
             this.kryptonPanel1.Controls.Add(this.kryptonButton10);
             this.kryptonPanel1.Controls.Add(this.kryptonPromptTextBox1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton9);
@@ -533,6 +535,15 @@
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 659);
             this.kryptonPanel1.TabIndex = 2;
             // 
+            // kryptonButton10
+            // 
+            this.kryptonButton10.Location = new System.Drawing.Point(14, 498);
+            this.kryptonButton10.Name = "kryptonButton10";
+            this.kryptonButton10.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton10.TabIndex = 30;
+            this.kryptonButton10.Values.Text = "Global Options";
+            this.kryptonButton10.Click += new System.EventHandler(this.kryptonButton10_Click);
+            // 
             // kryptonPromptTextBox1
             // 
             this.kryptonPromptTextBox1.DrawPrompt = true;
@@ -547,7 +558,7 @@
             // 
             // kryptonButton9
             // 
-            this.kryptonButton9.Location = new System.Drawing.Point(257, 467);
+            this.kryptonButton9.Location = new System.Drawing.Point(257, 498);
             this.kryptonButton9.Name = "kryptonButton9";
             this.kryptonButton9.Size = new System.Drawing.Size(218, 25);
             this.kryptonButton9.TabIndex = 29;
@@ -574,7 +585,7 @@
             // 
             // kryptonButton6
             // 
-            this.kryptonButton6.Location = new System.Drawing.Point(257, 436);
+            this.kryptonButton6.Location = new System.Drawing.Point(257, 467);
             this.kryptonButton6.Name = "kryptonButton6";
             this.kryptonButton6.Size = new System.Drawing.Size(218, 25);
             this.kryptonButton6.TabIndex = 26;
@@ -601,7 +612,7 @@
             // 
             // kryptonButton3
             // 
-            this.kryptonButton3.Location = new System.Drawing.Point(257, 405);
+            this.kryptonButton3.Location = new System.Drawing.Point(257, 436);
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.Size = new System.Drawing.Size(218, 25);
             this.kryptonButton3.TabIndex = 23;
@@ -730,7 +741,7 @@
             // 
             // kbtnColourCreator
             // 
-            this.kbtnColourCreator.Location = new System.Drawing.Point(257, 374);
+            this.kbtnColourCreator.Location = new System.Drawing.Point(257, 405);
             this.kbtnColourCreator.Name = "kbtnColourCreator";
             this.kbtnColourCreator.Size = new System.Drawing.Size(218, 25);
             this.kbtnColourCreator.TabIndex = 10;
@@ -739,7 +750,7 @@
             // 
             // kbtnColourMixer
             // 
-            this.kbtnColourMixer.Location = new System.Drawing.Point(257, 343);
+            this.kbtnColourMixer.Location = new System.Drawing.Point(257, 374);
             this.kbtnColourMixer.Name = "kbtnColourMixer";
             this.kbtnColourMixer.Size = new System.Drawing.Size(218, 25);
             this.kbtnColourMixer.TabIndex = 9;
@@ -1049,14 +1060,14 @@
             this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnBackwardDiagonal);
             this.kryptonCheckSet1.CheckedButton = this.kcbtnForwardDiagonal;
             // 
-            // kryptonButton10
+            // kryptonButton11
             // 
-            this.kryptonButton10.Location = new System.Drawing.Point(14, 498);
-            this.kryptonButton10.Name = "kryptonButton10";
-            this.kryptonButton10.Size = new System.Drawing.Size(218, 25);
-            this.kryptonButton10.TabIndex = 30;
-            this.kryptonButton10.Values.Text = "Global Options";
-            this.kryptonButton10.Click += new System.EventHandler(this.kryptonButton10_Click);
+            this.kryptonButton11.Location = new System.Drawing.Point(257, 346);
+            this.kryptonButton11.Name = "kryptonButton11";
+            this.kryptonButton11.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton11.TabIndex = 31;
+            this.kryptonButton11.Values.Text = "Convert Colour (Hex to RGB)";
+            this.kryptonButton11.Click += new System.EventHandler(this.kryptonButton11_Click);
             // 
             // Form1
             // 
@@ -1194,6 +1205,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton9;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox kryptonPromptTextBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton10;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton11;
     }
 }
 

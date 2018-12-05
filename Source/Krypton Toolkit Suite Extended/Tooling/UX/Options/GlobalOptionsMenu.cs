@@ -875,6 +875,7 @@ namespace Core.UX.Options
             this.kcmbPaletteTheme.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbPaletteTheme.TabIndex = 5;
             this.kcmbPaletteTheme.SelectedIndexChanged += new System.EventHandler(this.kcmbPaletteTheme_SelectedIndexChanged);
+            this.kcmbPaletteTheme.TextChanged += new System.EventHandler(this.kcmbPaletteTheme_TextChanged);
             // 
             // kryptonLabel11
             // 
@@ -1094,7 +1095,7 @@ namespace Core.UX.Options
         {
             _palette.Import();
 
-            _palette.GetFilePath();
+            ktxtCustomPath.Text = _palette.GetCustomisedKryptonPaletteFilePath();
 
             ThemeManager.SetCustomTheme(_manager, _palette, ktxtCustomPath.Text);
         }
@@ -1157,10 +1158,15 @@ namespace Core.UX.Options
             }
             else if (kcmbPaletteTheme.Text == "Custom")
             {
-                //EnableCustomThemeControls(true);
+                ThemeManager.EnableCustomThemeControls(klblCustomTheme, ktxtCustomPath, kbtnImportPalette, true);
 
                 ThemeManager.SwitchTheme(PaletteModeManager.Custom, _manager);
             }
+        }
+
+        private void kcmbPaletteTheme_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

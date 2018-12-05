@@ -358,7 +358,7 @@
             // 
             // kPalette
             // 
-            this.kPalette.FilePath = null;
+            this.kPalette.CustomisedKryptonPaletteFilePath = null;
             // 
             // PaletteViewer
             // 

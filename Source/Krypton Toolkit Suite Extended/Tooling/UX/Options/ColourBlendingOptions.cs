@@ -168,6 +168,8 @@ namespace Core.UX.Options
             this.kbtnResetValues.Name = "kbtnResetValues";
             this.kbtnResetValues.Size = new System.Drawing.Size(144, 30);
             this.kbtnResetValues.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnResetValues.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnResetValues.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnResetValues.TabIndex = 1;
             this.kbtnResetValues.Values.Text = "Re&set Values";
             this.kbtnResetValues.Click += new System.EventHandler(this.kbtnResetValues_Click);
@@ -180,6 +182,8 @@ namespace Core.UX.Options
             this.kbtnOk.Name = "kbtnOk";
             this.kbtnOk.Size = new System.Drawing.Size(90, 30);
             this.kbtnOk.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnOk.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnOk.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnOk.TabIndex = 2;
             this.kbtnOk.Values.Text = "&Ok";
             // 
@@ -191,6 +195,8 @@ namespace Core.UX.Options
             this.kbtnCancel.Name = "kbtnCancel";
             this.kbtnCancel.Size = new System.Drawing.Size(90, 30);
             this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnCancel.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnCancel.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnCancel.TabIndex = 3;
             this.kbtnCancel.Values.Text = "Ca&ncel";
             // 
@@ -203,6 +209,8 @@ namespace Core.UX.Options
             this.kbtnApply.Name = "kbtnApply";
             this.kbtnApply.Size = new System.Drawing.Size(90, 30);
             this.kbtnApply.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnApply.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnApply.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnApply.TabIndex = 0;
             this.kbtnApply.Values.Text = "&Apply";
             // 
@@ -236,7 +244,7 @@ namespace Core.UX.Options
             this.kryptonPage1,
             this.kryptonPage2,
             this.kryptonPage3});
-            this.kryptonDockableNavigator1.SelectedIndex = 2;
+            this.kryptonDockableNavigator1.SelectedIndex = 1;
             this.kryptonDockableNavigator1.Size = new System.Drawing.Size(640, 444);
             this.kryptonDockableNavigator1.TabIndex = 35;
             this.kryptonDockableNavigator1.Text = "kryptonDockableNavigator1";
@@ -288,6 +296,8 @@ namespace Core.UX.Options
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(204, 26);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel1.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel1.TabIndex = 3;
             this.kryptonLabel1.Values.Text = "Darkest Colour Intensity:";
             // 
@@ -297,6 +307,8 @@ namespace Core.UX.Options
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(199, 26);
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel2.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel2.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel2.TabIndex = 4;
             this.kryptonLabel2.Values.Text = "Middle Colour Intensity:";
             // 
@@ -306,6 +318,8 @@ namespace Core.UX.Options
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(184, 26);
             this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel3.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel3.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel3.TabIndex = 5;
             this.kryptonLabel3.Values.Text = "Light Colour Intensity:";
             // 
@@ -317,6 +331,8 @@ namespace Core.UX.Options
             this.kcbBaseColour.Name = "kcbBaseColour";
             this.kcbBaseColour.Size = new System.Drawing.Size(199, 30);
             this.kcbBaseColour.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbBaseColour.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kcbBaseColour.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kcbBaseColour.TabIndex = 32;
             this.kcbBaseColour.Values.Image = global::Core.Properties.Resources.Colour_Wheel_16_x_16;
             this.kcbBaseColour.Values.Text = "&Choose a Base Colour";
@@ -327,6 +343,8 @@ namespace Core.UX.Options
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(207, 26);
             this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel4.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel4.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel4.TabIndex = 6;
             this.kryptonLabel4.Values.Text = "Lightest Colour Intensity:";
             // 
@@ -416,6 +434,8 @@ namespace Core.UX.Options
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.Size = new System.Drawing.Size(26, 26);
             this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel5.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel5.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel5.TabIndex = 11;
             this.kryptonLabel5.Values.Text = "%";
             // 
@@ -425,6 +445,8 @@ namespace Core.UX.Options
             this.klblLightestColourIntensityValueOutput.Name = "klblLightestColourIntensityValueOutput";
             this.klblLightestColourIntensityValueOutput.Size = new System.Drawing.Size(98, 26);
             this.klblLightestColourIntensityValueOutput.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblLightestColourIntensityValueOutput.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.klblLightestColourIntensityValueOutput.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.klblLightestColourIntensityValueOutput.TabIndex = 26;
             this.klblLightestColourIntensityValueOutput.Values.Text = "Output: {0}";
             // 
@@ -434,6 +456,8 @@ namespace Core.UX.Options
             this.kryptonLabel6.Name = "kryptonLabel6";
             this.kryptonLabel6.Size = new System.Drawing.Size(26, 26);
             this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel6.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel6.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel6.TabIndex = 12;
             this.kryptonLabel6.Values.Text = "%";
             // 
@@ -443,6 +467,8 @@ namespace Core.UX.Options
             this.klblLightColourIntensityValueOutput.Name = "klblLightColourIntensityValueOutput";
             this.klblLightColourIntensityValueOutput.Size = new System.Drawing.Size(98, 26);
             this.klblLightColourIntensityValueOutput.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblLightColourIntensityValueOutput.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.klblLightColourIntensityValueOutput.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.klblLightColourIntensityValueOutput.TabIndex = 25;
             this.klblLightColourIntensityValueOutput.Values.Text = "Output: {0}";
             // 
@@ -452,6 +478,8 @@ namespace Core.UX.Options
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.Size = new System.Drawing.Size(26, 26);
             this.kryptonLabel7.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel7.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel7.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel7.TabIndex = 13;
             this.kryptonLabel7.Values.Text = "%";
             // 
@@ -461,6 +489,8 @@ namespace Core.UX.Options
             this.klblMiddleColourIntensityValueOutput.Name = "klblMiddleColourIntensityValueOutput";
             this.klblMiddleColourIntensityValueOutput.Size = new System.Drawing.Size(98, 26);
             this.klblMiddleColourIntensityValueOutput.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblMiddleColourIntensityValueOutput.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.klblMiddleColourIntensityValueOutput.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.klblMiddleColourIntensityValueOutput.TabIndex = 24;
             this.klblMiddleColourIntensityValueOutput.Values.Text = "Output: {0}";
             // 
@@ -470,6 +500,8 @@ namespace Core.UX.Options
             this.kryptonLabel8.Name = "kryptonLabel8";
             this.kryptonLabel8.Size = new System.Drawing.Size(26, 26);
             this.kryptonLabel8.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel8.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel8.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel8.TabIndex = 14;
             this.kryptonLabel8.Values.Text = "%";
             // 
@@ -479,6 +511,8 @@ namespace Core.UX.Options
             this.klblDarkColourIntensityValueOutput.Name = "klblDarkColourIntensityValueOutput";
             this.klblDarkColourIntensityValueOutput.Size = new System.Drawing.Size(98, 26);
             this.klblDarkColourIntensityValueOutput.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblDarkColourIntensityValueOutput.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.klblDarkColourIntensityValueOutput.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.klblDarkColourIntensityValueOutput.TabIndex = 23;
             this.klblDarkColourIntensityValueOutput.Values.Text = "Output: {0}";
             // 
@@ -490,6 +524,8 @@ namespace Core.UX.Options
             this.kbtnDarkColourIntensityValueMinus.Name = "kbtnDarkColourIntensityValueMinus";
             this.kbtnDarkColourIntensityValueMinus.Size = new System.Drawing.Size(18, 30);
             this.kbtnDarkColourIntensityValueMinus.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnDarkColourIntensityValueMinus.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnDarkColourIntensityValueMinus.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnDarkColourIntensityValueMinus.TabIndex = 15;
             this.kbtnDarkColourIntensityValueMinus.Values.Text = "-";
             this.kbtnDarkColourIntensityValueMinus.Click += new System.EventHandler(this.kbtnDarkColourIntensityValueMinus_Click);
@@ -502,6 +538,8 @@ namespace Core.UX.Options
             this.kbtnLightestColourIntensityValuePlus.Name = "kbtnLightestColourIntensityValuePlus";
             this.kbtnLightestColourIntensityValuePlus.Size = new System.Drawing.Size(23, 30);
             this.kbtnLightestColourIntensityValuePlus.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnLightestColourIntensityValuePlus.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnLightestColourIntensityValuePlus.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnLightestColourIntensityValuePlus.TabIndex = 22;
             this.kbtnLightestColourIntensityValuePlus.Values.Text = "+";
             this.kbtnLightestColourIntensityValuePlus.Click += new System.EventHandler(this.kbtnLightestColourIntensityValuePlus_Click);
@@ -514,6 +552,8 @@ namespace Core.UX.Options
             this.kbnDarkestColourIntensityValuePlus.Name = "kbnDarkestColourIntensityValuePlus";
             this.kbnDarkestColourIntensityValuePlus.Size = new System.Drawing.Size(23, 30);
             this.kbnDarkestColourIntensityValuePlus.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbnDarkestColourIntensityValuePlus.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbnDarkestColourIntensityValuePlus.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbnDarkestColourIntensityValuePlus.TabIndex = 16;
             this.kbnDarkestColourIntensityValuePlus.Values.Text = "+";
             this.kbnDarkestColourIntensityValuePlus.Click += new System.EventHandler(this.kbnDarkestColourIntensityValuePlus_Click);
@@ -526,6 +566,8 @@ namespace Core.UX.Options
             this.kbtnLightestColourIntensityValueMinus.Name = "kbtnLightestColourIntensityValueMinus";
             this.kbtnLightestColourIntensityValueMinus.Size = new System.Drawing.Size(18, 30);
             this.kbtnLightestColourIntensityValueMinus.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnLightestColourIntensityValueMinus.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnLightestColourIntensityValueMinus.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnLightestColourIntensityValueMinus.TabIndex = 21;
             this.kbtnLightestColourIntensityValueMinus.Values.Text = "-";
             this.kbtnLightestColourIntensityValueMinus.Click += new System.EventHandler(this.kbtnLightestColourIntensityValueMinus_Click);
@@ -538,6 +580,8 @@ namespace Core.UX.Options
             this.kbtnMiddleColourIntensityValueMinus.Name = "kbtnMiddleColourIntensityValueMinus";
             this.kbtnMiddleColourIntensityValueMinus.Size = new System.Drawing.Size(18, 30);
             this.kbtnMiddleColourIntensityValueMinus.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnMiddleColourIntensityValueMinus.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnMiddleColourIntensityValueMinus.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnMiddleColourIntensityValueMinus.TabIndex = 17;
             this.kbtnMiddleColourIntensityValueMinus.Values.Text = "-";
             this.kbtnMiddleColourIntensityValueMinus.Click += new System.EventHandler(this.kbtnMiddleColourIntensityValueMinus_Click);
@@ -550,6 +594,8 @@ namespace Core.UX.Options
             this.kbtLightColourIntensityValuePlus.Name = "kbtLightColourIntensityValuePlus";
             this.kbtLightColourIntensityValuePlus.Size = new System.Drawing.Size(23, 30);
             this.kbtLightColourIntensityValuePlus.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtLightColourIntensityValuePlus.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtLightColourIntensityValuePlus.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtLightColourIntensityValuePlus.TabIndex = 20;
             this.kbtLightColourIntensityValuePlus.Values.Text = "+";
             this.kbtLightColourIntensityValuePlus.Click += new System.EventHandler(this.kbtLightColourIntensityValuePlus_Click);
@@ -562,6 +608,8 @@ namespace Core.UX.Options
             this.kbtnMiddleColourIntensityValuePlus.Name = "kbtnMiddleColourIntensityValuePlus";
             this.kbtnMiddleColourIntensityValuePlus.Size = new System.Drawing.Size(23, 30);
             this.kbtnMiddleColourIntensityValuePlus.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnMiddleColourIntensityValuePlus.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnMiddleColourIntensityValuePlus.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnMiddleColourIntensityValuePlus.TabIndex = 18;
             this.kbtnMiddleColourIntensityValuePlus.Values.Text = "+";
             this.kbtnMiddleColourIntensityValuePlus.Click += new System.EventHandler(this.kbtnMiddleColourIntensityValuePlus_Click);
@@ -574,6 +622,8 @@ namespace Core.UX.Options
             this.kbtnLightColourIntensityValueMinus.Name = "kbtnLightColourIntensityValueMinus";
             this.kbtnLightColourIntensityValueMinus.Size = new System.Drawing.Size(18, 30);
             this.kbtnLightColourIntensityValueMinus.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnLightColourIntensityValueMinus.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnLightColourIntensityValueMinus.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnLightColourIntensityValueMinus.TabIndex = 19;
             this.kbtnLightColourIntensityValueMinus.Values.Text = "-";
             this.kbtnLightColourIntensityValueMinus.Click += new System.EventHandler(this.kbtnLightColourIntensityValueMinus_Click);
@@ -604,6 +654,8 @@ namespace Core.UX.Options
             this.kchkConvertToRGBValue.Name = "kchkConvertToRGBValue";
             this.kchkConvertToRGBValue.Size = new System.Drawing.Size(286, 26);
             this.kchkConvertToRGBValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kchkConvertToRGBValue.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kchkConvertToRGBValue.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kchkConvertToRGBValue.TabIndex = 42;
             this.kchkConvertToRGBValue.Values.Text = "Automatically Convert to &RGB Value";
             // 
@@ -613,6 +665,8 @@ namespace Core.UX.Options
             this.kcbConvertToHexadecimalValue.Name = "kcbConvertToHexadecimalValue";
             this.kcbConvertToHexadecimalValue.Size = new System.Drawing.Size(348, 26);
             this.kcbConvertToHexadecimalValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbConvertToHexadecimalValue.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kcbConvertToHexadecimalValue.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kcbConvertToHexadecimalValue.TabIndex = 41;
             this.kcbConvertToHexadecimalValue.Values.Text = "Automatically Convert to &Hexadecimal Value";
             // 
@@ -622,6 +676,8 @@ namespace Core.UX.Options
             this.kchkGenerateAlphaValue.Name = "kchkGenerateAlphaValue";
             this.kchkGenerateAlphaValue.Size = new System.Drawing.Size(205, 26);
             this.kchkGenerateAlphaValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kchkGenerateAlphaValue.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kchkGenerateAlphaValue.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kchkGenerateAlphaValue.TabIndex = 40;
             this.kchkGenerateAlphaValue.Values.Text = "&Generate an Alpha Value";
             // 
@@ -662,6 +718,8 @@ namespace Core.UX.Options
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.Size = new System.Drawing.Size(115, 26);
             this.kryptonLabel9.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel9.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel9.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel9.TabIndex = 36;
             this.kryptonLabel9.Values.Text = "Display Type:";
             // 
@@ -671,6 +729,8 @@ namespace Core.UX.Options
             this.kchkAutomaticallyUpdateValues.Name = "kchkAutomaticallyUpdateValues";
             this.kchkAutomaticallyUpdateValues.Size = new System.Drawing.Size(234, 26);
             this.kchkAutomaticallyUpdateValues.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kchkAutomaticallyUpdateValues.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kchkAutomaticallyUpdateValues.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kchkAutomaticallyUpdateValues.TabIndex = 35;
             this.kchkAutomaticallyUpdateValues.Values.Text = "&Automatically Update Values";
             // 
@@ -699,6 +759,8 @@ namespace Core.UX.Options
             this.kbtnRestore.Name = "kbtnRestore";
             this.kbtnRestore.Size = new System.Drawing.Size(133, 30);
             this.kbtnRestore.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnRestore.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnRestore.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnRestore.TabIndex = 61;
             this.kbtnRestore.Values.Text = "&Restore File Path";
             this.kbtnRestore.Click += new System.EventHandler(this.kbtnRestore_Click);
@@ -711,6 +773,8 @@ namespace Core.UX.Options
             this.kbtnBrowse.Name = "kbtnBrowse";
             this.kbtnBrowse.Size = new System.Drawing.Size(23, 30);
             this.kbtnBrowse.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnBrowse.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnBrowse.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnBrowse.TabIndex = 60;
             this.kbtnBrowse.Values.Text = "...";
             this.kbtnBrowse.Click += new System.EventHandler(this.kbtnBrowse_Click);
@@ -730,6 +794,8 @@ namespace Core.UX.Options
             this.kryptonLabel10.Name = "kryptonLabel10";
             this.kryptonLabel10.Size = new System.Drawing.Size(152, 26);
             this.kryptonLabel10.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel10.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel10.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel10.TabIndex = 58;
             this.kryptonLabel10.Values.Text = "Export Colours to:";
             // 

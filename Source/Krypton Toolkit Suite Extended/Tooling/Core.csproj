@@ -69,6 +69,7 @@
     <Compile Include="Classes\Colours\HSLColour.cs" />
     <Compile Include="Classes\Colours\InterleavedBitmapPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\JascPaletteSerialiser.cs" />
+    <Compile Include="Classes\Colours\KryptonPaletteDebugManagement.cs" />
     <Compile Include="Classes\Colours\PaintNetPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\PaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\RawPaletteSerialiser.cs" />
@@ -127,6 +128,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Enumerations\Enumerations.cs" />
+    <Compile Include="Interfaces\Colours\IColourPalette.cs" />
     <Compile Include="Interfaces\IAbout.cs" />
     <Compile Include="Interfaces\IColourEditor.cs" />
     <Compile Include="Interfaces\IPaletteSerialiser.cs" />
@@ -246,6 +248,12 @@
     <Compile Include="UX\Colours\DefineIndividualColoursDialog.Designer.cs">
       <DependentUpon>DefineIndividualColoursDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="UX\Colours\HexadecimalToRGBConverter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\Debugging\ColourSettingsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UX\Options\ColourBlendingOptions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,6 +362,12 @@
     <EmbeddedResource Include="UX\Colours\DefineIndividualColoursDialog.resx">
       <DependentUpon>DefineIndividualColoursDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UX\Colours\HexadecimalToRGBConverter.resx">
+      <DependentUpon>HexadecimalToRGBConverter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Debugging\ColourSettingsViewer.resx">
+      <DependentUpon>ColourSettingsViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UX\Options\ColourBlendingOptions.resx">
       <DependentUpon>ColourBlendingOptions.cs</DependentUpon>
     </EmbeddedResource>
@@ -423,7 +437,7 @@
       <Version>1.0.5</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.700</Version>
+      <Version>5.470.701</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>

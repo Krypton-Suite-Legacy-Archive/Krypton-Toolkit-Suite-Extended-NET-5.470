@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using Core.Classes.Other;
 using Core.UX;
 using Core.UX.Options;
+using Core.UX.Colours;
 
 namespace Playground
 {
@@ -370,6 +371,13 @@ namespace Playground
             GlobalOptionsMenu globalOptionsMenu = new GlobalOptionsMenu();
 
             globalOptionsMenu.Show();
+        }
+
+        private void kryptonButton11_Click(object sender, EventArgs e)
+        {
+            HexadecimalToRGBConverter hexadecimalToRGBConverter = new HexadecimalToRGBConverter();
+
+            hexadecimalToRGBConverter.Show();
         }
     }
 }

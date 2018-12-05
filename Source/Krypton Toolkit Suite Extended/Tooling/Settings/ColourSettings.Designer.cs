@@ -341,5 +341,16 @@ namespace Core.Settings {
                 this["LinkFocusedColour"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color RibbonTabTextColour {
+            get {
+                return ((global::System.Drawing.Color)(this["RibbonTabTextColour"]));
+            }
+            set {
+                this["RibbonTabTextColour"] = value;
+            }
+        }
     }
 }

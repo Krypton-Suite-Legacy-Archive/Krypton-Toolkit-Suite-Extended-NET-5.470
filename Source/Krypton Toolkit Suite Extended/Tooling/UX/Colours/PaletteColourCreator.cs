@@ -1,11 +1,12 @@
 ﻿using Classes.Colours;
 using ComponentFactory.Krypton.Toolkit;
-using System;
-using System.Drawing;
 using Core.Classes.Colours.Extended;
 using Core.Classes.Other;
 using Core.Settings.Classes;
+using Core.UX.Debugging;
 using Core.UX.Options;
+using System;
+using System.Drawing;
 
 namespace Core.UX
 {
@@ -127,6 +128,8 @@ namespace Core.UX
 
         private void PaletteColourCreator_Load(object sender, EventArgs e)
         {
+            _colourSettingsManager.ResetSettings();
+
             if (PaletteColourSelector)
             {
                 kbtnDefineIndividualColours.Visible = true;
@@ -135,7 +138,7 @@ namespace Core.UX
 
                 kbtnOptions.Location = new Point(609, 7);
 
-                //kchkAutomateColourSwatchValues.Location = new Point(609, 9);
+                kbtnDebugConsole.Location = new Point(684, 7);
             }
             else
             {
@@ -145,7 +148,7 @@ namespace Core.UX
 
                 kbtnOptions.Location = new Point(409, 7);
 
-                //kchkAutomateColourSwatchValues.Location = new Point(409, 9);
+                kbtnDebugConsole.Location = new Point(484, 7);
             }
 
             tmrAutomateColourSwatchValues.Enabled = _globalBooleanSettingsManager.GetAutomaticallyUpdateColours();
@@ -228,6 +231,8 @@ namespace Core.UX
             //ColourUtilities.GenerateColourShades(pbxBaseColour.BackColor, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour);
 
             ColourUtilities.GenerateColourShades(cpbBaseColourPreview.BackColor, cpbDarkestColourPreview, cpbMiddleColourPreview, cpbLightColourPreview, cpbLightestColourPreview);
+
+            kbtnExport.Enabled = true;
         }
 
         private void kbtnExport_Click(object sender, EventArgs e)
@@ -430,6 +435,13 @@ namespace Core.UX
             knumGreenChannelValue.Value = kcbBaseColour.SelectedColor.G;
 
             knumBlueChannelValue.Value = kcbBaseColour.SelectedColor.B;
+        }
+
+        private void kbtnDebugConsole_Click(object sender, EventArgs e)
+        {
+            ColourSettingsViewer colourSettingsViewer = new ColourSettingsViewer();
+
+            colourSettingsViewer.Show();
         }
 
         private void kbtnSaveValues_Click(object sender, EventArgs e)

@@ -539,6 +539,24 @@ namespace Core.Settings.Classes
         {
             return _colourSettings.StatusTextColour;
         }
+
+        /// <summary>
+        /// Sets the RibbonTabTextColour to the value of ribbonTabTextColour.
+        /// </summary>
+        /// <param name="ribbonTabTextColour">The value of ribbonTabTextColour.</param>
+        public void SetRibbonTabTextColour(Color ribbonTabTextColour)
+        {
+            _colourSettings.RibbonTabTextColour = ribbonTabTextColour;
+        }
+
+        /// <summary>
+        /// Gets the RibbonTabTextColour value.
+        /// </summary>
+        /// <returns>The value of ribbonTabTextColour.</returns>
+        public Color GetRibbonTabTextColour()
+        {
+            return _colourSettings.RibbonTabTextColour;
+        }
         #endregion
 
         #region Methods
@@ -655,6 +673,8 @@ namespace Core.Settings.Classes
             SetCustomTextColourFive(Color.MintCream);
 
             SetStatusTextColour(Color.Black);
+
+            SetRibbonTabTextColour(Color.Black);
         }
         #endregion
     }

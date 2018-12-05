@@ -93,7 +93,7 @@
             // 
             // kPal
             // 
-            this.kPal.FilePath = "";
+            this.kPal.CustomisedKryptonPaletteFilePath = "";
             // 
             // kryptonPanel1
             // 

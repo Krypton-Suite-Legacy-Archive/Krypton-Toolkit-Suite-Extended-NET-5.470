@@ -1804,7 +1804,7 @@
             // 
             // palette
             // 
-            this.palette.FilePath = null;
+            this.palette.CustomisedKryptonPaletteFilePath = null;
             // 
             // panel1
             // 

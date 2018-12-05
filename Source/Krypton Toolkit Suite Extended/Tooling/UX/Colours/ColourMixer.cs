@@ -1,10 +1,10 @@
 ﻿using Classes.Colours;
 using ComponentFactory.Krypton.Toolkit;
-using System;
-using System.Drawing;
 using Core.Classes.Other;
 using Core.Settings.Classes;
 using Core.UX.Options;
+using System;
+using System.Drawing;
 
 namespace Core.UX
 {
@@ -396,9 +396,24 @@ namespace Core.UX
             colourBlendingOptions.Show();
         }
 
+        private void kbtnConvertToRGB_Click(object sender, EventArgs e)
+        {
+            ConversionMethods conversionMethods = new ConversionMethods();
+
+            cpbColourPreview.BackColor = conversionMethods.ConvertHexadecimalToRGB($"#{ ktxtHexValue.Text }");
+        }
+
+        private void ktxtHexValue_TextChanged(object sender, EventArgs e)
+        {
+            if (ktxtHexValue.Text.Length == 6)
+            {
+                kbtnConvertToRGB.Enabled = true;
+            }
+        }
+
         private void kbtnGenerateColour_Click(object sender, EventArgs e)
         {
-           // pbColourPreview.BackColor = _colourUtility.GenerateRandomColour(kchkGenerateAlphaValue.Checked);
+            // pbColourPreview.BackColor = _colourUtility.GenerateRandomColour(kchkGenerateAlphaValue.Checked);
 
             //int a = randomColour.Next(_max), r = randomColour.Next(_max), g = randomColour.Next(_max), b = randomColour.Next(_max); 
 

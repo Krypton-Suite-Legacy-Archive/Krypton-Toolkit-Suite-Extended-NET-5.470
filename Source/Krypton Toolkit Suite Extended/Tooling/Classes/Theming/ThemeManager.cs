@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using Core.Settings.Classes;
+using System;
 using System.Collections;
 using System.Windows.Forms;
 
@@ -192,6 +193,15 @@ namespace Core.Classes.Theming
             palette.Import(paletteFileName);
 
             paletteThemeSettingsManager.SetCustomThemeFilePath(paletteFileName);
+        }
+
+        internal static void EnableCustomThemeControls(KryptonLabel CustomTheme, KryptonTextBox CustomPath, KryptonButton ImportPalette, bool enabled)
+        {
+            CustomTheme.Enabled = enabled;
+
+            CustomPath.Enabled = enabled;
+
+            ImportPalette.Enabled = enabled;
         }
         #endregion
     }
