@@ -173,6 +173,36 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>ColourStringSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Colours\Settings\BasicPaletteColours.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>BasicPaletteColours.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Colours\Settings\CustomPaletteColours.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>CustomPaletteColours.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Colours\Settings\CustomPaletteTextColours.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>CustomPaletteTextColours.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Colours\Settings\LinkTextPaletteColours.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>LinkTextPaletteColours.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Colours\Settings\MiscellaneousPaletteColours.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>MiscellaneousPaletteColours.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Colours\Settings\TextPaletteColours.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>TextPaletteColours.settings</DependentUpon>
+    </Compile>
     <Compile Include="Settings\GlobalBooleanSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -313,6 +343,30 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>ColourStringSettings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Settings\Colours\Settings\BasicPaletteColours.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>BasicPaletteColours.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Colours\Settings\CustomPaletteColours.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>CustomPaletteColours.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Colours\Settings\CustomPaletteTextColours.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>CustomPaletteTextColours.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Colours\Settings\LinkTextPaletteColours.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>LinkTextPaletteColours.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Colours\Settings\MiscellaneousPaletteColours.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MiscellaneousPaletteColours.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Colours\Settings\TextPaletteColours.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>TextPaletteColours.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Settings\GlobalBooleanSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>GlobalBooleanSettings.Designer.cs</LastGenOutput>
@@ -446,6 +500,8 @@
   <ItemGroup>
     <None Include="Resources\Colour_Wheel_16_x_16.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Settings\Colours\Classes\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
