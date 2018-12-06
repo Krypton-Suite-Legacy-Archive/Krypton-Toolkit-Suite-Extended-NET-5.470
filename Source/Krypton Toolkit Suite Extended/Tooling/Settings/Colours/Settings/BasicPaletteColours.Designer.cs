@@ -47,6 +47,17 @@ namespace Core.Settings.Colours.Settings {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color MediumColour {
+            get {
+                return ((global::System.Drawing.Color)(this["MediumColour"]));
+            }
+            set {
+                this["MediumColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.Drawing.Color LightColour {
             get {
                 return ((global::System.Drawing.Color)(this["LightColour"]));

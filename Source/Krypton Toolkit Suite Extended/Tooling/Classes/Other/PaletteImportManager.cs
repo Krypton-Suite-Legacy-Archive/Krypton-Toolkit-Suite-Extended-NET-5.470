@@ -54,7 +54,7 @@ namespace Core.Classes.Other
 
                 _colourSettingsManager.SetDisabledTextColour(palette.ButtonStyles.ButtonCommon.StateDisabled.Content.LongText.Color1);
 
-                _colourSettingsManager.SetDisabledColour(palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1);
+                _colourSettingsManager.SetDisabledControlColour(palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1);
 
                 _colourSettingsManager.SetLinkNormalColour(palette.LabelStyles.LabelNormalControl.OverrideNotVisited.LongText.Color1);
 
@@ -68,7 +68,7 @@ namespace Core.Classes.Other
 
                 _colourSettingsManager.SetMenuTextColour(palette.ToolMenuStatus.Menu.MenuItemText);
 
-                _colourSettingsManager.SetStatusTextColour(palette.ToolMenuStatus.StatusStrip.StatusStripText);
+                _colourSettingsManager.SetStatusStripTextColour(palette.ToolMenuStatus.StatusStrip.StatusStripText);
 
                 _colourSettingsManager.SaveColourSettings();
 
@@ -114,7 +114,7 @@ namespace Core.Classes.Other
 
                 _colourSettingsManager.SetDisabledTextColour(_palette.ButtonStyles.ButtonCommon.StateDisabled.Content.LongText.Color1);
 
-                _colourSettingsManager.SetDisabledColour(_palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1);
+                _colourSettingsManager.SetDisabledControlColour(_palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1);
 
                 _colourSettingsManager.SetLinkNormalColour(_palette.LabelStyles.LabelNormalControl.OverrideNotVisited.LongText.Color1);
 
@@ -126,7 +126,7 @@ namespace Core.Classes.Other
 
                 _colourSettingsManager.SetMenuTextColour(_palette.ToolMenuStatus.Menu.MenuItemText);
 
-                _colourSettingsManager.SetStatusTextColour(_palette.ToolMenuStatus.StatusStrip.StatusStripText);
+                _colourSettingsManager.SetStatusStripTextColour(_palette.ToolMenuStatus.StatusStrip.StatusStripText);
 
                 _colourSettingsManager.SaveColourSettings();
 

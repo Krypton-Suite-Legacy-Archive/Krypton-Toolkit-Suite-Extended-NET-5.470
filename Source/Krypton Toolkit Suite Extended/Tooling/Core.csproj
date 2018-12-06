@@ -73,6 +73,7 @@
     <Compile Include="Classes\Colours\PaintNetPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\PaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\RawPaletteSerialiser.cs" />
+    <Compile Include="Classes\Colours\SettingsManager.cs" />
     <Compile Include="Classes\Colours\WIN32.cs" />
     <Compile Include="Classes\Options\Theming\ThemingLogic.cs" />
     <Compile Include="Classes\Colours\ColourControlManager.cs" />
@@ -150,6 +151,7 @@
     <Compile Include="Classes\Colours\CombineColourSettings.cs" />
     <Compile Include="Settings\Classes\ColourStringSettingsManager.cs" />
     <Compile Include="Settings\Classes\GlobalBooleanSettingsManager.cs" />
+    <Compile Include="Settings\Classes\GlobalSettingsManager.cs" />
     <Compile Include="Settings\Classes\GlobalStringSettingsManager.cs" />
     <Compile Include="Settings\Classes\PaletteThemeSettingsManager.cs" />
     <Compile Include="Settings\Classes\PaletteTypefaceSettingsManager.cs" />
@@ -173,6 +175,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>ColourStringSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Colours\Classes\BasicPaletteColourManager.cs" />
+    <Compile Include="Settings\Colours\Classes\CustomPaletteColourManager.cs" />
+    <Compile Include="Settings\Colours\Classes\CustomPaletteTextColourManager.cs" />
+    <Compile Include="Settings\Colours\Classes\LinkTextPaletteColourManager.cs" />
+    <Compile Include="Settings\Colours\Classes\MiscellaneousPaletteColourManager.cs" />
+    <Compile Include="Settings\Colours\Classes\TextPaletteColourManager.cs" />
     <Compile Include="Settings\Colours\Settings\BasicPaletteColours.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -500,8 +508,6 @@
   <ItemGroup>
     <None Include="Resources\Colour_Wheel_16_x_16.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Settings\Colours\Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

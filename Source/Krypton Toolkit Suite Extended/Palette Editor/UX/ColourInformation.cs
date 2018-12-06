@@ -50,7 +50,7 @@ namespace PaletteEditor.UX
 
             _colourSettingsArray.Add($"Border Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetBorderColour()) }");
 
-            _colourSettingsArray.Add($"Disabled Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetDisabledColour()) }");
+            _colourSettingsArray.Add($"Disabled Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetDisabledControlColour()) }");
 
             _colourSettingsArray.Add($"Alternative Normal Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetAlternativeNormalTextColour()) }");
 
@@ -92,7 +92,7 @@ namespace PaletteEditor.UX
 
             _colourSettingsArray.Add($"Menu Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetMenuTextColour()) }");
 
-            _colourSettingsArray.Add($"Status Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetStatusTextColour()) }");
+            _colourSettingsArray.Add($"Status Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetStatusStripTextColour()) }");
         }
 
         private void AddColourDetails(string colourDescription, string colour)

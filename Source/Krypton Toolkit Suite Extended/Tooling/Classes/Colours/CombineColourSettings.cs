@@ -214,7 +214,7 @@ namespace Classes.Colours
 
                     _colourSettingsManager.SetPressedTextColour(PressedTextColourPreview);
 
-                    _colourSettingsManager.SetDisabledColour(DisabledColourPreview);
+                    _colourSettingsManager.SetDisabledControlColour(DisabledColourPreview);
 
                     _colourSettingsManager.SetLinkNormalColour(LinkNormalColourPreview);
 
@@ -244,7 +244,7 @@ namespace Classes.Colours
 
                     _colourSettingsManager.SetMenuTextColour(MenuTextColour);
 
-                    _colourSettingsManager.SetStatusTextColour(StatusTextColour);
+                    _colourSettingsManager.SetStatusStripTextColour(StatusTextColour);
 
                     _colourSettingsManager.SaveColourSettings(useConfirmDialog);
                 }
@@ -372,7 +372,7 @@ namespace Classes.Colours
 
             colourSettingsManager.SetPressedTextColour(pressedTextColourPreview);
 
-            colourSettingsManager.SetDisabledColour(disabledColourPreview);
+            colourSettingsManager.SetDisabledControlColour(disabledColourPreview);
 
             colourSettingsManager.SetLinkNormalColour(linkNormalColourPreview);
 
@@ -402,7 +402,7 @@ namespace Classes.Colours
 
             colourSettingsManager.SetMenuTextColour(menuTextColour);
 
-            colourSettingsManager.SetStatusTextColour(statusTextColour);
+            colourSettingsManager.SetStatusStripTextColour(statusTextColour);
 
             colourSettingsManager.SaveColourSettings();
         }

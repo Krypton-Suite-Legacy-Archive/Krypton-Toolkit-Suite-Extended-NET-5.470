@@ -181,21 +181,21 @@ namespace Core.Settings.Classes
         }
 
         /// <summary>
-        /// Sets the DisabledColour to the value of disabledColour.
+        /// Sets the DisabledControlColour to the value of disabledControlColour.
         /// </summary>
-        /// <param name="disabledColour">The value of disabledColour.</param>
-        public void SetDisabledColour(Color disabledColour)
+        /// <param name="disabledControlColour">The value of disabledControlColour.</param>
+        public void SetDisabledControlColour(Color disabledControlColour)
         {
-            _colourSettings.DisabledColour = disabledColour;
+            _colourSettings.DisabledControlColour = disabledControlColour;
         }
 
         /// <summary>
-        /// Gets the DisabledColour value.
+        /// Gets the DisabledControlColour value.
         /// </summary>
-        /// <returns>The value of disabledColour.</returns>
-        public Color GetDisabledColour()
+        /// <returns>The value of disabledControlColour.</returns>
+        public Color GetDisabledControlColour()
         {
-            return _colourSettings.DisabledColour;
+            return _colourSettings.DisabledControlColour;
         }
 
         /// <summary>
@@ -523,21 +523,21 @@ namespace Core.Settings.Classes
         }
 
         /// <summary>
-        /// Sets the StatusTextColour to the value of statusTextColour.
+        /// Sets the StatusStripTextColour to the value of statusStripTextColour.
         /// </summary>
-        /// <param name="statusTextColour">The value of statusTextColour.</param>
-        public void SetStatusTextColour(Color statusTextColour)
+        /// <param name="statusStripTextColour">The value of statusStripTextColour.</param>
+        public void SetStatusStripTextColour(Color statusStripTextColour)
         {
-            _colourSettings.StatusTextColour = statusTextColour;
+            _colourSettings.StatusStripTextColour = statusStripTextColour;
         }
 
         /// <summary>
-        /// Gets the StatusTextColour value.
+        /// Gets the StatusStripTextColour value.
         /// </summary>
-        /// <returns>The value of statusTextColour.</returns>
-        public Color GetStatusTextColour()
+        /// <returns>The value of statusStripTextColour.</returns>
+        public Color GetStatusStripTextColour()
         {
-            return _colourSettings.StatusTextColour;
+            return _colourSettings.StatusStripTextColour;
         }
 
         /// <summary>
@@ -640,7 +640,7 @@ namespace Core.Settings.Classes
 
             SetDisabledTextColour(Color.Gray);
 
-            SetDisabledColour(Color.Silver);
+            SetDisabledControlColour(Color.Silver);
 
             SetLinkNormalColour(Color.Blue);
 
@@ -672,9 +672,25 @@ namespace Core.Settings.Classes
 
             SetCustomTextColourFive(Color.MintCream);
 
-            SetStatusTextColour(Color.Black);
+            SetStatusStripTextColour(Color.Black);
 
             SetRibbonTabTextColour(Color.Black);
+        }
+        #endregion
+
+        #region Detection
+        public static bool AreColoursEmpty()
+        {
+            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+
+            if (colourSettingsManager.GetBaseColour() == Color.Empty || colourSettingsManager.GetDarkestColour() == Color.Empty || colourSettingsManager.GetMediumColour() == Color.Empty || colourSettingsManager.GetLightColour() == Color.Empty || colourSettingsManager.GetLightestColour() == Color.Empty || colourSettingsManager.GetCustomColourOne() == Color.Empty || colourSettingsManager.GetCustomColourTwo() == Color.Empty || colourSettingsManager.GetCustomColourThree() == Color.Empty || colourSettingsManager.GetCustomColourFour() == Color.Empty || colourSettingsManager.GetCustomColourFive() == Color.Empty || colourSettingsManager.GetCustomTextColourOne() == Color.Empty || colourSettingsManager.GetCustomTextColourTwo() == Color.Empty || colourSettingsManager.GetCustomTextColourThree() == Color.Empty || colourSettingsManager.GetCustomTextColourFour() == Color.Empty || colourSettingsManager.GetCustomTextColourFive() == Color.Empty || colourSettingsManager.GetLinkNormalColour() == Color.Empty || colourSettingsManager.GetLinkFocusedColour() == Color.Empty || colourSettingsManager.GetLinkHoverColour() == Color.Empty || colourSettingsManager.GetLinkNormalColour() == Color.Empty || colourSettingsManager.GetLinkVisitedColour() == Color.Empty || colourSettingsManager.GetBorderColour() == Color.Empty || colourSettingsManager.GetDisabledControlColour() == Color.Empty || colourSettingsManager.GetAlternativeNormalTextColour() == Color.Empty || colourSettingsManager.GetDisabledTextColour() == Color.Empty || colourSettingsManager.GetFocusedTextColour() == Color.Empty || colourSettingsManager.GetMenuTextColour() == Color.Empty || colourSettingsManager.GetNormalTextColour() == Color.Empty || colourSettingsManager.GetPressedTextColour() == Color.Empty || colourSettingsManager.GetRibbonTabTextColour() == Color.Empty || colourSettingsManager.GetStatusStripTextColour() == Color.Empty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         #endregion
     }

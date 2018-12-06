@@ -8,6 +8,9 @@
     <Setting Name="DarkestColour" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="MediumColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
     <Setting Name="LightColour" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>

@@ -41,7 +41,7 @@ namespace Core.Classes.Colours
 
                 hexValues.Items.Add($"Ribbon Tab Text Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetRibbonTabTextColour()) }");
 
-                hexValues.Items.Add($"Disabled Control Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetDisabledColour()) }");
+                hexValues.Items.Add($"Disabled Control Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetDisabledControlColour()) }");
 
                 hexValues.Items.Add($"Link Disabled Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetLinkDisabledColour()) }");
 
@@ -55,7 +55,7 @@ namespace Core.Classes.Colours
 
                 hexValues.Items.Add($"Menu Text Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetMenuTextColour()) }");
 
-                hexValues.Items.Add($"Status Strip Text Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetStatusTextColour()) }");
+                hexValues.Items.Add($"Status Strip Text Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetStatusStripTextColour()) }");
 
                 hexValues.Items.Add($"Custom Colour One Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetCustomColourOne()) }");
 
@@ -103,7 +103,7 @@ namespace Core.Classes.Colours
 
                 hexValues.Items.Add($"Ribbon Tab Text Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetRibbonTabTextColour()).ToUpper() }");
 
-                hexValues.Items.Add($"Disabled Control Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetDisabledColour()).ToUpper() }");
+                hexValues.Items.Add($"Disabled Control Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetDisabledControlColour()).ToUpper() }");
 
                 hexValues.Items.Add($"Link Disabled Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetLinkDisabledColour()).ToUpper() }");
 
@@ -117,7 +117,7 @@ namespace Core.Classes.Colours
 
                 hexValues.Items.Add($"Menu Text Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetMenuTextColour()).ToUpper() }");
 
-                hexValues.Items.Add($"Status Strip Text Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetStatusTextColour()).ToUpper() }");
+                hexValues.Items.Add($"Status Strip Text Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetStatusStripTextColour()).ToUpper() }");
 
                 hexValues.Items.Add($"Custom Colour One Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetCustomColourOne()).ToUpper() }");
 

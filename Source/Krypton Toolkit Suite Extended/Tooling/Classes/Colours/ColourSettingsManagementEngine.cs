@@ -71,7 +71,7 @@ namespace Classes.Colours
                     colourSettingsManager.SetDarkestColour(colour);
                     break;
                 case AllAvailableColourTypes.DISABLEDCOLOUR:
-                    colourSettingsManager.SetDisabledColour(colour);
+                    colourSettingsManager.SetDisabledControlColour(colour);
                     break;
                 case AllAvailableColourTypes.DISABLEDTEXTCOLOUR:
                     colourSettingsManager.SetDisabledTextColour(colour);
@@ -110,7 +110,7 @@ namespace Classes.Colours
                     colourSettingsManager.SetPressedTextColour(colour);
                     break;
                 case AllAvailableColourTypes.STATUSTEXTCOLOUR:
-                    colourSettingsManager.SetStatusTextColour(colour);
+                    colourSettingsManager.SetStatusStripTextColour(colour);
                     break;
                 default:
                     break;
@@ -301,7 +301,7 @@ namespace Classes.Colours
                         tempColour = colourSettingsManager.GetDarkestColour();
                         break;
                     case AllAvailableColourTypes.DISABLEDCOLOUR:
-                        tempColour = colourSettingsManager.GetDisabledColour();
+                        tempColour = colourSettingsManager.GetDisabledControlColour();
                         break;
                     case AllAvailableColourTypes.DISABLEDTEXTCOLOUR:
                         tempColour = colourSettingsManager.GetDisabledTextColour();
@@ -340,7 +340,7 @@ namespace Classes.Colours
                         tempColour = colourSettingsManager.GetPressedTextColour();
                         break;
                     case AllAvailableColourTypes.STATUSTEXTCOLOUR:
-                        tempColour = colourSettingsManager.GetStatusTextColour();
+                        tempColour = colourSettingsManager.GetStatusStripTextColour();
                         break;
                     default:
                         tempColour = Color.FromArgb(0, 0, 0, 0);

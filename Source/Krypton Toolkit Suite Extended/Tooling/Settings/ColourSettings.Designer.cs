@@ -113,12 +113,12 @@ namespace Core.Settings {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Drawing.Color DisabledColour {
+        public global::System.Drawing.Color DisabledControlColour {
             get {
-                return ((global::System.Drawing.Color)(this["DisabledColour"]));
+                return ((global::System.Drawing.Color)(this["DisabledControlColour"]));
             }
             set {
-                this["DisabledColour"] = value;
+                this["DisabledControlColour"] = value;
             }
         }
         
@@ -311,12 +311,12 @@ namespace Core.Settings {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Drawing.Color StatusTextColour {
+        public global::System.Drawing.Color StatusStripTextColour {
             get {
-                return ((global::System.Drawing.Color)(this["StatusTextColour"]));
+                return ((global::System.Drawing.Color)(this["StatusStripTextColour"]));
             }
             set {
-                this["StatusTextColour"] = value;
+                this["StatusStripTextColour"] = value;
             }
         }
         
