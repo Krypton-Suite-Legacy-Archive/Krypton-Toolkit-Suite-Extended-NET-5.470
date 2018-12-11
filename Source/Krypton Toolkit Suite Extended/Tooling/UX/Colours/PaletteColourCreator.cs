@@ -2,6 +2,7 @@
 using ComponentFactory.Krypton.Toolkit;
 using Core.Classes.Colours.Extended;
 using Core.Classes.Other;
+using Core.Classes.Theming;
 using Core.Settings.Classes;
 using Core.UX.Debugging;
 using Core.UX.Options;
@@ -237,39 +238,14 @@ namespace Core.UX
 
         private void kbtnExport_Click(object sender, EventArgs e)
         {
-            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
-
             if (_globalBooleanSettingsManager.GetUseCircularPictureBoxes())
             {
-                colourSettingsManager.SetBaseColour(cpbBaseColourPreview.BackColor);
-
-                colourSettingsManager.SetDarkestColour(cpbDarkestColourPreview.BackColor);
-
-                colourSettingsManager.SetMediumColour(cpbMiddleColourPreview.BackColor);
-
-                colourSettingsManager.SetLightColour(cpbLightColourPreview.BackColor);
-
-                colourSettingsManager.SetLightestColour(cpbLightestColourPreview.BackColor);
+                PaletteColourManagementEngine.SetBasicPaletteColours(cpbBaseColourPreview, cpbDarkestColourPreview, cpbMiddleColourPreview, cpbLightColourPreview, cpbLightestColourPreview);
             }
             else
             {
-                colourSettingsManager.SetBaseColour(pbxBaseColour.BackColor);
-
-                colourSettingsManager.SetDarkestColour(pbxDarkColour.BackColor);
-
-                colourSettingsManager.SetMediumColour(pbxMiddleColour.BackColor);
-
-                colourSettingsManager.SetLightColour(pbxLightColour.BackColor);
-
-                colourSettingsManager.SetLightestColour(pbxLightestColour.BackColor);
+                PaletteColourManagementEngine.SetBasicPaletteColours(pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour);
             }
-
-            colourSettingsManager.SaveColourSettings();
-        }
-
-        private void knumHueValue_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void tmrUpdate_Tick(object sender, EventArgs e)
@@ -472,6 +448,15 @@ namespace Core.UX
             cpbLightColourPreview.BackColor = _colourSettingsManager.GetLightColour();
 
             cpbLightestColourPreview.BackColor = _colourSettingsManager.GetLightestColour();
+
+            if (cpbBaseColourPreview.BackColor != Color.Empty || cpbDarkestColourPreview.BackColor != Color.Empty || cpbMiddleColourPreview.BackColor != Color.Empty || cpbLightColourPreview.BackColor != Color.Empty)
+            {
+                kbtnExport.Enabled = true;
+            }
+            else
+            {
+                kbtnExport.Enabled = false;
+            }
         }
     }
 }

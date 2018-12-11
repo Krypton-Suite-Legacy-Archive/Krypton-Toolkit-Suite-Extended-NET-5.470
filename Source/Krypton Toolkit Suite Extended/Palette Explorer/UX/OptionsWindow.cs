@@ -70,7 +70,7 @@ namespace PaletteExplorer.UX
             // 
             // kryptonPalette1
             // 
-            this.kryptonPalette1.FilePath = "";
+            this.kryptonPalette1.CustomisedKryptonPaletteFilePath = "";
             // 
             // kryptonPanel1
             // 

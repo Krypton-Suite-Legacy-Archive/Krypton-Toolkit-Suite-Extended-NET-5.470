@@ -92,6 +92,7 @@
     <Compile Include="Classes\Other\ToolStripNonClientRenderer.cs" />
     <Compile Include="Classes\Other\ToolTipManager.cs" />
     <Compile Include="Classes\Other\TypefaceHelper.cs" />
+    <Compile Include="Classes\Theming\PaletteColourManagementEngine.cs" />
     <Compile Include="Classes\Theming\ThemeManager.cs" />
     <Compile Include="Classes\Utilities\Utility.cs" />
     <Compile Include="Classes\Utilities\WIN32.cs" />

@@ -234,6 +234,8 @@ namespace Core.Settings.Colours.Classes
             SetMenuTextColour(Color.Black);
 
             SetRibbonTabTextColour(Color.Black);
+
+            SetStatusStripTextColour(Color.Black);
         }
         #endregion
 
