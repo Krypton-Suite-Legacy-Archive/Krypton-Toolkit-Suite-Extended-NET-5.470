@@ -37,9 +37,6 @@
     <ApplicationIcon>Resources\Oxygen-Icons.org-Oxygen-Mimetypes-text-xml.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Design">
-      <HintPath>..\..\Required\Krypton Design.dll</HintPath>
-    </Reference>
     <Reference Include="Krypton Navigator">
       <HintPath>..\..\Required\Krypton Navigator.dll</HintPath>
     </Reference>
@@ -118,10 +115,13 @@
       <Version>1.6.1</Version>
     </PackageReference>
     <PackageReference Include="EasyScintilla">
-      <Version>1.0.4</Version>
+      <Version>1.0.5</Version>
     </PackageReference>
     <PackageReference Include="jacobslusser.ScintillaNET.Signed">
       <Version>3.6.3</Version>
+    </PackageReference>
+    <PackageReference Include="KryptonToolkitSuite5470">
+      <Version>5.470.701</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>

@@ -1,15 +1,15 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-
-using ComponentFactory.Krypton.Toolkit;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 {
     /// <summary>
     /// A standard krypton textbox control with watermark functionality.
     /// </summary>
+    [ToolboxItem(false)]
     [ToolboxBitmap(typeof(KryptonTextBox)), Description("A standard krypton textbox control with watermark functionality.")]
     public class KryptonWaterMarkTextBox : KryptonTextBox
     {

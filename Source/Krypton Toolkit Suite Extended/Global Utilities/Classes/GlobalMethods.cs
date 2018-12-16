@@ -1,13 +1,11 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using Microsoft.WindowsAPICodePack.Taskbar;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Management;
 using System.Security.Principal;
 using System.Windows.Forms;
-
-using ComponentFactory.Krypton.Toolkit;
-
-using Microsoft.WindowsAPICodePack.Taskbar;
 
 namespace GlobalUtilities.Classes
 {

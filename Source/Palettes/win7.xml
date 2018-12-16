@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<!--Created by exporting the settings of a KryptonPalette instance.-->
+<!--For more information about Krypton visit www.ComponentFactory.com-->
+<!--WARNING: Modifying this file may render it invalid for importing.-->
+<KryptonPalette Version="18" Generated="Tuesday, 22 May 2018, 07:50">
+  <Properties>
+    <ButtonStyles>
+      <ButtonCommon>
+        <StateNormal>
+          <Back>
+            <Color1 Type="Color" Value="White" />
+            <Color2 Type="Color" Value="223, 233, 245" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="LightSteelBlue" />
+            <Color2 Type="Color" Value="LightSteelBlue" />
+          </Border>
+        </StateNormal>
+        <StateTracking>
+          <Back>
+            <Color1 Type="Color" Value="Orange" />
+            <Color2 Type="Color" Value="FloralWhite" />
+            <ColorStyle Type="PaletteColorStyle" Value="GlassBottom" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="Orange" />
+            <Color2 Type="Color" Value="Orange" />
+          </Border>
+        </StateTracking>
+        <StatePressed>
+          <Back>
+            <Color1 Type="Color" Value="Orange" />
+            <Color2 Type="Color" Value="Khaki" />
+            <ColorStyle Type="PaletteColorStyle" Value="GlassBottom" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="Tan" />
+            <Color2 Type="Color" Value="Tan" />
+          </Border>
+        </StatePressed>
+        <StateCheckedNormal>
+          <Back>
+            <Color1 Type="Color" Value="Orange" />
+            <Color2 Type="Color" Value="Khaki" />
+            <ColorStyle Type="PaletteColorStyle" Value="GlassCheckedFull" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="Tan" />
+            <Color2 Type="Color" Value="Tan" />
+          </Border>
+        </StateCheckedNormal>
+        <StateCheckedTracking>
+          <Back>
+            <Color1 Type="Color" Value="Orange" />
+            <Color2 Type="Color" Value="Khaki" />
+            <ColorStyle Type="PaletteColorStyle" Value="GlassCheckedTrackingFull" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="Tan" />
+            <Color2 Type="Color" Value="Tan" />
+          </Border>
+        </StateCheckedTracking>
+        <StateCheckedPressed>
+          <Back>
+            <Color1 Type="Color" Value="Orange" />
+            <Color2 Type="Color" Value="Khaki" />
+            <ColorStyle Type="PaletteColorStyle" Value="GlassCheckedTrackingFull" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="Peru" />
+            <Color2 Type="Color" Value="Peru" />
+            <ColorStyle Type="PaletteColorStyle" Value="GlassBottom" />
+          </Border>
+        </StateCheckedPressed>
+        <OverrideDefault>
+          <Back>
+            <Color1 Type="Color" Value="White" />
+            <Color2 Type="Color" Value="223, 233, 245" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="LightSteelBlue" />
+            <Color2 Type="Color" Value="LightSteelBlue" />
+          </Border>
+        </OverrideDefault>
+      </ButtonCommon>
+    </ButtonStyles>
+    <ControlStyles>
+      <ControlClient>
+        <StateCommon>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="LightSteelBlue" />
+            <Color2 Type="Color" Value="LightSteelBlue" />
+          </Border>
+        </StateCommon>
+      </ControlClient>
+    </ControlStyles>
+    <ContextMenu>
+      <StateCommon>
+        <ControlOuter>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="LightSteelBlue" />
+            <Color2 Type="Color" Value="FloralWhite" />
+          </Border>
+        </ControlOuter>
+        <Heading>
+          <Back>
+            <Color1 Type="Color" Value="LightSteelBlue" />
+            <Color2 Type="Color" Value="FloralWhite" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="LightSteelBlue" />
+            <Color2 Type="Color" Value="FloralWhite" />
+          </Border>
+        </Heading>
+        <Separator>
+          <Back>
+            <Color1 Type="Color" Value="GhostWhite" />
+          </Back>
+        </Separator>
+      </StateCommon>
+      <StateHighlight>
+        <ItemHighlight>
+          <Back>
+            <Color1 Type="Color" Value="Orange" />
+            <Color2 Type="Color" Value="Khaki" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="Tan" />
+            <Color2 Type="Color" Value="Tan" />
+          </Border>
+        </ItemHighlight>
+      </StateHighlight>
+    </ContextMenu>
+    <FormStyles>
+      <FormCommon>
+        <StateActive>
+          <Back>
+            <Color1 Type="Color" Value="GradientInactiveCaption" />
+            <Color2 Type="Color" Value="GradientActiveCaption" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="LightSteelBlue" />
+          </Border>
+        </StateActive>
+      </FormCommon>
+      <FormCustom1>
+        <StateActive>
+          <Back>
+            <Color1 Type="Color" Value="GradientActiveCaption" />
+            <Color2 Type="Color" Value="GradientInactiveCaption" />
+          </Back>
+        </StateActive>
+      </FormCustom1>
+    </FormStyles>
+    <HeaderStyles>
+      <HeaderCommon>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="White" />
+            <Color2 Type="Color" Value="223, 233, 245" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="LightSteelBlue" />
+            <Color2 Type="Color" Value="LightSteelBlue" />
+          </Border>
+        </StateCommon>
+        <StateNormal>
+          <Back>
+            <Color1 Type="Color" Value="White" />
+            <Color2 Type="Color" Value="223, 233, 245" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="LightSteelBlue" />
+            <Color2 Type="Color" Value="LightSteelBlue" />
+          </Border>
+        </StateNormal>
+      </HeaderCommon>
+      <HeaderPrimary>
+        <StateCommon>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="LightSteelBlue" />
+            <Color2 Type="Color" Value="LightSteelBlue" />
+          </Border>
+        </StateCommon>
+      </HeaderPrimary>
+    </HeaderStyles>
+    <InputControlStyles>
+      <InputControlCommon>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="White" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="LightSteelBlue" />
+          </Border>
+        </StateCommon>
+      </InputControlCommon>
+    </InputControlStyles>
+    <PanelStyles>
+      <PanelCommon>
+        <StateCommon>
+          <Color1 Type="Color" Value="223, 233, 245" />
+        </StateCommon>
+        <StateNormal>
+          <Color1 Type="Color" Value="223, 233, 245" />
+        </StateNormal>
+      </PanelCommon>
+      <PanelClient>
+        <StateCommon>
+          <Color1 Type="Color" Value="223, 233, 245" />
+        </StateCommon>
+        <StateNormal>
+          <Color1 Type="Color" Value="223, 233, 245" />
+        </StateNormal>
+      </PanelClient>
+      <PanelAlternate>
+        <StateCommon>
+          <Color1 Type="Color" Value="223, 233, 245" />
+        </StateCommon>
+        <StateNormal>
+          <Color1 Type="Color" Value="223, 233, 245" />
+        </StateNormal>
+      </PanelAlternate>
+    </PanelStyles>
+    <Ribbon>
+      <RibbonAppMenuOuter>
+        <BackColor1 Type="Color" Value="LightSteelBlue" />
+        <BackColor2 Type="Color" Value="LightSteelBlue" />
+        <BackColor3 Type="Color" Value="White" />
+      </RibbonAppMenuOuter>
+      <RibbonAppMenuInner>
+        <BackColor1 Type="Color" Value="LightSteelBlue" />
+        <BackColor2 Type="Color" Value="LightSteelBlue" />
+      </RibbonAppMenuInner>
+      <RibbonAppMenuDocs>
+        <BackColor1 Type="Color" Value="White" />
+      </RibbonAppMenuDocs>
+      <RibbonAppMenuDocsTitle>
+        <TextColor Type="Color" Value="30, 57, 91" />
+      </RibbonAppMenuDocsTitle>
+      <RibbonAppMenuDocsEntry>
+        <TextColor Type="Color" Value="30, 57, 91" />
+      </RibbonAppMenuDocsEntry>
+      <RibbonGeneral>
+        <GroupSeparatorDark Type="Color" Value="LightSteelBlue" />
+        <TabSeparatorColor Type="Color" Value="LightSteelBlue" />
+      </RibbonGeneral>
+      <RibbonGroupArea>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="LightSteelBlue" />
+          <BackColor2 Type="Color" Value="LightSteelBlue" />
+          <BackColor3 Type="Color" Value="WhiteSmoke" />
+          <BackColor4 Type="Color" Value="GradientInactiveCaption" />
+          <BackColor5 Type="Color" Value="WhiteSmoke" />
+        </StateCommon>
+        <StateCheckedNormal>
+          <BackColor1 Type="Color" Value="LightSteelBlue" />
+          <BackColor2 Type="Color" Value="LightSteelBlue" />
+          <BackColor3 Type="Color" Value="WhiteSmoke" />
+          <BackColor4 Type="Color" Value="GradientInactiveCaption" />
+          <BackColor5 Type="Color" Value="WhiteSmoke" />
+        </StateCheckedNormal>
+        <StateContextCheckedNormal>
+          <BackColor1 Type="Color" Value="LightSteelBlue" />
+          <BackColor2 Type="Color" Value="LightSteelBlue" />
+        </StateContextCheckedNormal>
+      </RibbonGroupArea>
+      <RibbonGroupButtonText>
+        <StateCommon>
+          <TextColor Type="Color" Value="30, 57, 91" />
+        </StateCommon>
+        <StateNormal>
+          <TextColor Type="Color" Value="30, 57, 91" />
+        </StateNormal>
+        <StateDisabled>
+          <TextColor Type="Color" Value="Gray" />
+        </StateDisabled>
+      </RibbonGroupButtonText>
+      <RibbonGroupNormalBorder>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="WhiteSmoke" />
+          <BackColor2 Type="Color" Value="LightSteelBlue" />
+        </StateCommon>
+        <StateNormal>
+          <BackColor1 Type="Color" Value="WhiteSmoke" />
+          <BackColor2 Type="Color" Value="LightSteelBlue" />
+        </StateNormal>
+        <StateTracking>
+          <BackColor1 Type="Color" Value="WhiteSmoke" />
+          <BackColor2 Type="Color" Value="LightSteelBlue" />
+        </StateTracking>
+        <StateContextNormal>
+          <BackColor1 Type="Color" Value="WhiteSmoke" />
+          <BackColor2 Type="Color" Value="LightSteelBlue" />
+        </StateContextNormal>
+        <StateContextTracking>
+          <BackColor1 Type="Color" Value="WhiteSmoke" />
+          <BackColor2 Type="Color" Value="LightSteelBlue" />
+        </StateContextTracking>
+      </RibbonGroupNormalBorder>
+      <RibbonGroupNormalTitle>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="Transparent" />
+          <BackColor2 Type="Color" Value="Transparent" />
+          <TextColor Type="Color" Value="SlateGray" />
+        </StateCommon>
+        <StateNormal>
+          <BackColor1 Type="Color" Value="Transparent" />
+          <BackColor2 Type="Color" Value="Transparent" />
+          <TextColor Type="Color" Value="SlateGray" />
+        </StateNormal>
+        <StateTracking>
+          <BackColor1 Type="Color" Value="Transparent" />
+          <BackColor2 Type="Color" Value="Transparent" />
+        </StateTracking>
+        <StateContextNormal>
+          <TextColor Type="Color" Value="SlateGray" />
+        </StateContextNormal>
+        <StateContextTracking>
+          <BackColor1 Type="Color" Value="Transparent" />
+          <BackColor2 Type="Color" Value="Transparent" />
+          <TextColor Type="Color" Value="SlateGray" />
+        </StateContextTracking>
+      </RibbonGroupNormalTitle>
+      <RibbonQATMinibar>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="LightSteelBlue" />
+          <BackColor2 Type="Color" Value="LightSteelBlue" />
+          <BackColor3 Type="Color" Value="WhiteSmoke" />
+        </StateCommon>
+      </RibbonQATMinibar>
+      <RibbonTab>
+        <StateCommon>
+          <BackColor1 Type="Color" Value="LightSteelBlue" />
+          <BackColor2 Type="Color" Value="LightSteelBlue" />
+          <BackColor3 Type="Color" Value="WhiteSmoke" />
+          <BackColor4 Type="Color" Value="WhiteSmoke" />
+          <BackColor5 Type="Color" Value="WhiteSmoke" />
+          <TextColor Type="Color" Value="30, 57, 91" />
+        </StateCommon>
+        <StateTracking>
+          <BackColor1 Type="Color" Value="DarkOrange" />
+          <BackColor2 Type="Color" Value="AliceBlue" />
+          <BackColor3 Type="Color" Value="WhiteSmoke" />
+          <BackColor4 Type="Color" Value="White" />
+          <BackColor5 Type="Color" Value="White" />
+          <TextColor Type="Color" Value="30, 57, 91" />
+        </StateTracking>
+        <StateCheckedNormal>
+          <BackColor1 Type="Color" Value="LightSteelBlue" />
+          <BackColor2 Type="Color" Value="LightSteelBlue" />
+          <BackColor3 Type="Color" Value="WhiteSmoke" />
+          <BackColor4 Type="Color" Value="WhiteSmoke" />
+          <BackColor5 Type="Color" Value="WhiteSmoke" />
+          <TextColor Type="Color" Value="30, 57, 91" />
+        </StateCheckedNormal>
+        <StateCheckedTracking>
+          <BackColor1 Type="Color" Value="DarkOrange" />
+          <BackColor2 Type="Color" Value="Orange" />
+          <BackColor3 Type="Color" Value="Transparent" />
+          <BackColor4 Type="Color" Value="Transparent" />
+          <BackColor5 Type="Color" Value="Transparent" />
+          <TextColor Type="Color" Value="30, 57, 91" />
+        </StateCheckedTracking>
+        <StateContextTracking>
+          <BackColor1 Type="Color" Value="DarkOrange" />
+          <BackColor2 Type="Color" Value="LightSteelBlue" />
+          <TextColor Type="Color" Value="30, 57, 91" />
+        </StateContextTracking>
+        <StateContextCheckedNormal>
+          <BackColor1 Type="Color" Value="LightSteelBlue" />
+          <BackColor2 Type="Color" Value="Red" />
+          <TextColor Type="Color" Value="30, 57, 91" />
+        </StateContextCheckedNormal>
+        <StateContextCheckedTracking>
+          <TextColor Type="Color" Value="30, 57, 91" />
+        </StateContextCheckedTracking>
+        <OverrideFocus>
+          <TextColor Type="Color" Value="30, 57, 91" />
+        </OverrideFocus>
+      </RibbonTab>
+      <RibbonGalleryBack>
+        <BackColor1 Type="Color" Value="White" />
+      </RibbonGalleryBack>
+      <RibbonGalleryBorder>
+        <BackColor1 Type="Color" Value="LightSteelBlue" />
+        <BackColor2 Type="Color" Value="WhiteSmoke" />
+        <BackColor3 Type="Color" Value="WhiteSmoke" />
+      </RibbonGalleryBorder>
+    </Ribbon>
+    <ToolMenuStatus>
+      <Menu>
+        <MenuBorder Type="Color" Value="LightSteelBlue" />
+        <MenuItemText Type="Color" Value="30, 57, 91" />
+      </Menu>
+      <MenuStrip>
+        <MenuStripText Type="Color" Value="30, 57, 91" />
+        <MenuStripGradientBegin Type="Color" Value="GradientActiveCaption" />
+        <MenuStripGradientEnd Type="Color" Value="GradientInactiveCaption" />
+      </MenuStrip>
+      <Separator>
+        <SeparatorDark Type="Color" Value="LightSteelBlue" />
+      </Separator>
+      <StatusStrip>
+        <StatusStripText Type="Color" Value="30, 57, 91" />
+        <StatusStripGradientBegin Type="Color" Value="GradientInactiveCaption" />
+        <StatusStripGradientEnd Type="Color" Value="GradientInactiveCaption" />
+      </StatusStrip>
+      <ToolStrip>
+        <ToolStripBorder Type="Color" Value="LightSteelBlue" />
+        <ToolStripContentPanelGradientBegin Type="Color" Value="GradientInactiveCaption" />
+        <ToolStripContentPanelGradientEnd Type="Color" Value="WhiteSmoke" />
+        <ToolStripDropDownBackground Type="Color" Value="White" />
+        <ToolStripGradientBegin Type="Color" Value="WhiteSmoke" />
+        <ToolStripGradientEnd Type="Color" Value="GradientActiveCaption" />
+        <ToolStripGradientMiddle Type="Color" Value="GradientInactiveCaption" />
+        <ToolStripPanelGradientBegin Type="Color" Value="GradientActiveCaption" />
+        <ToolStripPanelGradientEnd Type="Color" Value="GradientInactiveCaption" />
+      </ToolStrip>
+    </ToolMenuStatus>
+  </Properties>
+  <Images />
+</KryptonPalette>

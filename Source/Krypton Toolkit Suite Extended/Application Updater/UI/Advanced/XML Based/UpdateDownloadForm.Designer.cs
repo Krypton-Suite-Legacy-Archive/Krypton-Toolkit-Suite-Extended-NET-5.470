@@ -37,7 +37,7 @@
             this.klblDownloaded = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.klblDownloadingTo = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.klblDownloadingFrom = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kuacbtnInstallUpdate = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACShieldButton();
+            this.kuacbtnInstallUpdate = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kMan = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.ttHelp = new System.Windows.Forms.ToolTip(this.components);
@@ -168,7 +168,7 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlBackground;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnCancel;
-        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACShieldButton kuacbtnInstallUpdate;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton kuacbtnInstallUpdate;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel klblCurrentSpeed;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel klblDownloaded;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel klblDownloadingTo;

@@ -1,8 +1,7 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Threading;
 using System.Windows.Forms;
-
-using ComponentFactory.Krypton.Toolkit;
 
 namespace GlobalUtilities.Classes.SpecialEffects
 {
@@ -139,7 +138,7 @@ namespace GlobalUtilities.Classes.SpecialEffects
 
         #endregion
 
-        #region Deconstructor        
+        #region De constructor        
         /// <summary>
         /// Finalises an instance of the <see cref="FadeEffects"/> class.
         /// </summary>

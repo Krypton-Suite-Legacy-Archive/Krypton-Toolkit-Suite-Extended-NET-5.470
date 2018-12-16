@@ -175,7 +175,8 @@
 
     public enum KryptonMessageBoxExtendedBoxOptions
     {
-
+        SERVICENOTIFICATION = 0,
+        DEFAULTDESKTOPONLY = 1
     }
 
     public enum KryptonMessageBoxExtendedBoxButtonCount
@@ -183,5 +184,12 @@
         ONE = 0,
         TWO = 1,
         THREE = 2
+    }
+
+    public enum CheckedState
+    {
+        CHECKED = 0,
+        UNCHECKED = 1,
+        INTERMEDIATE = 3
     }
 }

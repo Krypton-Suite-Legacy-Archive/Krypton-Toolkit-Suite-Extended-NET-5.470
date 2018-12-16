@@ -1,8 +1,105 @@
-# Krypton-Toolkit-Suite-Extended-NET-4.70
+# <img src="https://raw.githubusercontent.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/master/Assets/PNG/64%20x%2064/KR%2064%20%20x%2064%20Orange.png" />-Toolkit-Suite-Extended-NET-5.470
 
 =======
 
 ## An extension to the Krypton Toolkit suite of controls for .NET framework 4.7 
+
+=======
+
+## NOTE: 20/06/2018 Background menu colours will be implemented in the comming weeks. Stay tuned for updates!
+
+======
+
+# Building this repository from code
+
+## In order to compile the code, you MUST restore/update the NuGet packages in order to build successfuly!
+
+======
+
+## 2018-12-03 December 2018 Update
+* New controls, including a new, theme-able scrollbar - need help implementing it into controls i.e ComboBox, rich textbox etc.
+* Partially implemented the `ExtendedRenderer` project - due to be completed in early 2019.
+* **Tooling.dll** has now been renamed to **Core.dll**
+* Consolidate settings
+* Begun work on a new colour dialog
+* Build 580 (build date Monday 3rd December 2018) is now available through NuGet
+
+======
+
+## 2018-11-12 November 2018 Update
+* Refinements to code
+* Set your own colour intensity
+* Automatic updating of colours has been centralised
+* Work on a new ribonised `Palette Explorer` is in progress
+* Going forward: possibility of merging the now defunct `ExtendedRenderer` project into this project in order to keep code maintained
+
+======
+
+## 2018-10-24 Version 540
+* Version 540 (build date Wednesday 24 October, 2018) is now available through NuGet
+
+======
+
+## 2018-10-17 October 2018 Update (New NuGet package to follow soon)
+* New floating toolbar/window feature
+* Re-work of `Palette Editor` UI to tidy up (ribbon UI is a possibility)
+* Started feasibility work on a "Kryptonised" common file dialog (any help is appreciated)
+* New splash screen for `Palette Editor` application
+* Removed requirement for DLLs in favor of NuGet management
+* General bug fixes
+
+======
+
+## 2018-10-08 NuGet package
+* A new NuGet package is available from [here](https://www.nuget.org/packages/KryptonExtendedToolkit5470/5.470.513) (please note that the `Palette Editor` binary or themes are **not** included)
+
+======
+
+## 2018-09-25 September Update
+* Refined `Palette Editor` UI
+* Allow users to define **any** colour in the `Palette Editor` using a context menu
+* Begun work on a new typeface/font dialog box
+* Begun work on a new `Define Basic Palette Colours` UI to allow users to define custom basic palette colours (currently in pre-alpha stages)
+* Updated the required Krypton DLLs to build 643 (build date Tuesday 25th September, 2018)
+* General code updates
+
+======
+
+## 2018-08-27 Colour Controls & Palette Editor
+* New colour controls and UI options have been implemented to easily create brand new themes
+* New application named `Palette Editor` has been implemented to create new themes (89% completed) - feedback would be welcome
+* New debugging options
+* A new circular picture box
+* Tidy up code
+
+======
+
+## 2018-08-07 Palette colour generator
+* New API to allow a complementary colour set to be generated.
+* Begun work on a slimmed down version of a palette designer
+* New project icon
+* Idea for a randomly generated colour - Need help for fixing!
+
+======
+
+## 2018-06-21 Build paths
+* Reset build paths, so no errors should be incurred.
+
+======
+
+## 2018-06-2018 Slate silver theme
+* One **new** theme called `Slate Silver`, stylised for the 2007/2010 and 2013 theme sets.
+
+======
+
+## 2018-06-11 New palettes & gradeint toolstrip label
+* There are now 50+ **new** palettes to choose from.
+* A new toolstrip label capable of background gradeints is now available to use, as per [#28](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/28).
+
+======
+
+## 2018-05-22 Colour Mania!
+* Colours... colours... colours... We now have 26 **new** colours to choose from! Find the `xml` files in the `Palettes` folder, this will be updated regulary, so be sure to come back often! Alternatively, if you would like to request/submit a colour palette, then please submit a base colour in a hexadecimal format plus a suitable name for it on the `New Palette Ideas` issues thread.
 
 ======
 

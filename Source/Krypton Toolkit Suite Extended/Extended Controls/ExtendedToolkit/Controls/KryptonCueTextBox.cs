@@ -119,7 +119,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
             {
                 if (_globalMethods.GetIsTargetPlatformSupported())
                 {
-                    NativeMethods.SendMessage(Handle, EM_SETCUEBANNER, (RetainCueText && _globalMethods.GetIsTargetPlatformSupported()) ? new IntPtr(1) : IntPtr.Zero, CueText);
+                    GlobalNativeMethods.SendMessage(Handle, EM_SETCUEBANNER, (RetainCueText && _globalMethods.GetIsTargetPlatformSupported()) ? new IntPtr(1) : IntPtr.Zero, CueText);
                 }
             }
         }

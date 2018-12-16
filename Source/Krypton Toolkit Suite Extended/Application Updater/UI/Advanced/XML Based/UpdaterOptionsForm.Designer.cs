@@ -36,7 +36,7 @@
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kuacbtnApply = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACShieldButton();
+            this.kuacbtnApply = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.kMan = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kpnlBackground)).BeginInit();
             this.kpnlBackground.SuspendLayout();
@@ -152,7 +152,7 @@
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlBackground;
-        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACShieldButton kuacbtnApply;
+        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton kuacbtnApply;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kMan;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnOk;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnCancel;

@@ -33,7 +33,7 @@ namespace KryptonApplicationUpdater.Classes
 
         private KryptonButton _kryptonInstallUpdateButton = null;
 
-        private KryptonUACShieldButton _kryptonUACShieldInstallUpdateButton = null;
+        private KryptonUACElevatedButton _kryptonUACShieldInstallUpdateButton = null;
 
         private Stopwatch stopwatch = new Stopwatch();
 
@@ -227,7 +227,7 @@ namespace KryptonApplicationUpdater.Classes
         /// <value>
         /// The krypton UAC shield install update button.
         /// </value>
-        private KryptonUACShieldButton KryptonUACShieldInstallUpdateButton
+        private KryptonUACElevatedButton KryptonUACShieldInstallUpdateButton
         {
             get
             {
@@ -339,7 +339,7 @@ namespace KryptonApplicationUpdater.Classes
         /// <param name="kryptonInstallUpdateButton">The krypton install update button.</param>
         /// <param name="kryptonUACShieldInstallUpdateButton">The krypton UAC shield install update button.</param>
         /// <param name="hypertextTransferProtocolType">Type of the hypertext transfer protocol.</param>
-        public void DownloadFile(WebClient downloadClient, string sourcePath, string destinationPath, KryptonLabel downloadSource = null, KryptonLabel downloadDestination = null, KryptonLabel amountDownloaded = null, KryptonLabel currentSpeed = null, KryptonLabel downloadPercentage = null, ProgressBar downloadProgress = null, Button installUpdateButton = null, KryptonButton kryptonInstallUpdateButton = null, KryptonUACShieldButton kryptonUACShieldInstallUpdateButton = null, HypertextTransferProtocolType hypertextTransferProtocolType = HypertextTransferProtocolType.HYPERTEXTTRANSFERPROTOCOL)
+        public void DownloadFile(WebClient downloadClient, string sourcePath, string destinationPath, KryptonLabel downloadSource = null, KryptonLabel downloadDestination = null, KryptonLabel amountDownloaded = null, KryptonLabel currentSpeed = null, KryptonLabel downloadPercentage = null, ProgressBar downloadProgress = null, Button installUpdateButton = null, KryptonButton kryptonInstallUpdateButton = null, KryptonUACElevatedButton kryptonUACShieldInstallUpdateButton = null, HypertextTransferProtocolType hypertextTransferProtocolType = HypertextTransferProtocolType.HYPERTEXTTRANSFERPROTOCOL)
         {
             try
             {
@@ -683,7 +683,7 @@ namespace KryptonApplicationUpdater.Classes
         /// Sets the KryptonUACShieldInstallUpdateButton to the value of value.
         /// </summary>
         /// <param name="value">The desired value of KryptonUACShieldInstallUpdateButton.</param>
-        private void SetKryptonUACShieldInstallUpdateButton(KryptonUACShieldButton value)
+        private void SetKryptonUACShieldInstallUpdateButton(KryptonUACElevatedButton value)
         {
             KryptonUACShieldInstallUpdateButton = value;
         }
@@ -692,7 +692,7 @@ namespace KryptonApplicationUpdater.Classes
         /// Returns the value of the KryptonUACShieldInstallUpdateButton.
         /// </summary>
         /// <returns>The value of the KryptonUACShieldInstallUpdateButton.</returns>
-        private KryptonUACShieldButton GetKryptonUACShieldInstallUpdateButton()
+        private KryptonUACElevatedButton GetKryptonUACShieldInstallUpdateButton()
         {
             return KryptonUACShieldInstallUpdateButton;
         }

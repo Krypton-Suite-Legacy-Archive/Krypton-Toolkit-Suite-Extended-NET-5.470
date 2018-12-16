@@ -1,36 +1,41 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Enumerations;
+using ExtendedControls.ExtendedToolkit.UI.Dialogues;
+using ExtendedControls.ExtendedToolkit.UI.Drawing;
+using KryptonApplicationUpdater.Classes.SettingsManager;
+using KryptonApplicationUpdater.Interfaces;
+using KryptonExtendedToolkit.Base.Code;
+using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-
-using ComponentFactory.Krypton.Toolkit;
-
-using KryptonApplicationUpdater.Classes.SettingsManager;
-using KryptonApplicationUpdater.Interfaces;
-
-using KryptonExtendedToolkit.Base.Code;
+using Core.Classes.Other;
+using Core.UX;
+using Core.UX.Options;
+using Core.UX.Colours;
 
 namespace Playground
 {
     public partial class Form1 : KryptonForm, IUpdatable
     {
-        UtilityMethods utilityMethods = new UtilityMethods();
-
-        InternalApplicationUpdaterSettingsManager internalApplicationUpdaterSettingsManager = new InternalApplicationUpdaterSettingsManager();
-
-        MostRecentlyUsedFileManager mostRecentlyUsedFileManager;
-
-        Version currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
+        private UtilityMethods utilityMethods = new UtilityMethods();
+        private InternalApplicationUpdaterSettingsManager internalApplicationUpdaterSettingsManager = new InternalApplicationUpdaterSettingsManager();
+        private MostRecentlyUsedFileManager mostRecentlyUsedFileManager;
+        private Version currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
+        private ToolStripNonClientRenderer toolStripNonClientRenderer;
 
         public Form1()
         {
             InitializeComponent();
+
+            tsTest.Renderer = new ToolStripNonClientRenderer();
         }
 
         #region IUpdatable Implementation
-        public Icon ApplicationIcon { get { return this.Icon; } set { } }
+        public Icon ApplicationIcon { get { return Icon; } set { } }
         public string ServerXMLFileURL { get { return "https://www.dropbox.com/s/mwyexz1baqt0y4b/Update.xml?dl=0"; } set { } }
         public string ApplicationName { get { return "Playground"; } set { } }
         public string CurrentApplicationVersion { get { return currentVersion.ToString(); } set { } }
@@ -49,18 +54,27 @@ namespace Playground
                 internalApplicationUpdaterSettingsManager.SetXMLFileURL(ServerXMLFileURL);
             }
 
-            if (utilityMethods.GetHasElevateProcessWithAdministrativeRights())
+            if (UtilityMethods.GetHasElevateProcessWithAdministrativeRights())
             {
                 Text = Text + " (Administrator)";
             }
 
-            klblAdminMode.Text = $"Is running in Administrator mode: { utilityMethods.GetHasElevateProcessWithAdministrativeRights().ToString() }";
+            klblAdminMode.Text = $"Is running in Administrator mode: { UtilityMethods.GetHasElevateProcessWithAdministrativeRights().ToString() }";
 
             //kctb1.CueText = "Hello";
 
             //kryptonCommandLinkVersion11.Note = "Hello";
 
             lblVersion.Text = $"Version: { currentVersion.ToString() }";
+
+            etslBlinkTest.SoftBlink(etslBlinkTest.AlertColourOne, etslBlinkTest.AlertColourTwo, etslBlinkTest.AlertTextColour, 2000, false, 5);
+
+            foreach (LinearGradientMode lgm in Enum.GetValues(typeof(LinearGradientMode)))
+            {
+                kcmbGradientDirection.Items.Add(lgm.ToString().ToUpper());
+            }
+
+            //kcmbGradientDirection.d
         }
 
         private void MyOwnRecentFileGotClicked_Handler(object sender, EventArgs e)
@@ -152,6 +166,218 @@ namespace Playground
 
                 mostRecentlyUsedFileManager.AddRecentFile(Path.GetFullPath(saveFileDialog.FileName));
             }
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            ColourRGBToHexadecimalConverter colourRGBToHexadecimalConverter = new ColourRGBToHexadecimalConverter();
+
+            colourRGBToHexadecimalConverter.Show();
+        }
+
+        private void tsAlignLeft_Click(object sender, EventArgs e)
+        {
+            rxrbTextPad.SelectionAlignment = TextAlignment.LEFT;
+        }
+
+        private void tsAlignCentre_Click(object sender, EventArgs e)
+        {
+            rxrbTextPad.SelectionAlignment = TextAlignment.CENTRE;
+        }
+
+        private void tsAlignRight_Click(object sender, EventArgs e)
+        {
+            rxrbTextPad.SelectionAlignment = TextAlignment.RIGHT;
+        }
+
+        private void tsJustify_Click(object sender, EventArgs e)
+        {
+            rxrbTextPad.SelectionAlignment = TextAlignment.JUSTIFY;
+        }
+
+        private void kbtnHexToRGB_Click(object sender, EventArgs e)
+        {
+            ColourHexadecimalToRGBConverter colourHexadecimalToRGBConverter = new ColourHexadecimalToRGBConverter();
+
+            colourHexadecimalToRGBConverter.Show();
+        }
+
+        private void kbtnColourMixer_Click(object sender, EventArgs e)
+        {
+            ColourMixer colourMixer = new ColourMixer(255, 255, 255, 255);
+
+            colourMixer.Show();
+        }
+
+        private void kbtnColourCreator_Click(object sender, EventArgs e)
+        {
+            PaletteColourCreator paletteColourCreator = new PaletteColourCreator();
+
+            paletteColourCreator.Show();
+        }
+
+        private void kcbtnGradientColour1_SelectedColorChanged(object sender, ColorEventArgs e)
+        {
+            etslBlinkTest.GradientColourOne = kcbtnGradientColour1.SelectedColor;
+        }
+
+        private void kcbtnGradientColour2_SelectedColorChanged(object sender, ColorEventArgs e)
+        {
+            etslBlinkTest.GradientColourTwo = kcbtnGradientColour2.SelectedColor;
+        }
+
+        private void kcbtnTextColour_SelectedColorChanged(object sender, ColorEventArgs e)
+        {
+            etslBlinkTest.ForeColor = kcbtnTextColour.SelectedColor;
+        }
+
+        private void kcmbGradientDirection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kcmbGradientDirection_TextChanged(object sender, EventArgs e)
+        {
+            // etslBlinkTest.GradientMode = Enum.Parse(typeof(LinearGradientMode), (LinearGradientMode)kcmbGradientDirection.Text);
+        }
+
+        private void kcbtnHorizontal_Click(object sender, EventArgs e)
+        {
+            etslBlinkTest.GradientMode = LinearGradientMode.Horizontal;
+
+            kcbtnHorizontal.Checked = true;
+
+            kcbtnVertical.Checked = false;
+
+            kcbtnForwardDiagonal.Checked = false;
+
+            kcbtnBackwardDiagonal.Checked = false;
+        }
+
+        private void kcbtnVertical_Click(object sender, EventArgs e)
+        {
+            etslBlinkTest.GradientMode = LinearGradientMode.Vertical;
+
+            kcbtnHorizontal.Checked = false;
+
+            kcbtnVertical.Checked = true;
+
+            kcbtnForwardDiagonal.Checked = false;
+
+            kcbtnBackwardDiagonal.Checked = false;
+        }
+
+        private void kcbtnForwardDiagonal_Click(object sender, EventArgs e)
+        {
+            etslBlinkTest.GradientMode = LinearGradientMode.ForwardDiagonal;
+
+            kcbtnHorizontal.Checked = false;
+
+            kcbtnVertical.Checked = false;
+
+            kcbtnForwardDiagonal.Checked = true;
+
+            kcbtnBackwardDiagonal.Checked = false;
+        }
+
+        private void kcbtnBackwardDiagonal_Click(object sender, EventArgs e)
+        {
+            etslBlinkTest.GradientMode = LinearGradientMode.BackwardDiagonal;
+
+            kcbtnHorizontal.Checked = false;
+
+            kcbtnVertical.Checked = false;
+
+            kcbtnForwardDiagonal.Checked = false;
+
+            kcbtnBackwardDiagonal.Checked = true;
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            PaletteFileEditor paletteFileEditor = new PaletteFileEditor();
+
+            paletteFileEditor.Show();
+        }
+
+        private void kbtnMessageboxTest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kbtnPaletteEditor_Click(object sender, EventArgs e)
+        {
+            PaletteEditor.UX.MainWindow _paletteEditor = new PaletteEditor.UX.MainWindow();
+
+            _paletteEditor.Show();
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            TypefaceSelectionDialogue typefaceSelectionDialogue = new TypefaceSelectionDialogue();
+
+            typefaceSelectionDialogue.Show();
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+
+            mainWindow.Show();
+        }
+
+        private void kuacsbElevate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            Scrollbars scrollbars = new Scrollbars();
+
+            scrollbars.Show();
+        }
+
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            KryptonColourChooser1 kryptonColourChooser1 = new KryptonColourChooser1();
+
+            kryptonColourChooser1.Show();
+        }
+
+        private void kryptonButton6_Click(object sender, EventArgs e)
+        {
+            KryptonColourChooser2 kryptonColourChooser2 = new KryptonColourChooser2();
+
+            kryptonColourChooser2.Show();
+        }
+
+        private void kryptonButton8_Click(object sender, EventArgs e)
+        {
+            SettingsManagementOptions settingsManagementOptions = new SettingsManagementOptions();
+
+            settingsManagementOptions.Show();
+        }
+
+        private void kryptonButton9_Click(object sender, EventArgs e)
+        {
+            ThemeOptions themeOptions = new ThemeOptions();
+
+            themeOptions.Show();
+        }
+
+        private void kryptonButton10_Click(object sender, EventArgs e)
+        {
+            GlobalOptionsMenu globalOptionsMenu = new GlobalOptionsMenu();
+
+            globalOptionsMenu.Show();
+        }
+
+        private void kryptonButton11_Click(object sender, EventArgs e)
+        {
+            HexadecimalToRGBConverter hexadecimalToRGBConverter = new HexadecimalToRGBConverter();
+
+            hexadecimalToRGBConverter.Show();
         }
     }
 }

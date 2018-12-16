@@ -18,7 +18,7 @@ namespace GlobalUtilities.Classes
         /// <exception cref="System.PlatformNotSupportedException"></exception>
         public static Icon LoadIcon(IconType type, Size size)
         {
-            IntPtr hIcon = NativeMethods.LoadImage(IntPtr.Zero, "#" + (int)type, 1, size.Width, size.Height, 0);
+            IntPtr hIcon = GlobalNativeMethods.LoadImage(IntPtr.Zero, "#" + (int)type, 1, size.Width, size.Height, 0);
 
             return hIcon == IntPtr.Zero ? null : Icon.FromHandle(hIcon);
         }

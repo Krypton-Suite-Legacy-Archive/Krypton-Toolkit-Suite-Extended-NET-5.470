@@ -1,7 +1,6 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Windows.Forms;
-
-using ComponentFactory.Krypton.Toolkit;
 
 namespace GlobalUtilities.Classes
 {
@@ -55,6 +54,24 @@ namespace GlobalUtilities.Classes
             {
                 Console.WriteLine($"[ { DateTime.Now.ToString() } ]: { exceptionMessage }");
             }
+        }
+
+        /// <summary>
+        /// Throws the exception.
+        /// </summary>
+        /// <param name="exceptionType">Type of the exception.</param>
+        /// <param name="content">The content.</param>
+        /// <param name="title">The title.</param>
+        /// <param name="buttons">The buttons.</param>
+        /// <param name="defaultButton">The default button.</param>
+        public static void ThrowException(MessageBoxIcon exceptionType, string content, string title, MessageBoxButtons buttons, MessageBoxDefaultButton defaultButton = MessageBoxDefaultButton.Button1)
+        {
+            KryptonMessageBox.Show(content, title, buttons, exceptionType, defaultButton);
+        }
+
+        public static void HandleException(Exception exc, string origin, MessageBoxButtons oK, MessageBoxIcon error)
+        {
+            throw new NotImplementedException();
         }
         #endregion
     }
