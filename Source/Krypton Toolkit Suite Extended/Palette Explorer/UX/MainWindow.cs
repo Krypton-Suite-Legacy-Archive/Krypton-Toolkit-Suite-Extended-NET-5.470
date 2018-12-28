@@ -1,6 +1,5 @@
 ﻿using Classes.Colours;
 using ComponentFactory.Krypton.Toolkit;
-using GlobalUtilities.Interfaces;
 using PaletteExplorer.Classes;
 using System;
 using System.Drawing;
@@ -40,8 +39,6 @@ namespace PaletteExplorer.UX
         private Version _currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
 
         private Timer _colourUpdateTimer;
-
-        private IAbout _about;
         #endregion
 
         #region Properties
@@ -3109,7 +3106,7 @@ namespace PaletteExplorer.UX
         {
             if (useCircularPictureBoxes)
             {
-                PaletteComposerEngine.ExportPaletteTheme(palette, _globalMethods.GetSelectedPaletteMode(), cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledControlColourPreview, cbxLinkNormalColourPreview, cbxLinkFocusedColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview, tslCurrentStatus);
+                //PaletteCompisitionEngine.ExportPaletteTheme(palette, _globalMethods.GetSelectedPaletteMode(), cbxBaseColourPreview.BackColor, cbxDarkColourPreview.BackColor, cbxMiddleColourPreview.BackColor, cbxLightColourPreview.BackColor, cbxLightestColourPreview.BackColor, cbxBorderColourPreview.BackColor, cbxAlternativeNormalTextColourPreview.BackColor, cbxNormalTextColourPreview.BackColor, cbxDisabledTextColourPreview.BackColor, cbxFocusedTextColourPreview.BackColor, cbxPressedTextColourPreview.BackColor, cbxDisabledControlColourPreview.BackColor, cbxLinkNormalColourPreview.BackColor, cbxLinkFocusedColourPreview.BackColor, cbxLinkHoverColourPreview.BackColor, cbxLinkVisitedColourPreview.BackColor, cbxCustomColourOnePreview.BackColor, cbxCustomColourTwoPreview.BackColor, cbxCustomColourThreePreview.BackColor, cbxCustomColourFourPreview.BackColor, cbxCustomColourFivePreview.BackColor, cbxCustomTextColourOnePreview.BackColor, cbxCustomTextColourTwoPreview.BackColor, cbxCustomTextColourThreePreview.BackColor, cbxCustomTextColourFourPreview.BackColor, cbxCustomTextColourFivePreview.BackColor, cbxMenuTextColourPreview.BackColor, cbxStatusTextColourPreview.BackColor, cbxRibbonTabTextColourPreview.BackColor, tslCurrentStatus);
             }
             else
             {

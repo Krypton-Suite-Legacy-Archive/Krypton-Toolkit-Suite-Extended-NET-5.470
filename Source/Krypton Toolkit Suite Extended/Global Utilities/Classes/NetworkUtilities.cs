@@ -42,7 +42,7 @@ namespace GlobalUtilities.Classes
                 {
                     if (globalMethods.GetIsTargetPlatformSupported())
                     {
-                        exceptionHandler.ShowException(ex.Message, true, false, false, false, false, null, null, "Exception Caught", MessageBoxButtons.OK, MessageBoxDefaultButton.Button1, MessageBoxIcon.Error);
+                        ExceptionHandler.CaptureException(ex, "Exception Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error, "NetworkUtilities", "CheckInternetConnectionState(string pingAddress = null)");
                     }
                     else
                     {
@@ -77,11 +77,11 @@ namespace GlobalUtilities.Classes
                 {
                     if (globalMethods.GetIsTargetPlatformSupported())
                     {
-                        exceptionHandler.ShowException(ex.Message, true, false, false, false, false, null, null, "Exception Caught", MessageBoxButtons.OK, MessageBoxDefaultButton.Button1, MessageBoxIcon.Error);
+                        ExceptionHandler.CaptureException(ex, "Exception Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error, "NetworkUtilities", "ExistsOnServer(Uri fileLocation)");
                     }
                     else
                     {
-                        exceptionHandler.ShowException(ex.Message, false, false, true, false, false, null, null, "Exception Caught", MessageBoxButtons.OK, MessageBoxDefaultButton.Button1, MessageBoxIcon.Error);
+                        ExceptionHandler.CaptureException(ex, "Exception Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error, "NetworkUtilities", "ExistsOnServer(Uri fileLocation)");
                     }
                 }
 

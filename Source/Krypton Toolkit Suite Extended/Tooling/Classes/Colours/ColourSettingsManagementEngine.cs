@@ -70,7 +70,7 @@ namespace Classes.Colours
                 case AllAvailableColourTypes.DARKESTCOLOUR:
                     colourSettingsManager.SetDarkestColour(colour);
                     break;
-                case AllAvailableColourTypes.DISABLEDCOLOUR:
+                case AllAvailableColourTypes.DISABLEDCONTROLCOLOUR:
                     colourSettingsManager.SetDisabledControlColour(colour);
                     break;
                 case AllAvailableColourTypes.DISABLEDTEXTCOLOUR:
@@ -165,7 +165,7 @@ namespace Classes.Colours
                 case AllAvailableColourTypes.DARKESTCOLOUR:
                     colourStringSettingsManager.SetDarkestColour(ColourFormatting.FormatColourAsString(colour));
                     break;
-                case AllAvailableColourTypes.DISABLEDCOLOUR:
+                case AllAvailableColourTypes.DISABLEDCONTROLCOLOUR:
                     colourStringSettingsManager.SetDisabledColour(ColourFormatting.FormatColourAsString(colour));
                     break;
                 case AllAvailableColourTypes.DISABLEDTEXTCOLOUR:
@@ -300,7 +300,7 @@ namespace Classes.Colours
                     case AllAvailableColourTypes.DARKESTCOLOUR:
                         tempColour = colourSettingsManager.GetDarkestColour();
                         break;
-                    case AllAvailableColourTypes.DISABLEDCOLOUR:
+                    case AllAvailableColourTypes.DISABLEDCONTROLCOLOUR:
                         tempColour = colourSettingsManager.GetDisabledControlColour();
                         break;
                     case AllAvailableColourTypes.DISABLEDTEXTCOLOUR:

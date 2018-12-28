@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using Core.Classes.Colours;
+using GlobalUtilities.Classes;
 using System;
 using System.Windows.Forms;
 
@@ -7,6 +8,7 @@ namespace Core.UX.Debugging
 {
     public partial class ColourSettingsViewer : KryptonForm
     {
+        #region System
         private KryptonPanel kryptonPanel2;
         private KryptonListBox klblRGBValues;
         private KryptonListBox klbHexValues;
@@ -215,6 +217,7 @@ namespace Core.UX.Debugging
             this.ResumeLayout(false);
 
         }
+        #endregion
 
         public ColourSettingsViewer()
         {
@@ -229,7 +232,7 @@ namespace Core.UX.Debugging
             }
             catch (Exception exc)
             {
-                KryptonMessageBox.Show($"Error: { exc.Message }", "An Error Has Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ExceptionHandler.CaptureException(exc, "Exception Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error, "ColourSettingsViewer", "kbtnAllColoursAsHex_Click(object sender, EventArgs e)");
             }
         }
     }

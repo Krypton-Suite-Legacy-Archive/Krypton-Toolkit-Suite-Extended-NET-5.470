@@ -320,7 +320,8 @@
         /// <summary>
         /// The status text colour
         /// </summary>
-        STATUSTEXTCOLOUR
+        STATUSTEXTCOLOUR,
+        RIBBONTABTEXTCOLOUR
     }
 
     public enum BasicPaletteColourDefinitions
@@ -348,7 +349,7 @@
         CUSTOMTEXTCOLOURFOUR,
         CUSTOMTEXTCOLOURFIVE,
         DARKESTCOLOUR,
-        DISABLEDCOLOUR,
+        DISABLEDCONTROLCOLOUR,
         DISABLEDTEXTCOLOUR,
         FOCUSEDTEXTCOLOUR,
         LIGHTCOLOUR,

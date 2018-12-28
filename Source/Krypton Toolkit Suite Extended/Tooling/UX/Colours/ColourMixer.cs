@@ -2,6 +2,7 @@
 using ComponentFactory.Krypton.Toolkit;
 using Core.Classes.Other;
 using Core.Settings.Classes;
+using Core.UX.Colours;
 using Core.UX.Options;
 using System;
 using System.Drawing;
@@ -382,13 +383,6 @@ namespace Core.UX
             paletteColourCreator.Show();
         }
 
-        private void kbtnDefineCustomColours_Click(object sender, EventArgs e)
-        {
-            CustomColours customColours = new CustomColours();
-
-            customColours.Show();
-        }
-
         private void kbtnOptions_Click(object sender, EventArgs e)
         {
             ColourBlendingOptions colourBlendingOptions = new ColourBlendingOptions();
@@ -409,6 +403,13 @@ namespace Core.UX
             {
                 kbtnConvertToRGB.Enabled = true;
             }
+        }
+
+        private void kbtnDefineOtherColours_Click(object sender, EventArgs e)
+        {
+            CustomColours customColours = new CustomColours();
+
+            customColours.Show();
         }
 
         private void kbtnGenerateColour_Click(object sender, EventArgs e)

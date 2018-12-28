@@ -1,21 +1,16 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using GlobalUtilities.Classes;
+using KryptonApplicationUpdater.Classes.SettingsManager;
+using KryptonApplicationUpdater.Enumerations;
+using KryptonApplicationUpdater.Interfaces;
+using KryptonExtendedToolkit.ExtendedToolkit.Controls;
+using Microsoft.WindowsAPICodePack.Taskbar;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Windows.Forms;
-
-using ComponentFactory.Krypton.Toolkit;
-
-using GlobalUtilities.Classes;
-
-using KryptonApplicationUpdater.Classes.SettingsManager;
-using KryptonApplicationUpdater.Enumerations;
-using KryptonApplicationUpdater.Interfaces;
-
-using KryptonExtendedToolkit.ExtendedToolkit.Controls;
-
-using Microsoft.WindowsAPICodePack.Taskbar;
 
 namespace KryptonApplicationUpdater.Classes
 {
@@ -310,7 +305,7 @@ namespace KryptonApplicationUpdater.Classes
             {
                 if (_globalMethods.GetIsTargetPlatformSupported())
                 {
-                    _exceptionHandler.ShowException($"Error: { e.Message }", true, false, false, false, false, null, null, "An Error has Occurred", MessageBoxButtons.OK, MessageBoxDefaultButton.Button1, MessageBoxIcon.Error);
+                    ExceptionHandler.CaptureException(e, "Error Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error, "UpdaterLogic", "CheckForUpdates(string xmlFilePath, Version currentVersion, string pingURL)");
                 }
                 else
                 {
@@ -397,7 +392,7 @@ namespace KryptonApplicationUpdater.Classes
                         {
                             if (_globalMethods.GetIsTargetPlatformSupported())
                             {
-                                _exceptionHandler.ShowException($"Error: { e.Message }", true, false, false, false, false, null, null, "An Error has Occurred", MessageBoxButtons.OK, MessageBoxDefaultButton.Button1, MessageBoxIcon.Error);
+                                ExceptionHandler.CaptureException(e, "Error Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error, "UpdaterLogic", "DownloadFile(WebClient downloadClient, string sourcePath, string destinationPath, KryptonLabel downloadSource = null, KryptonLabel downloadDestination = null, KryptonLabel amountDownloaded = null, KryptonLabel currentSpeed = null, KryptonLabel downloadPercentage = null, ProgressBar downloadProgress = null, Button installUpdateButton = null, KryptonButton kryptonInstallUpdateButton = null, KryptonUACElevatedButton kryptonUACShieldInstallUpdateButton = null, HypertextTransferProtocolType hypertextTransferProtocolType = HypertextTransferProtocolType.HYPERTEXTTRANSFERPROTOCOL)");
                             }
                             else
                             {
@@ -411,7 +406,7 @@ namespace KryptonApplicationUpdater.Classes
             {
                 if (_globalMethods.GetIsTargetPlatformSupported())
                 {
-                    _exceptionHandler.ShowException($"Error: { e.Message }", true, false, false, false, false, null, null, "An Error has Occurred", MessageBoxButtons.OK, MessageBoxDefaultButton.Button1, MessageBoxIcon.Error);
+                    ExceptionHandler.CaptureException(e, "Error Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error, "UpdaterLogic", "DownloadFile(WebClient downloadClient, string sourcePath, string destinationPath, KryptonLabel downloadSource = null, KryptonLabel downloadDestination = null, KryptonLabel amountDownloaded = null, KryptonLabel currentSpeed = null, KryptonLabel downloadPercentage = null, ProgressBar downloadProgress = null, Button installUpdateButton = null, KryptonButton kryptonInstallUpdateButton = null, KryptonUACElevatedButton kryptonUACShieldInstallUpdateButton = null, HypertextTransferProtocolType hypertextTransferProtocolType = HypertextTransferProtocolType.HYPERTEXTTRANSFERPROTOCOL)");
                 }
                 else
                 {
@@ -525,7 +520,7 @@ namespace KryptonApplicationUpdater.Classes
             }
             catch (Exception e)
             {
-                _exceptionHandler.ShowException($"Error: { e.Message }", true);
+                ExceptionHandler.CaptureException(e, "Error Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error, "UpdaterLogic", "IsNewerThan(Version currentApplicationVersion)");
 
                 return false;
             }
