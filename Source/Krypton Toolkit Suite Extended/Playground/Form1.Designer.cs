@@ -77,6 +77,7 @@
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPromptTextBox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             this.kryptonButton9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -131,7 +132,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
-            this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -210,13 +210,8 @@
             this.kuacsbElevate.Values.Text = "Elevate";
             this.kuacsbElevate.Click += new System.EventHandler(this.kuacsbElevate_Click);
             // 
-            // kryptonManager1
-            // 
-            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2010Blue;
-            // 
             // kPal
             // 
-            this.kPal.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.kPal.CustomisedKryptonPaletteFilePath = null;
             // 
             // menuStrip2
@@ -230,7 +225,7 @@
             this.helpToolStripMenuItem1});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(175, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(176, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -408,7 +403,7 @@
             this.customizeToolStripMenuItem1,
             this.optionsToolStripMenuItem1});
             this.toolsToolStripMenuItem1.Name = "toolsToolStripMenuItem1";
-            this.toolsToolStripMenuItem1.Size = new System.Drawing.Size(47, 20);
+            this.toolsToolStripMenuItem1.Size = new System.Drawing.Size(48, 20);
             this.toolsToolStripMenuItem1.Text = "&Tools";
             // 
             // customizeToolStripMenuItem1
@@ -479,7 +474,7 @@
             this.advancedToolStripMenuItem,
             this.basicToolStripMenuItem});
             this.testsToolStripMenuItem.Name = "testsToolStripMenuItem";
-            this.testsToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.testsToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.testsToolStripMenuItem.Text = "Tes&ts";
             // 
             // advancedToolStripMenuItem
@@ -534,6 +529,15 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 659);
             this.kryptonPanel1.TabIndex = 2;
+            // 
+            // kryptonButton11
+            // 
+            this.kryptonButton11.Location = new System.Drawing.Point(257, 346);
+            this.kryptonButton11.Name = "kryptonButton11";
+            this.kryptonButton11.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton11.TabIndex = 31;
+            this.kryptonButton11.Values.Text = "Convert Colour (Hex to RGB)";
+            this.kryptonButton11.Click += new System.EventHandler(this.kryptonButton11_Click);
             // 
             // kryptonButton10
             // 
@@ -633,6 +637,7 @@
             this.kbtnMessageboxTest.Location = new System.Drawing.Point(14, 315);
             this.kbtnMessageboxTest.Name = "kbtnMessageboxTest";
             this.kbtnMessageboxTest.Size = new System.Drawing.Size(218, 25);
+            this.kbtnMessageboxTest.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnMessageboxTest.TabIndex = 21;
             this.kbtnMessageboxTest.Values.Text = "Messagebox Test";
             this.kbtnMessageboxTest.Click += new System.EventHandler(this.kbtnMessageboxTest_Click);
@@ -692,8 +697,6 @@
             this.kcmbGradientDirection.Size = new System.Drawing.Size(188, 27);
             this.kcmbGradientDirection.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbGradientDirection.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcmbGradientDirection.StateCommon.Item.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kcmbGradientDirection.StateCommon.Item.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kcmbGradientDirection.TabIndex = 15;
             this.kcmbGradientDirection.SelectedIndexChanged += new System.EventHandler(this.kcmbGradientDirection_SelectedIndexChanged);
             this.kcmbGradientDirection.TextChanged += new System.EventHandler(this.kcmbGradientDirection_TextChanged);
@@ -704,8 +707,6 @@
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(149, 26);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel1.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel1.TabIndex = 14;
             this.kryptonLabel1.Values.Text = "Gradient Direction:";
             // 
@@ -1004,8 +1005,6 @@
             this.klblAdminMode.Name = "klblAdminMode";
             this.klblAdminMode.Size = new System.Drawing.Size(283, 26);
             this.klblAdminMode.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblAdminMode.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.klblAdminMode.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.klblAdminMode.TabIndex = 0;
             this.klblAdminMode.Values.Text = "Is running in Administrator mode: No";
             // 
@@ -1039,7 +1038,6 @@
             // 
             // etslBlinkTest
             // 
-            this.etslBlinkTest.BackColor = System.Drawing.Color.Empty;
             this.etslBlinkTest.BkClr = false;
             this.etslBlinkTest.BlinkDuration = ((long)(10));
             this.etslBlinkTest.BlinkState = ExtendedControls.Base.Enumerations.BlinkState.NormalBlink;
@@ -1049,7 +1047,7 @@
             this.etslBlinkTest.GradientColourOne = System.Drawing.Color.Lime;
             this.etslBlinkTest.GradientColourTwo = System.Drawing.Color.Red;
             this.etslBlinkTest.Name = "etslBlinkTest";
-            this.etslBlinkTest.Size = new System.Drawing.Size(168, 17);
+            this.etslBlinkTest.Size = new System.Drawing.Size(169, 17);
             this.etslBlinkTest.Text = "extendedToolStripStatusLabel2";
             // 
             // kryptonCheckSet1
@@ -1059,15 +1057,6 @@
             this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnForwardDiagonal);
             this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnBackwardDiagonal);
             this.kryptonCheckSet1.CheckedButton = this.kcbtnForwardDiagonal;
-            // 
-            // kryptonButton11
-            // 
-            this.kryptonButton11.Location = new System.Drawing.Point(257, 346);
-            this.kryptonButton11.Name = "kryptonButton11";
-            this.kryptonButton11.Size = new System.Drawing.Size(218, 25);
-            this.kryptonButton11.TabIndex = 31;
-            this.kryptonButton11.Values.Text = "Convert Colour (Hex to RGB)";
-            this.kryptonButton11.Click += new System.EventHandler(this.kryptonButton11_Click);
             // 
             // Form1
             // 

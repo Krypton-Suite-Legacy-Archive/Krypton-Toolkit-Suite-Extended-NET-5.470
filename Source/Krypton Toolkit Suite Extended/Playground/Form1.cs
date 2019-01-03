@@ -1,21 +1,27 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.Enumerations;
-using ExtendedControls.ExtendedToolkit.UI.Dialogues;
-using ExtendedControls.ExtendedToolkit.UI.Drawing;
-using KryptonApplicationUpdater.Classes.SettingsManager;
-using KryptonApplicationUpdater.Interfaces;
-using KryptonExtendedToolkit.Base.Code;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+
+using ComponentFactory.Krypton.Toolkit;
+
 using Core.Classes.Other;
 using Core.UX;
-using Core.UX.Options;
 using Core.UX.Colours;
+using Core.UX.Options;
+
+using ExtendedControls.Enumerations;
+using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using ExtendedControls.ExtendedToolkit.UI.Dialogues;
+using ExtendedControls.ExtendedToolkit.UI.Drawing;
+
+using KryptonApplicationUpdater.Classes.SettingsManager;
+using KryptonApplicationUpdater.Interfaces;
+
+using KryptonExtendedToolkit.Base.Code;
 
 namespace Playground
 {
@@ -150,21 +156,21 @@ namespace Playground
 
         private void saveAsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-            saveFileDialog.Title = "Save file as:";
-
-            saveFileDialog.Filter = "Normal Text Files (*.txt)|*.txt";
-
-            saveFileDialog.InitialDirectory = Environment.CurrentDirectory;
-
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog
             {
-                StreamWriter writer = new StreamWriter(saveFileDialog.FileName);
+                Title = "Save file as:",
+                Filter = "Normal Text Files (*.txt)|*.txt",
+                InitialDirectory = Environment.CurrentDirectory
+            })
+            {
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    StreamWriter writer = new StreamWriter(saveFileDialog.FileName);
 
-                writer.Write(krtbEditor.Text);
+                    writer.Write(krtbEditor.Text);
 
-                mostRecentlyUsedFileManager.AddRecentFile(Path.GetFullPath(saveFileDialog.FileName));
+                    mostRecentlyUsedFileManager.AddRecentFile(Path.GetFullPath(saveFileDialog.FileName));
+                }
             }
         }
 
@@ -302,14 +308,18 @@ namespace Playground
 
         private void kbtnMessageboxTest_Click(object sender, EventArgs e)
         {
-
+            KryptonMessageBox.Show(this, @"Test KryptonMessagebox", @"Check Title Text Size", MessageBoxButtons.OK);
+            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox Default 12", @"Check Title Text Size", MessageBoxButtons.OK);
+            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox specified 20", @"Check Title Text Size", MessageBoxButtons.OK, messageboxTypeface:new Font(@"Tahoma", 20F));
         }
 
         private void kbtnPaletteEditor_Click(object sender, EventArgs e)
         {
-            PaletteEditor.UX.MainWindow _paletteEditor = new PaletteEditor.UX.MainWindow();
+            KryptonMessageBox.Show(this,
+                @"Once PaletteEditor is building again, then add to references and then this code can be uncommneted!");
+            //PaletteEditor.UX.MainWindow _paletteEditor = new PaletteEditor.UX.MainWindow();
 
-            _paletteEditor.Show();
+            //_paletteEditor.Show();
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)

@@ -16,6 +16,12 @@
 
 ======
 
+## 2019-01-03 ExtendedKryptonMessageBox - Allow large fonts
+* Complete the optional font usage for the 'ExtendedKryptonMessageBox' 
+* Add code behind the PlayGrounds 'MessageBox Test' button.
+* 
+======
+
 ## 2018-12-03 December 2018 Update
 * New controls, including a new, theme-able scrollbar - need help implementing it into controls i.e ComboBox, rich textbox etc.
 * Partially implemented the `ExtendedRenderer` project - due to be completed in early 2019.

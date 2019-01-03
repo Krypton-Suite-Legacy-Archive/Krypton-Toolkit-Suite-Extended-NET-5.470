@@ -1,23 +1,27 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.Properties;
-using KryptonExtendedToolkit.Base.Code;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Media;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
+using ComponentFactory.Krypton.Toolkit;
+
+using ExtendedControls.Properties;
+
+using KryptonExtendedToolkit.Base.Code;
+
+namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
 {
     /// <summary>
     /// Displays a message box that can contain text, buttons, and symbols that inform and instruct the user.
+    /// Allows optional Font to be specified, if not then new Font(@"Segoe UI", 12F) will be used
     /// </summary>
     [ToolboxItem(false)]
-    [ToolboxBitmap(typeof(ExtendedKryptonMessagebox), "ToolboxBitmaps.KryptonMessageBox.bmp")]
+    [ToolboxBitmap(typeof(ExtendedKryptonMessageBox), "ToolboxBitmaps.KryptonMessageBox.bmp")]
     [DesignerCategory("code")]
     [DesignTimeVisible(false)]
-    public class ExtendedKryptonMessagebox : KryptonForm
+    public class ExtendedKryptonMessageBox : KryptonForm
     {
         #region System
         private void InitialiseComponent()
@@ -69,7 +73,7 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
             // _messageText
             // 
             _messageText.AutoSize = false;
-            _messageText.Font = new Font(@"Segoe UI", 9F);
+            _messageText.StateCommon.Font = new Font(@"Segoe UI", 9F);
             _messageText.ForeColor = Color.FromArgb(30, 57, 91);
             _messageText.LabelStyle = LabelStyle.NormalPanel;
             _messageText.Location = new Point(5, 18);
@@ -351,25 +355,28 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         #endregion
 
         #region Constructors
-        static ExtendedKryptonMessagebox()
+        static ExtendedKryptonMessageBox()
         {
             _osMajorVersion = Environment.OSVersion.Version.Major;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExtendedKryptonMessagebox"/> class.
+        /// Initializes a new instance of the <see cref="ExtendedKryptonMessageBox"/> class.
         /// </summary>
-        /// <param name="showOwner">The show owner.</param>
+        /// <param name="showOwner">The show owner. (Can be null)</param>
         /// <param name="text">The text.</param>
-        /// <param name="caption">The caption.</param>
+        /// <param name="caption">The caption. (Can be null)</param>
         /// <param name="buttons">The buttons.</param>
         /// <param name="icon">The icon.</param>
         /// <param name="defaultButton">The default button.</param>
         /// <param name="options">The options.</param>
         /// <param name="helpInformation">The help information.</param>
-        /// <param name="showCtrlCopy">The show control copy.</param>
-        /// <param name="messageboxTypeface">The messagebox typeface.</param>
-        private ExtendedKryptonMessagebox(IWin32Window showOwner, string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton, MessageBoxOptions options, HelpInformation helpInformation, bool? showCtrlCopy, Font messageboxTypeface = null)
+        /// <param name="showCtrlCopy">The show control copy. (Can be null)</param>
+        /// <param name="messageboxTypeface">The messagebox typeface. (Can be null)</param>
+        private ExtendedKryptonMessageBox(IWin32Window showOwner, string text, string caption,
+            MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton,
+            MessageBoxOptions options, HelpInformation helpInformation, bool? showCtrlCopy,
+            Font messageboxTypeface)
         {
             #region Store Values
             _text = text;
@@ -386,16 +393,8 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
 
             _helpInformation = helpInformation;
 
-            if (messageboxTypeface == null)
-            {
-                messageboxTypeface = new Font(@"Segoe UI", 9F);
+            MessageBoxTypeface = messageboxTypeface ?? new Font(@"Segoe UI", 12F);
 
-                MessageBoxTypeface = messageboxTypeface;
-            }
-            else
-            {
-                MessageBoxTypeface = messageboxTypeface;
-            }
             #endregion
 
             // Create the form contents
@@ -441,9 +440,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         /// <param name="text">The text to display in the message box.</param>
         /// <param name="showCtrlCopy">Show extraText in title. If null(default) then only when Warning or Error icon is used.</param>
         /// <returns>One of the System.Windows.Forms.DialogResult values.</returns>
-        public static DialogResult Show(string text, bool? showCtrlCopy = null)
+        public static DialogResult Show(string text, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(null, text, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy);
+            return InternalShow(null, text, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -453,9 +452,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         /// <param name="text">The text to display in the message box.</param>
         /// <param name="showCtrlCopy">Show extraText in title. If null(default) then only when Warning or Error icon is used.</param>
         /// <returns>One of the System.Windows.Forms.DialogResult values.</returns>
-        public static DialogResult Show(IWin32Window owner, string text, bool? showCtrlCopy = null)
+        public static DialogResult Show(IWin32Window owner, string text, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(owner, text, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy);
+            return InternalShow(owner, text, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -465,9 +464,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         /// <param name="caption">The text to display in the title bar of the message box.</param>
         /// <param name="showCtrlCopy">Show extraText in title. If null(default) then only when Warning or Error icon is used.</param>
         /// <returns>One of the System.Windows.Forms.DialogResult values.</returns>
-        public static DialogResult Show(string text, string caption, bool? showCtrlCopy = null)
+        public static DialogResult Show(string text, string caption, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(null, text, caption, MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy);
+            return InternalShow(null, text, caption, MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -479,9 +478,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         /// <param name="showCtrlCopy">Show extraText in title. If null(default) then only when Warning or Error icon is used.</param>
         /// <returns>One of the System.Windows.Forms.DialogResult values.</returns>
         public static DialogResult Show(IWin32Window owner,
-                                        string text, string caption, bool? showCtrlCopy = null)
+                                        string text, string caption, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(owner, text, caption, MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy);
+            return InternalShow(owner, text, caption, MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -493,9 +492,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         /// <param name="showCtrlCopy">Show extraText in title. If null(default) then only when Warning or Error icon is used.</param>
         /// <returns>One of the System.Windows.Forms.DialogResult values.</returns>
         public static DialogResult Show(string text, string caption,
-                                        MessageBoxButtons buttons, bool? showCtrlCopy = null)
+                                        MessageBoxButtons buttons, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(null, text, caption, buttons, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy);
+            return InternalShow(null, text, caption, buttons, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -509,9 +508,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         /// <returns>One of the System.Windows.Forms.DialogResult values.</returns>
         public static DialogResult Show(IWin32Window owner,
                                         string text, string caption,
-                                        MessageBoxButtons buttons, bool? showCtrlCopy = null)
+                                        MessageBoxButtons buttons, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(owner, text, caption, buttons, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy);
+            return InternalShow(owner, text, caption, buttons, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -524,9 +523,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         /// <param name="showCtrlCopy">Show extraText in title. If null(default) then only when Warning or Error icon is used.</param>
         /// <returns>One of the System.Windows.Forms.DialogResult values.</returns>
         public static DialogResult Show(string text, string caption,
-                                        MessageBoxButtons buttons, MessageBoxIcon icon, bool? showCtrlCopy = null)
+                                        MessageBoxButtons buttons, MessageBoxIcon icon, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(null, text, caption, buttons, icon, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy);
+            return InternalShow(null, text, caption, buttons, icon, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -541,9 +540,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         /// <returns>One of the System.Windows.Forms.DialogResult values.</returns>
         public static DialogResult Show(IWin32Window owner,
                                         string text, string caption,
-                                        MessageBoxButtons buttons, MessageBoxIcon icon, bool? showCtrlCopy = null)
+                                        MessageBoxButtons buttons, MessageBoxIcon icon, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(owner, text, caption, buttons, icon, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy);
+            return InternalShow(owner, text, caption, buttons, icon, MessageBoxDefaultButton.Button1, 0, null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -558,9 +557,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         /// <returns>One of the System.Windows.Forms.DialogResult values.</returns>
         public static DialogResult Show(string text, string caption,
                                         MessageBoxButtons buttons, MessageBoxIcon icon,
-                                        MessageBoxDefaultButton defaultButton, bool? showCtrlCopy = null)
+                                        MessageBoxDefaultButton defaultButton, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(null, text, caption, buttons, icon, defaultButton, 0, null, showCtrlCopy);
+            return InternalShow(null, text, caption, buttons, icon, defaultButton, 0, null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -577,9 +576,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         public static DialogResult Show(IWin32Window owner,
                                         string text, string caption,
                                         MessageBoxButtons buttons, MessageBoxIcon icon,
-                                        MessageBoxDefaultButton defaultButton, bool? showCtrlCopy = null)
+                                        MessageBoxDefaultButton defaultButton, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(owner, text, caption, buttons, icon, defaultButton, 0, null, showCtrlCopy);
+            return InternalShow(owner, text, caption, buttons, icon, defaultButton, 0, null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -595,9 +594,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         /// <returns>One of the System.Windows.Forms.DialogResult values.</returns>
         public static DialogResult Show(string text, string caption,
                                         MessageBoxButtons buttons, MessageBoxIcon icon,
-                                        MessageBoxDefaultButton defaultButton, MessageBoxOptions options, bool? showCtrlCopy = null)
+                                        MessageBoxDefaultButton defaultButton, MessageBoxOptions options, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(null, text, caption, buttons, icon, defaultButton, options, null, showCtrlCopy);
+            return InternalShow(null, text, caption, buttons, icon, defaultButton, options, null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -615,9 +614,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         public static DialogResult Show(IWin32Window owner,
                                         string text, string caption,
                                         MessageBoxButtons buttons, MessageBoxIcon icon,
-                                        MessageBoxDefaultButton defaultButton, MessageBoxOptions options, bool? showCtrlCopy = null)
+                                        MessageBoxDefaultButton defaultButton, MessageBoxOptions options, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(owner, text, caption, buttons, icon, defaultButton, options, null, showCtrlCopy);
+            return InternalShow(owner, text, caption, buttons, icon, defaultButton, options, null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -635,9 +634,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         public static DialogResult Show(string text, string caption,
                                         MessageBoxButtons buttons, MessageBoxIcon icon,
                                         MessageBoxDefaultButton defaultButton, MessageBoxOptions options,
-                                        bool displayHelpButton, bool? showCtrlCopy = null)
+                                        bool displayHelpButton, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(null, text, caption, buttons, icon, defaultButton, options, displayHelpButton ? new HelpInformation() : null, showCtrlCopy);
+            return InternalShow(null, text, caption, buttons, icon, defaultButton, options, displayHelpButton ? new HelpInformation() : null, showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -655,9 +654,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         public static DialogResult Show(string text, string caption,
                                         MessageBoxButtons buttons, MessageBoxIcon icon,
                                         MessageBoxDefaultButton defaultButton, MessageBoxOptions options,
-                                        string helpFilePath, bool? showCtrlCopy = null)
+                                        string helpFilePath, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(null, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath), showCtrlCopy);
+            return InternalShow(null, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath), showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -677,9 +676,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
                                         string text, string caption,
                                         MessageBoxButtons buttons, MessageBoxIcon icon,
                                         MessageBoxDefaultButton defaultButton, MessageBoxOptions options,
-                                        string helpFilePath, bool? showCtrlCopy = null)
+                                        string helpFilePath, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(owner, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath), showCtrlCopy);
+            return InternalShow(owner, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath), showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -698,9 +697,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         public static DialogResult Show(string text, string caption,
                                         MessageBoxButtons buttons, MessageBoxIcon icon,
                                         MessageBoxDefaultButton defaultButton, MessageBoxOptions options,
-                                        string helpFilePath, HelpNavigator navigator, bool? showCtrlCopy = null)
+                                        string helpFilePath, HelpNavigator navigator, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(null, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath, navigator), showCtrlCopy);
+            return InternalShow(null, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath, navigator), showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -719,9 +718,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         public static DialogResult Show(string text, string caption,
                                         MessageBoxButtons buttons, MessageBoxIcon icon,
                                         MessageBoxDefaultButton defaultButton, MessageBoxOptions options,
-                                        string helpFilePath, string keyword, bool? showCtrlCopy = null)
+                                        string helpFilePath, string keyword, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(null, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath, keyword), showCtrlCopy);
+            return InternalShow(null, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath, keyword), showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -742,9 +741,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
                                         string text, string caption,
                                         MessageBoxButtons buttons, MessageBoxIcon icon,
                                         MessageBoxDefaultButton defaultButton, MessageBoxOptions options,
-                                        string helpFilePath, HelpNavigator navigator, bool? showCtrlCopy = null)
+                                        string helpFilePath, HelpNavigator navigator, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(owner, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath, navigator), showCtrlCopy);
+            return InternalShow(owner, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath, navigator), showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -765,9 +764,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
                                         string text, string caption,
                                         MessageBoxButtons buttons, MessageBoxIcon icon,
                                         MessageBoxDefaultButton defaultButton, MessageBoxOptions options,
-                                        string helpFilePath, string keyword, bool? showCtrlCopy = null)
+                                        string helpFilePath, string keyword, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(owner, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath, keyword), showCtrlCopy);
+            return InternalShow(owner, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath, keyword), showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -787,33 +786,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         public static DialogResult Show(string text, string caption,
                                         MessageBoxButtons buttons, MessageBoxIcon icon,
                                         MessageBoxDefaultButton defaultButton, MessageBoxOptions options,
-                                        string helpFilePath, HelpNavigator navigator, object param, bool? showCtrlCopy = null)
+                                        string helpFilePath, HelpNavigator navigator, object param, bool? showCtrlCopy = null, Font messageboxTypeface = null)
         {
-            return InternalShow(null, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath, navigator, param), showCtrlCopy);
-        }
-
-        /// <summary>
-        /// Displays a message box with the specified text, caption, buttons, icon, default button, options, and Help button, using the specified Help file, HelpNavigator, and Help topic.
-        /// </summary>
-        /// <param name="owner">Owner of the modal dialog box.</param>
-        /// <param name="text">The text to display in the message box.</param>
-        /// <param name="caption">The text to display in the title bar of the message box.</param>
-        /// <param name="buttons">One of the System.Windows.Forms.MessageBoxButtons values that specifies which buttons to display in the message box.</param>
-        /// <param name="icon">One of the System.Windows.Forms.MessageBoxIcon values that specifies which icon to display in the message box.</param>
-        /// <param name="defaultButton">One of the System.Windows.Forms.MessageBoxDefaultButton values that specifies the default button for the message box.</param>
-        /// <param name="options">One of the System.Windows.Forms.MessageBoxOptions values that specifies which display and association options will be used for the message box. You may pass in 0 if you wish to use the defaults.</param>
-        /// <param name="helpFilePath">The path and name of the Help file to display when the user clicks the Help button.</param>
-        /// <param name="navigator">One of the System.Windows.Forms.HelpNavigator values.</param>
-        /// <param name="param">The numeric ID of the Help topic to display when the user clicks the Help button.</param>
-        /// <param name="showCtrlCopy">Show extraText in title. If null(default) then only when Warning or Error icon is used.</param>
-        /// <returns>One of the System.Windows.Forms.DialogResult values.</returns>
-        public static DialogResult Show(IWin32Window owner,
-                                        string text, string caption,
-                                        MessageBoxButtons buttons, MessageBoxIcon icon,
-                                        MessageBoxDefaultButton defaultButton, MessageBoxOptions options,
-                                        string helpFilePath, HelpNavigator navigator, object param, bool? showCtrlCopy = null)
-        {
-            return InternalShow(owner, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath, navigator, param), showCtrlCopy);
+            return InternalShow(null, text, caption, buttons, icon, defaultButton, options, new HelpInformation(helpFilePath, navigator, param), showCtrlCopy, messageboxTypeface);
         }
 
         /// <summary>
@@ -878,19 +853,8 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
             }
 
             // Show message box window as a modal dialog and then dispose of it afterwards
-            using (ExtendedKryptonMessagebox ekmb = new ExtendedKryptonMessagebox(showOwner, text, caption, buttons, icon, defaultButton, options, helpInformation, showCtrlCopy, messageboxTypeface))
+            using (ExtendedKryptonMessageBox ekmb = new ExtendedKryptonMessageBox(showOwner, text, caption, buttons, icon, defaultButton, options, helpInformation, showCtrlCopy, messageboxTypeface))
             {
-                if (messageboxTypeface == null)
-                {
-                    messageboxTypeface = new Font(@"Segoe UI", 9F);
-
-                    ekmb.MessageBoxTypeface = messageboxTypeface;
-                }
-                else
-                {
-                    ekmb.MessageBoxTypeface = messageboxTypeface;
-                }
-
                 ekmb.StartPosition = showOwner == null ? FormStartPosition.CenterScreen : FormStartPosition.CenterParent;
 
                 return ekmb.ShowDialog(showOwner);
@@ -900,7 +864,7 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
         private void UpdateText()
         {
             Text = (string.IsNullOrEmpty(_caption) ? string.Empty : _caption.Split(Environment.NewLine.ToCharArray())[0]);
-            _messageText.Font = MessageBoxTypeface;
+            _messageText.StateCommon.Font = MessageBoxTypeface;
             _messageText.Text = _text;
         }
 
@@ -971,7 +935,7 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
                 case MessageBoxButtons.OK:
                     _button1.Text = KryptonManager.Strings.OK;
                     _button1.DialogResult = DialogResult.OK;
-                    _button1.Font = MessageBoxTypeface;
+                    _button1.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
                     _button2.Visible = _button3.Visible = false;
                     break;
                 case MessageBoxButtons.OKCancel:
@@ -979,8 +943,8 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
                     _button2.Text = KryptonManager.Strings.Cancel;
                     _button1.DialogResult = DialogResult.OK;
                     _button2.DialogResult = DialogResult.Cancel;
-                    _button1.Font = MessageBoxTypeface;
-                    _button2.Font = MessageBoxTypeface;
+                    _button1.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
+                    _button2.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
                     _button3.Visible = false;
                     break;
                 case MessageBoxButtons.YesNo:
@@ -988,8 +952,8 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
                     _button2.Text = KryptonManager.Strings.No;
                     _button1.DialogResult = DialogResult.Yes;
                     _button2.DialogResult = DialogResult.No;
-                    _button1.Font = MessageBoxTypeface;
-                    _button2.Font = MessageBoxTypeface;
+                    _button1.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
+                    _button2.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
                     _button3.Visible = false;
                     ControlBox = false;
                     break;
@@ -1000,17 +964,17 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
                     _button1.DialogResult = DialogResult.Yes;
                     _button2.DialogResult = DialogResult.No;
                     _button3.DialogResult = DialogResult.Cancel;
-                    _button1.Font = MessageBoxTypeface;
-                    _button2.Font = MessageBoxTypeface;
-                    _button3.Font = MessageBoxTypeface;
+                    _button1.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
+                    _button2.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
+                    _button3.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
                     break;
                 case MessageBoxButtons.RetryCancel:
                     _button1.Text = KryptonManager.Strings.Retry;
                     _button2.Text = KryptonManager.Strings.Cancel;
                     _button1.DialogResult = DialogResult.Retry;
                     _button2.DialogResult = DialogResult.Cancel;
-                    _button1.Font = MessageBoxTypeface;
-                    _button2.Font = MessageBoxTypeface;
+                    _button1.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
+                    _button2.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
                     _button3.Visible = false;
                     break;
                 case MessageBoxButtons.AbortRetryIgnore:
@@ -1020,9 +984,9 @@ namespace ExtendedControls.ExtendedToolkit.Messageboxes.UI
                     _button1.DialogResult = DialogResult.Abort;
                     _button2.DialogResult = DialogResult.Retry;
                     _button3.DialogResult = DialogResult.Ignore;
-                    _button1.Font = MessageBoxTypeface;
-                    _button2.Font = MessageBoxTypeface;
-                    _button3.Font = MessageBoxTypeface;
+                    _button1.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
+                    _button2.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
+                    _button3.StateCommon.Content.ShortText.Font = MessageBoxTypeface;
                     ControlBox = false;
                     break;
             }
