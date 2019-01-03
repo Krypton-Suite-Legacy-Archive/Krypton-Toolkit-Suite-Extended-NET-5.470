@@ -241,8 +241,8 @@
     <Compile Include="ExtendedToolkit\FloatingFramework\UX\KryptonFloatingForm.Designer.cs">
       <DependentUpon>KryptonFloatingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExtendedToolkit\Messageboxes\Classes\ExtendedKryptonMessagebox.cs" />
-    <Compile Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessageboxOld.cs">
+    <Compile Include="ExtendedToolkit\MessageBoxes\Classes\ExtendedKryptonMessageBox.cs" />
+    <Compile Include="ExtendedToolkit\MessageBoxes\UI\ExtendedKryptonMessageboxOld.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\ExtendedToolStripStatusLabel.cs">
@@ -270,8 +270,8 @@
     <Compile Include="ExtendedToolkit\Controls\KryptonToolStripStatusLabelExtended.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\Messageboxes\Classes\Globals.cs" />
-    <Compile Include="ExtendedToolkit\Messageboxes\Enumerations\MessageBoxSpecificEnumerations.cs" />
+    <Compile Include="ExtendedToolkit\MessageBoxes\Classes\Globals.cs" />
+    <Compile Include="ExtendedToolkit\MessageBoxes\Enumerations\MessageBoxSpecificEnumerations.cs" />
     <Compile Include="ExtendedToolkit\SystemDialogs\KryptonFolderPickerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -475,7 +475,7 @@
     <EmbeddedResource Include="ExtendedToolkit\FloatingFramework\UX\KryptonFloatingForm.resx">
       <DependentUpon>KryptonFloatingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessageboxOld.resx">
+    <EmbeddedResource Include="ExtendedToolkit\MessageBoxes\UI\ExtendedKryptonMessageboxOld.resx">
       <DependentUpon>ExtendedKryptonMessageboxOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\KryptonFolderPickerDialog.resx">

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28407.52
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extended Controls", "Extended Controls\Extended Controls.csproj", "{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}"
 EndProject
@@ -311,5 +311,16 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4D1018D-143A-451D-8FC0-F63E4923F552}
+	EndGlobalSection
+	GlobalSection(AutomaticVersions) = postSolution
+		UpdateAssemblyVersion = True
+		UpdateAssemblyFileVersion = True
+		UpdateAssemblyInfoVersion = True
+		AssemblyVersionSettings = None.None.Increment.None
+		AssemblyFileVersionSettings = None.None.Increment.None
+		AssemblyInfoVersionSettings = None.None.Increment.None
+		UpdatePackageVersion = False
+		AssemblyInfoVersionType = SettingsVersion
+		InheritWinAppVersionFrom = None
 	EndGlobalSection
 EndGlobal

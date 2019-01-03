@@ -64,7 +64,7 @@ namespace Core.Settings.Classes
             {
                 DialogResult result = KryptonMessageBox.Show("Do you want to save the current string settings?", "Save Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                //KryptonMessageBoxExtendedResult result = ExtendedKryptonMessagebox.Show("Do you want to save the current colour settings?", "Save Confirmation", KryptonMessageBoxExtendedButtons.YESNO, KryptonMessageBoxExtendedIcon.QUESTION);
+                //KryptonMessageBoxExtendedResult result = ExtendedKryptonMessageBox.Show("Do you want to save the current colour settings?", "Save Confirmation", KryptonMessageBoxExtendedButtons.YESNO, KryptonMessageBoxExtendedIcon.QUESTION);
 
                 if (result == DialogResult.Yes)
                 {
