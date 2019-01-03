@@ -16,10 +16,10 @@
 
 ======
 
-## 2019-01-03 ExtendedKryptonMessageBox - Allow large fonts
-* Complete the optional font usage for the 'ExtendedKryptonMessageBox' 
-* Add code behind the PlayGrounds 'MessageBox Test' button.
-* 
+## 2019-01-03 ExtendedKryptonMessageBox - Allow large, and optional fonts
+* Complete the optional font usage for the `ExtendedKryptonMessageBox` 
+* Add code behind the PlayGrounds `MessageBox Test` button.
+
 ======
 
 ## 2018-12-03 December 2018 Update
