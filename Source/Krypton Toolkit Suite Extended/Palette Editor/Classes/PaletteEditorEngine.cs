@@ -46,7 +46,7 @@ namespace PaletteEditor.Classes
         /// <param name="statusTextColour">The status text colour.</param>
         /// <param name="statusState">State of the status.</param>
         /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
-        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour, PictureBox statusTextColour, ToolStripLabel statusState, bool invertColours = false)
+        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkFocusedColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour, PictureBox statusTextColour, PictureBox ribbonTabTextColour, ToolStripLabel statusState, bool invertColours = false)
         {
             palette = new KryptonPalette();
 
@@ -346,6 +346,10 @@ namespace PaletteEditor.Classes
 
                 palette.LabelStyles.LabelNormalControl.OverrideVisited.ShortText.Color1 = linkVisitedColourPreview.BackColor;
 
+                palette.LabelStyles.LabelNormalControl.OverrideFocus.LongText.Color1 = linkFocusedColourPreview.BackColor;
+
+                palette.LabelStyles.LabelNormalControl.OverrideFocus.ShortText.Color1 = linkFocusedColourPreview.BackColor;
+
                 palette.LabelStyles.LabelNormalControl.StateDisabled.LongText.Color1 = disabledTextColourPreview.BackColor;
 
                 palette.LabelStyles.LabelNormalControl.StateDisabled.ShortText.Color1 = disabledTextColourPreview.BackColor;
@@ -475,6 +479,8 @@ namespace PaletteEditor.Classes
                 palette.Ribbon.RibbonTab.StateContextCheckedTracking.BackColor2 = middleColour.BackColor;
 
                 palette.Ribbon.RibbonTab.StateTracking.BackColor2 = middleColour.BackColor;
+
+                palette.Ribbon.RibbonTab.StateNormal.TextColor = ribbonTabTextColour.BackColor;
                 #endregion
 
                 #region Separator Styles
@@ -620,7 +626,7 @@ namespace PaletteEditor.Classes
         /// <param name="statusTextColour">The status text colour.</param>
         /// <param name="statusState">State of the status.</param>
         /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
-        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColourPreview, Color alternativeNormalTextColourPreview, Color normalTextColourPreview, Color disabledTextColourPreview, Color focusedTextColourPreview, Color pressedTextColourPreview, Color disabledColourPreview, Color linkNormalColourPreview, Color linkHoverColourPreview, Color linkVisitedColourPreview, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, ToolStripLabel statusState, bool invertColours = false)
+        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColourPreview, Color alternativeNormalTextColourPreview, Color normalTextColourPreview, Color disabledTextColourPreview, Color focusedTextColourPreview, Color pressedTextColourPreview, Color disabledColourPreview, Color linkNormalColourPreview, Color linkFocusedColourPreview, Color linkHoverColourPreview, Color linkVisitedColourPreview, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour, ToolStripLabel statusState, bool invertColours = false)
         {
             try
             {
@@ -815,6 +821,10 @@ namespace PaletteEditor.Classes
 
                     palette.LabelStyles.LabelNormalControl.OverrideVisited.ShortText.Color1 = linkVisitedColourPreview;
 
+                    palette.LabelStyles.LabelNormalControl.OverrideFocus.LongText.Color1 = linkFocusedColourPreview;
+
+                    palette.LabelStyles.LabelNormalControl.OverrideFocus.ShortText.Color1 = linkFocusedColourPreview;
+
                     palette.LabelStyles.LabelNormalControl.StateDisabled.LongText.Color1 = disabledTextColourPreview;
 
                     palette.LabelStyles.LabelNormalControl.StateDisabled.ShortText.Color1 = disabledTextColourPreview;
@@ -944,6 +954,8 @@ namespace PaletteEditor.Classes
                     palette.Ribbon.RibbonTab.StateContextCheckedTracking.BackColor2 = middleColour;
 
                     palette.Ribbon.RibbonTab.StateTracking.BackColor2 = middleColour;
+
+                    palette.Ribbon.RibbonTab.StateNormal.TextColor = ribbonTabTextColour;
                     #endregion
 
                     #region Separator Styles
@@ -1093,7 +1105,7 @@ namespace PaletteEditor.Classes
         /// <param name="statusTextColour">The status text colour.</param>
         /// <param name="statusState">State of the status.</param>
         /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
-        public static void ExportPalette(PaletteMode paletteMode, PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour, PictureBox statusTextColour, ToolStripLabel statusState, bool invertColours = false)
+        public static void ExportPalette(PaletteMode paletteMode, PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkFocusedColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour, PictureBox statusTextColour, PictureBox ribbonTabTextColour, ToolStripLabel statusState, bool invertColours = false)
         {
             KryptonPalette palette = new KryptonPalette();
 
@@ -1295,6 +1307,10 @@ namespace PaletteEditor.Classes
 
                     palette.LabelStyles.LabelNormalControl.OverrideVisited.ShortText.Color1 = linkVisitedColourPreview.BackColor;
 
+                    palette.LabelStyles.LabelNormalControl.OverrideFocus.LongText.Color1 = linkFocusedColourPreview.BackColor;
+
+                    palette.LabelStyles.LabelNormalControl.OverrideFocus.ShortText.Color1 = linkFocusedColourPreview.BackColor;
+
                     palette.LabelStyles.LabelNormalControl.StateDisabled.LongText.Color1 = disabledTextColourPreview.BackColor;
 
                     palette.LabelStyles.LabelNormalControl.StateDisabled.ShortText.Color1 = disabledTextColourPreview.BackColor;
@@ -1424,6 +1440,8 @@ namespace PaletteEditor.Classes
                     palette.Ribbon.RibbonTab.StateContextCheckedTracking.BackColor2 = middleColour.BackColor;
 
                     palette.Ribbon.RibbonTab.StateTracking.BackColor2 = middleColour.BackColor;
+
+                    palette.Ribbon.RibbonTab.StateNormal.TextColor = ribbonTabTextColour.BackColor;
                     #endregion
 
                     #region Separator Styles
@@ -1600,7 +1618,7 @@ namespace PaletteEditor.Classes
         /// <param name="statusTextColour">The status text colour.</param>
         /// <param name="statusState">State of the status.</param>
         /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
-        public static void ExportPalette(PaletteMode paletteMode, CircularPictureBox baseColour, CircularPictureBox darkColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, CircularPictureBox borderColourPreview, CircularPictureBox alternativeNormalTextColourPreview, CircularPictureBox normalTextColourPreview, CircularPictureBox disabledTextColourPreview, CircularPictureBox focusedTextColourPreview, CircularPictureBox pressedTextColourPreview, CircularPictureBox disabledColourPreview, CircularPictureBox linkNormalColourPreview, CircularPictureBox linkHoverColourPreview, CircularPictureBox linkVisitedColourPreview, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColour, CircularPictureBox statusTextColour, ToolStripLabel statusState, bool invertColours = false)
+        public static void ExportPalette(PaletteMode paletteMode, CircularPictureBox baseColour, CircularPictureBox darkColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, CircularPictureBox borderColourPreview, CircularPictureBox alternativeNormalTextColourPreview, CircularPictureBox normalTextColourPreview, CircularPictureBox disabledTextColourPreview, CircularPictureBox focusedTextColourPreview, CircularPictureBox pressedTextColourPreview, CircularPictureBox disabledColourPreview, CircularPictureBox linkNormalColourPreview, CircularPictureBox linkFocusedColourPreview, CircularPictureBox linkHoverColourPreview, CircularPictureBox linkVisitedColourPreview, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColour, CircularPictureBox statusTextColour, CircularPictureBox ribbonTabTextColour, ToolStripLabel statusState, bool invertColours = false)
         {
             KryptonPalette palette = new KryptonPalette();
 
@@ -1802,6 +1820,10 @@ namespace PaletteEditor.Classes
 
                     palette.LabelStyles.LabelNormalControl.OverrideVisited.ShortText.Color1 = linkVisitedColourPreview.BackColor;
 
+                    palette.LabelStyles.LabelNormalControl.OverrideFocus.LongText.Color1 = linkFocusedColourPreview.BackColor;
+
+                    palette.LabelStyles.LabelNormalControl.OverrideFocus.ShortText.Color1 = linkFocusedColourPreview.BackColor;
+
                     palette.LabelStyles.LabelNormalControl.StateDisabled.LongText.Color1 = disabledTextColourPreview.BackColor;
 
                     palette.LabelStyles.LabelNormalControl.StateDisabled.ShortText.Color1 = disabledTextColourPreview.BackColor;
@@ -1931,6 +1953,8 @@ namespace PaletteEditor.Classes
                     palette.Ribbon.RibbonTab.StateContextCheckedTracking.BackColor2 = middleColour.BackColor;
 
                     palette.Ribbon.RibbonTab.StateTracking.BackColor2 = middleColour.BackColor;
+
+                    palette.Ribbon.RibbonTab.StateNormal.TextColor = ribbonTabTextColour.BackColor;
                     #endregion
 
                     #region Separator Styles

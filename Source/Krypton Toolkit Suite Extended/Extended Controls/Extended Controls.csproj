@@ -241,7 +241,8 @@
     <Compile Include="ExtendedToolkit\FloatingFramework\UX\KryptonFloatingForm.Designer.cs">
       <DependentUpon>KryptonFloatingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExtendedToolkit\Messageboxes\Classes\ExtendedKryptonMessagebox.cs">
+    <Compile Include="ExtendedToolkit\Messageboxes\Classes\ExtendedKryptonMessagebox.cs" />
+    <Compile Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessageboxOld.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\ExtendedToolStripStatusLabel.cs">
@@ -447,6 +448,13 @@
     <None Include="Resources\palette.bmp" />
     <None Include="Resources\Up.png" />
     <None Include="Resources\arrowControl.Image.png" />
+    <None Include="Resources\Critical_32_x_32.png" />
+    <None Include="Resources\Hand_32_x_32.png" />
+    <None Include="Resources\Information_32_x_32.png" />
+    <None Include="Resources\Ok_32_x_32.png" />
+    <None Include="Resources\Question_32_x_32.png" />
+    <None Include="Resources\Stop_32_x_32.png" />
+    <None Include="Resources\Warning_32_x_32.png" />
     <Content Include="ToolboxBitmaps\GlassButton.bmp" />
     <Content Include="ToolboxBitmaps\KryptonForm.bmp" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
@@ -467,8 +475,8 @@
     <EmbeddedResource Include="ExtendedToolkit\FloatingFramework\UX\KryptonFloatingForm.resx">
       <DependentUpon>KryptonFloatingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExtendedToolkit\Messageboxes\Classes\ExtendedKryptonMessagebox.resx">
-      <DependentUpon>ExtendedKryptonMessagebox.cs</DependentUpon>
+    <EmbeddedResource Include="ExtendedToolkit\Messageboxes\UI\ExtendedKryptonMessageboxOld.resx">
+      <DependentUpon>ExtendedKryptonMessageboxOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\KryptonFolderPickerDialog.resx">
       <DependentUpon>KryptonFolderPickerDialog.cs</DependentUpon>
@@ -509,7 +517,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ExtendedToolkit\Messageboxes\UI\" />
     <Folder Include="ExtendedToolkit\UI\SoftwareUpdater\Classes\" />
   </ItemGroup>
   <ItemGroup>

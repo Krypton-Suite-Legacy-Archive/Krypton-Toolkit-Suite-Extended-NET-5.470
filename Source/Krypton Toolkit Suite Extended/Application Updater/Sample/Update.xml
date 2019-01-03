@@ -23,8 +23,8 @@
   <knowledgebaseArticleNumberURL>http://#SOME_DOMAIN/files/KBArticle#000000.html</knowledgebaseArticleNumberURL>
   <installCountdown>60</installCountdown>
   <updatePackageFileSize>30</updatePackageFileSize>
-  <updatePackageBuildDate>Wednesday 14th March, 2018 12:00:00 AM</updatePackageBuildDate>
-  <updatePackageReleaseDate>Wednesday 14th March, 2018 12:00:00 AM</updatePackageReleaseDate>
+  <updatePackageBuildDate>Wednesday 14th March, 2018 - 2019 12:00:00 AM</updatePackageBuildDate>
+  <updatePackageReleaseDate>Wednesday 14th March, 2018 - 2019 12:00:00 AM</updatePackageReleaseDate>
   <betaFlag>false</betaFlag>
   <startUpdateInstallationUponDownloadCompletion>false</startUpdateInstallationUponDownloadCompletion>
   <virusTotalScanURL></virusTotalScanURL>

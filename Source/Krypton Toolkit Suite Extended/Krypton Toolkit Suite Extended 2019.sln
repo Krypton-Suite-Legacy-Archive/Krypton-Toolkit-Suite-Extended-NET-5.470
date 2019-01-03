@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27323.2
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extended Controls", "Extended Controls\Extended Controls.csproj", "{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}"
 EndProject
@@ -22,8 +22,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{3B7410
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Update File Creator", "Update File Creator\Update File Creator.csproj", "{589068CB-78CE-40FA-95AA-9FEAD9C183F2}"
-EndProject
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WIX Setup", "WIX Setup\WIX Setup.wixproj", "{7474A9BB-8747-4EF7-8513-04C8229CFD95}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Required", "Required", "{A0FB35B2-7BF6-4EA9-8A27-25DB28534230}"
 	ProjectSection(SolutionItems) = preProject
@@ -178,16 +176,6 @@ Global
 		{589068CB-78CE-40FA-95AA-9FEAD9C183F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{589068CB-78CE-40FA-95AA-9FEAD9C183F2}.Release|x86.ActiveCfg = Release|Any CPU
 		{589068CB-78CE-40FA-95AA-9FEAD9C183F2}.Release|x86.Build.0 = Release|Any CPU
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Debug|x86.ActiveCfg = Debug|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Debug|x86.Build.0 = Debug|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Installer Only|Any CPU.ActiveCfg = Release|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Installer Only|Any CPU.Build.0 = Release|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Installer Only|x86.ActiveCfg = Debug|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Installer Only|x86.Build.0 = Debug|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Release|Any CPU.ActiveCfg = Release|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Release|x86.ActiveCfg = Release|x86
-		{7474A9BB-8747-4EF7-8513-04C8229CFD95}.Release|x86.Build.0 = Release|x86
 		{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}.Debug|x86.ActiveCfg = Debug|Any CPU

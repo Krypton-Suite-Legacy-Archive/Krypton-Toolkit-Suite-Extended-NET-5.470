@@ -181,7 +181,7 @@ namespace Core.Classes.Other
 
                 ColourSettingsManagementEngine.SetColourSettingsAsColour(AllAvailableColourTypes.DARKESTCOLOUR, palette.ButtonStyles.ButtonCluster.StatePressed.Back.Color1);
 
-                ColourSettingsManagementEngine.SetColourSettingsAsColour(AllAvailableColourTypes.DISABLEDCOLOUR, palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1);
+                ColourSettingsManagementEngine.SetColourSettingsAsColour(AllAvailableColourTypes.DISABLEDCONTROLCOLOUR, palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1);
 
                 ColourSettingsManagementEngine.SetColourSettingsAsColour(AllAvailableColourTypes.DISABLEDTEXTCOLOUR, palette.ButtonStyles.ButtonCommon.StateDisabled.Content.LongText.Color1);
 
@@ -265,7 +265,7 @@ namespace Core.Classes.Other
 
                 ColourSettingsManagementEngine.SetColourSettingsAsColour(AllAvailableColourTypes.DARKESTCOLOUR, palette.ButtonStyles.ButtonCluster.StatePressed.Back.Color1);
 
-                ColourSettingsManagementEngine.SetColourSettingsAsColour(AllAvailableColourTypes.DISABLEDCOLOUR, palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1);
+                ColourSettingsManagementEngine.SetColourSettingsAsColour(AllAvailableColourTypes.DISABLEDCONTROLCOLOUR, palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1);
 
                 ColourSettingsManagementEngine.SetColourSettingsAsColour(AllAvailableColourTypes.DISABLEDTEXTCOLOUR, palette.ButtonStyles.ButtonCommon.StateDisabled.Content.LongText.Color1);
 

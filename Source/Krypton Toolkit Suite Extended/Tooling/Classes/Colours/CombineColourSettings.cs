@@ -1,15 +1,16 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Core.Settings.Classes;
+using GlobalUtilities.Classes;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Core.Settings.Classes;
 
 namespace Classes.Colours
 {
     public class CombineColourSettings
     {
         #region Variables
-        private Color _baseColour, _darkColour, _middleColour, _lightColour, _lightestColour, _borderColourPreview, _alternativeNormalTextColourPreview, _normalTextColourPreview, _disabledTextColourPreview, _focusedTextColourPreview, _pressedTextColourPreview, _disabledColourPreview, _linkNormalColourPreview, _linkHoverColourPreview, _linkVisitedColourPreview, _customColourOne, _customColourTwo, _customColourThree, _customColourFour, _customColourFive, _customTextColourOne, _customTextColourTwo, _customTextColourThree, _customTextColourFour, _customTextColourFive, _menuTextColour, _statusTextColour;
+        private Color _baseColour, _darkColour, _middleColour, _lightColour, _lightestColour, _borderColourPreview, _alternativeNormalTextColourPreview, _normalTextColourPreview, _disabledTextColourPreview, _focusedTextColourPreview, _pressedTextColourPreview, _disabledColourPreview, _linkNormalColourPreview, _linkHoverColourPreview, _linkVisitedColourPreview, _customColourOne, _customColourTwo, _customColourThree, _customColourFour, _customColourFive, _customTextColourOne, _customTextColourTwo, _customTextColourThree, _customTextColourFour, _customTextColourFive, _menuTextColour, _statusTextColour, _ribbonTabTextColour;
 
         private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
         #endregion
@@ -68,6 +69,8 @@ namespace Classes.Colours
         public Color MenuTextColour { get { return _menuTextColour; } set { _menuTextColour = value; } }
 
         public Color StatusTextColour { get { return _statusTextColour; } set { _statusTextColour = value; } }
+
+        public Color RibbonTabTextColour { get { return _ribbonTabTextColour; } set { _ribbonTabTextColour = value; } }
         #endregion
 
         #region Constructors
@@ -127,7 +130,7 @@ namespace Classes.Colours
         /// <param name="customTextColourFive">The custom text colour five.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
         /// <param name="statusTextColour">The status text colour.</param>
-        public CombineColourSettings(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColourPreview, Color alternativeNormalTextColourPreview, Color normalTextColourPreview, Color disabledTextColourPreview, Color focusedTextColourPreview, Color pressedTextColourPreview, Color disabledColourPreview, Color linkNormalColourPreview, Color linkHoverColourPreview, Color linkVisitedColourPreview, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour)
+        public CombineColourSettings(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColourPreview, Color alternativeNormalTextColourPreview, Color normalTextColourPreview, Color disabledTextColourPreview, Color focusedTextColourPreview, Color pressedTextColourPreview, Color disabledColourPreview, Color linkNormalColourPreview, Color linkHoverColourPreview, Color linkVisitedColourPreview, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour)
         {
             BaseColour = baseColour;
 
@@ -182,15 +185,21 @@ namespace Classes.Colours
             MenuTextColour = menuTextColour;
 
             StatusTextColour = statusTextColour;
+
+            RibbonTabTextColour = ribbonTabTextColour;
         }
         #endregion
 
         #region Methods
         public void SaveSettings(bool useConfirmDialog = false)
         {
+            _colourSettingsManager.ResetSettings(useConfirmDialog);
+
+            _colourSettingsManager.SaveColourSettings(useConfirmDialog);
+
             try
             {
-                if (BaseColour != null || DarkColour != null || MiddleColour != null || LightColour != null || LightestColour != null || BorderColourPreview != null || AlternativeNormalTextColourPreview != null || NormalTextColourPreview != null || DisabledTextColourPreview != null || FocusedTextColourPreview != null || PressedTextColourPreview != null || DisabledColourPreview != null || LinkNormalColourPreview != null || LinkHoverColourPreview != null || LinkVisitedColourPreview != null || CustomColourOne != null || CustomColourTwo != null || CustomColourThree != null || CustomColourFour != null || CustomColourFive != null || CustomTextColourOne != null || CustomTextColourTwo != null || CustomTextColourThree != null || CustomTextColourFour != null || CustomTextColourFive != null || MenuTextColour != null || StatusTextColour != null)
+                if (BaseColour != null || DarkColour != null || MiddleColour != null || LightColour != null || LightestColour != null || BorderColourPreview != null || AlternativeNormalTextColourPreview != null || NormalTextColourPreview != null || DisabledTextColourPreview != null || FocusedTextColourPreview != null || PressedTextColourPreview != null || DisabledColourPreview != null || LinkNormalColourPreview != null || LinkHoverColourPreview != null || LinkVisitedColourPreview != null || CustomColourOne != null || CustomColourTwo != null || CustomColourThree != null || CustomColourFour != null || CustomColourFive != null || CustomTextColourOne != null || CustomTextColourTwo != null || CustomTextColourThree != null || CustomTextColourFour != null || CustomTextColourFive != null || MenuTextColour != null || StatusTextColour != null || RibbonTabTextColour != null)
                 {
                     _colourSettingsManager.SetBaseColour(BaseColour);
 
@@ -246,6 +255,8 @@ namespace Classes.Colours
 
                     _colourSettingsManager.SetStatusStripTextColour(StatusTextColour);
 
+                    _colourSettingsManager.SetRibbonTabTextColour(RibbonTabTextColour);
+
                     _colourSettingsManager.SaveColourSettings(useConfirmDialog);
                 }
                 else
@@ -255,7 +266,7 @@ namespace Classes.Colours
             }
             catch (Exception error)
             {
-                KryptonMessageBox.Show($"An error was thrown: { error.Message }", "Error Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ExceptionHandler.CaptureException(error, "Exception Caught", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

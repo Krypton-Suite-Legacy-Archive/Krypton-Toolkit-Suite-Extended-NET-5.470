@@ -132,7 +132,7 @@ namespace GlobalUtilities.Classes
             }
             catch (Exception exc)
             {
-                _exceptionHandler.ShowException(exc.Message, false, false, true, false, false, null, null, "Exception Caught", MessageBoxButtons.OK, MessageBoxDefaultButton.Button1, MessageBoxIcon.Error);
+                ExceptionHandler.CaptureException(exc, "Exception Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error, "GlobalMethods", "CheckIfTargetPlatformIsSupported(bool useLegacyVistaSupport = false)");
 
                 SetIsTargetPlatformSupported(false);
             }

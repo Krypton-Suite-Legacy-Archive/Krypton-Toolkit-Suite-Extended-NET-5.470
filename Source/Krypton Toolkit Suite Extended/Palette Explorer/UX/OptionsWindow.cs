@@ -298,7 +298,7 @@ namespace PaletteExplorer.UX
             }
             catch (Exception exc)
             {
-                ExceptionHandler.ThrowException(MessageBoxIcon.Error, $"Error: { exc.Message }", "Palette Explorer Options", MessageBoxButtons.OK);
+
             }
         }
     }

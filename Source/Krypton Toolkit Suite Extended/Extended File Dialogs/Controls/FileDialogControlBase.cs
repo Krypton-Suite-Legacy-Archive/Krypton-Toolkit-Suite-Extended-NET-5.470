@@ -360,7 +360,7 @@ namespace ExtendedFileDialogs.Controls
             }
             catch (Exception exc)
             {
-                ExceptionHandler.ThrowException(MessageBoxIcon.Error, $"An error has occurred: { exc.Message }", "Error Thrown", MessageBoxButtons.OK);
+                
             }
         }
 
@@ -481,7 +481,7 @@ namespace ExtendedFileDialogs.Controls
                     }
                     catch (Exception exc)
                     {
-                        ExceptionHandler.ThrowException(MessageBoxIcon.Error, $"An error has occurred: { exc.Message }", "Error Thrown", MessageBoxButtons.OK);
+                        
                     }
                     finally
                     {
@@ -580,7 +580,7 @@ namespace ExtendedFileDialogs.Controls
             }
             catch (Exception ex)
             {
-                ExceptionHandler.ThrowException(MessageBoxIcon.Error, $"Unable to get the modal dialog handle: { ex.Message }", "Error", MessageBoxButtons.OK);
+
             }
             return returnDialogResult;
         }
@@ -624,7 +624,7 @@ namespace ExtendedFileDialogs.Controls
             }
             catch (Exception ex)
             {
-                ExceptionHandler.ThrowException(MessageBoxIcon.Error, $"Unable to get the modal dialog handle: { ex.Message }", "Error", MessageBoxButtons.OK);
+
             }
 
             return returnDialogResult;
