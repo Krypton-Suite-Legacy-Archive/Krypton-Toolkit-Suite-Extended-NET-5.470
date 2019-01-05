@@ -77,6 +77,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Scrollbars.resx">
       <DependentUpon>Scrollbars.cs</DependentUpon>
@@ -112,6 +113,11 @@
     <PackageReference Include="KryptonToolkitSuite5470">
       <Version>5.470.701</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\Assets\PNG\32 x 32\KR 32 x 32 Orange.png">
+      <Link>Resources\KR 32 x 32 Orange.png</Link>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

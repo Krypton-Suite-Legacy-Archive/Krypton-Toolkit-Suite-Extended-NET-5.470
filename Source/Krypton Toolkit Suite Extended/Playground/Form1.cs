@@ -308,15 +308,15 @@ namespace Playground
 
         private void kbtnMessageboxTest_Click(object sender, EventArgs e)
         {
-            KryptonMessageBox.Show(this, @"Test KryptonMessagebox", @"Check Title Text Size", MessageBoxButtons.OK);
-            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox Default 12", @"Check Title Text Size", MessageBoxButtons.OK);
-            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox specified 20", @"Check Title Text Size", MessageBoxButtons.OK, messageboxTypeface:new Font(@"Tahoma", 20F));
+            KryptonMessageBox.Show(this, @"Test KryptonMessagebox", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox Default 12", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox specified 20", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information, messageboxTypeface:new Font(@"Tahoma", 20F));
         }
 
         private void kbtnPaletteEditor_Click(object sender, EventArgs e)
         {
             KryptonMessageBox.Show(this,
-                @"Once PaletteEditor is building again, then add to references and then this code can be uncommneted!");
+                @"Once PaletteEditor is building again, then add to references and then this code can be uncommented!");
             //PaletteEditor.UX.MainWindow _paletteEditor = new PaletteEditor.UX.MainWindow();
 
             //_paletteEditor.Show();

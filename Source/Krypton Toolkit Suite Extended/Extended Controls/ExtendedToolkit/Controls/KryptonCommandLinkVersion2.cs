@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 using ComponentFactory.Krypton.Toolkit;
 
-namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
+namespace ExtendedControls.ExtendedToolkit.Controls
 {
     /// <summary>
     /// A KryptonCommandLink button.
@@ -21,7 +21,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
     [Description("A Krypton Command Link Button.")]
     [ToolboxItem(true)]
     [ToolboxBitmap(typeof(KryptonButton))]
-    public partial class KryptonCommandLinkVersion2 : KryptonButton
+    public class KryptonCommandLinkVersion2 : KryptonButton
     {
         #region Variables
         private bool _showUACShield = false;
