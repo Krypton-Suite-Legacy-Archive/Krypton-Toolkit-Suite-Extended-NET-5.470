@@ -223,6 +223,8 @@
     <Compile Include="ExtendedToolkit\Controls\ScrollBar\VScrollSkin.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Designers\KryptonCommandLinkButtonActionList.cs" />
+    <Compile Include="ExtendedToolkit\Designers\KryptonCommandLinkButtonDesigner.cs" />
     <Compile Include="ExtendedToolkit\FloatingFramework\Controls\DockingHostToolStripPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -344,6 +346,11 @@
     <Compile Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Values\CommandLinkTextValues.cs" />
+    <Compile Include="ExtendedToolkit\Values\ImageValue.cs" />
+    <Compile Include="ExtendedToolkit\Values\MainTextValue.cs" />
+    <Compile Include="ExtendedToolkit\Values\SubscriptTextValue.cs" />
+    <Compile Include="ExtendedToolkit\View Draw\ViewDrawCommandLinkButton.cs" />
     <Compile Include="Interfaces\Colour Schemes\IColourScheme.cs" />
     <Compile Include="Interfaces\Colours\IExternalColourEditorInformationProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

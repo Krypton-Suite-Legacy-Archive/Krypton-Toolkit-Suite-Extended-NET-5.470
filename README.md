@@ -6,17 +6,24 @@
 
 =======
 
-## NOTE: 20/06/2018 Background menu colours will be implemented in the comming weeks. Stay tuned for updates!
+## NOTE: 20/06/2018 Background menu colours will be implemented in the coming weeks. Stay tuned for updates!
 
 ======
 
 # Building this repository from code
 
-## In order to compile the code, you MUST restore/update the NuGet packages in order to build successfuly!
+## In order to compile the code, you MUST restore/update the NuGet packages in order to build successfully!
 
 ======
 
-## 2019-01-03 ExtendedKryptonMessageBox - Allow large, and optional fonts
+## 2018-12-05 KryptonCommandLinkButton - Layout
+* New control, `KryptonCommandLinkButton`
+* Add Designer to allow drag and drop in IDE
+* Add defaults to demonstrate layout and then allow user to change the values
+* Add Code to the Playground to show defaults
+
+=======
+## 2019-01-03 ExtendedKryptonMessageBox - Use larger, and optional fonts
 * Complete the optional font usage for the `ExtendedKryptonMessageBox` 
 * Add code behind the PlayGrounds `MessageBox Test` button.
 
@@ -36,7 +43,7 @@
 * Refinements to code
 * Set your own colour intensity
 * Automatic updating of colours has been centralised
-* Work on a new ribonised `Palette Explorer` is in progress
+* Work on a new ribbonised `Palette Explorer` is in progress
 * Going forward: possibility of merging the now defunct `ExtendedRenderer` project into this project in order to keep code maintained
 
 ======
@@ -98,14 +105,14 @@
 
 ======
 
-## 2018-06-11 New palettes & gradeint toolstrip label
+## 2018-06-11 New palettes & gradient toolstrip label
 * There are now 50+ **new** palettes to choose from.
-* A new toolstrip label capable of background gradeints is now available to use, as per [#28](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/28).
+* A new toolstrip label capable of background gradients is now available to use, as per [#28](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/28).
 
 ======
 
 ## 2018-05-22 Colour Mania!
-* Colours... colours... colours... We now have 26 **new** colours to choose from! Find the `xml` files in the `Palettes` folder, this will be updated regulary, so be sure to come back often! Alternatively, if you would like to request/submit a colour palette, then please submit a base colour in a hexadecimal format plus a suitable name for it on the `New Palette Ideas` issues thread.
+* Colours... colours... colours... We now have 26 **new** colours to choose from! Find the `xml` files in the `Palettes` folder, this will be updated regularly, so be sure to come back often! Alternatively, if you would like to request/submit a colour palette, then please submit a base colour in a hexadecimal format plus a suitable name for it on the `New Palette Ideas` issues thread.
 
 ======
 
@@ -126,7 +133,7 @@
 
 ======
 
-## 2018-04-11 Nuget package migration/consolodation
+## 2018-04-11 Nuget package migration/consolidation
 * Migrated `packages.config` over  to `PackageReference` (must have the latest Visual Studio 2017 Preview build to utilise this feature).
 
 ======
