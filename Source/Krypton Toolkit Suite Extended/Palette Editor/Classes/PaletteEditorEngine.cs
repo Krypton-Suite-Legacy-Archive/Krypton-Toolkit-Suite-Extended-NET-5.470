@@ -1071,7 +1071,7 @@ namespace PaletteEditor.Classes
             }
         }
 
-        #region !EXPERIMENTAL CODE!       
+        #region !EXPERIMENTAL CODE!               
         /// <summary>
         /// Exports the palette.
         /// </summary>
@@ -1089,6 +1089,7 @@ namespace PaletteEditor.Classes
         /// <param name="pressedTextColourPreview">The pressed text colour preview.</param>
         /// <param name="disabledColourPreview">The disabled colour preview.</param>
         /// <param name="linkNormalColourPreview">The link normal colour preview.</param>
+        /// <param name="linkFocusedColourPreview">The link focused colour preview.</param>
         /// <param name="linkHoverColourPreview">The link hover colour preview.</param>
         /// <param name="linkVisitedColourPreview">The link visited colour preview.</param>
         /// <param name="customColourOne">The custom colour one.</param>
@@ -1103,6 +1104,7 @@ namespace PaletteEditor.Classes
         /// <param name="customTextColourFive">The custom text colour five.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
         /// <param name="statusTextColour">The status text colour.</param>
+        /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
         /// <param name="statusState">State of the status.</param>
         /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
         public static void ExportPalette(PaletteMode paletteMode, PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkFocusedColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour, PictureBox statusTextColour, PictureBox ribbonTabTextColour, ToolStripLabel statusState, bool invertColours = false)
@@ -1602,6 +1604,7 @@ namespace PaletteEditor.Classes
         /// <param name="pressedTextColourPreview">The pressed text colour preview.</param>
         /// <param name="disabledColourPreview">The disabled colour preview.</param>
         /// <param name="linkNormalColourPreview">The link normal colour preview.</param>
+        /// <param name="linkFocusedColourPreview">The link focused colour preview.</param>
         /// <param name="linkHoverColourPreview">The link hover colour preview.</param>
         /// <param name="linkVisitedColourPreview">The link visited colour preview.</param>
         /// <param name="customColourOne">The custom colour one.</param>
@@ -1616,6 +1619,7 @@ namespace PaletteEditor.Classes
         /// <param name="customTextColourFive">The custom text colour five.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
         /// <param name="statusTextColour">The status text colour.</param>
+        /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
         /// <param name="statusState">State of the status.</param>
         /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
         public static void ExportPalette(PaletteMode paletteMode, CircularPictureBox baseColour, CircularPictureBox darkColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, CircularPictureBox borderColourPreview, CircularPictureBox alternativeNormalTextColourPreview, CircularPictureBox normalTextColourPreview, CircularPictureBox disabledTextColourPreview, CircularPictureBox focusedTextColourPreview, CircularPictureBox pressedTextColourPreview, CircularPictureBox disabledColourPreview, CircularPictureBox linkNormalColourPreview, CircularPictureBox linkFocusedColourPreview, CircularPictureBox linkHoverColourPreview, CircularPictureBox linkVisitedColourPreview, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColour, CircularPictureBox statusTextColour, CircularPictureBox ribbonTabTextColour, ToolStripLabel statusState, bool invertColours = false)

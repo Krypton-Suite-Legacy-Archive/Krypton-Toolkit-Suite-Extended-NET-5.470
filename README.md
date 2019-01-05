@@ -22,12 +22,11 @@
 * Add defaults to demonstrate layout and then allow user to change the values
 * Add Code to the Playground to show defaults
 
-======
+=======
+## 2019-01-03 ExtendedKryptonMessageBox - Use larger, and optional fonts
+* Complete the optional font usage for the `ExtendedKryptonMessageBox` 
+* Add code behind the PlayGrounds `MessageBox Test` button.
 
-## 2019-01-03 ExtendedKryptonMessageBox - Use and Allow large fonts
-* Complete the optional font usage for the `ExtendedKryptonMessageBox`
-* Add code behind the PlayGrounds 'MessageBox Test' button.
- 
 ======
 
 ## 2018-12-03 December 2018 Update

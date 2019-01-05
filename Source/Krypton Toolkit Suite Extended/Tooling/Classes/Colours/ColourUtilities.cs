@@ -1177,6 +1177,7 @@ namespace Classes.Colours
         /// <param name="cbxPressedTextColourPreview">The CBX pressed text colour preview.</param>
         /// <param name="cbxDisabledColourPreview">The CBX disabled colour preview.</param>
         /// <param name="cbxLinkNormalColourPreview">The CBX link normal colour preview.</param>
+        /// <param name="cbxLinkFocusedColourPreview">The CBX link focused colour preview.</param>
         /// <param name="cbxLinkHoverColourPreview">The CBX link hover colour preview.</param>
         /// <param name="cbxLinkVisitedColourPreview">The CBX link visited colour preview.</param>
         /// <param name="cbxCustomColourOnePreview">The CBX custom colour one preview.</param>
@@ -1191,7 +1192,7 @@ namespace Classes.Colours
         /// <param name="cbxCustomTextColourFivePreview">The CBX custom text colour five preview.</param>
         /// <param name="cbxMenuTextColourPreview">The CBX menu text colour preview.</param>
         /// <param name="cbxStatusTextColourPreview">The CBX status text colour preview.</param>
-        /// <exception cref="NotImplementedException"></exception>
+        /// <param name="cbxRibbonTabTextColourPreview">The CBX ribbon tab text colour preview.</param>
         public static void ResetColourDefinitions(CircularPictureBox cbxBaseColourPreview, CircularPictureBox cbxDarkColourPreview, CircularPictureBox cbxMiddleColourPreview, CircularPictureBox cbxLightColourPreview, CircularPictureBox cbxLightestColourPreview, CircularPictureBox cbxBorderColourPreview, CircularPictureBox cbxAlternativeNormalTextColourPreview, CircularPictureBox cbxNormalTextColourPreview, CircularPictureBox cbxDisabledTextColourPreview, CircularPictureBox cbxFocusedTextColourPreview, CircularPictureBox cbxPressedTextColourPreview, CircularPictureBox cbxDisabledColourPreview, CircularPictureBox cbxLinkNormalColourPreview, CircularPictureBox cbxLinkFocusedColourPreview, CircularPictureBox cbxLinkHoverColourPreview, CircularPictureBox cbxLinkVisitedColourPreview, CircularPictureBox cbxCustomColourOnePreview, CircularPictureBox cbxCustomColourTwoPreview, CircularPictureBox cbxCustomColourThreePreview, CircularPictureBox cbxCustomColourFourPreview, CircularPictureBox cbxCustomColourFivePreview, CircularPictureBox cbxCustomTextColourOnePreview, CircularPictureBox cbxCustomTextColourTwoPreview, CircularPictureBox cbxCustomTextColourThreePreview, CircularPictureBox cbxCustomTextColourFourPreview, CircularPictureBox cbxCustomTextColourFivePreview, CircularPictureBox cbxMenuTextColourPreview, CircularPictureBox cbxStatusTextColourPreview, CircularPictureBox cbxRibbonTabTextColourPreview)
         {
             Color resetColour = Color.White;
@@ -1258,33 +1259,35 @@ namespace Classes.Colours
         /// <summary>
         /// Resets the colour definitions.
         /// </summary>
-        /// <param name="baseColour">The base colour.</param>
-        /// <param name="darkColour">The dark colour.</param>
-        /// <param name="middleColour">The middle colour.</param>
-        /// <param name="lightColour">The light colour.</param>
-        /// <param name="lightestColour">The lightest colour.</param>
-        /// <param name="borderColourPreview">The border colour preview.</param>
-        /// <param name="alternativeNormalTextColourPreview">The alternative normal text colour preview.</param>
-        /// <param name="normalTextColourPreview">The normal text colour preview.</param>
-        /// <param name="disabledTextColourPreview">The disabled text colour preview.</param>
-        /// <param name="focusedTextColourPreview">The focused text colour preview.</param>
-        /// <param name="pressedTextColourPreview">The pressed text colour preview.</param>
-        /// <param name="disabledColourPreview">The disabled colour preview.</param>
-        /// <param name="linkNormalColourPreview">The link normal colour preview.</param>
-        /// <param name="linkHoverColourPreview">The link hover colour preview.</param>
-        /// <param name="linkVisitedColourPreview">The link visited colour preview.</param>
-        /// <param name="customColourOne">The custom colour one.</param>
-        /// <param name="customColourTwo">The custom colour two.</param>
-        /// <param name="customColourThree">The custom colour three.</param>
-        /// <param name="customColourFour">The custom colour four.</param>
-        /// <param name="customColourFive">The custom colour five.</param>
-        /// <param name="customTextColourOne">The custom text colour one.</param>
-        /// <param name="customTextColourTwo">The custom text colour two.</param>
-        /// <param name="customTextColourThree">The custom text colour three.</param>
-        /// <param name="customTextColourFour">The custom text colour four.</param>
-        /// <param name="customTextColourFive">The custom text colour five.</param>
-        /// <param name="menuTextColour">The menu text colour.</param>
-        /// <param name="statusTextColour">The status text colour.</param>
+        /// <param name="pbxBaseColourPreview">The PBX base colour preview.</param>
+        /// <param name="pbxDarkColourPreview">The PBX dark colour preview.</param>
+        /// <param name="pbxMiddleColourPreview">The PBX middle colour preview.</param>
+        /// <param name="pbxLightColourPreview">The PBX light colour preview.</param>
+        /// <param name="pbxLightestColourPreview">The PBX lightest colour preview.</param>
+        /// <param name="pbxBorderColourPreview">The PBX border colour preview.</param>
+        /// <param name="pbxAlternativeNormalTextColourPreview">The PBX alternative normal text colour preview.</param>
+        /// <param name="pbxNormalTextColourPreview">The PBX normal text colour preview.</param>
+        /// <param name="pbxDisabledTextColourPreview">The PBX disabled text colour preview.</param>
+        /// <param name="pbxFocusedTextColourPreview">The PBX focused text colour preview.</param>
+        /// <param name="pbxPressedTextColourPreview">The PBX pressed text colour preview.</param>
+        /// <param name="pbxDisabledColourPreview">The PBX disabled colour preview.</param>
+        /// <param name="pbxLinkNormalColourPreview">The PBX link normal colour preview.</param>
+        /// <param name="pbxLinkFocusedColourPreview">The PBX link focused colour preview.</param>
+        /// <param name="pbxLinkHoverColourPreview">The PBX link hover colour preview.</param>
+        /// <param name="pbxLinkVisitedColourPreview">The PBX link visited colour preview.</param>
+        /// <param name="pbxCustomColourOnePreview">The PBX custom colour one preview.</param>
+        /// <param name="pbxCustomColourTwoPreview">The PBX custom colour two preview.</param>
+        /// <param name="pbxCustomColourThreePreview">The PBX custom colour three preview.</param>
+        /// <param name="pbxCustomColourFourPreview">The PBX custom colour four preview.</param>
+        /// <param name="pbxCustomColourFivePreview">The PBX custom colour five preview.</param>
+        /// <param name="pbxCustomTextColourOnePreview">The PBX custom text colour one preview.</param>
+        /// <param name="pbxCustomTextColourTwoPreview">The PBX custom text colour two preview.</param>
+        /// <param name="pbxCustomTextColourThreePreview">The PBX custom text colour three preview.</param>
+        /// <param name="pbxCustomTextColourFourPreview">The PBX custom text colour four preview.</param>
+        /// <param name="pbxCustomTextColourFivePreview">The PBX custom text colour five preview.</param>
+        /// <param name="pbxMenuTextColourPreview">The PBX menu text colour preview.</param>
+        /// <param name="pbxStatusTextColourPreview">The PBX status text colour preview.</param>
+        /// <param name="pbxRibbonTabTextColourPreview">The PBX ribbon tab text colour preview.</param>
         public static void ResetColourDefinitions(PictureBox pbxBaseColourPreview, PictureBox pbxDarkColourPreview, PictureBox pbxMiddleColourPreview, PictureBox pbxLightColourPreview, PictureBox pbxLightestColourPreview, PictureBox pbxBorderColourPreview, PictureBox pbxAlternativeNormalTextColourPreview, PictureBox pbxNormalTextColourPreview, PictureBox pbxDisabledTextColourPreview, PictureBox pbxFocusedTextColourPreview, PictureBox pbxPressedTextColourPreview, PictureBox pbxDisabledColourPreview, PictureBox pbxLinkNormalColourPreview, PictureBox pbxLinkFocusedColourPreview, PictureBox pbxLinkHoverColourPreview, PictureBox pbxLinkVisitedColourPreview, PictureBox pbxCustomColourOnePreview, PictureBox pbxCustomColourTwoPreview, PictureBox pbxCustomColourThreePreview, PictureBox pbxCustomColourFourPreview, PictureBox pbxCustomColourFivePreview, PictureBox pbxCustomTextColourOnePreview, PictureBox pbxCustomTextColourTwoPreview, PictureBox pbxCustomTextColourThreePreview, PictureBox pbxCustomTextColourFourPreview, PictureBox pbxCustomTextColourFivePreview, PictureBox pbxMenuTextColourPreview, PictureBox pbxStatusTextColourPreview, PictureBox pbxRibbonTabTextColourPreview)
         {
 
