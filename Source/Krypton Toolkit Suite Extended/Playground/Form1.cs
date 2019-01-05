@@ -19,13 +19,13 @@ using ExtendedControls.ExtendedToolkit.UI.Dialogues;
 using ExtendedControls.ExtendedToolkit.UI.Drawing;
 
 using KryptonApplicationUpdater.Classes.SettingsManager;
-using KryptonApplicationUpdater.Interfaces;
+//using KryptonApplicationUpdater.Interfaces;
 
 using KryptonExtendedToolkit.Base.Code;
 
 namespace Playground
 {
-    public partial class Form1 : KryptonForm, IUpdatable
+    public partial class Form1 : KryptonForm/*, IUpdatable <- Commented this out to allow the designers to work correctly*/
     {
         private UtilityMethods utilityMethods = new UtilityMethods();
         private InternalApplicationUpdaterSettingsManager internalApplicationUpdaterSettingsManager = new InternalApplicationUpdaterSettingsManager();
@@ -46,7 +46,7 @@ namespace Playground
         public string ApplicationName { get { return "Playground"; } set { } }
         public string CurrentApplicationVersion { get { return currentVersion.ToString(); } set { } }
         public string ApplicationIdentification { get { return "Playground"; } set { } }
-        Form IUpdatable.ParentForm { get { return this; } set { } }
+        //Form IUpdatable.ParentForm { get { return this; } set { } }
         #endregion
 
         private void Form1_Load(object sender, EventArgs e)
@@ -388,6 +388,14 @@ namespace Playground
             HexadecimalToRGBConverter hexadecimalToRGBConverter = new HexadecimalToRGBConverter();
 
             hexadecimalToRGBConverter.Show();
+        }
+
+        private void kryptonCommandLinkButton2_Click(object sender, EventArgs e)
+        {
+            using (CommandLinkStyles cls = new CommandLinkStyles())
+            {
+                cls.ShowDialog(this);
+            }
         }
     }
 }

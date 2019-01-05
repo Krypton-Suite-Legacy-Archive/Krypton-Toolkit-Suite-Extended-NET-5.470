@@ -81,7 +81,6 @@ namespace Playground
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonCommandLinkVersion21 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion2();
-            this.kryptonCommandLinkButton1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkButton();
             this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPromptTextBox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
@@ -137,6 +136,7 @@ namespace Playground
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
+            this.kryptonCommandLinkButton2 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkButton();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -496,8 +496,8 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonCommandLinkButton2);
             this.kryptonPanel1.Controls.Add(this.kryptonCommandLinkVersion21);
-            this.kryptonPanel1.Controls.Add(this.kryptonCommandLinkButton1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton11);
             this.kryptonPanel1.Controls.Add(this.kryptonButton10);
             this.kryptonPanel1.Controls.Add(this.kryptonPromptTextBox1);
@@ -540,7 +540,7 @@ namespace Playground
             // kryptonCommandLinkVersion21
             // 
             this.kryptonCommandLinkVersion21.Location = new System.Drawing.Point(503, 401);
-            this.kryptonCommandLinkVersion21.Name = "kryptonCommandLinkVersion11";
+            this.kryptonCommandLinkVersion21.Name = "kryptonCommandLinkVersion21";
             this.kryptonCommandLinkVersion21.ShowUACShield = true;
             this.kryptonCommandLinkVersion21.Size = new System.Drawing.Size(252, 55);
             this.kryptonCommandLinkVersion21.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -548,14 +548,6 @@ namespace Playground
             this.kryptonCommandLinkVersion21.Values.ExtraText = "Here be the extra Text";
             this.kryptonCommandLinkVersion21.Values.Image = global::Playground.Properties.Resources.KR_32_x_32_Orange;
             this.kryptonCommandLinkVersion21.Values.Text = "Command Link V2";
-            // 
-            // kryptonButton12
-            // 
-            this.kryptonCommandLinkButton1.Location = new System.Drawing.Point(503, 310);
-            this.kryptonCommandLinkButton1.Name = "kryptonCommandLinkButton1";
-            this.kryptonCommandLinkButton1.Size = new System.Drawing.Size(252, 54);
-            this.kryptonCommandLinkButton1.TabIndex = 32;
-            this.kryptonCommandLinkButton1.Click += KryptonCommandLinkButton1_Click;
             // 
             // kryptonButton11
             // 
@@ -1085,6 +1077,20 @@ namespace Playground
             this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnBackwardDiagonal);
             this.kryptonCheckSet1.CheckedButton = this.kcbtnForwardDiagonal;
             // 
+            // kryptonCommandLinkButton2
+            // 
+            this.kryptonCommandLinkButton2.CommandLinkImageValue.Image = null;
+            this.kryptonCommandLinkButton2.Location = new System.Drawing.Point(505, 323);
+            this.kryptonCommandLinkButton2.Name = "kryptonCommandLinkButton2";
+            this.kryptonCommandLinkButton2.Size = new System.Drawing.Size(250, 55);
+            this.kryptonCommandLinkButton2.StateCommon.Content.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kryptonCommandLinkButton2.StateCommon.Content.LongText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
+            this.kryptonCommandLinkButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCommandLinkButton2.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kryptonCommandLinkButton2.StateCommon.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kryptonCommandLinkButton2.TabIndex = 34;
+            this.kryptonCommandLinkButton2.Click += new System.EventHandler(this.kryptonCommandLinkButton2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1228,8 +1234,8 @@ namespace Playground
         private ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox kryptonPromptTextBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton10;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton11;
-        private ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkButton kryptonCommandLinkButton1;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion2 kryptonCommandLinkVersion21;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkButton kryptonCommandLinkButton2;
     }
 }
 

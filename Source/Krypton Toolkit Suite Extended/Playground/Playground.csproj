@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandLinkStyles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommandLinkStyles.Designer.cs">
+      <DependentUpon>CommandLinkStyles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Scrollbars.Designer.cs">
       <DependentUpon>Scrollbars.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CommandLinkStyles.resx">
+      <DependentUpon>CommandLinkStyles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

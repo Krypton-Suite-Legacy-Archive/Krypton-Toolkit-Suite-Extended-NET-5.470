@@ -79,9 +79,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls
             StateCommon = new PaletteTripleRedirect(Redirector, PaletteBackStyle.ButtonCommand, PaletteBorderStyle.ButtonCommand, PaletteContentStyle.ButtonCommand, NeedPaintDelegate);
             PaletteContentText contentShortText = StateCommon.Content.ShortText;
             contentShortText.Font = new Font(@"Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            contentShortText.TextH = PaletteRelativeAlign.Center;
+            contentShortText.TextH = PaletteRelativeAlign.Near;
             contentShortText.TextV = PaletteRelativeAlign.Center;
-            StateCommon.Content.LongText.TextH = PaletteRelativeAlign.Center;
+            StateCommon.Content.LongText.TextH = PaletteRelativeAlign.Near;
             StateCommon.Content.LongText.TextV = PaletteRelativeAlign.Far;
 
             StateDisabled = new PaletteTriple(StateCommon, NeedPaintDelegate);
@@ -109,7 +109,6 @@ namespace ExtendedControls.ExtendedToolkit.Controls
                                              Orientation,
                                              UseMnemonic)
             {
-
                 // Only draw a focus rectangle when focus cues are needed in the top level form
                 TestForFocusCues = true
             };
