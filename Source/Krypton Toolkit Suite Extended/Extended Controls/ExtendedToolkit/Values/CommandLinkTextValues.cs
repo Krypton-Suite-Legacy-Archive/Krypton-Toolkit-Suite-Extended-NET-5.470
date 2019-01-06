@@ -6,7 +6,7 @@ namespace ExtendedControls.ExtendedToolkit.Values
     public class CommandLinkTextValues : CaptionValues
     {
         private const string _defaultHeading = @"Command Link V1";
-        private const string _defaultDescription = @"Here be the extra Text";
+        private const string _defaultDescription = @"Here be the ""Note Text""";
 
         public CommandLinkTextValues(NeedPaintHandler needPaint)
             : base(needPaint)

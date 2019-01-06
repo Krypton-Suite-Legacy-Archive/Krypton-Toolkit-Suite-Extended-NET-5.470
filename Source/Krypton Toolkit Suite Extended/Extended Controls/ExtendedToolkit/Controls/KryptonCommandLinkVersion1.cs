@@ -72,13 +72,13 @@ namespace ExtendedControls.ExtendedToolkit.Controls
             _useMnemonic = true;
 
             // Create content storage
-            CommandLinkImageValue = new ImageValue();
+            CommandLinkImageValue = new ImageValue(NeedPaintDelegate);
             CommandLinkTextValues = new CommandLinkTextValues(NeedPaintDelegate);
 
             // Create the palette storage
             StateCommon = new PaletteTripleRedirect(Redirector, PaletteBackStyle.ButtonCommand, PaletteBorderStyle.ButtonCommand, PaletteContentStyle.ButtonCommand, NeedPaintDelegate);
             PaletteContentText contentShortText = StateCommon.Content.ShortText;
-            contentShortText.Font = new Font(@"Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            contentShortText.Font = new Font(@"Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             contentShortText.TextH = PaletteRelativeAlign.Near;
             contentShortText.TextV = PaletteRelativeAlign.Center;
             StateCommon.Content.LongText.TextH = PaletteRelativeAlign.Near;
@@ -90,6 +90,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls
             StatePressed = new PaletteTriple(StateCommon, NeedPaintDelegate);
             OverrideDefault = new PaletteTripleRedirect(Redirector, PaletteBackStyle.ButtonCommand, PaletteBorderStyle.ButtonCommand, PaletteContentStyle.ButtonCommand, NeedPaintDelegate);
             OverrideFocus = new PaletteTripleRedirect(Redirector, PaletteBackStyle.ButtonCommand, PaletteBorderStyle.ButtonCommand, PaletteContentStyle.ButtonCommand, NeedPaintDelegate);
+            OverrideFocus.Border.Draw = InheritBool.True;
+            OverrideFocus.Border.DrawBorders = PaletteDrawBorders.All;
+            OverrideFocus.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
             // Force style update
             ButtonStyle = ButtonStyle.Command;
 
