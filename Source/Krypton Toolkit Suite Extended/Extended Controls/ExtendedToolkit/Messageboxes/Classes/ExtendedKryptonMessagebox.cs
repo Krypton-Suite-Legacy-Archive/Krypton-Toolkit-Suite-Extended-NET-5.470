@@ -36,6 +36,7 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
             _button3 = new MessageButton();
             _button1 = new MessageButton();
             _button2 = new MessageButton();
+			_doNotShowAgainOption = new KryptonCheckBox();
             ((ISupportInitialize)(_panelMessage)).BeginInit();
             _panelMessage.SuspendLayout();
             ((ISupportInitialize)(_panelMessageText)).BeginInit();
@@ -110,6 +111,7 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
             _panelButtons.Controls.Add(_button3);
             _panelButtons.Controls.Add(_button1);
             _panelButtons.Controls.Add(_button2);
+			_panelButtons.Controls.Add(_doNotShowAgainOption);
             _panelButtons.Dock = DockStyle.Top;
             _panelButtons.Location = new Point(0, 52);
             _panelButtons.Margin = new Padding(0);
@@ -168,6 +170,18 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
             _button2.TabIndex = 1;
             _button2.Values.Text = @"B2";
             _button2.KeyDown += button_keyDown;
+			//
+			// _doNotShowAgainOption
+			//
+			_doNotShowAgainOption.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+			_doNotShowAgainOption.AutoSize = true;
+			_doNotShowAgainOption.Location = new Point(56, 0);
+            _doNotShowAgainOption.Margin = new Padding(0);
+            _doNotShowAgainOption.MinimumSize = new Size(50, 26);
+            _doNotShowAgainOption.Name = "_doNotShowAgainOption";
+            _doNotShowAgainOption.Size = new Size(50, 26);
+            _doNotShowAgainOption.TabIndex = 1;
+            _doNotShowAgainOption.Values.Text = @"&Do not show this again";
             // 
             // KryptonMessageBox
             // 
@@ -221,6 +235,11 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
         private KryptonBorderEdge _borderEdge;
         private HelpInformation _helpInformation; // TODO: What is this used for ?
         private Font _messageboxTypeface;
+		private int _timeOut, _timeOutTimerDelay;
+		private Timer _timer;
+		private KryptonCheckBox _doNotShowAgainOption;
+		private string _doNotShowAgainOptionText;
+		private bool _doNotShowAgainOptionResult;
         #endregion
 
         #region Static Fields
@@ -229,10 +248,15 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
         #endregion
 
         #region Properties
+		public bool DoNotShowAgainOptionResult { get { return _doNotShowAgainOptionResult; } set { _doNotShowAgainOptionResult = value; } } 
+		
         public Font MessageBoxTypeface { get { return _messageboxTypeface; } set { _messageboxTypeface = value; } }
         #endregion
 
         #region Internal Classes
+		/// <summary>
+		/// What is this class for?
+		/// </summary>
         internal class HelpInformation
         {
             #region Properties

@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\KR 48 x 48 Orange.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -128,6 +131,7 @@
     <Content Include="..\..\..\Assets\PNG\32 x 32\KR 32 x 32 Orange.png">
       <Link>Resources\KR 32 x 32 Orange.png</Link>
     </Content>
+    <None Include="Resources\KR 48 x 48 Orange.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
