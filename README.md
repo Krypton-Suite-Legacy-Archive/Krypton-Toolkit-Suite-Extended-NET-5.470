@@ -16,7 +16,7 @@
 
 ======
 
-##2019-01-08 `ExtendedKryptonMessageBox` - Extra Features
+## 2019-01-08 `ExtendedKryptonMessageBox` - Extra Features
 * Begun work on Auto time out & 'do not show me again' options. (Needs finishing)
 
 ======
