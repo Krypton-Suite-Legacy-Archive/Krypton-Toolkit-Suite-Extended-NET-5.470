@@ -16,7 +16,12 @@
 
 ======
 
-## 2018-12-05 KryptonCommandLinkButton - Layout
+##2019-01-08 `ExtendedKryptonMessageBox` - Extra Features
+* Begun work on Auto time out & 'do not show me again' options. (Needs finishing)
+
+======
+
+## 2018-01-05 KryptonCommandLinkButton - Layout
 * New control, `KryptonCommandLinkButton`
 * Add Designer to allow drag and drop in IDE
 * Add defaults to demonstrate layout and then allow user to change the values

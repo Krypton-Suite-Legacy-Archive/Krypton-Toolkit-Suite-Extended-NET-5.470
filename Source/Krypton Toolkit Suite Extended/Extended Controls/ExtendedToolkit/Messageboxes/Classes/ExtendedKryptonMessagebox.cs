@@ -236,7 +236,8 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
         private Timer _timer;
         private KryptonCheckBox _doNotShowAgainOption;
         private string _doNotShowAgainOptionText;
-        private bool _doNotShowAgainOptionResult;
+        private bool _doNotShowAgainOptionResult, _showDoNotShowAgainOption, _useTimeOutOption;
+		private DialogResult _defaultTimeOutResponse;
         #endregion
 
         #region Static Fields
@@ -252,6 +253,12 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
         ///   <c>true</c> if [do not show again option result]; otherwise, <c>false</c>.
         /// </value>
         public bool DoNotShowAgainOptionResult { get { return _doNotShowAgainOptionResult; } set { _doNotShowAgainOptionResult = value; } }
+		
+		public bool ShowDoNotShowAgainOption { get { return _showDoNotShowAgainOption; } set { _showDoNotShowAgainOption = value; } }
+		
+		public bool UseTimeOutOption { get { return _useTimeOutOption; } set { _useTimeOutOption = value; } }
+		
+		public DialogResult DefaultTimeOutResponse { get { return _defaultTimeOutResponse; } set { _defaultTimeOutResponse = value; } }
 
         /// <summary>
         /// Gets or sets the message box typeface.
@@ -430,10 +437,16 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
         /// <param name="helpInformation">The help information.</param>
         /// <param name="showCtrlCopy">The show control copy. (Can be null)</param>
         /// <param name="messageboxTypeface">The messagebox typeface. (Can be null)</param>
+		/// <param name="showDoNotShowAgainOption">Enables the UI elements for a "Do not show again" checkbox.</summary>
+		/// <param name="doNotShowAgainOptionText">Specify the text on the "Do not show again" checkbox. (Default is "Do not show again")</summary>
+		/// <param name="useTimeOutOption">Use a time out on the messagebox. (Default is set as false)</param>
+		/// <param name="timeOut">Specify the time out time. (Default is set at 60 seconds)</param>
+		/// <param name="timeOutDelay">Specify the time out delay timer. (Default is 250 milliseconds)</param>
         private ExtendedKryptonMessageBox(IWin32Window showOwner, string text, string caption,
             MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton,
             MessageBoxOptions options, HelpInformation helpInformation, bool? showCtrlCopy,
-            Font messageboxTypeface)
+            Font messageboxTypeface, bool showDoNotShowAgainOption, string doNotShowAgainOptionText, 
+			bool useTimeOutOption, int timeOut, int timeOutDelay, DialogResult defaultTimeOutResponse)
         {
             #region Store Values
             _text = text;
@@ -451,6 +464,16 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
             _helpInformation = helpInformation;
 
             MessageBoxTypeface = messageboxTypeface ?? new Font(@"Segoe UI", 12F);
+			
+			ShowDoNotShowAgainOption = showDoNotShowAgainOption;
+			
+			DoNotShowAgainOptionText = doNotShowAgainOptionText;
+			
+			UseTimeOutOption = _useTimeOutOption;
+			
+			TimeOut = timeOut;
+			
+			TimeOutTimerDelay = timeOutDelay;
 
             #endregion
 
@@ -467,6 +490,10 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
             UpdateDefault();
 
             UpdateHelp();
+			
+			SetUpShowDoNotShowAgainOptionElements(showDoNotShowAgainOption, doNotShowAgainOptionText);
+			
+			SetUpTimeOutDelayTimer(useTimeOutOption, timeOutDelay, new Timer());
 
             UpdateTextExtra(showCtrlCopy);
 
@@ -881,7 +908,10 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
                                                  MessageBoxIcon icon,
                                                  MessageBoxDefaultButton defaultButton,
                                                  MessageBoxOptions options,
-                                                 HelpInformation helpInformation, bool? showCtrlCopy, Font messageboxTypeface = null)
+                                                 HelpInformation helpInformation, bool? showCtrlCopy, Font messageboxTypeface = null,
+												 bool showDoNotShowAgainOption = false, string doNotShowAgainOptionText = "Do n&ot show again", 
+                                                 bool useTimeOutOption = false, int timeOut = 60, int timeOutDelay = 250, 
+												 DialogResult defaultTimeOutResponse = DialogResult.OK)
         {
             // Check if trying to show a message box from a non-interactive process, this is not possible
             if (!SystemInformation.UserInteractive && ((options & (MessageBoxOptions.ServiceNotification | MessageBoxOptions.DefaultDesktopOnly)) == 0))
@@ -910,7 +940,7 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
             }
 
             // Show message box window as a modal dialog and then dispose of it afterwards
-            using (ExtendedKryptonMessageBox ekmb = new ExtendedKryptonMessageBox(showOwner, text, caption, buttons, icon, defaultButton, options, helpInformation, showCtrlCopy, messageboxTypeface))
+            using (ExtendedKryptonMessageBox ekmb = new ExtendedKryptonMessageBox(showOwner, text, caption, buttons, icon, defaultButton, options, helpInformation, showCtrlCopy, messageboxTypeface, showDoNotShowAgainOption, doNotShowAgainOptionText, useTimeOutOption, timeOut, timeOutDelay, defaultTimeOutResponse))
             {
                 ekmb.StartPosition = showOwner == null ? FormStartPosition.CenterScreen : FormStartPosition.CenterParent;
 
@@ -1056,6 +1086,16 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
                 _button3.IgnoreAltF4 = true;
             }
         }
+		
+		private void UpdateButtons(bool timeOutTimerEnabled, int timeOut, DialogResult defaultTimeOutResponse)
+		{
+			
+		}
+		
+		private void UpdateButtons(string button1Text, string button2Text, string button3Text)
+		{
+			
+		}
 
         private void UpdateDefault()
         {
@@ -1073,6 +1113,36 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
         private void UpdateHelp()
         {
         }
+		
+		private void SetUpShowDoNotShowAgainOptionElements(bool visible, string doNotShowAgainOptionText)
+		{
+			// Set visibility
+			_doNotShowAgainOption.Visible = visible;
+			
+			// Set text
+			_doNotShowAgainOption.Text = doNotShowAgainOptionText;
+			
+			// Set typeface based on MessageBoxTypeface
+			_doNotShowAgainOption.StateCommon.ShortText.Font = MessageBoxTypeface;
+			
+			// Set up checked changed event
+			_doNotShowAgainOption.CheckedChanged += new EventHandler(DoNotShowAgainOption_CheckedChanged);
+		}
+		
+		private void SetUpTimeOutDelayTimer(bool enabled, int ticksInMilliseconds, Timer timeOutTimer)
+		{
+			// Initialise a new timer
+			timeOutTimer = new Timer();
+			
+			// Enables the time out timer based on passed arguements
+			timeOutTimer.Enabled = enabled;
+			
+			// Set the interval based on the passed arguements
+			timeOutTimer.Interval = ticksInMilliseconds;
+			
+			// Setup the Tick event for the 'timeOutTimer'
+			timeOutTimer.Tick += new EventHandler(TimeOutTimer_Tick);
+		}
 
         private void UpdateSizing(IWin32Window showOwner)
         {
@@ -1254,6 +1324,29 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
                     Clipboard.SetText(sb.ToString(), TextDataFormat.Text);
                     Clipboard.SetText(sb.ToString(), TextDataFormat.UnicodeText);
                 }
+            }
+        }
+        #endregion
+
+        #region Events
+        private void DoNotShowAgainOption_CheckedChanged(object sender, EventArgs e)
+        {
+            DoNotShowAgainOptionResult = _doNotShowAgainOption.Checked;
+        }
+
+        private void TimeOutTimer_Tick(object sender, EventArgs e)
+        {
+            //? TODO: Update button text
+			while (TimeOut > 0)
+			{
+				TimeOut--;
+				
+				UpdateButtons(UseTimeOutOption, TimeOut, DefaultTimeOutResponse);
+			}
+
+            if (TimeOut == 0)
+            {
+                Hide(); // May need to find a more elegant solution
             }
         }
         #endregion
