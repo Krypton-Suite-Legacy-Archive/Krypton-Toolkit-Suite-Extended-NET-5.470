@@ -16,6 +16,11 @@
 
 ======
 
+## 2019-09-01 Build 653
+* Build 653 has been uploaded to NuGet
+
+======
+
 ## 2019-01-08 `ExtendedKryptonMessageBox` - Extra Features
 * Begun work on Auto time out & 'do not show me again' options. (Needs finishing)
 
