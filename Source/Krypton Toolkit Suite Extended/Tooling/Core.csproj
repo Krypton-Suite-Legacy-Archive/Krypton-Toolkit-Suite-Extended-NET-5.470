@@ -150,6 +150,7 @@
     <Compile Include="Settings\Classes\GlobalBooleanSettingsManager.cs" />
     <Compile Include="Settings\Classes\GlobalSettingsManager.cs" />
     <Compile Include="Settings\Classes\GlobalStringSettingsManager.cs" />
+    <Compile Include="Settings\Classes\PaletteColourSettingsController.cs" />
     <Compile Include="Settings\Classes\PaletteThemeSettingsManager.cs" />
     <Compile Include="Settings\Classes\PaletteTypefaceSettingsManager.cs" />
     <Compile Include="Settings\ColourBlendingSettings.Designer.cs">

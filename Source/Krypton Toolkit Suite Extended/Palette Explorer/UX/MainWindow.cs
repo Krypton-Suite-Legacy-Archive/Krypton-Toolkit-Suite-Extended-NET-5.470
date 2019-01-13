@@ -1,15 +1,15 @@
 ﻿using Classes.Colours;
 using ComponentFactory.Krypton.Toolkit;
+using Core.Classes.Other;
+using Core.Settings.Classes;
+using Core.Settings.Colours.Classes;
+using Core.UX;
 using PaletteExplorer.Classes;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using Core.Classes.Other;
-using Core.Settings.Classes;
-using Core.UX;
-using Core.Settings.Colours.Classes;
 
 namespace PaletteExplorer.UX
 {
@@ -23,8 +23,7 @@ namespace PaletteExplorer.UX
         private KryptonPalette _palette;
 
         private PaletteMode _paletteMode;
-
-        BasicPaletteColourManager _basicPaletteColourManager = new BasicPaletteColourManager();
+        private BasicPaletteColourManager _basicPaletteColourManager = new BasicPaletteColourManager();
 
         private ConversionMethods _conversionMethods = new ConversionMethods();
 
@@ -445,6 +444,10 @@ namespace PaletteExplorer.UX
             this.kryptonRibbonGroupSeparator14 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple18 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbOptions = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroup11 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple25 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.krgbMergeAllColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonTab4 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup7 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple21 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
@@ -590,10 +593,6 @@ namespace PaletteExplorer.UX
             this.kcSavePaletteAs = new ComponentFactory.Krypton.Toolkit.KryptonCommand();
             this.kcExitApplication = new ComponentFactory.Krypton.Toolkit.KryptonCommand();
             this.kryptonContextMenuItems2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
-            this.kryptonRibbonGroup11 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
-            this.kryptonRibbonGroupTriple25 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.krgbMergeAllColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.kryptonRibbonGroupButton3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -746,7 +745,6 @@ namespace PaletteExplorer.UX
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
-            this.kryptonRibbon1.SelectedContext = null;
             this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab3;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1219, 115);
             this.kryptonRibbon1.TabIndex = 1;
@@ -1267,6 +1265,24 @@ namespace PaletteExplorer.UX
             this.krgbOptions.TextLine1 = "Options /";
             this.krgbOptions.TextLine2 = "Settings";
             this.krgbOptions.Click += new System.EventHandler(this.krgbOptions_Click);
+            // 
+            // kryptonRibbonGroup11
+            // 
+            this.kryptonRibbonGroup11.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple25});
+            // 
+            // kryptonRibbonGroupTriple25
+            // 
+            this.kryptonRibbonGroupTriple25.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.krgbMergeAllColours,
+            this.kryptonRibbonGroupButton3});
+            // 
+            // krgbMergeAllColours
+            // 
+            this.krgbMergeAllColours.ButtonType = ComponentFactory.Krypton.Ribbon.GroupButtonType.Check;
+            this.krgbMergeAllColours.TextLine1 = "Merge All";
+            this.krgbMergeAllColours.TextLine2 = "Colours";
+            this.krgbMergeAllColours.ToolTipTitle = "Merge all colours";
             // 
             // kryptonRibbonTab4
             // 
@@ -2528,7 +2544,7 @@ namespace PaletteExplorer.UX
             // 
             // labelGridNormal
             // 
-            this.labelGridNormal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelGridNormal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelGridNormal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGridNormal.HelpVisible = false;
@@ -2600,23 +2616,6 @@ namespace PaletteExplorer.UX
             // kcExitApplication
             // 
             this.kcExitApplication.Text = "Exit Application";
-            // 
-            // kryptonRibbonGroup11
-            // 
-            this.kryptonRibbonGroup11.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
-            this.kryptonRibbonGroupTriple25});
-            // 
-            // kryptonRibbonGroupTriple25
-            // 
-            this.kryptonRibbonGroupTriple25.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.krgbMergeAllColours,
-            this.kryptonRibbonGroupButton3});
-            // 
-            // krgbMergeAllColours
-            // 
-            this.krgbMergeAllColours.TextLine1 = "Merge All";
-            this.krgbMergeAllColours.TextLine2 = "Colours";
-            this.krgbMergeAllColours.ToolTipTitle = "Merge all colours";
             // 
             // MainWindow
             // 
@@ -3106,11 +3105,11 @@ namespace PaletteExplorer.UX
         {
             if (useCircularPictureBoxes)
             {
-                //PaletteCompisitionEngine.ExportPaletteTheme(palette, _globalMethods.GetSelectedPaletteMode(), cbxBaseColourPreview.BackColor, cbxDarkColourPreview.BackColor, cbxMiddleColourPreview.BackColor, cbxLightColourPreview.BackColor, cbxLightestColourPreview.BackColor, cbxBorderColourPreview.BackColor, cbxAlternativeNormalTextColourPreview.BackColor, cbxNormalTextColourPreview.BackColor, cbxDisabledTextColourPreview.BackColor, cbxFocusedTextColourPreview.BackColor, cbxPressedTextColourPreview.BackColor, cbxDisabledControlColourPreview.BackColor, cbxLinkNormalColourPreview.BackColor, cbxLinkFocusedColourPreview.BackColor, cbxLinkHoverColourPreview.BackColor, cbxLinkVisitedColourPreview.BackColor, cbxCustomColourOnePreview.BackColor, cbxCustomColourTwoPreview.BackColor, cbxCustomColourThreePreview.BackColor, cbxCustomColourFourPreview.BackColor, cbxCustomColourFivePreview.BackColor, cbxCustomTextColourOnePreview.BackColor, cbxCustomTextColourTwoPreview.BackColor, cbxCustomTextColourThreePreview.BackColor, cbxCustomTextColourFourPreview.BackColor, cbxCustomTextColourFivePreview.BackColor, cbxMenuTextColourPreview.BackColor, cbxStatusTextColourPreview.BackColor, cbxRibbonTabTextColourPreview.BackColor, tslCurrentStatus);
+                PaletteComposerEngine.ExportPaletteTheme(palette, _globalMethods.GetSelectedPaletteMode(), cbxBaseColourPreview.BackColor, cbxDarkColourPreview.BackColor, cbxMiddleColourPreview.BackColor, cbxLightColourPreview.BackColor, cbxLightestColourPreview.BackColor, cbxBorderColourPreview.BackColor, cbxAlternativeNormalTextColourPreview.BackColor, cbxNormalTextColourPreview.BackColor, cbxDisabledTextColourPreview.BackColor, cbxFocusedTextColourPreview.BackColor, cbxPressedTextColourPreview.BackColor, cbxDisabledControlColourPreview.BackColor, cbxLinkNormalColourPreview.BackColor, cbxLinkFocusedColourPreview.BackColor, cbxLinkHoverColourPreview.BackColor, cbxLinkVisitedColourPreview.BackColor, cbxCustomColourOnePreview.BackColor, cbxCustomColourTwoPreview.BackColor, cbxCustomColourThreePreview.BackColor, cbxCustomColourFourPreview.BackColor, cbxCustomColourFivePreview.BackColor, cbxCustomTextColourOnePreview.BackColor, cbxCustomTextColourTwoPreview.BackColor, cbxCustomTextColourThreePreview.BackColor, cbxCustomTextColourFourPreview.BackColor, cbxCustomTextColourFivePreview.BackColor, cbxMenuTextColourPreview.BackColor, cbxStatusTextColourPreview.BackColor, cbxRibbonTabTextColourPreview.BackColor, tslCurrentStatus);
             }
             else
             {
-                //PaletteComposerEngine.ExportPaletteTheme(_globalMethods.GetSelectedPaletteMode(), pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview, pbxStatusTextColourPreview, tslStatus);
+                PaletteComposerEngine.ExportPaletteTheme(_globalMethods.GetSelectedPaletteMode(), pbxBaseColour, pbxDarkColour, pbxMiddleColour, pbxLightColour, pbxLightestColour, pbxBorderColourPreview, pbxAlternativeNormalTextColour, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledColourPreview, pbxLinkNormalColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview, pbxStatusTextColourPreview, tslStatus);
             }
         }
 
