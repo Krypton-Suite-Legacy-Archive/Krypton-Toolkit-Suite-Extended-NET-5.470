@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 
 using ExtendedControls.ExtendedToolkit.Values;
-using ExtendedControls.ExtendedToolkit.View_Draw;
+using ExtendedControls.ExtendedToolkit.ViewDraw;
 
 namespace ExtendedControls.ExtendedToolkit.Controls
 {
@@ -19,7 +19,8 @@ namespace ExtendedControls.ExtendedToolkit.Controls
     /// Main code taken from KryptonButton, then trimmed out to force the CommandLink layout
     /// </remarks>
     [ToolboxItem(true)]
-    [ToolboxBitmap(typeof(KryptonButton), "ToolboxBitmaps.KryptonButton.bmp")] // TODO: use a local image
+    //[ToolboxBitmap(typeof(KryptonButton), "ToolboxBitmaps.KryptonButton.bmp")] // TODO: use a local image
+    [ToolboxBitmap(typeof(KryptonButton), "ToolboxBitmaps.CommandLinkButton.bmp")]
     [DefaultEvent("Click")]
     [DefaultProperty("Heading")]
     [Designer(typeof(Designers.KryptonCommandLinkButtonDesigner))]

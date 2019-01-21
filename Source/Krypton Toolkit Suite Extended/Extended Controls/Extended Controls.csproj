@@ -466,7 +466,13 @@
     <None Include="Resources\Question_32_x_32.png" />
     <None Include="Resources\Stop_32_x_32.png" />
     <None Include="Resources\Warning_32_x_32.png" />
+    <Content Include="ToolboxBitmaps\CommandLinkButton.bmp" />
     <Content Include="ToolboxBitmaps\GlassButton.bmp" />
+    <Content Include="ToolboxBitmaps\Hyperlink.png" />
+    <Content Include="ToolboxBitmaps\HyperlinkBlue.png" />
+    <Content Include="ToolboxBitmaps\HyperlinkGreen.png" />
+    <Content Include="ToolboxBitmaps\HyperlinkRed.png" />
+    <Content Include="ToolboxBitmaps\HyperlinkYellow.png" />
     <Content Include="ToolboxBitmaps\KryptonForm.bmp" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
