@@ -71,6 +71,8 @@
     <Compile Include="Base\ButtonSpec\ButtonSpecFormWindowMin.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Base\Code\Colours\Colour Wheel\Images.cs" />
+    <Compile Include="Base\Code\Colours\Colour Wheel\Utilities.cs" />
     <Compile Include="Base\Code\Colours\ColourConverting.cs" />
     <Compile Include="Base\Code\Colours\ColourTypeDialogConverter.cs" />
     <Compile Include="Base\Code\Colours\ColourTypeDropDownConverter.cs" />
@@ -100,6 +102,7 @@
     <Compile Include="Base\Code\Utilities\WIN32.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
     <Compile Include="Base\Enumerations\Enumerations.cs" />
+    <Compile Include="Base\Structs\Colour Wheel\HSLColour.cs" />
     <Compile Include="Base\UI\KryptonFormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,7 +141,73 @@
     <Compile Include="ExtendedToolkit\Calendar Library\WeekDayColumn.cs" />
     <Compile Include="ExtendedToolkit\Calendar Library\WeekRow.cs" />
     <Compile Include="ExtendedToolkit\Calendar Library\WeekRowHeaderCell.cs" />
-    <Compile Include="ExtendedToolkit\Calendar\KryptonCalendar.cs">
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarColourTable.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarDay.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarDayEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarDayTop.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarHighlightRange.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarItem.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarItemCancelEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarItemCollection.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarItemEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarKryptonRenderer.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarLoadEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarProfessionalRenderer.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarRenderer.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarRendererBoxEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarRendererDayEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarRendererEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarRendererItemBoundsEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarRendererItemEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarRendererTimeUnitEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarSelectableElement.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarSystemRenderer.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarTimeScaleUnit.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\CalendarWeek.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\MonthViewBoxEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\MonthViewDay.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\MonthViewMontEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Classes\MonthViewMonth.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Controls\KryptonCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Calendar\Controls\KryptonCalendarTextBox.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Controls\MonthView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Calendar\Enumerations\CalendarDaysMode.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Enumerations\CalendarItemImageAlign.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Enumerations\CalendarTimeScale.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Interfaces\ICalendarSelectableElement.cs" />
+    <Compile Include="ExtendedToolkit\Calendar\Interfaces\ISelectableElement.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Charting\AquaGauge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Charting\DataBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Charting\DataChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Charting\HBarChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Charting\KryptonAquaGauge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Charting\KryptonKnobControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Charting\KryptonLxLedControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Charting\LxLedControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Charting\SlidingScale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Charting\StarRatingControl.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\CircularPictureBox.cs">
@@ -165,6 +234,9 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Colours\ColourUI.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\ColourWheel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Colours\CustomColourEditorUserControl.cs">
       <SubType>UserControl</SubType>
@@ -370,6 +442,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Notes\IMPORTANT.txt" />
+    <Content Include="ToolboxBitmaps\DataBar.bmp" />
+    <Content Include="ToolboxBitmaps\DataChart.bmp" />
+    <Content Include="ToolboxBitmaps\UACButton.bmp" />
     <None Include="Resources\help2.png" />
     <None Include="Resources\information.png" />
     <None Include="Resources\sign_warning.png" />
@@ -466,6 +541,9 @@
     <None Include="Resources\Question_32_x_32.png" />
     <None Include="Resources\Stop_32_x_32.png" />
     <None Include="Resources\Warning_32_x_32.png" />
+    <None Include="Resources\colorbarIndicators.bmp" />
+    <None Include="Resources\eyedropper.bmp" />
+    <None Include="Resources\popupcontainerbuttons.bmp" />
     <Content Include="ToolboxBitmaps\CommandLinkButton.bmp" />
     <Content Include="ToolboxBitmaps\GlassButton.bmp" />
     <Content Include="ToolboxBitmaps\Hyperlink.png" />

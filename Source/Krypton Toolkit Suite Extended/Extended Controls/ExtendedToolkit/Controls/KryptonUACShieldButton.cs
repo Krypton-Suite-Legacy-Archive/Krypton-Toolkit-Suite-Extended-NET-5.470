@@ -19,7 +19,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
     [DesignerCategory("Code")]
     [DisplayName("Krypton UAC Elevated Button")]
     [ToolboxItem(true)]
-    [ToolboxBitmap(typeof(KryptonButton))]
+    [ToolboxBitmap(typeof(KryptonButton), "ToolboxBitmaps.UACButton.bmp")]
     public partial class KryptonUACElevatedButton : KryptonButton
     {
         #region Variables

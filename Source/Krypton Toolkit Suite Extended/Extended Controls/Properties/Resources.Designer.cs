@@ -103,6 +103,16 @@ namespace ExtendedControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap colorbarIndicators {
+            get {
+                object obj = ResourceManager.GetObject("colorbarIndicators", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ColumnHeader_Filtered {
             get {
                 object obj = ResourceManager.GetObject("ColumnHeader_Filtered", resourceCulture);
@@ -246,6 +256,16 @@ namespace ExtendedControls.Properties {
         internal static System.Drawing.Bitmap Event_16x {
             get {
                 object obj = ResourceManager.GetObject("Event_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eyedropper {
+            get {
+                object obj = ResourceManager.GetObject("eyedropper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -586,6 +606,16 @@ namespace ExtendedControls.Properties {
         internal static System.Drawing.Bitmap palette {
             get {
                 object obj = ResourceManager.GetObject("palette", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap popupcontainerbuttons {
+            get {
+                object obj = ResourceManager.GetObject("popupcontainerbuttons", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

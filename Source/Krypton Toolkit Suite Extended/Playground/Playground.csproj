@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalandarAndControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalandarAndControls.Designer.cs">
+      <DependentUpon>CalandarAndControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColourWheel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColourWheel.Designer.cs">
+      <DependentUpon>ColourWheel.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommandLinkStyles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +85,9 @@
     <Compile Include="Scrollbars.Designer.cs">
       <DependentUpon>Scrollbars.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CalandarAndControls.resx">
+      <DependentUpon>CalandarAndControls.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommandLinkStyles.resx">
       <DependentUpon>CommandLinkStyles.cs</DependentUpon>
     </EmbeddedResource>
