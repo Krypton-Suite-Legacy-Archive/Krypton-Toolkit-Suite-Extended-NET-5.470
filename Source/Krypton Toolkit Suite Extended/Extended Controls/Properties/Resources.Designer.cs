@@ -71,6 +71,26 @@ namespace ExtendedControls.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Arrow_Down {
+            get {
+                object obj = ResourceManager.GetObject("Arrow_Down", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Arrow_Up {
+            get {
+                object obj = ResourceManager.GetObject("Arrow_Up", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap arrowControl_Image {
@@ -221,6 +241,16 @@ namespace ExtendedControls.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon DefaultIcon {
+            get {
+                object obj = ResourceManager.GetObject("DefaultIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Down {
@@ -237,6 +267,26 @@ namespace ExtendedControls.Properties {
             get {
                 object obj = ResourceManager.GetObject("download", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon DropDown2003 {
+            get {
+                object obj = ResourceManager.GetObject("DropDown2003", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon DropDown2007 {
+            get {
+                object obj = ResourceManager.GetObject("DropDown2007", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -307,6 +357,26 @@ namespace ExtendedControls.Properties {
             get {
                 object obj = ResourceManager.GetObject("GridSortOrder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Grip2003 {
+            get {
+                object obj = ResourceManager.GetObject("Grip2003", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Grip2007 {
+            get {
+                object obj = ResourceManager.GetObject("Grip2007", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         

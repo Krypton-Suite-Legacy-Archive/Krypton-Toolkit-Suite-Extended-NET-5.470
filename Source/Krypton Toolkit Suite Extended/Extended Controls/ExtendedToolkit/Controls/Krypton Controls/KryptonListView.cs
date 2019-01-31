@@ -1,7 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code;
-using ExtendedControls.Base.Code.Drawing;
-using ExtendedControls.Base.Code.Utilities;
+using ExtendedControls.ExtendedToolkit.Controls.Drawing.Classes;
+using ExtendedControls.ExtendedToolkit.Utilities.Classes;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
