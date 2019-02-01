@@ -1,27 +1,23 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using Core.Classes.Other;
+using Core.UX;
+using Core.UX.Colours;
+using Core.UX.Options;
+using ExtendedControls.Enumerations;
+using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using ExtendedControls.ExtendedToolkit.UI.Dialogues;
+using ExtendedControls.ExtendedToolkit.UI.Drawing;
+using KryptonApplicationUpdater.Classes.SettingsManager;
+//using KryptonApplicationUpdater.Interfaces;
+
+using KryptonExtendedToolkit.Base.Code;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-
-using ComponentFactory.Krypton.Toolkit;
-
-using Core.Classes.Other;
-using Core.UX;
-using Core.UX.Colours;
-using Core.UX.Options;
-
-using ExtendedControls.Enumerations;
-using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
-using ExtendedControls.ExtendedToolkit.UI.Dialogues;
-using ExtendedControls.ExtendedToolkit.UI.Drawing;
-
-using KryptonApplicationUpdater.Classes.SettingsManager;
-//using KryptonApplicationUpdater.Interfaces;
-
-using KryptonExtendedToolkit.Base.Code;
 
 namespace Playground
 {
@@ -310,7 +306,7 @@ namespace Playground
         {
             KryptonMessageBox.Show(this, @"Test KryptonMessagebox", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox Default 12", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox specified 20", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information, messageboxTypeface:new Font(@"Tahoma", 20F));
+            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox specified 20", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information, messageboxTypeface: new Font(@"Tahoma", 20F));
         }
 
         private void kbtnPaletteEditor_Click(object sender, EventArgs e)
@@ -406,6 +402,20 @@ namespace Playground
         private void timer1_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void kryptonButton12_Click(object sender, EventArgs e)
+        {
+            WizardTest wt = new WizardTest();
+
+            wt.Show();
+        }
+
+        private void kryptonButton13_Click(object sender, EventArgs e)
+        {
+            MoreControls mc = new MoreControls();
+
+            mc.Show();
         }
     }
 }

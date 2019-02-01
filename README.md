@@ -16,6 +16,14 @@
 
 ======
 
+## 01-02-2019 Extended Renderer Integration
+* Fully merged the `ExtendedRenderer` project codebase
+* Tidy up control placement in code
+* Upgraded to Krypton Toolkit Suite - version: **5.470.717**
+* New NuGet package, build 700 (build date Friday 1st, February 2019) is now available
+
+======
+
 ## 2019-09-01 Build 653
 * Build 653 has been uploaded to NuGet
 

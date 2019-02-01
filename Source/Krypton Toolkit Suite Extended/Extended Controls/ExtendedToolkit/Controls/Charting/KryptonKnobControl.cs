@@ -131,10 +131,10 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Charting
         {
             this.SuspendLayout();
             // 
-            // KnobControl
+            // KryptonKnobControl
             // 
-            this.Name = "KnobControl";
-            this.Size = new System.Drawing.Size(674, 424);
+            this.Name = "KryptonKnobControl";
+            this.Size = new System.Drawing.Size(481, 424);
             this.ResumeLayout(false);
 
         }

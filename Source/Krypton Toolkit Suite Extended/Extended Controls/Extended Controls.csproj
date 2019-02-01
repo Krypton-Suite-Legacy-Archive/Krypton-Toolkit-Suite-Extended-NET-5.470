@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationVersion>4.7.410.0</ApplicationVersion>
-    <AssemblyVersion>5.470.653.0</AssemblyVersion>
+    <AssemblyVersion>5.470.700.0</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -286,22 +286,89 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonColourButtonExtended.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonColourButtonToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonColourComboBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonComboBoxEnhanced.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonComboBoxToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonComboBoxTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonCustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonExtendedNumericUpDownControl.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonGrid.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonHexadecimalColourTextBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonImageComboBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMonthCalendar.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPanelEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPowerComboBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonProgressBar.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPromptTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonShadowLabel.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSlideButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSliderBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSliderButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSplitButton.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonTimeFrame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonTrackBarToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonTreeViewExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonUACShieldButton.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonViewBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonViewButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\ListViewColumnSorter.cs" />
     <Compile Include="ExtendedToolkit\Controls\Navigator\Classes\OutlookBarButton.cs" />
     <Compile Include="ExtendedToolkit\Controls\Navigator\Classes\OutlookBarButtonCollection.cs" />
     <Compile Include="ExtendedToolkit\Controls\Navigator\Controls\CustomNavigatorButton.cs">
@@ -597,6 +664,26 @@
     <Compile Include="ExtendedToolkit\Values\MainTextValue.cs" />
     <Compile Include="ExtendedToolkit\Values\SubscriptTextValue.cs" />
     <Compile Include="ExtendedToolkit\View Draw\ViewDrawCommandLinkButton.cs" />
+    <Compile Include="ExtendedToolkit\Wizard\Classes\HeaderDesigner.cs" />
+    <Compile Include="ExtendedToolkit\Wizard\Classes\InfoContainerDesigner.cs" />
+    <Compile Include="ExtendedToolkit\Wizard\Classes\InfoPageDesigner.cs" />
+    <Compile Include="ExtendedToolkit\Wizard\Classes\PageCollection.cs" />
+    <Compile Include="ExtendedToolkit\Wizard\Classes\PageEventHandler.cs" />
+    <Compile Include="ExtendedToolkit\Wizard\Controls\Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Wizard\Classes\WizardDesigner.cs" />
+    <Compile Include="ExtendedToolkit\Wizard\Classes\WizardPage.cs" />
+    <Compile Include="ExtendedToolkit\Wizard\Classes\WizardPageDesigner.cs" />
+    <Compile Include="ExtendedToolkit\Wizard\Controls\Header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Wizard\Controls\InfoContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Wizard\Controls\InfoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Interfaces\Colour Schemes\IColourScheme.cs" />
     <Compile Include="Interfaces\Colours\IExternalColourEditorInformationProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -755,6 +842,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Base\UI\Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Charting\KryptonKnobControl.resx">
+      <DependentUpon>KryptonKnobControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Drawing\UI\KryptonColourChooser1.resx">
       <DependentUpon>KryptonColourChooser1.cs</DependentUpon>
