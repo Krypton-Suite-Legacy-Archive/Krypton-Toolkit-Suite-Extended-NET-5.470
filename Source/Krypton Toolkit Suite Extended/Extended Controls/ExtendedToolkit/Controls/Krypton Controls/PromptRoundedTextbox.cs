@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExtendedControls.Base.Code.Drawing;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -23,12 +24,12 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         #endregion
 
         #region Properties
-        public bool DrawPrompt { get { return _drawPrompt; } set { _drawPrompt = value; } }
+        public bool DrawPrompt { get => _drawPrompt; set => _drawPrompt = value; }
 
         [Browsable(true)]
         [EditorBrowsable(EditorBrowsableState.Always)]
         [Category("Appearance")]
-        public string PromptText { get { return _promptText; } set { _promptText = value; } }
+        public string PromptText { get => _promptText; set => _promptText = value; }
 
         [Browsable(true)]
         [EditorBrowsable(EditorBrowsableState.Always)]
@@ -133,6 +134,8 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             _box.TextChanged += Box_TextChanged;
 
             _box.MouseDoubleClick += Box_MouseDoubleClick;
+
+            _box.TextAlignChanged += Box_TextAlignChanged;
         }
         #endregion
 
@@ -161,6 +164,11 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
                 _box.SelectionLength = Text.Length;
             }
         }
+
+        private void Box_TextAlignChanged(object sender, EventArgs e)
+        {
+            Invalidate();
+        }
         #endregion
 
         #region Methods
@@ -169,6 +177,111 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             if (_box.Text != null)
             {
                 _box.SelectAll();
+            }
+        }
+
+        protected virtual void DrawTextPrompt()
+        {
+            using (Graphics gfx = CreateGraphics())
+            {
+                DrawTextPrompt(gfx);
+            }
+        }
+
+        protected virtual void DrawTextPrompt(Graphics g)
+        {
+            TextFormatFlags flags = TextFormatFlags.NoPadding | TextFormatFlags.Top | TextFormatFlags.EndEllipsis;
+
+            Rectangle rectangle = ClientRectangle;
+
+            switch (_box.TextAlign)
+            {
+                case HorizontalAlignment.Left:
+                    flags = flags | TextFormatFlags.Left;
+
+                    rectangle.Offset(1, 1);
+                    break;
+                case HorizontalAlignment.Right:
+                    flags = flags | TextFormatFlags.Right;
+
+                    rectangle.Offset(0, 1);
+                    break;
+                case HorizontalAlignment.Center:
+                    flags = flags | TextFormatFlags.HorizontalCenter;
+
+                    rectangle.Offset(0, 1);
+                    break;
+            }
+
+            TextRenderer.DrawText(g, PromptText, PromptTypeface, rectangle, PromptForeColour, BackColor, flags);
+        }
+        #endregion
+
+        #region Overridden Methods
+        protected override void OnEnter(EventArgs e)
+        {
+            if (_box.Text.Length > 0 && FocusSelect)
+            {
+                _box.SelectAll();
+            }
+
+            base.OnEnter(e);
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            _shape = new RoundedRectangleF(Width, Height, Radius).Path;
+
+            _innerRect = new RoundedRectangleF(Width - 0.5f, Height - 0.5f, Radius, 0.5f, 0.5f).Path;
+
+            if (_box.Height >= Height - 4)
+            {
+                Height = _box.Height + 4;
+            }
+
+            _box.Location = new Point(Radius - 5, Height / 2 - _box.Font.Height / 2);
+
+            _box.Width = Width - (int)(Radius * 1.5);
+
+            e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
+
+            Bitmap bmp = new Bitmap(Width, Height);
+
+            Graphics grpx = Graphics.FromImage(bmp);
+
+            using (SolidBrush slb = new SolidBrush(_brush))
+            {
+                e.Graphics.FillPath(slb, _innerRect);
+            }
+
+            Transparenter.MakeTransparent(this, e.Graphics);
+
+            base.OnPaint(e);
+
+            if (DrawPrompt && _box.Text.Length == 0)
+            {
+                DrawTextPrompt(e.Graphics);
+            }
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case WM_SETFOCUS:
+                    DrawPrompt = false;
+                    break;
+                case WM_KILLFOCUS:
+                    DrawPrompt = true;
+                    break;
+            }
+
+            base.WndProc(ref m);
+
+            // Only draw the prompt on the WM_PAINT event and when the Text property is empty
+            if (m.Msg == WM_PAINT && DrawPrompt && Text.Length == 0 && !GetStyle(ControlStyles.UserPaint))
+            {
+                DrawTextPrompt();
             }
         }
         #endregion

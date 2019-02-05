@@ -80,6 +80,7 @@ namespace Playground
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.roundedTextbox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox();
             this.kryptonButton14 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.screenColourPicker1 = new Core.Controls.Colours.ScreenColourPicker();
             this.colourWheel1 = new Core.Controls.Colours.ColourWheel();
@@ -147,7 +148,7 @@ namespace Playground
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.roundedTextbox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox();
+            this.toggleSwitch1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToggleSwitch();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -508,6 +509,7 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.toggleSwitch1);
             this.kryptonPanel1.Controls.Add(this.roundedTextbox1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton14);
             this.kryptonPanel1.Controls.Add(this.screenColourPicker1);
@@ -558,6 +560,18 @@ namespace Playground
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 659);
             this.kryptonPanel1.TabIndex = 2;
+            // 
+            // roundedTextbox1
+            // 
+            this.roundedTextbox1.BackColor = System.Drawing.Color.Transparent;
+            this.roundedTextbox1.Brush = System.Drawing.Color.White;
+            this.roundedTextbox1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.roundedTextbox1.ForeColor = System.Drawing.Color.DimGray;
+            this.roundedTextbox1.Location = new System.Drawing.Point(827, 168);
+            this.roundedTextbox1.Name = "roundedTextbox1";
+            this.roundedTextbox1.Size = new System.Drawing.Size(197, 33);
+            this.roundedTextbox1.TabIndex = 43;
+            this.roundedTextbox1.Text = "Hello World!";
             // 
             // kryptonButton14
             // 
@@ -1175,7 +1189,6 @@ namespace Playground
             // 
             // etslBlinkTest
             // 
-            this.etslBlinkTest.BackColor = System.Drawing.Color.Empty;
             this.etslBlinkTest.BkClr = false;
             this.etslBlinkTest.BlinkDuration = ((long)(10));
             this.etslBlinkTest.BlinkState = ExtendedControls.Base.Enumerations.BlinkState.NormalBlink;
@@ -1200,17 +1213,17 @@ namespace Playground
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // roundedTextbox1
+            // toggleSwitch1
             // 
-            this.roundedTextbox1.BackColor = System.Drawing.Color.Transparent;
-            this.roundedTextbox1.Brush = System.Drawing.Color.White;
-            this.roundedTextbox1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.roundedTextbox1.ForeColor = System.Drawing.Color.DimGray;
-            this.roundedTextbox1.Location = new System.Drawing.Point(827, 168);
-            this.roundedTextbox1.Name = "roundedTextbox1";
-            this.roundedTextbox1.Size = new System.Drawing.Size(197, 33);
-            this.roundedTextbox1.TabIndex = 43;
-            this.roundedTextbox1.Text = "Hello World!";
+            this.toggleSwitch1.BorderColour = System.Drawing.Color.LightGray;
+            this.toggleSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.toggleSwitch1.IsOn = true;
+            this.toggleSwitch1.Location = new System.Drawing.Point(523, 440);
+            this.toggleSwitch1.Name = "toggleSwitch1";
+            this.toggleSwitch1.Size = new System.Drawing.Size(172, 88);
+            this.toggleSwitch1.TabIndex = 44;
+            this.toggleSwitch1.Text = "toggleSwitch1";
+            this.toggleSwitch1.TextEnabled = true;
             // 
             // Form1
             // 
@@ -1370,6 +1383,7 @@ namespace Playground
         private Core.Controls.Colours.ScreenColourPicker screenColourPicker1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton14;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox roundedTextbox1;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToggleSwitch toggleSwitch1;
     }
 }
 

@@ -79,6 +79,7 @@
     <Compile Include="Base\Code\Colours\ColourTypeDropDownConverter.cs" />
     <Compile Include="Base\Code\Colours\ColourTypeEditorDialog.cs" />
     <Compile Include="Base\Code\Colours\ColourTypeEditorDropDown.cs" />
+    <Compile Include="Base\Code\Colours\ExtensionColourMethods.cs" />
     <Compile Include="Base\Code\Colours\HSBColour.cs" />
     <Compile Include="Base\Code\Colours\HSLColour.cs" />
     <Compile Include="Base\Code\Colours\RGBColour.cs" />
@@ -191,6 +192,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\RoundedTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\ToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\Colours\ColourWheelColourPickerDialog.cs">

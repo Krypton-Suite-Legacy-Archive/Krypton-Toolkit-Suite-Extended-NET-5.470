@@ -78,7 +78,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
             BackColor = Color.Transparent;
 
-            ForeColor = Color.DimGray;
+            ForeColor = Color.Black; //Color.DimGray;
 
             _brush = Color.White;
 
