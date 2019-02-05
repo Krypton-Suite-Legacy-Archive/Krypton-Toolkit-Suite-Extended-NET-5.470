@@ -417,5 +417,12 @@ namespace Playground
 
             mc.Show();
         }
+
+        private void kryptonButton14_Click(object sender, EventArgs e)
+        {
+            ColourWheelColourPickerDialog cwcpd = new ColourWheelColourPickerDialog();
+
+            cwcpd.Show();
+        }
     }
 }

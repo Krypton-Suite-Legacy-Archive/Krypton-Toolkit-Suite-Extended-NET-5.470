@@ -1,5 +1,5 @@
-﻿using Core.Interfaces;
-using Core.STRUCTS;
+﻿using ExtendedControls.Base.Interfaces;
+using ExtendedControls.Base.Structures;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,11 +8,10 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 
-namespace Core.Controls.Colours
+namespace ExtendedControls.ExtendedToolkit.Controls.Colours.Controls
 {
     [DefaultProperty("Colour")]
     [DefaultEvent("ColourChanged")]
-    [ToolboxItem(false)]
     public class ColourWheel : Control, IColourEditor
     {
         #region Constants

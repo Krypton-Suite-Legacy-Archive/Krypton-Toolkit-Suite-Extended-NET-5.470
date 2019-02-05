@@ -37,6 +37,10 @@ namespace Playground
         private ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls.KryptonTabControl kryptonTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private Core.Controls.Colours.ColourWheel colourWheel1;
+        private KryptonOutlookGrid.Controls.KryptonOutlookGridGroupBox kryptonOutlookGridGroupBox1;
+        private KryptonOutlookGrid.Classes.KryptonOutlookGrid kryptonOutlookGrid1;
+        private Core.Controls.Colours.ColourEditorManager colourEditorManager1;
         private KryptonPanel kryptonPanel1;
 
         public MoreControls()
@@ -47,16 +51,17 @@ namespace Playground
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node4");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node5");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Node1");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Node2");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node3");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node5");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Node1");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Node3");
+            KryptonOutlookGrid.Classes.OutlookGridGroupCollection outlookGridGroupCollection1 = new KryptonOutlookGrid.Classes.OutlookGridGroupCollection();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonTabControl1 = new ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls.KryptonTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -89,6 +94,10 @@ namespace Playground
             this.kryptonPropertyGrid1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPropertyGrid();
             this.kryptonShadowLabel1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonShadowLabel();
             this.kryptonProgressBar1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonProgressBar();
+            this.kryptonOutlookGrid1 = new KryptonOutlookGrid.Classes.KryptonOutlookGrid();
+            this.kryptonOutlookGridGroupBox1 = new KryptonOutlookGrid.Controls.KryptonOutlookGridGroupBox();
+            this.colourEditorManager1 = new Core.Controls.Colours.ColourEditorManager();
+            this.colourWheel1 = new Core.Controls.Colours.ColourWheel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.kryptonTabControl1.SuspendLayout();
@@ -97,10 +106,14 @@ namespace Playground
             ((System.ComponentModel.ISupportInitialize)(this.kryptonImageComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonCueComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxEnhanced1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonOutlookGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.colourWheel1);
+            this.kryptonPanel1.Controls.Add(this.kryptonOutlookGridGroupBox1);
+            this.kryptonPanel1.Controls.Add(this.kryptonOutlookGrid1);
             this.kryptonPanel1.Controls.Add(this.kryptonTabControl1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton2);
             this.kryptonPanel1.Controls.Add(this.kryptonButton1);
@@ -219,20 +232,20 @@ namespace Playground
             // 
             // kryptonGrid1
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
-            this.kryptonGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
+            this.kryptonGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.kryptonGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.kryptonGrid1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.kryptonGrid1.DefaultCellStyle = dataGridViewCellStyle2;
             this.kryptonGrid1.Location = new System.Drawing.Point(774, 276);
             this.kryptonGrid1.Name = "kryptonGrid1";
             this.kryptonGrid1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Transparent;
@@ -424,23 +437,23 @@ namespace Playground
             this.kryptonTreeView1.FullRowSelect = true;
             this.kryptonTreeView1.Location = new System.Drawing.Point(481, 59);
             this.kryptonTreeView1.Name = "kryptonTreeView1";
-            treeNode7.Name = "Node4";
-            treeNode7.Text = "Node4";
-            treeNode8.Name = "Node5";
-            treeNode8.Text = "Node5";
-            treeNode9.Name = "Node0";
-            treeNode9.Text = "Node0";
-            treeNode10.Name = "Node1";
-            treeNode10.Text = "Node1";
-            treeNode11.Name = "Node2";
-            treeNode11.Text = "Node2";
-            treeNode12.Name = "Node3";
-            treeNode12.Text = "Node3";
+            treeNode1.Name = "Node4";
+            treeNode1.Text = "Node4";
+            treeNode2.Name = "Node5";
+            treeNode2.Text = "Node5";
+            treeNode3.Name = "Node0";
+            treeNode3.Text = "Node0";
+            treeNode4.Name = "Node1";
+            treeNode4.Text = "Node1";
+            treeNode5.Name = "Node2";
+            treeNode5.Text = "Node2";
+            treeNode6.Name = "Node3";
+            treeNode6.Text = "Node3";
             this.kryptonTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode10,
-            treeNode11,
-            treeNode12});
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6});
             this.kryptonTreeView1.Size = new System.Drawing.Size(189, 179);
             this.kryptonTreeView1.TabIndex = 63;
             // 
@@ -526,16 +539,45 @@ namespace Playground
             // kryptonProgressBar1
             // 
             this.kryptonProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.kryptonProgressBar1.BackgroundColour = System.Drawing.Color.Teal;
             this.kryptonProgressBar1.DisplayText = "50%";
-            this.kryptonProgressBar1.EndColour = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.kryptonProgressBar1.EndColour = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
             this.kryptonProgressBar1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.kryptonProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this.kryptonProgressBar1.ForeColor = System.Drawing.Color.White;
+            this.kryptonProgressBar1.GlowColour = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
             this.kryptonProgressBar1.Location = new System.Drawing.Point(12, 12);
             this.kryptonProgressBar1.Name = "kryptonProgressBar1";
             this.kryptonProgressBar1.Size = new System.Drawing.Size(264, 32);
-            this.kryptonProgressBar1.StartColour = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(224)))), ((int)(((byte)(135)))));
+            this.kryptonProgressBar1.StartColour = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
             this.kryptonProgressBar1.TabIndex = 47;
             this.kryptonProgressBar1.Value = 50;
+            // 
+            // kryptonOutlookGrid1
+            // 
+            this.kryptonOutlookGrid1.FillMode = KryptonOutlookGrid.Classes.FillMode.GROUPSONLY;
+            this.kryptonOutlookGrid1.GroupCollection = outlookGridGroupCollection1;
+            this.kryptonOutlookGrid1.Location = new System.Drawing.Point(12, 382);
+            this.kryptonOutlookGrid1.Name = "kryptonOutlookGrid1";
+            this.kryptonOutlookGrid1.PreviousSelectedGroupRow = -1;
+            this.kryptonOutlookGrid1.ShowLines = false;
+            this.kryptonOutlookGrid1.Size = new System.Drawing.Size(240, 150);
+            this.kryptonOutlookGrid1.TabIndex = 82;
+            // 
+            // kryptonOutlookGridGroupBox1
+            // 
+            this.kryptonOutlookGridGroupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonOutlookGridGroupBox1.Location = new System.Drawing.Point(270, 450);
+            this.kryptonOutlookGridGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.kryptonOutlookGridGroupBox1.Name = "kryptonOutlookGridGroupBox1";
+            this.kryptonOutlookGridGroupBox1.Size = new System.Drawing.Size(744, 46);
+            this.kryptonOutlookGridGroupBox1.TabIndex = 83;
+            // 
+            // colourWheel1
+            // 
+            this.colourWheel1.Location = new System.Drawing.Point(1098, 425);
+            this.colourWheel1.Name = "colourWheel1";
+            this.colourWheel1.Size = new System.Drawing.Size(263, 302);
+            this.colourWheel1.TabIndex = 1;
             // 
             // MoreControls
             // 
@@ -551,6 +593,7 @@ namespace Playground
             ((System.ComponentModel.ISupportInitialize)(this.kryptonImageComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonCueComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxEnhanced1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonOutlookGrid1)).EndInit();
             this.ResumeLayout(false);
 
         }

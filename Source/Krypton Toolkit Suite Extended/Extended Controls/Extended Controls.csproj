@@ -86,7 +86,10 @@
     <Compile Include="Base\Code\Drawing\ColourHandler.cs" />
     <Compile Include="Base\Code\Drawing\ColourWheel.cs" />
     <Compile Include="Base\Code\Drawing\DrawingMethods.cs" />
+    <Compile Include="Base\Code\Drawing\RoundedRectangleF.cs" />
+    <Compile Include="Base\Code\Drawing\Transparenter.cs" />
     <Compile Include="Base\Code\ExceptionHandler.cs" />
+    <Compile Include="Base\Code\IconExtractor.cs" />
     <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
     <Compile Include="Base\Code\ListViewColumnSorter.cs" />
     <Compile Include="Base\Code\MostRecentlyUsedFileManager.cs" />
@@ -101,7 +104,9 @@
     <Compile Include="Base\Code\TypefaceHelper.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
     <Compile Include="Base\Enumerations\Enumerations.cs" />
+    <Compile Include="Base\Interfaces\IColourEditor.cs" />
     <Compile Include="Base\Structs\Colour Wheel\HSLColour.cs" />
+    <Compile Include="Base\Structures\HSLColour.cs" />
     <Compile Include="Base\UI\KryptonFormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +184,18 @@
     <Compile Include="ExtendedToolkit\Calendar\Enumerations\CalendarTimeScale.cs" />
     <Compile Include="ExtendedToolkit\Calendar\Interfaces\ICalendarSelectableElement.cs" />
     <Compile Include="ExtendedToolkit\Calendar\Interfaces\ISelectableElement.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Colours\Controls\ColourWheel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\PromptRoundedTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\RoundedTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Colours\ColourWheelColourPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Charting\AquaGauge.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -648,6 +665,9 @@
     <Compile Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\System Browser\KryptonFileBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Windows\FileInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -727,6 +747,8 @@
     <None Include="Resources\DropDown2007.ico" />
     <None Include="Resources\Grip2003.ico" />
     <None Include="Resources\Grip2007.ico" />
+    <None Include="Resources\palette.ico" />
+    <None Include="Resources\color.ico" />
     <Content Include="ToolboxBitmaps\DataBar.bmp" />
     <Content Include="ToolboxBitmaps\DataChart.bmp" />
     <Content Include="ToolboxBitmaps\UACButton.bmp" />
@@ -843,6 +865,9 @@
     <EmbeddedResource Include="Base\UI\Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Colours\ColourWheelColourPickerDialog.resx">
+      <DependentUpon>ColourWheelColourPickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Charting\KryptonKnobControl.resx">
       <DependentUpon>KryptonKnobControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -902,6 +927,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.resx">
       <DependentUpon>SoftwareUpdater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\System Browser\KryptonFileBrowser.resx">
+      <DependentUpon>KryptonFileBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Windows\FileInformation.resx">
       <DependentUpon>FileInformation.cs</DependentUpon>

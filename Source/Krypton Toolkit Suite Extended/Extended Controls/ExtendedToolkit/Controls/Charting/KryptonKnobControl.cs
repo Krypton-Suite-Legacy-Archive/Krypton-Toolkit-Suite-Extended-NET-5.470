@@ -25,6 +25,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Charting
         private bool _ShowLargeScale = true;
         private bool _isFocused = false;
         private Color _KnobColour = Color.FromKnownColor(KnownColor.ControlLight);
+        private Color _mouseOverColour = Color.FromKnownColor(KnownColor.ControlLightLight);
         private Color _KnobBorderColour = Color.FromKnownColor(KnownColor.ControlDarkDark);
         private Color _KnobBackColour = Color.FromKnownColor(KnownColor.Control);
         private int _Value;
@@ -281,6 +282,25 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Charting
             }
         }
 
+        [Browsable(true), Category("Appearance-Extended")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Description("Sets the mouse over Colour of knob control")]
+        public Color MouseOverKnobColour
+        {
+            get
+            {
+                return _mouseOverColour;
+            }
+
+            set
+            {
+                _mouseOverColour = value;
+
+                // Redraw
+                Invalidate();
+            }
+        }
+
         // Set Color of the border of knob control
         [Browsable(true), Category("Appearance-Extended")]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -438,6 +458,11 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Charting
                 int posVal = this.getValueFromPosition(p);
                 Value = posVal;
             }
+        }
+
+        protected override void OnMouseEnter(EventArgs e)
+        {
+            base.OnMouseEnter(e);
         }
 
         protected override void OnEnter(EventArgs e)

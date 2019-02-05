@@ -8,6 +8,27 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Drawing.Classes
         // Handle conversions between RGB and HSV    
         // (and Color types, as well).
 
+        public struct ARGB
+        {
+            public int alpha, red, green, blue;
+
+            public ARGB(int a, int r, int g, int b)
+            {
+                alpha = a;
+
+                red = r;
+
+                green = g;
+
+                blue = b;
+            }
+
+            public override string ToString()
+            {
+                return $"({ alpha }, { red }, { green }, { blue })";
+            }
+        }
+
         public struct RGB
         {
             // All values are between 0 and 255.

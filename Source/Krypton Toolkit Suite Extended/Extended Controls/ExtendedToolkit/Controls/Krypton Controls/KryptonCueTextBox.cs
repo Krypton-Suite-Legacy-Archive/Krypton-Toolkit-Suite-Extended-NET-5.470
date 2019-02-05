@@ -1,10 +1,8 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using GlobalUtilities.Classes;
+using System;
 using System.ComponentModel;
 using System.Drawing;
-
-using ComponentFactory.Krypton.Toolkit;
-
-using GlobalUtilities.Classes;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 {
@@ -17,7 +15,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
     [DesignerCategory("Code")]
     [DisplayName("Cue KryptonTextBox")]
     [Description("A KryptonTextBox with cue banner support.")]
-    [ToolboxItem(true)]
+    [ToolboxItem(false)]
     [ToolboxBitmap(typeof(KryptonTextBox))]
     public partial class KryptonCueTextBox : KryptonTextBox
     {

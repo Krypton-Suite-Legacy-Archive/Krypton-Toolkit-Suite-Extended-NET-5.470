@@ -121,6 +121,16 @@ namespace ExtendedControls.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon color {
+            get {
+                object obj = ResourceManager.GetObject("color", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap colorbarIndicators {
@@ -677,6 +687,16 @@ namespace ExtendedControls.Properties {
             get {
                 object obj = ResourceManager.GetObject("palette", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon palette1 {
+            get {
+                object obj = ResourceManager.GetObject("palette1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
