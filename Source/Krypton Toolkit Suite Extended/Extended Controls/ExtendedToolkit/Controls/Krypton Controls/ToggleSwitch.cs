@@ -26,10 +26,11 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         private float _diameter, _artis;
         private RoundedRectangleF _rect;
         private RectangleF _circle;
-        private bool _isOn, _textEnabled;
-        private Color _borderColour, _offColour, _onColour, _disabledColour, _knobColour, _disabledKnobColour, _enabledTextColour, _disabledTextColour;
+        private bool _isOn, _textEnabled, _useGradientOnKnob;
+        private Color _borderColour, _offColour, _onColour, _disabledColour, _knobColour, _disabledKnobColour, _enabledTextColour, _disabledTextColour, _startGradientColour, _middleGradientColour, _endGradientColour, _penColour;
         private Timer _paintTicker = new Timer();
         private string _enabledText, _disabledText;
+        private LinearGradientMode _mode;
         #endregion
 
         #region Properties
@@ -44,6 +45,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
                 Invalidate();
             }
         }
+
         public bool IsOn
         {
             get { return _isOn; }
@@ -60,6 +62,18 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
                 {
                     SliderValueChanged(this, EventArgs.Empty);
                 }
+            }
+        }
+
+        public bool UseGradientOnKnob
+        {
+            get => _useGradientOnKnob;
+
+            set
+            {
+                _useGradientOnKnob = value;
+
+                Invalidate();
             }
         }
 
@@ -150,6 +164,67 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             }
         }
 
+        public Color StartGradientColour
+        {
+            get => _startGradientColour;
+
+            set
+            {
+                _startGradientColour = value;
+
+                Invalidate();
+            }
+        }
+
+        public Color MiddleGradientColour
+        {
+            get => _middleGradientColour;
+
+            set
+            {
+                _middleGradientColour = value;
+
+                Invalidate();
+            }
+        }
+
+        public Color EndGradientColour
+        {
+            get => _endGradientColour;
+
+            set
+            {
+                _endGradientColour = value;
+
+                Invalidate();
+            }
+        }
+
+        public Color PenColour
+        {
+            get => _penColour;
+
+
+            set
+            {
+                _penColour = value;
+
+                Invalidate();
+            }
+        }
+
+        public LinearGradientMode GradientMode
+        {
+            get => _mode;
+
+            set
+            {
+                _mode = value;
+
+                Invalidate();
+            }
+        }
+
         [DefaultValue("On")]
         public string EnabledText
         {
@@ -203,6 +278,16 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             OnTextColour = Color.Gray;
 
             OffTextColour = Color.White;
+
+            StartGradientColour = Color.FromArgb(187, 206, 230);
+
+            MiddleGradientColour = Color.FromArgb(220, 232, 246);
+
+            EndGradientColour = Color.FromArgb(132, 157, 189);
+
+            GradientMode = LinearGradientMode.ForwardDiagonal;
+
+            PenColour = Color.LightGray;
             #endregion
 
             EnabledText = "On";
@@ -224,6 +309,8 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             _circle = new RectangleF(1, 1, _diameter, _diameter);
 
             IsOn = true;
+
+            UseGradientOnKnob = false;
 
             BorderColour = Color.LightGray;
 
@@ -349,12 +436,23 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
                         e.Graphics.DrawString(off, typeface, offBrush, _diameter + 2, y + 1);
                     }
 
-                    using (SolidBrush circleBrush = new SolidBrush(KnobColour)) //"#F6F0E6".FromHex()))
+
+                    if (UseGradientOnKnob)
                     {
-                        e.Graphics.FillEllipse(circleBrush, _circle);
+                        using (LinearGradientBrush lgb = new LinearGradientBrush(_circle, StartGradientColour, EndGradientColour, GradientMode)) //, Color.Aquamarine, LinearGradientMode.ForwardDiagonal))
+                        {
+                            e.Graphics.FillEllipse(lgb, _circle);
+                        }
+                    }
+                    else
+                    {
+                        using (SolidBrush circleBrush = new SolidBrush(KnobColour)) //"#F6F0E6".FromHex()))
+                        {
+                            e.Graphics.FillEllipse(circleBrush, _circle);
+                        }
                     }
 
-                    using (Pen pen = new Pen(Color.LightGray, 1.2f))
+                    using (Pen pen = new Pen(PenColour, 1.2f))
                     {
                         e.Graphics.DrawEllipse(pen, _circle);
                     }

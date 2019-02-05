@@ -1,6 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.ExtendedToolkit.Controls.Drawing.UI;
-using System.Drawing;
 
 namespace Playground
 {
@@ -41,9 +40,9 @@ namespace Playground
         private Core.Controls.Colours.ColourEditorManager colourEditorManager1;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.PromptRoundedTextbox promptRoundedTextbox1;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox roundedTextbox1;
-        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToggleSwitch toggleSwitch1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToggleSwitch toggleSwitch1;
         private KryptonPanel kryptonPanel1;
 
         public MoreControls()
@@ -54,17 +53,17 @@ namespace Playground
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            KryptonOutlookGrid.Classes.OutlookGridGroupCollection outlookGridGroupCollection3 = new KryptonOutlookGrid.Classes.OutlookGridGroupCollection();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node4");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node5");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode14});
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Node1");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Node2");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Node3");
+            KryptonOutlookGrid.Classes.OutlookGridGroupCollection outlookGridGroupCollection2 = new KryptonOutlookGrid.Classes.OutlookGridGroupCollection();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node5");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
+            treeNode7,
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Node1");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node3");
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.toggleSwitch1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToggleSwitch();
             this.promptRoundedTextbox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.PromptRoundedTextbox();
@@ -155,22 +154,30 @@ namespace Playground
             // 
             // toggleSwitch1
             // 
-            this.toggleSwitch1.OffColour = System.Drawing.Color.Red;
             this.toggleSwitch1.BackColor = System.Drawing.Color.Transparent;
             this.toggleSwitch1.BorderColour = System.Drawing.Color.LightGray;
             this.toggleSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.toggleSwitch1.DisabledColour = System.Drawing.Color.Red;
+            this.toggleSwitch1.DisabledColour = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(207)))), ((int)(((byte)(207)))));
             this.toggleSwitch1.DisabledKnobColour = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.toggleSwitch1.OffTextColour = Color.White;
-            this.toggleSwitch1.OnColour = System.Drawing.Color.LightGreen;
-            this.toggleSwitch1.OnTextColour = Color.Gray;
+            this.toggleSwitch1.EndGradientColour = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(157)))), ((int)(((byte)(189)))));
+            this.toggleSwitch1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.toggleSwitch1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.toggleSwitch1.IsOn = true;
             this.toggleSwitch1.KnobColour = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(240)))), ((int)(((byte)(230)))));
             this.toggleSwitch1.Location = new System.Drawing.Point(616, 504);
+            this.toggleSwitch1.MiddleGradientColour = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
             this.toggleSwitch1.Name = "toggleSwitch1";
-            this.toggleSwitch1.Size = new System.Drawing.Size(60, 35);
+            this.toggleSwitch1.OffColour = System.Drawing.Color.Red;
+            this.toggleSwitch1.OffTextColour = System.Drawing.Color.White;
+            this.toggleSwitch1.OnColour = System.Drawing.Color.LightGreen;
+            this.toggleSwitch1.OnTextColour = System.Drawing.Color.Gray;
+            this.toggleSwitch1.PenColour = System.Drawing.Color.Transparent;
+            this.toggleSwitch1.Size = new System.Drawing.Size(168, 86);
+            this.toggleSwitch1.StartGradientColour = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
             this.toggleSwitch1.TabIndex = 86;
+            this.toggleSwitch1.Text = "toggleSwitch1";
             this.toggleSwitch1.TextEnabled = true;
+            this.toggleSwitch1.UseGradientOnKnob = true;
             // 
             // promptRoundedTextbox1
             // 
@@ -220,7 +227,7 @@ namespace Playground
             // kryptonOutlookGrid1
             // 
             this.kryptonOutlookGrid1.FillMode = KryptonOutlookGrid.Classes.FillMode.GROUPSONLY;
-            this.kryptonOutlookGrid1.GroupCollection = outlookGridGroupCollection3;
+            this.kryptonOutlookGrid1.GroupCollection = outlookGridGroupCollection2;
             this.kryptonOutlookGrid1.Location = new System.Drawing.Point(12, 382);
             this.kryptonOutlookGrid1.Name = "kryptonOutlookGrid1";
             this.kryptonOutlookGrid1.PreviousSelectedGroupRow = -1;
@@ -268,20 +275,20 @@ namespace Playground
             // 
             // kryptonGrid1
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
-            this.kryptonGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
+            this.kryptonGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.kryptonGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.kryptonGrid1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.kryptonGrid1.DefaultCellStyle = dataGridViewCellStyle4;
             this.kryptonGrid1.Location = new System.Drawing.Point(774, 276);
             this.kryptonGrid1.Name = "kryptonGrid1";
             this.kryptonGrid1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Transparent;
@@ -473,23 +480,23 @@ namespace Playground
             this.kryptonTreeView1.FullRowSelect = true;
             this.kryptonTreeView1.Location = new System.Drawing.Point(481, 59);
             this.kryptonTreeView1.Name = "kryptonTreeView1";
-            treeNode13.Name = "Node4";
-            treeNode13.Text = "Node4";
-            treeNode14.Name = "Node5";
-            treeNode14.Text = "Node5";
-            treeNode15.Name = "Node0";
-            treeNode15.Text = "Node0";
-            treeNode16.Name = "Node1";
-            treeNode16.Text = "Node1";
-            treeNode17.Name = "Node2";
-            treeNode17.Text = "Node2";
-            treeNode18.Name = "Node3";
-            treeNode18.Text = "Node3";
+            treeNode7.Name = "Node4";
+            treeNode7.Text = "Node4";
+            treeNode8.Name = "Node5";
+            treeNode8.Text = "Node5";
+            treeNode9.Name = "Node0";
+            treeNode9.Text = "Node0";
+            treeNode10.Name = "Node1";
+            treeNode10.Text = "Node1";
+            treeNode11.Name = "Node2";
+            treeNode11.Text = "Node2";
+            treeNode12.Name = "Node3";
+            treeNode12.Text = "Node3";
             this.kryptonTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode15,
-            treeNode16,
-            treeNode17,
-            treeNode18});
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12});
             this.kryptonTreeView1.Size = new System.Drawing.Size(189, 179);
             this.kryptonTreeView1.TabIndex = 63;
             // 
