@@ -1,12 +1,19 @@
-﻿using ExtendedControls.Base.Code.Colours;
-using ExtendedControls.Base.Code.Drawing;
+﻿using ExtendedControls.Base.Code.Drawing;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 {
+    /// <summary>
+    /// A toggle switch.
+    /// Boilerplate code from: https://github.com/aalitor/AltoControls/blob/on-development/AltoControls/Controls/SwitchButton.cs
+    /// </summary>
+    [ToolboxItem(true)]
+    [ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.All)]
     public class ToggleSwitch : Control
     {
         #region Events
@@ -20,8 +27,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         private RoundedRectangleF _rect;
         private RectangleF _circle;
         private bool _isOn, _textEnabled;
-        private Color _borderColour;
+        private Color _borderColour, _offColour, _onColour, _disabledColour, _knobColour, _disabledKnobColour, _enabledTextColour, _disabledTextColour;
         private Timer _paintTicker = new Timer();
+        private string _enabledText, _disabledText;
         #endregion
 
         #region Properties
@@ -54,6 +62,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
                 }
             }
         }
+
+        public Color OffColour { get => _offColour; set => _offColour = value; }
+
         public Color BorderColour
         {
             get { return _borderColour; }
@@ -66,12 +77,138 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             }
         }
 
+        public Color DisabledKnobColour
+        {
+            get => _disabledKnobColour;
+
+            set
+            {
+                _disabledKnobColour = value;
+
+                Invalidate();
+            }
+        }
+
+        //[DefaultValue(Color.LightGreen)]
+        public Color OnColour
+        {
+            get => _onColour;
+
+            set
+            {
+                _onColour = value;
+
+                Invalidate();
+            }
+        }
+
+        public Color DisabledColour
+        {
+            get => _disabledColour;
+
+            set
+            {
+                _disabledColour = value;
+
+                Invalidate();
+            }
+        }
+
+        public Color OnTextColour
+        {
+            get => _enabledTextColour;
+
+            set
+            {
+                _enabledTextColour = value;
+
+                Invalidate();
+            }
+        }
+
+        public Color OffTextColour
+        {
+            get => _disabledTextColour;
+
+            set
+            {
+                _disabledTextColour = value;
+
+                Invalidate();
+            }
+        }
+
+        public Color KnobColour
+        {
+            get => _knobColour;
+
+            set
+            {
+                _knobColour = value;
+
+                Invalidate();
+            }
+        }
+
+        [DefaultValue("On")]
+        public string EnabledText
+        {
+            get => _enabledText;
+
+            set
+            {
+                _enabledText = value;
+
+                Invalidate();
+            }
+        }
+
+        [DefaultValue("Off")]
+        public string DisabledText
+        {
+            get => _disabledText;
+
+            set
+            {
+                _disabledText = value;
+
+                Invalidate();
+            }
+        }
+
         protected override Size DefaultSize => new Size(60, 35);
         #endregion
 
         #region Constructor
         public ToggleSwitch()
         {
+            // Double buffering
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+
+            SetStyle(ControlStyles.UserPaint, true);
+
+            SetStyle(ControlStyles.ResizeRedraw, true);
+
+            #region Set Colours
+            OffColour = Color.LightGray;
+
+            OnColour = Color.LightGreen;
+
+            KnobColour = Color.FromArgb(246, 240, 230);
+
+            DisabledColour = Color.FromArgb(207, 207, 207);
+
+            DisabledKnobColour = Color.FromArgb(179, 179, 179);
+
+            OnTextColour = Color.Gray;
+
+            OffTextColour = Color.White;
+            #endregion
+
+            EnabledText = "On";
+
+            DisabledText = "Off";
+
             Cursor = Cursors.Hand;
 
             DoubleBuffered = true;
@@ -91,6 +228,8 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             BorderColour = Color.LightGray;
 
             BackColor = Color.Transparent;
+
+            Font = new Font("Segoe UI", 11f, FontStyle.Bold);
 
             _paintTicker.Interval = 1;
 
@@ -179,7 +318,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
             if (Enabled)
             {
-                using (SolidBrush sb = new SolidBrush(IsOn ? Color.LightGreen : Color.LightGray))
+                using (SolidBrush sb = new SolidBrush(IsOn ? OnColour : OffColour)) //Color.LightGreen : Color.LightGray))
                 {
                     e.Graphics.FillPath(sb, _rect.Path);
                 }
@@ -189,26 +328,28 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
                     e.Graphics.DrawPath(pen, _rect.Path);
                 }
 
-                string on = "On", off = "Off";
+                string on = EnabledText, off = DisabledText;
 
                 if (TextEnabled)
                 {
-                    using (Font typeface = new Font("Segoe UI", 11f * _diameter / 30, FontStyle.Bold))
+                    using (Font typeface = new Font(Font.FontFamily.Name, Font.Size * _diameter / 30, Font.Style))
                     {
                         int height = TextRenderer.MeasureText(on, typeface).Height;
 
                         float y = (_diameter - height) / 2f;
 
-                        e.Graphics.DrawString(on, typeface, Brushes.Gray, 5, y + 1);
+                        SolidBrush onBrush = new SolidBrush(OnTextColour), offBrush = new SolidBrush(OffTextColour);
+
+                        e.Graphics.DrawString(on, typeface, onBrush, 5, y + 1);
 
                         height = TextRenderer.MeasureText(off, typeface).Height;
 
                         y = (_diameter - height) / 2f;
 
-                        e.Graphics.DrawString(off, typeface, Brushes.Gray, _diameter + 2, y + 1);
+                        e.Graphics.DrawString(off, typeface, offBrush, _diameter + 2, y + 1);
                     }
 
-                    using (SolidBrush circleBrush = new SolidBrush("#F6F0E6".FromHex()))
+                    using (SolidBrush circleBrush = new SolidBrush(KnobColour)) //"#F6F0E6".FromHex()))
                     {
                         e.Graphics.FillEllipse(circleBrush, _circle);
                     }
@@ -221,9 +362,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             }
             else
             {
-                using (SolidBrush disableBrush = new SolidBrush("#CFCFCF".FromHex()))
+                using (SolidBrush disableBrush = new SolidBrush(DisabledColour)) //"#CFCFCF".FromHex()))
                 {
-                    using (SolidBrush ellBrush = new SolidBrush("#B3B3B3".FromHex()))
+                    using (SolidBrush ellBrush = new SolidBrush(DisabledKnobColour)) //"#B3B3B3".FromHex()))
                     {
                         e.Graphics.FillPath(disableBrush, _rect.Path);
 

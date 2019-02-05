@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.ExtendedToolkit.Controls.Drawing.UI;
+using System.Drawing;
 
 namespace Playground
 {
@@ -34,13 +35,15 @@ namespace Playground
         private ExtendedControls.ExtendedToolkit.Controls.Drawing.Controls.Office2007ColourPicker office2007ColourPicker1;
         private KryptonButton kryptonButton1;
         private KryptonButton kryptonButton2;
-        private ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls.KryptonTabControl kryptonTabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private Core.Controls.Colours.ColourWheel colourWheel1;
         private KryptonOutlookGrid.Controls.KryptonOutlookGridGroupBox kryptonOutlookGridGroupBox1;
         private KryptonOutlookGrid.Classes.KryptonOutlookGrid kryptonOutlookGrid1;
         private Core.Controls.Colours.ColourEditorManager colourEditorManager1;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.PromptRoundedTextbox promptRoundedTextbox1;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox roundedTextbox1;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToggleSwitch toggleSwitch1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private KryptonPanel kryptonPanel1;
 
         public MoreControls()
@@ -51,21 +54,24 @@ namespace Playground
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node4");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node5");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Node1");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Node2");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Node3");
-            KryptonOutlookGrid.Classes.OutlookGridGroupCollection outlookGridGroupCollection1 = new KryptonOutlookGrid.Classes.OutlookGridGroupCollection();
+            KryptonOutlookGrid.Classes.OutlookGridGroupCollection outlookGridGroupCollection3 = new KryptonOutlookGrid.Classes.OutlookGridGroupCollection();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node5");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14});
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Node1");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Node3");
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonTabControl1 = new ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls.KryptonTabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.toggleSwitch1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToggleSwitch();
+            this.promptRoundedTextbox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.PromptRoundedTextbox();
+            this.roundedTextbox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox();
+            this.colourWheel1 = new Core.Controls.Colours.ColourWheel();
+            this.kryptonOutlookGridGroupBox1 = new KryptonOutlookGrid.Controls.KryptonOutlookGridGroupBox();
+            this.kryptonOutlookGrid1 = new KryptonOutlookGrid.Classes.KryptonOutlookGrid();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.office2007ColourPicker1 = new ExtendedControls.ExtendedToolkit.Controls.Drawing.Controls.Office2007ColourPicker(this.components);
@@ -94,27 +100,27 @@ namespace Playground
             this.kryptonPropertyGrid1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPropertyGrid();
             this.kryptonShadowLabel1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonShadowLabel();
             this.kryptonProgressBar1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonProgressBar();
-            this.kryptonOutlookGrid1 = new KryptonOutlookGrid.Classes.KryptonOutlookGrid();
-            this.kryptonOutlookGridGroupBox1 = new KryptonOutlookGrid.Controls.KryptonOutlookGridGroupBox();
             this.colourEditorManager1 = new Core.Controls.Colours.ColourEditorManager();
-            this.colourWheel1 = new Core.Controls.Colours.ColourWheel();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
-            this.kryptonTabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonOutlookGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonLxLedControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonImageComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonCueComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxEnhanced1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonOutlookGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.toggleSwitch1);
+            this.kryptonPanel1.Controls.Add(this.promptRoundedTextbox1);
+            this.kryptonPanel1.Controls.Add(this.roundedTextbox1);
             this.kryptonPanel1.Controls.Add(this.colourWheel1);
             this.kryptonPanel1.Controls.Add(this.kryptonOutlookGridGroupBox1);
             this.kryptonPanel1.Controls.Add(this.kryptonOutlookGrid1);
-            this.kryptonPanel1.Controls.Add(this.kryptonTabControl1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton2);
             this.kryptonPanel1.Controls.Add(this.kryptonButton1);
             this.kryptonPanel1.Controls.Add(this.office2007ColourPicker1);
@@ -147,50 +153,80 @@ namespace Playground
             this.kryptonPanel1.Size = new System.Drawing.Size(1450, 777);
             this.kryptonPanel1.TabIndex = 0;
             // 
-            // kryptonTabControl1
+            // toggleSwitch1
             // 
-            this.kryptonTabControl1.AllowCloseButton = false;
-            this.kryptonTabControl1.AllowContextButton = true;
-            this.kryptonTabControl1.AllowNavigatorButtons = false;
-            this.kryptonTabControl1.AllowSelectedTabHigh = false;
-            this.kryptonTabControl1.BorderWidth = 1;
-            this.kryptonTabControl1.Controls.Add(this.tabPage1);
-            this.kryptonTabControl1.Controls.Add(this.tabPage2);
-            this.kryptonTabControl1.CornerRoundRadiusWidth = 12;
-            this.kryptonTabControl1.CornerSymmetry = ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls.KryptonTabControl.CornSymmetry.Both;
-            this.kryptonTabControl1.CornerType = ExtendedControls.ExtendedToolkit.Controls.Drawing.Classes.DrawingMethods.CornerType.Rounded;
-            this.kryptonTabControl1.CornerWidth = ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls.KryptonTabControl.CornWidth.Thin;
-            this.kryptonTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.kryptonTabControl1.HotTrack = true;
-            this.kryptonTabControl1.Location = new System.Drawing.Point(1057, 276);
-            this.kryptonTabControl1.Name = "kryptonTabControl1";
-            this.kryptonTabControl1.PreserveTabColour = false;
-            this.kryptonTabControl1.SelectedIndex = 0;
-            this.kryptonTabControl1.Size = new System.Drawing.Size(308, 150);
-            this.kryptonTabControl1.TabIndex = 81;
-            this.kryptonTabControl1.UseExtendedLayout = false;
+            this.toggleSwitch1.OffColour = System.Drawing.Color.Red;
+            this.toggleSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.toggleSwitch1.BorderColour = System.Drawing.Color.LightGray;
+            this.toggleSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.toggleSwitch1.DisabledColour = System.Drawing.Color.Red;
+            this.toggleSwitch1.DisabledKnobColour = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.toggleSwitch1.OffTextColour = Color.White;
+            this.toggleSwitch1.OnColour = System.Drawing.Color.LightGreen;
+            this.toggleSwitch1.OnTextColour = Color.Gray;
+            this.toggleSwitch1.IsOn = true;
+            this.toggleSwitch1.KnobColour = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(240)))), ((int)(((byte)(230)))));
+            this.toggleSwitch1.Location = new System.Drawing.Point(616, 504);
+            this.toggleSwitch1.Name = "toggleSwitch1";
+            this.toggleSwitch1.Size = new System.Drawing.Size(60, 35);
+            this.toggleSwitch1.TabIndex = 86;
+            this.toggleSwitch1.TextEnabled = true;
             // 
-            // tabPage1
+            // promptRoundedTextbox1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(300, 121);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Tag = false;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.promptRoundedTextbox1.BackColor = System.Drawing.Color.Transparent;
+            this.promptRoundedTextbox1.Brush = System.Drawing.Color.White;
+            this.promptRoundedTextbox1.DrawPrompt = true;
+            this.promptRoundedTextbox1.FocusSelect = true;
+            this.promptRoundedTextbox1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.promptRoundedTextbox1.ForeColor = System.Drawing.Color.DimGray;
+            this.promptRoundedTextbox1.Location = new System.Drawing.Point(270, 504);
+            this.promptRoundedTextbox1.Name = "promptRoundedTextbox1";
+            this.promptRoundedTextbox1.PromptForeColour = System.Drawing.SystemColors.GrayText;
+            this.promptRoundedTextbox1.PromptText = "This is a test...";
+            this.promptRoundedTextbox1.PromptTypeface = new System.Drawing.Font("Segoe UI", 11F);
+            this.promptRoundedTextbox1.Size = new System.Drawing.Size(323, 33);
+            this.promptRoundedTextbox1.TabIndex = 85;
+            this.promptRoundedTextbox1.Text = "promptRoundedTextbox1";
             // 
-            // tabPage2
+            // roundedTextbox1
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(300, 121);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Tag = false;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.roundedTextbox1.BackColor = System.Drawing.Color.Transparent;
+            this.roundedTextbox1.Brush = System.Drawing.Color.White;
+            this.roundedTextbox1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.roundedTextbox1.ForeColor = System.Drawing.Color.Black;
+            this.roundedTextbox1.Location = new System.Drawing.Point(13, 342);
+            this.roundedTextbox1.Name = "roundedTextbox1";
+            this.roundedTextbox1.Size = new System.Drawing.Size(223, 33);
+            this.roundedTextbox1.TabIndex = 84;
+            this.roundedTextbox1.Text = "Hello World!";
+            // 
+            // colourWheel1
+            // 
+            this.colourWheel1.Location = new System.Drawing.Point(1098, 425);
+            this.colourWheel1.Name = "colourWheel1";
+            this.colourWheel1.Size = new System.Drawing.Size(263, 302);
+            this.colourWheel1.TabIndex = 1;
+            // 
+            // kryptonOutlookGridGroupBox1
+            // 
+            this.kryptonOutlookGridGroupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonOutlookGridGroupBox1.Location = new System.Drawing.Point(270, 450);
+            this.kryptonOutlookGridGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.kryptonOutlookGridGroupBox1.Name = "kryptonOutlookGridGroupBox1";
+            this.kryptonOutlookGridGroupBox1.Size = new System.Drawing.Size(744, 46);
+            this.kryptonOutlookGridGroupBox1.TabIndex = 83;
+            // 
+            // kryptonOutlookGrid1
+            // 
+            this.kryptonOutlookGrid1.FillMode = KryptonOutlookGrid.Classes.FillMode.GROUPSONLY;
+            this.kryptonOutlookGrid1.GroupCollection = outlookGridGroupCollection3;
+            this.kryptonOutlookGrid1.Location = new System.Drawing.Point(12, 382);
+            this.kryptonOutlookGrid1.Name = "kryptonOutlookGrid1";
+            this.kryptonOutlookGrid1.PreviousSelectedGroupRow = -1;
+            this.kryptonOutlookGrid1.ShowLines = false;
+            this.kryptonOutlookGrid1.Size = new System.Drawing.Size(240, 150);
+            this.kryptonOutlookGrid1.TabIndex = 82;
             // 
             // kryptonButton2
             // 
@@ -232,20 +268,20 @@ namespace Playground
             // 
             // kryptonGrid1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
-            this.kryptonGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
+            this.kryptonGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.kryptonGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.kryptonGrid1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.kryptonGrid1.DefaultCellStyle = dataGridViewCellStyle6;
             this.kryptonGrid1.Location = new System.Drawing.Point(774, 276);
             this.kryptonGrid1.Name = "kryptonGrid1";
             this.kryptonGrid1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Transparent;
@@ -437,23 +473,23 @@ namespace Playground
             this.kryptonTreeView1.FullRowSelect = true;
             this.kryptonTreeView1.Location = new System.Drawing.Point(481, 59);
             this.kryptonTreeView1.Name = "kryptonTreeView1";
-            treeNode1.Name = "Node4";
-            treeNode1.Text = "Node4";
-            treeNode2.Name = "Node5";
-            treeNode2.Text = "Node5";
-            treeNode3.Name = "Node0";
-            treeNode3.Text = "Node0";
-            treeNode4.Name = "Node1";
-            treeNode4.Text = "Node1";
-            treeNode5.Name = "Node2";
-            treeNode5.Text = "Node2";
-            treeNode6.Name = "Node3";
-            treeNode6.Text = "Node3";
+            treeNode13.Name = "Node4";
+            treeNode13.Text = "Node4";
+            treeNode14.Name = "Node5";
+            treeNode14.Text = "Node5";
+            treeNode15.Name = "Node0";
+            treeNode15.Text = "Node0";
+            treeNode16.Name = "Node1";
+            treeNode16.Text = "Node1";
+            treeNode17.Name = "Node2";
+            treeNode17.Text = "Node2";
+            treeNode18.Name = "Node3";
+            treeNode18.Text = "Node3";
             this.kryptonTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6});
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18});
             this.kryptonTreeView1.Size = new System.Drawing.Size(189, 179);
             this.kryptonTreeView1.TabIndex = 63;
             // 
@@ -552,32 +588,15 @@ namespace Playground
             this.kryptonProgressBar1.TabIndex = 47;
             this.kryptonProgressBar1.Value = 50;
             // 
-            // kryptonOutlookGrid1
+            // dataGridViewTextBoxColumn1
             // 
-            this.kryptonOutlookGrid1.FillMode = KryptonOutlookGrid.Classes.FillMode.GROUPSONLY;
-            this.kryptonOutlookGrid1.GroupCollection = outlookGridGroupCollection1;
-            this.kryptonOutlookGrid1.Location = new System.Drawing.Point(12, 382);
-            this.kryptonOutlookGrid1.Name = "kryptonOutlookGrid1";
-            this.kryptonOutlookGrid1.PreviousSelectedGroupRow = -1;
-            this.kryptonOutlookGrid1.ShowLines = false;
-            this.kryptonOutlookGrid1.Size = new System.Drawing.Size(240, 150);
-            this.kryptonOutlookGrid1.TabIndex = 82;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Column1";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // kryptonOutlookGridGroupBox1
+            // dataGridViewTextBoxColumn2
             // 
-            this.kryptonOutlookGridGroupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonOutlookGridGroupBox1.Location = new System.Drawing.Point(270, 450);
-            this.kryptonOutlookGridGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.kryptonOutlookGridGroupBox1.Name = "kryptonOutlookGridGroupBox1";
-            this.kryptonOutlookGridGroupBox1.Size = new System.Drawing.Size(744, 46);
-            this.kryptonOutlookGridGroupBox1.TabIndex = 83;
-            // 
-            // colourWheel1
-            // 
-            this.colourWheel1.Location = new System.Drawing.Point(1098, 425);
-            this.colourWheel1.Name = "colourWheel1";
-            this.colourWheel1.Size = new System.Drawing.Size(263, 302);
-            this.colourWheel1.TabIndex = 1;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Column2";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // MoreControls
             // 
@@ -587,13 +606,12 @@ namespace Playground
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
-            this.kryptonTabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonOutlookGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonLxLedControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonImageComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonCueComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxEnhanced1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonOutlookGrid1)).EndInit();
             this.ResumeLayout(false);
 
         }
