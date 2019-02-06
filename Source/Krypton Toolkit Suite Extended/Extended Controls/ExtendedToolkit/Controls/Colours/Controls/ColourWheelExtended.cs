@@ -1,5 +1,6 @@
 ﻿using ExtendedControls.Base.Interfaces;
 using ExtendedControls.Base.Structures;
+using ExtendedControls.ExtendedToolkit.Controls.Drawing.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Colours.Controls
 {
     [DefaultProperty("Colour")]
     [DefaultEvent("ColourChanged")]
-    public class ColourWheel : Control, IColourEditor
+    public class ColourWheelExtended : Control, IColourEditor
     {
         #region Constants
 
@@ -64,12 +65,18 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Colours.Controls
 
         #endregion
 
+        #region Events
+        public delegate void ColourChangedExtendedEventHandler(object sender, ColourChangedEventArgs e);
+
+        public ColourChangedExtendedEventHandler ColourChangedExtended;
+        #endregion
+
         #region Constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ColourWheel"/> class.
         /// </summary>
-        public ColourWheel()
+        public ColourWheelExtended()
         {
             this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.Selectable | ControlStyles.StandardClick | ControlStyles.StandardDoubleClick | ControlStyles.SupportsTransparentBackColor | ControlStyles.UserPaint | ControlStyles.ResizeRedraw, true);
             _colour = Color.Black;
@@ -79,7 +86,6 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Colours.Controls
             _smallChange = 1;
             _largeChange = 5;
             BackColor = Color.Transparent;
-            Size = new Size(121, 115);
         }
 
         #endregion
@@ -551,6 +557,13 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Colours.Controls
             handler = (EventHandler)this.Events[_eventColourChanged];
 
             handler?.Invoke(this, e);
+        }
+
+        protected void OnColourChangedExtended(ColourHandler.RGB rgb, ColourHandler.HSV hsv)
+        {
+            ColourChangedEventArgs cce = new ColourChangedEventArgs(rgb, hsv);
+
+            ColourChangedExtended(this, cce);
         }
 
         /// <summary>

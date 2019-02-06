@@ -104,6 +104,9 @@
     <EmbeddedResource Include="ColourTest.resx">
       <DependentUpon>ColourTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ColourWheel.resx">
+      <DependentUpon>ColourWheel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommandLinkStyles.resx">
       <DependentUpon>CommandLinkStyles.cs</DependentUpon>
     </EmbeddedResource>

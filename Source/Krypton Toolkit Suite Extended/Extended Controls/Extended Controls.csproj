@@ -189,6 +189,9 @@
     <Compile Include="ExtendedToolkit\Controls\Colours\Controls\ColourWheel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\Controls\ColourWheelExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\PromptRoundedTextbox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -196,6 +199,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\ToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\ToolstripControls\FlashingLabel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\Colours\ColourWheelColourPickerDialog.cs">

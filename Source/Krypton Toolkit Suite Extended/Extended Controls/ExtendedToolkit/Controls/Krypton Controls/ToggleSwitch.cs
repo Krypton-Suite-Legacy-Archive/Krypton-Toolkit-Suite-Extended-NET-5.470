@@ -321,6 +321,8 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             _paintTicker.Interval = 1;
 
             _paintTicker.Tick += PaintTicker_Tick;
+
+            Text = string.Empty;
         }
         #endregion
 
