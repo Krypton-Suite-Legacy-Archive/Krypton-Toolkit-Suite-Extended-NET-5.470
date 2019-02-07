@@ -88,5 +88,35 @@
       <Version>5.470.717</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CredentialDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TaskDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VistaFolderBrowserDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VistaOpenFileDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VistaSaveFileDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ToolboxBitmaps\CredentialDialog.bmp" />
+    <Content Include="ToolboxBitmaps\InputDialog.bmp" />
+    <Content Include="ToolboxBitmaps\ProgressDialog.bmp" />
+    <Content Include="ToolboxBitmaps\TaskDialog.bmp" />
+    <Content Include="ToolboxBitmaps\VistaFolderBrowserDialog.bmp" />
+    <Content Include="ToolboxBitmaps\VistaOpenFileDialog.bmp" />
+    <Content Include="ToolboxBitmaps\VistaSaveFileDialog.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

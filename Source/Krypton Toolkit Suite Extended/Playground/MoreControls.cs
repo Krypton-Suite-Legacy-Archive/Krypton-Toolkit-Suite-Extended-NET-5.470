@@ -34,7 +34,6 @@ namespace Playground
         private ExtendedControls.ExtendedToolkit.Controls.Drawing.Controls.Office2007ColourPicker office2007ColourPicker1;
         private KryptonButton kryptonButton1;
         private KryptonButton kryptonButton2;
-        private Core.Controls.Colours.ColourWheel colourWheel1;
         private KryptonOutlookGrid.Controls.KryptonOutlookGridGroupBox kryptonOutlookGridGroupBox1;
         private KryptonOutlookGrid.Classes.KryptonOutlookGrid kryptonOutlookGrid1;
         private Core.Controls.Colours.ColourEditorManager colourEditorManager1;
@@ -68,7 +67,6 @@ namespace Playground
             this.toggleSwitch1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToggleSwitch();
             this.promptRoundedTextbox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.PromptRoundedTextbox();
             this.roundedTextbox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox();
-            this.colourWheel1 = new Core.Controls.Colours.ColourWheel();
             this.kryptonOutlookGridGroupBox1 = new KryptonOutlookGrid.Controls.KryptonOutlookGridGroupBox();
             this.kryptonOutlookGrid1 = new KryptonOutlookGrid.Classes.KryptonOutlookGrid();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -117,7 +115,6 @@ namespace Playground
             this.kryptonPanel1.Controls.Add(this.toggleSwitch1);
             this.kryptonPanel1.Controls.Add(this.promptRoundedTextbox1);
             this.kryptonPanel1.Controls.Add(this.roundedTextbox1);
-            this.kryptonPanel1.Controls.Add(this.colourWheel1);
             this.kryptonPanel1.Controls.Add(this.kryptonOutlookGridGroupBox1);
             this.kryptonPanel1.Controls.Add(this.kryptonOutlookGrid1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton2);
@@ -164,8 +161,7 @@ namespace Playground
             this.toggleSwitch1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.toggleSwitch1.IsOn = true;
             this.toggleSwitch1.KnobColour = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(240)))), ((int)(((byte)(230)))));
-            this.toggleSwitch1.Location = new System.Drawing.Point(616, 504);
-            this.toggleSwitch1.MiddleGradientColour = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
+            this.toggleSwitch1.Location = new System.Drawing.Point(1057, 276);
             this.toggleSwitch1.Name = "toggleSwitch1";
             this.toggleSwitch1.OffColour = System.Drawing.Color.Red;
             this.toggleSwitch1.OffTextColour = System.Drawing.Color.White;
@@ -178,6 +174,7 @@ namespace Playground
             this.toggleSwitch1.Text = "toggleSwitch1";
             this.toggleSwitch1.TextEnabled = true;
             this.toggleSwitch1.UseGradientOnKnob = true;
+            this.toggleSwitch1.UseKryptonRenderer = false;
             // 
             // promptRoundedTextbox1
             // 
@@ -207,13 +204,6 @@ namespace Playground
             this.roundedTextbox1.Size = new System.Drawing.Size(223, 33);
             this.roundedTextbox1.TabIndex = 84;
             this.roundedTextbox1.Text = "Hello World!";
-            // 
-            // colourWheel1
-            // 
-            this.colourWheel1.Location = new System.Drawing.Point(1073, 255);
-            this.colourWheel1.Name = "colourWheel1";
-            this.colourWheel1.Size = new System.Drawing.Size(263, 302);
-            this.colourWheel1.TabIndex = 1;
             // 
             // kryptonOutlookGridGroupBox1
             // 

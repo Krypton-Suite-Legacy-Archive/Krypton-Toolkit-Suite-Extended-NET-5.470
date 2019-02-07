@@ -80,11 +80,8 @@ namespace Playground
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.toggleSwitch1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToggleSwitch();
             this.roundedTextbox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox();
             this.kryptonButton14 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.screenColourPicker1 = new Core.Controls.Colours.ScreenColourPicker();
-            this.colourWheel1 = new Core.Controls.Colours.ColourWheel();
             this.kryptonButton13 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton12 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonSearchBox1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonSearchBox();
@@ -147,9 +144,9 @@ namespace Playground
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
+            this.flashingLabel1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.FlashingLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.flashingLabel1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.FlashingLabel();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -510,11 +507,8 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.toggleSwitch1);
             this.kryptonPanel1.Controls.Add(this.roundedTextbox1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton14);
-            this.kryptonPanel1.Controls.Add(this.screenColourPicker1);
-            this.kryptonPanel1.Controls.Add(this.colourWheel1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton13);
             this.kryptonPanel1.Controls.Add(this.kryptonButton12);
             this.kryptonPanel1.Controls.Add(this.kryptonSearchBox1);
@@ -562,33 +556,6 @@ namespace Playground
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 659);
             this.kryptonPanel1.TabIndex = 2;
             // 
-            // toggleSwitch1
-            // 
-            this.toggleSwitch1.BackColor = System.Drawing.Color.Transparent;
-            this.toggleSwitch1.BorderColour = System.Drawing.Color.LightGray;
-            this.toggleSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.toggleSwitch1.DisabledColour = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(207)))), ((int)(((byte)(207)))));
-            this.toggleSwitch1.DisabledKnobColour = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
-            this.toggleSwitch1.EndGradientColour = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(157)))), ((int)(((byte)(189)))));
-            this.toggleSwitch1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.toggleSwitch1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.toggleSwitch1.IsOn = true;
-            this.toggleSwitch1.KnobColour = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(240)))), ((int)(((byte)(230)))));
-            this.toggleSwitch1.Location = new System.Drawing.Point(523, 440);
-            this.toggleSwitch1.MiddleGradientColour = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(232)))), ((int)(((byte)(246)))));
-            this.toggleSwitch1.Name = "toggleSwitch1";
-            this.toggleSwitch1.OffColour = System.Drawing.Color.LightGray;
-            this.toggleSwitch1.OffTextColour = System.Drawing.Color.White;
-            this.toggleSwitch1.OnColour = System.Drawing.Color.LightGreen;
-            this.toggleSwitch1.OnTextColour = System.Drawing.Color.Gray;
-            this.toggleSwitch1.PenColour = System.Drawing.Color.LightGray;
-            this.toggleSwitch1.Size = new System.Drawing.Size(172, 88);
-            this.toggleSwitch1.StartGradientColour = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
-            this.toggleSwitch1.TabIndex = 44;
-            this.toggleSwitch1.Text = "toggleSwitch1";
-            this.toggleSwitch1.TextEnabled = true;
-            this.toggleSwitch1.UseGradientOnKnob = false;
-            // 
             // roundedTextbox1
             // 
             this.roundedTextbox1.BackColor = System.Drawing.Color.Transparent;
@@ -609,21 +576,6 @@ namespace Playground
             this.kryptonButton14.TabIndex = 42;
             this.kryptonButton14.Values.Text = "Colour Wheel";
             this.kryptonButton14.Click += new System.EventHandler(this.kryptonButton14_Click);
-            // 
-            // screenColourPicker1
-            // 
-            this.screenColourPicker1.Colour = System.Drawing.Color.Empty;
-            this.screenColourPicker1.Location = new System.Drawing.Point(1001, 304);
-            this.screenColourPicker1.Name = "screenColourPicker1";
-            this.screenColourPicker1.Size = new System.Drawing.Size(144, 239);
-            this.screenColourPicker1.Text = "screenColourPicker1";
-            // 
-            // colourWheel1
-            // 
-            this.colourWheel1.Location = new System.Drawing.Point(732, 284);
-            this.colourWheel1.Name = "colourWheel1";
-            this.colourWheel1.Size = new System.Drawing.Size(263, 302);
-            this.colourWheel1.TabIndex = 41;
             // 
             // kryptonButton13
             // 
@@ -1218,7 +1170,6 @@ namespace Playground
             // 
             // etslBlinkTest
             // 
-            this.etslBlinkTest.BackColor = System.Drawing.Color.Empty;
             this.etslBlinkTest.BkClr = false;
             this.etslBlinkTest.BlinkDuration = ((long)(10));
             this.etslBlinkTest.BlinkState = ExtendedControls.Base.Enumerations.BlinkState.NormalBlink;
@@ -1231,6 +1182,16 @@ namespace Playground
             this.etslBlinkTest.Size = new System.Drawing.Size(168, 17);
             this.etslBlinkTest.Text = "extendedToolStripStatusLabel2";
             // 
+            // flashingLabel1
+            // 
+            this.flashingLabel1.EnableFlashing = true;
+            this.flashingLabel1.FlashColour1 = System.Drawing.Color.Transparent;
+            this.flashingLabel1.FlashColour2 = System.Drawing.Color.Red;
+            this.flashingLabel1.FlashTimeout = 500;
+            this.flashingLabel1.Name = "flashingLabel1";
+            this.flashingLabel1.Size = new System.Drawing.Size(83, 20);
+            this.flashingLabel1.Text = "flashingLabel1";
+            // 
             // kryptonCheckSet1
             // 
             this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnHorizontal);
@@ -1242,16 +1203,6 @@ namespace Playground
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // flashingLabel1
-            // 
-            this.flashingLabel1.EnableFlashing = true;
-            this.flashingLabel1.FlashColour1 = System.Drawing.Color.Transparent;
-            this.flashingLabel1.FlashColour2 = System.Drawing.Color.Red;
-            this.flashingLabel1.FlashTimeout = 500;
-            this.flashingLabel1.Name = "flashingLabel1";
-            this.flashingLabel1.Size = new System.Drawing.Size(83, 20);
-            this.flashingLabel1.Text = "flashingLabel1";
             // 
             // Form1
             // 
@@ -1407,11 +1358,8 @@ namespace Playground
         private Timer timer1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton12;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton13;
-        private Core.Controls.Colours.ColourWheel colourWheel1;
-        private Core.Controls.Colours.ScreenColourPicker screenColourPicker1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton14;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox roundedTextbox1;
-        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToggleSwitch toggleSwitch1;
         private ExtendedControls.ExtendedToolkit.ToolstripControls.FlashingLabel flashingLabel1;
     }
 }
