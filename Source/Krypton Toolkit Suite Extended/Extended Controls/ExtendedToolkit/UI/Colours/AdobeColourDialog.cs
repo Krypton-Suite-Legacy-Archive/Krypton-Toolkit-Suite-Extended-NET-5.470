@@ -1,16 +1,19 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Base.Code.Colours.ColourDialog;
+using ExtendedControls.Base.Enumerations;
+using System.Drawing;
 
 namespace ExtendedControls.ExtendedToolkit.UI.Colours
 {
     public class AdobeColourDialog : KryptonForm
     {
         #region Designer Code
-        private Controls.Colours.Controls.AdobeVerticalColourSlider adobeVerticalColourSlider1;
+        private Controls.Colours.Controls.AdobeVerticalColourSlider avcsColours;
         private KryptonPanel kryptonPanel1;
-        private KryptonRadioButton kryptonRadioButton7;
+        private KryptonRadioButton krbtnB;
         private KryptonRadioButton krbtnBlue;
-        private KryptonRadioButton kryptonRadioButton8;
-        private KryptonRadioButton kryptonRadioButton9;
+        private KryptonRadioButton krbtnAlpha;
+        private KryptonRadioButton krbtnLuminosity;
         private KryptonRadioButton krbtnBrightness;
         private KryptonRadioButton krbtnGreen;
         private KryptonRadioButton krbtnSaturation;
@@ -22,15 +25,15 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
         private System.Windows.Forms.Panel pnlBlankBox;
         private System.Windows.Forms.Panel pnlSecondaryColour;
         private System.Windows.Forms.Panel pnlPrimaryColour;
-        private KryptonNumericUpDown kryptonNumericUpDown7;
-        private KryptonNumericUpDown kryptonNumericUpDown8;
-        private KryptonNumericUpDown kryptonNumericUpDown9;
-        private KryptonNumericUpDown kryptonNumericUpDown4;
-        private KryptonNumericUpDown kryptonNumericUpDown5;
-        private KryptonNumericUpDown kryptonNumericUpDown6;
-        private KryptonNumericUpDown kryptonNumericUpDown3;
-        private KryptonNumericUpDown kryptonNumericUpDown2;
-        private KryptonNumericUpDown kryptonNumericUpDown1;
+        private KryptonNumericUpDown knumB;
+        private KryptonNumericUpDown knumAlpha;
+        private KryptonNumericUpDown knumLuminosity;
+        private KryptonNumericUpDown knumBlue;
+        private KryptonNumericUpDown knumGreen;
+        private KryptonNumericUpDown knumRed;
+        private KryptonNumericUpDown knumBrightness;
+        private KryptonNumericUpDown knumSaturation;
+        private KryptonNumericUpDown knumHue;
         private KryptonLabel kryptonLabel5;
         private KryptonLabel kryptonLabel4;
         private KryptonLabel kryptonLabel3;
@@ -44,34 +47,32 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
         private KryptonLabel kryptonLabel12;
         private KryptonLabel kryptonLabel10;
         private KryptonLabel kryptonLabel11;
-        private KryptonNumericUpDown kryptonNumericUpDown13;
-        private KryptonNumericUpDown kryptonNumericUpDown10;
-        private KryptonNumericUpDown kryptonNumericUpDown11;
-        private KryptonNumericUpDown kryptonNumericUpDown12;
-        private Controls.Colours.Controls.ColourComparer colourComparer1;
-        private Controls.KryptonPromptTextBox kryptonPromptTextBox1;
+        private KryptonNumericUpDown knumCyan;
+        private KryptonNumericUpDown knumKey;
+        private KryptonNumericUpDown knumYellow;
+        private KryptonNumericUpDown knumMagenta;
+        private Controls.Colours.Controls.ColourComparer cc1;
         private KryptonLabel kryptonLabel14;
-        private Controls.Colours.Controls.Adobe2DColourBox adobe2DColourBox1;
+        private Controls.KryptonPromptTextBox kptxtHexValue;
+        private Controls.Colours.Controls.Adobe2DColourBox adcbColours;
 
         private void InitializeComponent()
         {
             ExtendedControls.Base.Code.Colours.ColourDialog.AdobeColours.HSB hsb1 = new ExtendedControls.Base.Code.Colours.ColourDialog.AdobeColours.HSB();
             ExtendedControls.Base.Code.Colours.ColourDialog.AdobeColours.HSB hsb2 = new ExtendedControls.Base.Code.Colours.ColourDialog.AdobeColours.HSB();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdobeColourDialog));
-            this.adobe2DColourBox1 = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.Adobe2DColourBox();
-            this.adobeVerticalColourSlider1 = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.AdobeVerticalColourSlider();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.colourComparer1 = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.ColourComparer();
+            this.kryptonLabel14 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel13 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel12 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonNumericUpDown13 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonNumericUpDown10 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonNumericUpDown11 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonNumericUpDown12 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumCyan = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumKey = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumYellow = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumMagenta = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -79,22 +80,22 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonNumericUpDown7 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonNumericUpDown8 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonNumericUpDown9 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonNumericUpDown4 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonNumericUpDown5 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonNumericUpDown6 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonNumericUpDown3 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonNumericUpDown2 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonNumericUpDown1 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumB = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumAlpha = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumLuminosity = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumBlue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumGreen = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumRed = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumBrightness = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumSaturation = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumHue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.pnlBlankBox = new System.Windows.Forms.Panel();
             this.pnlSecondaryColour = new System.Windows.Forms.Panel();
             this.pnlPrimaryColour = new System.Windows.Forms.Panel();
-            this.kryptonRadioButton7 = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.krbtnB = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.krbtnBlue = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.kryptonRadioButton8 = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.kryptonRadioButton9 = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.krbtnAlpha = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.krbtnLuminosity = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.krbtnBrightness = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.krbtnGreen = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.krbtnSaturation = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
@@ -103,57 +104,30 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.krbtnHue = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.kcbWebColours = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonPromptTextBox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
-            this.kryptonLabel14 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.avcsColours = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.AdobeVerticalColourSlider();
+            this.adcbColours = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.Adobe2DColourBox();
+            this.kptxtHexValue = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
+            this.cc1 = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.ColourComparer();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.pnlBlankBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // adobe2DColourBox1
-            // 
-            this.adobe2DColourBox1.BaseColourComponent = ExtendedControls.Base.Enumerations.ColourComponent.HUE;
-            hsb1.B = 1D;
-            hsb1.H = 0D;
-            hsb1.S = 1D;
-            this.adobe2DColourBox1.HSB = hsb1;
-            this.adobe2DColourBox1.Location = new System.Drawing.Point(12, 26);
-            this.adobe2DColourBox1.Name = "adobe2DColourBox1";
-            this.adobe2DColourBox1.RGB = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.adobe2DColourBox1.Size = new System.Drawing.Size(260, 260);
-            this.adobe2DColourBox1.TabIndex = 0;
-            this.adobe2DColourBox1.WebSafeColoursOnly = false;
-            // 
-            // adobeVerticalColourSlider1
-            // 
-            this.adobeVerticalColourSlider1.BackColor = System.Drawing.Color.Transparent;
-            this.adobeVerticalColourSlider1.BaseColourComponent = ExtendedControls.Base.Enumerations.ColourComponent.HUE;
-            hsb2.B = 1D;
-            hsb2.H = 0D;
-            hsb2.S = 1D;
-            this.adobeVerticalColourSlider1.HSB = hsb2;
-            this.adobeVerticalColourSlider1.Location = new System.Drawing.Point(278, 26);
-            this.adobeVerticalColourSlider1.Name = "adobeVerticalColourSlider1";
-            this.adobeVerticalColourSlider1.RGB = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.adobeVerticalColourSlider1.Size = new System.Drawing.Size(40, 260);
-            this.adobeVerticalColourSlider1.TabIndex = 1;
-            this.adobeVerticalColourSlider1.WebSafeColoursOnly = false;
-            // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kptxtHexValue);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel14);
-            this.kryptonPanel1.Controls.Add(this.kryptonPromptTextBox1);
-            this.kryptonPanel1.Controls.Add(this.colourComparer1);
+            this.kryptonPanel1.Controls.Add(this.cc1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton2);
             this.kryptonPanel1.Controls.Add(this.kryptonButton1);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel13);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel12);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel10);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel11);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown13);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown10);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown11);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown12);
+            this.kryptonPanel1.Controls.Add(this.knumCyan);
+            this.kryptonPanel1.Controls.Add(this.knumKey);
+            this.kryptonPanel1.Controls.Add(this.knumYellow);
+            this.kryptonPanel1.Controls.Add(this.knumMagenta);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel9);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel8);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel7);
@@ -161,20 +135,20 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.kryptonPanel1.Controls.Add(this.kryptonLabel5);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel4);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel3);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown7);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown8);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown9);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown4);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown5);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown6);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown3);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown2);
-            this.kryptonPanel1.Controls.Add(this.kryptonNumericUpDown1);
+            this.kryptonPanel1.Controls.Add(this.knumB);
+            this.kryptonPanel1.Controls.Add(this.knumAlpha);
+            this.kryptonPanel1.Controls.Add(this.knumLuminosity);
+            this.kryptonPanel1.Controls.Add(this.knumBlue);
+            this.kryptonPanel1.Controls.Add(this.knumGreen);
+            this.kryptonPanel1.Controls.Add(this.knumRed);
+            this.kryptonPanel1.Controls.Add(this.knumBrightness);
+            this.kryptonPanel1.Controls.Add(this.knumSaturation);
+            this.kryptonPanel1.Controls.Add(this.knumHue);
             this.kryptonPanel1.Controls.Add(this.pnlBlankBox);
-            this.kryptonPanel1.Controls.Add(this.kryptonRadioButton7);
+            this.kryptonPanel1.Controls.Add(this.krbtnB);
             this.kryptonPanel1.Controls.Add(this.krbtnBlue);
-            this.kryptonPanel1.Controls.Add(this.kryptonRadioButton8);
-            this.kryptonPanel1.Controls.Add(this.kryptonRadioButton9);
+            this.kryptonPanel1.Controls.Add(this.krbtnAlpha);
+            this.kryptonPanel1.Controls.Add(this.krbtnLuminosity);
             this.kryptonPanel1.Controls.Add(this.krbtnBrightness);
             this.kryptonPanel1.Controls.Add(this.krbtnGreen);
             this.kryptonPanel1.Controls.Add(this.krbtnSaturation);
@@ -189,17 +163,15 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.kryptonPanel1.Size = new System.Drawing.Size(639, 428);
             this.kryptonPanel1.TabIndex = 2;
             // 
-            // colourComparer1
+            // kryptonLabel14
             // 
-            this.colourComparer1.BackColor = System.Drawing.Color.Transparent;
-            this.colourComparer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.colourComparer1.Location = new System.Drawing.Point(324, 57);
-            this.colourComparer1.Name = "colourComparer1";
-            this.colourComparer1.PrimaryColour = System.Drawing.Color.White;
-            this.colourComparer1.SecondaryColour = System.Drawing.Color.Silver;
-            this.colourComparer1.ShowHexadecimalValues = false;
-            this.colourComparer1.Size = new System.Drawing.Size(73, 71);
-            this.colourComparer1.TabIndex = 73;
+            this.kryptonLabel14.Location = new System.Drawing.Point(176, 380);
+            this.kryptonLabel14.Name = "kryptonLabel14";
+            this.kryptonLabel14.Size = new System.Drawing.Size(144, 24);
+            this.kryptonLabel14.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel14.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel14.TabIndex = 75;
+            this.kryptonLabel14.Values.Text = "Hexadecimal Value:";
             // 
             // kryptonButton2
             // 
@@ -261,41 +233,44 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.kryptonLabel11.TabIndex = 67;
             this.kryptonLabel11.Values.Text = "%";
             // 
-            // kryptonNumericUpDown13
+            // knumCyan
             // 
-            this.kryptonNumericUpDown13.Location = new System.Drawing.Point(516, 282);
-            this.kryptonNumericUpDown13.Name = "kryptonNumericUpDown13";
-            this.kryptonNumericUpDown13.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown13.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown13.TabIndex = 66;
-            this.kryptonNumericUpDown13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumCyan.Location = new System.Drawing.Point(516, 282);
+            this.knumCyan.Name = "knumCyan";
+            this.knumCyan.Size = new System.Drawing.Size(62, 26);
+            this.knumCyan.StateCommon.Back.Color1 = System.Drawing.Color.Cyan;
+            this.knumCyan.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumCyan.TabIndex = 66;
+            this.knumCyan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kryptonNumericUpDown10
+            // knumKey
             // 
-            this.kryptonNumericUpDown10.Location = new System.Drawing.Point(516, 380);
-            this.kryptonNumericUpDown10.Name = "kryptonNumericUpDown10";
-            this.kryptonNumericUpDown10.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown10.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown10.TabIndex = 65;
-            this.kryptonNumericUpDown10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumKey.Location = new System.Drawing.Point(516, 380);
+            this.knumKey.Name = "knumKey";
+            this.knumKey.Size = new System.Drawing.Size(62, 26);
+            this.knumKey.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumKey.TabIndex = 65;
+            this.knumKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kryptonNumericUpDown11
+            // knumYellow
             // 
-            this.kryptonNumericUpDown11.Location = new System.Drawing.Point(516, 348);
-            this.kryptonNumericUpDown11.Name = "kryptonNumericUpDown11";
-            this.kryptonNumericUpDown11.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown11.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown11.TabIndex = 64;
-            this.kryptonNumericUpDown11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumYellow.Location = new System.Drawing.Point(516, 348);
+            this.knumYellow.Name = "knumYellow";
+            this.knumYellow.Size = new System.Drawing.Size(62, 26);
+            this.knumYellow.StateCommon.Back.Color1 = System.Drawing.Color.Yellow;
+            this.knumYellow.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumYellow.TabIndex = 64;
+            this.knumYellow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kryptonNumericUpDown12
+            // knumMagenta
             // 
-            this.kryptonNumericUpDown12.Location = new System.Drawing.Point(516, 316);
-            this.kryptonNumericUpDown12.Name = "kryptonNumericUpDown12";
-            this.kryptonNumericUpDown12.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown12.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown12.TabIndex = 63;
-            this.kryptonNumericUpDown12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumMagenta.Location = new System.Drawing.Point(516, 316);
+            this.knumMagenta.Name = "knumMagenta";
+            this.knumMagenta.Size = new System.Drawing.Size(62, 26);
+            this.knumMagenta.StateCommon.Back.Color1 = System.Drawing.Color.Magenta;
+            this.knumMagenta.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumMagenta.TabIndex = 63;
+            this.knumMagenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // kryptonLabel9
             // 
@@ -367,92 +342,92 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.kryptonLabel3.TabIndex = 56;
             this.kryptonLabel3.Values.Text = "°";
             // 
-            // kryptonNumericUpDown7
+            // knumB
             // 
-            this.kryptonNumericUpDown7.Location = new System.Drawing.Point(516, 241);
-            this.kryptonNumericUpDown7.Name = "kryptonNumericUpDown7";
-            this.kryptonNumericUpDown7.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown7.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown7.TabIndex = 55;
-            this.kryptonNumericUpDown7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumB.Location = new System.Drawing.Point(516, 241);
+            this.knumB.Name = "knumB";
+            this.knumB.Size = new System.Drawing.Size(62, 26);
+            this.knumB.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumB.TabIndex = 55;
+            this.knumB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kryptonNumericUpDown8
+            // knumAlpha
             // 
-            this.kryptonNumericUpDown8.Location = new System.Drawing.Point(516, 209);
-            this.kryptonNumericUpDown8.Name = "kryptonNumericUpDown8";
-            this.kryptonNumericUpDown8.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown8.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown8.TabIndex = 54;
-            this.kryptonNumericUpDown8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumAlpha.Location = new System.Drawing.Point(516, 209);
+            this.knumAlpha.Name = "knumAlpha";
+            this.knumAlpha.Size = new System.Drawing.Size(62, 26);
+            this.knumAlpha.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumAlpha.TabIndex = 54;
+            this.knumAlpha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kryptonNumericUpDown9
+            // knumLuminosity
             // 
-            this.kryptonNumericUpDown9.Location = new System.Drawing.Point(516, 177);
-            this.kryptonNumericUpDown9.Name = "kryptonNumericUpDown9";
-            this.kryptonNumericUpDown9.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown9.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown9.TabIndex = 53;
-            this.kryptonNumericUpDown9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumLuminosity.Location = new System.Drawing.Point(516, 177);
+            this.knumLuminosity.Name = "knumLuminosity";
+            this.knumLuminosity.Size = new System.Drawing.Size(62, 26);
+            this.knumLuminosity.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumLuminosity.TabIndex = 53;
+            this.knumLuminosity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kryptonNumericUpDown4
+            // knumBlue
             // 
-            this.kryptonNumericUpDown4.Location = new System.Drawing.Point(368, 348);
-            this.kryptonNumericUpDown4.Name = "kryptonNumericUpDown4";
-            this.kryptonNumericUpDown4.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown4.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
-            this.kryptonNumericUpDown4.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonNumericUpDown4.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown4.TabIndex = 52;
-            this.kryptonNumericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumBlue.Location = new System.Drawing.Point(368, 348);
+            this.knumBlue.Name = "knumBlue";
+            this.knumBlue.Size = new System.Drawing.Size(62, 26);
+            this.knumBlue.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
+            this.knumBlue.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.knumBlue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumBlue.TabIndex = 52;
+            this.knumBlue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kryptonNumericUpDown5
+            // knumGreen
             // 
-            this.kryptonNumericUpDown5.Location = new System.Drawing.Point(368, 316);
-            this.kryptonNumericUpDown5.Name = "kryptonNumericUpDown5";
-            this.kryptonNumericUpDown5.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown5.StateCommon.Back.Color1 = System.Drawing.Color.Green;
-            this.kryptonNumericUpDown5.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonNumericUpDown5.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown5.TabIndex = 51;
-            this.kryptonNumericUpDown5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumGreen.Location = new System.Drawing.Point(368, 316);
+            this.knumGreen.Name = "knumGreen";
+            this.knumGreen.Size = new System.Drawing.Size(62, 26);
+            this.knumGreen.StateCommon.Back.Color1 = System.Drawing.Color.Green;
+            this.knumGreen.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.knumGreen.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumGreen.TabIndex = 51;
+            this.knumGreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kryptonNumericUpDown6
+            // knumRed
             // 
-            this.kryptonNumericUpDown6.Location = new System.Drawing.Point(368, 284);
-            this.kryptonNumericUpDown6.Name = "kryptonNumericUpDown6";
-            this.kryptonNumericUpDown6.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown6.StateCommon.Back.Color1 = System.Drawing.Color.Red;
-            this.kryptonNumericUpDown6.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonNumericUpDown6.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown6.TabIndex = 50;
-            this.kryptonNumericUpDown6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumRed.Location = new System.Drawing.Point(368, 284);
+            this.knumRed.Name = "knumRed";
+            this.knumRed.Size = new System.Drawing.Size(62, 26);
+            this.knumRed.StateCommon.Back.Color1 = System.Drawing.Color.Red;
+            this.knumRed.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.knumRed.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumRed.TabIndex = 50;
+            this.knumRed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kryptonNumericUpDown3
+            // knumBrightness
             // 
-            this.kryptonNumericUpDown3.Location = new System.Drawing.Point(368, 241);
-            this.kryptonNumericUpDown3.Name = "kryptonNumericUpDown3";
-            this.kryptonNumericUpDown3.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown3.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown3.TabIndex = 49;
-            this.kryptonNumericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumBrightness.Location = new System.Drawing.Point(368, 241);
+            this.knumBrightness.Name = "knumBrightness";
+            this.knumBrightness.Size = new System.Drawing.Size(62, 26);
+            this.knumBrightness.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumBrightness.TabIndex = 49;
+            this.knumBrightness.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kryptonNumericUpDown2
+            // knumSaturation
             // 
-            this.kryptonNumericUpDown2.Location = new System.Drawing.Point(368, 209);
-            this.kryptonNumericUpDown2.Name = "kryptonNumericUpDown2";
-            this.kryptonNumericUpDown2.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown2.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown2.TabIndex = 48;
-            this.kryptonNumericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumSaturation.Location = new System.Drawing.Point(368, 209);
+            this.knumSaturation.Name = "knumSaturation";
+            this.knumSaturation.Size = new System.Drawing.Size(62, 26);
+            this.knumSaturation.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumSaturation.TabIndex = 48;
+            this.knumSaturation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // kryptonNumericUpDown1
+            // knumHue
             // 
-            this.kryptonNumericUpDown1.Location = new System.Drawing.Point(368, 177);
-            this.kryptonNumericUpDown1.Name = "kryptonNumericUpDown1";
-            this.kryptonNumericUpDown1.Size = new System.Drawing.Size(62, 26);
-            this.kryptonNumericUpDown1.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonNumericUpDown1.TabIndex = 47;
-            this.kryptonNumericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumHue.Location = new System.Drawing.Point(368, 177);
+            this.knumHue.Name = "knumHue";
+            this.knumHue.Size = new System.Drawing.Size(62, 26);
+            this.knumHue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumHue.TabIndex = 47;
+            this.knumHue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pnlBlankBox
             // 
@@ -483,14 +458,14 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.pnlPrimaryColour.Size = new System.Drawing.Size(59, 35);
             this.pnlPrimaryColour.TabIndex = 0;
             // 
-            // kryptonRadioButton7
+            // krbtnB
             // 
-            this.kryptonRadioButton7.Location = new System.Drawing.Point(472, 239);
-            this.kryptonRadioButton7.Name = "kryptonRadioButton7";
-            this.kryptonRadioButton7.Size = new System.Drawing.Size(36, 24);
-            this.kryptonRadioButton7.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonRadioButton7.TabIndex = 44;
-            this.kryptonRadioButton7.Values.Text = "B:";
+            this.krbtnB.Location = new System.Drawing.Point(472, 239);
+            this.krbtnB.Name = "krbtnB";
+            this.krbtnB.Size = new System.Drawing.Size(36, 24);
+            this.krbtnB.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.krbtnB.TabIndex = 44;
+            this.krbtnB.Values.Text = "B:";
             // 
             // krbtnBlue
             // 
@@ -501,23 +476,23 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.krbtnBlue.TabIndex = 44;
             this.krbtnBlue.Values.Text = "B:";
             // 
-            // kryptonRadioButton8
+            // krbtnAlpha
             // 
-            this.kryptonRadioButton8.Location = new System.Drawing.Point(472, 209);
-            this.kryptonRadioButton8.Name = "kryptonRadioButton8";
-            this.kryptonRadioButton8.Size = new System.Drawing.Size(37, 24);
-            this.kryptonRadioButton8.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonRadioButton8.TabIndex = 45;
-            this.kryptonRadioButton8.Values.Text = "A:";
+            this.krbtnAlpha.Location = new System.Drawing.Point(472, 209);
+            this.krbtnAlpha.Name = "krbtnAlpha";
+            this.krbtnAlpha.Size = new System.Drawing.Size(37, 24);
+            this.krbtnAlpha.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.krbtnAlpha.TabIndex = 45;
+            this.krbtnAlpha.Values.Text = "A:";
             // 
-            // kryptonRadioButton9
+            // krbtnLuminosity
             // 
-            this.kryptonRadioButton9.Location = new System.Drawing.Point(472, 179);
-            this.kryptonRadioButton9.Name = "kryptonRadioButton9";
-            this.kryptonRadioButton9.Size = new System.Drawing.Size(34, 24);
-            this.kryptonRadioButton9.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonRadioButton9.TabIndex = 43;
-            this.kryptonRadioButton9.Values.Text = "L:";
+            this.krbtnLuminosity.Location = new System.Drawing.Point(472, 179);
+            this.krbtnLuminosity.Name = "krbtnLuminosity";
+            this.krbtnLuminosity.Size = new System.Drawing.Size(34, 24);
+            this.krbtnLuminosity.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.krbtnLuminosity.TabIndex = 43;
+            this.krbtnLuminosity.Values.Text = "L:";
             // 
             // krbtnBrightness
             // 
@@ -596,35 +571,67 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.kryptonLabel1.TabIndex = 3;
             this.kryptonLabel1.Values.Text = "New";
             // 
-            // kryptonPromptTextBox1
+            // avcsColours
             // 
-            this.kryptonPromptTextBox1.DrawPrompt = true;
-            this.kryptonPromptTextBox1.FocusSelect = true;
-            this.kryptonPromptTextBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonPromptTextBox1.Location = new System.Drawing.Point(326, 380);
-            this.kryptonPromptTextBox1.Name = "kryptonPromptTextBox1";
-            this.kryptonPromptTextBox1.PromptForeColour = System.Drawing.SystemColors.GrayText;
-            this.kryptonPromptTextBox1.PromptText = "000000";
-            this.kryptonPromptTextBox1.PromptTypeface = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonPromptTextBox1.Size = new System.Drawing.Size(100, 27);
-            this.kryptonPromptTextBox1.TabIndex = 74;
-            this.kryptonPromptTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.avcsColours.BackColor = System.Drawing.Color.Transparent;
+            this.avcsColours.BaseColourComponent = ExtendedControls.Base.Enumerations.ColourComponent.HUE;
+            hsb1.B = 1D;
+            hsb1.H = 0D;
+            hsb1.S = 1D;
+            this.avcsColours.HSB = hsb1;
+            this.avcsColours.Location = new System.Drawing.Point(278, 26);
+            this.avcsColours.Name = "avcsColours";
+            this.avcsColours.RGB = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.avcsColours.Size = new System.Drawing.Size(40, 260);
+            this.avcsColours.TabIndex = 1;
+            this.avcsColours.WebSafeColoursOnly = false;
             // 
-            // kryptonLabel14
+            // adcbColours
             // 
-            this.kryptonLabel14.Location = new System.Drawing.Point(176, 380);
-            this.kryptonLabel14.Name = "kryptonLabel14";
-            this.kryptonLabel14.Size = new System.Drawing.Size(144, 24);
-            this.kryptonLabel14.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel14.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel14.TabIndex = 75;
-            this.kryptonLabel14.Values.Text = "Hexadecimal Value:";
+            this.adcbColours.BaseColourComponent = ExtendedControls.Base.Enumerations.ColourComponent.HUE;
+            hsb2.B = 1D;
+            hsb2.H = 0D;
+            hsb2.S = 1D;
+            this.adcbColours.HSB = hsb2;
+            this.adcbColours.Location = new System.Drawing.Point(12, 26);
+            this.adcbColours.Name = "adcbColours";
+            this.adcbColours.RGB = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.adcbColours.Size = new System.Drawing.Size(260, 260);
+            this.adcbColours.TabIndex = 0;
+            this.adcbColours.WebSafeColoursOnly = false;
+            // 
+            // kptxtHexValue
+            // 
+            this.kptxtHexValue.DrawPrompt = true;
+            this.kptxtHexValue.FocusSelect = true;
+            this.kptxtHexValue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtHexValue.Location = new System.Drawing.Point(324, 380);
+            this.kptxtHexValue.MaxLength = 7;
+            this.kptxtHexValue.Name = "kptxtHexValue";
+            this.kptxtHexValue.PromptForeColour = System.Drawing.SystemColors.GrayText;
+            this.kptxtHexValue.PromptText = "000000";
+            this.kptxtHexValue.PromptTypeface = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtHexValue.Size = new System.Drawing.Size(106, 27);
+            this.kptxtHexValue.TabIndex = 76;
+            this.kptxtHexValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cc1
+            // 
+            this.cc1.BackColor = System.Drawing.Color.Transparent;
+            this.cc1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.cc1.Location = new System.Drawing.Point(324, 57);
+            this.cc1.Name = "cc1";
+            this.cc1.PrimaryColour = System.Drawing.Color.White;
+            this.cc1.SecondaryColour = System.Drawing.Color.Silver;
+            this.cc1.ShowHexadecimalValues = false;
+            this.cc1.Size = new System.Drawing.Size(73, 71);
+            this.cc1.TabIndex = 73;
             // 
             // AdobeColourDialog
             // 
             this.ClientSize = new System.Drawing.Size(639, 428);
-            this.Controls.Add(this.adobeVerticalColourSlider1);
-            this.Controls.Add(this.adobe2DColourBox1);
+            this.Controls.Add(this.avcsColours);
+            this.Controls.Add(this.adcbColours);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -633,12 +640,141 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.Name = "AdobeColourDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.Text = "Select a Colour";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
             this.pnlBlankBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
+        }
+        #endregion
+
+        #region Constants
+        private const int MINIMUM_VALUE = 0, MAXIMUM_VALUE = 255;
+        #endregion
+
+        #region Variables
+        private Color _rgb;
+        private AdobeColours.HSB _hsl;
+        private AdobeColours.CMYK _cmyk;
+        #endregion
+
+        #region Properties
+        public Color PrimaryColour
+        {
+            get => _rgb;
+
+            set
+            {
+                _rgb = value;
+
+                _hsl = AdobeColours.RGB_to_HSB(_rgb);
+
+                UpdateValues();
+            }
+        }
+
+        public ColourComponent DrawStyle
+        {
+            get
+            {
+                if (krbtnHue.Checked)
+                {
+                    return ColourComponent.HUE;
+                }
+                else if (krbtnSaturation.Checked)
+                {
+                    return ColourComponent.SATURATION;
+                }
+                else if (krbtnBrightness.Checked)
+                {
+                    return ColourComponent.BRIGHTESS;
+                }
+                else if (krbtnRed.Checked)
+                {
+                    return ColourComponent.RED;
+                }
+                else if (krbtnGreen.Checked)
+                {
+                    return ColourComponent.GREEN;
+                }
+                else if (krbtnBlue.Checked)
+                {
+                    return ColourComponent.BLUE;
+                }
+                else
+                {
+                    return ColourComponent.HUE;
+                }
+            }
+
+            set
+            {
+                switch (value)
+                {
+                    case ColourComponent.HUE:
+                        krbtnHue.Checked = true;
+                        break;
+                    case ColourComponent.SATURATION:
+                        krbtnSaturation.Checked = true;
+                        break;
+                    case ColourComponent.BRIGHTESS:
+                        krbtnBrightness.Checked = true;
+                        break;
+                    case ColourComponent.RED:
+                        krbtnRed.Checked = true;
+                        break;
+                    case ColourComponent.GREEN:
+                        krbtnGreen.Checked = true;
+                        break;
+                    case ColourComponent.BLUE:
+                        krbtnBlue.Checked = true; ;
+                        break;
+                }
+            }
+        }
+        #endregion
+
+        #region Constructor
+        public AdobeColourDialog(Color startingColour)
+        {
+            PrimaryColour = startingColour;
+
+            _hsl = AdobeColours.RGB_to_HSB(_rgb);
+
+            _cmyk = AdobeColours.RGB_to_CMYK(_rgb);
+
+            UpdateValues();
+
+            adcbColours.HSB = _hsl;
+
+            avcsColours.HSB = _hsl;
+
+            cc1.PrimaryColour = startingColour;
+
+            cc1.SecondaryColour = startingColour;
+
+            krbtnHue.Checked = true;
+
+            #region Values
+            SetNumericUpDownValueBoundaries(knumHue, MINIMUM_VALUE, 360);
+
+            SetNumericUpDownValueBoundaries(knumSaturation, MINIMUM_VALUE, 100);
+
+            SetNumericUpDownValueBoundaries(knumBrightness, MINIMUM_VALUE, 100);
+
+            //SetNumericUpDownValueBoundaries()
+            #endregion
+        }
+        #endregion
+
+        #region Methods
+        private void SetNumericUpDownValueBoundaries(KryptonNumericUpDown target, int minimum, int maximum)
+        {
+            target.Minimum = minimum;
+
+            target.Maximum = maximum;
         }
         #endregion
     }

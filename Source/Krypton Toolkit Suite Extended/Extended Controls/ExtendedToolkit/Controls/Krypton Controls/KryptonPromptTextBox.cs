@@ -41,6 +41,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
             set { _promptTextColour = value; Invalidate(); }
         }
 
+        //? Why do we need a second font?
         [Browsable(true)]
         [EditorBrowsable(EditorBrowsableState.Always)]
         [Category("Appearance")]
@@ -95,6 +96,8 @@ namespace ExtendedControls.ExtendedToolkit.Controls
             {
                 DrawTextPrompt(e.Graphics);
             }
+
+            PromptTypeface = Font;
         }
 
         protected override void WndProc(ref Message m)
@@ -116,6 +119,13 @@ namespace ExtendedControls.ExtendedToolkit.Controls
             {
                 DrawTextPrompt();
             }
+        }
+
+        protected override void OnFontChanged(EventArgs e)
+        {
+            PromptTypeface = Font;
+
+            base.OnFontChanged(e);
         }
         #endregion
 
@@ -156,7 +166,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls
             }
 
             // Draw the prompt text using TextRenderer
-            TextRenderer.DrawText(g, _promptText, _promptTypeface, rect, _promptTextColour, BackColor, flags);
+            TextRenderer.DrawText(g, _promptText, PromptTypeface, rect, _promptTextColour, BackColor, flags);
+
+            //Invalidate();
         }
         #endregion
     }
