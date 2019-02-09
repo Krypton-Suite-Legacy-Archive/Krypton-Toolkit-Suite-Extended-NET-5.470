@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Playground
+namespace ExtendedControls.ExtendedToolkit.UI.Colours
 {
     public partial class ColourWheelColourPickerDialog : KryptonForm
     {
@@ -14,7 +14,7 @@ namespace Playground
 
         private Color _selectedColour;
 
-        private Timer _updateColour = new Timer(), _updateHexadecimalColourValues = new Timer(), _updateHSBColourValues = new Timer(), _updateARGBColourValues = new Timer(), _updateRGBColourValue = new Timer();
+        private Timer _updateColour = new Timer(), _updateHexadecimalColourValues = new Timer(), _updateHSBColourValues = new Timer(), _updateARGBColourValues = new Timer(), _updateRGBColourValue = new Timer(), _updateSelectedColour = new Timer();
         #endregion
 
         #region Properties
@@ -341,9 +341,11 @@ namespace Playground
             this.cbSelectedColour.Size = new System.Drawing.Size(64, 64);
             this.cbSelectedColour.TabIndex = 1;
             this.cbSelectedColour.TabStop = false;
+            this.cbSelectedColour.BackColorChanged += new System.EventHandler(this.cbSelectedColour_BackColorChanged);
             // 
             // cwColourSelector
             // 
+            this.cwColourSelector.BackColor = System.Drawing.Color.Transparent;
             this.cwColourSelector.Location = new System.Drawing.Point(12, 12);
             this.cwColourSelector.Name = "cwColourSelector";
             this.cwColourSelector.Size = new System.Drawing.Size(202, 195);
@@ -361,6 +363,7 @@ namespace Playground
             this.kbtnOk.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnOk.TabIndex = 23;
             this.kbtnOk.Values.Text = "O&k";
+            this.kbtnOk.Click += new System.EventHandler(this.kbtnOk_Click);
             // 
             // kbtnCancel
             // 
@@ -373,6 +376,7 @@ namespace Playground
             this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.TabIndex = 6;
             this.kbtnCancel.Values.Text = "C&ancel";
+            this.kbtnCancel.Click += new System.EventHandler(this.kbtnCancel_Click);
             // 
             // panel1
             // 
@@ -459,6 +463,14 @@ namespace Playground
             _updateRGBColourValue.Interval = 250;
 
             _updateRGBColourValue.Tick += UpdateRGBColourValue_Tick;
+            #endregion
+
+            #region Update Selected Colour
+            _updateSelectedColour.Enabled = true;
+
+            _updateSelectedColour.Interval = 250;
+
+            _updateSelectedColour.Tick += UpdateSelectedColour_Tick;
             #endregion
 
             #endregion
@@ -612,6 +624,35 @@ namespace Playground
         private void UpdateRGBColourValue_Tick(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void UpdateSelectedColour_Tick(object sender, EventArgs e)
+        {
+            if (cbSelectedColour.BackColor != null)
+            {
+                SetSelectedColour(cbSelectedColour.BackColor);
+            }
+
+            _updateSelectedColour.Stop();
+        }
+
+        private void kbtnOk_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+
+            Hide();
+        }
+
+        private void kbtnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+
+            Hide();
+        }
+
+        private void cbSelectedColour_BackColorChanged(object sender, EventArgs e)
+        {
+            _updateSelectedColour.Start();
         }
 
         private void cwColourSelector_ColourChanged(object sender, EventArgs e)

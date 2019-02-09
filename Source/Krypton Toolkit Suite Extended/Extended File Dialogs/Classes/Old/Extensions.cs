@@ -19,10 +19,8 @@
 //  PURPOSE. IT CAN BE DISTRIBUTED FREE OF CHARGE AS LONG AS THIS HEADER 
 //  REMAINS UNCHANGED.
 
-using ExtendedFileDialogs.Controls;
-using System.Windows.Forms;
 
-namespace ExtendedFileDialogs.Classes
+namespace ExtendedFileDialogs.Classes.Old
 {
     public static class Extensions
     {

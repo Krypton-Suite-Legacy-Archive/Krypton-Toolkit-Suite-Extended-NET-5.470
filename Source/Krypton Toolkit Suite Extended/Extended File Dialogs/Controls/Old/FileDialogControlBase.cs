@@ -19,7 +19,7 @@
 //  PURPOSE. IT CAN BE DISTRIBUTED FREE OF CHARGE AS LONG AS THIS HEADER 
 //  REMAINS UNCHANGED.
 
-using ExtendedFileDialogs.Classes;
+using ExtendedFileDialogs.Classes.Old;
 using ExtendedFileDialogs.Enumerations;
 using ExtendedFileDialogs.Structs;
 using GlobalUtilities.Classes;
@@ -32,7 +32,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace ExtendedFileDialogs.Controls
+namespace ExtendedFileDialogs.Controls.Old
 {
     public partial class FileDialogControlBase : UserControl
     {
@@ -360,7 +360,7 @@ namespace ExtendedFileDialogs.Controls
             }
             catch (Exception exc)
             {
-                
+
             }
         }
 
@@ -481,7 +481,7 @@ namespace ExtendedFileDialogs.Controls
                     }
                     catch (Exception exc)
                     {
-                        
+
                     }
                     finally
                     {
@@ -554,7 +554,7 @@ namespace ExtendedFileDialogs.Controls
 
             _MSdialog = (FileDlgType == FileDialogType.OpenFileDlg) ? new OpenFileDialog() as FileDialog : new SaveFileDialog() as FileDialog;
 
-            _dlgWrapper = new WholeDialogWrapper(this);
+            //_dlgWrapper = new WholeDialogWrapper(this);
 
             OnPrepareMSDialog();
 
@@ -604,7 +604,7 @@ namespace ExtendedFileDialogs.Controls
 
             MSDialog = fdlg;
 
-            _dlgWrapper = new WholeDialogWrapper(this);
+           // _dlgWrapper = new WholeDialogWrapper(this);
 
             try
             {

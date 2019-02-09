@@ -591,4 +591,235 @@ namespace ExtendedFileDialogs.Enumerations
         SWP_ASYNCWINDOWPOS = 0x4000
     }
     #endregion
+
+    #region Ookii Enumerations
+    public enum ComDlgResourceId
+    {
+        OpenButton = 370,
+        Open = 384,
+        FileNotFound = 391,
+        CreatePrompt = 402,
+        ReadOnly = 427,
+        ConfirmSaveAs = 435
+    }
+
+    public enum HRESULT
+    {
+        S_FALSE = 0x0001,
+        S_OK = 0x0000,
+        E_INVALIDARG = unchecked((int)0x80070057),
+        E_OUTOFMEMORY = unchecked((int)0x8007000E),
+        ERROR_CANCELLED = unchecked((int)0x800704C7)
+    }
+
+    [Flags]
+    public enum ProgressDialogFlags : uint
+    {
+        Normal = 0x00000000,
+        Modal = 0x00000001,
+        AutoTime = 0x00000002,
+        NoTime = 0x00000004,
+        NoMinimize = 0x00000008,
+        NoProgressBar = 0x00000010,
+        MarqueeProgress = 0x00000020,
+        NoCancel = 0x00000040
+    }
+
+    /// <summary>
+    /// Represents the type of a task dialog button.
+    /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1027:MarkEnumsWithFlags")]
+    public enum ButtonType
+    {
+        /// <summary>
+        /// The button is a custom button.
+        /// </summary>
+        Custom = 0,
+        /// <summary>
+        /// The button is the common OK button.
+        /// </summary>
+        Ok = 1,
+        /// <summary>
+        /// The button is the common Yes button.
+        /// </summary>
+        Yes = 6,
+        /// <summary>
+        /// The button is the common No button.
+        /// </summary>
+        No = 7,
+        /// <summary>
+        /// The button is the common Cancel button.
+        /// </summary>
+        Cancel = 2,
+        /// <summary>
+        /// The button is the common Retry button.
+        /// </summary>
+        Retry = 4,
+        /// <summary>
+        /// The button is the common Close button.
+        /// </summary>
+        Close = 8
+    }
+
+    /// <summary>
+    /// An enumeration that displays how the text in the <see cref="CredentialDialog.MainInstruction"/> and <see cref="CredentialDialog.Content"/>
+    /// properties is displayed on a credential dialog in Windows XP.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    ///   Windows XP does not support the distinct visual style of the main instruction, so there is no visual difference between the
+    ///   text of the <see cref="CredentialDialog.MainInstruction"/> and <see cref="CredentialDialog.Content"/> properties. Depending
+    ///   on the scenario, you may wish to hide either the main instruction or the content text.
+    /// </para>
+    /// </remarks>
+    public enum DownlevelTextMode
+    {
+        /// <summary>
+        /// The text of the <see cref="CredentialDialog.MainInstruction"/> and <see cref="CredentialDialog.Content"/> properties is
+        /// concatenated together, separated by an empty line.
+        /// </summary>
+        MainInstructionAndContent,
+        /// <summary>
+        /// Only the text of the <see cref="CredentialDialog.MainInstruction"/> property is shown.
+        /// </summary>
+        MainInstructionOnly,
+        /// <summary>
+        /// Only the text of the <see cref="CredentialDialog.Content"/> property is shown.
+        /// </summary>
+        ContentOnly
+    }
+
+    /// <summary>
+    /// Represents the state of the progress bar on the task dialog.
+    /// </summary>
+    public enum ProgressBarState
+    {
+        /// <summary>
+        /// Normal state.
+        /// </summary>
+        Normal,
+        /// <summary>
+        /// Error state
+        /// </summary>
+        Error,
+        /// <summary>
+        /// Paused state
+        /// </summary>
+        Paused
+    }
+
+    /// <summary>
+    /// Indicates the type of progress on a task dialog.
+    /// </summary>
+    public enum ProgressBarStyle
+    {
+        /// <summary>
+        /// No progress bar is displayed on the dialog.
+        /// </summary>
+        None,
+        /// <summary>
+        /// A regular progress bar is displayed on the dialog.
+        /// </summary>
+        ProgressBar,
+        /// <summary>
+        /// A marquee progress bar is displayed on the dialog. Use this value for operations
+        /// that cannot report concrete progress information.
+        /// </summary>
+        MarqueeProgressBar
+    }
+
+    /// <summary>
+    /// Resource identifiers for default animations from shell32.dll.
+    /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1008:EnumsShouldHaveZeroValue")]
+    public enum ShellAnimation
+    {
+        /// <summary>
+        /// An animation representing a file move.
+        /// </summary>
+        FileMove = 160,
+        /// <summary>
+        /// An animation representing a file copy.
+        /// </summary>
+        FileCopy = 161,
+        /// <summary>
+        /// An animation showing flying papers.
+        /// </summary>
+        FlyingPapers = 165,
+        /// <summary>
+        /// An animation showing a magnifying glass over a globe.
+        /// </summary>
+        SearchGlobe = 166,
+        /// <summary>
+        /// An animation representing a permament delete.
+        /// </summary>
+        PermanentDelete = 164,
+        /// <summary>
+        /// An animation representing deleting an item from the recycle bin.
+        /// </summary>
+        FromRecycleBinDelete = 163,
+        /// <summary>
+        /// An animation representing a file move to the recycle bin.
+        /// </summary>
+        ToRecycleBinDelete = 162,
+        /// <summary>
+        /// An animation representing a search spanning the local computer.
+        /// </summary>
+        SearchComputer = 152,
+        /// <summary>
+        /// An animation representing a search in a document..
+        /// </summary>
+        SearchDocument = 151,
+        /// <summary>
+        /// An animation representing a search using a flashlight animation.
+        /// </summary>
+        SearchFlashlight = 150,
+    }
+
+    /// <summary>
+    /// Indicates the display style of custom buttons on a task dialog.
+    /// </summary>
+    public enum TaskDialogButtonStyle
+    {
+        /// <summary>
+        /// Custom buttons are displayed as regular buttons.
+        /// </summary>
+        Standard,
+        /// <summary>
+        /// Custom buttons are displayed as command links using a standard task dialog glyph.
+        /// </summary>
+        CommandLinks,
+        /// <summary>
+        /// Custom buttons are displayed as command links without a glyph.
+        /// </summary>
+        CommandLinksNoIcon
+    }
+
+    /// <summary>
+    /// Indicates the icon to use for a task dialog.
+    /// </summary>
+    public enum TaskDialogIcon
+    {
+        /// <summary>
+        /// A custom icon or no icon if no custom icon is specified.
+        /// </summary>
+        Custom,
+        /// <summary>
+        /// System warning icon.
+        /// </summary>
+        Warning = 0xFFFF, // MAKEINTRESOURCEW(-1)
+        /// <summary>
+        /// System Error icon.
+        /// </summary>
+        Error = 0xFFFE, // MAKEINTRESOURCEW(-2)
+        /// <summary>
+        /// System Information icon.
+        /// </summary>
+        Information = 0xFFFD, // MAKEINTRESOURCEW(-3)
+        /// <summary>
+        /// Shield icon.
+        /// </summary>
+        Shield = 0xFFFC, // MAKEINTRESOURCEW(-4)
+    }
+    #endregion
 }

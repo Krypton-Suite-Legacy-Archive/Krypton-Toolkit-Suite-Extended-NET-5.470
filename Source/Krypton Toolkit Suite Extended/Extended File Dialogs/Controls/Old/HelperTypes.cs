@@ -1,4 +1,4 @@
-﻿using ExtendedFileDialogs.Classes;
+﻿using ExtendedFileDialogs.Classes.Old;
 using ExtendedFileDialogs.Enumerations;
 using ExtendedFileDialogs.Structs;
 using System;
@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ExtendedFileDialogs.Controls
+namespace ExtendedFileDialogs.Controls.Old
 {
     public partial class FileDialogControlBase
     {
@@ -40,7 +40,7 @@ namespace ExtendedFileDialogs.Controls
 
             }
 
-            void NativeDialogWrapper_Disposed(object sender, EventArgs e)
+            private void NativeDialogWrapper_Disposed(object sender, EventArgs e)
             {
                 Dispose();
             }
@@ -171,14 +171,14 @@ namespace ExtendedFileDialogs.Controls
                 SetWindowPosFlags.SWP_NOACTIVATE |
                 SetWindowPosFlags.SWP_NOMOVE |
                 SetWindowPosFlags.SWP_NOSIZE;
-            const uint WS_VISIBLE = 0x10000000;
-            static readonly IntPtr HWND_MESSAGE = new IntPtr(-3);
-            static readonly IntPtr NULL = IntPtr.Zero;
+            private const uint WS_VISIBLE = 0x10000000;
+            private static readonly IntPtr HWND_MESSAGE = new IntPtr(-3);
+            private static readonly IntPtr NULL = IntPtr.Zero;
             #endregion
 
             #region Variables Declaration
-            IntPtr _hDummyWnd = NULL;
-            bool mResized;
+            private IntPtr _hDummyWnd = NULL;
+            private bool mResized;
             private FileDialogControlBase _CustomControl = null;
             private bool _WatchForActivate = false;
             private Size mOriginalSize;
@@ -193,8 +193,8 @@ namespace ExtendedFileDialogs.Controls
             private WINDOWINFO _ComboFileNameInfo;
             private IntPtr _hComboExtensions;
             private WINDOWINFO _ComboExtensionsInfo;
-            IntPtr _hOKButton;
-            WINDOWINFO _OKButtonInfo;
+            private IntPtr _hOKButton;
+            private WINDOWINFO _OKButtonInfo;
             private IntPtr _hCancelButton;
             private WINDOWINFO _CancelButtonInfo;
             private IntPtr _hHelpButton;
@@ -398,7 +398,7 @@ namespace ExtendedFileDialogs.Controls
                 _CustomControl.MSDialog.Disposed += new EventHandler(DialogWrappper_Disposed);
             }
 
-            void DialogWrappper_Disposed(object sender, EventArgs e)
+            private void DialogWrappper_Disposed(object sender, EventArgs e)
             {
                 Dispose();
             }

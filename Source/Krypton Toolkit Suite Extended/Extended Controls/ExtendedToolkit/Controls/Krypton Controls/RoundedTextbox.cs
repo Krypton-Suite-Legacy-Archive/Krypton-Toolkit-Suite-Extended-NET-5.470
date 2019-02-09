@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 {
@@ -13,6 +14,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
     /// </summary>
     [ToolboxBitmap(typeof(TextBox))]
     [ToolboxItem(true)]
+    [ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.All)]
     [Description("Provides a rounded textbox like Google Chrome's current Omnibox design.")]
     public class RoundedTextbox : Control
     {

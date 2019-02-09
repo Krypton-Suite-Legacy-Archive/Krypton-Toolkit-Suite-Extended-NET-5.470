@@ -35,6 +35,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,19 +45,75 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Extensions.cs" />
+    <Compile Include="Classes\ComCtlv6ActivationContext.cs" />
+    <Compile Include="Classes\CredentialException.cs" />
+    <Compile Include="Classes\DialogHelper.cs" />
+    <Compile Include="Classes\ExpandButtonClickedEventArgs.cs" />
+    <Compile Include="Classes\Glass.cs" />
+    <Compile Include="Classes\GlobalSuppressions.cs" />
+    <Compile Include="Classes\HyperlinkClickedEventArgs.cs" />
     <Compile Include="Classes\NativeMethods.cs" />
-    <Compile Include="Controls\FileDialogControlBase.cs">
+    <Compile Include="Classes\OkButtonClickedEventArgs.cs" />
+    <Compile Include="Classes\Old\Extensions.cs" />
+    <Compile Include="Classes\Old\NativeMethods.cs" />
+    <Compile Include="Classes\AdditionalVisualStyleElements.cs" />
+    <Compile Include="Classes\AnimationResource.cs" />
+    <Compile Include="Classes\VistaFileDialogEvents.cs" />
+    <Compile Include="Classes\SafeHandles.cs" />
+    <Compile Include="Classes\TaskDialogItemClickedEventArgs.cs" />
+    <Compile Include="Classes\TaskDialogItemCollection.cs" />
+    <Compile Include="Classes\TimerEventArgs.cs" />
+    <Compile Include="Controls\CredentialDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\InputDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Old\FileDialogControlBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\FileDialogControlBase.Designer.cs">
+    <Compile Include="Controls\Old\FileDialogControlBase.Designer.cs">
       <DependentUpon>FileDialogControlBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\HelperTypes.cs">
+    <Compile Include="Controls\Old\HelperTypes.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProgressDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskDialogButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskDialogItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskDialogRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\VistaFileDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\VistaFolderBrowserDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\VistaOpenFileDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\VistaSaveFileDialog.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Designer\KryptonTaskDialogDesigner.cs" />
     <Compile Include="Enumerations\Enumerations.cs" />
+    <Compile Include="Interop\ComDlgResources.cs" />
+    <Compile Include="Interop\COMGuids.cs" />
+    <Compile Include="Interop\IProgressDialog.cs" />
+    <Compile Include="Interop\ShellComInterfaces.cs" />
+    <Compile Include="Interop\ShellWrapperDefinitions.cs" />
+    <Compile Include="Interop\Win32Resources.cs" />
+    <Compile Include="Interop\WindowHandleWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -64,12 +121,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Structs\STRUCTS.cs" />
+    <Compile Include="UI\ExtendedSystemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SystemInputDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Project Items\LICENSE.md" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Controls\FileDialogControlBase.resx">
+    <EmbeddedResource Include="Controls\Old\FileDialogControlBase.resx">
       <DependentUpon>FileDialogControlBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -117,6 +180,7 @@
     <Content Include="ToolboxBitmaps\VistaFolderBrowserDialog.bmp" />
     <Content Include="ToolboxBitmaps\VistaOpenFileDialog.bmp" />
     <Content Include="ToolboxBitmaps\VistaSaveFileDialog.bmp" />
+    <Content Include="XML\CustomDictionary.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,6 +5,7 @@ using Core.UX.Colours;
 using Core.UX.Options;
 using ExtendedControls.Enumerations;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using ExtendedControls.ExtendedToolkit.UI.Colours;
 using ExtendedControls.ExtendedToolkit.UI.Dialogues;
 using ExtendedControls.ExtendedToolkit.UI.Drawing;
 using KryptonApplicationUpdater.Classes.SettingsManager;
@@ -420,9 +421,9 @@ namespace Playground
 
         private void kryptonButton14_Click(object sender, EventArgs e)
         {
-            ColourWheelColourPickerDialog cwcpd = new ColourWheelColourPickerDialog();
+            ColourTest colourTest = new ColourTest();
 
-            cwcpd.Show();
+            colourTest.Show();
         }
     }
 }

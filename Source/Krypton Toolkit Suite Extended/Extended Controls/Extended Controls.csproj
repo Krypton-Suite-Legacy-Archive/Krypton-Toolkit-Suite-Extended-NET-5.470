@@ -13,6 +13,17 @@
     <FileAlignment>512</FileAlignment>
     <ApplicationVersion>4.7.410.0</ApplicationVersion>
     <AssemblyVersion>5.470.720.0</AssemblyVersion>
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>True</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>True</UpdateAssemblyInfoVersion>
+    <AssemblyVersionSettings>None.None.Increment.None</AssemblyVersionSettings>
+    <UpdatePackageVersion>False</UpdatePackageVersion>
+    <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
+    <AssemblyFileVersionSettings>None.None.Increment.None</AssemblyFileVersionSettings>
+    <AssemblyInfoVersionSettings>None.None.Increment.None</AssemblyInfoVersionSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,6 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -72,9 +84,12 @@
     <Compile Include="Base\ButtonSpec\ButtonSpecFormWindowMin.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Base\Code\Colours\Colour Dialog\AdobeColours.cs" />
+    <Compile Include="Base\Code\Colours\Colour Dialog\MathsExtensions.cs" />
     <Compile Include="Base\Code\Colours\Colour Wheel\Images.cs" />
     <Compile Include="Base\Code\Colours\Colour Wheel\Utilities.cs" />
     <Compile Include="Base\Code\Colours\ColourConverting.cs" />
+    <Compile Include="Base\Code\Colours\ColourExtensions.cs" />
     <Compile Include="Base\Code\Colours\ColourTypeDialogConverter.cs" />
     <Compile Include="Base\Code\Colours\ColourTypeDropDownConverter.cs" />
     <Compile Include="Base\Code\Colours\ColourTypeEditorDialog.cs" />
@@ -186,6 +201,15 @@
     <Compile Include="ExtendedToolkit\Calendar\Enumerations\CalendarTimeScale.cs" />
     <Compile Include="ExtendedToolkit\Calendar\Interfaces\ICalendarSelectableElement.cs" />
     <Compile Include="ExtendedToolkit\Calendar\Interfaces\ISelectableElement.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Colours\Controls\Adobe2DColourBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\Controls\AdobeVerticalColourSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Colours\Controls\ColourComparer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Colours\Controls\ColourWheel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -203,6 +227,9 @@
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\FlashingLabel.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Colours\AdobeColourDialog.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\Colours\ColourWheelColourPickerDialog.cs">
       <SubType>Form</SubType>
@@ -875,6 +902,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Base\UI\Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Colours\Controls\ColourComparer.resx">
+      <DependentUpon>ColourComparer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Colours\AdobeColourDialog.resx">
+      <DependentUpon>AdobeColourDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Colours\ColourWheelColourPickerDialog.resx">
       <DependentUpon>ColourWheelColourPickerDialog.cs</DependentUpon>

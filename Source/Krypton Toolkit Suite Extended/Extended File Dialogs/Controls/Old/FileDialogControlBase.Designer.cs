@@ -1,4 +1,4 @@
-﻿namespace ExtendedFileDialogs.Controls
+﻿namespace ExtendedFileDialogs.Controls.Old
 {
     partial class FileDialogControlBase
     {
