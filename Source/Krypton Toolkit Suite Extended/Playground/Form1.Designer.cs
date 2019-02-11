@@ -80,6 +80,8 @@ namespace Playground
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonButton16 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton15 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.roundedTextbox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox();
             this.kryptonButton14 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton13 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -147,6 +149,7 @@ namespace Playground
             this.flashingLabel1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.FlashingLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.kryptonButton17 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -507,6 +510,9 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonButton17);
+            this.kryptonPanel1.Controls.Add(this.kryptonButton16);
+            this.kryptonPanel1.Controls.Add(this.kryptonButton15);
             this.kryptonPanel1.Controls.Add(this.roundedTextbox1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton14);
             this.kryptonPanel1.Controls.Add(this.kryptonButton13);
@@ -555,6 +561,24 @@ namespace Playground
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 659);
             this.kryptonPanel1.TabIndex = 2;
+            // 
+            // kryptonButton16
+            // 
+            this.kryptonButton16.Location = new System.Drawing.Point(481, 440);
+            this.kryptonButton16.Name = "kryptonButton16";
+            this.kryptonButton16.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton16.TabIndex = 45;
+            this.kryptonButton16.Values.Text = "File Browser";
+            this.kryptonButton16.Click += new System.EventHandler(this.kryptonButton16_Click);
+            // 
+            // kryptonButton15
+            // 
+            this.kryptonButton15.Location = new System.Drawing.Point(482, 401);
+            this.kryptonButton15.Name = "kryptonButton15";
+            this.kryptonButton15.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton15.TabIndex = 44;
+            this.kryptonButton15.Values.Text = "Adobe Colour Dialog";
+            this.kryptonButton15.Click += new System.EventHandler(this.kryptonButton15_Click);
             // 
             // roundedTextbox1
             // 
@@ -1204,6 +1228,15 @@ namespace Playground
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // kryptonButton17
+            // 
+            this.kryptonButton17.Location = new System.Drawing.Point(481, 479);
+            this.kryptonButton17.Name = "kryptonButton17";
+            this.kryptonButton17.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton17.TabIndex = 46;
+            this.kryptonButton17.Values.Text = "File Explorer";
+            this.kryptonButton17.Click += new System.EventHandler(this.kryptonButton17_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1361,6 +1394,9 @@ namespace Playground
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton14;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.RoundedTextbox roundedTextbox1;
         private ExtendedControls.ExtendedToolkit.ToolstripControls.FlashingLabel flashingLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton15;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton16;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton17;
     }
 }
 

@@ -8,6 +8,7 @@ using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using ExtendedControls.ExtendedToolkit.UI.Colours;
 using ExtendedControls.ExtendedToolkit.UI.Dialogues;
 using ExtendedControls.ExtendedToolkit.UI.Drawing;
+using ExtendedControls.ExtendedToolkit.UI.SystemBrowser;
 using KryptonApplicationUpdater.Classes.SettingsManager;
 //using KryptonApplicationUpdater.Interfaces;
 
@@ -424,6 +425,27 @@ namespace Playground
             ColourTest colourTest = new ColourTest();
 
             colourTest.Show();
+        }
+
+        private void kryptonButton15_Click(object sender, EventArgs e)
+        {
+            AdobeColourDialog adobeColourDialog = new AdobeColourDialog(Color.White);
+
+            adobeColourDialog.Show();
+        }
+
+        private void kryptonButton16_Click(object sender, EventArgs e)
+        {
+            KryptonFileBrowser kryptonFileBrowser = new KryptonFileBrowser();
+
+            kryptonFileBrowser.Show();
+        }
+
+        private void kryptonButton17_Click(object sender, EventArgs e)
+        {
+            KryptonFileExplorer kfe = new KryptonFileExplorer();
+
+            kfe.Show();
         }
     }
 }

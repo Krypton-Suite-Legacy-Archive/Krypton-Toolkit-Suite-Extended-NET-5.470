@@ -64,7 +64,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
             base.OnPaint(e);
 
-            Invalidate();
+            //Invalidate();
         }
         #endregion
     }

@@ -216,6 +216,9 @@
     <Compile Include="ExtendedToolkit\Controls\Colours\Controls\ColourWheelExtended.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Experimental\KryptonMessageboxComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\PromptRoundedTextbox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -703,6 +706,9 @@
     <Compile Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\System Browser\KryptonFileExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\System Browser\KryptonFileBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -974,6 +980,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\System Browser\KryptonFileBrowser.resx">
       <DependentUpon>KryptonFileBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\System Browser\KryptonFileExplorer.resx">
+      <DependentUpon>KryptonFileExplorer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Windows\FileInformation.resx">
       <DependentUpon>FileInformation.cs</DependentUpon>

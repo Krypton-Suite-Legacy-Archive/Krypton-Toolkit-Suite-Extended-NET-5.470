@@ -1,12 +1,16 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using GlobalUtilities.Classes;
 using System;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
 {
     public class KryptonFileBrowser : KryptonForm
     {
+        #region Designer Code
         private KryptonTreeView ktvFileList;
         private Panel panel1;
         private KryptonPanel kryptonPanel2;
@@ -25,17 +29,17 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
         {
             this.components = new System.ComponentModel.Container();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.txtFilePath = new System.Windows.Forms.TextBox();
+            this.ktxtFilePath = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.tvFileList = new System.Windows.Forms.TreeView();
             this.ktvFileList = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.ktxtFilePath = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kptxtFilePath = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
-            this.txtFilePath = new System.Windows.Forms.TextBox();
             this.kbtnNewFolder = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.ilSystemImages = new System.Windows.Forms.ImageList(this.components);
+            this.kptxtFilePath = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -55,6 +59,22 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
             this.kryptonPanel1.Size = new System.Drawing.Size(491, 517);
             this.kryptonPanel1.TabIndex = 0;
             // 
+            // txtFilePath
+            // 
+            this.txtFilePath.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilePath.Location = new System.Drawing.Point(12, 13);
+            this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.Size = new System.Drawing.Size(466, 27);
+            this.txtFilePath.TabIndex = 3;
+            // 
+            // ktxtFilePath
+            // 
+            this.ktxtFilePath.Location = new System.Drawing.Point(12, 13);
+            this.ktxtFilePath.Name = "ktxtFilePath";
+            this.ktxtFilePath.Size = new System.Drawing.Size(466, 27);
+            this.ktxtFilePath.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktxtFilePath.TabIndex = 4;
+            // 
             // tvFileList
             // 
             this.tvFileList.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -62,6 +82,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
             this.tvFileList.Name = "tvFileList";
             this.tvFileList.Size = new System.Drawing.Size(467, 450);
             this.tvFileList.TabIndex = 3;
+            this.tvFileList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvFileList_AfterSelect);
             // 
             // ktvFileList
             // 
@@ -71,6 +92,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
             this.ktvFileList.StateNormal.Node.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ktvFileList.StateNormal.Node.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ktvFileList.TabIndex = 0;
+            this.ktvFileList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.ktvFileList_AfterSelect);
             // 
             // panel1
             // 
@@ -92,16 +114,16 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
             this.kryptonPanel2.Size = new System.Drawing.Size(491, 47);
             this.kryptonPanel2.TabIndex = 2;
             // 
-            // kbtnCancel
+            // kbtnNewFolder
             // 
-            this.kbtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.kbtnCancel.Location = new System.Drawing.Point(388, 7);
-            this.kbtnCancel.Name = "kbtnCancel";
-            this.kbtnCancel.Size = new System.Drawing.Size(90, 28);
-            this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnCancel.TabIndex = 0;
-            this.kbtnCancel.Values.Text = "&Cancel";
-            this.kbtnCancel.Click += new System.EventHandler(this.kbtnCancel_Click);
+            this.kbtnNewFolder.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.kbtnNewFolder.Location = new System.Drawing.Point(12, 7);
+            this.kbtnNewFolder.Name = "kbtnNewFolder";
+            this.kbtnNewFolder.Size = new System.Drawing.Size(118, 28);
+            this.kbtnNewFolder.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnNewFolder.TabIndex = 2;
+            this.kbtnNewFolder.Values.Text = "New &Folder";
+            this.kbtnNewFolder.Click += new System.EventHandler(this.kbtnNewFolder_Click);
             // 
             // kbtnOk
             // 
@@ -114,13 +136,22 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
             this.kbtnOk.Values.Text = "&Ok";
             this.kbtnOk.Click += new System.EventHandler(this.kbtnOk_Click);
             // 
-            // ktxtFilePath
+            // kbtnCancel
             // 
-            this.ktxtFilePath.Location = new System.Drawing.Point(12, 13);
-            this.ktxtFilePath.Name = "ktxtFilePath";
-            this.ktxtFilePath.Size = new System.Drawing.Size(466, 27);
-            this.ktxtFilePath.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ktxtFilePath.TabIndex = 4;
+            this.kbtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.kbtnCancel.Location = new System.Drawing.Point(388, 7);
+            this.kbtnCancel.Name = "kbtnCancel";
+            this.kbtnCancel.Size = new System.Drawing.Size(90, 28);
+            this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnCancel.TabIndex = 0;
+            this.kbtnCancel.Values.Text = "&Cancel";
+            this.kbtnCancel.Click += new System.EventHandler(this.kbtnCancel_Click);
+            // 
+            // ilSystemImages
+            // 
+            this.ilSystemImages.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.ilSystemImages.ImageSize = new System.Drawing.Size(16, 16);
+            this.ilSystemImages.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // kptxtFilePath
             // 
@@ -135,37 +166,13 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
             this.kptxtFilePath.Size = new System.Drawing.Size(466, 27);
             this.kptxtFilePath.TabIndex = 2;
             // 
-            // txtFilePath
-            // 
-            this.txtFilePath.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilePath.Location = new System.Drawing.Point(12, 13);
-            this.txtFilePath.Name = "txtFilePath";
-            this.txtFilePath.Size = new System.Drawing.Size(466, 27);
-            this.txtFilePath.TabIndex = 3;
-            // 
-            // kbtnNewFolder
-            // 
-            this.kbtnNewFolder.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.kbtnNewFolder.Location = new System.Drawing.Point(12, 7);
-            this.kbtnNewFolder.Name = "kbtnNewFolder";
-            this.kbtnNewFolder.Size = new System.Drawing.Size(118, 28);
-            this.kbtnNewFolder.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnNewFolder.TabIndex = 2;
-            this.kbtnNewFolder.Values.Text = "New &Folder";
-            this.kbtnNewFolder.Click += new System.EventHandler(this.kbtnNewFolder_Click);
-            // 
-            // ilSystemImages
-            // 
-            this.ilSystemImages.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.ilSystemImages.ImageSize = new System.Drawing.Size(16, 16);
-            this.ilSystemImages.TransparentColor = System.Drawing.Color.Transparent;
-            // 
             // KryptonFileBrowser
             // 
             this.ClientSize = new System.Drawing.Size(491, 567);
             this.Controls.Add(this.kryptonPanel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -184,6 +191,22 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
             this.ResumeLayout(false);
 
         }
+        #endregion
+
+        #region Variables
+        private bool _showNewFolderButton, _useKryptonControls;
+        private TreeNode _selectedDirectory;
+        private KryptonTreeNode _kryptonSelectedDirectory;
+        private string _filePath;
+        #endregion
+
+        #region Properties
+        public bool UseKryptonControls { get => _useKryptonControls; set => _useKryptonControls = value; }
+
+        public bool ShowNewFolderButton { get => _showNewFolderButton; set => _showNewFolderButton = value; }
+
+        public string SelectedFilePath { get => _filePath; set => _filePath = value; }
+        #endregion
 
         public KryptonFileBrowser(bool useKryptonControls = false, bool usePromptBox = false, FormStartPosition startPosition = FormStartPosition.CenterScreen)
         {
@@ -191,11 +214,13 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
 
             StartPosition = startPosition;
 
-            PopulateFileSystem();
+            UseKryptonControls = useKryptonControls;
 
-            UseKryptonControls(useKryptonControls);
+            UseKryptonControlsUI(UseKryptonControls);
 
             UsePromptBox(usePromptBox);
+
+            PopulateFileSystem();
         }
 
         private void KryptonFileBrowser_Load(object sender, EventArgs e)
@@ -205,12 +230,16 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
 
         private void kbtnCancel_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
 
+            Close();
         }
 
         private void kbtnOk_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.OK;
 
+            Close();
         }
 
         private void kbtnNewFolder_Click(object sender, EventArgs e)
@@ -221,10 +250,54 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
         #region Methods
         private void PopulateFileSystem()
         {
+            if (UseKryptonControls)
+            {
 
+            }
+            else
+            {
+                // Clear out all nodes
+                tvFileList.Nodes.Clear();
+
+                // Get all logical drives
+                string[] logicalDrives = Directory.GetLogicalDrives();
+
+                try
+                {
+                    foreach (string drive in logicalDrives)
+                    {
+                        TreeNode drives = tvFileList.Nodes.Add(drive, drive, 3);
+
+                        CreateSubDirectory(drive, drives);
+                    }
+                }
+                catch (Exception se)
+                {
+                    ExtendedKryptonMessageBox.Show($"Error: { se.Message }", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error, null, Font);
+                }
+            }
         }
 
-        private void UseKryptonControls(bool useKryptonControls)
+        private void CreateSubDirectory(string drive, TreeNode drives)
+        {
+            foreach (string directory in Directory.GetDirectories(drive))
+            {
+                try
+                {
+                    string[] directoryName = directory.Split('\\');
+
+                    TreeNode directoryNode = drives.Nodes.Add(directory, directoryName[directoryName.Count() - 1], 0, 1);
+
+                    CreateSubDirectory(directory, directoryNode);
+                }
+                catch (Exception e)
+                {
+                    ExtendedKryptonMessageBox.Show($"Error: { e.Message }", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error, null, Font);
+                }
+            }
+        }
+
+        private void UseKryptonControlsUI(bool useKryptonControls)
         {
             if (useKryptonControls)
             {
@@ -256,6 +329,28 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
         {
             kptxtFilePath.Visible = usePromptBox;
         }
+
+        private void ReturnFilePath(TreeNode node)
+        {
+            try
+            {
+                SelectedFilePath = Path.GetFullPath(node.Text);
+            }
+            catch (Exception exc)
+            {
+                ExtendedKryptonMessageBox.Show($"Error: {exc.Message }", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error, null, Font);
+            }
+        }
         #endregion
+
+        private void tvFileList_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void ktvFileList_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
     }
 }

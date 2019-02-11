@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Base.Code.Colours;
 using ExtendedControls.Base.Code.Colours.ColourDialog;
 using ExtendedControls.Base.Enumerations;
 using System.Drawing;
@@ -54,6 +55,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
         private Controls.Colours.Controls.ColourComparer cc1;
         private KryptonLabel kryptonLabel14;
         private Controls.KryptonPromptTextBox kptxtHexValue;
+        private KryptonButton kbtnGradients;
         private Controls.Colours.Controls.Adobe2DColourBox adcbColours;
 
         private void InitializeComponent()
@@ -62,7 +64,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             ExtendedControls.Base.Code.Colours.ColourDialog.AdobeColours.HSB hsb2 = new ExtendedControls.Base.Code.Colours.ColourDialog.AdobeColours.HSB();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdobeColourDialog));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kptxtHexValue = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             this.kryptonLabel14 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.cc1 = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.ColourComparer();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel13 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -106,8 +110,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.avcsColours = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.AdobeVerticalColourSlider();
             this.adcbColours = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.Adobe2DColourBox();
-            this.kptxtHexValue = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
-            this.cc1 = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.ColourComparer();
+            this.kbtnGradients = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.pnlBlankBox.SuspendLayout();
@@ -115,6 +118,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnGradients);
             this.kryptonPanel1.Controls.Add(this.kptxtHexValue);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel14);
             this.kryptonPanel1.Controls.Add(this.cc1);
@@ -163,6 +167,21 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.kryptonPanel1.Size = new System.Drawing.Size(639, 428);
             this.kryptonPanel1.TabIndex = 2;
             // 
+            // kptxtHexValue
+            // 
+            this.kptxtHexValue.DrawPrompt = true;
+            this.kptxtHexValue.FocusSelect = true;
+            this.kptxtHexValue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtHexValue.Location = new System.Drawing.Point(324, 380);
+            this.kptxtHexValue.MaxLength = 7;
+            this.kptxtHexValue.Name = "kptxtHexValue";
+            this.kptxtHexValue.PromptForeColour = System.Drawing.SystemColors.GrayText;
+            this.kptxtHexValue.PromptText = "000000";
+            this.kptxtHexValue.PromptTypeface = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtHexValue.Size = new System.Drawing.Size(106, 27);
+            this.kptxtHexValue.TabIndex = 76;
+            this.kptxtHexValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // kryptonLabel14
             // 
             this.kryptonLabel14.Location = new System.Drawing.Point(176, 380);
@@ -172,6 +191,18 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.kryptonLabel14.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel14.TabIndex = 75;
             this.kryptonLabel14.Values.Text = "Hexadecimal Value:";
+            // 
+            // cc1
+            // 
+            this.cc1.BackColor = System.Drawing.Color.Transparent;
+            this.cc1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.cc1.Location = new System.Drawing.Point(324, 57);
+            this.cc1.Name = "cc1";
+            this.cc1.PrimaryColour = System.Drawing.Color.White;
+            this.cc1.SecondaryColour = System.Drawing.Color.Silver;
+            this.cc1.ShowHexadecimalValues = false;
+            this.cc1.Size = new System.Drawing.Size(73, 71);
+            this.cc1.TabIndex = 73;
             // 
             // kryptonButton2
             // 
@@ -600,32 +631,16 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.adcbColours.TabIndex = 0;
             this.adcbColours.WebSafeColoursOnly = false;
             // 
-            // kptxtHexValue
+            // kbtnGradients
             // 
-            this.kptxtHexValue.DrawPrompt = true;
-            this.kptxtHexValue.FocusSelect = true;
-            this.kptxtHexValue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kptxtHexValue.Location = new System.Drawing.Point(324, 380);
-            this.kptxtHexValue.MaxLength = 7;
-            this.kptxtHexValue.Name = "kptxtHexValue";
-            this.kptxtHexValue.PromptForeColour = System.Drawing.SystemColors.GrayText;
-            this.kptxtHexValue.PromptText = "000000";
-            this.kptxtHexValue.PromptTypeface = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kptxtHexValue.Size = new System.Drawing.Size(106, 27);
-            this.kptxtHexValue.TabIndex = 76;
-            this.kptxtHexValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // cc1
-            // 
-            this.cc1.BackColor = System.Drawing.Color.Transparent;
-            this.cc1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.cc1.Location = new System.Drawing.Point(324, 57);
-            this.cc1.Name = "cc1";
-            this.cc1.PrimaryColour = System.Drawing.Color.White;
-            this.cc1.SecondaryColour = System.Drawing.Color.Silver;
-            this.cc1.ShowHexadecimalValues = false;
-            this.cc1.Size = new System.Drawing.Size(73, 71);
-            this.cc1.TabIndex = 73;
+            this.kbtnGradients.Location = new System.Drawing.Point(489, 74);
+            this.kbtnGradients.Name = "kbtnGradients";
+            this.kbtnGradients.Size = new System.Drawing.Size(138, 25);
+            this.kbtnGradients.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGradients.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGradients.TabIndex = 77;
+            this.kbtnGradients.Values.Text = "Gr&adients";
+            this.kbtnGradients.Visible = false;
             // 
             // AdobeColourDialog
             // 
@@ -641,6 +656,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Select a Colour";
+            this.Load += new System.EventHandler(this.AdobeColourDialog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
@@ -764,8 +780,18 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
 
             SetNumericUpDownValueBoundaries(knumBrightness, MINIMUM_VALUE, 100);
 
-            //SetNumericUpDownValueBoundaries()
+            SetNumericUpDownValueBoundaries(knumRed, MINIMUM_VALUE, MAXIMUM_VALUE);
+
+            SetNumericUpDownValueBoundaries(knumGreen, MINIMUM_VALUE, MAXIMUM_VALUE);
+
+            SetNumericUpDownValueBoundaries(knumBlue, MINIMUM_VALUE, MAXIMUM_VALUE);
             #endregion
+
+            knumCyan.StateCommon.Content.Color1 = ColourExtensions.GetContrast(knumCyan.StateCommon.Back.Color1);
+
+            knumMagenta.StateCommon.Content.Color1 = ColourExtensions.GetContrast(knumMagenta.StateCommon.Back.Color1);
+
+            knumYellow.StateCommon.Content.Color1 = ColourExtensions.GetContrast(knumYellow.StateCommon.Back.Color1);
         }
         #endregion
 
@@ -775,6 +801,16 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             target.Minimum = minimum;
 
             target.Maximum = maximum;
+        }
+
+        private void AdobeColourDialog_Load(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void UpdateValues()
+        {
+
         }
         #endregion
     }
