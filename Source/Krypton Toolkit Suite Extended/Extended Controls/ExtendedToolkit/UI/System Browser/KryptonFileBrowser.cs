@@ -273,7 +273,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
                 }
                 catch (Exception se)
                 {
-                    ExtendedKryptonMessageBox.Show($"Error: { se.Message }", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error, null, Font);
+                    ExtendedKryptonMessageBox.Show($"Error: { se.Message }", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error, null, true, Font);
                 }
             }
         }
@@ -292,7 +292,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
                 }
                 catch (Exception e)
                 {
-                    ExtendedKryptonMessageBox.Show($"Error: { e.Message }", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error, null, Font);
+                    ExtendedKryptonMessageBox.Show($"Error: { e.Message }", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error, null, true, Font);
                 }
             }
         }
@@ -338,7 +338,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
             }
             catch (Exception exc)
             {
-                ExtendedKryptonMessageBox.Show($"Error: {exc.Message }", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error, null, Font);
+                ExtendedKryptonMessageBox.Show($"Error: {exc.Message }", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error, null, true, Font);
             }
         }
         #endregion

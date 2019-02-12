@@ -447,5 +447,12 @@ namespace Playground
 
             kfe.Show();
         }
+
+        private void kryptonButton18_Click(object sender, EventArgs e)
+        {
+            MessageBoxTest mbt = new MessageBoxTest();
+
+            mbt.Show();
+        }
     }
 }
