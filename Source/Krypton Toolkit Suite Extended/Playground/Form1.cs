@@ -454,5 +454,12 @@ namespace Playground
 
             mbt.Show();
         }
+
+        private void kryptonButton19_Click(object sender, EventArgs e)
+        {
+            PropertyGridTest pgt = new PropertyGridTest();
+
+            pgt.Show();
+        }
     }
 }

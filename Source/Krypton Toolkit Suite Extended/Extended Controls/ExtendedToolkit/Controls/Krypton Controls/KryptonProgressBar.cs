@@ -1,6 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
@@ -8,8 +9,11 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
     [System.Drawing.ToolboxBitmap(typeof(ProgressBar)), ToolboxItem(true)]
     public class KryptonProgressBar : StandardControls.Common.ProgressBar
     {
+        private Color _foreColour = Color.Empty;
         private IPalette _palette;
         private PaletteRedirect _paletteRedirect;
+
+        public Color ForeColour { get => _foreColour; set { _foreColour = value; Invalidate(); } }
 
         #region ... Constructor ...
         public KryptonProgressBar()
@@ -37,7 +41,16 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         {
             this.StartColour = _palette.ColorTable.ButtonSelectedGradientEnd;
             this.EndColour = _palette.ColorTable.ButtonSelectedGradientEnd;
-            this.ForeColor = _palette.ColorTable.MenuItemText;
+
+            if (ForeColour != Color.Empty || ForeColour != Color.Transparent)
+            {
+                ForeColor = ForeColour;
+            }
+            else
+            {
+                ForeColor = _palette.ColorTable.MenuItemText;
+            }
+
             this.Font = _palette.ColorTable.MenuStripFont;
         }
 

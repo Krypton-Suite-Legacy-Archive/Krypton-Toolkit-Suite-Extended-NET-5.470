@@ -16,7 +16,8 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         #region Variables
         private bool _focusSelect = true, _drawPrompt = true;
         private int _radius = 15;
-        private TextBox _box = new TextBox();
+        private KryptonPromptTextBox _box = new KryptonPromptTextBox();
+        //private TextBox _box = new TextBox();
         private string _promptText = string.Empty;
         private Color _promptTextColour = SystemColors.GrayText, _brush;
         private GraphicsPath _shape, _innerRect;

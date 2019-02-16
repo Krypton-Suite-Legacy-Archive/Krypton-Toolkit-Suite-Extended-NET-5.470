@@ -219,6 +219,12 @@
     <Compile Include="ExtendedToolkit\Controls\Experimental\KryptonMessageboxComponent.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Experimental\ToggleSwitchOriginal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\PromptRoundedTextbox.cs">
       <SubType>Component</SubType>
     </Compile>
