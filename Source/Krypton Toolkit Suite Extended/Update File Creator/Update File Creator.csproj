@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AssemblyVersion>5.470.421.0</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -115,7 +116,7 @@
       <Version>3.6.3</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.701</Version>
+      <Version>5.470.717</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>

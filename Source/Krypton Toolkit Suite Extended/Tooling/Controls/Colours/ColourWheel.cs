@@ -1,17 +1,18 @@
-﻿using System;
+﻿using Core.Interfaces;
+using Core.STRUCTS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
-using Core.Interfaces;
-using Core.STRUCTS;
 
 namespace Core.Controls.Colours
 {
     [DefaultProperty("Colour")]
     [DefaultEvent("ColourChanged")]
+    [ToolboxItem(false)]
     public class ColourWheel : Control, IColourEditor
     {
         #region Constants

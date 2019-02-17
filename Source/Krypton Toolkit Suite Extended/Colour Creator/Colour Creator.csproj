@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AssemblyVersion>5.470.415.0</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -120,7 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.701</Version>
+      <Version>5.470.717</Version>
     </PackageReference>
     <PackageReference Include="LinqBridge">
       <Version>1.3.0</Version>

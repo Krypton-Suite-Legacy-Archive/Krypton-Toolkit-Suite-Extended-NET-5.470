@@ -12,6 +12,7 @@ using System.Windows.Forms;
 namespace ExtendedControls.ExtendedToolkit.Controls.ScrollBar
 {
     [ToolboxBitmap(typeof(VScrollBar))]
+    [ToolboxItem(false)]
     public class VScrollSkin : Panel
     {
         #region "   Members   "

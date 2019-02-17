@@ -11,6 +11,7 @@
     <AssemblyName>Extended File Dialogs</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AssemblyVersion>5.470.232.0</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,25 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krypton Docking, Version=5.470.596.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonToolkitSuite5470.5.470.701\lib\net47\Krypton Docking.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Navigator, Version=5.470.595.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonToolkitSuite5470.5.470.701\lib\net47\Krypton Navigator.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Ribbon, Version=5.470.596.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonToolkitSuite5470.5.470.701\lib\net47\Krypton Ribbon.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Toolkit, Version=5.470.701.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonToolkitSuite5470.5.470.701\lib\net47\Krypton Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Workspace, Version=5.470.597.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonToolkitSuite5470.5.470.701\lib\net47\Krypton Workspace.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,28 +45,99 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Extensions.cs" />
+    <Compile Include="Classes\ComCtlv6ActivationContext.cs" />
+    <Compile Include="Classes\CredentialException.cs" />
+    <Compile Include="Classes\DialogHelper.cs" />
+    <Compile Include="Classes\ExpandButtonClickedEventArgs.cs" />
+    <Compile Include="Classes\Glass.cs" />
+    <Compile Include="Classes\GlobalSuppressions.cs" />
+    <Compile Include="Classes\HyperlinkClickedEventArgs.cs" />
     <Compile Include="Classes\NativeMethods.cs" />
-    <Compile Include="Controls\FileDialogControlBase.cs">
+    <Compile Include="Classes\OkButtonClickedEventArgs.cs" />
+    <Compile Include="Classes\Old\Extensions.cs" />
+    <Compile Include="Classes\Old\NativeMethods.cs" />
+    <Compile Include="Classes\AdditionalVisualStyleElements.cs" />
+    <Compile Include="Classes\AnimationResource.cs" />
+    <Compile Include="Classes\VistaFileDialogEvents.cs" />
+    <Compile Include="Classes\SafeHandles.cs" />
+    <Compile Include="Classes\TaskDialogItemClickedEventArgs.cs" />
+    <Compile Include="Classes\TaskDialogItemCollection.cs" />
+    <Compile Include="Classes\TimerEventArgs.cs" />
+    <Compile Include="Controls\CredentialDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\InputDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Old\FileDialogControlBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\FileDialogControlBase.Designer.cs">
+    <Compile Include="Controls\Old\FileDialogControlBase.Designer.cs">
       <DependentUpon>FileDialogControlBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\HelperTypes.cs">
+    <Compile Include="Controls\Old\HelperTypes.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\ProgressDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskDialogButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskDialogItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskDialogRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\VistaFileDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\VistaFolderBrowserDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\VistaOpenFileDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\VistaSaveFileDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Designer\KryptonTaskDialogDesigner.cs" />
     <Compile Include="Enumerations\Enumerations.cs" />
+    <Compile Include="Interop\ComDlgResources.cs" />
+    <Compile Include="Interop\COMGuids.cs" />
+    <Compile Include="Interop\IProgressDialog.cs" />
+    <Compile Include="Interop\ShellComInterfaces.cs" />
+    <Compile Include="Interop\ShellWrapperDefinitions.cs" />
+    <Compile Include="Interop\Win32Resources.cs" />
+    <Compile Include="Interop\WindowHandleWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Structs\STRUCTS.cs" />
+    <Compile Include="UI\ExtendedSystemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SystemInputDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="Project Items\LICENSE.md" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Controls\FileDialogControlBase.resx">
+    <EmbeddedResource Include="Controls\Old\FileDialogControlBase.resx">
       <DependentUpon>FileDialogControlBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +145,42 @@
       <Project>{edb87d0c-a37c-48b5-9857-f014c438a4c5}</Project>
       <Name>Global Utilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5470">
+      <Version>5.470.717</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CredentialDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TaskDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VistaFolderBrowserDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VistaOpenFileDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VistaSaveFileDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ToolboxBitmaps\CredentialDialog.bmp" />
+    <Content Include="ToolboxBitmaps\InputDialog.bmp" />
+    <Content Include="ToolboxBitmaps\ProgressDialog.bmp" />
+    <Content Include="ToolboxBitmaps\TaskDialog.bmp" />
+    <Content Include="ToolboxBitmaps\VistaFolderBrowserDialog.bmp" />
+    <Content Include="ToolboxBitmaps\VistaOpenFileDialog.bmp" />
+    <Content Include="ToolboxBitmaps\VistaSaveFileDialog.bmp" />
+    <Content Include="XML\CustomDictionary.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

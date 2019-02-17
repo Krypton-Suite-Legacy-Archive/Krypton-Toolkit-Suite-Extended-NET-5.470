@@ -71,6 +71,26 @@ namespace ExtendedControls.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Arrow_Down {
+            get {
+                object obj = ResourceManager.GetObject("Arrow_Down", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Arrow_Up {
+            get {
+                object obj = ResourceManager.GetObject("Arrow_Up", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap arrowControl_Image {
@@ -96,6 +116,26 @@ namespace ExtendedControls.Properties {
         internal static System.Drawing.Bitmap Class_16x {
             get {
                 object obj = ResourceManager.GetObject("Class_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon color {
+            get {
+                object obj = ResourceManager.GetObject("color", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap colorbarIndicators {
+            get {
+                object obj = ResourceManager.GetObject("colorbarIndicators", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -211,6 +251,16 @@ namespace ExtendedControls.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon DefaultIcon {
+            get {
+                object obj = ResourceManager.GetObject("DefaultIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Down {
@@ -231,6 +281,26 @@ namespace ExtendedControls.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon DropDown2003 {
+            get {
+                object obj = ResourceManager.GetObject("DropDown2003", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon DropDown2007 {
+            get {
+                object obj = ResourceManager.GetObject("DropDown2007", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap error {
@@ -246,6 +316,16 @@ namespace ExtendedControls.Properties {
         internal static System.Drawing.Bitmap Event_16x {
             get {
                 object obj = ResourceManager.GetObject("Event_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eyedropper {
+            get {
+                object obj = ResourceManager.GetObject("eyedropper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -287,6 +367,26 @@ namespace ExtendedControls.Properties {
             get {
                 object obj = ResourceManager.GetObject("GridSortOrder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Grip2003 {
+            get {
+                object obj = ResourceManager.GetObject("Grip2003", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Grip2007 {
+            get {
+                object obj = ResourceManager.GetObject("Grip2007", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -586,6 +686,26 @@ namespace ExtendedControls.Properties {
         internal static System.Drawing.Bitmap palette {
             get {
                 object obj = ResourceManager.GetObject("palette", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon palette1 {
+            get {
+                object obj = ResourceManager.GetObject("palette1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap popupcontainerbuttons {
+            get {
+                object obj = ResourceManager.GetObject("popupcontainerbuttons", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

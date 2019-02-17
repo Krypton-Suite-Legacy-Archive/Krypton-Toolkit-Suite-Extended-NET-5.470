@@ -150,6 +150,7 @@
     <Compile Include="Settings\Classes\GlobalBooleanSettingsManager.cs" />
     <Compile Include="Settings\Classes\GlobalSettingsManager.cs" />
     <Compile Include="Settings\Classes\GlobalStringSettingsManager.cs" />
+    <Compile Include="Settings\Classes\PaletteColourSettingsController.cs" />
     <Compile Include="Settings\Classes\PaletteThemeSettingsManager.cs" />
     <Compile Include="Settings\Classes\PaletteTypefaceSettingsManager.cs" />
     <Compile Include="Settings\ColourBlendingSettings.Designer.cs">
@@ -493,7 +494,7 @@
       <Version>1.0.5</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.701</Version>
+      <Version>5.470.717</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>

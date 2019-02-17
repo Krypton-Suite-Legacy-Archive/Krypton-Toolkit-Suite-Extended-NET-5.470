@@ -16,7 +16,25 @@
 
 ======
 
-## 2018-12-05 KryptonCommandLinkButton - Layout
+## 01-02-2019 Extended Renderer Integration
+* Fully merged the `ExtendedRenderer` project codebase
+* Tidy up control placement in code
+* Upgraded to Krypton Toolkit Suite - version: **5.470.717**
+* New NuGet package, build 700 (build date Friday 1st, February 2019) is now available
+
+======
+
+## 2019-09-01 Build 653
+* Build 653 has been uploaded to NuGet
+
+======
+
+## 2019-01-08 `ExtendedKryptonMessageBox` - Extra Features
+* Begun work on Auto time out & 'do not show me again' options. (Needs finishing)
+
+======
+
+## 2018-01-05 KryptonCommandLinkButton - Layout
 * New control, `KryptonCommandLinkButton`
 * Add Designer to allow drag and drop in IDE
 * Add defaults to demonstrate layout and then allow user to change the values

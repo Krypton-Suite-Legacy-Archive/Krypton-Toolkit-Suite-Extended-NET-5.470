@@ -11,7 +11,8 @@ using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.Controls.ScrollBar
 {
-    [System.Drawing.ToolboxBitmapAttribute(typeof(System.Windows.Forms.HScrollBar))]
+    [ToolboxBitmap(typeof(HScrollBar))]
+    [ToolboxItem(false)]
     public class HScrollSkin : Panel
     {
         #region "   Members   "

@@ -19,8 +19,17 @@ namespace GlobalUtilities.Classes
         }
         #endregion
 
-        #region Methods        
-        public static void CaptureException(Exception exception, string title, MessageBoxButtons buttons, MessageBoxIcon icon, string className = "", string methodSignature = "")
+        #region Methods                
+        /// <summary>
+        /// Captures the exception.
+        /// </summary>
+        /// <param name="exception">The exception.</param>
+        /// <param name="title">The title.</param>
+        /// <param name="buttons">The buttons.</param>
+        /// <param name="icon">The icon.</param>
+        /// <param name="className">Name of the class.</param>
+        /// <param name="methodSignature">The method signature.</param>
+        public static void CaptureException(Exception exception, string title = @"Exception Caught", MessageBoxButtons buttons = MessageBoxButtons.OK, MessageBoxIcon icon = MessageBoxIcon.Error, string className = "", string methodSignature = "")
         {
             if (className != "")
             {

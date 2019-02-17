@@ -40,4 +40,10 @@
         // ------------------------------------------------------------------
         #endregion
     }
+
+    public enum SupportedIconSizes : int
+    {
+        LARGEICONS32X32 = 0,
+        SMALLICONS16X16 = 1
+    }
 }
