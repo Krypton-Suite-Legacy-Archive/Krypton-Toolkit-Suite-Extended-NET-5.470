@@ -106,6 +106,8 @@
     <Compile Include="Base\Code\Drawing\RoundedRectangleF.cs" />
     <Compile Include="Base\Code\Drawing\Transparenter.cs" />
     <Compile Include="Base\Code\ExceptionHandler.cs" />
+    <Compile Include="Base\Code\File Explorer\FileSizeFormatProvider.cs" />
+    <Compile Include="Base\Code\File Explorer\WIN32.cs" />
     <Compile Include="Base\Code\IconExtractor.cs" />
     <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
     <Compile Include="Base\Code\ListViewColumnSorter.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="Base\Enumerations\Enumerations.cs" />
     <Compile Include="Base\Interfaces\IColourEditor.cs" />
     <Compile Include="Base\Structs\Colour Wheel\HSLColour.cs" />
+    <Compile Include="Base\Structs\File Explorer\ItemType.cs" />
     <Compile Include="Base\Structures\HSLColour.cs" />
     <Compile Include="Base\UI\KryptonFormBase.cs">
       <SubType>Form</SubType>
@@ -220,6 +223,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Experimental\ToggleSwitchOriginal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\File Explorer\FileBrowser.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToggleSwitch.cs">
@@ -801,6 +807,7 @@
     <None Include="Resources\color.ico" />
     <Content Include="ToolboxBitmaps\DataBar.bmp" />
     <Content Include="ToolboxBitmaps\DataChart.bmp" />
+    <Content Include="ToolboxBitmaps\ToggleSwich.bmp" />
     <Content Include="ToolboxBitmaps\UACButton.bmp" />
     <None Include="Resources\help2.png" />
     <None Include="Resources\information.png" />
@@ -1003,7 +1010,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.717</Version>
+      <Version>5.470.720</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>

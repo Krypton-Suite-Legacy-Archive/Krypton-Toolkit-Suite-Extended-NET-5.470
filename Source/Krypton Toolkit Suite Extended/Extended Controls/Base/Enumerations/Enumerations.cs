@@ -15,4 +15,10 @@
         GREEN,
         BLUE
     }
+
+    public enum SupportedExplorerTypes
+    {
+        FILE,
+        FOLDER
+    }
 }
