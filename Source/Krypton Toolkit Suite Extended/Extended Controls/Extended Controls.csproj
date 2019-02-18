@@ -718,12 +718,6 @@
     <Compile Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\UI\System Browser\KryptonFileExplorer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\UI\System Browser\KryptonFileBrowser.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ExtendedToolkit\UI\Windows\FileInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -990,12 +984,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.resx">
       <DependentUpon>SoftwareUpdater.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ExtendedToolkit\UI\System Browser\KryptonFileBrowser.resx">
-      <DependentUpon>KryptonFileBrowser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ExtendedToolkit\UI\System Browser\KryptonFileExplorer.resx">
-      <DependentUpon>KryptonFileExplorer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Windows\FileInformation.resx">
       <DependentUpon>FileInformation.cs</DependentUpon>

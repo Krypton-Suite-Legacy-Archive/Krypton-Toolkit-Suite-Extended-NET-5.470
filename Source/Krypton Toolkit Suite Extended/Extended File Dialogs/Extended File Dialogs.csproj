@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -120,8 +121,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Structs\STRUCTS.cs" />
     <Compile Include="UI\ExtendedSystemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\System Browser\KryptonFileBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\System Browser\KryptonFileExplorer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\SystemInputDialogForm.cs">
@@ -129,6 +141,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Project Items\LICENSE.md" />
   </ItemGroup>
   <ItemGroup>
@@ -139,8 +152,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\System Browser\KryptonFileBrowser.resx">
+      <DependentUpon>KryptonFileBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\System Browser\KryptonFileExplorer.resx">
+      <DependentUpon>KryptonFileExplorer.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Extended Controls\Extended Controls.csproj">
+      <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
+      <Name>Extended Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Global Utilities\Global Utilities.csproj">
       <Project>{edb87d0c-a37c-48b5-9857-f014c438a4c5}</Project>
       <Name>Global Utilities</Name>
@@ -152,6 +175,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\CredentialDialog.bmp" />
   </ItemGroup>
   <ItemGroup>

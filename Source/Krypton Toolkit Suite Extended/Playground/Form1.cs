@@ -9,6 +9,7 @@ using ExtendedControls.ExtendedToolkit.UI.Colours;
 using ExtendedControls.ExtendedToolkit.UI.Dialogues;
 using ExtendedControls.ExtendedToolkit.UI.Drawing;
 using ExtendedControls.ExtendedToolkit.UI.SystemBrowser;
+using ExtendedFileDialogs.UI.SystemBrowser;
 using KryptonApplicationUpdater.Classes.SettingsManager;
 //using KryptonApplicationUpdater.Interfaces;
 
@@ -460,6 +461,11 @@ namespace Playground
             PropertyGridTest pgt = new PropertyGridTest();
 
             pgt.Show();
+        }
+
+        private void kryptonButton20_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

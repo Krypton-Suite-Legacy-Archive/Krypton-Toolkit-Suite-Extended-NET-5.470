@@ -80,6 +80,7 @@ namespace Playground
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonButton20 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton19 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPropertyGrid1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPropertyGrid();
             this.kryptonRichTextBoxExtended1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended();
@@ -513,6 +514,7 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonButton20);
             this.kryptonPanel1.Controls.Add(this.kryptonButton19);
             this.kryptonPanel1.Controls.Add(this.kryptonPropertyGrid1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton18);
@@ -567,6 +569,15 @@ namespace Playground
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 659);
             this.kryptonPanel1.TabIndex = 2;
+            // 
+            // kryptonButton20
+            // 
+            this.kryptonButton20.Location = new System.Drawing.Point(706, 284);
+            this.kryptonButton20.Name = "kryptonButton20";
+            this.kryptonButton20.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton20.TabIndex = 50;
+            this.kryptonButton20.Values.Text = "Wizard";
+            this.kryptonButton20.Click += new System.EventHandler(this.kryptonButton20_Click);
             // 
             // kryptonButton19
             // 
@@ -1438,6 +1449,7 @@ namespace Playground
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton18;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPropertyGrid kryptonPropertyGrid1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton19;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton20;
     }
 }
 

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.Controls
 {
+    [ToolboxItem(false)]
     [ToolboxBitmap(typeof(ListView))]
     public class KryptonListView : ListView
     {
