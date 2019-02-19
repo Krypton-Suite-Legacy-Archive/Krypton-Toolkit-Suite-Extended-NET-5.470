@@ -228,6 +228,9 @@
     <Compile Include="ExtendedToolkit\Controls\File Explorer\FileBrowser.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -383,9 +386,6 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonHexadecimalColourTextBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonImageComboBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMonthCalendar.cs" />
@@ -918,6 +918,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Colours\Controls\ColourComparer.resx">
       <DependentUpon>ColourComparer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.resx">
+      <DependentUpon>KryptonListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Colours\AdobeColourDialog.resx">
       <DependentUpon>AdobeColourDialog.cs</DependentUpon>

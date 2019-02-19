@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExtendedControls.ExtendedToolkit.Controls.KryptonControls;
+using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 {
-    [ToolboxBitmap(typeof(TreeView))]
+    [System.Drawing.ToolboxBitmapAttribute(typeof(System.Windows.Forms.TreeView))]
     public class KryptonTreeView : TreeView
     {
 

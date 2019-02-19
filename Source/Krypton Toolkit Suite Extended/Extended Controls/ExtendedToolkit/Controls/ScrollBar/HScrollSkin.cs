@@ -1,6 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code.ScrollBar;
 using ExtendedControls.Base.Code.ScrollBar.CustomScrollBar;
+using ExtendedControls.ExtendedToolkit.Controls.KryptonControls;
 using ExtendedControls.ExtendedToolkit.Controls.ScrollBar.CustomScrollBar;
 using System;
 using System.ComponentModel;
@@ -301,7 +302,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.ScrollBar
                 }
                 else
                 {
-                    if (_win.GetType() == typeof(System.Windows.Forms.TreeView) || (_win.GetType() == typeof(KryptonTreeView)))
+                    if (_win.GetType() == typeof(System.Windows.Forms.TreeView) || (_win.GetType() == typeof(ComponentFactory.Krypton.Toolkit.KryptonTreeView)))
                     {
                         switch (e.Type)
                         {

@@ -1,5 +1,4 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.Base.Code;
 using ExtendedControls.ExtendedToolkit.Controls.Drawing.Classes;
 using ExtendedControls.ExtendedToolkit.Utilities.Classes;
 using System;
@@ -7,16 +6,16 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Linq;
 using System.Security.Permissions;
 using System.Windows.Forms;
 
-namespace ExtendedControls.ExtendedToolkit.Controls
+namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 {
-    [ToolboxItem(false)]
-    [ToolboxBitmap(typeof(ListView))]
+    [System.Drawing.ToolboxBitmapAttribute(typeof(System.Windows.Forms.ListView))]
     public class KryptonListView : ListView
     {
-        #region   Members
+        #region   "   Members   "
         private bool _hasFocus = false;
         private IPalette _palette;
         private PaletteRedirect _paletteRedirect;
@@ -35,7 +34,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
         private const int _minimumItemHeight = 18;
         #endregion
 
-        #region   CTor
+        #region   "   CTor   "
         public KryptonListView()
         {
             //this.SetStyle(ControlStyles.UserPaint, true);
@@ -85,7 +84,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
             }
 
             //vista
-            _enableVistaCheckBoxes = Utility.IsWindowsSevenOrAbove();
+            _enableVistaCheckBoxes = Utility.IsVista();
 
             //for image list
             InitializeComponent();
@@ -106,7 +105,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
         #endregion
 
 
-        #region   Init
+        #region   "   Init   "
 
         private void InitializeComponent()
         {
@@ -157,7 +156,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
         #endregion
 
-        #region   Properties
+        #region   "   Properties   "
 
         //for setting the minimum height of an item
         public virtual int ItemHeight { get; set; }
@@ -380,7 +379,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
         #endregion
 
-        #region   DrawItem and SubItem
+        #region   "   DrawItem and SubItem   "
         //Draw Item
         protected override void OnDrawItem(DrawListViewItemEventArgs e)
         {
@@ -521,7 +520,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
                             }
 
                             //vista pixel fix
-                            if (Utility.IsWindowsSevenOrAbove() == true)
+                            if (Utility.IsVista() == true)
                                 rect.Offset(-2, 0);
 
                             //e.Graphics.DrawString(CheckState, this.Font, new SolidBrush(textColor), rect);
@@ -532,7 +531,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
                             MeasureStringWidth -= 19;
 
                             //vista pixel fix
-                            if (Utility.IsWindowsSevenOrAbove() == true)
+                            if (Utility.IsVista() == true)
                                 rect.Offset(-1, 0);
                         }
 
@@ -595,7 +594,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
         }
         #endregion
 
-        #region   Drawing Renderers
+        #region   "   Drawing Renderers   "
         private Color GetForeTextColorHeader(PaletteState buttonState)
         {
             Color textColor = _originalForeColor;
@@ -843,7 +842,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
         }
         #endregion
 
-        #region   Draw Header
+        #region   "   Draw Header   "
         protected override void OnDrawColumnHeader(DrawListViewColumnHeaderEventArgs e)
         {
             if (!DesignMode)
@@ -941,7 +940,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
         #endregion
 
-        #region   Helper Subs
+        #region   "   Helper Subs   "
         public StringAlignment ConvertHorizontalAlignmentToStringAlignment(HorizontalAlignment input)
         {
 
@@ -1018,7 +1017,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
         #endregion
 
-        #region   Others Ovverides
+        #region   "   Others Ovverides   "
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -1287,7 +1286,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
         }
         #endregion
 
-        #region   Krypton
+        #region   "   Krypton   "
         //Krypton Palette Events
         private void OnGlobalPaletteChanged(object sender, EventArgs e)
         {

@@ -101,6 +101,9 @@
     <Compile Include="Scrollbars.Designer.cs">
       <DependentUpon>Scrollbars.cs</DependentUpon>
     </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WizardTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Scrollbars.resx">
       <DependentUpon>Scrollbars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WizardTest.resx">
       <DependentUpon>WizardTest.cs</DependentUpon>

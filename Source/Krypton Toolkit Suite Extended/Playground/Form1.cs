@@ -465,7 +465,9 @@ namespace Playground
 
         private void kryptonButton20_Click(object sender, EventArgs e)
         {
-            
+            Test test = new Test();
+
+            test.Show();
         }
     }
 }
