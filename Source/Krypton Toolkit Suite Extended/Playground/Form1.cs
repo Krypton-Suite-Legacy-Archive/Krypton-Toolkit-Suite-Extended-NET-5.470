@@ -307,9 +307,7 @@ namespace Playground
 
         private void kbtnMessageboxTest_Click(object sender, EventArgs e)
         {
-            KryptonMessageBox.Show(this, @"Test KryptonMessagebox", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox Default 12", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ExtendedKryptonMessageBox.Show(this, @"Test ExtendedKryptonMessageBox specified 20", @"Check Title Text Size", MessageBoxButtons.OK, MessageBoxIcon.Information, messageboxTypeface: new Font(@"Tahoma", 20F));
+           
         }
 
         private void kbtnPaletteEditor_Click(object sender, EventArgs e)
@@ -468,6 +466,13 @@ namespace Playground
             Test test = new Test();
 
             test.Show();
+        }
+
+        private void kryptonButton21_Click(object sender, EventArgs e)
+        {
+            TestRig tr = new TestRig();
+
+            tr.Show();
         }
     }
 }

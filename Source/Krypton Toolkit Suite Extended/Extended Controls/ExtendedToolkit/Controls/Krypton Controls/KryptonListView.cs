@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 {
-    [System.Drawing.ToolboxBitmapAttribute(typeof(System.Windows.Forms.ListView))]
+    [ToolboxBitmap(typeof(ListView))]
     public class KryptonListView : ListView
     {
         #region   "   Members   "
@@ -29,7 +29,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         private ImageList ilCheckBoxes;
         private ListViewColumnSorter lvwColumnSorter;
         private Font _originalFont;
-        private Color _originalForeColor;
+        private Color _originalForeColour;
         private ImageList ilHeight;
         private const int _minimumItemHeight = 18;
         #endregion
@@ -50,7 +50,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             _originalFont = (Font)this.Font.Clone();
 
             //store the original foreColor
-            _originalForeColor = (Color)this.ForeColor;
+            _originalForeColour = (Color)this.ForeColor;
 
             // add Palette Handler
             // Cache the current global palette setting
@@ -71,7 +71,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             _paletteBorder = new PaletteBorderInheritRedirect(_paletteRedirect);
             _paletteContent = new PaletteContentInheritRedirect(_paletteRedirect);
 
-            InitColors();
+            InitColours();
 
             // Create an instance of a ListView column sorter and assign it 
             // to the ListView control.
@@ -132,26 +132,26 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             this.ResumeLayout(false);
 
         }
-        private void InitColors()
+        private void InitColours()
         {
             //set colors
-            if (_persistentColors == false)
+            if (_persistentColours == false)
             {
                 //init color values
-                if (_useStyledColors == true)
+                if (_useStyledColours == true)
                 {
-                    _gradientStartColor = Color.FromArgb(255, 246, 215);
-                    _gradientEndColor = Color.FromArgb(255, 213, 77);
-                    _gradientMiddleColor = Color.FromArgb(252, 224, 133);
+                    _gradientStartColour = Color.FromArgb(255, 246, 215);
+                    _gradientEndColour = Color.FromArgb(255, 213, 77);
+                    _gradientMiddleColour = Color.FromArgb(252, 224, 133);
                 }
                 else
                 {
-                    _gradientStartColor = _palette.ColorTable.StatusStripGradientBegin;
-                    _gradientEndColor = _palette.ColorTable.OverflowButtonGradientEnd;
-                    _gradientMiddleColor = _palette.ColorTable.StatusStripGradientEnd;
+                    _gradientStartColour = _palette.ColorTable.StatusStripGradientBegin;
+                    _gradientEndColour = _palette.ColorTable.OverflowButtonGradientEnd;
+                    _gradientMiddleColour = _palette.ColorTable.StatusStripGradientEnd;
                 }
             }
-            _alternateRowColor = _palette.ColorTable.ToolStripContentPanelGradientBegin;
+            _alternateRowColour = _palette.ColorTable.ToolStripContentPanelGradientBegin;
         }
 
         #endregion
@@ -199,70 +199,70 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             set { _enableDragDrop = value; }
         }
 
-        private Color _alternateRowColor = Color.LightGray;
+        private Color _alternateRowColour = Color.LightGray;
         [Browsable(true), Category("Appearance-Extended")]
         [DefaultValue("Color.Gray")]
-        public Color AlternateRowColor
+        public Color AlternateRowColour
         {
-            get { return _alternateRowColor; }
-            set { _alternateRowColor = value; Invalidate(); }
+            get { return _alternateRowColour; }
+            set { _alternateRowColour = value; Invalidate(); }
         }
 
-        private Boolean _alternateRowColorEnabled = true;
+        private Boolean _alternateRowColourEnabled = true;
         [Browsable(true), Category("Appearance-Extended")]
         [DefaultValue("true")]
-        public Boolean AlternateRowColorEnabled
+        public Boolean AlternateRowColourEnabled
         {
-            get { return _alternateRowColorEnabled; }
-            set { _alternateRowColorEnabled = value; Invalidate(); }
+            get { return _alternateRowColourEnabled; }
+            set { _alternateRowColourEnabled = value; Invalidate(); }
         }
 
-        private Color _gradientStartColor = Color.White;
+        private Color _gradientStartColour = Color.White;
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         [Browsable(true), Category("Appearance-Extended")]
         [DefaultValue("Color.White")]
-        public Color GradientStartColor
+        public Color GradientStartColour
         {
-            get { return _gradientStartColor; }
-            set { _gradientStartColor = value; Invalidate(); }
+            get { return _gradientStartColour; }
+            set { _gradientStartColour = value; Invalidate(); }
         }
 
-        private Color _gradientEndColor = Color.Gray;
+        private Color _gradientEndColour = Color.Gray;
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         [Browsable(true), Category("Appearance-Extended")]
         [DefaultValue("Color.Gray")]
-        public Color GradientEndColor
+        public Color GradientEndColour
         {
-            get { return _gradientEndColor; }
-            set { _gradientEndColor = value; Invalidate(); }
+            get { return _gradientEndColour; }
+            set { _gradientEndColour = value; Invalidate(); }
         }
 
-        private Color _gradientMiddleColor = Color.LightGray;
+        private Color _gradientMiddleColour = Color.LightGray;
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         [Browsable(true), Category("Appearance-Extended")]
         [DefaultValue("Color.Gray")]
-        public Color GradientMiddleColor
+        public Color GradientMiddleColour
         {
-            get { return _gradientMiddleColor; }
-            set { _gradientMiddleColor = value; Invalidate(); }
+            get { return _gradientMiddleColour; }
+            set { _gradientMiddleColour = value; Invalidate(); }
         }
 
-        private Boolean _persistentColors = false;
+        private Boolean _persistentColours = false;
         [Browsable(true), Category("Appearance-Extended")]
         [DefaultValue("False")]
-        public Boolean PersistentColors
+        public Boolean PersistentColours
         {
-            get { return _persistentColors; }
-            set { _persistentColors = value; Invalidate(); }
+            get { return _persistentColours; }
+            set { _persistentColours = value; Invalidate(); }
         }
 
-        private Boolean _useStyledColors = false;
+        private Boolean _useStyledColours = false;
         [Browsable(true), Category("Appearance-Extended")]
         [DefaultValue("False")]
-        public Boolean UseStyledColors
+        public Boolean UseStyledColours
         {
-            get { return _useStyledColors; }
-            set { _useStyledColors = value; Invalidate(); }
+            get { return _useStyledColours; }
+            set { _useStyledColours = value; Invalidate(); }
         }
 
         private bool _useKryptonRenderer = true;
@@ -597,7 +597,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         #region   "   Drawing Renderers   "
         private Color GetForeTextColorHeader(PaletteState buttonState)
         {
-            Color textColor = _originalForeColor;
+            Color textColor = _originalForeColour;
 
             textColor = _palette.ColorTable.MenuItemText;// StatusStripText;
             if (buttonState == PaletteState.CheckedPressed) textColor = _palette.ColorTable.StatusStripText;
@@ -609,9 +609,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         }
         private Color GetForeTextColor(PaletteState buttonState)
         {
-            Color textColor = _originalForeColor;
+            Color textColor = _originalForeColour;
 
-            if ((_persistentColors == false) || _useKryptonRenderer)
+            if ((_persistentColours == false) || _useKryptonRenderer)
             {
                 //init color values
                 //if (_useStyledColors == true)
@@ -703,26 +703,26 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         private void InternalRenderer(ref Graphics g, ref Rectangle rect)
         {
             //set colors
-            if (_persistentColors == false)
+            if (_persistentColours == false)
             {
                 //init color values
-                if (_useStyledColors == true)
+                if (_useStyledColours == true)
                 {
-                    _gradientStartColor = Color.FromArgb(255, 246, 215);
-                    _gradientEndColor = Color.FromArgb(255, 213, 77);
-                    _gradientMiddleColor = Color.FromArgb(252, 224, 133);
+                    _gradientStartColour = Color.FromArgb(255, 246, 215);
+                    _gradientEndColour = Color.FromArgb(255, 213, 77);
+                    _gradientMiddleColour = Color.FromArgb(252, 224, 133);
                 }
                 else
                 {
-                    _gradientStartColor = _palette.ColorTable.StatusStripGradientBegin;
-                    _gradientEndColor = _palette.ColorTable.OverflowButtonGradientEnd;
-                    _gradientMiddleColor = _palette.ColorTable.StatusStripGradientEnd;
+                    _gradientStartColour = _palette.ColorTable.StatusStripGradientBegin;
+                    _gradientEndColour = _palette.ColorTable.OverflowButtonGradientEnd;
+                    _gradientMiddleColour = _palette.ColorTable.StatusStripGradientEnd;
                 }
             }
 
 
             //draw
-            DrawingMethods.DrawGradient(g, rect, _gradientStartColor, _gradientEndColor, 90F, _enableSelectionBorder, _gradientMiddleColor, 1);
+            DrawingMethods.DrawGradient(g, rect, _gradientStartColour, _gradientEndColour, 90F, _enableSelectionBorder, _gradientMiddleColour, 1);
         }
 
         private void KryptonRendererHeader(ref Graphics g, ref Rectangle rect, bool bHot, ref DrawListViewColumnHeaderEventArgs e)
@@ -1302,7 +1302,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             if (_palette != null)
             {
                 _palette.PalettePaint += new EventHandler<PaletteLayoutEventArgs>(OnPalettePaint);
-                InitColors();
+                InitColours();
             }
 
             // Change of palette means we should repaint to show any changes

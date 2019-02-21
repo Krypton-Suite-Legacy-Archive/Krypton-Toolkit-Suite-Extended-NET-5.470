@@ -11,11 +11,11 @@ namespace Playground
     {
         private ExtendedControls.ExtendedToolkit.Wizard.Classes.WizardPage wizardPage2;
         private ExtendedControls.ExtendedToolkit.Wizard.Classes.WizardPage wizardPage1;
-        private ExtendedControls.ExtendedToolkit.Wizard.Controls.Wizard wizard1;
+        private ExtendedControls.ExtendedToolkit.Wizard.Controls.KryptonWizard wizard1;
 
         private void InitializeComponent()
         {
-            this.wizard1 = new ExtendedControls.ExtendedToolkit.Wizard.Controls.Wizard();
+            this.wizard1 = new ExtendedControls.ExtendedToolkit.Wizard.Controls.KryptonWizard();
             this.wizardPage1 = new ExtendedControls.ExtendedToolkit.Wizard.Classes.WizardPage();
             this.wizardPage2 = new ExtendedControls.ExtendedToolkit.Wizard.Classes.WizardPage();
             this.wizard1.SuspendLayout();

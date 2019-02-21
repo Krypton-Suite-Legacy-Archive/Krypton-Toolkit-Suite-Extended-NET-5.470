@@ -77,6 +77,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TXT", "TXT", "{DE81BC2A-EC3
 		KryptonCalendar-how to Kryptonize.txt = KryptonCalendar-how to Kryptonize.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Update File Maker", "Update File Maker\Update File Maker.csproj", "{83B06C50-5B61-467E-9620-BACF190E26F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -272,6 +274,18 @@ Global
 		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Release|x86.ActiveCfg = Release|Any CPU
 		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Release|x86.Build.0 = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Debug|x86.Build.0 = Debug|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Installer Only|x86.Build.0 = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|x86.ActiveCfg = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

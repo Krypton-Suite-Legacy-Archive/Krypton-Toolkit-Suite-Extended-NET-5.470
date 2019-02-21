@@ -88,7 +88,7 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Classes
 
         protected override bool GetHitTest(Point point)
         {
-            Controls.Wizard wiz = this.Control as Controls.Wizard;
+            Controls.KryptonWizard wiz = this.Control as Controls.KryptonWizard;
 
             if (wiz.btnNext.Enabled &&
                 wiz.btnNext.ClientRectangle.Contains(wiz.btnNext.PointToClient(point)))
@@ -119,7 +119,7 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Classes
 
         private void handleAddPage(object sender, EventArgs e)
         {
-            Controls.Wizard wiz = this.Control as Controls.Wizard;
+            Controls.KryptonWizard wiz = this.Control as Controls.KryptonWizard;
 
             IDesignerHost h = (IDesignerHost)GetService(typeof(IDesignerHost));
             IComponentChangeService c = (IComponentChangeService)GetService(typeof(IComponentChangeService));

@@ -15,8 +15,8 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Controls
     /// </summary>
     [Designer(typeof(WizardDesigner))]
     [ToolboxItem(true)]
-    [ToolboxBitmap(typeof(Wizard))]
-    public class Wizard : UserControl
+    [ToolboxBitmap(typeof(KryptonWizard))]
+    public class KryptonWizard : UserControl
     {
         protected internal ComponentFactory.Krypton.Toolkit.KryptonPanel pnlButtons;
         private System.Windows.Forms.Panel pnlButtonBright3d;
@@ -34,7 +34,7 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Controls
         /// <summary>
         /// Wizard control with designer support
         /// </summary>
-        public Wizard()
+        public KryptonWizard()
         {
             //Empty collection of Pages
             vPages = new PageCollection(this);

@@ -231,6 +231,7 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteChooserComboBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -243,6 +244,7 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\ToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\MessageBoxes\UI\KryptonExceptionMessageBox.cs" />
     <Compile Include="ExtendedToolkit\ToolstripControls\FlashingLabel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -715,6 +717,9 @@
     <Compile Include="ExtendedToolkit\UI\KryptonSplashScreen.Designer.cs">
       <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Security\File Hashing\HashFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -739,7 +744,7 @@
     <Compile Include="ExtendedToolkit\Wizard\Classes\InfoPageDesigner.cs" />
     <Compile Include="ExtendedToolkit\Wizard\Classes\PageCollection.cs" />
     <Compile Include="ExtendedToolkit\Wizard\Classes\PageEventHandler.cs" />
-    <Compile Include="ExtendedToolkit\Wizard\Controls\Wizard.cs">
+    <Compile Include="ExtendedToolkit\Wizard\Controls\KryptonWizard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Wizard\Classes\WizardDesigner.cs" />
@@ -984,6 +989,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\KryptonSplashScreen.resx">
       <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Security\File Hashing\HashFile.resx">
+      <DependentUpon>HashFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.resx">
       <DependentUpon>SoftwareUpdater.cs</DependentUpon>

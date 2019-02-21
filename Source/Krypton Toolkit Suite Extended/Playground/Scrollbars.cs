@@ -20,9 +20,9 @@ namespace Playground
 
         private void Scrollbars_Load(object sender, EventArgs e)
         {
-            foreach (string item in Enum.GetValues(typeof(PaletteMode)))
+            foreach (PaletteMode item in Enum.GetValues(typeof(PaletteMode)))
             {
-                kcmbThemeSelector.Items.Add(item);
+                kcmbThemeSelector.Items.Add(item.ToString());
             }
         }
     }
