@@ -111,6 +111,10 @@
     <Compile Include="Base\Code\IconExtractor.cs" />
     <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
     <Compile Include="Base\Code\ListViewColumnSorter.cs" />
+    <Compile Include="Base\Code\Models\Typeface\PropertiesModel.cs" />
+    <Compile Include="Base\Code\Models\Typeface\TypefaceCollection.cs" />
+    <Compile Include="Base\Code\Models\Typeface\TypefaceLister.cs" />
+    <Compile Include="Base\Code\Models\Typeface\TypefaceModel.cs" />
     <Compile Include="Base\Code\MostRecentlyUsedFileManager.cs" />
     <Compile Include="Base\Code\PI.cs" />
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarArrowButtonState.cs" />
@@ -232,6 +236,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteChooserComboBox.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -245,6 +252,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\MessageBoxes\UI\KryptonExceptionMessageBox.cs" />
+    <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\FlashingLabel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -792,6 +802,9 @@
     <Content Include="ExtendedToolkit\Controls\Standard Controls\Images\RingingBell.ico" />
     <Content Include="ExtendedToolkit\Controls\Standard Controls\Images\Up.ico" />
     <Content Include="ExtendedToolkit\Controls\Standard Controls\Images\Up.png" />
+    <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Content Include="ExtendedToolkit\Wizard\Images\Wizard.bmp" />
     <Content Include="ExtendedToolkit\Wizard\Images\wizBigOnlineFolder.gif" />
     <Content Include="Notes\IMPORTANT.txt" />
@@ -804,6 +817,13 @@
     <None Include="Resources\Grip2007.ico" />
     <None Include="Resources\palette.ico" />
     <None Include="Resources\color.ico" />
+    <None Include="Resources\Open_File_16_x_16.png" />
+    <None Include="Resources\Export To Document.png" />
+    <None Include="Resources\text_bold.png" />
+    <None Include="Resources\text_italic.png" />
+    <None Include="Resources\text_lowercase.png" />
+    <None Include="Resources\text_strikethrough.png" />
+    <None Include="Resources\text_underline.png" />
     <Content Include="ToolboxBitmaps\DataBar.bmp" />
     <Content Include="ToolboxBitmaps\DataChart.bmp" />
     <Content Include="ToolboxBitmaps\ToggleSwich.bmp" />
@@ -926,6 +946,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.resx">
       <DependentUpon>KryptonListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteSelector.resx">
+      <DependentUpon>KryptonPaletteSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceProperties.resx">
+      <DependentUpon>TypefaceProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.resx">
+      <DependentUpon>TypefaceSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Colours\AdobeColourDialog.resx">
       <DependentUpon>AdobeColourDialog.cs</DependentUpon>
