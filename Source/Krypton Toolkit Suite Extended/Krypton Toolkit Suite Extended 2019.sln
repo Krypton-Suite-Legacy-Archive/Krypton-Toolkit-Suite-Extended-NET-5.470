@@ -48,8 +48,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IMG", "IMG", "{3FBD4A85-FA0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Composer", "Palette Composer\Palette Composer.csproj", "{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colour Creator", "Colour Creator\Colour Creator.csproj", "{EEC1BBB0-C57D-4A84-960E-C43069190F6F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Creator", "Palette Creator\Palette Creator.csproj", "{E668A872-620B-4247-9629-28F12F7B0FD7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global Utilities", "Global Utilities\Global Utilities.csproj", "{EDB87D0C-A37C-48B5-9857-F014C438A4C5}"
@@ -78,6 +76,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TXT", "TXT", "{DE81BC2A-EC3
 	ProjectSection(SolutionItems) = preProject
 		KryptonCalendar-how to Kryptonize.txt = KryptonCalendar-how to Kryptonize.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Update File Maker", "Update File Maker\Update File Maker.csproj", "{83B06C50-5B61-467E-9620-BACF190E26F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -178,18 +178,6 @@ Global
 		{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}.Release|x86.ActiveCfg = Release|Any CPU
 		{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}.Release|x86.Build.0 = Release|Any CPU
-		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Debug|x86.Build.0 = Debug|Any CPU
-		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
-		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Installer Only|Any CPU.Build.0 = Release|Any CPU
-		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Installer Only|x86.ActiveCfg = Release|Any CPU
-		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Installer Only|x86.Build.0 = Release|Any CPU
-		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Release|x86.ActiveCfg = Release|Any CPU
-		{EEC1BBB0-C57D-4A84-960E-C43069190F6F}.Release|x86.Build.0 = Release|Any CPU
 		{E668A872-620B-4247-9629-28F12F7B0FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E668A872-620B-4247-9629-28F12F7B0FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E668A872-620B-4247-9629-28F12F7B0FD7}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -286,6 +274,18 @@ Global
 		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Release|x86.ActiveCfg = Release|Any CPU
 		{246B3B50-3A2D-4A6A-BB69-E56D94108AC1}.Release|x86.Build.0 = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Debug|x86.Build.0 = Debug|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Installer Only|x86.Build.0 = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|x86.ActiveCfg = Release|Any CPU
+		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -301,18 +301,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4D1018D-143A-451D-8FC0-F63E4923F552}
-	EndGlobalSection
-	GlobalSection(AutomaticVersions) = postSolution
-		PrimaryVersionType = AssemblyVersionAttribute
-		UpdateAssemblyVersion = True
-		UpdateAssemblyFileVersion = True
-		UpdateAssemblyInfoVersion = True
-		AdvancedSettingsExpanded = True
-		AssemblyVersionSettings = None.None.IncrementOnDemand.None
-		AssemblyFileVersionSettings = None.None.IncrementOnDemand.None
-		AssemblyInfoVersionSettings = None.None.IncrementOnDemand.None
-		UpdatePackageVersion = False
-		AssemblyInfoVersionType = SettingsVersion
-		InheritWinAppVersionFrom = None
 	EndGlobalSection
 EndGlobal
