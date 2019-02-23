@@ -99,6 +99,7 @@
     <Compile Include="Base\Code\Colours\HSLColour.cs" />
     <Compile Include="Base\Code\Colours\RGBColour.cs" />
     <Compile Include="Base\Code\ControlHelper.cs" />
+    <Compile Include="Base\Code\Development\DevelopmentInformation.cs" />
     <Compile Include="Base\Code\Drawing\ColourChangedEventArgs.cs" />
     <Compile Include="Base\Code\Drawing\ColourHandler.cs" />
     <Compile Include="Base\Code\Drawing\ColourWheel.cs" />

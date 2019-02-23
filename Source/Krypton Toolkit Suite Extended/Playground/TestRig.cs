@@ -7,6 +7,7 @@ using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using ExtendedControls.ExtendedToolkit.UI.Colours;
 using ExtendedControls.ExtendedToolkit.UI.Dialogues;
 using ExtendedControls.ExtendedToolkit.UI.SystemBrowser;
+using ExtendedControls.ExtendedToolkit.UI.Theming;
 using ExtendedFileDialogs.UI.SystemBrowser;
 using System;
 using System.Collections.Generic;
@@ -47,6 +48,7 @@ namespace Playground
         private KryptonButton kbtnHexToRGB;
         private KryptonButton kbtnConvertColour;
         private KryptonButton kbtnAeroWizard;
+        private KryptonButton kbtnThemeChooser;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
@@ -78,12 +80,14 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnThemeChooser = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnThemeChooser);
             this.kryptonPanel1.Controls.Add(this.kbtnAeroWizard);
             this.kryptonPanel1.Controls.Add(this.kbtnListView);
             this.kryptonPanel1.Controls.Add(this.kbtnPropertyGrid);
@@ -139,8 +143,6 @@ namespace Playground
             this.kbtnPropertyGrid.Name = "kbtnPropertyGrid";
             this.kbtnPropertyGrid.Size = new System.Drawing.Size(218, 25);
             this.kbtnPropertyGrid.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnPropertyGrid.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnPropertyGrid.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnPropertyGrid.TabIndex = 74;
             this.kbtnPropertyGrid.Values.Text = "Property Grid";
             this.kbtnPropertyGrid.Click += new System.EventHandler(this.kbtnPropertyGrid_Click);
@@ -151,8 +153,6 @@ namespace Playground
             this.kbtnMessageboxTest2.Name = "kbtnMessageboxTest2";
             this.kbtnMessageboxTest2.Size = new System.Drawing.Size(218, 25);
             this.kbtnMessageboxTest2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnMessageboxTest2.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnMessageboxTest2.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnMessageboxTest2.TabIndex = 73;
             this.kbtnMessageboxTest2.Values.Text = "Messagebox Test 2";
             this.kbtnMessageboxTest2.Click += new System.EventHandler(this.kbtnMessageboxTest2_Click);
@@ -307,8 +307,6 @@ namespace Playground
             this.kbtnMessageboxTest.Name = "kbtnMessageboxTest";
             this.kbtnMessageboxTest.Size = new System.Drawing.Size(218, 25);
             this.kbtnMessageboxTest.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnMessageboxTest.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnMessageboxTest.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnMessageboxTest.TabIndex = 56;
             this.kbtnMessageboxTest.Values.Text = "Messagebox Test";
             this.kbtnMessageboxTest.Click += new System.EventHandler(this.kbtnMessageboxTest_Click);
@@ -357,6 +355,15 @@ namespace Playground
             this.kbtnConvertColour.TabIndex = 51;
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
+            // 
+            // kbtnThemeChooser
+            // 
+            this.kbtnThemeChooser.Location = new System.Drawing.Point(737, 90);
+            this.kbtnThemeChooser.Name = "kbtnThemeChooser";
+            this.kbtnThemeChooser.Size = new System.Drawing.Size(218, 25);
+            this.kbtnThemeChooser.TabIndex = 77;
+            this.kbtnThemeChooser.Values.Text = "Theme Chooser";
+            this.kbtnThemeChooser.Click += new System.EventHandler(this.kbtnThemeChooser_Click);
             // 
             // TestRig
             // 
@@ -555,6 +562,13 @@ namespace Playground
             Test test = new Test();
 
             test.Show();
+        }
+
+        private void kbtnThemeChooser_Click(object sender, EventArgs e)
+        {
+            ThemeChooser themeChooser = new ThemeChooser();
+
+            themeChooser.Show();
         }
     }
 }

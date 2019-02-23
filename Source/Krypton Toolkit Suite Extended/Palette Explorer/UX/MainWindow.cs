@@ -4,6 +4,8 @@ using Core.Classes.Other;
 using Core.Settings.Classes;
 using Core.Settings.Colours.Classes;
 using Core.UX;
+using ExtendedControls.Base.Code.Development;
+using ExtendedControls.Base.Enumerations;
 using PaletteExplorer.Classes;
 using System;
 using System.Drawing;
@@ -3363,7 +3365,7 @@ namespace PaletteExplorer.UX
             }
         }
 
-        private void InitialiseWindow()
+        private void InitialiseWindow(bool devMode = true)
         {
             New();
 
@@ -3376,7 +3378,10 @@ namespace PaletteExplorer.UX
                 ShowCircularPreviewBoxes(_globalBooleanSettingsManager.GetUseCircularPictureBoxes());
             }
 
-            TextExtra = $"(Build: { _currentVersion.Build.ToString() })";
+            if (devMode)
+            {
+                DevelopmentInformation.SetBuildInformation(this, DevelopmentStates.ALPHA);
+            }
 
             if (Application.ExecutablePath.Contains("Palette Designer.exe"))
             {

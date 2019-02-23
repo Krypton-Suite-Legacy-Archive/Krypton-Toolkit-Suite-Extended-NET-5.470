@@ -21,4 +21,14 @@
         FILE,
         FOLDER
     }
+
+    public enum DevelopmentStates
+    {
+        PREALPHA,
+        ALPHA,
+        BETA,
+        RTM,
+        CURRENT,
+        EOL
+    }
 }
