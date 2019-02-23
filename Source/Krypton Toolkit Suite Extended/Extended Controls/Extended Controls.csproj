@@ -733,6 +733,9 @@
     <Compile Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Theming\ThemeChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Windows\FileInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1024,6 +1027,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.resx">
       <DependentUpon>SoftwareUpdater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Theming\ThemeChooser.resx">
+      <DependentUpon>ThemeChooser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Windows\FileInformation.resx">
       <DependentUpon>FileInformation.cs</DependentUpon>
