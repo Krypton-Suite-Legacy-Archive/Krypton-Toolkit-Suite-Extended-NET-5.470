@@ -125,6 +125,8 @@
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarOrientation.cs" />
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarState.cs" />
     <Compile Include="Base\Code\ScrollBar\WIN32.cs" />
+    <Compile Include="Base\Code\Settings\SettingsManager.cs" />
+    <Compile Include="Base\Code\Theming\KryptonThemeManager.cs" />
     <Compile Include="Base\Code\TypefaceHelper.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
     <Compile Include="Base\Enumerations\Enumerations.cs" />
@@ -734,6 +736,9 @@
     <Compile Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Theming\PaletteExplorerLocator.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Theming\ThemeChooser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -781,6 +786,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -812,6 +822,10 @@
     <Content Include="ExtendedToolkit\Wizard\Images\Wizard.bmp" />
     <Content Include="ExtendedToolkit\Wizard\Images\wizBigOnlineFolder.gif" />
     <Content Include="Notes\IMPORTANT.txt" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\Arrow_Down.ico" />
     <None Include="Resources\Arrow_Up.ico" />
     <None Include="Resources\DefaultIcon.ico" />
@@ -1028,6 +1042,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.resx">
       <DependentUpon>SoftwareUpdater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Theming\PaletteExplorerLocator.resx">
+      <DependentUpon>PaletteExplorerLocator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Theming\ThemeChooser.resx">
       <DependentUpon>ThemeChooser.cs</DependentUpon>

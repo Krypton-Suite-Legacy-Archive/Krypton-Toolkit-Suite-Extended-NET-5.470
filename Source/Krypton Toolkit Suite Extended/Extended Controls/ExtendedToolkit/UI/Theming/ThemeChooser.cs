@@ -1,12 +1,16 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code.Development;
+using ExtendedControls.Base.Code.Settings;
+using ExtendedControls.Base.Code.Theming;
 using ExtendedControls.Base.Enumerations;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
+using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.UI.Theming
 {
@@ -23,6 +27,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
         private Controls.KryptonPromptTextBox kptxtCustomThemePath;
         private KryptonComboBox kcmbSelection;
         private KryptonLabel klblPaletteStyle;
+        private KryptonCheckBox kcbSilent;
         private System.Windows.Forms.Panel panel1;
 
         private void InitializeComponent()
@@ -38,6 +43,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.kbtnApply = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.kcbSilent = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbSelection)).BeginInit();
@@ -47,6 +53,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kcbSilent);
             this.kryptonPanel1.Controls.Add(this.kbtnImport);
             this.kryptonPanel1.Controls.Add(this.kbtnBrowse);
             this.kryptonPanel1.Controls.Add(this.kptxtCustomThemePath);
@@ -180,6 +187,17 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.panel1.Size = new System.Drawing.Size(702, 54);
             this.panel1.TabIndex = 0;
             // 
+            // kcbSilent
+            // 
+            this.kcbSilent.Enabled = false;
+            this.kcbSilent.Location = new System.Drawing.Point(505, 107);
+            this.kcbSilent.Name = "kcbSilent";
+            this.kcbSilent.Size = new System.Drawing.Size(62, 24);
+            this.kcbSilent.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbSilent.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbSilent.TabIndex = 14;
+            this.kcbSilent.Values.Text = "&Silent";
+            // 
             // ThemeChooser
             // 
             this.ClientSize = new System.Drawing.Size(702, 204);
@@ -219,30 +237,24 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
         #endregion
 
         #region Constructors
-        public ThemeChooser(int xCoordinate = 0, int yCoordinate = 0, bool devMode = true)
+        public ThemeChooser(bool devMode = false, int xCoordinate = 0, int yCoordinate = 0)
         {
             InitializeComponent();
 
             // Place the window at the position that we have given it
             Location = new Point(xCoordinate, yCoordinate);
 
-            // Set development mode
-            DevelopmentMode = devMode;
-
             _styles = new ArrayList();
 
-            PropagateStylesArray(_styles);
+            KryptonThemeManager.PropagateThemeArray(_styles);
 
-            foreach (string style in _styles)
-            {
-                kcmbSelection.Items.Add(style);
-            }
+            KryptonThemeManager.PropagateThemeComboBox(kcmbSelection, _styles);
         }
         #endregion
 
         private void ThemeChooser_Load(object sender, EventArgs e)
         {
-            if (DevelopmentMode)
+            if (SettingsManager.GetDebugMode())
             {
                 DevelopmentInformation.SetBuildInformation(this, DevelopmentStates.PREALPHA);
             }
@@ -271,19 +283,30 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
 
         private void kbtnCancel_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
 
+            Hide();
         }
 
         private void kbtnCreate_Click(object sender, EventArgs e)
         {
+            if (SettingsManager.GetPaletteExplorerLocation() != string.Empty)
+            {
+                Process.Start(SettingsManager.GetPaletteExplorerLocation());
+            }
+            else
+            {
+                PaletteExplorerLocator locator = new PaletteExplorerLocator(SettingsManager.GetDebugMode());
 
+                locator.Show();
+            }
         }
 
         private void kbtnImport_Click(object sender, EventArgs e)
         {
             KryptonPalette = new KryptonPalette();
 
-            KryptonPalette.Import(kptxtCustomThemePath.Text);
+            KryptonPalette.Import(kptxtCustomThemePath.Text, kcbSilent.Checked);
 
             kbtnImport.Enabled = false;
         }
@@ -322,230 +345,19 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
         }
 
         #region Methods
-        private void PropagateStylesArray(ArrayList list = null)
-        {
-            if (list == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            list.Add("Professional - System");
-
-            list.Add("Professional - Office 2003");
-
-            list.Add("Office 2007 - Black");
-
-            list.Add("Office 2007 - Blue");
-
-            list.Add("Office 2007 - Silver");
-
-            list.Add("Office 2007 - White");
-
-            list.Add("Office 2010 - Black");
-
-            list.Add("Office 2010 - Blue");
-
-            list.Add("Office 2010 - Silver");
-
-            list.Add("Office 2010 - White");
-
-            list.Add("Office 2013");
-
-            list.Add("Office 2013 - White");
-
-            list.Add("Office 365 - Black");
-
-            list.Add("Office 365 - Blue");
-
-            list.Add("Office 365 - Silver");
-
-            list.Add("Office 365 - White");
-
-            list.Add("Sparkle - Blue");
-
-            list.Add("Sparkle - Orange");
-
-            list.Add("Sparkle - Purple");
-
-            list.Add("Custom");
-
-            //list.Sort()
-        }
-
-        public static string GetCurrentStyleItemText()
-        {
-            ThemeChooser themeChooser = new ThemeChooser();
-
-            return themeChooser.kcmbSelection.Text;
-        }
-
-        public static void SwitchThemeStyle(PaletteMode mode, KryptonManager manager)
-        {
-            switch (mode)
-            {
-                case PaletteMode.Global:
-                    manager.GlobalPaletteMode = (PaletteModeManager)PaletteMode.Global;
-                    break;
-                case PaletteMode.ProfessionalSystem:
-                    manager.GlobalPaletteMode = PaletteModeManager.ProfessionalSystem;
-                    break;
-                case PaletteMode.ProfessionalOffice2003:
-                    manager.GlobalPaletteMode = PaletteModeManager.ProfessionalOffice2003;
-                    break;
-                case PaletteMode.Office2007Blue:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office2007Blue;
-                    break;
-                case PaletteMode.Office2007Silver:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office2007Silver;
-                    break;
-                case PaletteMode.Office2007White:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office2007White;
-                    break;
-                case PaletteMode.Office2007Black:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office2007Black;
-                    break;
-                case PaletteMode.Office2010Blue:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office2010Blue;
-                    break;
-                case PaletteMode.Office2010Silver:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office2010Silver;
-                    break;
-                case PaletteMode.Office2010White:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office2010White;
-                    break;
-                case PaletteMode.Office2010Black:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office2010Black;
-                    break;
-                case PaletteMode.Office2013:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office2013;
-                    break;
-                case PaletteMode.Office2013White:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office2013White;
-                    break;
-                case PaletteMode.Office365Black:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office365Black;
-                    break;
-                case PaletteMode.Office365Blue:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office365Blue;
-                    break;
-                case PaletteMode.Office365Silver:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office365Silver;
-                    break;
-                case PaletteMode.Office365White:
-                    manager.GlobalPaletteMode = PaletteModeManager.Office365White;
-                    break;
-                case PaletteMode.SparkleBlue:
-                    manager.GlobalPaletteMode = PaletteModeManager.SparkleBlue;
-                    break;
-                case PaletteMode.SparkleOrange:
-                    manager.GlobalPaletteMode = PaletteModeManager.SparkleOrange;
-                    break;
-                case PaletteMode.SparklePurple:
-                    manager.GlobalPaletteMode = PaletteModeManager.SparklePurple;
-                    break;
-                case PaletteMode.Custom:
-                    manager.GlobalPaletteMode = PaletteModeManager.Custom;
-                    break;
-            }
-        }
-
-        private PaletteMode GetPaletteMode(string themeName)
-        {
-            PaletteMode result;
-
-            if (themeName == "Custom")
-            {
-                return PaletteMode.Custom;
-            }
-            else if (themeName == "Global")
-            {
-                return PaletteMode.Global;
-            }
-            else if (themeName == "Professional - System")
-            {
-                return PaletteMode.ProfessionalSystem;
-            }
-            else if (themeName == "Professional - Office 2003")
-            {
-                return PaletteMode.ProfessionalOffice2003;
-            }
-            else if (themeName == "Office 2007 - Black")
-            {
-                return PaletteMode.Office2007Black;
-            }
-            else if (themeName == "Office 2007 - Blue")
-            {
-                return PaletteMode.Office2007Blue;
-            }
-            else if (themeName == "Office 2007 - Silver")
-            {
-                return PaletteMode.Office2007Silver;
-            }
-            else if (themeName == "Office 2007 - White")
-            {
-                return PaletteMode.Office2007White;
-            }
-            else if (themeName == "Office 2010 - Black")
-            {
-                return PaletteMode.Office2010Black;
-            }
-            else if (themeName == "Office 2010 - Blue")
-            {
-                return PaletteMode.Office2010Blue;
-            }
-            else if (themeName == "Office 2010 - Silver")
-            {
-                return PaletteMode.Office2010Silver;
-            }
-            else if (themeName == "Office 2010 - White")
-            {
-                return PaletteMode.Office2010White;
-            }
-            else if (themeName == "Office 2013")
-            {
-                return PaletteMode.Office2013;
-            }
-            else if (themeName == "Office 2013 - White")
-            {
-                return PaletteMode.Office2013White;
-            }
-            else if (themeName == "Office 365 - Black")
-            {
-                return PaletteMode.Office365Black;
-            }
-            else if (themeName == "Office 365 - Blue")
-            {
-                return PaletteMode.Office365Blue;
-            }
-            else if (themeName == "Office 365 - Silver")
-            {
-                return PaletteMode.Office365Silver;
-            }
-            else if (themeName == "Office 365 - White")
-            {
-                return PaletteMode.Office365White;
-            }
-            else if (themeName == "Sparkle - Blue")
-            {
-                return PaletteMode.SparkleBlue;
-            }
-            else if (themeName == "Sparkle - Orange")
-            {
-                return PaletteMode.SparkleOrange;
-            }
-            else if (themeName == "Sparkle - Purple")
-            {
-                return PaletteMode.SparklePurple;
-            }
-
-            return PaletteMode.Office2010Blue;
-        }
-
+        /// <summary>
+        /// Enables the custom palette UI elements.
+        /// </summary>
+        /// <param name="enabled">if set to <c>true</c> [enabled].</param>
         private void EnableCustomPaletteUIElements(bool enabled = false)
         {
             kptxtCustomThemePath.Enabled = enabled;
 
+            kcbSilent.Enabled = enabled;
+
             kbtnBrowse.Enabled = enabled;
+
+            kbtnCreate.Enabled = enabled;
         }
         #endregion
     }
