@@ -242,6 +242,9 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteSelector.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
