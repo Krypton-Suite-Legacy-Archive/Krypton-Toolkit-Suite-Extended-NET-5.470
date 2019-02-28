@@ -424,10 +424,10 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSlideButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSlider.cs">
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonToolbarSlider.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSliderBar.cs">
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonSliderBar.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSliderButton.cs">

@@ -10,11 +10,7 @@ using ExtendedControls.ExtendedToolkit.UI.SystemBrowser;
 using ExtendedControls.ExtendedToolkit.UI.Theming;
 using ExtendedFileDialogs.UI.SystemBrowser;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Playground
@@ -389,7 +385,7 @@ namespace Playground
 
         private void kbtnFileCreator_Click(object sender, EventArgs e)
         {
-            PaletteFileEditor paletteFileEditor = new PaletteFileEditor();
+            PaletteExplorer.UX.PaletteFileEditor paletteFileEditor = new PaletteExplorer.UX.PaletteFileEditor();
 
             paletteFileEditor.Show();
         }
@@ -403,11 +399,9 @@ namespace Playground
 
         private void kbtnPaletteEditor_Click(object sender, EventArgs e)
         {
-            KryptonMessageBox.Show(this,
-                @"Once PaletteEditor is building again, then add to references and then this code can be uncommented!");
-            //PaletteEditor.UX.MainWindow _paletteEditor = new PaletteEditor.UX.MainWindow();
+            PaletteExplorer.UX.MainWindow _mainWindow = new PaletteExplorer.UX.MainWindow();
 
-            //_paletteEditor.Show();
+            _mainWindow.Show();
         }
 
         private void kbtnScrollbars_Click(object sender, EventArgs e)

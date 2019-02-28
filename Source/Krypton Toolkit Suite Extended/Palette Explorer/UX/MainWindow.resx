@@ -324,139 +324,139 @@
 </value>
   </data>
   <metadata name="kcmGenerateColours.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>751, 212</value>
+    <value>533, 212</value>
   </metadata>
   <metadata name="kcDefineIndividualColours.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1061, 212</value>
+    <value>843, 212</value>
   </metadata>
   <metadata name="kcmUpdateColours.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>761, 56</value>
+    <value>486, 56</value>
   </metadata>
   <metadata name="kcUpdateColours.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>916, 212</value>
+    <value>698, 212</value>
   </metadata>
   <metadata name="kcmViewType.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1339, 134</value>
+    <value>1092, 134</value>
   </metadata>
   <metadata name="kcStandardPictureboxes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
+    <value>1218, 134</value>
   </metadata>
   <metadata name="kcCircularPictureboxes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>199, 173</value>
+    <value>17, 173</value>
   </metadata>
   <metadata name="kcmExperimental.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>373, 173</value>
+    <value>191, 173</value>
   </metadata>
   <metadata name="ss.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>188, 17</value>
   </metadata>
   <metadata name="ttInformation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1215, 134</value>
+    <value>968, 134</value>
   </metadata>
   <metadata name="ctxStatusTextColourUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>850, 251</value>
+    <value>543, 251</value>
   </metadata>
   <metadata name="ctxCustomTextColourThreeUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 251</value>
+    <value>1036, 212</value>
   </metadata>
   <metadata name="ctxCustomTextColourTwoUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1183, 173</value>
+    <value>1001, 173</value>
   </metadata>
   <metadata name="ctxMenuTextColourUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1005, 17</value>
   </metadata>
   <metadata name="ctxCustomTextColourFourUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1118, 56</value>
+    <value>843, 56</value>
   </metadata>
   <metadata name="ctxCustomTextColourFiveUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>735, 95</value>
+    <value>451, 95</value>
   </metadata>
   <metadata name="ctxCustomTextColourOneUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>916, 134</value>
+    <value>669, 134</value>
   </metadata>
   <metadata name="ctxCustomColourFiveUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>1271, 17</value>
   </metadata>
   <metadata name="ctxCustomColourTwoUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>475, 212</value>
+    <value>257, 212</value>
   </metadata>
   <metadata name="ctxCustomColourOneUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>324, 251</value>
+    <value>17, 251</value>
   </metadata>
   <metadata name="ctxLinkVisitedUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>404, 134</value>
+    <value>157, 134</value>
   </metadata>
   <metadata name="ctxCustomColourThreeUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>1144, 56</value>
   </metadata>
   <metadata name="ctxCustomColourFourUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>638, 134</value>
+    <value>391, 134</value>
   </metadata>
   <metadata name="ctxLinkHoverUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>292, 56</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="ctxPressedTextUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>235, 212</value>
+    <value>17, 212</value>
   </metadata>
   <metadata name="ctxFoucusedTextUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>600, 251</value>
+    <value>293, 251</value>
   </metadata>
   <metadata name="ctxDisabledTextUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>547, 17</value>
   </metadata>
   <metadata name="ctxDisabledUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>301, 95</value>
+    <value>17, 95</value>
   </metadata>
   <metadata name="ctxLinkNormalUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1033, 95</value>
+    <value>749, 95</value>
   </metadata>
   <metadata name="ctxNormalTextUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>522, 56</value>
+    <value>247, 56</value>
   </metadata>
   <metadata name="ctxBorderUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>523, 95</value>
+    <value>239, 95</value>
   </metadata>
   <metadata name="ctxAlternativeNormalTextUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>250, 17</value>
   </metadata>
   <metadata name="ctxLightestUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 212</value>
+    <value>1300, 173</value>
   </metadata>
   <metadata name="ctxLightUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1118, 251</value>
+    <value>811, 251</value>
   </metadata>
   <metadata name="ctxMiddleUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>792, 17</value>
   </metadata>
   <metadata name="ctxDarkUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>917, 56</value>
+    <value>642, 56</value>
   </metadata>
   <metadata name="ctxBaseUtiliseAsBaseColour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1271, 95</value>
+    <value>987, 95</value>
   </metadata>
   <metadata name="tmrUpdateUI.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
+    <value>1187, 95</value>
   </metadata>
   <metadata name="cmsViewType.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>139, 134</value>
+    <value>1309, 95</value>
   </metadata>
   <metadata name="cmsExperinental.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>264, 134</value>
+    <value>17, 134</value>
   </metadata>
   <metadata name="kcNewPalette.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>518, 173</value>
+    <value>336, 173</value>
   </metadata>
   <metadata name="kcOpenPalette.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>643, 173</value>
+    <value>461, 173</value>
   </metadata>
   <metadata name="kcSavePalette.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>774, 173</value>
+    <value>592, 173</value>
   </metadata>
   <metadata name="kcSavePaletteAs.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>900, 173</value>
+    <value>718, 173</value>
   </metadata>
   <metadata name="kcExitApplication.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1039, 173</value>
+    <value>857, 173</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>231</value>

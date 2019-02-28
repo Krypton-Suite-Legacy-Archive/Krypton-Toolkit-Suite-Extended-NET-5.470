@@ -1,5 +1,4 @@
-﻿using ComponentFactory.Krypton.Ribbon;
-using ComponentFactory.Krypton.Toolkit;
+﻿using ComponentFactory.Krypton.Toolkit;
 using Microsoft.VisualBasic;
 using System;
 using System.ComponentModel;
@@ -7,10 +6,10 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
+namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToolbarItems
 {
     [ToolboxBitmap(typeof(TrackBar)), ToolboxItem(false)]
-    public partial class KryptonSlider : UserControl, IContentValues
+    public partial class KryptonToolbarSlider : UserControl, IContentValues
     {
         #region Designer Code
         /// <summary> 
@@ -90,7 +89,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
         #region "Entry"
 
-        public KryptonSlider()
+        public KryptonToolbarSlider()
         {
 
             //(1) To remove flicker we use double buffering for drawing
@@ -155,7 +154,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
         //Events
         public event ValueChangedEventHandler ValueChanged;
-        public delegate void ValueChangedEventHandler(KryptonSlider Sender, SliderEventArgs e);
+        public delegate void ValueChangedEventHandler(KryptonToolbarSlider Sender, SliderEventArgs e);
 
         //Enumerations
         public enum RangeTests

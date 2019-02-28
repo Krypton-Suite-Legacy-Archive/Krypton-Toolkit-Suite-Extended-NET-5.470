@@ -323,7 +323,7 @@ namespace PaletteExplorer.UX
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup11;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple25;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbMergeAllColours;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton3;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbFileEdit;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
@@ -449,7 +449,7 @@ namespace PaletteExplorer.UX
             this.kryptonRibbonGroup11 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple25 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbMergeAllColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.kryptonRibbonGroupButton3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.krgbFileEdit = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonTab4 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup7 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple21 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
@@ -747,6 +747,7 @@ namespace PaletteExplorer.UX
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
+            this.kryptonRibbon1.SelectedContext = null;
             this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab3;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1219, 115);
             this.kryptonRibbon1.TabIndex = 1;
@@ -888,11 +889,15 @@ namespace PaletteExplorer.UX
             // krgbUndo
             // 
             this.krgbUndo.Enabled = false;
+            this.krgbUndo.ImageLarge = global::PaletteExplorer.Properties.Resources.Undo_32_x_32;
+            this.krgbUndo.ImageSmall = global::PaletteExplorer.Properties.Resources.Undo_16_x_16;
             this.krgbUndo.TextLine1 = "Undo";
             // 
             // krgbRedo
             // 
             this.krgbRedo.Enabled = false;
+            this.krgbRedo.ImageLarge = global::PaletteExplorer.Properties.Resources.Redo_32_x_32;
+            this.krgbRedo.ImageSmall = global::PaletteExplorer.Properties.Resources.Redo_16_x_16;
             this.krgbRedo.TextLine1 = "Redo";
             // 
             // kryptonRibbonGroup5
@@ -1277,7 +1282,7 @@ namespace PaletteExplorer.UX
             // 
             this.kryptonRibbonGroupTriple25.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
             this.krgbMergeAllColours,
-            this.kryptonRibbonGroupButton3});
+            this.krgbFileEdit});
             // 
             // krgbMergeAllColours
             // 
@@ -1285,6 +1290,12 @@ namespace PaletteExplorer.UX
             this.krgbMergeAllColours.TextLine1 = "Merge All";
             this.krgbMergeAllColours.TextLine2 = "Colours";
             this.krgbMergeAllColours.ToolTipTitle = "Merge all colours";
+            // 
+            // krgbFileEdit
+            // 
+            this.krgbFileEdit.TextLine1 = "Edit Palette";
+            this.krgbFileEdit.TextLine2 = "File";
+            this.krgbFileEdit.Click += new System.EventHandler(this.krgbFileEdit_Click);
             // 
             // kryptonRibbonTab4
             // 
@@ -3337,6 +3348,28 @@ namespace PaletteExplorer.UX
 
                 cbxLightestColourPreview.BackColor = _basicPaletteColourManager.GetLightestColour();
             }
+        }
+
+        private void krgbFileEdit_Click(object sender, EventArgs e)
+        {
+            //if (!string.IsNullOrEmpty(FileName))
+            //{
+            //    PaletteFileEditor pfeLoaded = new PaletteFileEditor(FileName);
+
+            //    pfeLoaded.ShowDialog();
+            //}
+            //else if (Text.Contains("(New Palette)"))
+            //{
+            //    PaletteFileEditor pfe = new PaletteFileEditor();
+
+            //    pfe.ShowDialog();
+            //}
+            //else
+            //{
+                PaletteFileEditor pfe = new PaletteFileEditor();
+
+                pfe.ShowDialog();
+            //}
         }
 
         private void SwitchLayouts(bool useCircularPictureBoxes)

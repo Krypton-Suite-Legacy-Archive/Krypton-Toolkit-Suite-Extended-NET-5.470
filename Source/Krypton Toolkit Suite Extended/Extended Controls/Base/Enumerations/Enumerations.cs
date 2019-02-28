@@ -31,4 +31,13 @@
         CURRENT,
         EOL
     }
+
+    public enum PaletteFileEditorStatusIndicator
+    {
+        CREATENEWFILE,
+        CHANGEZOOMLEVEL,
+        READY,
+        OPENFILE,
+        SAVEFILE
+    }
 }
