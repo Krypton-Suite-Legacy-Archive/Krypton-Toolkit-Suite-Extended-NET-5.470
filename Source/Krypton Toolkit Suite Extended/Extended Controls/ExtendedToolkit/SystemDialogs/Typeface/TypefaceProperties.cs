@@ -1,9 +1,8 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Base.Code.Models.Typeface;
+using GlobalUtilities.Classes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 
 namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
 {
@@ -54,6 +53,52 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
         public TypefaceProperties()
         {
             InitializeComponent();
+        }
+        #endregion
+
+        #region Methods
+        public void LoadTypeface(Font typeface, TypefaceModel model)
+        {
+            PropertiesModel propertiesModel = new PropertiesModel();
+
+            if (model != null)
+            {
+                propertiesModel.Name = model.TypefaceName;
+
+                propertiesModel.Path = model.TypefaceFilePath;
+
+                propertiesModel.TypefaceType = GetTypefaceType(model.TypefaceFilePath);
+            }
+
+            if (typeface != null)
+            {
+                try
+                {
+                    string unit = GetUnitName(typeface.Unit);
+
+                    if (unit != null) unit = " " + unit;
+
+                    propertiesModel.Name = typeface.Name;
+
+                    propertiesModel.Bold = typeface.Bold;
+
+                    propertiesModel.Italic = typeface.Italic;
+
+                    propertiesModel.Underline = typeface.Underline;
+
+                    propertiesModel.Strikethrough = typeface.Strikeout;
+
+                    propertiesModel.Size = typeface.Size + unit;
+
+                    propertiesModel.LineHeight = typeface.Height + " px";
+
+                    propertiesModel.Ascent = typeface.FontFamily.GetCellAscent(typeface.Style).ToString();
+                }
+                catch (Exception exc)
+                {
+                    ExceptionHandler.CaptureException(exc);
+                }
+            }
         }
         #endregion
     }

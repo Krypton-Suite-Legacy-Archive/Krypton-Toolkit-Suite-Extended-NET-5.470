@@ -549,6 +549,8 @@ namespace PaletteExplorer.UX
             this.cbxBaseColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.ctxBaseUtiliseAsBaseColour = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.utiliseAsBaseColourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kgbPaletteProperties = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.labelGridNormal = new System.Windows.Forms.PropertyGrid();
             this.kgbSquarePreviewPane = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.pbxRibbonTabTextColourPreview = new System.Windows.Forms.PictureBox();
             this.pbxLinkFocusedColourPreview = new System.Windows.Forms.PictureBox();
@@ -579,8 +581,6 @@ namespace PaletteExplorer.UX
             this.pbxDarkColourPreview = new System.Windows.Forms.PictureBox();
             this.pbxLightColourPreview = new System.Windows.Forms.PictureBox();
             this.pbxMiddleColourPreview = new System.Windows.Forms.PictureBox();
-            this.kgbPaletteProperties = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.labelGridNormal = new System.Windows.Forms.PropertyGrid();
             this.tmrUpdateUI = new System.Windows.Forms.Timer(this.components);
             this.cmsViewType = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.standardPictureboxesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -663,6 +663,10 @@ namespace PaletteExplorer.UX
             this.ctxDarkUtiliseAsBaseColour.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBaseColourPreview)).BeginInit();
             this.ctxBaseUtiliseAsBaseColour.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kgbPaletteProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kgbPaletteProperties.Panel)).BeginInit();
+            this.kgbPaletteProperties.Panel.SuspendLayout();
+            this.kgbPaletteProperties.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kgbSquarePreviewPane)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kgbSquarePreviewPane.Panel)).BeginInit();
             this.kgbSquarePreviewPane.Panel.SuspendLayout();
@@ -696,12 +700,12 @@ namespace PaletteExplorer.UX
             ((System.ComponentModel.ISupportInitialize)(this.pbxDarkColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLightColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMiddleColourPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kgbPaletteProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kgbPaletteProperties.Panel)).BeginInit();
-            this.kgbPaletteProperties.Panel.SuspendLayout();
-            this.kgbPaletteProperties.SuspendLayout();
             this.cmsViewType.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // kMan
+            // 
+            this.kMan.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Blue;
             // 
             // kcmiNewPalette
             // 
@@ -748,8 +752,8 @@ namespace PaletteExplorer.UX
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
             this.kryptonRibbon1.SelectedContext = null;
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab3;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(1219, 115);
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
+            this.kryptonRibbon1.Size = new System.Drawing.Size(1437, 115);
             this.kryptonRibbon1.TabIndex = 1;
             // 
             // krqatbNew
@@ -1237,6 +1241,7 @@ namespace PaletteExplorer.UX
             this.krgbShowHidePropertiesPane.ImageSmall = global::PaletteExplorer.Properties.Resources.Property_New_16_x_16;
             this.krgbShowHidePropertiesPane.TextLine1 = "Show/Hide";
             this.krgbShowHidePropertiesPane.TextLine2 = "Propertes Pane";
+            this.krgbShowHidePropertiesPane.Click += new System.EventHandler(this.krgbShowHidePropertiesPane_Click);
             // 
             // kryptonRibbonTab3
             // 
@@ -1337,9 +1342,9 @@ namespace PaletteExplorer.UX
             // 
             this.kryptonPanel1.Controls.Add(this.ss);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel1.Location = new System.Drawing.Point(0, 678);
+            this.kryptonPanel1.Location = new System.Drawing.Point(0, 760);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1219, 22);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1437, 22);
             this.kryptonPanel1.TabIndex = 2;
             // 
             // ss
@@ -1350,14 +1355,14 @@ namespace PaletteExplorer.UX
             this.ss.Location = new System.Drawing.Point(0, 0);
             this.ss.Name = "ss";
             this.ss.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.ss.Size = new System.Drawing.Size(1219, 22);
+            this.ss.Size = new System.Drawing.Size(1437, 22);
             this.ss.TabIndex = 46;
             this.ss.Text = "statusStrip1";
             // 
             // tslCurrentStatus
             // 
             this.tslCurrentStatus.Name = "tslCurrentStatus";
-            this.tslCurrentStatus.Size = new System.Drawing.Size(1204, 17);
+            this.tslCurrentStatus.Size = new System.Drawing.Size(1422, 17);
             this.tslCurrentStatus.Spring = true;
             this.tslCurrentStatus.Text = "Ready";
             this.tslCurrentStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1367,9 +1372,9 @@ namespace PaletteExplorer.UX
             this.kryptonPanel2.Controls.Add(this.kbtnClose);
             this.kryptonPanel2.Controls.Add(this.lblColourOutput);
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel2.Location = new System.Drawing.Point(0, 624);
+            this.kryptonPanel2.Location = new System.Drawing.Point(0, 706);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(1219, 54);
+            this.kryptonPanel2.Size = new System.Drawing.Size(1437, 54);
             this.kryptonPanel2.TabIndex = 3;
             // 
             // kbtnClose
@@ -1377,7 +1382,7 @@ namespace PaletteExplorer.UX
             this.kbtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.kbtnClose.AutoSize = true;
             this.kbtnClose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnClose.Location = new System.Drawing.Point(1139, 12);
+            this.kbtnClose.Location = new System.Drawing.Point(1357, 12);
             this.kbtnClose.Name = "kbtnClose";
             this.kbtnClose.Size = new System.Drawing.Size(68, 30);
             this.kbtnClose.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1400,20 +1405,20 @@ namespace PaletteExplorer.UX
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 622);
+            this.panel1.Location = new System.Drawing.Point(0, 704);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1219, 2);
+            this.panel1.Size = new System.Drawing.Size(1437, 2);
             this.panel1.TabIndex = 5;
             // 
             // kryptonPanel3
             // 
             this.kryptonPanel3.Controls.Add(this.kgbCircularColourPreviewPane);
-            this.kryptonPanel3.Controls.Add(this.kgbSquarePreviewPane);
             this.kryptonPanel3.Controls.Add(this.kgbPaletteProperties);
+            this.kryptonPanel3.Controls.Add(this.kgbSquarePreviewPane);
             this.kryptonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel3.Location = new System.Drawing.Point(0, 115);
             this.kryptonPanel3.Name = "kryptonPanel3";
-            this.kryptonPanel3.Size = new System.Drawing.Size(1219, 507);
+            this.kryptonPanel3.Size = new System.Drawing.Size(1437, 589);
             this.kryptonPanel3.TabIndex = 6;
             // 
             // kgbCircularColourPreviewPane
@@ -1452,7 +1457,7 @@ namespace PaletteExplorer.UX
             this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxMiddleColourPreview);
             this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxDarkColourPreview);
             this.kgbCircularColourPreviewPane.Panel.Controls.Add(this.cbxBaseColourPreview);
-            this.kgbCircularColourPreviewPane.Size = new System.Drawing.Size(1189, 467);
+            this.kgbCircularColourPreviewPane.Size = new System.Drawing.Size(882, 552);
             this.kgbCircularColourPreviewPane.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kgbCircularColourPreviewPane.TabIndex = 37;
             this.kgbCircularColourPreviewPane.Values.Heading = "Colour Preview";
@@ -1461,7 +1466,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxRibbonTabTextColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxRibbonTabTextColourPreview.ContextMenuStrip = this.ctxStatusTextColourUtiliseAsBaseColour;
-            this.cbxRibbonTabTextColourPreview.Location = new System.Drawing.Point(667, 352);
+            this.cbxRibbonTabTextColourPreview.Location = new System.Drawing.Point(19, 430);
             this.cbxRibbonTabTextColourPreview.Name = "cbxRibbonTabTextColourPreview";
             this.cbxRibbonTabTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxRibbonTabTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1486,7 +1491,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxLinkFocusedColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxLinkFocusedColourPreview.ContextMenuStrip = this.ctxStatusTextColourUtiliseAsBaseColour;
-            this.cbxLinkFocusedColourPreview.Location = new System.Drawing.Point(235, 182);
+            this.cbxLinkFocusedColourPreview.Location = new System.Drawing.Point(799, 118);
             this.cbxLinkFocusedColourPreview.Name = "cbxLinkFocusedColourPreview";
             this.cbxLinkFocusedColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxLinkFocusedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1497,7 +1502,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxStatusTextColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxStatusTextColourPreview.ContextMenuStrip = this.ctxStatusTextColourUtiliseAsBaseColour;
-            this.cbxStatusTextColourPreview.Location = new System.Drawing.Point(559, 352);
+            this.cbxStatusTextColourPreview.Location = new System.Drawing.Point(799, 326);
             this.cbxStatusTextColourPreview.Name = "cbxStatusTextColourPreview";
             this.cbxStatusTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxStatusTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1508,7 +1513,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxCustomTextColourThreePreview.BackColor = System.Drawing.Color.White;
             this.cbxCustomTextColourThreePreview.ContextMenuStrip = this.ctxCustomTextColourThreeUtiliseAsBaseColour;
-            this.cbxCustomTextColourThreePreview.Location = new System.Drawing.Point(127, 350);
+            this.cbxCustomTextColourThreePreview.Location = new System.Drawing.Point(279, 326);
             this.cbxCustomTextColourThreePreview.Name = "cbxCustomTextColourThreePreview";
             this.cbxCustomTextColourThreePreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomTextColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1533,7 +1538,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxCustomTextColourTwoPreview.BackColor = System.Drawing.Color.White;
             this.cbxCustomTextColourTwoPreview.ContextMenuStrip = this.ctxCustomTextColourTwoUtiliseAsBaseColour;
-            this.cbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(19, 350);
+            this.cbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(149, 326);
             this.cbxCustomTextColourTwoPreview.Name = "cbxCustomTextColourTwoPreview";
             this.cbxCustomTextColourTwoPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomTextColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1558,7 +1563,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxMenuTextColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxMenuTextColourPreview.ContextMenuStrip = this.ctxMenuTextColourUtiliseAsBaseColour;
-            this.cbxMenuTextColourPreview.Location = new System.Drawing.Point(451, 352);
+            this.cbxMenuTextColourPreview.Location = new System.Drawing.Point(669, 326);
             this.cbxMenuTextColourPreview.Name = "cbxMenuTextColourPreview";
             this.cbxMenuTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxMenuTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1583,7 +1588,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxCustomTextColourFourPreview.BackColor = System.Drawing.Color.White;
             this.cbxCustomTextColourFourPreview.ContextMenuStrip = this.ctxCustomTextColourFourUtiliseAsBaseColour;
-            this.cbxCustomTextColourFourPreview.Location = new System.Drawing.Point(235, 351);
+            this.cbxCustomTextColourFourPreview.Location = new System.Drawing.Point(409, 326);
             this.cbxCustomTextColourFourPreview.Name = "cbxCustomTextColourFourPreview";
             this.cbxCustomTextColourFourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomTextColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1608,7 +1613,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxCustomTextColourFivePreview.BackColor = System.Drawing.Color.White;
             this.cbxCustomTextColourFivePreview.ContextMenuStrip = this.ctxCustomTextColourFiveUtiliseAsBaseColour;
-            this.cbxCustomTextColourFivePreview.Location = new System.Drawing.Point(343, 350);
+            this.cbxCustomTextColourFivePreview.Location = new System.Drawing.Point(539, 326);
             this.cbxCustomTextColourFivePreview.Name = "cbxCustomTextColourFivePreview";
             this.cbxCustomTextColourFivePreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomTextColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1633,7 +1638,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxCustomTextColourOnePreview.BackColor = System.Drawing.Color.White;
             this.cbxCustomTextColourOnePreview.ContextMenuStrip = this.ctxCustomTextColourOneUtiliseAsBaseColour;
-            this.cbxCustomTextColourOnePreview.Location = new System.Drawing.Point(1099, 182);
+            this.cbxCustomTextColourOnePreview.Location = new System.Drawing.Point(19, 326);
             this.cbxCustomTextColourOnePreview.Name = "cbxCustomTextColourOnePreview";
             this.cbxCustomTextColourOnePreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomTextColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1658,7 +1663,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxCustomColourFivePreview.BackColor = System.Drawing.Color.White;
             this.cbxCustomColourFivePreview.ContextMenuStrip = this.ctxCustomColourFiveUtiliseAsBaseColour;
-            this.cbxCustomColourFivePreview.Location = new System.Drawing.Point(991, 182);
+            this.cbxCustomColourFivePreview.Location = new System.Drawing.Point(799, 222);
             this.cbxCustomColourFivePreview.Name = "cbxCustomColourFivePreview";
             this.cbxCustomColourFivePreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1683,7 +1688,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxCustomColourTwoPreview.BackColor = System.Drawing.Color.White;
             this.cbxCustomColourTwoPreview.ContextMenuStrip = this.ctxCustomColourTwoUtiliseAsBaseColour;
-            this.cbxCustomColourTwoPreview.Location = new System.Drawing.Point(667, 182);
+            this.cbxCustomColourTwoPreview.Location = new System.Drawing.Point(409, 222);
             this.cbxCustomColourTwoPreview.Name = "cbxCustomColourTwoPreview";
             this.cbxCustomColourTwoPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1708,7 +1713,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxCustomColourOnePreview.BackColor = System.Drawing.Color.White;
             this.cbxCustomColourOnePreview.ContextMenuStrip = this.ctxCustomColourOneUtiliseAsBaseColour;
-            this.cbxCustomColourOnePreview.Location = new System.Drawing.Point(559, 182);
+            this.cbxCustomColourOnePreview.Location = new System.Drawing.Point(279, 222);
             this.cbxCustomColourOnePreview.Name = "cbxCustomColourOnePreview";
             this.cbxCustomColourOnePreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1733,7 +1738,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxLinkVisitedColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxLinkVisitedColourPreview.ContextMenuStrip = this.ctxLinkVisitedUtiliseAsBaseColour;
-            this.cbxLinkVisitedColourPreview.Location = new System.Drawing.Point(451, 182);
+            this.cbxLinkVisitedColourPreview.Location = new System.Drawing.Point(149, 222);
             this.cbxLinkVisitedColourPreview.Name = "cbxLinkVisitedColourPreview";
             this.cbxLinkVisitedColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxLinkVisitedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1758,7 +1763,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxCustomColourThreePreview.BackColor = System.Drawing.Color.White;
             this.cbxCustomColourThreePreview.ContextMenuStrip = this.ctxCustomColourThreeUtiliseAsBaseColour;
-            this.cbxCustomColourThreePreview.Location = new System.Drawing.Point(775, 182);
+            this.cbxCustomColourThreePreview.Location = new System.Drawing.Point(539, 222);
             this.cbxCustomColourThreePreview.Name = "cbxCustomColourThreePreview";
             this.cbxCustomColourThreePreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1783,7 +1788,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxCustomColourFourPreview.BackColor = System.Drawing.Color.White;
             this.cbxCustomColourFourPreview.ContextMenuStrip = this.ctxCustomColourFourUtiliseAsBaseColour;
-            this.cbxCustomColourFourPreview.Location = new System.Drawing.Point(883, 182);
+            this.cbxCustomColourFourPreview.Location = new System.Drawing.Point(669, 222);
             this.cbxCustomColourFourPreview.Name = "cbxCustomColourFourPreview";
             this.cbxCustomColourFourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxCustomColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1808,7 +1813,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxLinkHoverColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxLinkHoverColourPreview.ContextMenuStrip = this.ctxLinkHoverUtiliseAsBaseColour;
-            this.cbxLinkHoverColourPreview.Location = new System.Drawing.Point(343, 182);
+            this.cbxLinkHoverColourPreview.Location = new System.Drawing.Point(19, 222);
             this.cbxLinkHoverColourPreview.Name = "cbxLinkHoverColourPreview";
             this.cbxLinkHoverColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxLinkHoverColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1833,7 +1838,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxPressedTextColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxPressedTextColourPreview.ContextMenuStrip = this.ctxPressedTextUtiliseAsBaseColour;
-            this.cbxPressedTextColourPreview.Location = new System.Drawing.Point(1099, 16);
+            this.cbxPressedTextColourPreview.Location = new System.Drawing.Point(409, 118);
             this.cbxPressedTextColourPreview.Name = "cbxPressedTextColourPreview";
             this.cbxPressedTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxPressedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1858,7 +1863,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxFocusedTextColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxFocusedTextColourPreview.ContextMenuStrip = this.ctxFoucusedTextUtiliseAsBaseColour;
-            this.cbxFocusedTextColourPreview.Location = new System.Drawing.Point(991, 16);
+            this.cbxFocusedTextColourPreview.Location = new System.Drawing.Point(279, 118);
             this.cbxFocusedTextColourPreview.Name = "cbxFocusedTextColourPreview";
             this.cbxFocusedTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxFocusedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1883,7 +1888,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxDisabledTextColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxDisabledTextColourPreview.ContextMenuStrip = this.ctxDisabledTextUtiliseAsBaseColour;
-            this.cbxDisabledTextColourPreview.Location = new System.Drawing.Point(883, 16);
+            this.cbxDisabledTextColourPreview.Location = new System.Drawing.Point(149, 118);
             this.cbxDisabledTextColourPreview.Name = "cbxDisabledTextColourPreview";
             this.cbxDisabledTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxDisabledTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1908,7 +1913,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxDisabledControlColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxDisabledControlColourPreview.ContextMenuStrip = this.ctxDisabledUtiliseAsBaseColour;
-            this.cbxDisabledControlColourPreview.Location = new System.Drawing.Point(19, 182);
+            this.cbxDisabledControlColourPreview.Location = new System.Drawing.Point(539, 118);
             this.cbxDisabledControlColourPreview.Name = "cbxDisabledControlColourPreview";
             this.cbxDisabledControlColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxDisabledControlColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1933,7 +1938,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxLinkNormalColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxLinkNormalColourPreview.ContextMenuStrip = this.ctxLinkNormalUtiliseAsBaseColour;
-            this.cbxLinkNormalColourPreview.Location = new System.Drawing.Point(127, 182);
+            this.cbxLinkNormalColourPreview.Location = new System.Drawing.Point(669, 118);
             this.cbxLinkNormalColourPreview.Name = "cbxLinkNormalColourPreview";
             this.cbxLinkNormalColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxLinkNormalColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1958,7 +1963,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxNormalTextColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxNormalTextColourPreview.ContextMenuStrip = this.ctxNormalTextUtiliseAsBaseColour;
-            this.cbxNormalTextColourPreview.Location = new System.Drawing.Point(775, 16);
+            this.cbxNormalTextColourPreview.Location = new System.Drawing.Point(19, 118);
             this.cbxNormalTextColourPreview.Name = "cbxNormalTextColourPreview";
             this.cbxNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1983,7 +1988,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxBorderColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxBorderColourPreview.ContextMenuStrip = this.ctxBorderUtiliseAsBaseColour;
-            this.cbxBorderColourPreview.Location = new System.Drawing.Point(559, 16);
+            this.cbxBorderColourPreview.Location = new System.Drawing.Point(669, 18);
             this.cbxBorderColourPreview.Name = "cbxBorderColourPreview";
             this.cbxBorderColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxBorderColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2008,7 +2013,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxAlternativeNormalTextColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxAlternativeNormalTextColourPreview.ContextMenuStrip = this.ctxAlternativeNormalTextUtiliseAsBaseColour;
-            this.cbxAlternativeNormalTextColourPreview.Location = new System.Drawing.Point(667, 15);
+            this.cbxAlternativeNormalTextColourPreview.Location = new System.Drawing.Point(799, 18);
             this.cbxAlternativeNormalTextColourPreview.Name = "cbxAlternativeNormalTextColourPreview";
             this.cbxAlternativeNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxAlternativeNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2033,7 +2038,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxLightestColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxLightestColourPreview.ContextMenuStrip = this.ctxLightestUtiliseAsBaseColour;
-            this.cbxLightestColourPreview.Location = new System.Drawing.Point(451, 13);
+            this.cbxLightestColourPreview.Location = new System.Drawing.Point(539, 15);
             this.cbxLightestColourPreview.Name = "cbxLightestColourPreview";
             this.cbxLightestColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxLightestColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2058,7 +2063,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxLightColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxLightColourPreview.ContextMenuStrip = this.ctxLightUtiliseAsBaseColour;
-            this.cbxLightColourPreview.Location = new System.Drawing.Point(343, 13);
+            this.cbxLightColourPreview.Location = new System.Drawing.Point(409, 15);
             this.cbxLightColourPreview.Name = "cbxLightColourPreview";
             this.cbxLightColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxLightColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2083,7 +2088,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxMiddleColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxMiddleColourPreview.ContextMenuStrip = this.ctxMiddleUtiliseAsBaseColour;
-            this.cbxMiddleColourPreview.Location = new System.Drawing.Point(235, 13);
+            this.cbxMiddleColourPreview.Location = new System.Drawing.Point(279, 15);
             this.cbxMiddleColourPreview.Name = "cbxMiddleColourPreview";
             this.cbxMiddleColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxMiddleColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2108,7 +2113,7 @@ namespace PaletteExplorer.UX
             // 
             this.cbxDarkColourPreview.BackColor = System.Drawing.Color.White;
             this.cbxDarkColourPreview.ContextMenuStrip = this.ctxDarkUtiliseAsBaseColour;
-            this.cbxDarkColourPreview.Location = new System.Drawing.Point(127, 13);
+            this.cbxDarkColourPreview.Location = new System.Drawing.Point(149, 15);
             this.cbxDarkColourPreview.Name = "cbxDarkColourPreview";
             this.cbxDarkColourPreview.Size = new System.Drawing.Size(64, 64);
             this.cbxDarkColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2154,6 +2159,31 @@ namespace PaletteExplorer.UX
             this.utiliseAsBaseColourToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.utiliseAsBaseColourToolStripMenuItem.Text = "&Utilise as Base Colour";
             // 
+            // kgbPaletteProperties
+            // 
+            this.kgbPaletteProperties.Location = new System.Drawing.Point(900, 22);
+            this.kgbPaletteProperties.Name = "kgbPaletteProperties";
+            // 
+            // kgbPaletteProperties.Panel
+            // 
+            this.kgbPaletteProperties.Panel.Controls.Add(this.labelGridNormal);
+            this.kgbPaletteProperties.Size = new System.Drawing.Size(525, 552);
+            this.kgbPaletteProperties.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kgbPaletteProperties.TabIndex = 29;
+            this.kgbPaletteProperties.Values.Heading = "Palette Properties";
+            // 
+            // labelGridNormal
+            // 
+            this.labelGridNormal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelGridNormal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGridNormal.HelpVisible = false;
+            this.labelGridNormal.Location = new System.Drawing.Point(17, 14);
+            this.labelGridNormal.Name = "labelGridNormal";
+            this.labelGridNormal.Size = new System.Drawing.Size(491, 487);
+            this.labelGridNormal.TabIndex = 3;
+            this.labelGridNormal.ToolbarVisible = false;
+            // 
             // kgbSquarePreviewPane
             // 
             this.kgbSquarePreviewPane.Location = new System.Drawing.Point(12, 22);
@@ -2190,7 +2220,7 @@ namespace PaletteExplorer.UX
             this.kgbSquarePreviewPane.Panel.Controls.Add(this.pbxDarkColourPreview);
             this.kgbSquarePreviewPane.Panel.Controls.Add(this.pbxLightColourPreview);
             this.kgbSquarePreviewPane.Panel.Controls.Add(this.pbxMiddleColourPreview);
-            this.kgbSquarePreviewPane.Size = new System.Drawing.Size(1189, 467);
+            this.kgbSquarePreviewPane.Size = new System.Drawing.Size(1413, 552);
             this.kgbSquarePreviewPane.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kgbSquarePreviewPane.TabIndex = 36;
             this.kgbSquarePreviewPane.Values.Heading = "Colour Preview";
@@ -2200,7 +2230,7 @@ namespace PaletteExplorer.UX
             this.pbxRibbonTabTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxRibbonTabTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxRibbonTabTextColourPreview.ContextMenuStrip = this.ctxStatusTextColourUtiliseAsBaseColour;
-            this.pbxRibbonTabTextColourPreview.Location = new System.Drawing.Point(667, 349);
+            this.pbxRibbonTabTextColourPreview.Location = new System.Drawing.Point(799, 433);
             this.pbxRibbonTabTextColourPreview.Name = "pbxRibbonTabTextColourPreview";
             this.pbxRibbonTabTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxRibbonTabTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2211,7 +2241,7 @@ namespace PaletteExplorer.UX
             // 
             this.pbxLinkFocusedColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxLinkFocusedColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxLinkFocusedColourPreview.Location = new System.Drawing.Point(235, 183);
+            this.pbxLinkFocusedColourPreview.Location = new System.Drawing.Point(279, 225);
             this.pbxLinkFocusedColourPreview.Name = "pbxLinkFocusedColourPreview";
             this.pbxLinkFocusedColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxLinkFocusedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2223,7 +2253,7 @@ namespace PaletteExplorer.UX
             this.pbxStatusTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxStatusTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxStatusTextColourPreview.ContextMenuStrip = this.ctxStatusTextColourUtiliseAsBaseColour;
-            this.pbxStatusTextColourPreview.Location = new System.Drawing.Point(559, 349);
+            this.pbxStatusTextColourPreview.Location = new System.Drawing.Point(667, 433);
             this.pbxStatusTextColourPreview.Name = "pbxStatusTextColourPreview";
             this.pbxStatusTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxStatusTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2235,7 +2265,7 @@ namespace PaletteExplorer.UX
             this.pbxMenuTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxMenuTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxMenuTextColourPreview.ContextMenuStrip = this.ctxMenuTextColourUtiliseAsBaseColour;
-            this.pbxMenuTextColourPreview.Location = new System.Drawing.Point(451, 349);
+            this.pbxMenuTextColourPreview.Location = new System.Drawing.Point(539, 433);
             this.pbxMenuTextColourPreview.Name = "pbxMenuTextColourPreview";
             this.pbxMenuTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxMenuTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2247,7 +2277,7 @@ namespace PaletteExplorer.UX
             this.pbxCustomColourFourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomColourFourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxCustomColourFourPreview.ContextMenuStrip = this.ctxCustomColourFourUtiliseAsBaseColour;
-            this.pbxCustomColourFourPreview.Location = new System.Drawing.Point(883, 183);
+            this.pbxCustomColourFourPreview.Location = new System.Drawing.Point(1059, 225);
             this.pbxCustomColourFourPreview.Name = "pbxCustomColourFourPreview";
             this.pbxCustomColourFourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2259,7 +2289,7 @@ namespace PaletteExplorer.UX
             this.pbxCustomTextColourFivePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourFivePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxCustomTextColourFivePreview.ContextMenuStrip = this.ctxCustomTextColourFiveUtiliseAsBaseColour;
-            this.pbxCustomTextColourFivePreview.Location = new System.Drawing.Point(343, 349);
+            this.pbxCustomTextColourFivePreview.Location = new System.Drawing.Point(409, 433);
             this.pbxCustomTextColourFivePreview.Name = "pbxCustomTextColourFivePreview";
             this.pbxCustomTextColourFivePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2271,7 +2301,7 @@ namespace PaletteExplorer.UX
             this.pbxCustomTextColourFourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourFourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxCustomTextColourFourPreview.ContextMenuStrip = this.ctxCustomTextColourFourUtiliseAsBaseColour;
-            this.pbxCustomTextColourFourPreview.Location = new System.Drawing.Point(235, 350);
+            this.pbxCustomTextColourFourPreview.Location = new System.Drawing.Point(279, 434);
             this.pbxCustomTextColourFourPreview.Name = "pbxCustomTextColourFourPreview";
             this.pbxCustomTextColourFourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2283,7 +2313,7 @@ namespace PaletteExplorer.UX
             this.pbxCustomTextColourThreePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourThreePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxCustomTextColourThreePreview.ContextMenuStrip = this.ctxCustomTextColourThreeUtiliseAsBaseColour;
-            this.pbxCustomTextColourThreePreview.Location = new System.Drawing.Point(127, 350);
+            this.pbxCustomTextColourThreePreview.Location = new System.Drawing.Point(149, 434);
             this.pbxCustomTextColourThreePreview.Name = "pbxCustomTextColourThreePreview";
             this.pbxCustomTextColourThreePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2295,7 +2325,7 @@ namespace PaletteExplorer.UX
             this.pbxCustomTextColourTwoPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourTwoPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxCustomTextColourTwoPreview.ContextMenuStrip = this.ctxCustomTextColourTwoUtiliseAsBaseColour;
-            this.pbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(19, 351);
+            this.pbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(19, 433);
             this.pbxCustomTextColourTwoPreview.Name = "pbxCustomTextColourTwoPreview";
             this.pbxCustomTextColourTwoPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2307,7 +2337,7 @@ namespace PaletteExplorer.UX
             this.pbxCustomTextColourOnePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourOnePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxCustomTextColourOnePreview.ContextMenuStrip = this.ctxCustomTextColourOneUtiliseAsBaseColour;
-            this.pbxCustomTextColourOnePreview.Location = new System.Drawing.Point(1099, 183);
+            this.pbxCustomTextColourOnePreview.Location = new System.Drawing.Point(1319, 224);
             this.pbxCustomTextColourOnePreview.Name = "pbxCustomTextColourOnePreview";
             this.pbxCustomTextColourOnePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2319,7 +2349,7 @@ namespace PaletteExplorer.UX
             this.pbxCustomColourFivePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomColourFivePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxCustomColourFivePreview.ContextMenuStrip = this.ctxCustomColourFiveUtiliseAsBaseColour;
-            this.pbxCustomColourFivePreview.Location = new System.Drawing.Point(991, 183);
+            this.pbxCustomColourFivePreview.Location = new System.Drawing.Point(1189, 224);
             this.pbxCustomColourFivePreview.Name = "pbxCustomColourFivePreview";
             this.pbxCustomColourFivePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2331,7 +2361,7 @@ namespace PaletteExplorer.UX
             this.pbxCustomColourThreePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomColourThreePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxCustomColourThreePreview.ContextMenuStrip = this.ctxCustomColourThreeUtiliseAsBaseColour;
-            this.pbxCustomColourThreePreview.Location = new System.Drawing.Point(775, 183);
+            this.pbxCustomColourThreePreview.Location = new System.Drawing.Point(929, 224);
             this.pbxCustomColourThreePreview.Name = "pbxCustomColourThreePreview";
             this.pbxCustomColourThreePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2343,7 +2373,7 @@ namespace PaletteExplorer.UX
             this.pbxCustomColourTwoPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomColourTwoPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxCustomColourTwoPreview.ContextMenuStrip = this.ctxCustomColourTwoUtiliseAsBaseColour;
-            this.pbxCustomColourTwoPreview.Location = new System.Drawing.Point(667, 183);
+            this.pbxCustomColourTwoPreview.Location = new System.Drawing.Point(799, 224);
             this.pbxCustomColourTwoPreview.Name = "pbxCustomColourTwoPreview";
             this.pbxCustomColourTwoPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2355,7 +2385,7 @@ namespace PaletteExplorer.UX
             this.pbxCustomColourOnePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomColourOnePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxCustomColourOnePreview.ContextMenuStrip = this.ctxCustomColourOneUtiliseAsBaseColour;
-            this.pbxCustomColourOnePreview.Location = new System.Drawing.Point(559, 183);
+            this.pbxCustomColourOnePreview.Location = new System.Drawing.Point(669, 225);
             this.pbxCustomColourOnePreview.Name = "pbxCustomColourOnePreview";
             this.pbxCustomColourOnePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2367,7 +2397,7 @@ namespace PaletteExplorer.UX
             this.pbxLinkVisitedColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxLinkVisitedColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxLinkVisitedColourPreview.ContextMenuStrip = this.ctxLinkVisitedUtiliseAsBaseColour;
-            this.pbxLinkVisitedColourPreview.Location = new System.Drawing.Point(451, 183);
+            this.pbxLinkVisitedColourPreview.Location = new System.Drawing.Point(539, 225);
             this.pbxLinkVisitedColourPreview.Name = "pbxLinkVisitedColourPreview";
             this.pbxLinkVisitedColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxLinkVisitedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2379,7 +2409,7 @@ namespace PaletteExplorer.UX
             this.pbxLinkHoverColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxLinkHoverColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxLinkHoverColourPreview.ContextMenuStrip = this.ctxLinkHoverUtiliseAsBaseColour;
-            this.pbxLinkHoverColourPreview.Location = new System.Drawing.Point(343, 183);
+            this.pbxLinkHoverColourPreview.Location = new System.Drawing.Point(409, 225);
             this.pbxLinkHoverColourPreview.Name = "pbxLinkHoverColourPreview";
             this.pbxLinkHoverColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxLinkHoverColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2391,7 +2421,7 @@ namespace PaletteExplorer.UX
             this.pbxAlternativeNormalTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxAlternativeNormalTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxAlternativeNormalTextColourPreview.ContextMenuStrip = this.ctxAlternativeNormalTextUtiliseAsBaseColour;
-            this.pbxAlternativeNormalTextColourPreview.Location = new System.Drawing.Point(667, 15);
+            this.pbxAlternativeNormalTextColourPreview.Location = new System.Drawing.Point(799, 15);
             this.pbxAlternativeNormalTextColourPreview.Name = "pbxAlternativeNormalTextColourPreview";
             this.pbxAlternativeNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxAlternativeNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2403,7 +2433,7 @@ namespace PaletteExplorer.UX
             this.pbxLinkNormalColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxLinkNormalColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxLinkNormalColourPreview.ContextMenuStrip = this.ctxLinkNormalUtiliseAsBaseColour;
-            this.pbxLinkNormalColourPreview.Location = new System.Drawing.Point(127, 183);
+            this.pbxLinkNormalColourPreview.Location = new System.Drawing.Point(149, 224);
             this.pbxLinkNormalColourPreview.Name = "pbxLinkNormalColourPreview";
             this.pbxLinkNormalColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxLinkNormalColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2415,7 +2445,7 @@ namespace PaletteExplorer.UX
             this.pbxDisabledControlColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxDisabledControlColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxDisabledControlColourPreview.ContextMenuStrip = this.ctxDisabledUtiliseAsBaseColour;
-            this.pbxDisabledControlColourPreview.Location = new System.Drawing.Point(19, 183);
+            this.pbxDisabledControlColourPreview.Location = new System.Drawing.Point(19, 224);
             this.pbxDisabledControlColourPreview.Name = "pbxDisabledControlColourPreview";
             this.pbxDisabledControlColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxDisabledControlColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2427,7 +2457,7 @@ namespace PaletteExplorer.UX
             this.pbxPressedTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxPressedTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxPressedTextColourPreview.ContextMenuStrip = this.ctxPressedTextUtiliseAsBaseColour;
-            this.pbxPressedTextColourPreview.Location = new System.Drawing.Point(1099, 15);
+            this.pbxPressedTextColourPreview.Location = new System.Drawing.Point(1319, 15);
             this.pbxPressedTextColourPreview.Name = "pbxPressedTextColourPreview";
             this.pbxPressedTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxPressedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2439,7 +2469,7 @@ namespace PaletteExplorer.UX
             this.pbxFocusedTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxFocusedTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxFocusedTextColourPreview.ContextMenuStrip = this.ctxFoucusedTextUtiliseAsBaseColour;
-            this.pbxFocusedTextColourPreview.Location = new System.Drawing.Point(991, 15);
+            this.pbxFocusedTextColourPreview.Location = new System.Drawing.Point(1189, 15);
             this.pbxFocusedTextColourPreview.Name = "pbxFocusedTextColourPreview";
             this.pbxFocusedTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxFocusedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2451,7 +2481,7 @@ namespace PaletteExplorer.UX
             this.pbxDisabledTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxDisabledTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxDisabledTextColourPreview.ContextMenuStrip = this.ctxDisabledTextUtiliseAsBaseColour;
-            this.pbxDisabledTextColourPreview.Location = new System.Drawing.Point(883, 15);
+            this.pbxDisabledTextColourPreview.Location = new System.Drawing.Point(1059, 15);
             this.pbxDisabledTextColourPreview.Name = "pbxDisabledTextColourPreview";
             this.pbxDisabledTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxDisabledTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2463,7 +2493,7 @@ namespace PaletteExplorer.UX
             this.pbxNormalTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxNormalTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxNormalTextColourPreview.ContextMenuStrip = this.ctxNormalTextUtiliseAsBaseColour;
-            this.pbxNormalTextColourPreview.Location = new System.Drawing.Point(775, 15);
+            this.pbxNormalTextColourPreview.Location = new System.Drawing.Point(929, 15);
             this.pbxNormalTextColourPreview.Name = "pbxNormalTextColourPreview";
             this.pbxNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2475,7 +2505,7 @@ namespace PaletteExplorer.UX
             this.pbxBorderColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxBorderColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxBorderColourPreview.ContextMenuStrip = this.ctxBorderUtiliseAsBaseColour;
-            this.pbxBorderColourPreview.Location = new System.Drawing.Point(559, 15);
+            this.pbxBorderColourPreview.Location = new System.Drawing.Point(669, 15);
             this.pbxBorderColourPreview.Name = "pbxBorderColourPreview";
             this.pbxBorderColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxBorderColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2499,7 +2529,7 @@ namespace PaletteExplorer.UX
             this.pbxLightestColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxLightestColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxLightestColourPreview.ContextMenuStrip = this.ctxLightestUtiliseAsBaseColour;
-            this.pbxLightestColourPreview.Location = new System.Drawing.Point(451, 15);
+            this.pbxLightestColourPreview.Location = new System.Drawing.Point(539, 15);
             this.pbxLightestColourPreview.Name = "pbxLightestColourPreview";
             this.pbxLightestColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxLightestColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2511,7 +2541,7 @@ namespace PaletteExplorer.UX
             this.pbxDarkColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxDarkColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxDarkColourPreview.ContextMenuStrip = this.ctxDarkUtiliseAsBaseColour;
-            this.pbxDarkColourPreview.Location = new System.Drawing.Point(127, 15);
+            this.pbxDarkColourPreview.Location = new System.Drawing.Point(149, 15);
             this.pbxDarkColourPreview.Name = "pbxDarkColourPreview";
             this.pbxDarkColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxDarkColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2523,7 +2553,7 @@ namespace PaletteExplorer.UX
             this.pbxLightColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxLightColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxLightColourPreview.ContextMenuStrip = this.ctxLightUtiliseAsBaseColour;
-            this.pbxLightColourPreview.Location = new System.Drawing.Point(343, 15);
+            this.pbxLightColourPreview.Location = new System.Drawing.Point(409, 15);
             this.pbxLightColourPreview.Name = "pbxLightColourPreview";
             this.pbxLightColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxLightColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2535,37 +2565,12 @@ namespace PaletteExplorer.UX
             this.pbxMiddleColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxMiddleColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxMiddleColourPreview.ContextMenuStrip = this.ctxMiddleUtiliseAsBaseColour;
-            this.pbxMiddleColourPreview.Location = new System.Drawing.Point(235, 15);
+            this.pbxMiddleColourPreview.Location = new System.Drawing.Point(279, 15);
             this.pbxMiddleColourPreview.Name = "pbxMiddleColourPreview";
             this.pbxMiddleColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxMiddleColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbxMiddleColourPreview.TabIndex = 6;
             this.pbxMiddleColourPreview.TabStop = false;
-            // 
-            // kgbPaletteProperties
-            // 
-            this.kgbPaletteProperties.Location = new System.Drawing.Point(743, 22);
-            this.kgbPaletteProperties.Name = "kgbPaletteProperties";
-            // 
-            // kgbPaletteProperties.Panel
-            // 
-            this.kgbPaletteProperties.Panel.Controls.Add(this.labelGridNormal);
-            this.kgbPaletteProperties.Size = new System.Drawing.Size(458, 467);
-            this.kgbPaletteProperties.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kgbPaletteProperties.TabIndex = 29;
-            this.kgbPaletteProperties.Values.Heading = "Palette Properties";
-            // 
-            // labelGridNormal
-            // 
-            this.labelGridNormal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelGridNormal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGridNormal.HelpVisible = false;
-            this.labelGridNormal.Location = new System.Drawing.Point(17, 14);
-            this.labelGridNormal.Name = "labelGridNormal";
-            this.labelGridNormal.Size = new System.Drawing.Size(424, 402);
-            this.labelGridNormal.TabIndex = 3;
-            this.labelGridNormal.ToolbarVisible = false;
             // 
             // tmrUpdateUI
             // 
@@ -2632,7 +2637,7 @@ namespace PaletteExplorer.UX
             // 
             // MainWindow
             // 
-            this.ClientSize = new System.Drawing.Size(1219, 700);
+            this.ClientSize = new System.Drawing.Size(1437, 782);
             this.Controls.Add(this.kryptonPanel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanel2);
@@ -2719,6 +2724,10 @@ namespace PaletteExplorer.UX
             this.ctxDarkUtiliseAsBaseColour.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cbxBaseColourPreview)).EndInit();
             this.ctxBaseUtiliseAsBaseColour.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kgbPaletteProperties.Panel)).EndInit();
+            this.kgbPaletteProperties.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kgbPaletteProperties)).EndInit();
+            this.kgbPaletteProperties.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kgbSquarePreviewPane.Panel)).EndInit();
             this.kgbSquarePreviewPane.Panel.ResumeLayout(false);
             this.kgbSquarePreviewPane.Panel.PerformLayout();
@@ -2753,10 +2762,6 @@ namespace PaletteExplorer.UX
             ((System.ComponentModel.ISupportInitialize)(this.pbxDarkColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLightColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMiddleColourPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kgbPaletteProperties.Panel)).EndInit();
-            this.kgbPaletteProperties.Panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kgbPaletteProperties)).EndInit();
-            this.kgbPaletteProperties.ResumeLayout(false);
             this.cmsViewType.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2786,11 +2791,11 @@ namespace PaletteExplorer.UX
             {
                 if (UseCircularPictureBoxes)
                 {
-                    UserInterfaceManager.CircularPictureboxHiddenPropertiesLocation(kgbCircularColourPreviewPane, cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledControlColourPreview, cbxLinkNormalColourPreview, cbxLinkFocusedColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview);
+                    UserInterfaceManager.CircularPictureboxHiddenPropertiesLocation(kgbCircularColourPreviewPane, cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledControlColourPreview, cbxLinkNormalColourPreview, cbxLinkFocusedColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview, cbxRibbonTabTextColourPreview);
                 }
                 else
                 {
-                    UserInterfaceManager.PictureboxHiddenPropertiesLocation(kgbSquarePreviewPane, pbxBaseColourPreview, pbxDarkColourPreview, pbxMiddleColourPreview, pbxLightColourPreview, pbxLightestColourPreview, pbxBorderColourPreview, pbxAlternativeNormalTextColourPreview, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledControlColourPreview, pbxLinkNormalColourPreview, pbxLinkFocusedColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview, pbxStatusTextColourPreview);
+                    UserInterfaceManager.PictureboxHiddenPropertiesLocation(kgbSquarePreviewPane, pbxBaseColourPreview, pbxDarkColourPreview, pbxMiddleColourPreview, pbxLightColourPreview, pbxLightestColourPreview, pbxBorderColourPreview, pbxAlternativeNormalTextColourPreview, pbxNormalTextColourPreview, pbxDisabledTextColourPreview, pbxFocusedTextColourPreview, pbxPressedTextColourPreview, pbxDisabledControlColourPreview, pbxLinkNormalColourPreview, pbxLinkFocusedColourPreview, pbxLinkHoverColourPreview, pbxLinkVisitedColourPreview, pbxCustomColourOnePreview, pbxCustomColourTwoPreview, pbxCustomColourThreePreview, pbxCustomColourFourPreview, pbxCustomColourFivePreview, pbxCustomTextColourOnePreview, pbxCustomTextColourTwoPreview, pbxCustomTextColourThreePreview, pbxCustomTextColourFourPreview, pbxCustomTextColourFivePreview, pbxMenuTextColourPreview, pbxStatusTextColourPreview, pbxRibbonTabTextColourPreview);
                 }
             }
             else
@@ -3366,10 +3371,36 @@ namespace PaletteExplorer.UX
             //}
             //else
             //{
-                PaletteFileEditor pfe = new PaletteFileEditor();
+            PaletteFileEditor pfe = new PaletteFileEditor();
 
-                pfe.ShowDialog();
+            pfe.ShowDialog();
             //}
+        }
+
+        private void krgbShowHidePropertiesPane_Click(object sender, EventArgs e)
+        {
+            if (krgbShowHidePropertiesPane.Checked)
+            {
+                if (UseCircularPictureBoxes)
+                {
+                    UserInterfaceManager.CircularPictureBoxPropertiesPaneVisibleLocation(kgbCircularColourPreviewPane, cbxBaseColourPreview, cbxDarkColourPreview, cbxMiddleColourPreview, cbxLightColourPreview, cbxLightestColourPreview, cbxBorderColourPreview, cbxAlternativeNormalTextColourPreview, cbxNormalTextColourPreview, cbxDisabledTextColourPreview, cbxFocusedTextColourPreview, cbxPressedTextColourPreview, cbxDisabledControlColourPreview, cbxLinkNormalColourPreview, cbxLinkFocusedColourPreview, cbxLinkHoverColourPreview, cbxLinkVisitedColourPreview, cbxCustomColourOnePreview, cbxCustomColourTwoPreview, cbxCustomColourThreePreview, cbxCustomColourFourPreview, cbxCustomColourFivePreview, cbxCustomTextColourOnePreview, cbxCustomTextColourTwoPreview, cbxCustomTextColourThreePreview, cbxCustomTextColourFourPreview, cbxCustomTextColourFivePreview, cbxMenuTextColourPreview, cbxStatusTextColourPreview, cbxRibbonTabTextColourPreview);
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                if (UseCircularPictureBoxes)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
         }
 
         private void SwitchLayouts(bool useCircularPictureBoxes)

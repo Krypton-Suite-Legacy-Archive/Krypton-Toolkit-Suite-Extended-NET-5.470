@@ -111,6 +111,7 @@
     <Compile Include="Base\Code\File Explorer\WIN32.cs" />
     <Compile Include="Base\Code\IconExtractor.cs" />
     <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
+    <Compile Include="Base\Code\Linq\LinqBridge-1.3.cs" />
     <Compile Include="Base\Code\ListViewColumnSorter.cs" />
     <Compile Include="Base\Code\Models\Typeface\PropertiesModel.cs" />
     <Compile Include="Base\Code\Models\Typeface\TypefaceCollection.cs" />
@@ -235,6 +236,9 @@
     <Compile Include="ExtendedToolkit\Controls\File Explorer\FileBrowser.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\File Explorer\FolderBrowserDialogExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -256,6 +260,12 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\ToggleSwitch.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonToggleSwitchToolbarControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\MessageBoxes\UI\KryptonExceptionMessageBox.cs" />
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
@@ -751,6 +761,9 @@
     <Compile Include="ExtendedToolkit\Utilities\Classes\Utility.cs" />
     <Compile Include="ExtendedToolkit\Utilities\Classes\WIN32.cs" />
     <Compile Include="ExtendedToolkit\Utilities\Controls\ToolStripControlHostFixed.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Utilities\Controls\ToolStripUserControlHost.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Utilities\UI\FadeForm.cs">

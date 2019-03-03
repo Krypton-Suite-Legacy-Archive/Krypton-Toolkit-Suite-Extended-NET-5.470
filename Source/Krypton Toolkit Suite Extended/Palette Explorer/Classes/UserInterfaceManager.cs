@@ -7,6 +7,7 @@ namespace PaletteExplorer.Classes
 {
     public class UserInterfaceManager
     {
+
         public static void FactoryCircularPictureboxLocation(KryptonGroupBox circularColourPreviewPane, CircularPictureBox baseColourPreview, CircularPictureBox darkColourPreview, CircularPictureBox middleColourPreview, CircularPictureBox lightColourPreview, CircularPictureBox lightestColourPreview, CircularPictureBox borderColourPreview, CircularPictureBox alternativeNormalTextColourPreview, CircularPictureBox normalTextColourPreview, CircularPictureBox disabledTextColourPreview, CircularPictureBox focusedTextColourPreview, CircularPictureBox pressedTextColourPreview, CircularPictureBox disabledColourPreview, CircularPictureBox linkNormalColourPreview, CircularPictureBox linkFocusedColourPreview, CircularPictureBox linkHoverColourPreview, CircularPictureBox linkVisitedColourPreview, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColourPreview, CircularPictureBox statusTextColourPreview)
         {
             circularColourPreviewPane.Size = new Size(708, 467);
@@ -100,65 +101,147 @@ namespace PaletteExplorer.Classes
         /// <param name="customTextColourFive">The custom text colour five.</param>
         /// <param name="menuTextColourPreview">The menu text colour preview.</param>
         /// <param name="statusTextColourPreview">The status text colour preview.</param>
-        public static void CircularPictureboxHiddenPropertiesLocation(KryptonGroupBox circularColourPreviewPane, CircularPictureBox baseColourPreview, CircularPictureBox darkColourPreview, CircularPictureBox middleColourPreview, CircularPictureBox lightColourPreview, CircularPictureBox lightestColourPreview, CircularPictureBox borderColourPreview, CircularPictureBox alternativeNormalTextColourPreview, CircularPictureBox normalTextColourPreview, CircularPictureBox disabledTextColourPreview, CircularPictureBox focusedTextColourPreview, CircularPictureBox pressedTextColourPreview, CircularPictureBox disabledColourPreview, CircularPictureBox linkNormalColourPreview, CircularPictureBox linkFocusedColourPreview, CircularPictureBox linkHoverColourPreview, CircularPictureBox linkVisitedColourPreview, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColourPreview, CircularPictureBox statusTextColourPreview)
+        public static void CircularPictureboxHiddenPropertiesLocation(KryptonGroupBox circularColourPreviewPane, CircularPictureBox baseColourPreview, CircularPictureBox darkColourPreview, CircularPictureBox middleColourPreview, CircularPictureBox lightColourPreview, CircularPictureBox lightestColourPreview, CircularPictureBox borderColourPreview, CircularPictureBox alternativeNormalTextColourPreview, CircularPictureBox normalTextColourPreview, CircularPictureBox disabledTextColourPreview, CircularPictureBox focusedTextColourPreview, CircularPictureBox pressedTextColourPreview, CircularPictureBox disabledColourPreview, CircularPictureBox linkNormalColourPreview, CircularPictureBox linkFocusedColourPreview, CircularPictureBox linkHoverColourPreview, CircularPictureBox linkVisitedColourPreview, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColourPreview, CircularPictureBox statusTextColourPreview, CircularPictureBox ribbonTabTextColourPreview)
         {
-            circularColourPreviewPane.Size = new Size(1195, 467);
+            circularColourPreviewPane.Size = new Size(882, 552);
 
-            baseColourPreview.Location = new Point(19, 13); // 14);
+            #region First Row
+            baseColourPreview.Location = new Point(19, 18);
 
-            darkColourPreview.Location = new Point(127, 13);
+            darkColourPreview.Location = new Point(149, 18);
 
-            middleColourPreview.Location = new Point(235, 13);
+            middleColourPreview.Location = new Point(279, 18);
 
-            lightColourPreview.Location = new Point(343, 13);
+            lightColourPreview.Location = new Point(409, 18);
 
-            lightestColourPreview.Location = new Point(451, 13);
+            lightestColourPreview.Location = new Point(539, 18);
 
-            borderColourPreview.Location = new Point(559, 13); // 16;
+            borderColourPreview.Location = new Point(669, 13);
 
-            alternativeNormalTextColourPreview.Location = new Point(667, 13); // 15);
+            alternativeNormalTextColourPreview.Location = new Point(779, 18);
+            #endregion
 
-            normalTextColourPreview.Location = new Point(775, 13);
+            #region Second Row
+            normalTextColourPreview.Location = new Point(19, 118);
 
-            disabledTextColourPreview.Location = new Point(883, 13);
+            disabledTextColourPreview.Location = new Point(149, 118);
 
-            focusedTextColourPreview.Location = new Point(991, 13);
+            focusedTextColourPreview.Location = new Point(279, 118);
 
-            pressedTextColourPreview.Location = new Point(1099, 13);
+            pressedTextColourPreview.Location = new Point(409, 118);
 
-            disabledColourPreview.Location = new Point(19, 182);
+            disabledColourPreview.Location = new Point(539, 118);
 
-            linkNormalColourPreview.Location = new Point(127, 182);
+            linkNormalColourPreview.Location = new Point(669, 118);
 
-            linkFocusedColourPreview.Location = new Point(235, 182);
+            linkFocusedColourPreview.Location = new Point(799, 118);
+            #endregion
 
-            linkHoverColourPreview.Location = new Point(343, 182);
+            #region Third Row
+            linkHoverColourPreview.Location = new Point(19, 222);
 
-            linkVisitedColourPreview.Location = new Point(451, 182);
+            linkVisitedColourPreview.Location = new Point(149, 222);
 
-            customColourOne.Location = new Point(559, 182);
+            customColourOne.Location = new Point(279, 222);
 
-            customColourTwo.Location = new Point(667, 182);
+            customColourTwo.Location = new Point(409, 222);
 
-            customColourThree.Location = new Point(775, 182);
+            customColourThree.Location = new Point(539, 222);
 
-            customColourFour.Location = new Point(883, 182);
+            customColourFour.Location = new Point(669, 222);
 
-            customColourFive.Location = new Point(991, 182);
+            customColourFive.Location = new Point(799, 222);
+            #endregion
 
-            customTextColourOne.Location = new Point(1099, 182);
+            #region Fourth Row
+            customTextColourOne.Location = new Point(19, 326);
 
-            customTextColourTwo.Location = new Point(19, 350);
+            customTextColourTwo.Location = new Point(149, 326);
 
-            customTextColourThree.Location = new Point(127, 350);
+            customTextColourThree.Location = new Point(279, 326);
 
-            customTextColourFour.Location = new Point(235, 350);
+            customTextColourFour.Location = new Point(409, 326);
 
-            customTextColourFive.Location = new Point(343, 350);
+            customTextColourFive.Location = new Point(539, 326);
 
-            menuTextColourPreview.Location = new Point(451, 350);
+            menuTextColourPreview.Location = new Point(669, 326);
 
-            statusTextColourPreview.Location = new Point(551, 350);
+            statusTextColourPreview.Location = new Point(799, 326);
+            #endregion
+
+            #region Fifth Row
+            ribbonTabTextColourPreview.Location = new Point(19, 430);
+            #endregion
+        }
+
+
+        public static void CircularPictureBoxPropertiesPaneVisibleLocation(KryptonGroupBox circularColourPreviewPane, CircularPictureBox baseColourPreview, CircularPictureBox darkColourPreview, CircularPictureBox middleColourPreview, CircularPictureBox lightColourPreview, CircularPictureBox lightestColourPreview, CircularPictureBox borderColourPreview, CircularPictureBox alternativeNormalTextColourPreview, CircularPictureBox normalTextColourPreview, CircularPictureBox disabledTextColourPreview, CircularPictureBox focusedTextColourPreview, CircularPictureBox pressedTextColourPreview, CircularPictureBox disabledColourPreview, CircularPictureBox linkNormalColourPreview, CircularPictureBox linkFocusedColourPreview, CircularPictureBox linkHoverColourPreview, CircularPictureBox linkVisitedColourPreview, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColourPreview, CircularPictureBox statusTextColourPreview, CircularPictureBox ribbonTabTextColourPreview)
+        {
+            #region Top Row
+            circularColourPreviewPane.Size = new Size(1413, 552);
+
+            baseColourPreview.Location = new Point(19, 13);
+
+            darkColourPreview.Location = new Point(149, 13);
+
+            middleColourPreview.Location = new Point(279, 13);
+
+            lightColourPreview.Location = new Point(409, 13);
+
+            lightestColourPreview.Location = new Point(539, 13);
+
+            borderColourPreview.Location = new Point(669, 13);
+
+            alternativeNormalTextColourPreview.Location = new Point(779, 13);
+
+            normalTextColourPreview.Location = new Point(929, 13);
+
+            disabledTextColourPreview.Location = new Point(1059, 13);
+
+            focusedTextColourPreview.Location = new Point(1189, 13);
+
+            pressedTextColourPreview.Location = new Point(1319, 13);
+            #endregion
+
+            #region Middle Row
+            disabledColourPreview.Location = new Point(19, 223);
+
+            linkNormalColourPreview.Location = new Point(149, 223);
+
+            linkFocusedColourPreview.Location = new Point(279, 223);
+
+            linkHoverColourPreview.Location = new Point(409, 223);
+
+            linkVisitedColourPreview.Location = new Point(539, 223);
+
+            customColourOne.Location = new Point(669, 223);
+
+            customColourTwo.Location = new Point(799, 223);
+
+            customColourThree.Location = new Point(929, 223);
+
+            customColourFour.Location = new Point(1059, 223);
+
+            customColourFive.Location = new Point(1189, 223);
+
+            customTextColourOne.Location = new Point(1319, 223);
+            #endregion
+
+            #region Bottom Row
+            customTextColourTwo.Location = new Point(19, 432);
+
+            customTextColourThree.Location = new Point(149, 432);
+
+            customTextColourFour.Location = new Point(279, 432);
+
+            customTextColourFive.Location = new Point(409, 432);
+
+            menuTextColourPreview.Location = new Point(539, 432);
+
+            statusTextColourPreview.Location = new Point(669, 432);
+
+            ribbonTabTextColourPreview.Location = new Point(799, 432);
+            #endregion
         }
 
         /// <summary>
@@ -193,7 +276,7 @@ namespace PaletteExplorer.Classes
         /// <param name="customTextColourFive">The custom text colour five.</param>
         /// <param name="menuTextColourPreview">The menu text colour preview.</param>
         /// <param name="statusTextColourPreview">The status text colour preview.</param>
-        public static void FactoryPictureboxLocation(KryptonGroupBox standardColourPreviewPane, PictureBox baseColourPreview, PictureBox darkColourPreview, PictureBox middleColourPreview, PictureBox lightColourPreview, PictureBox lightestColourPreview, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkFocusedColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColourPreview, PictureBox statusTextColourPreview)
+        public static void FactoryPictureboxLocation(KryptonGroupBox standardColourPreviewPane, PictureBox baseColourPreview, PictureBox darkColourPreview, PictureBox middleColourPreview, PictureBox lightColourPreview, PictureBox lightestColourPreview, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkFocusedColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColourPreview, PictureBox statusTextColourPreview, PictureBox ribbonTabTextColourPreview)
         {
             standardColourPreviewPane.Size = new Size(708, 467);
 
@@ -286,7 +369,7 @@ namespace PaletteExplorer.Classes
         /// <param name="customTextColourFive">The custom text colour five.</param>
         /// <param name="menuTextColourPreview">The menu text colour preview.</param>
         /// <param name="statusTextColourPreview">The status text colour preview.</param>
-        public static void PictureboxHiddenPropertiesLocation(KryptonGroupBox standardColourPreviewPane, PictureBox baseColourPreview, PictureBox darkColourPreview, PictureBox middleColourPreview, PictureBox lightColourPreview, PictureBox lightestColourPreview, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkFocusedColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColourPreview, PictureBox statusTextColourPreview)
+        public static void PictureboxHiddenPropertiesLocation(KryptonGroupBox standardColourPreviewPane, PictureBox baseColourPreview, PictureBox darkColourPreview, PictureBox middleColourPreview, PictureBox lightColourPreview, PictureBox lightestColourPreview, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkFocusedColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColourPreview, PictureBox statusTextColourPreview, PictureBox ribbonTabTextColourPreview)
         {
             standardColourPreviewPane.Size = new Size(1189, 467);
         }

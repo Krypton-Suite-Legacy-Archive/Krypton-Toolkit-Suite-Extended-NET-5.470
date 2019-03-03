@@ -68,10 +68,6 @@ namespace PaletteExplorer.UX
             // 
             this.kMan.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Blue;
             // 
-            // kryptonPalette1
-            // 
-            this.kryptonPalette1.CustomisedKryptonPaletteFilePath = "";
-            // 
             // kryptonPanel1
             // 
             this.kryptonPanel1.Controls.Add(this.kbtnCancel);

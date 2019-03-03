@@ -1,8 +1,13 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code.Models.Typeface;
+using ExtendedControls.ExtendedToolkit.Controls.FileExplorer;
+using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using GlobalUtilities.Classes;
 using System;
 using System.Collections;
+using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -14,7 +19,7 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
     {
         #region Designer Code
         private KryptonPanel kryptonPanel2;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip tsMenu;
         private System.Windows.Forms.ToolStripButton tsbImport;
         private System.Windows.Forms.ToolStripButton tsbExport;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -33,8 +38,8 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
         private System.Windows.Forms.ToolStripStatusLabel tslStatus;
         private KryptonButton kbtnCancel;
         private KryptonButton kbtnAccept;
-        private Controls.KryptonPromptTextBox kryptonPromptTextBox1;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private Controls.KryptonPromptTextBox kptxtTypefaceFilter;
+        private System.Windows.Forms.ToolStripButton tsbProperties;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
@@ -45,7 +50,7 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsMenu = new System.Windows.Forms.ToolStrip();
             this.tsbImport = new System.Windows.Forms.ToolStripButton();
             this.tsbExport = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -56,9 +61,9 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tscmbTextSize = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.tsbProperties = new System.Windows.Forms.ToolStripButton();
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonPromptTextBox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
+            this.kptxtTypefaceFilter = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             this.ktxtSampleText = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.klstTypefaces = new ComponentFactory.Krypton.Toolkit.KryptonListBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -67,7 +72,7 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.tsMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
             this.kryptonPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -120,26 +125,26 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             // tslStatus
             // 
             this.tslStatus.Name = "tslStatus";
-            this.tslStatus.Size = new System.Drawing.Size(1069, 17);
+            this.tslStatus.Size = new System.Drawing.Size(1100, 17);
             this.tslStatus.Spring = true;
             this.tslStatus.Text = "Ready";
             this.tslStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // kryptonPanel2
             // 
-            this.kryptonPanel2.Controls.Add(this.toolStrip1);
+            this.kryptonPanel2.Controls.Add(this.tsMenu);
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.Size = new System.Drawing.Size(1115, 25);
             this.kryptonPanel2.TabIndex = 1;
             // 
-            // toolStrip1
+            // tsMenu
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsMenu.Dock = System.Windows.Forms.DockStyle.None;
+            this.tsMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tsMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.tsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbImport,
             this.tsbExport,
             this.toolStripSeparator1,
@@ -150,12 +155,13 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.toolStripSeparator2,
             this.tscmbTextSize,
             this.toolStripSeparator3,
-            this.toolStripButton7});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(234, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.tsbProperties});
+            this.tsMenu.Location = new System.Drawing.Point(0, 0);
+            this.tsMenu.Name = "tsMenu";
+            this.tsMenu.Size = new System.Drawing.Size(265, 25);
+            this.tsMenu.TabIndex = 0;
+            this.tsMenu.Text = "toolStrip1";
+            this.tsMenu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tsMenu_KeyDown);
             // 
             // tsbImport
             // 
@@ -165,6 +171,7 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.tsbImport.Name = "tsbImport";
             this.tsbImport.Size = new System.Drawing.Size(23, 22);
             this.tsbImport.Text = "toolStripButton1";
+            this.tsbImport.Click += new System.EventHandler(this.tsbImport_Click);
             // 
             // tsbExport
             // 
@@ -174,6 +181,7 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.tsbExport.Name = "tsbExport";
             this.tsbExport.Size = new System.Drawing.Size(23, 22);
             this.tsbExport.Text = "toolStripButton2";
+            this.tsbExport.Click += new System.EventHandler(this.tsbExport_Click);
             // 
             // toolStripSeparator1
             // 
@@ -188,6 +196,7 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.tsbBold.Name = "tsbBold";
             this.tsbBold.Size = new System.Drawing.Size(23, 22);
             this.tsbBold.Text = "toolStripButton3";
+            this.tsbBold.CheckedChanged += new System.EventHandler(this.tsbBold_CheckedChanged);
             // 
             // tsbItalic
             // 
@@ -197,6 +206,7 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.tsbItalic.Name = "tsbItalic";
             this.tsbItalic.Size = new System.Drawing.Size(23, 22);
             this.tsbItalic.Text = "toolStripButton4";
+            this.tsbItalic.CheckedChanged += new System.EventHandler(this.tsbItalic_CheckedChanged);
             // 
             // tsbUnderline
             // 
@@ -206,6 +216,7 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.tsbUnderline.Name = "tsbUnderline";
             this.tsbUnderline.Size = new System.Drawing.Size(23, 22);
             this.tsbUnderline.Text = "toolStripButton5";
+            this.tsbUnderline.CheckedChanged += new System.EventHandler(this.tsbUnderline_CheckedChanged);
             // 
             // tsbStrikethrough
             // 
@@ -215,6 +226,7 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.tsbStrikethrough.Name = "tsbStrikethrough";
             this.tsbStrikethrough.Size = new System.Drawing.Size(23, 22);
             this.tsbStrikethrough.Text = "toolStripButton6";
+            this.tsbStrikethrough.CheckedChanged += new System.EventHandler(this.tsbStrikethrough_CheckedChanged);
             // 
             // toolStripSeparator2
             // 
@@ -226,24 +238,27 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.tscmbTextSize.AutoSize = false;
             this.tscmbTextSize.Name = "tscmbTextSize";
             this.tscmbTextSize.Size = new System.Drawing.Size(50, 23);
+            this.tscmbTextSize.SelectedIndexChanged += new System.EventHandler(this.tscmbTextSize_SelectedIndexChanged);
+            this.tscmbTextSize.TextChanged += new System.EventHandler(this.tscmbTextSize_TextChanged);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton7
+            // tsbProperties
             // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = global::ExtendedControls.Properties.Resources.text_lowercase;
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton7.Text = "toolStripButton7";
+            this.tsbProperties.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbProperties.Image = global::ExtendedControls.Properties.Resources.text_lowercase;
+            this.tsbProperties.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbProperties.Name = "tsbProperties";
+            this.tsbProperties.Size = new System.Drawing.Size(23, 22);
+            this.tsbProperties.Text = "toolStripButton7";
+            this.tsbProperties.Click += new System.EventHandler(this.tsbProperties_Click);
             // 
             // kryptonPanel3
             // 
-            this.kryptonPanel3.Controls.Add(this.kryptonPromptTextBox1);
+            this.kryptonPanel3.Controls.Add(this.kptxtTypefaceFilter);
             this.kryptonPanel3.Controls.Add(this.ktxtSampleText);
             this.kryptonPanel3.Controls.Add(this.klstTypefaces);
             this.kryptonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -252,18 +267,22 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.kryptonPanel3.Size = new System.Drawing.Size(1115, 717);
             this.kryptonPanel3.TabIndex = 0;
             // 
-            // kryptonPromptTextBox1
+            // kptxtTypefaceFilter
             // 
-            this.kryptonPromptTextBox1.DrawPrompt = true;
-            this.kryptonPromptTextBox1.FocusSelect = true;
-            this.kryptonPromptTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonPromptTextBox1.Location = new System.Drawing.Point(12, 6);
-            this.kryptonPromptTextBox1.Name = "kryptonPromptTextBox1";
-            this.kryptonPromptTextBox1.PromptForeColour = System.Drawing.SystemColors.GrayText;
-            this.kryptonPromptTextBox1.PromptText = "Filter typefaces";
-            this.kryptonPromptTextBox1.PromptTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonPromptTextBox1.Size = new System.Drawing.Size(333, 29);
-            this.kryptonPromptTextBox1.TabIndex = 2;
+            this.kptxtTypefaceFilter.DrawPrompt = true;
+            this.kptxtTypefaceFilter.FocusSelect = true;
+            this.kptxtTypefaceFilter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtTypefaceFilter.Location = new System.Drawing.Point(12, 6);
+            this.kptxtTypefaceFilter.Name = "kptxtTypefaceFilter";
+            this.kptxtTypefaceFilter.PromptForeColour = System.Drawing.SystemColors.GrayText;
+            this.kptxtTypefaceFilter.PromptText = "Filter typefaces";
+            this.kptxtTypefaceFilter.PromptTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtTypefaceFilter.Size = new System.Drawing.Size(333, 29);
+            this.kptxtTypefaceFilter.TabIndex = 2;
+            this.kptxtTypefaceFilter.Click += new System.EventHandler(this.kptxtTypefaceFilter_Click);
+            this.kptxtTypefaceFilter.TextChanged += new System.EventHandler(this.kptxtTypefaceFilter_TextChanged);
+            this.kptxtTypefaceFilter.Enter += new System.EventHandler(this.kptxtTypefaceFilter_Enter);
+            this.kptxtTypefaceFilter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.kptxtTypefaceFilter_KeyDown);
             // 
             // ktxtSampleText
             // 
@@ -275,6 +294,8 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.ktxtSampleText.TabIndex = 1;
             this.ktxtSampleText.Text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ\r\nabcdefghijklmnopqrstuvwxyz\r\n1234567890\r\n\r\n/\\|!?%$&()[" +
     "]{}<>+-~=*@;:,._\r\n\r\nLorem ipsum dolor sit amet";
+            this.ktxtSampleText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ktxtSampleText_KeyDown);
+            this.ktxtSampleText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ktxtSampleText_KeyPress);
             // 
             // klstTypefaces
             // 
@@ -282,6 +303,9 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.klstTypefaces.Name = "klstTypefaces";
             this.klstTypefaces.Size = new System.Drawing.Size(333, 667);
             this.klstTypefaces.TabIndex = 0;
+            this.klstTypefaces.SelectedIndexChanged += new System.EventHandler(this.klstTypefaces_SelectedIndexChanged);
+            this.klstTypefaces.KeyDown += new System.Windows.Forms.KeyEventHandler(this.klstTypefaces_KeyDown);
+            this.klstTypefaces.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.klstTypefaces_KeyPress);
             // 
             // panel1
             // 
@@ -308,6 +332,8 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Typeface";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TypefaceSelector_KeyDown);
+            this.Resize += new System.EventHandler(this.TypefaceSelector_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
@@ -316,8 +342,8 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.tsMenu.ResumeLayout(false);
+            this.tsMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
             this.kryptonPanel3.ResumeLayout(false);
             this.kryptonPanel3.PerformLayout();
@@ -327,6 +353,7 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
         #endregion
 
         #region Variables
+        private bool _controlKey = false;
         private ArrayList _sizes;
         private Font _oldTypeface, _newTypeface;
         private TypefaceCollection _typefaces;
@@ -660,6 +687,358 @@ namespace ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface
             }
 
             return null;
+        }
+
+        protected void Filter(string text)
+        {
+            if (string.IsNullOrEmpty(text) || text.Trim().Length == 0)
+            {
+                klstTypefaces.SelectedItem = null;
+
+                klstTypefaces.DataSource = null;
+
+                klstTypefaces.DataSource = _typefaces;
+            }
+            else
+            {
+                TypefaceCollection collection = new TypefaceCollection();
+
+                foreach (TypefaceModel model in _typefaces)
+                {
+                    if (model.TypefaceName.ToLower().Contains(text.ToLower()))
+                    {
+                        collection.Add(model);
+                    }
+                }
+
+                klstTypefaces.SelectedItem = null;
+
+                klstTypefaces.DataSource = null;
+
+                klstTypefaces.DataSource = collection;
+            }
+        }
+
+        protected void Browse()
+        {
+            FolderBrowserDialogExtended dialog = new FolderBrowserDialogExtended();
+
+            dialog.Description = "Select a folder with typefaces.";
+
+            dialog.ShowNewFolderButton = true;
+
+            dialog.ShowEditBox = true;
+
+            dialog.SelectedPath = _currentTypefaceDirectory;
+
+            dialog.ShowFullPathInEditBox = true;
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    _currentTypefaceDirectory = dialog.SelectedPath;
+
+                    _lister.LoadTypefaceFromDirectoryAsync(dialog.SelectedPath);
+
+                    SetLoadingState();
+                }
+                catch (Exception exc)
+                {
+                    ExceptionHandler.CaptureException(exc);
+                }
+            }
+        }
+
+        protected void Export()
+        {
+            try
+            {
+                if (_typefaces == null || _typefaces.Families == null || _typefaces.Families.Length == 0)
+                {
+                    if (string.IsNullOrEmpty(_currentTypefaceDirectory) || _currentTypefaceDirectory.Trim().Length == 0)
+                    {
+                        ExtendedKryptonMessageBox.Show("Please, select a directory with typefaces.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        return;
+                    }
+
+                    _typefaces = _lister.LoadTypefaceFromDirectory(_currentTypefaceDirectory);
+
+                    RefreshTypefaceList();
+                }
+
+                if (_sfd.ShowDialog() == DialogResult.OK)
+                {
+                    string path = _sfd.FileName;
+
+                    Bitmap bmp = _lister.CreateTypefaceList(_typefaces.Collection, tsbBold.Checked, tsbItalic.Checked, tsbUnderline.Checked, tsbStrikethrough.Checked, TypefaceSize, TypefaceSizeUnits, ktxtSampleText.Text);
+
+                    bmp.Save(path, ImageFormat.Bmp);
+
+                    const bool SHOW_PREVIEW = true;
+
+                    if (SHOW_PREVIEW && File.Exists(path))
+                    {
+                        Process.Start(path);
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                ExceptionHandler.CaptureException(exc);
+            }
+        }
+
+        protected bool ProcessKeyboardShortcut(KeyEventArgs e)
+        {
+            if (e.Control && !e.Alt && !e.Shift)
+            {
+                switch (e.KeyCode)
+                {
+                    //Find - focus filter
+                    case Keys.F:
+                        kptxtTypefaceFilter.Focus();
+                        return true;
+
+                    //Edit - focus text editor
+                    case Keys.E:
+                        ktxtSampleText.Focus();
+                        return true;
+
+                    //Focus list of fonts
+                    case Keys.W:
+                        klstTypefaces.Focus();
+                        return true;
+
+                    //Open font directory
+                    case Keys.O:
+                        Browse();
+                        return true;
+
+                    //Save image
+                    case Keys.S:
+                        Export();
+                        return true;
+
+                    //Toggle bold
+                    case Keys.B:
+                        tsbBold.Checked ^= true;
+                        return true;
+
+                    //Toggle italic
+                    case Keys.I:
+                        tsbItalic.Checked ^= true;
+                        return true;
+
+                    //Toggle underline
+                    case Keys.U:
+                        tsbUnderline.Checked ^= true;
+                        return true;
+
+                    //Increase font size
+                    case Keys.Add:
+                        TypefaceSize = 1.1f * TypefaceSize; //10% increase
+                        return true;
+
+                    //Decrease font size
+                    case Keys.Subtract:
+                        TypefaceSize = 0.9f * TypefaceSize; //10% decrease
+                        return true;
+                }
+            }
+
+            return false;
+        }
+
+        protected void SetLoadingState()
+        {
+            klstTypefaces.DataSource = null;
+
+            klstTypefaces.Items.Clear();
+
+            klstTypefaces.Items.Add("Loading available typefaces, please wait...");
+
+            klstTypefaces.Enabled = false;
+
+            SetStatus("Loading available typefaces, please wait...");
+        }
+
+        private void SetStatus(string status)
+        {
+            Status = status;
+        }
+
+        private void ResizeWindow()
+        {
+            klstTypefaces.Height = ClientSize.Height - 85;
+
+            ktxtSampleText.Width = ClientSize.Width - 248;
+
+            ktxtSampleText.Height = ClientSize.Height - 61;
+        }
+        #endregion
+
+        #region Event Handlers
+        private void TypefaceSelector_Resize(object sender, EventArgs e)
+        {
+            ResizeWindow();
+        }
+
+        private void tsbExport_Click(object sender, EventArgs e)
+        {
+            Export();
+        }
+
+        private void klstTypefaces_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RefreshTypefacePreview();
+        }
+
+        private void tscmbTextSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RefreshTypefacePreview();
+        }
+
+        private void tscmbTextSize_TextChanged(object sender, EventArgs e)
+        {
+            RefreshTypefacePreview();
+        }
+
+        private void tsbBold_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshTypefacePreview();
+        }
+
+        private void tsbItalic_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshTypefacePreview();
+        }
+
+        private void tsbUnderline_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshTypefacePreview();
+        }
+
+        private void tsbStrikethrough_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshTypefacePreview();
+        }
+
+        private void tsbProperties_Click(object sender, EventArgs e)
+        {
+            if (_properties == null)
+            {
+                _properties = new TypefaceProperties();
+
+                _properties.FormClosed += new FormClosedEventHandler(delegate
+                {
+                    _properties = null;
+                });
+
+                _properties.LoadTypeface(GetTypeface(), SelectedTypeface);
+
+                _properties.Show();
+            }
+            else
+            {
+                _properties.BringToFront();
+            }
+        }
+
+        private void kptxtTypefaceFilter_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kptxtTypefaceFilter_TextChanged(object sender, EventArgs e)
+        {
+            Filter(kptxtTypefaceFilter.Text);
+        }
+
+        private void kptxtTypefaceFilter_Click(object sender, EventArgs e)
+        {
+            kptxtTypefaceFilter.Focus();
+        }
+
+        private void TypefaceSelector_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.Handled = ProcessKeyboardShortcut(e);
+        }
+
+        private void klstTypefaces_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.Handled = ProcessKeyboardShortcut(e);
+        }
+
+        private void klstTypefaces_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void kptxtTypefaceFilter_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Up:
+                    //UX: Select previous font
+                    if (klstTypefaces.Enabled)
+                    {
+                        int up = klstTypefaces.SelectedIndex - 1;
+
+                        if (up >= 0 && up < klstTypefaces.Items.Count)
+                        {
+                            klstTypefaces.SelectedIndex = up;
+                        }
+                    }
+                    break;
+
+                case Keys.Down:
+                    //UX: Select next font
+                    if (klstTypefaces.Enabled)
+                    {
+                        int down = klstTypefaces.SelectedIndex + 1;
+
+                        if (down >= 0 && down < klstTypefaces.Items.Count)
+                        {
+                            klstTypefaces.SelectedIndex = down;
+                        }
+                    }
+                    break;
+
+                default:
+                    e.Handled = ProcessKeyboardShortcut(e);
+                    break;
+            }
+        }
+
+        private void ktxtSampleText_KeyDown(object sender, KeyEventArgs e)
+        {
+            _controlKey = e.Control && !e.Alt && !e.Shift;
+
+            if (e.Control && !e.Alt && !e.Shift && e.KeyCode == Keys.A)
+            {
+                ktxtSampleText.SelectAll();
+            }
+            else
+            {
+                e.Handled = ProcessKeyboardShortcut(e);
+            }
+        }
+
+        private void ktxtSampleText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = _controlKey && e.KeyChar == '\t';
+        }
+
+        private void tsMenu_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.Handled = ProcessKeyboardShortcut(e);
+        }
+
+        private void tsbImport_Click(object sender, EventArgs e)
+        {
+            Browse();
         }
         #endregion
     }
