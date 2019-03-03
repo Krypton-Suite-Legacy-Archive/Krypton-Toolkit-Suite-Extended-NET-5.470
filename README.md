@@ -16,6 +16,29 @@
 
 ======
 
+## 2019-03-01 Build 796
+* Build 796 (build date Friday 1st, March 2019) is now available on NuGet
+* New colour wheel colour dialog
+* New toggle switch control
+* New rounded textbox control
+* Integrated `ookii.dialogs` code
+* Working on new folder browser dialog and file browser
+* New theme chooser component (proof of concept for a more sophisticated UI for next update)
+* Groundwork for new elements for next update
+* Upgraded to Krypton Toolkit Suite - version: **5.470.720**
+* Removed **LinqBridge** requirement, [#48](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/48)
+* Reorganised `Playground` test application
+
+======
+
+## 2019-02-01 Extended Renderer Integration
+* Fully merged the `ExtendedRenderer` project codebase
+* Tidy up control placement in code
+* Upgraded to Krypton Toolkit Suite - version: **5.470.717**
+* New NuGet package, build 700 (build date Friday 1st, February 2019) is now available
+
+======
+
 ## 2019-09-01 Build 653
 * Build 653 has been uploaded to NuGet
 
