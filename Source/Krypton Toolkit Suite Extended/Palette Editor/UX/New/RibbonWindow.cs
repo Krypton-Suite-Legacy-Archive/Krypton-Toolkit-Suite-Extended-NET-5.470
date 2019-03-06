@@ -4,7 +4,7 @@ using Core.Classes.Other;
 using Core.Classes.Palette;
 using Core.Settings.Classes;
 using Core.UX;
-using GlobalUtilities.Interfaces;
+using Core.Interfaces;
 using PaletteEditor.Classes;
 using System;
 using System.Drawing;

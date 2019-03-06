@@ -477,5 +477,12 @@ namespace Playground
 
             tr.Show();
         }
+
+        private void kryptonButton1_Click_1(object sender, EventArgs e)
+        {
+            FlashingLabelTest flashingLabel = new FlashingLabelTest();
+
+            flashingLabel.Show();
+        }
     }
 }

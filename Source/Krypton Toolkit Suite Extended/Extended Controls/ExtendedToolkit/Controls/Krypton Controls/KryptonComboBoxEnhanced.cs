@@ -49,7 +49,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         #region ... Properties ... 
 
         private bool _enabled = true;
+#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
         public bool Enabled
+#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         {
             get { return _enabled; }
             set

@@ -11,62 +11,6 @@ namespace ExtendedControls.Base.Code.Theming
     /// </summary>
     public class KryptonThemeManager
     {
-        #region Variables
-        /// <summary>
-        /// The supported themes
-        /// </summary>
-        private static string[] _supportedThemes = new string[] {
-            "Professional - System",
-
-            "Professional - Office 2003",
-
-            "Office 2007 - Black",
-
-            "Office 2007 - Blue",
-
-            "Office 2007 - Silver",
-
-            "Office 2007 - White",
-
-            "Office 2010 - Black",
-
-            "Office 2010 - Blue",
-
-            "Office 2010 - Silver",
-
-            "Office 2010 - White",
-
-            "Office 2013",
-
-            "Office 2013 - White",
-
-            "Office 365 - Black",
-
-            "Office 365 - Blue",
-
-            "Office 365 - Silver",
-
-            "Office 365 - White",
-
-            "Sparkle - Blue",
-
-            "Sparkle - Orange",
-
-            "Sparkle - Purple",
-
-            "Custom",
-        };
-        #endregion
-
-        #region Properties
-        /// <summary>
-        /// Gets the supported themes.
-        /// </summary>
-        /// <value>
-        /// The supported themes.
-        /// </value>
-        public static string[] SupportedThemes { get => _supportedThemes; }
-        #endregion
 
         #region Methods
         /// <summary>
@@ -82,7 +26,7 @@ namespace ExtendedControls.Base.Code.Theming
                 throw new ArgumentNullException();
             }
 
-            foreach (string theme in KryptonThemeManager.SupportedThemes)
+            foreach (string theme in list)
             {
                 list.Add(theme);
             }
@@ -97,7 +41,6 @@ namespace ExtendedControls.Base.Code.Theming
         /// Propagates the theme ComboBox.
         /// </summary>
         /// <param name="target">The target.</param>
-        /// <param name="list">The list.</param>
         /// <exception cref="ArgumentNullException"></exception>
         public static void PropagateThemeComboBox(KryptonComboBox target, ArrayList list)
         {

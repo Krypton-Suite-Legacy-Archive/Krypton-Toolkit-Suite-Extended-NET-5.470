@@ -31,6 +31,7 @@ using System.Drawing.Drawing2D;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using Core;
 
 namespace ExtendedFileDialogs.Controls.Old
 {
@@ -360,7 +361,7 @@ namespace ExtendedFileDialogs.Controls.Old
             }
             catch (Exception exc)
             {
-
+                ExceptionHandler.CaptureException(exc);
             }
         }
 
@@ -481,7 +482,7 @@ namespace ExtendedFileDialogs.Controls.Old
                     }
                     catch (Exception exc)
                     {
-
+                        ExceptionHandler.CaptureException(exc);
                     }
                     finally
                     {
@@ -580,7 +581,7 @@ namespace ExtendedFileDialogs.Controls.Old
             }
             catch (Exception ex)
             {
-
+                ExceptionHandler.CaptureException(ex);
             }
             return returnDialogResult;
         }
@@ -604,7 +605,7 @@ namespace ExtendedFileDialogs.Controls.Old
 
             MSDialog = fdlg;
 
-           // _dlgWrapper = new WholeDialogWrapper(this);
+            // _dlgWrapper = new WholeDialogWrapper(this);
 
             try
             {
@@ -624,7 +625,7 @@ namespace ExtendedFileDialogs.Controls.Old
             }
             catch (Exception ex)
             {
-
+                ExceptionHandler.CaptureException(ex);
             }
 
             return returnDialogResult;

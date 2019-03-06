@@ -18,7 +18,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
         public delegate void ChangePaletteEventHandler(object sender, EventArgs e);
 
+#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
         public event ChangePaletteEventHandler PaletteChanged;
+#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
 
         #region Constructor
         public KryptonPaletteChooserComboBox(KryptonManager manager = null)
@@ -42,7 +44,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
             DropDownStyle = ComboBoxStyle.DropDownList;
 
-           
+
         }
         #endregion
 

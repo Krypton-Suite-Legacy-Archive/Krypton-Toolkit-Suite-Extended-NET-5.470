@@ -1,6 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using Core.Classes.Colours;
-using GlobalUtilities.Classes;
+using Core.Classes;
 using System;
 using System.Windows.Forms;
 

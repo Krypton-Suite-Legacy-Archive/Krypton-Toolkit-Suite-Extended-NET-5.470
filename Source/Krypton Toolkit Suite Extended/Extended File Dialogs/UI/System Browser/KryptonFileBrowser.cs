@@ -1,10 +1,11 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
-using GlobalUtilities.Classes;
+using Core.Classes;
 using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using GlobalUtilities.Classes;
 
 namespace ExtendedControls.ExtendedToolkit.UI.SystemBrowser
 {

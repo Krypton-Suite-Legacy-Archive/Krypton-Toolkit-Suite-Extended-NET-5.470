@@ -1,6 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Base.Code.Exceptions;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
-using GlobalUtilities.Classes;
 using System;
 using System.Windows.Forms;
 

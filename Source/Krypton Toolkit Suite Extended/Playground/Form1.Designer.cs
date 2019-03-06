@@ -68,6 +68,8 @@ namespace Playground
             this.selectAllToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.samplesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adobeColourDialogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aeroWizardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.indexToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -127,8 +129,7 @@ namespace Playground
             this.flashingLabel1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.FlashingLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.adobeColourDialogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aeroWizardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -208,6 +209,10 @@ namespace Playground
             this.kuacsbElevate.Values.Text = "Elevate";
             this.kuacsbElevate.Click += new System.EventHandler(this.kuacsbElevate_Click);
             // 
+            // kryptonManager1
+            // 
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Blue;
+            // 
             // kPal
             // 
             this.kPal.CustomisedKryptonPaletteFilePath = null;
@@ -223,7 +228,7 @@ namespace Playground
             this.helpToolStripMenuItem1});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(295, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(175, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -409,8 +414,20 @@ namespace Playground
             this.adobeColourDialogToolStripMenuItem,
             this.aeroWizardToolStripMenuItem});
             this.samplesToolStripMenuItem.Name = "samplesToolStripMenuItem";
-            this.samplesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.samplesToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.samplesToolStripMenuItem.Text = "&Samples";
+            // 
+            // adobeColourDialogToolStripMenuItem
+            // 
+            this.adobeColourDialogToolStripMenuItem.Name = "adobeColourDialogToolStripMenuItem";
+            this.adobeColourDialogToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.adobeColourDialogToolStripMenuItem.Text = "Adobe Colour Dialog";
+            // 
+            // aeroWizardToolStripMenuItem
+            // 
+            this.aeroWizardToolStripMenuItem.Name = "aeroWizardToolStripMenuItem";
+            this.aeroWizardToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.aeroWizardToolStripMenuItem.Text = "Aero Wizard";
             // 
             // helpToolStripMenuItem1
             // 
@@ -485,6 +502,7 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonButton1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton21);
             this.kryptonPanel1.Controls.Add(this.roundedTextbox1);
             this.kryptonPanel1.Controls.Add(this.kryptonSearchBox1);
@@ -993,17 +1011,14 @@ namespace Playground
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // adobeColourDialogToolStripMenuItem
+            // kryptonButton1
             // 
-            this.adobeColourDialogToolStripMenuItem.Name = "adobeColourDialogToolStripMenuItem";
-            this.adobeColourDialogToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.adobeColourDialogToolStripMenuItem.Text = "Adobe Colour Dialog";
-            // 
-            // aeroWizardToolStripMenuItem
-            // 
-            this.aeroWizardToolStripMenuItem.Name = "aeroWizardToolStripMenuItem";
-            this.aeroWizardToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.aeroWizardToolStripMenuItem.Text = "Aero Wizard";
+            this.kryptonButton1.Location = new System.Drawing.Point(663, 308);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton1.TabIndex = 52;
+            this.kryptonButton1.Values.Text = "Test Bench";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click_1);
             // 
             // Form1
             // 
@@ -1144,6 +1159,7 @@ namespace Playground
         private ToolStripMenuItem samplesToolStripMenuItem;
         private ToolStripMenuItem adobeColourDialogToolStripMenuItem;
         private ToolStripMenuItem aeroWizardToolStripMenuItem;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }
 

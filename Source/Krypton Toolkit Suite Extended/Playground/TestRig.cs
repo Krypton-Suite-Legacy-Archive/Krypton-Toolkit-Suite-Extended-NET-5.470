@@ -4,6 +4,7 @@ using Core.UX.Colours;
 using Core.UX.Options;
 using ExtendedControls.ExtendedToolkit.Controls.Drawing.UI;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface;
 using ExtendedControls.ExtendedToolkit.UI.Colours;
 using ExtendedControls.ExtendedToolkit.UI.Dialogues;
 using ExtendedControls.ExtendedToolkit.UI.SystemBrowser;
@@ -483,9 +484,13 @@ namespace Playground
 
         private void kbtnTypefaceSelectionDialogue_Click(object sender, EventArgs e)
         {
-            TypefaceSelectionDialogue typefaceSelectionDialogue = new TypefaceSelectionDialogue();
+            //TypefaceSelectionDialogue typefaceSelectionDialogue = new TypefaceSelectionDialogue();
 
-            typefaceSelectionDialogue.Show();
+            //typefaceSelectionDialogue.Show();
+
+            TypefaceSelector typefaceSelector = new TypefaceSelector();
+
+            typefaceSelector.Show();
         }
 
         private void kbtnThemeOptions_Click(object sender, EventArgs e)

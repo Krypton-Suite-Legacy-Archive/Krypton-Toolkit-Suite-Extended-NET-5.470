@@ -2,11 +2,12 @@
 
 using ComponentFactory.Krypton.Toolkit;
 
+using Core.Classes;
 using GlobalUtilities.Classes;
-
 using KryptonApplicationUpdater.Classes;
 using KryptonApplicationUpdater.Classes.SettingsManager;
 using KryptonApplicationUpdater.Interfaces;
+using KryptonExtendedToolkit.Base.Code;
 
 namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
 {

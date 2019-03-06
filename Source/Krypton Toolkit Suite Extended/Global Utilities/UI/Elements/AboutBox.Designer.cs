@@ -1,4 +1,4 @@
-﻿namespace GlobalUtilities.UI.Elements
+﻿namespace Core.UI.Elements
 {
     partial class AboutBox
     {

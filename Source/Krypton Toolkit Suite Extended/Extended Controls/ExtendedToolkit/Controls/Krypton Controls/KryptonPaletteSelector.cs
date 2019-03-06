@@ -292,11 +292,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
         private PaletteMode GetPaletteMode(string themeName)
         {
-            PaletteMode result;
-
             if (themeName == "Custom")
             {
-               return PaletteMode.Custom;
+                return PaletteMode.Custom;
             }
             else if (themeName == "Global")
             {

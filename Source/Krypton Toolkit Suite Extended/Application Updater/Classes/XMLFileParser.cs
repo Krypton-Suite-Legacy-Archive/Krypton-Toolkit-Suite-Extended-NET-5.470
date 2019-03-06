@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
 
-using GlobalUtilities.Classes;
+using Core.Classes;
 
 using KryptonApplicationUpdater.Classes.SettingsManager;
 using KryptonApplicationUpdater.Interfaces;

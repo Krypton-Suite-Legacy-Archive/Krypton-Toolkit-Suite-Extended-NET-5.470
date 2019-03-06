@@ -72,6 +72,9 @@
     <Compile Include="CommandLinkStyles.Designer.cs">
       <DependentUpon>CommandLinkStyles.cs</DependentUpon>
     </Compile>
+    <Compile Include="FlashingLabelTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CommandLinkStyles.resx">
       <DependentUpon>CommandLinkStyles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlashingLabelTest.resx">
+      <DependentUpon>FlashingLabelTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -200,7 +206,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.741</Version>
+      <Version>5.470.717</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

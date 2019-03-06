@@ -1,7 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using GlobalUtilities.Classes;
+using Core;
+using Core.Classes;
 using System;
-using System.Windows.Forms;
 
 namespace PaletteExplorer.UX
 {
@@ -294,7 +294,7 @@ namespace PaletteExplorer.UX
             }
             catch (Exception exc)
             {
-
+                ExceptionHandler.CaptureException(exc);
             }
         }
     }

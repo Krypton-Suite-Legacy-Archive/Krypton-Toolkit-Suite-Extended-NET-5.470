@@ -1,6 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Base.Code.Exceptions;
 using ExtendedControls.Base.Enumerations;
-using GlobalUtilities.Classes;
 using System;
 using System.Diagnostics;
 using System.Globalization;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace GlobalUtilities.Classes
+namespace Core.Classes
 {
     /// <summary>
     /// Provides a method for extracting images from the system via LoadImage

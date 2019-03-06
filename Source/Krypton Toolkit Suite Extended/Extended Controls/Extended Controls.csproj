@@ -107,6 +107,7 @@
     <Compile Include="Base\Code\Drawing\RoundedRectangleF.cs" />
     <Compile Include="Base\Code\Drawing\Transparenter.cs" />
     <Compile Include="Base\Code\ExceptionHandler.cs" />
+    <Compile Include="Base\Code\Exceptions\ExceptionHandler.cs" />
     <Compile Include="Base\Code\File Explorer\FileSizeFormatProvider.cs" />
     <Compile Include="Base\Code\File Explorer\WIN32.cs" />
     <Compile Include="Base\Code\IconExtractor.cs" />
@@ -1078,7 +1079,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.741</Version>
+      <Version>5.470.717</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>

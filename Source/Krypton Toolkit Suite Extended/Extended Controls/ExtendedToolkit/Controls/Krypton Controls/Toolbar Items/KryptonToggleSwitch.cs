@@ -16,7 +16,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToolbarItems
 
         #region Properties
         [Category("Control")]
-        public KryptonToggleSwitchToolbarControl Control { get => Control as KryptonToggleSwitchToolbarControl; }
+        public new KryptonToggleSwitchToolbarControl Control { get => Control as KryptonToggleSwitchToolbarControl; }
         #endregion
 
         #region Constructor

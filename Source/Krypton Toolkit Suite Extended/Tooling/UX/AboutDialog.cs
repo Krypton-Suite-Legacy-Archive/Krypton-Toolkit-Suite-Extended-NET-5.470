@@ -1,5 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using GlobalUtilities.Interfaces;
+using Core.Interfaces;
 using System;
 
 namespace Core.UX

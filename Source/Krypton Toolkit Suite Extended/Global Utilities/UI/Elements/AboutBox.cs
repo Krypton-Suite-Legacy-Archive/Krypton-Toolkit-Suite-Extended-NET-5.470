@@ -1,9 +1,9 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using GlobalUtilities.Interfaces;
+using Core.Interfaces;
 using System;
 using System.Drawing;
 
-namespace GlobalUtilities.UI.Elements
+namespace Core.UI.Elements
 {
     public partial class AboutBox : KryptonForm, IAbout
     {

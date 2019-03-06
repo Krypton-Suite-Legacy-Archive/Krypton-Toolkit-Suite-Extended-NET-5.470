@@ -226,12 +226,15 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
         #region Variables
         private ArrayList _styles;
         private bool _developmentMode;
+        private KryptonManager _manager;
         private KryptonPalette _kryptonPalette;
         private Version _currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
         #endregion
 
         #region Properties
         public bool DevelopmentMode { get => _developmentMode; set => _developmentMode = value; }
+
+        public KryptonManager Manager { get => _manager; set => _manager = value; }
 
         public KryptonPalette KryptonPalette { get => _kryptonPalette; set => _kryptonPalette = value; }
         #endregion
@@ -245,6 +248,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             Location = new Point(xCoordinate, yCoordinate);
 
             _styles = new ArrayList();
+
+            Manager = new KryptonManager();
 
             KryptonThemeManager.PropagateThemeArray(_styles);
 
@@ -262,7 +267,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
 
         private void kbtnApply_Click(object sender, EventArgs e)
         {
-
+            //ThemeManager.ApplyGlobalTheme(Manager, ThemeManager.ApplyThemeMode(kcmbSelection.Text));
         }
 
         private void kbtnBrowse_Click(object sender, EventArgs e)
