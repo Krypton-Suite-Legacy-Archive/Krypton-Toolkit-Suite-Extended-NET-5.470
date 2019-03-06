@@ -240,6 +240,9 @@
     <Compile Include="ExtendedToolkit\Controls\File Explorer\FolderBrowserDialogExtended.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\CircularProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -859,6 +862,7 @@
     <None Include="Resources\text_lowercase.png" />
     <None Include="Resources\text_strikethrough.png" />
     <None Include="Resources\text_underline.png" />
+    <Content Include="ToolboxBitmaps\CircularProgressBar.bmp" />
     <Content Include="ToolboxBitmaps\DataBar.bmp" />
     <Content Include="ToolboxBitmaps\DataChart.bmp" />
     <Content Include="ToolboxBitmaps\ToggleSwich.bmp" />
