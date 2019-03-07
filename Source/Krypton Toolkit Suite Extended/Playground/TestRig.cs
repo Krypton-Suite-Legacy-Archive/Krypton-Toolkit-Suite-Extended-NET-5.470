@@ -3,6 +3,7 @@ using Core.UX;
 using Core.UX.Colours;
 using Core.UX.Options;
 using ExtendedControls.ExtendedToolkit.Controls.Drawing.UI;
+using ExtendedControls.ExtendedToolkit.Controls.KryptonControls;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface;
 using ExtendedControls.ExtendedToolkit.UI.Colours;
@@ -18,7 +19,7 @@ namespace Playground
 {
     public class TestRig : KryptonForm
     {
-        private KryptonPanel kryptonPanel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private KryptonButton kbtnListView;
         private KryptonButton kbtnPropertyGrid;
         private KryptonButton kbtnMessageboxTest2;
@@ -46,11 +47,13 @@ namespace Playground
         private KryptonButton kbtnConvertColour;
         private KryptonButton kbtnAeroWizard;
         private KryptonButton kbtnThemeChooser;
+        private KryptonButton Toast;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
         {
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnThemeChooser = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnAeroWizard = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnListView = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnPropertyGrid = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -77,13 +80,14 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnThemeChooser = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Toast = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.Toast);
             this.kryptonPanel1.Controls.Add(this.kbtnThemeChooser);
             this.kryptonPanel1.Controls.Add(this.kbtnAeroWizard);
             this.kryptonPanel1.Controls.Add(this.kbtnListView);
@@ -116,6 +120,15 @@ namespace Playground
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(971, 597);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kbtnThemeChooser
+            // 
+            this.kbtnThemeChooser.Location = new System.Drawing.Point(737, 90);
+            this.kbtnThemeChooser.Name = "kbtnThemeChooser";
+            this.kbtnThemeChooser.Size = new System.Drawing.Size(218, 25);
+            this.kbtnThemeChooser.TabIndex = 77;
+            this.kbtnThemeChooser.Values.Text = "Theme Chooser";
+            this.kbtnThemeChooser.Click += new System.EventHandler(this.kbtnThemeChooser_Click);
             // 
             // kbtnAeroWizard
             // 
@@ -353,14 +366,14 @@ namespace Playground
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
-            // kbtnThemeChooser
+            // Toast
             // 
-            this.kbtnThemeChooser.Location = new System.Drawing.Point(737, 90);
-            this.kbtnThemeChooser.Name = "kbtnThemeChooser";
-            this.kbtnThemeChooser.Size = new System.Drawing.Size(218, 25);
-            this.kbtnThemeChooser.TabIndex = 77;
-            this.kbtnThemeChooser.Values.Text = "Theme Chooser";
-            this.kbtnThemeChooser.Click += new System.EventHandler(this.kbtnThemeChooser_Click);
+            this.Toast.Location = new System.Drawing.Point(737, 129);
+            this.Toast.Name = "Toast";
+            this.Toast.Size = new System.Drawing.Size(218, 25);
+            this.Toast.TabIndex = 78;
+            this.Toast.Values.Text = "Toast";
+            this.Toast.Click += new System.EventHandler(this.Toast_Click);
             // 
             // TestRig
             // 
@@ -568,6 +581,17 @@ namespace Playground
             ThemeChooser themeChooser = new ThemeChooser();
 
             themeChooser.Show();
+        }
+
+        private void Toast_Click(object sender, EventArgs e)
+        {
+            Image test = new Bitmap(Properties.Resources.KR_32_x_32_Orange);
+
+            KryptonToastNotification kryptonToastNotification = new KryptonToastNotification(true, test, "Test", "Hello world!");
+
+            kryptonToastNotification.Seconds = 60;
+
+            kryptonToastNotification.Show();
         }
     }
 }

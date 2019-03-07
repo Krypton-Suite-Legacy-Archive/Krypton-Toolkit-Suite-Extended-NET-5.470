@@ -272,26 +272,26 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         {
             try
             {
-                if (!DesignMode)
-                {
-                    if (Style == ProgressBarStyle.Marquee)
-                    {
-                        InitialiseMarquee(_style != Style);
-                    }
-                    else
-                    {
-                        InitialiseContinues(_style != Style);
-                    }
+                //if (!DesignMode)
+                //{
+                //    if (Style == ProgressBarStyle.Marquee)
+                //    {
+                //        InitialiseMarquee(_style != Style);
+                //    }
+                //    else
+                //    {
+                //        InitialiseContinues(_style != Style);
+                //    }
 
-                    _style = Style;
-                }
+                //    _style = Style;
+                //}
 
-                if (_backBrush == null)
-                {
-                    RecreateBackgroundBrush();
-                }
+                //if (_backBrush == null)
+                //{
+                //    RecreateBackgroundBrush();
+                //}
 
-                StartPaint(e.Graphics);
+                //StartPaint(e.Graphics);
             }
             catch
             {
@@ -300,12 +300,12 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
         protected override void OnParentBackColorChanged(EventArgs e)
         {
-            RecreateBackgroundBrush();
+            //RecreateBackgroundBrush();
         }
 
         protected override void OnParentBackgroundImageChanged(EventArgs e)
         {
-            RecreateBackgroundBrush();
+          //  RecreateBackgroundBrush();
         }
 
         protected override void OnParentChanged(EventArgs e)
