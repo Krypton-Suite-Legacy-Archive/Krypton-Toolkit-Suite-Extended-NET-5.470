@@ -4,6 +4,7 @@ using System.Drawing;
 
 using ComponentFactory.Krypton.Toolkit;
 
+using Core.Classes;
 using GlobalUtilities.Classes;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.Controls

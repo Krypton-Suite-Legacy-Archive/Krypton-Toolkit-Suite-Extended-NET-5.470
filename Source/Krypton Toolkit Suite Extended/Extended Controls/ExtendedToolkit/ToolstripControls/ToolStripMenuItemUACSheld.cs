@@ -6,8 +6,8 @@ using System.Windows.Forms.Design;
 
 using ComponentFactory.Krypton.Toolkit;
 
+using Core.Classes;
 using GlobalUtilities.Classes;
-
 using KryptonExtendedToolkit.Base.Code;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls

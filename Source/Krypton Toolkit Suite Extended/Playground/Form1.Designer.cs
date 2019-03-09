@@ -67,6 +67,9 @@ namespace Playground
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.selectAllToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.samplesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adobeColourDialogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aeroWizardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.indexToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -126,7 +129,7 @@ namespace Playground
             this.flashingLabel1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.FlashingLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.samplesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -208,11 +211,10 @@ namespace Playground
             // 
             // kryptonManager1
             // 
-            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2010Blue;
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Blue;
             // 
             // kPal
             // 
-            this.kPal.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.kPal.CustomisedKryptonPaletteFilePath = null;
             // 
             // menuStrip2
@@ -406,6 +408,27 @@ namespace Playground
             this.toolsToolStripMenuItem1.Size = new System.Drawing.Size(47, 20);
             this.toolsToolStripMenuItem1.Text = "&Tools";
             // 
+            // samplesToolStripMenuItem
+            // 
+            this.samplesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adobeColourDialogToolStripMenuItem,
+            this.aeroWizardToolStripMenuItem});
+            this.samplesToolStripMenuItem.Name = "samplesToolStripMenuItem";
+            this.samplesToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.samplesToolStripMenuItem.Text = "&Samples";
+            // 
+            // adobeColourDialogToolStripMenuItem
+            // 
+            this.adobeColourDialogToolStripMenuItem.Name = "adobeColourDialogToolStripMenuItem";
+            this.adobeColourDialogToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.adobeColourDialogToolStripMenuItem.Text = "Adobe Colour Dialog";
+            // 
+            // aeroWizardToolStripMenuItem
+            // 
+            this.aeroWizardToolStripMenuItem.Name = "aeroWizardToolStripMenuItem";
+            this.aeroWizardToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.aeroWizardToolStripMenuItem.Text = "Aero Wizard";
+            // 
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -479,6 +502,7 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonButton1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton21);
             this.kryptonPanel1.Controls.Add(this.roundedTextbox1);
             this.kryptonPanel1.Controls.Add(this.kryptonSearchBox1);
@@ -646,8 +670,6 @@ namespace Playground
             this.kcmbGradientDirection.Size = new System.Drawing.Size(188, 27);
             this.kcmbGradientDirection.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbGradientDirection.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcmbGradientDirection.StateCommon.Item.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kcmbGradientDirection.StateCommon.Item.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kcmbGradientDirection.TabIndex = 15;
             this.kcmbGradientDirection.SelectedIndexChanged += new System.EventHandler(this.kcmbGradientDirection_SelectedIndexChanged);
             this.kcmbGradientDirection.TextChanged += new System.EventHandler(this.kcmbGradientDirection_TextChanged);
@@ -658,8 +680,6 @@ namespace Playground
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(149, 26);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel1.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel1.TabIndex = 14;
             this.kryptonLabel1.Values.Text = "Gradient Direction:";
             // 
@@ -922,8 +942,6 @@ namespace Playground
             this.klblAdminMode.Name = "klblAdminMode";
             this.klblAdminMode.Size = new System.Drawing.Size(283, 26);
             this.klblAdminMode.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblAdminMode.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.klblAdminMode.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.klblAdminMode.TabIndex = 0;
             this.klblAdminMode.Values.Text = "Is running in Administrator mode: No";
             // 
@@ -993,11 +1011,14 @@ namespace Playground
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // samplesToolStripMenuItem
+            // kryptonButton1
             // 
-            this.samplesToolStripMenuItem.Name = "samplesToolStripMenuItem";
-            this.samplesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.samplesToolStripMenuItem.Text = "&Samples";
+            this.kryptonButton1.Location = new System.Drawing.Point(663, 308);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton1.TabIndex = 52;
+            this.kryptonButton1.Values.Text = "Test Bench";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click_1);
             // 
             // Form1
             // 
@@ -1136,6 +1157,9 @@ namespace Playground
         private ExtendedControls.ExtendedToolkit.ToolstripControls.FlashingLabel flashingLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton21;
         private ToolStripMenuItem samplesToolStripMenuItem;
+        private ToolStripMenuItem adobeColourDialogToolStripMenuItem;
+        private ToolStripMenuItem aeroWizardToolStripMenuItem;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }
 

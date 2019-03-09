@@ -18,7 +18,7 @@ namespace ExtendedControls.Base.Code.Models.Typeface
 
         [ReadOnly(true)]
         [CategoryAttribute("Properties")]
-        [DescriptionAttribute("Path to the font file.")]
+        [DescriptionAttribute("Path to the typeface file.")]
         public string Path
         {
             get { return this.path; }
@@ -28,8 +28,8 @@ namespace ExtendedControls.Base.Code.Models.Typeface
 
         [ReadOnly(true)]
         [CategoryAttribute("Properties")]
-        [DescriptionAttribute("Font type: TrueType, OpenType, ClearType, etc.")]
-        public string FontType
+        [DescriptionAttribute("Typeface type: TrueType, OpenType, ClearType, etc.")]
+        public string TypefaceType
         {
             get { return this.fontType; }
             set { this.fontType = value; }

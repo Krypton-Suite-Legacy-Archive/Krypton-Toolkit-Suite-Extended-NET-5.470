@@ -1,9 +1,10 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using Core.Settings.Classes;
-using GlobalUtilities.Classes;
+using Core.Classes;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Core;
 
 namespace Classes.Colours
 {

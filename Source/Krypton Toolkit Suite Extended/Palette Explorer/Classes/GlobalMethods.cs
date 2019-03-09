@@ -1,4 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Core;
+using Core.Classes;
 using System;
 
 namespace PaletteExplorer.Classes
@@ -40,8 +42,7 @@ namespace PaletteExplorer.Classes
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
         }
         #endregion

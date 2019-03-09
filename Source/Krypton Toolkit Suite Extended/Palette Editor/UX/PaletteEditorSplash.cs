@@ -1,5 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using GlobalUtilities.Classes.SpecialEffects;
+using Core.Classes.SpecialEffects;
 using System;
 using System.IO;
 using System.Reflection;

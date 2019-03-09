@@ -21,4 +21,23 @@
         FILE,
         FOLDER
     }
+
+    public enum DevelopmentStates
+    {
+        PREALPHA,
+        ALPHA,
+        BETA,
+        RTM,
+        CURRENT,
+        EOL
+    }
+
+    public enum PaletteFileEditorStatusIndicator
+    {
+        CREATENEWFILE,
+        CHANGEZOOMLEVEL,
+        READY,
+        OPENFILE,
+        SAVEFILE
+    }
 }

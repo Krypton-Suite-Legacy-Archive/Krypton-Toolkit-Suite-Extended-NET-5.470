@@ -77,5 +77,10 @@
   <ItemGroup>
     <Content Include="Notes\IMPORTANT.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5470">
+      <Version>5.470.717</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -130,6 +130,9 @@
     <Compile Include="UI\ExtendedSystemForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UI\Palette\OpenKryptonPaletteFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\System Browser\KryptonFileBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +155,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Palette\OpenKryptonPaletteFile.resx">
+      <DependentUpon>OpenKryptonPaletteFile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\System Browser\KryptonFileBrowser.resx">
       <DependentUpon>KryptonFileBrowser.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,10 +174,14 @@
       <Project>{edb87d0c-a37c-48b5-9857-f014c438a4c5}</Project>
       <Name>Global Utilities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Tooling\Core.csproj">
+      <Project>{efb997fb-1e05-444b-ba02-16c004e1a111}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.720</Version>
+      <Version>5.470.717</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

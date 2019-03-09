@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
+using Core.Classes;
 using GlobalUtilities.Classes;
 
 namespace KryptonWizard.Native

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace ExtendedControls.Base.Structs.ColourWheel
@@ -180,12 +181,12 @@ namespace ExtendedControls.Base.Structs.ColourWheel
         #endregion
 
         #region Operators
-        public static bool operator != (HSLColour left, HSLColour right)
+        public static bool operator !=(HSLColour left, HSLColour right)
         {
             return !(left == right);
         }
 
-        public static bool operator == (HSLColour left, HSLColour right)
+        public static bool operator ==(HSLColour left, HSLColour right)
         {
             return (left.Hue == right.Hue && left.Luminosity == right.Luminosity && left.Saturation == right.Saturation);
         }
@@ -253,6 +254,23 @@ namespace ExtendedControls.Base.Structs.ColourWheel
         public double GetLuminosity()
         {
             return Luminosity;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is HSLColour))
+            {
+                return false;
+            }
+
+            var colour = (HSLColour)obj;
+            return _hue == colour._hue &&
+                   _saturation == colour._saturation &&
+                   _luminosity == colour._luminosity &&
+                   Hue == colour.Hue &&
+                   Saturation == colour.Saturation &&
+                   Luminosity == colour.Luminosity &&
+                   EqualityComparer<Color>.Default.Equals(Colour, colour.Colour);
         }
         #endregion
     }

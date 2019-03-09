@@ -57,6 +57,9 @@
     <Compile Include="CalandarAndControls.Designer.cs">
       <DependentUpon>CalandarAndControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="CircularProgressBarTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ColourTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +74,12 @@
     </Compile>
     <Compile Include="CommandLinkStyles.Designer.cs">
       <DependentUpon>CommandLinkStyles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlashingLabelTest.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -113,6 +122,9 @@
     <EmbeddedResource Include="CalandarAndControls.resx">
       <DependentUpon>CalandarAndControls.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CircularProgressBarTest.resx">
+      <DependentUpon>CircularProgressBarTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ColourTest.resx">
       <DependentUpon>ColourTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +133,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CommandLinkStyles.resx">
       <DependentUpon>CommandLinkStyles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlashingLabelTest.resx">
+      <DependentUpon>FlashingLabelTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -189,6 +207,10 @@
       <Project>{2A10C696-45AD-48AA-8EAD-2CB322672972}</Project>
       <Name>Krypton Outlook Grid</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Palette Explorer\Palette Explorer.csproj">
+      <Project>{246b3b50-3a2d-4a6a-bb69-e56d94108ac1}</Project>
+      <Name>Palette Explorer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tooling\Core.csproj">
       <Project>{efb997fb-1e05-444b-ba02-16c004e1a111}</Project>
       <Name>Core</Name>
@@ -196,13 +218,20 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.720</Version>
+      <Version>5.470.717</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\..\Assets\PNG\32 x 32\KR 32 x 32 Orange.png">
       <Link>Resources\KR 32 x 32 Orange.png</Link>
     </Content>
+    <None Include="Resources\Critical 128 x 128.png" />
+    <None Include="Resources\Hand 128 x 128.png" />
+    <None Include="Resources\Information 128 x 128.png" />
+    <None Include="Resources\Ok 128 x 128.png" />
+    <None Include="Resources\Question 128 x 128.png" />
+    <None Include="Resources\Stop 128 x 128.png" />
+    <None Include="Resources\Warning 128 x 128.png" />
     <None Include="Resources\KR 48 x 48 Orange.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

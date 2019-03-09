@@ -3,24 +3,22 @@ using Core.UX;
 using Core.UX.Colours;
 using Core.UX.Options;
 using ExtendedControls.ExtendedToolkit.Controls.Drawing.UI;
+using ExtendedControls.ExtendedToolkit.Controls.KryptonControls;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface;
 using ExtendedControls.ExtendedToolkit.UI.Colours;
-using ExtendedControls.ExtendedToolkit.UI.Dialogues;
 using ExtendedControls.ExtendedToolkit.UI.SystemBrowser;
+using ExtendedControls.ExtendedToolkit.UI.Theming;
 using ExtendedFileDialogs.UI.SystemBrowser;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Playground
 {
     public class TestRig : KryptonForm
     {
-        private KryptonPanel kryptonPanel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private KryptonButton kbtnListView;
         private KryptonButton kbtnPropertyGrid;
         private KryptonButton kbtnMessageboxTest2;
@@ -47,11 +45,16 @@ namespace Playground
         private KryptonButton kbtnHexToRGB;
         private KryptonButton kbtnConvertColour;
         private KryptonButton kbtnAeroWizard;
+        private KryptonButton kbtnThemeChooser;
+        private KryptonButton Toast;
+        private KryptonButton kbtnCircularProgressBar;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
         {
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.Toast = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnThemeChooser = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnAeroWizard = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnListView = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnPropertyGrid = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -78,12 +81,16 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnCircularProgressBar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnCircularProgressBar);
+            this.kryptonPanel1.Controls.Add(this.Toast);
+            this.kryptonPanel1.Controls.Add(this.kbtnThemeChooser);
             this.kryptonPanel1.Controls.Add(this.kbtnAeroWizard);
             this.kryptonPanel1.Controls.Add(this.kbtnListView);
             this.kryptonPanel1.Controls.Add(this.kbtnPropertyGrid);
@@ -116,6 +123,24 @@ namespace Playground
             this.kryptonPanel1.Size = new System.Drawing.Size(971, 597);
             this.kryptonPanel1.TabIndex = 0;
             // 
+            // Toast
+            // 
+            this.Toast.Location = new System.Drawing.Point(737, 129);
+            this.Toast.Name = "Toast";
+            this.Toast.Size = new System.Drawing.Size(218, 25);
+            this.Toast.TabIndex = 78;
+            this.Toast.Values.Text = "Toast";
+            this.Toast.Click += new System.EventHandler(this.Toast_Click);
+            // 
+            // kbtnThemeChooser
+            // 
+            this.kbtnThemeChooser.Location = new System.Drawing.Point(737, 90);
+            this.kbtnThemeChooser.Name = "kbtnThemeChooser";
+            this.kbtnThemeChooser.Size = new System.Drawing.Size(218, 25);
+            this.kbtnThemeChooser.TabIndex = 77;
+            this.kbtnThemeChooser.Values.Text = "Theme Chooser";
+            this.kbtnThemeChooser.Click += new System.EventHandler(this.kbtnThemeChooser_Click);
+            // 
             // kbtnAeroWizard
             // 
             this.kbtnAeroWizard.Location = new System.Drawing.Point(737, 51);
@@ -139,8 +164,6 @@ namespace Playground
             this.kbtnPropertyGrid.Name = "kbtnPropertyGrid";
             this.kbtnPropertyGrid.Size = new System.Drawing.Size(218, 25);
             this.kbtnPropertyGrid.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnPropertyGrid.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnPropertyGrid.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnPropertyGrid.TabIndex = 74;
             this.kbtnPropertyGrid.Values.Text = "Property Grid";
             this.kbtnPropertyGrid.Click += new System.EventHandler(this.kbtnPropertyGrid_Click);
@@ -151,8 +174,6 @@ namespace Playground
             this.kbtnMessageboxTest2.Name = "kbtnMessageboxTest2";
             this.kbtnMessageboxTest2.Size = new System.Drawing.Size(218, 25);
             this.kbtnMessageboxTest2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnMessageboxTest2.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnMessageboxTest2.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnMessageboxTest2.TabIndex = 73;
             this.kbtnMessageboxTest2.Values.Text = "Messagebox Test 2";
             this.kbtnMessageboxTest2.Click += new System.EventHandler(this.kbtnMessageboxTest2_Click);
@@ -307,8 +328,6 @@ namespace Playground
             this.kbtnMessageboxTest.Name = "kbtnMessageboxTest";
             this.kbtnMessageboxTest.Size = new System.Drawing.Size(218, 25);
             this.kbtnMessageboxTest.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnMessageboxTest.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnMessageboxTest.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnMessageboxTest.TabIndex = 56;
             this.kbtnMessageboxTest.Values.Text = "Messagebox Test";
             this.kbtnMessageboxTest.Click += new System.EventHandler(this.kbtnMessageboxTest_Click);
@@ -358,6 +377,15 @@ namespace Playground
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
+            // kbtnCircularProgressBar
+            // 
+            this.kbtnCircularProgressBar.Location = new System.Drawing.Point(737, 168);
+            this.kbtnCircularProgressBar.Name = "kbtnCircularProgressBar";
+            this.kbtnCircularProgressBar.Size = new System.Drawing.Size(218, 25);
+            this.kbtnCircularProgressBar.TabIndex = 79;
+            this.kbtnCircularProgressBar.Values.Text = "Circular Progress Bar";
+            this.kbtnCircularProgressBar.Click += new System.EventHandler(this.kbtnCircularProgressBar_Click);
+            // 
             // TestRig
             // 
             this.ClientSize = new System.Drawing.Size(971, 597);
@@ -382,7 +410,7 @@ namespace Playground
 
         private void kbtnFileCreator_Click(object sender, EventArgs e)
         {
-            PaletteFileEditor paletteFileEditor = new PaletteFileEditor();
+            PaletteExplorer.UX.PaletteFileEditor paletteFileEditor = new PaletteExplorer.UX.PaletteFileEditor();
 
             paletteFileEditor.Show();
         }
@@ -396,11 +424,9 @@ namespace Playground
 
         private void kbtnPaletteEditor_Click(object sender, EventArgs e)
         {
-            KryptonMessageBox.Show(this,
-                @"Once PaletteEditor is building again, then add to references and then this code can be uncommented!");
-            //PaletteEditor.UX.MainWindow _paletteEditor = new PaletteEditor.UX.MainWindow();
+            PaletteExplorer.UX.MainWindow _mainWindow = new PaletteExplorer.UX.MainWindow();
 
-            //_paletteEditor.Show();
+            _mainWindow.Show();
         }
 
         private void kbtnScrollbars_Click(object sender, EventArgs e)
@@ -482,9 +508,13 @@ namespace Playground
 
         private void kbtnTypefaceSelectionDialogue_Click(object sender, EventArgs e)
         {
-            TypefaceSelectionDialogue typefaceSelectionDialogue = new TypefaceSelectionDialogue();
+            //TypefaceSelectionDialogue typefaceSelectionDialogue = new TypefaceSelectionDialogue();
 
-            typefaceSelectionDialogue.Show();
+            //typefaceSelectionDialogue.Show();
+
+            TypefaceSelector typefaceSelector = new TypefaceSelector();
+
+            typefaceSelector.Show();
         }
 
         private void kbtnThemeOptions_Click(object sender, EventArgs e)
@@ -555,6 +585,31 @@ namespace Playground
             Test test = new Test();
 
             test.Show();
+        }
+
+        private void kbtnThemeChooser_Click(object sender, EventArgs e)
+        {
+            ThemeChooser themeChooser = new ThemeChooser();
+
+            themeChooser.Show();
+        }
+
+        private void Toast_Click(object sender, EventArgs e)
+        {
+            Image test = new Bitmap(Properties.Resources.Information_128_x_128);
+
+            KryptonToastNotification kryptonToastNotification = new KryptonToastNotification(true, test, "Test", "Hello world!");
+
+            kryptonToastNotification.Seconds = 60;
+
+            kryptonToastNotification.Show();
+        }
+
+        private void kbtnCircularProgressBar_Click(object sender, EventArgs e)
+        {
+            CircularProgressBarTest cpbt = new CircularProgressBarTest();
+
+            cpbt.Show();
         }
     }
 }

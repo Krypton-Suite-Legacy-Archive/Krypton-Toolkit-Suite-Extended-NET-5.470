@@ -1,8 +1,10 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Core.Classes;
 using GlobalUtilities.Classes;
 using KryptonApplicationUpdater.Classes.SettingsManager;
 using KryptonApplicationUpdater.Enumerations;
 using KryptonApplicationUpdater.Interfaces;
+using Core;
 using KryptonExtendedToolkit.ExtendedToolkit.Controls;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using System;
@@ -35,8 +37,6 @@ namespace KryptonApplicationUpdater.Classes
         private WebClient downloadClient;
 
         private GlobalMethods _globalMethods = new GlobalMethods();
-
-        private ExceptionHandler _exceptionHandler = new ExceptionHandler();
 
         private XMLFileParser _parser = new XMLFileParser();
 

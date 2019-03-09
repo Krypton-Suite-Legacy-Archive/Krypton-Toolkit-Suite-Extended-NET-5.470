@@ -99,6 +99,7 @@
     <Compile Include="Base\Code\Colours\HSLColour.cs" />
     <Compile Include="Base\Code\Colours\RGBColour.cs" />
     <Compile Include="Base\Code\ControlHelper.cs" />
+    <Compile Include="Base\Code\Development\DevelopmentInformation.cs" />
     <Compile Include="Base\Code\Drawing\ColourChangedEventArgs.cs" />
     <Compile Include="Base\Code\Drawing\ColourHandler.cs" />
     <Compile Include="Base\Code\Drawing\ColourWheel.cs" />
@@ -106,10 +107,12 @@
     <Compile Include="Base\Code\Drawing\RoundedRectangleF.cs" />
     <Compile Include="Base\Code\Drawing\Transparenter.cs" />
     <Compile Include="Base\Code\ExceptionHandler.cs" />
+    <Compile Include="Base\Code\Exceptions\ExceptionHandler.cs" />
     <Compile Include="Base\Code\File Explorer\FileSizeFormatProvider.cs" />
     <Compile Include="Base\Code\File Explorer\WIN32.cs" />
     <Compile Include="Base\Code\IconExtractor.cs" />
     <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
+    <Compile Include="Base\Code\Linq\LinqBridge-1.3.cs" />
     <Compile Include="Base\Code\ListViewColumnSorter.cs" />
     <Compile Include="Base\Code\Models\Typeface\PropertiesModel.cs" />
     <Compile Include="Base\Code\Models\Typeface\TypefaceCollection.cs" />
@@ -124,6 +127,8 @@
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarOrientation.cs" />
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarState.cs" />
     <Compile Include="Base\Code\ScrollBar\WIN32.cs" />
+    <Compile Include="Base\Code\Settings\SettingsManager.cs" />
+    <Compile Include="Base\Code\Theming\KryptonThemeManager.cs" />
     <Compile Include="Base\Code\TypefaceHelper.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
     <Compile Include="Base\Enumerations\Enumerations.cs" />
@@ -143,6 +148,50 @@
     <Compile Include="Base\UI\Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Scintilla NET\Classes\Document.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\FlagsEnumConverter.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\GapBuffer.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Helpers.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Indicator.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\IndicatorCollection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Line.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\LineCollection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Loader.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Margin.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\MarginCollection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Marker.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\MarkerCollection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\NativeMemoryStream.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\NativeMethods.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\ProjectionEqualityComparer.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\ScintillaReader.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Selection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\SelectionCollection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Style.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\StyleCollection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Tuple.cs" />
+    <Compile Include="Components\Scintilla NET\Controls\Scintilla.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Scintilla NET\Enumerations\Enumerations.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\AutoCSelectionEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\BeforeModificationEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\ChangeAnnotationEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\CharAddedEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\DoubleClickEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\DwellEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\HotspotClickEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\IndicatorClickEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\IndicatorReleaseEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\InsertCheckEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\MarginClickEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\ModificationEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\NeedShownEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\SCNotificationEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\StyleNeededEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\UpdateUIEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Interfaces\ILoader.cs" />
+    <Compile Include="Components\Scintilla NET\Structs\MarkerHandle.cs" />
     <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="ExtendedToolkit\Calendar Library\Calendar.cs">
       <SubType>Component</SubType>
@@ -232,12 +281,24 @@
     <Compile Include="ExtendedToolkit\Controls\File Explorer\FileBrowser.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\File Explorer\FolderBrowserDialogExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\CircularProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteChooserComboBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteSelector.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToastNotification.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
@@ -250,6 +311,12 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\ToggleSwitch.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonToggleSwitchToolbarControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\MessageBoxes\UI\KryptonExceptionMessageBox.cs" />
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
@@ -421,10 +488,10 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSlideButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSlider.cs">
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonToolbarSlider.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSliderBar.cs">
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonSliderBar.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonSliderButton.cs">
@@ -733,12 +800,21 @@
     <Compile Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Theming\PaletteExplorerLocator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Theming\ThemeChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Windows\FileInformation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Utilities\Classes\Utility.cs" />
     <Compile Include="ExtendedToolkit\Utilities\Classes\WIN32.cs" />
     <Compile Include="ExtendedToolkit\Utilities\Controls\ToolStripControlHostFixed.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Utilities\Controls\ToolStripUserControlHost.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Utilities\UI\FadeForm.cs">
@@ -777,6 +853,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -808,6 +889,10 @@
     <Content Include="ExtendedToolkit\Wizard\Images\Wizard.bmp" />
     <Content Include="ExtendedToolkit\Wizard\Images\wizBigOnlineFolder.gif" />
     <Content Include="Notes\IMPORTANT.txt" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\Arrow_Down.ico" />
     <None Include="Resources\Arrow_Up.ico" />
     <None Include="Resources\DefaultIcon.ico" />
@@ -824,6 +909,7 @@
     <None Include="Resources\text_lowercase.png" />
     <None Include="Resources\text_strikethrough.png" />
     <None Include="Resources\text_underline.png" />
+    <Content Include="ToolboxBitmaps\CircularProgressBar.bmp" />
     <Content Include="ToolboxBitmaps\DataBar.bmp" />
     <Content Include="ToolboxBitmaps\DataChart.bmp" />
     <Content Include="ToolboxBitmaps\ToggleSwich.bmp" />
@@ -950,6 +1036,9 @@
     <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteSelector.resx">
       <DependentUpon>KryptonPaletteSelector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToastNotification.resx">
+      <DependentUpon>KryptonToastNotification.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceProperties.resx">
       <DependentUpon>TypefaceProperties.cs</DependentUpon>
     </EmbeddedResource>
@@ -1025,6 +1114,12 @@
     <EmbeddedResource Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.resx">
       <DependentUpon>SoftwareUpdater.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Theming\PaletteExplorerLocator.resx">
+      <DependentUpon>PaletteExplorerLocator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Theming\ThemeChooser.resx">
+      <DependentUpon>ThemeChooser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Windows\FileInformation.resx">
       <DependentUpon>FileInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -1038,7 +1133,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.720</Version>
+      <Version>5.470.717</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>
@@ -1047,7 +1142,7 @@
       <Version>1.1.0</Version>
     </PackageReference>
     <PackageReference Include="WinFormAnimation">
-      <Version>1.5.6298.3372</Version>
+      <Version>1.6.0.4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

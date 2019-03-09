@@ -1,6 +1,6 @@
 ﻿using ComponentFactory.Krypton.Ribbon;
 using ComponentFactory.Krypton.Toolkit;
-using GlobalUtilities.Classes;
+using Core.Classes;
 using System;
 using System.Collections;
 using System.Drawing;

@@ -53,6 +53,7 @@
             this.pasteToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.kryptonViewBar1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonViewBar();
             this.dockingHostToolStripPanel1.SuspendLayout();
             this.tearOffToolStrip1.SuspendLayout();
             this.tearOffToolStrip2.SuspendLayout();
@@ -189,12 +190,13 @@
             this.copyToolStripButton1,
             this.pasteToolStripButton1,
             this.toolStripSeparator3,
-            this.helpToolStripButton1});
+            this.helpToolStripButton1,
+            this.kryptonViewBar1});
             this.tearOffToolStrip2.LeftToolStripPanel = null;
             this.tearOffToolStrip2.Location = new System.Drawing.Point(318, 177);
             this.tearOffToolStrip2.Name = "tearOffToolStrip2";
             this.tearOffToolStrip2.RightToolStripPanel = null;
-            this.tearOffToolStrip2.Size = new System.Drawing.Size(239, 25);
+            this.tearOffToolStrip2.Size = new System.Drawing.Size(356, 25);
             this.tearOffToolStrip2.TabIndex = 1;
             this.tearOffToolStrip2.Text = "tearOffToolStrip2";
             this.tearOffToolStrip2.TopToolStripPanel = null;
@@ -281,6 +283,15 @@
             this.helpToolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.helpToolStripButton1.Text = "He&lp";
             // 
+            // kryptonViewBar1
+            // 
+            this.kryptonViewBar1.BackColor = System.Drawing.Color.Transparent;
+            this.kryptonViewBar1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.kryptonViewBar1.Name = "kryptonViewBar1";
+            this.kryptonViewBar1.Size = new System.Drawing.Size(117, 22);
+            this.kryptonViewBar1.Text = "kryptonViewBar1";
+            this.kryptonViewBar1.ViewBarSize = new System.Drawing.Size(117, 22);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,5 +337,6 @@
         private System.Windows.Forms.ToolStripButton pasteToolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton helpToolStripButton1;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonViewBar kryptonViewBar1;
     }
 }

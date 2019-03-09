@@ -3,12 +3,13 @@ using ComponentFactory.Krypton.Toolkit;
 using Core.Enumerations;
 using Core.Settings.Classes;
 using ExtendedControls.ExtendedToolkit.Controls;
-using GlobalUtilities.Classes;
+using Core.Classes;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
+using Core;
 
 namespace Classes.Colours
 {

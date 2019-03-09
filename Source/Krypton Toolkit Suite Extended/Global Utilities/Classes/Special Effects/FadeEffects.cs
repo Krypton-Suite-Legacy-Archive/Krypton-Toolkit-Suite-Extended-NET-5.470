@@ -3,7 +3,7 @@ using System;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace GlobalUtilities.Classes.SpecialEffects
+namespace Core.Classes.SpecialEffects
 {
     /// <summary>
     /// Fades the selected <see cref="KryptonForm"/> or <see cref="Form"/> in and out.

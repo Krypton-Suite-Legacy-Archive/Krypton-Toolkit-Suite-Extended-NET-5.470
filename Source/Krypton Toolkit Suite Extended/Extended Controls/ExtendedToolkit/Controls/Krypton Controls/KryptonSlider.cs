@@ -1,5 +1,4 @@
-﻿using ComponentFactory.Krypton.Ribbon;
-using ComponentFactory.Krypton.Toolkit;
+﻿using ComponentFactory.Krypton.Toolkit;
 using Microsoft.VisualBasic;
 using System;
 using System.ComponentModel;
@@ -9,15 +8,11 @@ using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 {
-    [ToolboxBitmap(typeof(TrackBar)), ToolboxItem(false)]
+    [Description("The normal version of KryptonToolbarSlider."), ToolboxBitmap(typeof(TrackBar)), ToolboxItem(false)]
     public partial class KryptonSlider : UserControl, IContentValues
     {
         #region Designer Code
-        /// <summary> 
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
-
+        private IContainer components = null;
 
         #region Component Designer generated code
 
@@ -86,6 +81,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
 
         #endregion
+
         #endregion
 
         #region "Entry"
@@ -811,10 +807,6 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             m_sliderlinebottom = _palette.ColorTable.GripLight;
 
         }
-        #endregion
-
-
+        #endregion 
     }
-
-
 }

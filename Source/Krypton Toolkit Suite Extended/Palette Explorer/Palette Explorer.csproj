@@ -72,6 +72,12 @@
     <Compile Include="UX\OptionsWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UX\PaletteFileEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -87,6 +93,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\OptionsWindow.resx">
       <DependentUpon>OptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\PaletteFileEditor.resx">
+      <DependentUpon>PaletteFileEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -223,8 +235,20 @@
     <None Include="Resources\Text_Colour_v1_32_x_32.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AutoCompleteMenu-ScintillaNET">
+      <Version>1.6.1</Version>
+    </PackageReference>
+    <PackageReference Include="EasyScintilla">
+      <Version>1.0.5</Version>
+    </PackageReference>
+    <PackageReference Include="jacobslusser.ScintillaNET">
+      <Version>3.6.3</Version>
+    </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.720</Version>
+      <Version>5.470.717</Version>
+    </PackageReference>
+    <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
+      <Version>1.4.0</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePackShell">
       <Version>1.1.0</Version>
@@ -254,6 +278,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PE Icon 24 x 24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo 16 x 16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo 32 x 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo 16 x 16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo 32 x 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo 128 x 128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

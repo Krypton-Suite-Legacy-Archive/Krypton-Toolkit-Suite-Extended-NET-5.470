@@ -71,6 +71,8 @@
     <Compile Include="Classes\Colours\RawPaletteSerialiser.cs" />
     <Compile Include="Classes\Colours\SettingsManager.cs" />
     <Compile Include="Classes\Colours\WIN32.cs" />
+    <Compile Include="Classes\ExceptionHandler.cs" />
+    <Compile Include="Classes\MessageBoxes\ExtendedKryptonMessageBox.cs" />
     <Compile Include="Classes\Options\Theming\ThemingLogic.cs" />
     <Compile Include="Classes\Colours\ColourControlManager.cs" />
     <Compile Include="Classes\Colours\ColourFormatting.cs" />
@@ -90,6 +92,7 @@
     <Compile Include="Classes\Palette\PaletteCompisitionEngine.cs" />
     <Compile Include="Classes\Theming\PaletteColourManagementEngine.cs" />
     <Compile Include="Classes\Theming\ThemeManager.cs" />
+    <Compile Include="Classes\Utilities\PI.cs" />
     <Compile Include="Classes\Utilities\Utility.cs" />
     <Compile Include="Classes\Utilities\WIN32.cs" />
     <Compile Include="Controls\Colours\ColourEditorManager.cs">
@@ -494,7 +497,7 @@
       <Version>1.0.5</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.720</Version>
+      <Version>5.470.717</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>
@@ -506,6 +509,23 @@
   <ItemGroup>
     <None Include="Resources\Colour_Wheel_16_x_16.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Critical_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_32_x_32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
