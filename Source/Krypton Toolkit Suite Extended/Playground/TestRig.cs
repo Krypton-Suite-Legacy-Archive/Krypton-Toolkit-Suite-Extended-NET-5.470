@@ -7,7 +7,6 @@ using ExtendedControls.ExtendedToolkit.Controls.KryptonControls;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface;
 using ExtendedControls.ExtendedToolkit.UI.Colours;
-using ExtendedControls.ExtendedToolkit.UI.Dialogues;
 using ExtendedControls.ExtendedToolkit.UI.SystemBrowser;
 using ExtendedControls.ExtendedToolkit.UI.Theming;
 using ExtendedFileDialogs.UI.SystemBrowser;
@@ -48,11 +47,13 @@ namespace Playground
         private KryptonButton kbtnAeroWizard;
         private KryptonButton kbtnThemeChooser;
         private KryptonButton Toast;
+        private KryptonButton kbtnCircularProgressBar;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
         {
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.Toast = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnThemeChooser = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnAeroWizard = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnListView = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -80,13 +81,14 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.Toast = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnCircularProgressBar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnCircularProgressBar);
             this.kryptonPanel1.Controls.Add(this.Toast);
             this.kryptonPanel1.Controls.Add(this.kbtnThemeChooser);
             this.kryptonPanel1.Controls.Add(this.kbtnAeroWizard);
@@ -120,6 +122,15 @@ namespace Playground
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(971, 597);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // Toast
+            // 
+            this.Toast.Location = new System.Drawing.Point(737, 129);
+            this.Toast.Name = "Toast";
+            this.Toast.Size = new System.Drawing.Size(218, 25);
+            this.Toast.TabIndex = 78;
+            this.Toast.Values.Text = "Toast";
+            this.Toast.Click += new System.EventHandler(this.Toast_Click);
             // 
             // kbtnThemeChooser
             // 
@@ -366,14 +377,14 @@ namespace Playground
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
-            // Toast
+            // kbtnCircularProgressBar
             // 
-            this.Toast.Location = new System.Drawing.Point(737, 129);
-            this.Toast.Name = "Toast";
-            this.Toast.Size = new System.Drawing.Size(218, 25);
-            this.Toast.TabIndex = 78;
-            this.Toast.Values.Text = "Toast";
-            this.Toast.Click += new System.EventHandler(this.Toast_Click);
+            this.kbtnCircularProgressBar.Location = new System.Drawing.Point(737, 168);
+            this.kbtnCircularProgressBar.Name = "kbtnCircularProgressBar";
+            this.kbtnCircularProgressBar.Size = new System.Drawing.Size(218, 25);
+            this.kbtnCircularProgressBar.TabIndex = 79;
+            this.kbtnCircularProgressBar.Values.Text = "Circular Progress Bar";
+            this.kbtnCircularProgressBar.Click += new System.EventHandler(this.kbtnCircularProgressBar_Click);
             // 
             // TestRig
             // 
@@ -585,13 +596,20 @@ namespace Playground
 
         private void Toast_Click(object sender, EventArgs e)
         {
-            Image test = new Bitmap(Properties.Resources.KR_32_x_32_Orange);
+            Image test = new Bitmap(Properties.Resources.Information_128_x_128);
 
             KryptonToastNotification kryptonToastNotification = new KryptonToastNotification(true, test, "Test", "Hello world!");
 
             kryptonToastNotification.Seconds = 60;
 
             kryptonToastNotification.Show();
+        }
+
+        private void kbtnCircularProgressBar_Click(object sender, EventArgs e)
+        {
+            CircularProgressBarTest cpbt = new CircularProgressBarTest();
+
+            cpbt.Show();
         }
     }
 }

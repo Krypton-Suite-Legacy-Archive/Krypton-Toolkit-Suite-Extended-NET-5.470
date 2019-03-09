@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Media;
@@ -7,6 +8,37 @@ using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 {
+    public enum IconType
+    {
+        NONE,
+        QUESTION,
+        INFORMATION,
+        WARNING,
+        ERROR,
+        HAND,
+        STOP,
+        OK,
+        NULL
+    }
+
+    public enum ProgressBarOrientation
+    {
+        VERTICAL,
+        HORIZONTAL
+    }
+
+    public enum RightToLeftSupport
+    {
+        LEFTTORIGHT,
+        RIGHTTOLEFT
+    }
+
+    public enum ActionType
+    {
+        LAUCHPROCESS,
+        OPEN
+    }
+
     /// <summary>
     /// Adapted from: https://github.com/dotCoefficient/Notification/blob/master/Notification/Notification.cs
     /// </summary>
@@ -20,15 +52,17 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private KryptonButton kbtnDismiss;
         private Panel panel1;
+        private KryptonButton kbtnAction;
         private System.Windows.Forms.PictureBox pbxIcon;
 
         private void InitializeComponent()
         {
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.pbxIcon = new System.Windows.Forms.PictureBox();
-            this.klblHeader = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.klblContent = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblHeader = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.pbxIcon = new System.Windows.Forms.PictureBox();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnAction = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnDismiss = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -46,8 +80,36 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(641, 249);
+            this.kryptonPanel1.Size = new System.Drawing.Size(646, 249);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // klblContent
+            // 
+            this.klblContent.AutoSize = false;
+            this.klblContent.Location = new System.Drawing.Point(147, 77);
+            this.klblContent.Name = "klblContent";
+            this.klblContent.Size = new System.Drawing.Size(487, 153);
+            this.klblContent.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblContent.StateCommon.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.klblContent.StateCommon.LongText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.klblContent.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblContent.TabIndex = 3;
+            this.klblContent.Values.Text = "kryptonLabel1";
+            // 
+            // klblHeader
+            // 
+            this.klblHeader.AutoSize = false;
+            this.klblHeader.Location = new System.Drawing.Point(147, 12);
+            this.klblHeader.Name = "klblHeader";
+            this.klblHeader.Size = new System.Drawing.Size(487, 58);
+            this.klblHeader.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHeader.StateCommon.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblHeader.StateCommon.LongText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblHeader.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHeader.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblHeader.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblHeader.TabIndex = 2;
+            this.klblHeader.Values.Text = "kryptonLabel1";
             // 
             // pbxIcon
             // 
@@ -58,43 +120,34 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             this.pbxIcon.TabIndex = 1;
             this.pbxIcon.TabStop = false;
             // 
-            // klblHeader
-            // 
-            this.klblHeader.AutoSize = false;
-            this.klblHeader.Location = new System.Drawing.Point(147, 12);
-            this.klblHeader.Name = "klblHeader";
-            this.klblHeader.Size = new System.Drawing.Size(482, 58);
-            this.klblHeader.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblHeader.StateCommon.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.klblHeader.StateCommon.LongText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.klblHeader.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblHeader.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.klblHeader.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.klblHeader.TabIndex = 2;
-            this.klblHeader.Values.Text = "kryptonLabel1";
-            // 
-            // klblContent
-            // 
-            this.klblContent.Location = new System.Drawing.Point(147, 77);
-            this.klblContent.Name = "klblContent";
-            this.klblContent.Size = new System.Drawing.Size(115, 26);
-            this.klblContent.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblContent.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblContent.TabIndex = 3;
-            this.klblContent.Values.Text = "kryptonLabel1";
-            // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.kbtnAction);
             this.kryptonPanel2.Controls.Add(this.kbtnDismiss);
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel2.Location = new System.Drawing.Point(0, 252);
+            this.kryptonPanel2.Location = new System.Drawing.Point(0, 251);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(641, 49);
+            this.kryptonPanel2.Size = new System.Drawing.Size(646, 49);
             this.kryptonPanel2.TabIndex = 1;
+            // 
+            // kbtnAction
+            // 
+            this.kbtnAction.AutoSize = true;
+            this.kbtnAction.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnAction.Enabled = false;
+            this.kbtnAction.Location = new System.Drawing.Point(12, 6);
+            this.kbtnAction.Name = "kbtnAction";
+            this.kbtnAction.Size = new System.Drawing.Size(31, 30);
+            this.kbtnAction.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnAction.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnAction.TabIndex = 1;
+            this.kbtnAction.Values.Text = "{0}";
+            this.kbtnAction.Visible = false;
+            this.kbtnAction.Click += new System.EventHandler(this.kbtnAction_Click);
             // 
             // kbtnDismiss
             // 
-            this.kbtnDismiss.Location = new System.Drawing.Point(475, 6);
+            this.kbtnDismiss.Location = new System.Drawing.Point(480, 6);
             this.kbtnDismiss.Name = "kbtnDismiss";
             this.kbtnDismiss.Size = new System.Drawing.Size(154, 31);
             this.kbtnDismiss.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,13 +162,12 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 249);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(641, 3);
+            this.panel1.Size = new System.Drawing.Size(646, 2);
             this.panel1.TabIndex = 2;
             // 
             // KryptonToastNotification
             // 
-            this.ClientSize = new System.Drawing.Size(641, 301);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(646, 300);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanel2);
             this.Controls.Add(this.kryptonPanel1);
@@ -129,25 +181,36 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             this.Load += new System.EventHandler(this.KryptonToastNotification_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
-            this.kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
+            this.kryptonPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
         #endregion
 
         #region Variables
-        private bool _fade;
-        private string _headerText, _contentText;
+        private ActionType _actionType;
+        private bool _fade, _showActionButton;
+        private string _headerText, _contentText, _processName;
         private Image _image;
         private int _time;
         private Timer _timer;
         private SoundPlayer _player;
+        private IconType _iconType;
+        private RightToLeftSupport _rightToLeftSupport;
         #endregion
 
         #region Properties        
+        /// <summary>
+        /// Gets or sets the type of the action.
+        /// </summary>
+        /// <value>
+        /// The type of the action.
+        /// </value>
+        public ActionType ActionType { get => _actionType; set => _actionType = value; }
+
         /// <summary>
         /// Gets or sets a value indicating whether this <see cref="KryptonToastNotification"/> is fade.
         /// </summary>
@@ -155,6 +218,14 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         ///   <c>true</c> if fade; otherwise, <c>false</c>.
         /// </value>
         public bool Fade { get => _fade; set => _fade = value; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether [show action button].
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [show action button]; otherwise, <c>false</c>.
+        /// </value>
+        public bool ShowActionButton { get => _showActionButton; set => _showActionButton = value; }
 
         /// <summary>
         /// Gets or sets the sound path.
@@ -189,6 +260,14 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         public string ContentText { get => _contentText; set => _contentText = value; }
 
         /// <summary>
+        /// Gets or sets the name of the process.
+        /// </summary>
+        /// <value>
+        /// The name of the process.
+        /// </value>
+        public string ProcessName { get => _processName; set => _processName = value; }
+
+        /// <summary>
         /// Gets or sets the icon image.
         /// </summary>
         /// <value>
@@ -206,9 +285,19 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         /// The seconds.
         /// </value>
         public int Seconds { get; set; }
+
+        public IconType IconType { get => _iconType; set => _iconType = value; }
+
+        /// <summary>
+        /// Gets or sets the right to left support.
+        /// </summary>
+        /// <value>
+        /// The right to left support.
+        /// </value>
+        public RightToLeftSupport RightToLeftSupport { get => _rightToLeftSupport; set { _rightToLeftSupport = value; Invalidate(); } }
         #endregion
 
-        #region Constructors        
+        #region Constructors                
         /// <summary>
         /// Initializes a new instance of the <see cref="KryptonToastNotification"/> class.
         /// </summary>
@@ -216,7 +305,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         /// <param name="image">The image.</param>
         /// <param name="headerText">The header text.</param>
         /// <param name="contentText">The content text.</param>
-        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, bool showControlBox = true)
+        /// <param name="showControlBox">if set to <c>true</c> [show control box].</param>
+        /// <param name="rightToLeftSupport">The right to left support.</param>
+        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, bool showControlBox = true, RightToLeftSupport rightToLeftSupport = RightToLeftSupport.LEFTTORIGHT)
         {
             InitializeComponent();
 
@@ -237,6 +328,77 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             DoubleBuffered = true;
 
             ControlBox = showControlBox;
+
+            RightToLeftSupport = rightToLeftSupport;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="KryptonToastNotification"/> class.
+        /// </summary>
+        /// <param name="fade">if set to <c>true</c> [fade].</param>
+        /// <param name="iconType">Type of the icon.</param>
+        /// <param name="headerText">The header text.</param>
+        /// <param name="contentText">The content text.</param>
+        /// <param name="showControlBox">if set to <c>true</c> [show control box].</param>
+        /// <param name="rightToLeftSupport">The right to left support.</param>
+        public KryptonToastNotification(bool fade, IconType iconType, string headerText, string contentText, bool showControlBox = true, RightToLeftSupport rightToLeftSupport = RightToLeftSupport.LEFTTORIGHT)
+        {
+            InitializeComponent();
+
+            Fade = fade;
+
+            IconType = iconType;
+
+            #region Update Icons
+            if (iconType == IconType.NONE)
+            {
+
+            }
+            else if (iconType == IconType.QUESTION)
+            {
+                pbxIcon.Image = BitmapToImage(Properties.Resources.Question_128_x_128);
+            }
+            else if (iconType == IconType.INFORMATION)
+            {
+                pbxIcon.Image = BitmapToImage(Properties.Resources.Information_128_x_128);
+            }
+            else if (iconType == IconType.WARNING)
+            {
+                pbxIcon.Image = BitmapToImage(Properties.Resources.Warning_128_x_128);
+            }
+            else if (iconType == IconType.ERROR)
+            {
+                pbxIcon.Image = BitmapToImage(Properties.Resources.Critical_128_x_128);
+            }
+            else if (iconType == IconType.HAND)
+            {
+                pbxIcon.Image = BitmapToImage(Properties.Resources.Hand_128_x_128);
+            }
+            else if (iconType == IconType.STOP)
+            {
+                pbxIcon.Image = BitmapToImage(Properties.Resources.Stop_128_x_128);
+            }
+            else if (iconType == IconType.OK)
+            {
+                pbxIcon.Image = BitmapToImage(Properties.Resources.Ok_128_x_128);
+            }
+            #endregion
+
+            HeaderText = headerText;
+
+            ContentText = contentText;
+
+            TopMost = true;
+
+            Resize += KryptonToastNotification_Resize;
+
+            GotFocus += KryptonToastNotification_GotFocus;
+
+            DoubleBuffered = true;
+
+            ControlBox = showControlBox;
+
+            RightToLeftSupport = rightToLeftSupport;
         }
 
         /// <summary>
@@ -247,7 +409,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         /// <param name="headerText">The header text.</param>
         /// <param name="contentText">The content text.</param>
         /// <param name="seconds">The seconds.</param>
-        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, int seconds, bool showControlBox = true) : this(fade, image, headerText, contentText, showControlBox)
+        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, int seconds, bool showControlBox = true, RightToLeftSupport rightToLeftSupport = RightToLeftSupport.LEFTTORIGHT) : this(fade, image, headerText, contentText, showControlBox, rightToLeftSupport)
         {
             Seconds = seconds;
         }
@@ -261,7 +423,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         /// <param name="contentText">The content text.</param>
         /// <param name="seconds">The seconds.</param>
         /// <param name="soundPath">The sound path.</param>
-        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, int seconds, string soundPath, bool showControlBox = true) : this(fade, image, headerText, contentText, seconds, showControlBox)
+        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, int seconds, string soundPath, bool showControlBox = true, RightToLeftSupport rightToLeftSupport = RightToLeftSupport.LEFTTORIGHT) : this(fade, image, headerText, contentText, seconds, showControlBox, rightToLeftSupport)
         {
             SoundPath = soundPath;
         }
@@ -274,7 +436,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         /// <param name="headerText">The header text.</param>
         /// <param name="contentText">The content text.</param>
         /// <param name="soundPath">The sound path.</param>
-        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, string soundPath, bool showControlBox = true) : this(fade, image, headerText, contentText, showControlBox)
+        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, string soundPath, bool showControlBox = true, RightToLeftSupport rightToLeftSupport = RightToLeftSupport.LEFTTORIGHT) : this(fade, image, headerText, contentText, showControlBox, rightToLeftSupport)
         {
             SoundPath = soundPath;
         }
@@ -287,7 +449,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         /// <param name="headerText">The header text.</param>
         /// <param name="contentText">The content text.</param>
         /// <param name="soundStream">The sound stream.</param>
-        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, Stream soundStream, bool showControlBox = true) : this(fade, image, headerText, contentText, showControlBox)
+        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, Stream soundStream, bool showControlBox = true, RightToLeftSupport rightToLeftSupport = RightToLeftSupport.LEFTTORIGHT) : this(fade, image, headerText, contentText, showControlBox, rightToLeftSupport)
         {
             SoundStream = soundStream;
         }
@@ -301,9 +463,31 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         /// <param name="contentText">The content text.</param>
         /// <param name="seconds">The seconds.</param>
         /// <param name="soundStream">The sound stream.</param>
-        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, int seconds, Stream soundStream, bool showControlBox = true) : this(fade, image, headerText, contentText, seconds, showControlBox)
+        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, int seconds, Stream soundStream, bool showControlBox = true, RightToLeftSupport rightToLeftSupport = RightToLeftSupport.LEFTTORIGHT) : this(fade, image, headerText, contentText, seconds, showControlBox, rightToLeftSupport)
         {
             SoundStream = soundStream;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="KryptonToastNotification"/> class.
+        /// </summary>
+        /// <param name="fade">if set to <c>true</c> [fade].</param>
+        /// <param name="image">The image.</param>
+        /// <param name="headerText">The header text.</param>
+        /// <param name="contentText">The content text.</param>
+        /// <param name="showActionButton">if set to <c>true</c> [show action button].</param>
+        /// <param name="actionType">Type of the action.</param>
+        /// <param name="processName">Name of the process.</param>
+        /// <param name="showControlBox">if set to <c>true</c> [show control box].</param>
+        public KryptonToastNotification(bool fade, Image image, string headerText, string contentText, bool showActionButton, ActionType actionType, string processName, bool showControlBox = true, RightToLeftSupport rightToLeftSupport = RightToLeftSupport.LEFTTORIGHT) : this(fade, image, headerText, contentText, showControlBox, rightToLeftSupport)
+        {
+            ShowActionButton = showActionButton;
+
+            ActionType = actionType;
+
+            ProcessName = processName;
+
+            SetActionText(actionType);
         }
         #endregion
 
@@ -343,9 +527,24 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         {
             FadeOutAndClose();
         }
+
+        private void kbtnAction_Click(object sender, EventArgs e)
+        {
+            if (GetActionType() == ActionType.LAUCHPROCESS)
+            {
+                LaunchProcess(ProcessName);
+            }
+            else if (GetActionType() == ActionType.OPEN)
+            {
+                KryptonMessageBox.Show("To do...");
+            }
+        }
         #endregion
 
-        #region Methods
+        #region Methods        
+        /// <summary>
+        /// Fades the window in.
+        /// </summary>
         private void FadeIn()
         {
             Timer fadeTimer = new Timer();
@@ -365,6 +564,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             fadeTimer.Start();
         }
 
+        /// <summary>
+        /// Fades the window out and close.
+        /// </summary>
         private void FadeOutAndClose()
         {
             Timer fadeTimer = new Timer();
@@ -386,11 +588,23 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             fadeTimer.Start();
         }
 
+        /// <summary>
+        /// Displays the control to the user.
+        /// </summary>
         public new void Show()
         {
             Opacity = 0;
 
-            pbxIcon.Image = IconImage;
+            ReconfigureUI(RightToLeftSupport);
+
+            if (IconType != IconType.NULL)
+            {
+                UpdateIconType(IconType);
+            }
+            else
+            {
+                pbxIcon.Image = IconImage;
+            }
 
             klblHeader.Text = HeaderText;
 
@@ -432,7 +646,168 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             base.Show();
         }
 
+        /// <summary>
+        /// Gets a value indicating whether the window will be activated when it is shown.
+        /// </summary>
         protected override bool ShowWithoutActivation { get => true; }
+
+        /// <summary>
+        /// Updates the type of the icon.
+        /// </summary>
+        /// <param name="iconType">Type of the icon.</param>
+        public void UpdateIconType(IconType iconType)
+        {
+            switch (iconType)
+            {
+                case IconType.NONE:
+                    break;
+                case IconType.QUESTION:
+                    pbxIcon.Image = Properties.Resources.Question_128_x_128;
+
+                    SystemSounds.Question.Play();
+                    break;
+                case IconType.INFORMATION:
+                    pbxIcon.Image = Properties.Resources.Information_128_x_128;
+
+                    SystemSounds.Exclamation.Play();
+                    break;
+                case IconType.WARNING:
+                    pbxIcon.Image = Properties.Resources.Warning_128_x_128;
+
+                    SystemSounds.Exclamation.Play();
+                    break;
+                case IconType.ERROR:
+                    pbxIcon.Image = Properties.Resources.Critical_128_x_128;
+                    break;
+                case IconType.HAND:
+                    pbxIcon.Image = Properties.Resources.Hand_128_x_128;
+                    break;
+                case IconType.STOP:
+                    pbxIcon.Image = Properties.Resources.Stop_128_x_128;
+                    break;
+                case IconType.OK:
+                    pbxIcon.Image = Properties.Resources.Ok_128_x_128;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Raises the <see cref="E:System.Windows.Forms.Control.Paint" /> event.
+        /// </summary>
+        /// <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs" /> that contains the event data.</param>
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            UpdateIconType(IconType);
+
+            ReconfigureUI(RightToLeftSupport);
+
+            base.OnPaint(e);
+        }
+
+        /// <summary>
+        /// Bitmaps to image.
+        /// </summary>
+        /// <param name="bitmap">The bitmap.</param>
+        /// <returns></returns>
+        private Image BitmapToImage(Bitmap bitmap)
+        {
+            Image tmp = new Bitmap(bitmap);
+
+            return tmp;
+        }
+
+        /// <summary>
+        /// Reconfigures the UI.
+        /// </summary>
+        /// <param name="rightToLeft">The right to left.</param>
+        private void ReconfigureUI(RightToLeftSupport rightToLeft)
+        {
+            switch (rightToLeft)
+            {
+                case RightToLeftSupport.LEFTTORIGHT:
+                    ConfigureLeftToRight();
+                    break;
+                case RightToLeftSupport.RIGHTTOLEFT:
+                    ConfigureRightToLeft();
+                    break;
+                default:
+                    ReconfigureUI(RightToLeftSupport.LEFTTORIGHT);
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Configures the UI elements to left to right.
+        /// </summary>
+        private void ConfigureLeftToRight()
+        {
+            RightToLeft = RightToLeft.No;
+
+            pbxIcon.Location = new Point(12, 12);
+
+            klblHeader.Location = new Point(147, 12);
+
+            klblContent.Location = new Point(147, 77);
+
+            klblContent.RightToLeft = RightToLeft.No;
+
+            kbtnAction.Location = new Point(12, 6);
+
+            kbtnAction.RightToLeft = RightToLeft.No;
+
+            kbtnDismiss.Location = new Point(480, 6);
+
+            kbtnDismiss.RightToLeft = RightToLeft.No;
+        }
+
+        /// <summary>
+        /// Configures the UI to right to left.
+        /// </summary>
+        private void ConfigureRightToLeft()
+        {
+
+        }
+
+        /// <summary>
+        /// Launches the process.
+        /// </summary>
+        /// <param name="process">The process.</param>
+        public void LaunchProcess(string process)
+        {
+            Process.Start(process);
+
+            Debug.WriteLine($"[Launching process]: { Path.GetFullPath(process) } at { DateTime.Now.ToString() }");
+        }
+
+        /// <summary>
+        /// Sets the action text.
+        /// </summary>
+        /// <param name="type">The type.</param>
+        private void SetActionText(ActionType type)
+        {
+            switch (type)
+            {
+                case ActionType.LAUCHPROCESS:
+                    kbtnAction.Text = $"&Launch Process { Path.GetFileName(ProcessName) }";
+                    break;
+                case ActionType.OPEN:
+                    kbtnAction.Text = "&Open";
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Gets the type of the action.
+        /// </summary>
+        /// <returns></returns>
+        private ActionType GetActionType()
+        {
+            return ActionType;
+        }
         #endregion
     }
 }

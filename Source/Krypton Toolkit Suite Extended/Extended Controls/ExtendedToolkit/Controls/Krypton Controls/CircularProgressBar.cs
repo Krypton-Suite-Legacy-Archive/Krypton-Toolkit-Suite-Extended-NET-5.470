@@ -2,6 +2,8 @@
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 using System.Windows.Forms;
 using WinFormAnimation;
 
@@ -272,26 +274,26 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         {
             try
             {
-                //if (!DesignMode)
-                //{
-                //    if (Style == ProgressBarStyle.Marquee)
-                //    {
-                //        InitialiseMarquee(_style != Style);
-                //    }
-                //    else
-                //    {
-                //        InitialiseContinues(_style != Style);
-                //    }
+                if (!DesignMode)
+                {
+                    if (Style == ProgressBarStyle.Marquee)
+                    {
+                        InitialiseMarquee(_style != Style);
+                    }
+                    else
+                    {
+                        InitialiseContinues(_style != Style);
+                    }
 
-                //    _style = Style;
-                //}
+                    _style = Style;
+                }
 
-                //if (_backBrush == null)
-                //{
-                //    RecreateBackgroundBrush();
-                //}
+                if (_backBrush == null)
+                {
+                    RecreateBackgroundBrush();
+                }
 
-                //StartPaint(e.Graphics);
+                StartPaint(e.Graphics);
             }
             catch
             {
@@ -300,27 +302,351 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
         protected override void OnParentBackColorChanged(EventArgs e)
         {
-            //RecreateBackgroundBrush();
+            RecreateBackgroundBrush();
         }
 
         protected override void OnParentBackgroundImageChanged(EventArgs e)
         {
-          //  RecreateBackgroundBrush();
+            RecreateBackgroundBrush();
         }
 
         protected override void OnParentChanged(EventArgs e)
         {
             if (Parent != null)
             {
-                
+                Parent.Invalidated -= ParentOnInvalidated;
+
+                Parent.Resize -= ParentOnResize;
             }
 
             base.OnParentChanged(e);
 
             if (Parent != null)
             {
+                Parent.Invalidated += ParentOnInvalidated;
 
+                Parent.Resize += ParentOnResize;
             }
+        }
+
+        protected override void OnStyleChanged(EventArgs e)
+        {
+            base.OnStyleChanged(e);
+
+            Invalidate();
+        }
+
+        protected virtual void InitialiseContinues(bool firstTime)
+        {
+            if (_lastValue == Value && !firstTime)
+            {
+                return;
+            }
+
+            _lastValue = Value;
+
+            _animator.Stop();
+
+            _animatedStartAngle = null;
+
+            if (AnimationSpeed <= 0)
+            {
+                _animatedValue = Value;
+
+                Invalidate();
+
+                return;
+            }
+
+            _animator.Paths = new Path(_animatedValue ?? Value, Value, (ulong)AnimationSpeed, CustomAnimationFunction).ToArray();
+
+            _animator.Repeat = false;
+
+            _animator.Play(new SafeInvoker<float>(v =>
+            {
+                try
+                {
+                    _animatedValue = v;
+
+                    Invalidate();
+                }
+                catch
+                {
+                    _animator.Stop();
+                }
+            },
+            this));
+        }
+
+        protected virtual void InitialiseMarquee(bool firstTime)
+        {
+            if (!firstTime && (_animator.ActivePath == null || _animator.ActivePath.Duration == (ulong)MarqueeAnimationSpeed && _animator.ActivePath.Function == CustomAnimationFunction))
+            {
+                return;
+            }
+
+            _animator.Stop();
+
+            _animatedValue = null;
+
+            if (AnimationSpeed <= 0)
+            {
+                _animatedStartAngle = 0;
+
+                Invalidate();
+
+                return;
+            }
+
+            _animator.Paths = new Path(0, 359, (ulong)MarqueeAnimationSpeed, CustomAnimationFunction).ToArray();
+
+            _animator.Repeat = true;
+
+            _animator.Play(
+                new SafeInvoker<float>(
+                    v =>
+                    {
+                        try
+                        {
+                            _animatedStartAngle = (int)(v % 360);
+
+                            Invalidate();
+                        }
+                        catch
+                        {
+                            _animator.Stop();
+                        }
+                    },
+                    this));
+        }
+
+        /// <summary>
+        ///     Occurs when parent's display requires redrawing.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="invalidateEventArgs"></param>
+        protected virtual void ParentOnInvalidated(object sender, InvalidateEventArgs invalidateEventArgs)
+        {
+            RecreateBackgroundBrush();
+        }
+
+        /// <summary>
+        ///     Occurs when the parent resized.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="eventArgs"></param>
+        protected virtual void ParentOnResize(object sender, EventArgs eventArgs)
+        {
+            RecreateBackgroundBrush();
+        }
+
+        /// <summary>
+        ///     Update or create the brush used for drawing the background
+        /// </summary>
+        protected virtual void RecreateBackgroundBrush()
+        {
+            lock (this)
+            {
+                _backBrush?.Dispose();
+                _backBrush = new SolidBrush(BackColor);
+
+                if (BackColor.A == 255)
+                {
+                    return;
+                }
+
+                if (Parent != null && Parent.Width > 0 && Parent.Height > 0)
+                {
+                    using (var parentImage = new Bitmap(Parent.Width, Parent.Height))
+                    {
+                        using (var parentGraphic = Graphics.FromImage(parentImage))
+                        {
+                            var pe = new PaintEventArgs(parentGraphic,
+                                new Rectangle(new Point(0, 0), parentImage.Size));
+                            InvokePaintBackground(Parent, pe);
+                            InvokePaint(Parent, pe);
+
+                            if (BackColor.A > 0) // Translucent
+                            {
+                                parentGraphic.FillRectangle(_backBrush, Bounds);
+                            }
+                        }
+
+                        _backBrush = new TextureBrush(parentImage);
+                        ((TextureBrush)_backBrush).TranslateTransform(-Bounds.X, -Bounds.Y);
+                    }
+                }
+                else
+                {
+                    _backBrush = new SolidBrush(Color.FromArgb(255, BackColor));
+                }
+            }
+        }
+
+        /// <summary>
+        ///     The function responsible for painting the control
+        /// </summary>
+        /// <param name="g">The <see cref="Graphics" /> object to draw into</param>
+        protected virtual void StartPaint(Graphics g)
+        {
+            try
+            {
+                lock (this)
+                {
+                    g.TextRenderingHint = TextRenderingHint.AntiAlias;
+                    g.SmoothingMode = SmoothingMode.AntiAlias;
+                    var point = AddPoint(Point.Empty, 2);
+                    var size = AddSize(Size, -2 * 2);
+
+                    if (OuterWidth + OuterMargin < 0)
+                    {
+                        var offset = Math.Abs(OuterWidth + OuterMargin);
+                        point = AddPoint(Point.Empty, offset);
+                        size = AddSize(Size, -2 * offset);
+                    }
+
+                    if (OuterColor != Color.Empty && OuterColor != Color.Transparent && OuterWidth != 0)
+                    {
+                        g.FillEllipse(new SolidBrush(OuterColor), new RectangleF(point, size));
+
+                        if (OuterWidth >= 0)
+                        {
+                            point = AddPoint(point, OuterWidth);
+                            size = AddSize(size, -2 * OuterWidth);
+                            g.FillEllipse(_backBrush, new RectangleF(point, size));
+                        }
+                    }
+
+                    point = AddPoint(point, OuterMargin);
+                    size = AddSize(size, -2 * OuterMargin);
+
+                    g.FillPie(
+                        new SolidBrush(ProgressColor),
+                        ToRectangle(new RectangleF(point, size)),
+                        _animatedStartAngle ?? StartAngle,
+                        (_animatedValue ?? Value) / (Maximum - Minimum) * 360);
+
+                    if (ProgressWidth >= 0)
+                    {
+                        point = AddPoint(point, ProgressWidth);
+                        size = AddSize(size, -2 * ProgressWidth);
+                        g.FillEllipse(_backBrush, new RectangleF(point, size));
+                    }
+
+                    point = AddPoint(point, InnerMargin);
+                    size = AddSize(size, -2 * InnerMargin);
+
+                    if (InnerColor != Color.Empty && InnerColor != Color.Transparent && InnerWidth != 0)
+                    {
+                        g.FillEllipse(new SolidBrush(InnerColor), new RectangleF(point, size));
+
+                        if (InnerWidth >= 0)
+                        {
+                            point = AddPoint(point, InnerWidth);
+                            size = AddSize(size, -2 * InnerWidth);
+                            g.FillEllipse(_backBrush, new RectangleF(point, size));
+                        }
+                    }
+
+                    if (Text == string.Empty)
+                    {
+                        return;
+                    }
+
+                    point.X += TextMargin.Left;
+                    point.Y += TextMargin.Top;
+                    size.Width -= TextMargin.Right;
+                    size.Height -= TextMargin.Bottom;
+                    var stringFormat =
+                        new StringFormat(RightToLeft == RightToLeft.Yes ? StringFormatFlags.DirectionRightToLeft : 0)
+                        {
+                            Alignment = StringAlignment.Center,
+                            LineAlignment = StringAlignment.Near
+                        };
+                    var textSize = g.MeasureString(Text, Font);
+                    var textPoint = new PointF(
+                        point.X + (size.Width - textSize.Width) / 2,
+                        point.Y + (size.Height - textSize.Height) / 2);
+
+                    if (SubscriptText != string.Empty || SuperscriptText != string.Empty)
+                    {
+                        float maxSWidth = 0;
+                        var supSize = SizeF.Empty;
+                        var subSize = SizeF.Empty;
+
+                        if (SuperscriptText != string.Empty)
+                        {
+                            supSize = g.MeasureString(SuperscriptText, SecondaryFont);
+                            maxSWidth = Math.Max(supSize.Width, maxSWidth);
+                            supSize.Width -= SuperscriptMargin.Right;
+                            supSize.Height -= SuperscriptMargin.Bottom;
+                        }
+
+                        if (SubscriptText != string.Empty)
+                        {
+                            subSize = g.MeasureString(SubscriptText, SecondaryFont);
+                            maxSWidth = Math.Max(subSize.Width, maxSWidth);
+                            subSize.Width -= SubscriptMargin.Right;
+                            subSize.Height -= SubscriptMargin.Bottom;
+                        }
+
+                        textPoint.X -= maxSWidth / 4;
+
+                        if (SuperscriptText != string.Empty)
+                        {
+                            var supPoint = new PointF(
+                                textPoint.X + textSize.Width - supSize.Width / 2,
+                                textPoint.Y - supSize.Height * 0.85f);
+                            supPoint.X += SuperscriptMargin.Left;
+                            supPoint.Y += SuperscriptMargin.Top;
+                            g.DrawString(
+                                SuperscriptText,
+                                SecondaryFont,
+                                new SolidBrush(SuperscriptColor),
+                                new RectangleF(supPoint, supSize),
+                                stringFormat);
+                        }
+
+                        if (SubscriptText != string.Empty)
+                        {
+                            var subPoint = new PointF(
+                                textPoint.X + textSize.Width - subSize.Width / 2,
+                                textPoint.Y + textSize.Height * 0.85f);
+                            subPoint.X += SubscriptMargin.Left;
+                            subPoint.Y += SubscriptMargin.Top;
+                            g.DrawString(
+                                SubscriptText,
+                                SecondaryFont,
+                                new SolidBrush(SubscriptColor),
+                                new RectangleF(subPoint, subSize),
+                                stringFormat);
+                        }
+                    }
+
+                    g.DrawString(
+                        Text,
+                        Font,
+                        new SolidBrush(ForeColor),
+                        new RectangleF(textPoint, textSize),
+                        stringFormat);
+                }
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+        #endregion
+
+        #region Event Handlers
+        private void Parent_Resize(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Parent_Invalidated(object sender, InvalidateEventArgs e)
+        {
+            throw new NotImplementedException();
         }
         #endregion
     }

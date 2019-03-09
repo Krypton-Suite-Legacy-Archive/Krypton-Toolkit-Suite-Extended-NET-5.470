@@ -57,6 +57,9 @@
     <Compile Include="CalandarAndControls.Designer.cs">
       <DependentUpon>CalandarAndControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="CircularProgressBarTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ColourTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +74,9 @@
     </Compile>
     <Compile Include="CommandLinkStyles.Designer.cs">
       <DependentUpon>CommandLinkStyles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="FlashingLabelTest.cs">
       <SubType>Form</SubType>
@@ -116,6 +122,9 @@
     <EmbeddedResource Include="CalandarAndControls.resx">
       <DependentUpon>CalandarAndControls.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CircularProgressBarTest.resx">
+      <DependentUpon>CircularProgressBarTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ColourTest.resx">
       <DependentUpon>ColourTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CommandLinkStyles.resx">
       <DependentUpon>CommandLinkStyles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FlashingLabelTest.resx">
       <DependentUpon>FlashingLabelTest.cs</DependentUpon>
@@ -213,6 +225,13 @@
     <Content Include="..\..\..\Assets\PNG\32 x 32\KR 32 x 32 Orange.png">
       <Link>Resources\KR 32 x 32 Orange.png</Link>
     </Content>
+    <None Include="Resources\Critical 128 x 128.png" />
+    <None Include="Resources\Hand 128 x 128.png" />
+    <None Include="Resources\Information 128 x 128.png" />
+    <None Include="Resources\Ok 128 x 128.png" />
+    <None Include="Resources\Question 128 x 128.png" />
+    <None Include="Resources\Stop 128 x 128.png" />
+    <None Include="Resources\Warning 128 x 128.png" />
     <None Include="Resources\KR 48 x 48 Orange.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

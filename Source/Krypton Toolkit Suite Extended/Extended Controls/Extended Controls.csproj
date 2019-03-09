@@ -148,6 +148,50 @@
     <Compile Include="Base\UI\Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Scintilla NET\Classes\Document.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\FlagsEnumConverter.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\GapBuffer.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Helpers.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Indicator.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\IndicatorCollection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Line.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\LineCollection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Loader.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Margin.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\MarginCollection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Marker.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\MarkerCollection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\NativeMemoryStream.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\NativeMethods.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\ProjectionEqualityComparer.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\ScintillaReader.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Selection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\SelectionCollection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Style.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\StyleCollection.cs" />
+    <Compile Include="Components\Scintilla NET\Classes\Tuple.cs" />
+    <Compile Include="Components\Scintilla NET\Controls\Scintilla.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Scintilla NET\Enumerations\Enumerations.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\AutoCSelectionEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\BeforeModificationEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\ChangeAnnotationEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\CharAddedEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\DoubleClickEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\DwellEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\HotspotClickEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\IndicatorClickEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\IndicatorReleaseEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\InsertCheckEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\MarginClickEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\ModificationEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\NeedShownEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\SCNotificationEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\StyleNeededEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Event Argument Handlers\UpdateUIEventArgs.cs" />
+    <Compile Include="Components\Scintilla NET\Interfaces\ILoader.cs" />
+    <Compile Include="Components\Scintilla NET\Structs\MarkerHandle.cs" />
     <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="ExtendedToolkit\Calendar Library\Calendar.cs">
       <SubType>Component</SubType>

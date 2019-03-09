@@ -267,7 +267,10 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
 
         private void kbtnApply_Click(object sender, EventArgs e)
         {
-            //ThemeManager.ApplyGlobalTheme(Manager, ThemeManager.ApplyThemeMode(kcmbSelection.Text));
+            if (kcmbSelection.Text != "")
+            {
+                KryptonThemeManager.SwitchThemeStyle(KryptonThemeManager.GetPaletteMode(kcmbSelection.Text), _manager);
+            }
         }
 
         private void kbtnBrowse_Click(object sender, EventArgs e)

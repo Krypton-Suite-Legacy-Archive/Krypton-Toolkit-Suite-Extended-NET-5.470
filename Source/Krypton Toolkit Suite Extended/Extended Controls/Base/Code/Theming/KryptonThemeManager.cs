@@ -11,6 +11,53 @@ namespace ExtendedControls.Base.Code.Theming
     /// </summary>
     public class KryptonThemeManager
     {
+        #region Variables
+        /// <summary>
+        /// The supported themes
+        /// </summary>
+        private static string[] _supportedThemes = new string[]
+        {
+             "Professional - System",
+
+            "Professional - Office 2003",
+
+            "Office 2007 - Black",
+
+            "Office 2007 - Blue",
+
+            "Office 2007 - Silver",
+
+            "Office 2007 - White",
+
+            "Office 2010 - Black",
+
+            "Office 2010 - Blue",
+
+            "Office 2010 - Silver",
+
+            "Office 2010 - White",
+
+            "Office 2013",
+
+            "Office 2013 - White",
+
+            "Office 365 - Black",
+
+            "Office 365 - Blue",
+
+            "Office 365 - Silver",
+
+            "Office 365 - White",
+
+            "Sparkle - Blue",
+
+            "Sparkle - Orange",
+
+            "Sparkle - Purple",
+
+            "Custom"
+        };
+        #endregion
 
         #region Methods
         /// <summary>
@@ -26,7 +73,7 @@ namespace ExtendedControls.Base.Code.Theming
                 throw new ArgumentNullException();
             }
 
-            foreach (string theme in list)
+            foreach (string theme in KryptonThemeManager._supportedThemes)
             {
                 list.Add(theme);
             }
@@ -149,7 +196,7 @@ namespace ExtendedControls.Base.Code.Theming
         /// </summary>
         /// <param name="themeName">Name of the theme.</param>
         /// <returns></returns>
-        private PaletteMode GetPaletteMode(string themeName)
+        public static PaletteMode GetPaletteMode(string themeName)
         {
             if (themeName == "Custom")
             {
