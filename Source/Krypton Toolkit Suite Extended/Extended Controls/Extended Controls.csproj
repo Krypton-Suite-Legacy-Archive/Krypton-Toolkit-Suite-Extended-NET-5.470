@@ -290,6 +290,7 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMessageBoxExtended.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteChooserComboBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteSelector.cs">
       <SubType>UserControl</SubType>
