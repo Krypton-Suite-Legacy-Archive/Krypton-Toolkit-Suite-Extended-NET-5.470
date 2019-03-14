@@ -82,7 +82,7 @@ namespace Playground
                 kcmbGradientDirection.Items.Add(lgm.ToString().ToUpper());
             }
 
-            DevelopmentInformation.SetBuildInformation(this, _currentAssembly, DevelopmentStates.BETA);
+            DevelopmentInformation.SetBuildInformation(this, _currentAssembly, DevelopmentState.BETA);
         }
 
         private void MyOwnRecentFileGotClicked_Handler(object sender, EventArgs e)

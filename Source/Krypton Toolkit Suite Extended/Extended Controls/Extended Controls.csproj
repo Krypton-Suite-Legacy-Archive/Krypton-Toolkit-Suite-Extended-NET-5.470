@@ -127,6 +127,7 @@
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarOrientation.cs" />
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarState.cs" />
     <Compile Include="Base\Code\ScrollBar\WIN32.cs" />
+    <Compile Include="Base\Code\Security\SecurityMethods.cs" />
     <Compile Include="Base\Code\Settings\SettingsManager.cs" />
     <Compile Include="Base\Code\Theming\KryptonThemeManager.cs" />
     <Compile Include="Base\Code\TypefaceHelper.cs" />
@@ -287,6 +288,9 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\CircularProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonLineNumberedRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -322,6 +326,9 @@
     <Compile Include="ExtendedToolkit\MessageBoxes\UI\KryptonExceptionMessageBox.cs" />
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\ToolstripControls\ClearClipboard.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\ToolstripControls\FlashingLabel.cs">
       <SubType>Component</SubType>
@@ -759,6 +766,9 @@
     <Compile Include="ExtendedToolkit\UI\Colours\ColourPickerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Dialogues\KryptonCredentialDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -796,6 +806,9 @@
       <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\Security\File Hashing\HashFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Security\RandomPasswordGenerator.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.cs">
@@ -846,6 +859,7 @@
     <Compile Include="ExtendedToolkit\Wizard\Controls\InfoPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Interfaces\Colour Schemes\IColourScheme.cs" />
     <Compile Include="Interfaces\Colours\IExternalColourEditorInformationProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1091,6 +1105,9 @@
     <EmbeddedResource Include="ExtendedToolkit\UI\Colours\ColourPickerDialog.resx">
       <DependentUpon>ColourPickerDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\KryptonCredentialDialog.resx">
+      <DependentUpon>KryptonCredentialDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.resx">
       <DependentUpon>TypefaceSelectionDialogue.cs</DependentUpon>
     </EmbeddedResource>
@@ -1111,6 +1128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Security\File Hashing\HashFile.resx">
       <DependentUpon>HashFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Security\RandomPasswordGenerator.resx">
+      <DependentUpon>RandomPasswordGenerator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.resx">
       <DependentUpon>SoftwareUpdater.cs</DependentUpon>
@@ -1134,7 +1154,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.717</Version>
+      <Version>5.470.791</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>

@@ -1498,7 +1498,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.UI
                         _visualPopupToolTip.Disposed += OnVisualPopupToolTipDisposed;
 
                         // Show relative to the provided screen point
-                        _visualPopupToolTip.ShowCalculatingSize(e.ScreenPt);
+                        _visualPopupToolTip.ShowCalculatingSize(e.ControlMousePosition);
                     }
                 }
             }

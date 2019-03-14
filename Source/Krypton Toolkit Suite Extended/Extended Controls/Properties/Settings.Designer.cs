@@ -81,5 +81,17 @@ namespace ExtendedControls.Properties {
                 this["GlobalManager"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Office 2010 - Blue")]
+        public global::ComponentFactory.Krypton.Toolkit.PaletteMode DefaultTheme {
+            get {
+                return ((global::ComponentFactory.Krypton.Toolkit.PaletteMode)(this["DefaultTheme"]));
+            }
+            set {
+                this["DefaultTheme"] = value;
+            }
+        }
     }
 }

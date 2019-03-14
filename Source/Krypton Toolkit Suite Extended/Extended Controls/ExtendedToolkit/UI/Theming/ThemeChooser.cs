@@ -251,9 +251,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
 
             Manager = new KryptonManager();
 
-            KryptonThemeManager.PropagateThemeArray(_styles);
-
-            KryptonThemeManager.PropagateThemeComboBox(kcmbSelection, _styles);
+            ThemeManager.PropagateThemeSelector(kcmbSelection);
         }
         #endregion
 
@@ -261,7 +259,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
         {
             if (SettingsManager.GetDebugMode())
             {
-                DevelopmentInformation.SetBuildInformation(this, DevelopmentStates.PREALPHA);
+                DevelopmentInformation.SetBuildInformation(this, DevelopmentState.PREALPHA);
             }
         }
 
@@ -269,8 +267,10 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
         {
             if (kcmbSelection.Text != "")
             {
-                KryptonThemeManager.SwitchThemeStyle(KryptonThemeManager.GetPaletteMode(kcmbSelection.Text), _manager);
+                ThemeManager.ApplyGlobalTheme(Manager, ThemeManager.ApplyThemeMode(kcmbSelection.Text));
             }
+
+            Debug.WriteLine($"[{ DateTime.Now.ToString() }]: Theme has changed to: { Manager.GlobalPaletteMode.ToString() }");
         }
 
         private void kbtnBrowse_Click(object sender, EventArgs e)

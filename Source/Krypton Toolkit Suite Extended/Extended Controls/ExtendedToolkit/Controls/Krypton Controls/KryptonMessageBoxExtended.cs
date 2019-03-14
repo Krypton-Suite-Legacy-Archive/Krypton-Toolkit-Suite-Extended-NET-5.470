@@ -1092,6 +1092,92 @@ namespace ExtendedControls.ExtendedToolkit.Controls
                                                  MessageBoxIcon icon,
                                                  MessageBoxDefaultButton defaultButton,
                                                  MessageBoxOptions options,
+                                                 HelpInformation helpInformation, bool? showCtrlCopy, Font messageboxTypeface = null)
+        {
+            // Check if trying to show a message box from a non-interactive process, this is not possible
+            if (!SystemInformation.UserInteractive && ((options & (MessageBoxOptions.ServiceNotification | MessageBoxOptions.DefaultDesktopOnly)) == 0))
+            {
+                throw new InvalidOperationException("Cannot show modal dialog when non-interactive");
+            }
+
+            // Check if trying to show a message box from a service and the owner has been specified, this is not possible
+            if ((owner != null) && ((options & (MessageBoxOptions.ServiceNotification | MessageBoxOptions.DefaultDesktopOnly)) != 0))
+            {
+                throw new ArgumentException(@"Cannot show message box from a service with an owner specified", nameof(options));
+            }
+
+            // Check if trying to show a message box from a service and help information is specified, this is not possible
+            if ((helpInformation != null) && ((options & (MessageBoxOptions.ServiceNotification | MessageBoxOptions.DefaultDesktopOnly)) != 0))
+            {
+                throw new ArgumentException(@"Cannot show message box from a service with help specified", nameof(options));
+            }
+
+            // If help information provided or we are not a service/default desktop application then grab an owner for showing the message box
+            IWin32Window showOwner = null;
+            if ((helpInformation != null) || ((options & (MessageBoxOptions.ServiceNotification | MessageBoxOptions.DefaultDesktopOnly)) == 0))
+            {
+                // If do not have an owner passed in then get the active window and use that instead
+                showOwner = owner ?? FromHandle(PI.GetActiveWindow());
+            }
+
+            // Show message box window as a modal dialog and then dispose of it afterwards
+            using (KryptonMessageBoxExtended ekmb = new KryptonMessageBoxExtended(showOwner, text, caption, buttons, icon, defaultButton, options, helpInformation, showCtrlCopy, messageboxTypeface))
+            {
+                ekmb.StartPosition = showOwner == null ? FormStartPosition.CenterScreen : FormStartPosition.CenterParent;
+
+                return ekmb.ShowDialog(showOwner);
+            }
+        }
+
+        private static DialogResult InternalShow(IWin32Window owner,
+                                                 string text, string caption,
+                                                 MessageBoxButtons buttons,
+                                                 MessageBoxIcon icon,
+                                                 MessageBoxDefaultButton defaultButton,
+                                                 MessageBoxOptions options,
+                                                 HelpInformation helpInformation, bool? showCtrlCopy, bool topMost, Font messageboxTypeface = null)
+        {
+            // Check if trying to show a message box from a non-interactive process, this is not possible
+            if (!SystemInformation.UserInteractive && ((options & (MessageBoxOptions.ServiceNotification | MessageBoxOptions.DefaultDesktopOnly)) == 0))
+            {
+                throw new InvalidOperationException("Cannot show modal dialog when non-interactive");
+            }
+
+            // Check if trying to show a message box from a service and the owner has been specified, this is not possible
+            if ((owner != null) && ((options & (MessageBoxOptions.ServiceNotification | MessageBoxOptions.DefaultDesktopOnly)) != 0))
+            {
+                throw new ArgumentException(@"Cannot show message box from a service with an owner specified", nameof(options));
+            }
+
+            // Check if trying to show a message box from a service and help information is specified, this is not possible
+            if ((helpInformation != null) && ((options & (MessageBoxOptions.ServiceNotification | MessageBoxOptions.DefaultDesktopOnly)) != 0))
+            {
+                throw new ArgumentException(@"Cannot show message box from a service with help specified", nameof(options));
+            }
+
+            // If help information provided or we are not a service/default desktop application then grab an owner for showing the message box
+            IWin32Window showOwner = null;
+            if ((helpInformation != null) || ((options & (MessageBoxOptions.ServiceNotification | MessageBoxOptions.DefaultDesktopOnly)) == 0))
+            {
+                // If do not have an owner passed in then get the active window and use that instead
+                showOwner = owner ?? FromHandle(PI.GetActiveWindow());
+            }
+
+            // Show message box window as a modal dialog and then dispose of it afterwards
+            using (KryptonMessageBoxExtended ekmb = new KryptonMessageBoxExtended(showOwner, text, caption, buttons, icon, defaultButton, options, helpInformation, showCtrlCopy, messageboxTypeface, topMost))
+            {
+                ekmb.StartPosition = showOwner == null ? FormStartPosition.CenterScreen : FormStartPosition.CenterParent;
+
+                return ekmb.ShowDialog(showOwner);
+            }
+        }
+
+        private static DialogResult InternalShow(IWin32Window owner,
+                                                 string text, string caption,
+                                                 MessageBoxButtons buttons,
+                                                 MessageBoxIcon icon,
+                                                 MessageBoxDefaultButton defaultButton,
+                                                 MessageBoxOptions options,
                                                  HelpInformation helpInformation, bool? showCtrlCopy, bool topMost, Font messageboxTypeface = null,
                                                  bool showDoNotShowAgainOption = false, string doNotShowAgainOptionText = "Do n&ot show again",
                                                  bool useTimeOutOption = false, int timeOut = 60, int timeOutDelay = 250,
