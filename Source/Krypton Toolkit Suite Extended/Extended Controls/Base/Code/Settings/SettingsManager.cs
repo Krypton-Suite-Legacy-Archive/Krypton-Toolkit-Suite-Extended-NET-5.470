@@ -118,6 +118,20 @@ namespace ExtendedControls.Base.Code.Settings
 
             return settingsManager._settings.VirusTotalAPIKey;
         }
+
+        public static void SetVirusTotalUseTLS(bool value)
+        {
+            SettingsManager settingsManager = new SettingsManager();
+
+            settingsManager._settings.VirusTotalUseTLS = value;
+        }
+
+        public static bool GetVirusTotalUseTLS()
+        {
+            SettingsManager settingsManager = new SettingsManager();
+
+            return settingsManager._settings.VirusTotalUseTLS;
+        }
         #endregion
 
         #region Methods        

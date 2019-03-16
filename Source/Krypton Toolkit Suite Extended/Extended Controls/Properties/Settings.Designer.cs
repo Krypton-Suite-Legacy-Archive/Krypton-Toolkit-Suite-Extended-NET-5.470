@@ -105,5 +105,17 @@ namespace ExtendedControls.Properties {
                 this["VirusTotalAPIKey"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool VirusTotalUseTLS {
+            get {
+                return ((bool)(this["VirusTotalUseTLS"]));
+            }
+            set {
+                this["VirusTotalUseTLS"] = value;
+            }
+        }
     }
 }
