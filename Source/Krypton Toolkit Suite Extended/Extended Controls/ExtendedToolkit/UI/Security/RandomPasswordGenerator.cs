@@ -1,9 +1,11 @@
 ﻿using Base.Code.Security;
 using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Base.Code.Development;
+using ExtendedControls.Base.Code.Settings;
+using ExtendedControls.Base.Enumerations;
 using ExtendedControls.ExtendedToolkit.Controls;
 using System;
 using System.Drawing;
-using System.Windows;
 using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.UI.Security
@@ -61,9 +63,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security
             // 
             // kbtnGeneratePassword
             // 
-            this.kbtnGeneratePassword.Location = new System.Drawing.Point(472, 150);
+            this.kbtnGeneratePassword.Location = new System.Drawing.Point(472, 148);
             this.kbtnGeneratePassword.Name = "kbtnGeneratePassword";
-            this.kbtnGeneratePassword.Size = new System.Drawing.Size(156, 27);
+            this.kbtnGeneratePassword.Size = new System.Drawing.Size(156, 29);
             this.kbtnGeneratePassword.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnGeneratePassword.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnGeneratePassword.TabIndex = 11;
@@ -180,6 +182,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security
             this.Name = "RandomPasswordGenerator";
             this.Text = "Generate a Random Password";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RandomPasswordGenerator_FormClosing);
+            this.Load += new System.EventHandler(this.RandomPasswordGenerator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
@@ -250,6 +253,14 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security
                 {
                     return;
                 }
+            }
+        }
+
+        private void RandomPasswordGenerator_Load(object sender, EventArgs e)
+        {
+            if (SettingsManager.GetDebugMode())
+            {
+                DevelopmentInformation.SetBuildInformation(this, DevelopmentState.PREALPHA);
             }
         }
     }

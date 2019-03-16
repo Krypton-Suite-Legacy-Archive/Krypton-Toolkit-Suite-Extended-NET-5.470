@@ -127,7 +127,9 @@
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarOrientation.cs" />
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarState.cs" />
     <Compile Include="Base\Code\ScrollBar\WIN32.cs" />
+    <Compile Include="Base\Code\Security\PasswordStrength.cs" />
     <Compile Include="Base\Code\Security\SecurityMethods.cs" />
+    <Compile Include="Base\Code\Security\VirusTotalAPI.cs" />
     <Compile Include="Base\Code\Settings\SettingsManager.cs" />
     <Compile Include="Base\Code\Theming\KryptonThemeManager.cs" />
     <Compile Include="Base\Code\TypefaceHelper.cs" />
@@ -307,6 +309,9 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\PasswordStrengthControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\PromptRoundedTextbox.cs">
       <SubType>Component</SubType>
@@ -769,6 +774,9 @@
     <Compile Include="ExtendedToolkit\UI\Dialogues\KryptonCredentialDialog.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Dialogues\KrypyonUserCreationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -809,6 +817,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\Security\RandomPasswordGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Security\VirusTotal\VirusTotalUploader.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.cs">
@@ -1054,6 +1065,9 @@
     <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToastNotification.resx">
       <DependentUpon>KryptonToastNotification.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\PasswordStrengthControl.resx">
+      <DependentUpon>PasswordStrengthControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceProperties.resx">
       <DependentUpon>TypefaceProperties.cs</DependentUpon>
     </EmbeddedResource>
@@ -1108,6 +1122,9 @@
     <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\KryptonCredentialDialog.resx">
       <DependentUpon>KryptonCredentialDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\KrypyonUserCreationDialog.resx">
+      <DependentUpon>KrypyonUserCreationDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\TypefaceSelectionDialogue.resx">
       <DependentUpon>TypefaceSelectionDialogue.cs</DependentUpon>
     </EmbeddedResource>
@@ -1132,6 +1149,9 @@
     <EmbeddedResource Include="ExtendedToolkit\UI\Security\RandomPasswordGenerator.resx">
       <DependentUpon>RandomPasswordGenerator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Security\VirusTotal\VirusTotalUploader.resx">
+      <DependentUpon>VirusTotalUploader.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\SoftwareUpdater\UX\SoftwareUpdater.resx">
       <DependentUpon>SoftwareUpdater.cs</DependentUpon>
     </EmbeddedResource>
@@ -1155,6 +1175,9 @@
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
       <Version>5.470.791</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>

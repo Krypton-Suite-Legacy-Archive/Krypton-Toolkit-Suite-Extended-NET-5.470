@@ -93,5 +93,17 @@ namespace ExtendedControls.Properties {
                 this["DefaultTheme"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string VirusTotalAPIKey {
+            get {
+                return ((string)(this["VirusTotalAPIKey"]));
+            }
+            set {
+                this["VirusTotalAPIKey"] = value;
+            }
+        }
     }
 }

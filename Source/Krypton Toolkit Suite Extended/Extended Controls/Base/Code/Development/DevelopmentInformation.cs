@@ -69,6 +69,12 @@ namespace ExtendedControls.Base.Code.Development
             }
         }
 
+        /// <summary>
+        /// Sets the build information.
+        /// </summary>
+        /// <param name="target">The target.</param>
+        /// <param name="assembly">The assembly.</param>
+        /// <param name="state">The state.</param>
         public static void SetBuildInformation(KryptonForm target, Assembly assembly, DevelopmentState state = DevelopmentState.BETA)
         {
             DevelopmentInformation developmentInformation = new DevelopmentInformation();

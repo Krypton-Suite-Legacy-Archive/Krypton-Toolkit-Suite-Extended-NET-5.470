@@ -20,5 +20,8 @@
     <Setting Name="DefaultTheme" Type="ComponentFactory.Krypton.Toolkit.PaletteMode" Scope="User">
       <Value Profile="(Default)">Office 2010 - Blue</Value>
     </Setting>
+    <Setting Name="VirusTotalAPIKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
