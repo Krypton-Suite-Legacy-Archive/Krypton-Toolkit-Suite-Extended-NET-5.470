@@ -96,7 +96,7 @@ namespace ExtendedControls.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("80ada9eb0fd6d87e23d89cf1b4ba84ebd13a99053ec3c2edd26059af2e146ba0")]
         public string VirusTotalAPIKey {
             get {
                 return ((string)(this["VirusTotalAPIKey"]));

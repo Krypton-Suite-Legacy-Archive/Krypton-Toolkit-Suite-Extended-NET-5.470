@@ -21,7 +21,7 @@
       <Value Profile="(Default)">Office 2010 - Blue</Value>
     </Setting>
     <Setting Name="VirusTotalAPIKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">80ada9eb0fd6d87e23d89cf1b4ba84ebd13a99053ec3c2edd26059af2e146ba0</Value>
     </Setting>
     <Setting Name="VirusTotalUseTLS" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

@@ -26,20 +26,20 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal
 
         private void InitializeComponent()
         {
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues6 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues7 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues8 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues9 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues10 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues1 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues2 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues3 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues4 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues5 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnBrowse = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kptxtFilePath = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnOptions = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnSubmit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.kptxtFilePath = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -65,24 +65,11 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal
             this.kbtnBrowse.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnBrowse.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnBrowse.TabIndex = 11;
-            popupPositionValues6.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues6.PlacementTarget = null;
-            this.kbtnBrowse.ToolTipValues.ToolTipPosition = popupPositionValues6;
+            popupPositionValues1.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues1.PlacementTarget = null;
+            this.kbtnBrowse.ToolTipValues.ToolTipPosition = popupPositionValues1;
             this.kbtnBrowse.Values.Text = "...";
             this.kbtnBrowse.Click += new System.EventHandler(this.kbtnBrowse_Click);
-            // 
-            // kptxtFilePath
-            // 
-            this.kptxtFilePath.DrawPrompt = true;
-            this.kptxtFilePath.FocusSelect = true;
-            this.kptxtFilePath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kptxtFilePath.Location = new System.Drawing.Point(101, 12);
-            this.kptxtFilePath.Name = "kptxtFilePath";
-            this.kptxtFilePath.PromptForeColour = System.Drawing.SystemColors.GrayText;
-            this.kptxtFilePath.PromptText = "Enter a file path...";
-            this.kptxtFilePath.PromptTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kptxtFilePath.Size = new System.Drawing.Size(690, 29);
-            this.kptxtFilePath.TabIndex = 3;
             // 
             // kryptonLabel1
             // 
@@ -92,9 +79,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal
             this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 2;
-            popupPositionValues7.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues7.PlacementTarget = null;
-            this.kryptonLabel1.ToolTipValues.ToolTipPosition = popupPositionValues7;
+            popupPositionValues2.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues2.PlacementTarget = null;
+            this.kryptonLabel1.ToolTipValues.ToolTipPosition = popupPositionValues2;
             this.kryptonLabel1.Values.Text = "File Path:";
             // 
             // kryptonPanel2
@@ -116,9 +103,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal
             this.kbtnOptions.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnOptions.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnOptions.TabIndex = 13;
-            popupPositionValues8.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues8.PlacementTarget = null;
-            this.kbtnOptions.ToolTipValues.ToolTipPosition = popupPositionValues8;
+            popupPositionValues3.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues3.PlacementTarget = null;
+            this.kbtnOptions.ToolTipValues.ToolTipPosition = popupPositionValues3;
             this.kbtnOptions.Values.Text = "&Options";
             this.kbtnOptions.Click += new System.EventHandler(this.kbtnOptions_Click);
             // 
@@ -132,9 +119,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal
             this.kbtnSubmit.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnSubmit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnSubmit.TabIndex = 12;
-            popupPositionValues9.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues9.PlacementTarget = null;
-            this.kbtnSubmit.ToolTipValues.ToolTipPosition = popupPositionValues9;
+            popupPositionValues4.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues4.PlacementTarget = null;
+            this.kbtnSubmit.ToolTipValues.ToolTipPosition = popupPositionValues4;
             this.kbtnSubmit.Values.Text = "Upload && &Analyse";
             this.kbtnSubmit.Click += new System.EventHandler(this.kbtnSubmit_ClickAsync);
             // 
@@ -147,9 +134,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal
             this.kbtnCancel.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.TabIndex = 11;
-            popupPositionValues10.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues10.PlacementTarget = null;
-            this.kbtnCancel.ToolTipValues.ToolTipPosition = popupPositionValues10;
+            popupPositionValues5.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues5.PlacementTarget = null;
+            this.kbtnCancel.ToolTipValues.ToolTipPosition = popupPositionValues5;
             this.kbtnCancel.Values.Text = "&Cancel";
             this.kbtnCancel.Click += new System.EventHandler(this.kbtnCancel_Click);
             // 
@@ -162,13 +149,30 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal
             this.panel1.Size = new System.Drawing.Size(847, 47);
             this.panel1.TabIndex = 1;
             // 
+            // kptxtFilePath
+            // 
+            this.kptxtFilePath.DrawPrompt = true;
+            this.kptxtFilePath.FocusSelect = true;
+            this.kptxtFilePath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtFilePath.Location = new System.Drawing.Point(101, 12);
+            this.kptxtFilePath.Name = "kptxtFilePath";
+            this.kptxtFilePath.PromptForeColour = System.Drawing.SystemColors.GrayText;
+            this.kptxtFilePath.PromptText = "Enter a file path...";
+            this.kptxtFilePath.PromptTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtFilePath.Size = new System.Drawing.Size(690, 29);
+            this.kptxtFilePath.TabIndex = 3;
+            // 
             // VirusTotalUploader
             // 
             this.ClientSize = new System.Drawing.Size(847, 108);
             this.Controls.Add(this.kryptonPanel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "VirusTotalUploader";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
@@ -212,12 +216,10 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal
 
         }
 
-        private static async Task RunScan(string filePath)
+        private async Task RunScan(string filePath)
         {
             try
             {
-                VirusTotalUploader virusTotalUploader = new VirusTotalUploader();
-
                 VirusTotalAPI virusTotal = new VirusTotalAPI(SettingsManager.GetVirusTotalAPIKey());
 
                 virusTotal.UseTLS = SettingsManager.GetVirusTotalUseTLS();
@@ -228,17 +230,26 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal
 
                 bool hasBeenSeenBefore = report.ResponseCode == FileReportResponseCode.Present;
 
-                ExtendedKryptonMessageBox.Show($"The file: '{ Path.GetFileName(filePath) }' has been scanned before.", "Scanning File", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 if (hasBeenSeenBefore)
                 {
-                    virusTotalUploader.ShowResults(report);
+                    DialogResult result = ExtendedKryptonMessageBox.Show($"The file: '{ Path.GetFileName(filePath) }' has been scanned before.\nDo you want to rescan it?", "Scanning File", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        ScanResult scanResult = await virusTotal.ScanFileAsync(file, filePath + ".vtr");
+
+                        ShowResults(scanResult);
+                    }
+                    else
+                    {
+                        ShowResults(report);
+                    }
                 }
                 else
                 {
                     ScanResult scanResult = await virusTotal.ScanFileAsync(file, filePath + ".vtr");
 
-                    virusTotalUploader.ShowResults(scanResult);
+                    ShowResults(scanResult);
                 }
             }
             catch (Exception exc)
