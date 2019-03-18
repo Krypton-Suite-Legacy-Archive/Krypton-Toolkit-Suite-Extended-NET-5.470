@@ -1,6 +1,6 @@
 ﻿namespace PaletteEditor.UX.New
 {
-    partial class RibbonWindow
+    partial class RibbonWindowOld
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonWindow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonWindowOld));
             this.kryptonRibbon1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbon();
             this.krqatbNew = new ComponentFactory.Krypton.Ribbon.KryptonRibbonQATButton();
             this.kcNewPalette = new ComponentFactory.Krypton.Toolkit.KryptonCommand();

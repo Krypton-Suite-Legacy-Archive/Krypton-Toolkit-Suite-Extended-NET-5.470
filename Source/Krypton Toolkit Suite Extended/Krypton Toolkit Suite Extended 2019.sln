@@ -148,6 +148,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{450BC0
 		..\Palettes\win7.xml = ..\Palettes\win7.xml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krypton Palette Converter", "Krypton Palette Converter\Krypton Palette Converter.csproj", "{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -355,6 +357,18 @@ Global
 		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|x86.ActiveCfg = Release|Any CPU
 		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|x86.Build.0 = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Debug|x86.Build.0 = Debug|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Installer Only|x86.Build.0 = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,7 +10,7 @@ namespace PaletteEditor.Components
 
         private void InitializeComponent()
         {
-            this.kpgPaletteProperties = new KryptonPropertyGrid();
+            this.kpgPaletteProperties = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPropertyGrid();
             this.SuspendLayout();
             // 
             // kpgPaletteProperties
@@ -23,14 +23,14 @@ namespace PaletteEditor.Components
             this.kpgPaletteProperties.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(196)))), ((int)(((byte)(216)))));
             this.kpgPaletteProperties.Location = new System.Drawing.Point(0, 0);
             this.kpgPaletteProperties.Name = "kpgPaletteProperties";
-            this.kpgPaletteProperties.Size = new System.Drawing.Size(425, 826);
+            this.kpgPaletteProperties.Size = new System.Drawing.Size(422, 603);
             this.kpgPaletteProperties.TabIndex = 0;
             // 
             // PaletteProperties
             // 
             this.Controls.Add(this.kpgPaletteProperties);
             this.Name = "PaletteProperties";
-            this.Size = new System.Drawing.Size(425, 826);
+            this.Size = new System.Drawing.Size(422, 603);
             this.ResumeLayout(false);
 
         }

@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace PaletteEditor.UX.New
 {
-    public partial class RibbonWindow : KryptonForm
+    public partial class RibbonWindowOld : KryptonForm
     {
         #region Variables
         private bool _dirty, _loaded, _debugMode, _useCircularPictureBoxes;
@@ -57,7 +57,7 @@ namespace PaletteEditor.UX.New
         public new PaletteMode PaletteMode { get { return _paletteMode; } set { _paletteMode = value; } }
         #endregion
 
-        public RibbonWindow()
+        public RibbonWindowOld()
         {
             InitializeComponent();
 
