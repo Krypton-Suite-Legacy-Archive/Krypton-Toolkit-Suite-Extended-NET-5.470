@@ -1,8 +1,14 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Core;
+using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
+using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 
-namespace KryptonPaletteConverter.UX
+namespace KryptonPaletteUpgradeTool.UX
 {
     public class MainWindow : KryptonForm
     {
@@ -27,21 +33,28 @@ namespace KryptonPaletteConverter.UX
         private System.Windows.Forms.PictureBox pictureBox1;
         private KryptonLabel kryptonLabel2;
         private System.Windows.Forms.ToolStripStatusLabel tsslStatus;
+        private KryptonComboBox kcmbVersions;
+        private KryptonLabel kryptonLabel3;
+        private KryptonButton kbtnUpgrade;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
         {
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues1 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues5 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues6 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues7 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues8 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues9 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues10 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues11 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues12 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues13 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues14 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues15 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues16 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues17 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues18 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues19 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues20 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues21 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues22 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues4 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues3 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues2 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -61,8 +74,11 @@ namespace KryptonPaletteConverter.UX
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kpSS = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.ss = new System.Windows.Forms.StatusStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tsslStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kcmbVersions = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.kbtnUpgrade = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,6 +89,7 @@ namespace KryptonPaletteConverter.UX
             ((System.ComponentModel.ISupportInitialize)(this.kpSS)).BeginInit();
             this.kpSS.SuspendLayout();
             this.ss.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kcmbVersions)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -96,15 +113,16 @@ namespace KryptonPaletteConverter.UX
             this.kryptonLabel2.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 1;
-            popupPositionValues12.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues12.PlacementTarget = null;
-            this.kryptonLabel2.ToolTipValues.ToolTipPosition = popupPositionValues12;
-            this.kryptonLabel2.Values.Text = "Krypton Palette File Converter";
+            popupPositionValues1.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues1.PlacementTarget = null;
+            this.kryptonLabel2.ToolTipValues.ToolTipPosition = popupPositionValues1;
+            this.kryptonLabel2.Values.Text = "Krypton Palette File Upgrade Tool";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::KryptonPaletteUpgradeTool.Properties.Resources.PU_Icon_64_x_64;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(107, 100);
@@ -114,6 +132,9 @@ namespace KryptonPaletteConverter.UX
             // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.kbtnUpgrade);
+            this.kryptonPanel2.Controls.Add(this.kcmbVersions);
+            this.kryptonPanel2.Controls.Add(this.kryptonLabel3);
             this.kryptonPanel2.Controls.Add(this.kbtnExport);
             this.kryptonPanel2.Controls.Add(this.krtbNewFile);
             this.kryptonPanel2.Controls.Add(this.kptxNewPaletteFilePath);
@@ -138,9 +159,9 @@ namespace KryptonPaletteConverter.UX
             this.kbtnExport.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnExport.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnExport.TabIndex = 21;
-            popupPositionValues13.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues13.PlacementTarget = null;
-            this.kbtnExport.ToolTipValues.ToolTipPosition = popupPositionValues13;
+            popupPositionValues5.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues5.PlacementTarget = null;
+            this.kbtnExport.ToolTipValues.ToolTipPosition = popupPositionValues5;
             this.kbtnExport.Values.Text = "E&xport";
             this.kbtnExport.Click += new System.EventHandler(this.kbtnExport_Click);
             // 
@@ -153,9 +174,9 @@ namespace KryptonPaletteConverter.UX
             this.krtbNewFile.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.krtbNewFile.TabIndex = 20;
             this.krtbNewFile.Text = "";
-            popupPositionValues14.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues14.PlacementTarget = null;
-            this.krtbNewFile.ToolTipValues.ToolTipPosition = popupPositionValues14;
+            popupPositionValues6.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues6.PlacementTarget = null;
+            this.krtbNewFile.ToolTipValues.ToolTipPosition = popupPositionValues6;
             // 
             // kptxNewPaletteFilePath
             // 
@@ -165,7 +186,7 @@ namespace KryptonPaletteConverter.UX
             this.kptxNewPaletteFilePath.Location = new System.Drawing.Point(243, 314);
             this.kptxNewPaletteFilePath.Name = "kptxNewPaletteFilePath";
             this.kptxNewPaletteFilePath.PromptForeColour = System.Drawing.SystemColors.GrayText;
-            this.kptxNewPaletteFilePath.PromptText = "Enter custom theme path here...";
+            this.kptxNewPaletteFilePath.PromptText = "Enter new paette file path here...";
             this.kptxNewPaletteFilePath.PromptTypeface = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kptxNewPaletteFilePath.Size = new System.Drawing.Size(1169, 27);
             this.kptxNewPaletteFilePath.TabIndex = 19;
@@ -178,9 +199,9 @@ namespace KryptonPaletteConverter.UX
             this.kbtnBrowseNewPaletteFile.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnBrowseNewPaletteFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnBrowseNewPaletteFile.TabIndex = 18;
-            popupPositionValues15.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues15.PlacementTarget = null;
-            this.kbtnBrowseNewPaletteFile.ToolTipValues.ToolTipPosition = popupPositionValues15;
+            popupPositionValues7.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues7.PlacementTarget = null;
+            this.kbtnBrowseNewPaletteFile.ToolTipValues.ToolTipPosition = popupPositionValues7;
             this.kbtnBrowseNewPaletteFile.Values.Text = ".&..";
             this.kbtnBrowseNewPaletteFile.Click += new System.EventHandler(this.kbtnBrowseNewPaletteFile_Click);
             // 
@@ -192,9 +213,9 @@ namespace KryptonPaletteConverter.UX
             this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 17;
-            popupPositionValues16.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues16.PlacementTarget = null;
-            this.kryptonLabel1.ToolTipValues.ToolTipPosition = popupPositionValues16;
+            popupPositionValues8.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues8.PlacementTarget = null;
+            this.kryptonLabel1.ToolTipValues.ToolTipPosition = popupPositionValues8;
             this.kryptonLabel1.Values.Text = "New Palette File Location:";
             // 
             // krtbOriginalFile
@@ -208,9 +229,9 @@ namespace KryptonPaletteConverter.UX
             this.krtbOriginalFile.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.krtbOriginalFile.TabIndex = 16;
             this.krtbOriginalFile.Text = "";
-            popupPositionValues17.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues17.PlacementTarget = null;
-            this.krtbOriginalFile.ToolTipValues.ToolTipPosition = popupPositionValues17;
+            popupPositionValues9.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues9.PlacementTarget = null;
+            this.krtbOriginalFile.ToolTipValues.ToolTipPosition = popupPositionValues9;
             // 
             // kptxtOriginalPaletteFilePath
             // 
@@ -220,7 +241,7 @@ namespace KryptonPaletteConverter.UX
             this.kptxtOriginalPaletteFilePath.Location = new System.Drawing.Point(243, 18);
             this.kptxtOriginalPaletteFilePath.Name = "kptxtOriginalPaletteFilePath";
             this.kptxtOriginalPaletteFilePath.PromptForeColour = System.Drawing.SystemColors.GrayText;
-            this.kptxtOriginalPaletteFilePath.PromptText = "Enter custom theme path here...";
+            this.kptxtOriginalPaletteFilePath.PromptText = "Enter original palette file path here...";
             this.kptxtOriginalPaletteFilePath.PromptTypeface = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kptxtOriginalPaletteFilePath.Size = new System.Drawing.Size(1169, 27);
             this.kptxtOriginalPaletteFilePath.TabIndex = 15;
@@ -233,9 +254,9 @@ namespace KryptonPaletteConverter.UX
             this.kbtnBrowseForOriginalPaletteFile.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnBrowseForOriginalPaletteFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnBrowseForOriginalPaletteFile.TabIndex = 13;
-            popupPositionValues18.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues18.PlacementTarget = null;
-            this.kbtnBrowseForOriginalPaletteFile.ToolTipValues.ToolTipPosition = popupPositionValues18;
+            popupPositionValues10.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues10.PlacementTarget = null;
+            this.kbtnBrowseForOriginalPaletteFile.ToolTipValues.ToolTipPosition = popupPositionValues10;
             this.kbtnBrowseForOriginalPaletteFile.Values.Text = ".&..";
             this.kbtnBrowseForOriginalPaletteFile.Click += new System.EventHandler(this.kbtnBrowseForOriginalPaletteFile_Click);
             // 
@@ -247,9 +268,9 @@ namespace KryptonPaletteConverter.UX
             this.klblPaletteStyle.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblPaletteStyle.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblPaletteStyle.TabIndex = 5;
-            popupPositionValues19.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues19.PlacementTarget = null;
-            this.klblPaletteStyle.ToolTipValues.ToolTipPosition = popupPositionValues19;
+            popupPositionValues11.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues11.PlacementTarget = null;
+            this.klblPaletteStyle.ToolTipValues.ToolTipPosition = popupPositionValues11;
             this.klblPaletteStyle.Values.Text = "Original Palette File Location:";
             // 
             // kryptonPanel3
@@ -273,9 +294,9 @@ namespace KryptonPaletteConverter.UX
             this.kbtnOk.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnOk.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnOk.TabIndex = 14;
-            popupPositionValues20.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues20.PlacementTarget = null;
-            this.kbtnOk.ToolTipValues.ToolTipPosition = popupPositionValues20;
+            popupPositionValues12.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues12.PlacementTarget = null;
+            this.kbtnOk.ToolTipValues.ToolTipPosition = popupPositionValues12;
             this.kbtnOk.Values.Text = "O&k";
             this.kbtnOk.Click += new System.EventHandler(this.kbtnOk_Click);
             // 
@@ -287,9 +308,9 @@ namespace KryptonPaletteConverter.UX
             this.klblStatus.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblStatus.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblStatus.TabIndex = 13;
-            popupPositionValues21.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues21.PlacementTarget = null;
-            this.klblStatus.ToolTipValues.ToolTipPosition = popupPositionValues21;
+            popupPositionValues13.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues13.PlacementTarget = null;
+            this.klblStatus.ToolTipValues.ToolTipPosition = popupPositionValues13;
             this.klblStatus.Values.Text = "";
             // 
             // kbtnCancel
@@ -302,9 +323,9 @@ namespace KryptonPaletteConverter.UX
             this.kbtnCancel.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.TabIndex = 12;
-            popupPositionValues22.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues22.PlacementTarget = null;
-            this.kbtnCancel.ToolTipValues.ToolTipPosition = popupPositionValues22;
+            popupPositionValues14.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues14.PlacementTarget = null;
+            this.kbtnCancel.ToolTipValues.ToolTipPosition = popupPositionValues14;
             this.kbtnCancel.Values.Text = "&Cancel";
             this.kbtnCancel.Click += new System.EventHandler(this.kbtnCancel_Click);
             // 
@@ -329,6 +350,12 @@ namespace KryptonPaletteConverter.UX
             this.ss.TabIndex = 0;
             this.ss.Text = "statusStrip1";
             // 
+            // tsslStatus
+            // 
+            this.tsslStatus.Name = "tsslStatus";
+            this.tsslStatus.Size = new System.Drawing.Size(39, 17);
+            this.tsslStatus.Text = "Ready";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -338,11 +365,53 @@ namespace KryptonPaletteConverter.UX
             this.panel1.Size = new System.Drawing.Size(1461, 3);
             this.panel1.TabIndex = 1;
             // 
-            // tsslStatus
+            // kryptonLabel3
             // 
-            this.tsslStatus.Name = "tsslStatus";
-            this.tsslStatus.Size = new System.Drawing.Size(39, 17);
-            this.tsslStatus.Text = "Ready";
+            this.kryptonLabel3.Location = new System.Drawing.Point(12, 616);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(132, 24);
+            this.kryptonLabel3.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel3.TabIndex = 22;
+            popupPositionValues4.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues4.PlacementTarget = null;
+            this.kryptonLabel3.ToolTipValues.ToolTipPosition = popupPositionValues4;
+            this.kryptonLabel3.Values.Text = "Convert Version:";
+            // 
+            // kcmbVersions
+            // 
+            this.kcmbVersions.AutoCompleteCustomSource.AddRange(new string[] {
+            "2 to 6",
+            "6 to 18"});
+            this.kcmbVersions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.kcmbVersions.DropDownWidth = 172;
+            this.kcmbVersions.Items.AddRange(new object[] {
+            "2 to 6",
+            "6 to 18"});
+            this.kcmbVersions.Location = new System.Drawing.Point(150, 615);
+            this.kcmbVersions.Name = "kcmbVersions";
+            this.kcmbVersions.Size = new System.Drawing.Size(172, 27);
+            this.kcmbVersions.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbVersions.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbVersions.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbVersions.TabIndex = 23;
+            popupPositionValues3.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues3.PlacementTarget = null;
+            this.kcmbVersions.ToolTipValues.ToolTipPosition = popupPositionValues3;
+            // 
+            // kbtnUpgrade
+            // 
+            this.kbtnUpgrade.Enabled = false;
+            this.kbtnUpgrade.Location = new System.Drawing.Point(1209, 612);
+            this.kbtnUpgrade.Name = "kbtnUpgrade";
+            this.kbtnUpgrade.Size = new System.Drawing.Size(117, 29);
+            this.kbtnUpgrade.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnUpgrade.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnUpgrade.TabIndex = 24;
+            popupPositionValues2.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues2.PlacementTarget = null;
+            this.kbtnUpgrade.ToolTipValues.ToolTipPosition = popupPositionValues2;
+            this.kbtnUpgrade.Values.Text = "&Upgrade";
             // 
             // MainWindow
             // 
@@ -353,10 +422,11 @@ namespace KryptonPaletteConverter.UX
             this.Controls.Add(this.kpSS);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Krypton Palette File Converter - [{0}]";
+            this.Text = "Krypton Palette File Upgrade Tool - [{0}]";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
@@ -374,9 +444,14 @@ namespace KryptonPaletteConverter.UX
             this.kpSS.PerformLayout();
             this.ss.ResumeLayout(false);
             this.ss.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kcmbVersions)).EndInit();
             this.ResumeLayout(false);
 
         }
+        #endregion
+
+        #region Variables
+        Version _applicationVersiomn = Assembly.GetEntryAssembly().GetName().Version;
         #endregion
 
         #region Constructor
@@ -386,14 +461,34 @@ namespace KryptonPaletteConverter.UX
         }
         #endregion
 
+        #region Event Handlers
         private void MainWindow_Load(object sender, EventArgs e)
         {
+            UpdateTitle();
 
+            TextExtra = $"(Version: { _applicationVersiomn.ToString() })";
         }
 
         private void kbtnBrowseForOriginalPaletteFile_Click(object sender, EventArgs e)
         {
+            CommonOpenFileDialog cofd = new CommonOpenFileDialog();
 
+            cofd.Title = "Browse for Palette File:";
+
+            cofd.Filters.Add(new CommonFileDialogFilter("Krypton Palette Files", ".xml"));
+
+            cofd.InitialDirectory = Path.GetFullPath(Environment.SpecialFolder.MyDocuments.ToString());
+
+            if (cofd.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                kptxtOriginalPaletteFilePath.Text = Path.GetFullPath(cofd.FileName);
+
+                UpdateTitle(kptxtOriginalPaletteFilePath.Text);
+
+                ParseFile(kptxtOriginalPaletteFilePath.Text, krtbOriginalFile);
+            }
+
+            kptxNewPaletteFilePath.Text = Path.GetFileNameWithoutExtension(cofd.FileName) + "_New.xml";
         }
 
         private void kbtnBrowseNewPaletteFile_Click(object sender, EventArgs e)
@@ -420,5 +515,44 @@ namespace KryptonPaletteConverter.UX
         {
 
         }
+        #endregion
+
+        #region Methods
+        private void UpdateTitle(string text = "")
+        {
+            if (text != "")
+            {
+                Text = $"Krypton Palette File Upgrade Tool - [{ text }]";
+            }
+            else
+            {
+                Text = "Krypton Palette File Upgrade Tool";
+            }
+        }
+
+        private void ParseFile(string themeFilePath, KryptonRichTextBox output)
+        {
+            try
+            {
+                // Do some checking first
+                if (!File.Exists(themeFilePath))
+                {
+                    ExtendedKryptonMessageBox.Show($"Cannot locate: '{ Path.GetFullPath(themeFilePath) }'!\nPlease verify that the file is there before proceeding.", "Cannot Find File", MessageBoxButtons.OK, MessageBoxIcon.Error, messageboxTypeface: new Font("Segoe UI", 12f));
+                }
+                else
+                {
+                    // Read from file
+                    // StreamReader reader = new StreamReader(themeFilePath);
+
+                    // Load into KryptonRichTextBox
+                    output.LoadFile(themeFilePath);
+                }
+            }
+            catch (Exception exc)
+            {
+                ExceptionHandler.CaptureException(exc);
+            }
+        }
+        #endregion
     }
 }

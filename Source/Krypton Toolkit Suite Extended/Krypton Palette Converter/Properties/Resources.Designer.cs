@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KryptonPaletteConverter.Properties {
+namespace KryptonPaletteUpgradeTool.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace KryptonPaletteConverter.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KryptonPaletteConverter.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KryptonPaletteUpgradeTool.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,80 @@ namespace KryptonPaletteConverter.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon PU_Icon_256_x_256 {
+            get {
+                object obj = ResourceManager.GetObject("PU_Icon_256_x_256", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon PU_Icon_48_x_48 {
+            get {
+                object obj = ResourceManager.GetObject("PU_Icon_48_x_48", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PU_Icon_512_x_512 {
+            get {
+                object obj = ResourceManager.GetObject("PU_Icon_512_x_512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PU_Icon_64_x_64 {
+            get {
+                object obj = ResourceManager.GetObject("PU_Icon_64_x_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;1.0&quot;&gt;
+        ///  &lt;xsl:template match=&quot;KryptonPalette&quot;&gt;
+        ///    &lt;xsl:comment&gt;Created by exporting the settings of a KryptonPalette instance.&lt;/xsl:comment&gt;
+        ///    &lt;xsl:comment&gt;For more information about Krypton visit www.ComponentFactory.com&lt;/xsl:comment&gt;
+        ///    &lt;xsl:comment&gt;WARNING: Modifying this file may render it invalid for importing.&lt;/xsl:comment&gt;
+        ///    &lt;KryptonPalette Version=&quot;6&quot;&gt;
+        ///      &lt;xsl:attribute name=&quot;Generated&quot;&gt;
+        ///  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Version2To6 {
+            get {
+                return ResourceManager.GetString("Version2To6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;1.0&quot;&gt;
+        ///  &lt;xsl:template match=&quot;KryptonPalette&quot;&gt;
+        ///    &lt;xsl:comment&gt;Created by exporting the settings of a KryptonPalette instance.&lt;/xsl:comment&gt;
+        ///    &lt;xsl:comment&gt;For more information about Krypton visit www.ComponentFactory.com&lt;/xsl:comment&gt;
+        ///    &lt;xsl:comment&gt;WARNING: Modifying this file may render it invalid for importing.&lt;/xsl:comment&gt;
+        ///    &lt;KryptonPalette Version=&quot;18&quot;&gt;
+        ///      &lt;xsl:attribute name=&quot;Generated&quot;&gt;
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Version6To18 {
+            get {
+                return ResourceManager.GetString("Version6To18", resourceCulture);
             }
         }
     }

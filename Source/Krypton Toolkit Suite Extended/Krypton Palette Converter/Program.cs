@@ -1,8 +1,8 @@
-﻿using KryptonPaletteConverter.UX;
+﻿using KryptonPaletteUpgradeTool.UX;
 using System;
 using System.Windows.Forms;
 
-namespace KryptonPaletteConverter
+namespace KryptonPaletteUpgradeTool
 {
     internal static class Program
     {
@@ -14,7 +14,7 @@ namespace KryptonPaletteConverter
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainWindow());
+            Application.Run(new SplashScreen());
         }
     }
 }

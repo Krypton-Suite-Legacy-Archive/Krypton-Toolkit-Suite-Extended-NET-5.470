@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,110 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PU_Icon_256_x_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PU Icon 256 x 256.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PU_Icon_48_x_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PU Icon 48 x 48.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PU_Icon_512_x_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PU Icon 512 x 512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PU_Icon_64_x_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PU Icon 64 x 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Version2To6" xml:space="preserve">
+    <value>&lt;?xml version="1.0"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+  &lt;xsl:template match="KryptonPalette"&gt;
+    &lt;xsl:comment&gt;Created by exporting the settings of a KryptonPalette instance.&lt;/xsl:comment&gt;
+    &lt;xsl:comment&gt;For more information about Krypton visit www.ComponentFactory.com&lt;/xsl:comment&gt;
+    &lt;xsl:comment&gt;WARNING: Modifying this file may render it invalid for importing.&lt;/xsl:comment&gt;
+    &lt;KryptonPalette Version="6"&gt;
+      &lt;xsl:attribute name="Generated"&gt;
+        &lt;xsl:value-of select="@Generated"/&gt;
+      &lt;/xsl:attribute&gt;
+      &lt;xsl:apply-templates select="*"/&gt;
+    &lt;/KryptonPalette&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="Button1"&gt;&lt;ButtonStandalone&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/ButtonStandalone&gt;&lt;/xsl:template&gt;
+  &lt;xsl:template match="Button2"&gt;&lt;ButtonLowProfile&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/ButtonLowProfile&gt;&lt;/xsl:template&gt;
+  &lt;xsl:template match="Button3"&gt;&lt;ButtonButtonSpec&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/ButtonButtonSpec&gt;&lt;/xsl:template&gt;
+  &lt;xsl:template match="Control1"&gt;&lt;ControlClient&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/ControlClient&gt;&lt;/xsl:template&gt;
+  &lt;xsl:template match="Control2"&gt;&lt;ControlAlternate&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/ControlAlternate&gt;&lt;/xsl:template&gt;
+  &lt;xsl:template match="Header1"&gt;&lt;HeaderPrimary&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/HeaderPrimary&gt;&lt;/xsl:template&gt;
+  &lt;xsl:template match="Header2"&gt;&lt;HeaderSecondary&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/HeaderSecondary&gt;&lt;/xsl:template&gt;
+  &lt;xsl:template match="Label1"&gt;&lt;LabelTitle&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/LabelTitle&gt;&lt;/xsl:template&gt;
+  &lt;xsl:template match="Label2"&gt;&lt;LabelNormal&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/LabelNormal&gt;&lt;/xsl:template&gt;
+  &lt;xsl:template match="Panel1"&gt;&lt;PanelClient&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/PanelClient&gt;&lt;/xsl:template&gt;
+  &lt;xsl:template match="Panel2"&gt;&lt;PanelAlternate&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/PanelAlternate&gt;&lt;/xsl:template&gt;
+  &lt;xsl:template match="Separator1"&gt;&lt;SeparatorLowProfile&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/SeparatorLowProfile&gt;&lt;/xsl:template&gt;
+  &lt;xsl:template match="Separator2"&gt;&lt;SeparatorHighProfile&gt;&lt;xsl:apply-templates select="*"/&gt;&lt;/SeparatorHighProfile&gt;&lt;/xsl:template&gt;
+
+  &lt;xsl:template match="*|@*"&gt;
+    &lt;xsl:copy&gt;
+      &lt;xsl:apply-templates select="*|@*"/&gt;
+    &lt;/xsl:copy&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</value>
+  </data>
+  <data name="Version6To18" xml:space="preserve">
+    <value>&lt;?xml version="1.0"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+  &lt;xsl:template match="KryptonPalette"&gt;
+    &lt;xsl:comment&gt;Created by exporting the settings of a KryptonPalette instance.&lt;/xsl:comment&gt;
+    &lt;xsl:comment&gt;For more information about Krypton visit www.ComponentFactory.com&lt;/xsl:comment&gt;
+    &lt;xsl:comment&gt;WARNING: Modifying this file may render it invalid for importing.&lt;/xsl:comment&gt;
+    &lt;KryptonPalette Version="18"&gt;
+      &lt;xsl:attribute name="Generated"&gt;
+        &lt;xsl:value-of select="@Generated"/&gt;
+      &lt;/xsl:attribute&gt;
+      &lt;xsl:apply-templates select="*"/&gt;
+    &lt;/KryptonPalette&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="BasePaletteMode[@Value='Professional - Red']"&gt;
+    &lt;BasePaletteMode&gt;
+      &lt;xsl:attribute name ="Type"&gt;PaletteMode&lt;/xsl:attribute&gt;
+      &lt;xsl:attribute name ="Value"&gt;Professional - Office 2003&lt;/xsl:attribute&gt;
+    &lt;/BasePaletteMode&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="BasePaletteMode[@Value='Professional - Green']"&gt;
+    &lt;BasePaletteMode&gt;
+      &lt;xsl:attribute name ="Type"&gt;PaletteMode&lt;/xsl:attribute&gt;
+      &lt;xsl:attribute name ="Value"&gt;Professional - Office 2003&lt;/xsl:attribute&gt;
+    &lt;/BasePaletteMode&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="Prefix"&gt;
+    &lt;Prefix&gt;
+      &lt;xsl:attribute name ="Type"&gt;PaletteTextHotkeyPrefix&lt;/xsl:attribute&gt;
+      &lt;xsl:attribute name ="Value"&gt;
+        &lt;xsl:value-of select="@Value"/&gt;
+      &lt;/xsl:attribute&gt;
+    &lt;/Prefix&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="BasePaletteMode[@Value='Professional - Red']"&gt;
+    &lt;BasePaletteMode&gt;
+      &lt;xsl:attribute name ="Type"&gt;PaletteMode&lt;/xsl:attribute&gt;
+      &lt;xsl:attribute name ="Value"&gt;Professional - Office 2003&lt;/xsl:attribute&gt;
+    &lt;/BasePaletteMode&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="*|@*"&gt;
+    &lt;xsl:copy&gt;
+      &lt;xsl:apply-templates select="*|@*"/&gt;
+    &lt;/xsl:copy&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</value>
+  </data>
 </root>
