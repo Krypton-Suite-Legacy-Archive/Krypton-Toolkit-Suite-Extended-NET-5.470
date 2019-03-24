@@ -1,8 +1,8 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code.Development;
 using ExtendedControls.Base.Code.Settings;
-using ExtendedControls.Base.Code.Theming;
 using ExtendedControls.Base.Enumerations;
+using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections;
@@ -32,7 +32,17 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
 
         private void InitializeComponent()
         {
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues1 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues2 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues3 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues4 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues5 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues6 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues7 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues8 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemeChooser));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kcbSilent = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kbtnImport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnBrowse = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kptxtCustomThemePath = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
@@ -43,7 +53,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.kbtnApply = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kcbSilent = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbSelection)).BeginInit();
@@ -65,6 +74,20 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.kryptonPanel1.Size = new System.Drawing.Size(702, 150);
             this.kryptonPanel1.TabIndex = 0;
             // 
+            // kcbSilent
+            // 
+            this.kcbSilent.Enabled = false;
+            this.kcbSilent.Location = new System.Drawing.Point(505, 107);
+            this.kcbSilent.Name = "kcbSilent";
+            this.kcbSilent.Size = new System.Drawing.Size(62, 24);
+            this.kcbSilent.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbSilent.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbSilent.TabIndex = 14;
+            popupPositionValues1.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues1.PlacementTarget = null;
+            this.kcbSilent.ToolTipValues.ToolTipPosition = popupPositionValues1;
+            this.kcbSilent.Values.Text = "&Silent";
+            // 
             // kbtnImport
             // 
             this.kbtnImport.Enabled = false;
@@ -74,6 +97,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.kbtnImport.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnImport.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnImport.TabIndex = 13;
+            popupPositionValues2.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues2.PlacementTarget = null;
+            this.kbtnImport.ToolTipValues.ToolTipPosition = popupPositionValues2;
             this.kbtnImport.Values.Text = "Im&port...";
             this.kbtnImport.Click += new System.EventHandler(this.kbtnImport_Click);
             // 
@@ -86,6 +112,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.kbtnBrowse.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnBrowse.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnBrowse.TabIndex = 12;
+            popupPositionValues3.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues3.PlacementTarget = null;
+            this.kbtnBrowse.ToolTipValues.ToolTipPosition = popupPositionValues3;
             this.kbtnBrowse.Values.Text = ".&..";
             this.kbtnBrowse.Click += new System.EventHandler(this.kbtnBrowse_Click);
             // 
@@ -115,6 +144,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.kcmbSelection.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbSelection.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbSelection.TabIndex = 5;
+            popupPositionValues4.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues4.PlacementTarget = null;
+            this.kcmbSelection.ToolTipValues.ToolTipPosition = popupPositionValues4;
             this.kcmbSelection.SelectedIndexChanged += new System.EventHandler(this.kcmbSelection_SelectedIndexChanged);
             // 
             // klblPaletteStyle
@@ -125,6 +157,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.klblPaletteStyle.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblPaletteStyle.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblPaletteStyle.TabIndex = 4;
+            popupPositionValues5.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues5.PlacementTarget = null;
+            this.klblPaletteStyle.ToolTipValues.ToolTipPosition = popupPositionValues5;
             this.klblPaletteStyle.Values.Text = "Select Palette Style:";
             // 
             // kryptonPanel2
@@ -148,6 +183,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.kbtnCreate.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCreate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCreate.TabIndex = 13;
+            popupPositionValues6.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues6.PlacementTarget = null;
+            this.kbtnCreate.ToolTipValues.ToolTipPosition = popupPositionValues6;
             this.kbtnCreate.Values.Text = "Create &Custom Theme";
             this.kbtnCreate.Click += new System.EventHandler(this.kbtnCreate_Click);
             // 
@@ -162,6 +200,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.kbtnApply.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnApply.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnApply.TabIndex = 12;
+            popupPositionValues7.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues7.PlacementTarget = null;
+            this.kbtnApply.ToolTipValues.ToolTipPosition = popupPositionValues7;
             this.kbtnApply.Values.Text = "A&pply";
             this.kbtnApply.Click += new System.EventHandler(this.kbtnApply_Click);
             // 
@@ -175,6 +216,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.kbtnCancel.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.TabIndex = 11;
+            popupPositionValues8.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues8.PlacementTarget = null;
+            this.kbtnCancel.ToolTipValues.ToolTipPosition = popupPositionValues8;
             this.kbtnCancel.Values.Text = "&Cancel";
             this.kbtnCancel.Click += new System.EventHandler(this.kbtnCancel_Click);
             // 
@@ -187,17 +231,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.panel1.Size = new System.Drawing.Size(702, 54);
             this.panel1.TabIndex = 0;
             // 
-            // kcbSilent
-            // 
-            this.kcbSilent.Enabled = false;
-            this.kcbSilent.Location = new System.Drawing.Point(505, 107);
-            this.kcbSilent.Name = "kcbSilent";
-            this.kcbSilent.Size = new System.Drawing.Size(62, 24);
-            this.kcbSilent.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbSilent.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbSilent.TabIndex = 14;
-            this.kcbSilent.Values.Text = "&Silent";
-            // 
             // ThemeChooser
             // 
             this.ClientSize = new System.Drawing.Size(702, 204);
@@ -205,6 +238,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ThemeChooser";
@@ -298,16 +332,18 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
 
         private void kbtnCreate_Click(object sender, EventArgs e)
         {
-            if (SettingsManager.GetPaletteExplorerLocation() != string.Empty)
-            {
-                Process.Start(SettingsManager.GetPaletteExplorerLocation());
-            }
-            else
-            {
-                PaletteExplorerLocator locator = new PaletteExplorerLocator(SettingsManager.GetDebugMode());
+            ExtendedKryptonMessageBox.Show("This feature will be enabled once it is ready.", "Feature Not Implemented Yet", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                locator.Show();
-            }
+            //if (SettingsManager.GetPaletteExplorerLocation() != string.Empty)
+            //{
+            //    Process.Start(SettingsManager.GetPaletteExplorerLocation());
+            //}
+            //else
+            //{
+            //    PaletteExplorerLocator locator = new PaletteExplorerLocator(SettingsManager.GetDebugMode());
+
+            //    locator.Show();
+            //}
         }
 
         private void kbtnImport_Click(object sender, EventArgs e)
