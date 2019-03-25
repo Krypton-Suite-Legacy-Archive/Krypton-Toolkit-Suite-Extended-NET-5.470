@@ -116,6 +116,9 @@
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TestContextMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TestRig.cs">
       <SubType>Form</SubType>
     </Compile>

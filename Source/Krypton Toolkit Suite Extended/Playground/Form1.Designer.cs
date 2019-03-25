@@ -230,6 +230,10 @@ namespace Playground
             this.kuacsbElevate.Values.Text = "Elevate";
             this.kuacsbElevate.Click += new System.EventHandler(this.kuacsbElevate_Click);
             // 
+            // kryptonManager1
+            // 
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Blue;
+            // 
             // kPal
             // 
             this.kPal.CustomisedKryptonPaletteFilePath = null;
@@ -974,7 +978,7 @@ namespace Playground
             this.toolStripMenuItemUACSheld1});
             this.toolStrip1.Location = new System.Drawing.Point(14, 208);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(251, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(282, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -995,6 +999,7 @@ namespace Playground
             this.toolStripMenuItemUACSheld1.Name = "toolStripMenuItemUACSheld1";
             this.toolStripMenuItemUACSheld1.Size = new System.Drawing.Size(194, 25);
             this.toolStripMenuItemUACSheld1.Text = "toolStripMenuItemUACSheld1";
+            this.toolStripMenuItemUACSheld1.Click += new System.EventHandler(this.toolStripMenuItemUACSheld1_Click);
             // 
             // krtbEditor
             // 

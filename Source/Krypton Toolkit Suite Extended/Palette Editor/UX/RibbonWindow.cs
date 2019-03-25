@@ -147,6 +147,7 @@ namespace PaletteEditor.UX
         private System.Windows.Forms.PictureBox pbxDarkColour;
         private System.Windows.Forms.PictureBox pbxLightColour;
         private System.Windows.Forms.PictureBox pbxMiddleColour;
+        private KryptonPage kryptonPage1;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbCheckForUpdates;
 
         private void InitializeComponent()
@@ -264,7 +265,6 @@ namespace PaletteEditor.UX
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kdnPalette = new ComponentFactory.Krypton.Docking.KryptonDockableNavigator();
             this.kpPaletteColours = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.kdmPalette = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
             this.kgbPreviewPane = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.pbxLinkFocusedColourPreview = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -296,6 +296,8 @@ namespace PaletteEditor.UX
             this.pbxDarkColour = new System.Windows.Forms.PictureBox();
             this.pbxLightColour = new System.Windows.Forms.PictureBox();
             this.pbxMiddleColour = new System.Windows.Forms.PictureBox();
+            this.kdmPalette = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
+            this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -341,6 +343,7 @@ namespace PaletteEditor.UX
             ((System.ComponentModel.ISupportInitialize)(this.pbxDarkColour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLightColour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMiddleColour)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonRibbon1
@@ -367,8 +370,7 @@ namespace PaletteEditor.UX
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
-            this.kryptonRibbon1.SelectedContext = null;
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1649, 115);
             this.kryptonRibbon1.TabIndex = 1;
             popupPositionValues1.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -752,6 +754,7 @@ namespace PaletteEditor.UX
             this.krgbViewType.ButtonType = ComponentFactory.Krypton.Ribbon.GroupButtonType.Split;
             this.krgbViewType.TextLine1 = "View";
             this.krgbViewType.TextLine2 = "Type";
+            this.krgbViewType.Visible = false;
             // 
             // kryptonRibbonGroupTriple17
             // 
@@ -911,11 +914,12 @@ namespace PaletteEditor.UX
             this.kdnPalette.Location = new System.Drawing.Point(0, 0);
             this.kdnPalette.Name = "kdnPalette";
             this.kdnPalette.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
-            this.kpPaletteColours});
+            this.kpPaletteColours,
+            this.kryptonPage1});
             this.kdnPalette.SelectedIndex = 0;
             this.kdnPalette.Size = new System.Drawing.Size(1649, 717);
             this.kdnPalette.TabIndex = 0;
-            this.kdnPalette.Text = "kryptonDockableNavigator1";
+            this.kdnPalette.Text = "kdnPalette";
             popupPositionValues5.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
             popupPositionValues5.PlacementTarget = null;
             this.kdnPalette.ToolTipValues.ToolTipPosition = popupPositionValues5;
@@ -935,7 +939,7 @@ namespace PaletteEditor.UX
             // 
             // kgbPreviewPane
             // 
-            this.kgbPreviewPane.Location = new System.Drawing.Point(11, 23);
+            this.kgbPreviewPane.Location = new System.Drawing.Point(11, 15);
             this.kgbPreviewPane.Name = "kgbPreviewPane";
             // 
             // kgbPreviewPane.Panel
@@ -970,7 +974,7 @@ namespace PaletteEditor.UX
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxDarkColour);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxLightColour);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxMiddleColour);
-            this.kgbPreviewPane.Size = new System.Drawing.Size(708, 467);
+            this.kgbPreviewPane.Size = new System.Drawing.Size(1625, 661);
             this.kgbPreviewPane.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kgbPreviewPane.TabIndex = 11;
             popupPositionValues4.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -982,7 +986,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxLinkFocusedColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxLinkFocusedColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxLinkFocusedColourPreview.Location = new System.Drawing.Point(451, 127);
+            this.pbxLinkFocusedColourPreview.Location = new System.Drawing.Point(1104, 193);
             this.pbxLinkFocusedColourPreview.Name = "pbxLinkFocusedColourPreview";
             this.pbxLinkFocusedColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxLinkFocusedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -994,7 +998,7 @@ namespace PaletteEditor.UX
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox5.Location = new System.Drawing.Point(451, 352);
+            this.pictureBox5.Location = new System.Drawing.Point(1104, 549);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(64, 64);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1006,7 +1010,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxRibbonTabTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxRibbonTabTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxRibbonTabTextColourPreview.Location = new System.Drawing.Point(365, 352);
+            this.pbxRibbonTabTextColourPreview.Location = new System.Drawing.Point(887, 549);
             this.pbxRibbonTabTextColourPreview.Name = "pbxRibbonTabTextColourPreview";
             this.pbxRibbonTabTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxRibbonTabTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1017,7 +1021,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxStatusTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxStatusTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxStatusTextColourPreview.Location = new System.Drawing.Point(279, 352);
+            this.pbxStatusTextColourPreview.Location = new System.Drawing.Point(670, 549);
             this.pbxStatusTextColourPreview.Name = "pbxStatusTextColourPreview";
             this.pbxStatusTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxStatusTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1028,7 +1032,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxMenuTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxMenuTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxMenuTextColourPreview.Location = new System.Drawing.Point(193, 352);
+            this.pbxMenuTextColourPreview.Location = new System.Drawing.Point(453, 549);
             this.pbxMenuTextColourPreview.Name = "pbxMenuTextColourPreview";
             this.pbxMenuTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxMenuTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1039,7 +1043,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxCustomColourFourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomColourFourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomColourFourPreview.Location = new System.Drawing.Point(279, 239);
+            this.pbxCustomColourFourPreview.Location = new System.Drawing.Point(670, 371);
             this.pbxCustomColourFourPreview.Name = "pbxCustomColourFourPreview";
             this.pbxCustomColourFourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1050,7 +1054,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxCustomTextColourFivePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourFivePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomTextColourFivePreview.Location = new System.Drawing.Point(105, 351);
+            this.pbxCustomTextColourFivePreview.Location = new System.Drawing.Point(236, 549);
             this.pbxCustomTextColourFivePreview.Name = "pbxCustomTextColourFivePreview";
             this.pbxCustomTextColourFivePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1061,7 +1065,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxCustomTextColourFourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourFourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomTextColourFourPreview.Location = new System.Drawing.Point(19, 352);
+            this.pbxCustomTextColourFourPreview.Location = new System.Drawing.Point(19, 549);
             this.pbxCustomTextColourFourPreview.Name = "pbxCustomTextColourFourPreview";
             this.pbxCustomTextColourFourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1072,7 +1076,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxCustomTextColourThreePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourThreePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomTextColourThreePreview.Location = new System.Drawing.Point(623, 239);
+            this.pbxCustomTextColourThreePreview.Location = new System.Drawing.Point(1538, 371);
             this.pbxCustomTextColourThreePreview.Name = "pbxCustomTextColourThreePreview";
             this.pbxCustomTextColourThreePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1083,7 +1087,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxCustomTextColourTwoPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourTwoPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(537, 239);
+            this.pbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(1321, 371);
             this.pbxCustomTextColourTwoPreview.Name = "pbxCustomTextColourTwoPreview";
             this.pbxCustomTextColourTwoPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1094,7 +1098,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxCustomTextColourOnePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourOnePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomTextColourOnePreview.Location = new System.Drawing.Point(451, 239);
+            this.pbxCustomTextColourOnePreview.Location = new System.Drawing.Point(1104, 371);
             this.pbxCustomTextColourOnePreview.Name = "pbxCustomTextColourOnePreview";
             this.pbxCustomTextColourOnePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1105,7 +1109,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxCustomColourFivePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomColourFivePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomColourFivePreview.Location = new System.Drawing.Point(365, 239);
+            this.pbxCustomColourFivePreview.Location = new System.Drawing.Point(887, 371);
             this.pbxCustomColourFivePreview.Name = "pbxCustomColourFivePreview";
             this.pbxCustomColourFivePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1116,7 +1120,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxCustomColourThreePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomColourThreePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomColourThreePreview.Location = new System.Drawing.Point(193, 239);
+            this.pbxCustomColourThreePreview.Location = new System.Drawing.Point(453, 371);
             this.pbxCustomColourThreePreview.Name = "pbxCustomColourThreePreview";
             this.pbxCustomColourThreePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1127,7 +1131,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxCustomColourTwoPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomColourTwoPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomColourTwoPreview.Location = new System.Drawing.Point(107, 239);
+            this.pbxCustomColourTwoPreview.Location = new System.Drawing.Point(236, 371);
             this.pbxCustomColourTwoPreview.Name = "pbxCustomColourTwoPreview";
             this.pbxCustomColourTwoPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1138,7 +1142,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxCustomColourOnePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomColourOnePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomColourOnePreview.Location = new System.Drawing.Point(19, 239);
+            this.pbxCustomColourOnePreview.Location = new System.Drawing.Point(19, 371);
             this.pbxCustomColourOnePreview.Name = "pbxCustomColourOnePreview";
             this.pbxCustomColourOnePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1149,7 +1153,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxLinkVisitedColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxLinkVisitedColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxLinkVisitedColourPreview.Location = new System.Drawing.Point(623, 127);
+            this.pbxLinkVisitedColourPreview.Location = new System.Drawing.Point(1538, 193);
             this.pbxLinkVisitedColourPreview.Name = "pbxLinkVisitedColourPreview";
             this.pbxLinkVisitedColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxLinkVisitedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1160,7 +1164,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxLinkHoverColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxLinkHoverColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxLinkHoverColourPreview.Location = new System.Drawing.Point(535, 127);
+            this.pbxLinkHoverColourPreview.Location = new System.Drawing.Point(1321, 193);
             this.pbxLinkHoverColourPreview.Name = "pbxLinkHoverColourPreview";
             this.pbxLinkHoverColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxLinkHoverColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1171,7 +1175,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxAlternativeNormalTextColour.BackColor = System.Drawing.Color.Transparent;
             this.pbxAlternativeNormalTextColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxAlternativeNormalTextColour.Location = new System.Drawing.Point(537, 16);
+            this.pbxAlternativeNormalTextColour.Location = new System.Drawing.Point(1321, 16);
             this.pbxAlternativeNormalTextColour.Name = "pbxAlternativeNormalTextColour";
             this.pbxAlternativeNormalTextColour.Size = new System.Drawing.Size(64, 64);
             this.pbxAlternativeNormalTextColour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1182,7 +1186,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxLinkNormalColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxLinkNormalColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxLinkNormalColourPreview.Location = new System.Drawing.Point(365, 127);
+            this.pbxLinkNormalColourPreview.Location = new System.Drawing.Point(887, 193);
             this.pbxLinkNormalColourPreview.Name = "pbxLinkNormalColourPreview";
             this.pbxLinkNormalColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxLinkNormalColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1193,7 +1197,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxDisabledColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxDisabledColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxDisabledColourPreview.Location = new System.Drawing.Point(279, 127);
+            this.pbxDisabledColourPreview.Location = new System.Drawing.Point(670, 193);
             this.pbxDisabledColourPreview.Name = "pbxDisabledColourPreview";
             this.pbxDisabledColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxDisabledColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1204,7 +1208,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxPressedTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxPressedTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxPressedTextColourPreview.Location = new System.Drawing.Point(191, 127);
+            this.pbxPressedTextColourPreview.Location = new System.Drawing.Point(453, 193);
             this.pbxPressedTextColourPreview.Name = "pbxPressedTextColourPreview";
             this.pbxPressedTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxPressedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1215,7 +1219,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxFocusedTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxFocusedTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxFocusedTextColourPreview.Location = new System.Drawing.Point(107, 127);
+            this.pbxFocusedTextColourPreview.Location = new System.Drawing.Point(236, 193);
             this.pbxFocusedTextColourPreview.Name = "pbxFocusedTextColourPreview";
             this.pbxFocusedTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxFocusedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1226,7 +1230,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxDisabledTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxDisabledTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxDisabledTextColourPreview.Location = new System.Drawing.Point(19, 127);
+            this.pbxDisabledTextColourPreview.Location = new System.Drawing.Point(19, 193);
             this.pbxDisabledTextColourPreview.Name = "pbxDisabledTextColourPreview";
             this.pbxDisabledTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxDisabledTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1237,7 +1241,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxNormalTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxNormalTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxNormalTextColourPreview.Location = new System.Drawing.Point(623, 16);
+            this.pbxNormalTextColourPreview.Location = new System.Drawing.Point(1538, 16);
             this.pbxNormalTextColourPreview.Name = "pbxNormalTextColourPreview";
             this.pbxNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1248,7 +1252,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxBorderColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxBorderColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxBorderColourPreview.Location = new System.Drawing.Point(451, 16);
+            this.pbxBorderColourPreview.Location = new System.Drawing.Point(1104, 16);
             this.pbxBorderColourPreview.Name = "pbxBorderColourPreview";
             this.pbxBorderColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxBorderColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1270,7 +1274,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxLightestColour.BackColor = System.Drawing.Color.Transparent;
             this.pbxLightestColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxLightestColour.Location = new System.Drawing.Point(365, 16);
+            this.pbxLightestColour.Location = new System.Drawing.Point(887, 16);
             this.pbxLightestColour.Name = "pbxLightestColour";
             this.pbxLightestColour.Size = new System.Drawing.Size(64, 64);
             this.pbxLightestColour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1281,7 +1285,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxDarkColour.BackColor = System.Drawing.Color.Transparent;
             this.pbxDarkColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxDarkColour.Location = new System.Drawing.Point(107, 16);
+            this.pbxDarkColour.Location = new System.Drawing.Point(236, 16);
             this.pbxDarkColour.Name = "pbxDarkColour";
             this.pbxDarkColour.Size = new System.Drawing.Size(64, 64);
             this.pbxDarkColour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1292,7 +1296,7 @@ namespace PaletteEditor.UX
             // 
             this.pbxLightColour.BackColor = System.Drawing.Color.Transparent;
             this.pbxLightColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxLightColour.Location = new System.Drawing.Point(279, 16);
+            this.pbxLightColour.Location = new System.Drawing.Point(670, 16);
             this.pbxLightColour.Name = "pbxLightColour";
             this.pbxLightColour.Size = new System.Drawing.Size(64, 64);
             this.pbxLightColour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1303,12 +1307,24 @@ namespace PaletteEditor.UX
             // 
             this.pbxMiddleColour.BackColor = System.Drawing.Color.Transparent;
             this.pbxMiddleColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxMiddleColour.Location = new System.Drawing.Point(193, 16);
+            this.pbxMiddleColour.Location = new System.Drawing.Point(453, 16);
             this.pbxMiddleColour.Name = "pbxMiddleColour";
             this.pbxMiddleColour.Size = new System.Drawing.Size(64, 64);
             this.pbxMiddleColour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbxMiddleColour.TabIndex = 6;
             this.pbxMiddleColour.TabStop = false;
+            // 
+            // kryptonPage1
+            // 
+            this.kryptonPage1.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage1.Flags = 65534;
+            this.kryptonPage1.LastVisibleSet = true;
+            this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage1.Name = "kryptonPage1";
+            this.kryptonPage1.Size = new System.Drawing.Size(100, 100);
+            this.kryptonPage1.Text = "kryptonPage1";
+            this.kryptonPage1.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage1.UniqueName = "f8c92afc9844492ba80e3e09a37a3ff0";
             // 
             // RibbonWindow
             // 
@@ -1367,6 +1383,7 @@ namespace PaletteEditor.UX
             ((System.ComponentModel.ISupportInitialize)(this.pbxDarkColour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLightColour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMiddleColour)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1387,17 +1404,17 @@ namespace PaletteEditor.UX
 
         private void RibbonWindow_Load(object sender, EventArgs e)
         {
-            KryptonDockingWorkspace dockingElements = kdmPalette.ManageWorkspace("Workspace", kdwPalette);
+            //KryptonDockingWorkspace dockingElements = kdmPalette.ManageWorkspace("Workspace", kdwPalette);
 
-            kdmPalette.ManageControl("PaletteProperties", kpPaletteColours, dockingElements);
+            //kdmPalette.ManageControl("PaletteProperties", kpPaletteColours, dockingElements);
 
-            kdmPalette.AddAutoHiddenGroup("PaletteProperties", DockingEdge.Right, new KryptonPage() { NewPage() });
+            //kdmPalette.AddAutoHiddenGroup("PaletteProperties", DockingEdge.Right, new KryptonPage() { NewPage() });
         }
 
-        private KryptonPage NewPage()
-        {
-            return AddNewPage("PaletteProperties", 0, new KryptonPage);
-        }
+        //private KryptonPage NewPage()
+        //{
+        //    return AddNewPage("PaletteProperties", 0, new KryptonPage);
+        //}
 
         private KryptonPage AddNewPage(string v1, int v2, KryptonPage kryptonPage)
         {
