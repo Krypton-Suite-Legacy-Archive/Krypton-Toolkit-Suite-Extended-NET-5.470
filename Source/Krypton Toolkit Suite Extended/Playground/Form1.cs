@@ -16,6 +16,7 @@ using KryptonApplicationUpdater.Classes.SettingsManager;
 //using KryptonApplicationUpdater.Interfaces;
 
 using KryptonExtendedToolkit.Base.Code;
+using KryptonExtendedToolkit.ExtendedToolkit.Controls;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -82,7 +83,7 @@ namespace Playground
                 kcmbGradientDirection.Items.Add(lgm.ToString().ToUpper());
             }
 
-            DevelopmentInformation.SetBuildInformation(this, _currentAssembly, DevelopmentStates.BETA);
+            DevelopmentInformation.SetBuildInformation(this, _currentAssembly, DevelopmentState.BETA);
         }
 
         private void MyOwnRecentFileGotClicked_Handler(object sender, EventArgs e)
@@ -339,6 +340,7 @@ namespace Playground
         private void kuacsbElevate_Click(object sender, EventArgs e)
         {
 
+            UtilityMethods.ElevateProcessWithAdministrativeRights(@"C:\\Windows\\Notepad.exe");
         }
 
         private void kryptonButton5_Click(object sender, EventArgs e)
@@ -483,6 +485,11 @@ namespace Playground
             FlashingLabelTest flashingLabel = new FlashingLabelTest();
 
             flashingLabel.Show();
+        }
+
+        private void toolStripMenuItemUACSheld1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

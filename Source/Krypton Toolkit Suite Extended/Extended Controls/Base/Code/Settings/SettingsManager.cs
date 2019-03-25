@@ -61,6 +61,10 @@ namespace ExtendedControls.Base.Code.Settings
             return manager._settings.PaletteExplorerLocation;
         }
 
+        /// <summary>
+        /// Sets the global manager.
+        /// </summary>
+        /// <param name="manager">The manager.</param>
         public static void SetGlobalManager(KryptonManager manager)
         {
             SettingsManager settingsManager = new SettingsManager();
@@ -68,11 +72,65 @@ namespace ExtendedControls.Base.Code.Settings
             settingsManager._settings.GlobalManager = manager;
         }
 
+        /// <summary>
+        /// Gets the global manager.
+        /// </summary>
+        /// <returns></returns>
         public static KryptonManager GetGlobalManager()
         {
             SettingsManager manager = new SettingsManager();
 
             return manager._settings.GlobalManager;
+        }
+
+        /// <summary>
+        /// Sets the default theme.
+        /// </summary>
+        /// <param name="mode">The mode.</param>
+        public static void SetDefaultTheme(PaletteMode mode)
+        {
+            SettingsManager settingsManager = new SettingsManager();
+
+            settingsManager._settings.DefaultTheme = mode;
+        }
+
+        /// <summary>
+        /// Gets the default theme.
+        /// </summary>
+        /// <returns></returns>
+        public static PaletteMode GetDefaultTheme()
+        {
+            SettingsManager settingsManager = new SettingsManager();
+
+            return settingsManager._settings.DefaultTheme;
+        }
+
+        public static void SetVirusTotalAPIKey(string apiKey)
+        {
+            SettingsManager settingsManager = new SettingsManager();
+
+            settingsManager._settings.VirusTotalAPIKey = apiKey;
+        }
+
+        public static string GetVirusTotalAPIKey()
+        {
+            SettingsManager settingsManager = new SettingsManager();
+
+            return settingsManager._settings.VirusTotalAPIKey;
+        }
+
+        public static void SetVirusTotalUseTLS(bool value)
+        {
+            SettingsManager settingsManager = new SettingsManager();
+
+            settingsManager._settings.VirusTotalUseTLS = value;
+        }
+
+        public static bool GetVirusTotalUseTLS()
+        {
+            SettingsManager settingsManager = new SettingsManager();
+
+            return settingsManager._settings.VirusTotalUseTLS;
         }
         #endregion
 

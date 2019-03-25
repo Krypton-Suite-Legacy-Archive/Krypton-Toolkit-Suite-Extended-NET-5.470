@@ -90,6 +90,8 @@
     <Compile Include="Classes\Other\ToolTipManager.cs" />
     <Compile Include="Classes\Other\TypefaceHelper.cs" />
     <Compile Include="Classes\Palette\PaletteCompisitionEngine.cs" />
+    <Compile Include="Classes\Security\RandomPassword.cs" />
+    <Compile Include="Classes\Security\SecurityMethods.cs" />
     <Compile Include="Classes\Theming\PaletteColourManagementEngine.cs" />
     <Compile Include="Classes\Theming\ThemeManager.cs" />
     <Compile Include="Classes\Utilities\PI.cs" />
@@ -129,6 +131,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Enumerations\Enumerations.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Interfaces\Colours\IColourPalette.cs" />
     <Compile Include="Interfaces\IAbout.cs" />
     <Compile Include="Interfaces\IColourEditor.cs" />
@@ -497,7 +500,7 @@
       <Version>1.0.5</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.717</Version>
+      <Version>5.470.794</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>

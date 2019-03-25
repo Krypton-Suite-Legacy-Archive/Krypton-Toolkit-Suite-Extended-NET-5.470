@@ -81,5 +81,41 @@ namespace ExtendedControls.Properties {
                 this["GlobalManager"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Office 2010 - Blue")]
+        public global::ComponentFactory.Krypton.Toolkit.PaletteMode DefaultTheme {
+            get {
+                return ((global::ComponentFactory.Krypton.Toolkit.PaletteMode)(this["DefaultTheme"]));
+            }
+            set {
+                this["DefaultTheme"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("80ada9eb0fd6d87e23d89cf1b4ba84ebd13a99053ec3c2edd26059af2e146ba0")]
+        public string VirusTotalAPIKey {
+            get {
+                return ((string)(this["VirusTotalAPIKey"]));
+            }
+            set {
+                this["VirusTotalAPIKey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool VirusTotalUseTLS {
+            get {
+                return ((bool)(this["VirusTotalUseTLS"]));
+            }
+            set {
+                this["VirusTotalUseTLS"] = value;
+            }
+        }
     }
 }

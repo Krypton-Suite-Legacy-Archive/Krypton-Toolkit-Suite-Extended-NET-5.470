@@ -3444,7 +3444,7 @@ namespace PaletteExplorer.UX
 
             if (devMode)
             {
-                DevelopmentInformation.SetBuildInformation(this, DevelopmentStates.ALPHA);
+                DevelopmentInformation.SetBuildInformation(this, DevelopmentState.ALPHA);
             }
 
             if (Application.ExecutablePath.Contains("Palette Designer.exe"))

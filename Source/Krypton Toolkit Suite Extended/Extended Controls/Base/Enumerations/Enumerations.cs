@@ -22,7 +22,7 @@
         FOLDER
     }
 
-    public enum DevelopmentStates
+    public enum DevelopmentState
     {
         PREALPHA,
         ALPHA,

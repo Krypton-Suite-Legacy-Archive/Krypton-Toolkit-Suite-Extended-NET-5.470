@@ -177,7 +177,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
 
             if (devMode)
             {
-                DevelopmentInformation.SetBuildInformation(this, DevelopmentStates.ALPHA);
+                DevelopmentInformation.SetBuildInformation(this, DevelopmentState.ALPHA);
             }
         }
         #endregion

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28606.126
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extended Controls", "Extended Controls\Extended Controls.csproj", "{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}"
 EndProject
@@ -78,6 +78,77 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TXT", "TXT", "{DE81BC2A-EC3
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Update File Maker", "Update File Maker\Update File Maker.csproj", "{83B06C50-5B61-467E-9620-BACF190E26F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet Specification", "NuGet Specification", "{7413922C-F694-4507-B00C-9ED0A03A411D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Setup\NuGet\KryptonExtendedToolkit5470.nupkg = ..\..\Setup\NuGet\KryptonExtendedToolkit5470.nupkg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{450BC07C-6C2D-4915-8922-03A41088B50C}"
+	ProjectSection(SolutionItems) = preProject
+		..\Palettes\Access 2007 Alt White Text.xml = ..\Palettes\Access 2007 Alt White Text.xml
+		..\Palettes\Access 2007 Alt.xml = ..\Palettes\Access 2007 Alt.xml
+		..\Palettes\Access 2007 White Text.xml = ..\Palettes\Access 2007 White Text.xml
+		..\Palettes\Access 2007.xml = ..\Palettes\Access 2007.xml
+		..\Palettes\Access 2010 White Text.xml = ..\Palettes\Access 2010 White Text.xml
+		..\Palettes\Access 2010.xml = ..\Palettes\Access 2010.xml
+		..\Palettes\Access 2013 White Text.xml = ..\Palettes\Access 2013 White Text.xml
+		..\Palettes\Access 2013.xml = ..\Palettes\Access 2013.xml
+		..\Palettes\Asphalt.xml = ..\Palettes\Asphalt.xml
+		..\Palettes\ax.xml = ..\Palettes\ax.xml
+		..\Palettes\Chrome.xml = ..\Palettes\Chrome.xml
+		..\Palettes\Cobalt Blue 2007.xml = ..\Palettes\Cobalt Blue 2007.xml
+		..\Palettes\Cobalt Blue 2010.xml = ..\Palettes\Cobalt Blue 2010.xml
+		..\Palettes\Cobalt Blue 2013.xml = ..\Palettes\Cobalt Blue 2013.xml
+		..\Palettes\Green Palette 2010.xml = ..\Palettes\Green Palette 2010.xml
+		..\Palettes\Green Palette.xml = ..\Palettes\Green Palette.xml
+		..\Palettes\GWC_Colors.xml = ..\Palettes\GWC_Colors.xml
+		..\Palettes\Haystack 2007.xml = ..\Palettes\Haystack 2007.xml
+		..\Palettes\Haystack 2010.xml = ..\Palettes\Haystack 2010.xml
+		..\Palettes\Haystack 2013.xml = ..\Palettes\Haystack 2013.xml
+		..\Palettes\Hazel.xml = ..\Palettes\Hazel.xml
+		..\Palettes\lightGray.xml = ..\Palettes\lightGray.xml
+		..\Palettes\Lime 2010.xml = ..\Palettes\Lime 2010.xml
+		..\Palettes\McLane.xml = ..\Palettes\McLane.xml
+		..\Palettes\Office 2007 Blue Alt.xml = ..\Palettes\Office 2007 Blue Alt.xml
+		..\Palettes\Office 2007 Green.xml = ..\Palettes\Office 2007 Green.xml
+		..\Palettes\Office 2010 Blue Alt.xml = ..\Palettes\Office 2010 Blue Alt.xml
+		..\Palettes\Office 2010 Green.xml = ..\Palettes\Office 2010 Green.xml
+		..\Palettes\Office 2013 Black.xml = ..\Palettes\Office 2013 Black.xml
+		..\Palettes\Office 2013 Blue.xml = ..\Palettes\Office 2013 Blue.xml
+		..\Palettes\Office 2013 Green.xml = ..\Palettes\Office 2013 Green.xml
+		..\Palettes\Office Pink 2007.xml = ..\Palettes\Office Pink 2007.xml
+		..\Palettes\Office Pink 2010.xml = ..\Palettes\Office Pink 2010.xml
+		..\Palettes\Office Pink 2013.xml = ..\Palettes\Office Pink 2013.xml
+		..\Palettes\OneNote 2007.xml = ..\Palettes\OneNote 2007.xml
+		..\Palettes\OneNote 2010.xml = ..\Palettes\OneNote 2010.xml
+		..\Palettes\OneNote 2013.xml = ..\Palettes\OneNote 2013.xml
+		..\Palettes\Outlook 2007 Alt.xml = ..\Palettes\Outlook 2007 Alt.xml
+		..\Palettes\Outlook 2010 Alt.xml = ..\Palettes\Outlook 2010 Alt.xml
+		..\Palettes\Outlook 2013.xml = ..\Palettes\Outlook 2013.xml
+		..\Palettes\Plastic.xml = ..\Palettes\Plastic.xml
+		..\Palettes\Powerpoint Red 2007.xml = ..\Palettes\Powerpoint Red 2007.xml
+		..\Palettes\Powerpoint Red 2010.xml = ..\Palettes\Powerpoint Red 2010.xml
+		..\Palettes\Powerpoint Red 2013.xml = ..\Palettes\Powerpoint Red 2013.xml
+		..\Palettes\Prussian Blue 2007.xml = ..\Palettes\Prussian Blue 2007.xml
+		..\Palettes\Prussian Blue 2010.xml = ..\Palettes\Prussian Blue 2010.xml
+		..\Palettes\Prussian Blue 2013.xml = ..\Palettes\Prussian Blue 2013.xml
+		..\Palettes\Purple.xml = ..\Palettes\Purple.xml
+		..\Palettes\Sea Blue 2007.xml = ..\Palettes\Sea Blue 2007.xml
+		..\Palettes\Sea Blue 2010.xml = ..\Palettes\Sea Blue 2010.xml
+		..\Palettes\Sea Blue 2013.xml = ..\Palettes\Sea Blue 2013.xml
+		..\Palettes\Sea Green 2007.xml = ..\Palettes\Sea Green 2007.xml
+		..\Palettes\Sea Green 2010.xml = ..\Palettes\Sea Green 2010.xml
+		..\Palettes\Sea Green 2013.xml = ..\Palettes\Sea Green 2013.xml
+		..\Palettes\Seven.xml = ..\Palettes\Seven.xml
+		..\Palettes\Slate Silver 2007.xml = ..\Palettes\Slate Silver 2007.xml
+		..\Palettes\Slate Silver 2010.xml = ..\Palettes\Slate Silver 2010.xml
+		..\Palettes\Slate Silver 2013.xml = ..\Palettes\Slate Silver 2013.xml
+		..\Palettes\THEMES.md = ..\Palettes\THEMES.md
+		..\Palettes\win7.xml = ..\Palettes\win7.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krypton Palette Upgrade Tool", "Krypton Palette Converter\Krypton Palette Upgrade Tool.csproj", "{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -286,6 +357,18 @@ Global
 		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|x86.ActiveCfg = Release|Any CPU
 		{83B06C50-5B61-467E-9620-BACF190E26F8}.Release|x86.Build.0 = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Debug|x86.Build.0 = Debug|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Installer Only|x86.Build.0 = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -298,6 +381,7 @@ Global
 		{D12038C3-B795-4BF0-9E03-8EC282FED476} = {F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}
 		{68CF0D41-4A18-47AA-A4DD-2C5031AD67CB} = {F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}
 		{DE81BC2A-EC33-4847-A34E-62B5849C2A93} = {F105F91F-3940-44DD-AA7F-B3CEB9EBBC88}
+		{7413922C-F694-4507-B00C-9ED0A03A411D} = {B4B787F0-53A2-498F-8893-091C709F73E4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4D1018D-143A-451D-8FC0-F63E4923F552}
