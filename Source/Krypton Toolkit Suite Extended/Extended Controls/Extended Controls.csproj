@@ -308,6 +308,9 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToastNotification.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToastNotificationPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -835,6 +838,9 @@
     <Compile Include="ExtendedToolkit\UI\Theming\ThemeChooser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Toast Notification\KryptonToastNotificationPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Windows\FileInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -939,9 +945,11 @@
     <None Include="Resources\text_lowercase.png" />
     <None Include="Resources\text_strikethrough.png" />
     <None Include="Resources\text_underline.png" />
+    <None Include="Resources\Grip.png" />
     <Content Include="ToolboxBitmaps\CircularProgressBar.bmp" />
     <Content Include="ToolboxBitmaps\DataBar.bmp" />
     <Content Include="ToolboxBitmaps\DataChart.bmp" />
+    <Content Include="ToolboxBitmaps\KR 48 x 48 Orange.ico" />
     <Content Include="ToolboxBitmaps\ToggleSwich.bmp" />
     <Content Include="ToolboxBitmaps\UACButton.bmp" />
     <None Include="Resources\help2.png" />
@@ -1168,6 +1176,9 @@
     <EmbeddedResource Include="ExtendedToolkit\UI\Theming\ThemeChooser.resx">
       <DependentUpon>ThemeChooser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Toast Notification\KryptonToastNotificationPopupForm.resx">
+      <DependentUpon>KryptonToastNotificationPopupForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Windows\FileInformation.resx">
       <DependentUpon>FileInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -1181,7 +1192,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.794</Version>
+      <Version>5.470.826</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.1</Version>
