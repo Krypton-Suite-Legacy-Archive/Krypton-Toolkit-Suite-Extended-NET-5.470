@@ -11,15 +11,27 @@ namespace ExtendedControls.ExtendedToolkit.UI.ToastNotification
     {
         private void InitializeComponent()
         {
+            this.kpnlBack = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlBack)).BeginInit();
             this.SuspendLayout();
+            // 
+            // kpnlBack
+            // 
+            this.kpnlBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kpnlBack.Location = new System.Drawing.Point(0, 0);
+            this.kpnlBack.Name = "kpnlBack";
+            this.kpnlBack.Size = new System.Drawing.Size(392, 66);
+            this.kpnlBack.TabIndex = 0;
             // 
             // KryptonToastNotificationPopupForm
             // 
             this.ClientSize = new System.Drawing.Size(392, 66);
-            FormBorderStyle = FormBorderStyle.None;
+            this.Controls.Add(this.kpnlBack);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "KryptonToastNotificationPopupForm";
-            StartPosition = FormStartPosition.Manual;
-            TopMost = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.TopMost = true;
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlBack)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -66,6 +78,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.ToastNotification
         private Rectangle _rectBody, _rectHeader, _rectForm;
         private LinearGradientBrush _lgbBody, _lgbHeader;
         private Pen _penButtonBorder, _penContent, _penBorder;
+        private KryptonPanel kpnlBack;
         #endregion
 
         #region Properties
