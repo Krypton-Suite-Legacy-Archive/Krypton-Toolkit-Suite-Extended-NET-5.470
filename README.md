@@ -22,6 +22,20 @@
 
 ======
 
+## 2019-04-01 Build 855 April Update
+* Build 855 (build date Monday 1st, April 2019) is now available on NuGet
+* New palette theme selector
+* New `KryptonToastNotification` window
+* New circular progressbar control
+* Random password generator (for use on future user creation dialog)
+* New developer API tools for internal development of the toolkit
+* Begun re-working the `Palette Explorer` application
+* New `Palette Upgrade Tool` application for upgrading any older palette `xml` files
+* Upgraded to Krypton Toolkit Suite - version: **5.470.794**
+* Theme `*.xml` files are now available to view and edit in the Visual Studio solution under the **themes** folder
+
+======
+
 ## 2019-03-01 Build 796
 * Build 796 (build date Friday 1st, March 2019) is now available on NuGet
 * New colour wheel colour dialog
