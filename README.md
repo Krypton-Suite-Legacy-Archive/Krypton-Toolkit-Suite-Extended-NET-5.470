@@ -33,6 +33,7 @@
 * New `Palette Upgrade Tool` application for upgrading any older palette `xml` files
 * Upgraded to Krypton Toolkit Suite - version: **5.470.794**
 * Theme `*.xml` files are now available to view and edit in the Visual Studio solution under the **themes** folder
+* All theme files are now bundled with the NuGet package
 
 ======
 
