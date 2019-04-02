@@ -369,9 +369,16 @@
     <Compile Include="ExtendedToolkit\Navi Suite\Design\Designers\NaviBarToolboxItem.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Design\Designers\NaviGroupDesigner.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTable.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2003Blue.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2003Green.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2003Silver.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2007Black.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2007Blue.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2007Silver.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Black.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Blue.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Silver.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviToolstripColourTable.cs" />
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
       <SubType>Form</SubType>
     </Compile>
