@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
     <LangVersion>latest</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Krypton Extended Toolkit.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -343,6 +344,26 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\MessageBoxes\UI\KryptonExceptionMessageBox.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\AnimationCache.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\ExtCollection.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\ExtDrawing.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\LargeImageIndexConverter.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\LargeImageIndexEditor.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\NativeMethods.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\PopupWindowHelper.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\PopupWindowHelperMessageFilter.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\SmallImageIndexConverter.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\SmallImageIndexEditor.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Enumerations\Enumerations.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Event Arguments\AnimationEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Event Arguments\ExtCollectionEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Event Arguments\PopupCancelEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Event Arguments\PopupClosedEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Interfaces\IObservable.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\Interfaces\IObserver.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Common\User Controls\NaviControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -932,6 +953,7 @@
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceProperties.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Content Include="ExtendedToolkit\Navi Suite\Credits.txt" />
     <Content Include="ExtendedToolkit\Wizard\Images\Wizard.bmp" />
     <Content Include="ExtendedToolkit\Wizard\Images\wizBigOnlineFolder.gif" />
     <Content Include="Notes\IMPORTANT.txt" />
