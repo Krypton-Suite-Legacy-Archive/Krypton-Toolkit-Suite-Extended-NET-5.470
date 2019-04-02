@@ -379,6 +379,11 @@
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Blue.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Silver.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviToolstripColourTable.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Resources\NaviSuiteResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NaviSuiteResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -996,6 +1001,10 @@
     <None Include="Resources\Grip.png" />
     <None Include="Resources\Error_Report_48_x_48.png" />
     <None Include="Resources\Error_Report_128_x_128.png" />
+    <None Include="Resources\NaviBar.bmp" />
+    <None Include="Resources\NaviGroup.bmp" />
+    <None Include="Resources\NaviDown.png" />
+    <None Include="Resources\NaviUp.png" />
     <Content Include="ToolboxBitmaps\CircularProgressBar.bmp" />
     <Content Include="ToolboxBitmaps\DataBar.bmp" />
     <Content Include="ToolboxBitmaps\DataChart.bmp" />
@@ -1132,6 +1141,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Error Reporting\UX\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Navi Suite\Main\Resources\NaviSuiteResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NaviSuiteResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceProperties.resx">
       <DependentUpon>TypefaceProperties.cs</DependentUpon>
