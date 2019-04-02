@@ -364,6 +364,14 @@
     <Compile Include="ExtendedToolkit\Navi Suite\Common\User Controls\NaviControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Design\Designers\NaviBandDesigner.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Design\Designers\NaviBarDesigner.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Design\Designers\NaviBarToolboxItem.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Design\Designers\NaviGroupDesigner.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTable.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Black.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Blue.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Silver.cs" />
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -957,6 +965,7 @@
     <Content Include="ExtendedToolkit\Wizard\Images\Wizard.bmp" />
     <Content Include="ExtendedToolkit\Wizard\Images\wizBigOnlineFolder.gif" />
     <Content Include="Notes\IMPORTANT.txt" />
+    <None Include="ExtendedToolkit\Navi Suite\License.md" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
