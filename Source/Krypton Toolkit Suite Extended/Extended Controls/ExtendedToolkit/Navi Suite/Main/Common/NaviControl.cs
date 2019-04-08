@@ -122,26 +122,26 @@ namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Common
 
         private void InitializeRenderer()
         {
-            renderer = new NaviOffice7Renderer();
+            renderer = new NaviOffice2007Renderer();
 
             switch (layoutStyle)
             {
                 case NaviLayoutStyle.Office2003Blue:
                 case NaviLayoutStyle.Office2003Green:
                 case NaviLayoutStyle.Office2003Silver:
-                    renderer = new NaviOffice3Renderer();
+                    renderer = new NaviOffice2003Renderer();
                     renderer.Initialize(layoutStyle);
                     break;
                 case NaviLayoutStyle.Office2007Blue:
                 case NaviLayoutStyle.Office2007Silver:
                 case NaviLayoutStyle.Office2007Black:
-                    renderer = new NaviOffice7Renderer();
+                    renderer = new NaviOffice2007Renderer();
                     renderer.Initialize(layoutStyle);
                     break;
                 case NaviLayoutStyle.Office2010Blue:
                 case NaviLayoutStyle.Office2010Silver:
                 case NaviLayoutStyle.Office2010Black:
-                    renderer = new NaviOffice10Renderer();
+                    renderer = new NaviOffice2010Renderer();
                     renderer.Initialize(layoutStyle);
                     break;
                 default:

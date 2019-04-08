@@ -420,6 +420,8 @@
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviGroup.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Drawing\NaviOffice2010Renderer.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Drawing\NaviRenderer.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Resources\NaviSuiteResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
