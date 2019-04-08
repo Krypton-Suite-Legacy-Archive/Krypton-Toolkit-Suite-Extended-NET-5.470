@@ -408,6 +408,18 @@
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviButtonCollapse.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviButtonOptions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Resources\NaviSuiteResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
