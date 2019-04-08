@@ -29,28 +29,64 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
+using System.ComponentModel;
+using System.Windows.Forms;
 
-using ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls;
-using System.Windows.Forms.Design;
-
-namespace ExtendedControls.ExtendedToolkit.NaviSuite.Design.Designers
+namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls
 {
-    /// <summary>
-    /// Enables design time mode for the ClientArea of the Band
-    /// </summary>
-    public class NaviBandDesigner : ParentControlDesigner
+    [ToolboxItem(false)]
+    public partial class NaviButtonCollapse : NaviButton
     {
-        private NaviBand designingComponent;
+        // Fields
+        private bool collapsed;
 
-        public override void Initialize(System.ComponentModel.IComponent component)
+        #region Constructor
+
+        /// <summary>
+        /// Initializes a new instance of the NavigationBarButton
+        /// </summary>
+        public NaviButtonCollapse()
         {
-            base.Initialize(component);
-            if (component is NaviBand)
-            {
-                designingComponent = (NaviBand)component;
+        }
 
-                EnableDesignMode(designingComponent.ClientArea, "ClientArea");
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Gets or sets whether the buttons should be drawn in minimized mode or not
+        /// </summary>
+        [
+        Browsable(false),
+        DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden),
+        ]
+        public override bool Collapsed
+        {
+            get { return collapsed; }
+            set
+            {
+                // We need an explicit override with Invalidate otherwise the control is not 
+                // invalidated properly. 
+                collapsed = value;
+                Invalidate();
             }
         }
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// Overriden. Raises the Paint event 
+        /// </summary>
+        /// <param name="e">Additional paint info</param>
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            Renderer.DrawButtonCollapseBg(e.Graphics, ClientRectangle, inputState,
+               RightToLeft == RightToLeft.Yes, collapsed);
+        }
+
+        #endregion
     }
 }

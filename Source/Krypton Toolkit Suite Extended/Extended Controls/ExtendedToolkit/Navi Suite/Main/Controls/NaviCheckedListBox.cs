@@ -29,27 +29,51 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
+using System.ComponentModel;
+using System.Windows.Forms;
 
-using ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls;
-using System.Windows.Forms.Design;
-
-namespace ExtendedControls.ExtendedToolkit.NaviSuite.Design.Designers
+namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls
 {
-    /// <summary>
-    /// Enables design time mode for the ClientArea of the Band
-    /// </summary>
-    public class NaviBandDesigner : ParentControlDesigner
+    [ToolboxItem(false)]
+    public class NaviCheckedListBox : CheckedListBox
     {
-        private NaviBand designingComponent;
+        private int checkBoxWidth = 18;
+        private bool checkHandled = false;
+        private bool itemChecked;
 
-        public override void Initialize(System.ComponentModel.IComponent component)
+        protected override void OnItemCheck(ItemCheckEventArgs ice)
         {
-            base.Initialize(component);
-            if (component is NaviBand)
+            base.OnItemCheck(ice);
+            if (checkHandled)
             {
-                designingComponent = (NaviBand)component;
+                if (itemChecked)
+                    ice.NewValue = CheckState.Checked;
+                else
+                    ice.NewValue = CheckState.Unchecked;
+            }
+        }
 
-                EnableDesignMode(designingComponent.ClientArea, "ClientArea");
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            checkHandled = false;
+            if (e.Button == MouseButtons.Left)
+            {
+                int index = -1;
+                for (int i = 0; i < Items.Count; i++)
+                {
+                    if (GetItemRectangle(i).Contains(e.X, e.Y))
+                    {
+                        index = i;
+                        break;
+                    }
+                }
+                if (index != -1 && e.X <= checkBoxWidth)
+                {
+                    itemChecked = !GetItemChecked(index);
+                    checkHandled = true;
+                    SetItemChecked(index, itemChecked);
+                }
             }
         }
     }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExtendedControls.ExtendedToolkit.Navi_Suite.Main.Resources {
+namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ExtendedControls.ExtendedToolkit.Navi_Suite.Main.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExtendedControls.ExtendedToolkit.Navi_Suite.Main.Resources.NaviSuiteResource", typeof(NaviSuiteResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExtendedControls.ExtendedToolkit.NaviSuite.Main.Resources.NaviSuiteResource", typeof(NaviSuiteResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

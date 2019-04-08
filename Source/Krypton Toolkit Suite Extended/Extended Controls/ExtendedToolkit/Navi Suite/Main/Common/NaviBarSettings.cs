@@ -29,28 +29,26 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
+using System.Collections.Generic;
+using System.Xml.Serialization;
 
-using ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls;
-using System.Windows.Forms.Design;
-
-namespace ExtendedControls.ExtendedToolkit.NaviSuite.Design.Designers
+namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Common
 {
-    /// <summary>
-    /// Enables design time mode for the ClientArea of the Band
-    /// </summary>
-    public class NaviBandDesigner : ParentControlDesigner
+    [XmlRoot("settings")]
+    public class NaviBarSettings
     {
-        private NaviBand designingComponent;
+        [XmlElement("band")]
+        public List<NaviBandSetting> BandSettings { get; set; }
 
-        public override void Initialize(System.ComponentModel.IComponent component)
+        [XmlElement("visibleButtons")]
+        public int VisibleButtons { get; set; }
+
+        [XmlElement("collapsed")]
+        public bool Collapsed { get; set; }
+
+        public NaviBarSettings()
         {
-            base.Initialize(component);
-            if (component is NaviBand)
-            {
-                designingComponent = (NaviBand)component;
-
-                EnableDesignMode(designingComponent.ClientArea, "ClientArea");
-            }
+            BandSettings = new List<NaviBandSetting>();
         }
     }
 }

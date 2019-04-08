@@ -385,6 +385,29 @@
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandEventArgs.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandOrderComparer.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandOrgOrderComparer.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandSetting.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBarSettings.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviBand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviBandClientArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviBandCollapsed.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviButtonCollapse.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Resources\NaviSuiteResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

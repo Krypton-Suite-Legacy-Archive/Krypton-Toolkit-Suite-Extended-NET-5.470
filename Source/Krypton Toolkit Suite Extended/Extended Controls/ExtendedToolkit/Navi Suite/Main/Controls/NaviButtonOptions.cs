@@ -29,28 +29,24 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
+using System.ComponentModel;
 
-using ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls;
-using System.Windows.Forms.Design;
-
-namespace ExtendedControls.ExtendedToolkit.NaviSuite.Design.Designers
+namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls
 {
-    /// <summary>
-    /// Enables design time mode for the ClientArea of the Band
-    /// </summary>
-    public class NaviBandDesigner : ParentControlDesigner
+    [ToolboxItem(false)]
+    public partial class NaviButtonOptions : NaviButton
     {
-        private NaviBand designingComponent;
+        #region Overrides
 
-        public override void Initialize(System.ComponentModel.IComponent component)
+        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
-            base.Initialize(component);
-            if (component is NaviBand)
-            {
-                designingComponent = (NaviBand)component;
-
-                EnableDesignMode(designingComponent.ClientArea, "ClientArea");
-            }
+            base.OnPaint(e);
+            Renderer.DrawOptionsTriangle(e.Graphics, ClientRectangle);
         }
+
+        #endregion
+
+        #region Event Handling
+        #endregion
     }
 }
