@@ -136,6 +136,7 @@
     <Compile Include="Base\Code\Security\SecurityMethods.cs" />
     <Compile Include="Base\Code\Security\VirusTotalAPI.cs" />
     <Compile Include="Base\Code\Settings\SettingsManager.cs" />
+    <Compile Include="Base\Code\Theming\KryptonPaletteManager.cs" />
     <Compile Include="Base\Code\Theming\KryptonThemeManager.cs" />
     <Compile Include="Base\Code\TypefaceHelper.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
