@@ -380,6 +380,11 @@
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Blue.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Silver.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviToolstripColourTable.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandCollection.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandEnumerator.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandOrderComparer.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandOrgOrderComparer.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Resources\NaviSuiteResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
