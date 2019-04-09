@@ -20,6 +20,8 @@
 
 ## In order to compile the code, you MUST restore/update the NuGet packages in order to build successfully!
 
+**[Toolkit Examples]**(https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Examples.md)
+
 ======
 
 ## 2019-04-01 Build 855 April Update
