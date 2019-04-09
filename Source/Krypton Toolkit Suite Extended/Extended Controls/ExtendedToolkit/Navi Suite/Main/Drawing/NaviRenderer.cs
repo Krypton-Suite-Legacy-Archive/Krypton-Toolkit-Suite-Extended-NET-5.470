@@ -31,6 +31,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using ExtendedControls.ExtendedToolkit.NaviSuite.Common.Enumerations;
 using ExtendedControls.ExtendedToolkit.NaviSuite.Main.Colours;
+using ExtendedControls.ExtendedToolkit.NaviSuite.Main.Layout;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;

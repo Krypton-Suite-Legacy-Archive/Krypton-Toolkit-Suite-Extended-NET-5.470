@@ -32,6 +32,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 using ExtendedControls.ExtendedToolkit.NaviSuite.Common.Classes;
 using ExtendedControls.ExtendedToolkit.NaviSuite.Common.Enumerations;
 using ExtendedControls.ExtendedToolkit.NaviSuite.Main.Colours;
+using ExtendedControls.ExtendedToolkit.NaviSuite.Main.Layout;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
@@ -564,7 +565,7 @@ namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Drawing
                     g.FillRectangle(b, centerX + 4, centerY - 1, 2, 2);
                     g.FillRectangle(b, centerX + 8, centerY - 1, 2, 2);
 
-                    b.Color = ColourTable.SplitterColour3;
+                    b.Color = ColourTable.SplitterColor3;
 
                     g.FillRectangle(b, centerX - 7, centerY, 2, 2);
                     g.FillRectangle(b, centerX - 3, centerY, 2, 2);
@@ -580,7 +581,7 @@ namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Drawing
                     g.FillRectangle(b, centerX - 1, centerY + 4, 2, 2);
                     g.FillRectangle(b, centerX - 1, centerY + 8, 2, 2);
 
-                    b.Color = ColourTable.SplitterColour3;
+                    b.Color = ColourTable.SplitterColor3;
 
                     g.FillRectangle(b, centerX, centerY - 7, 2, 2);
                     g.FillRectangle(b, centerX, centerY - 3, 2, 2);

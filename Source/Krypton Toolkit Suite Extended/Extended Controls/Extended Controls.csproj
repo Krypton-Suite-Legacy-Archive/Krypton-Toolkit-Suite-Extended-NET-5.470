@@ -425,10 +425,25 @@
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Drawing\NaviOffice2007Renderer.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Drawing\NaviRenderer.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Drawing\NaviToolstripRenderer.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Forms\NaviBandPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Forms\NaviOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Layout\NaviLayoutEngine.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Layout\NaviLayoutEngineOffice.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Layout\NaviLayoutFactory.cs" />
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Layout\NaviLayoutStyle.cs" />
     <Compile Include="ExtendedToolkit\Navi Suite\Main\Resources\NaviSuiteResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NaviSuiteResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Navi Suite\Main\Resources\Text.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Text.resx</DependentUpon>
     </Compile>
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
       <SubType>Form</SubType>
@@ -1191,6 +1206,10 @@
     <EmbeddedResource Include="ExtendedToolkit\Navi Suite\Main\Resources\NaviSuiteResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>NaviSuiteResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Navi Suite\Main\Resources\Text.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Text.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceProperties.resx">
       <DependentUpon>TypefaceProperties.cs</DependentUpon>

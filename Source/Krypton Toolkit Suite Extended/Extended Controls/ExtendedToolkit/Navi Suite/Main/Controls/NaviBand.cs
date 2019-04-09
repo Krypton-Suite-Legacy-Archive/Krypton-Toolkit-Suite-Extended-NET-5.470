@@ -31,6 +31,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using ExtendedControls.ExtendedToolkit.NaviSuite.Common.Classes;
 using ExtendedControls.ExtendedToolkit.NaviSuite.Common.UserControls;
+using ExtendedControls.ExtendedToolkit.NaviSuite.Main.Drawing;
 using System;
 using System.ComponentModel;
 using System.Drawing;

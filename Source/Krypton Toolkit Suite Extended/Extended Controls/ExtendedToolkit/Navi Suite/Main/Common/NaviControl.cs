@@ -29,6 +29,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
+using ExtendedControls.ExtendedToolkit.NaviSuite.Main.Drawing;
+using ExtendedControls.ExtendedToolkit.NaviSuite.Main.Layout;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
