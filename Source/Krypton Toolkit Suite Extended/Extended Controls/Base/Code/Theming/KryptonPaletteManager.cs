@@ -746,7 +746,65 @@ namespace ExtendedControls.Base.Code.Theming
         {
             try
             {
+                KryptonPaletteManager kpm = new KryptonPaletteManager();
 
+                kpm.SetBaseColour(baseColour);
+
+                kpm.SetDarkColour(darkColour);
+
+                kpm.SetMiddleColour(middleColour);
+
+                kpm.SetLightColour(lightColour);
+
+                kpm.SetLightestColour(lightestColour);
+
+                kpm.SetBorderColour(borderColour);
+
+                kpm.SetAlternativeNormalTextColour(alternativeNormalTextColour);
+
+                kpm.SetNormalTextColour(normalTextColour);
+
+                kpm.SetDisabledTextColour(disabledTextColour);
+
+                kpm.SetFocusedTextColour(focusedTextColour);
+
+                kpm.SetPressedTextColour(pressedTextColour);
+
+                kpm.SetDisabledColour(disabledColour);
+
+                kpm.SetLinkNormalColour(linkNormalColour);
+
+                kpm.SetLinkFocusedColour(linkFocusedColour);
+
+                kpm.SetLinkHoverColour(linkHoverColour);
+
+                kpm.SetLinkVisitedColour(linkVisitedColour);
+
+                kpm.SetCustomColourOne(customColourOne);
+
+                kpm.SetCustomColourTwo(customColourTwo);
+
+                kpm.SetCustomColourThree(customColourThree);
+
+                kpm.SetCustomColourFour(customColourFour);
+
+                kpm.SetCustomColourFive(customColourFive);
+
+                kpm.SetCustomTextColourOne(customTextColourOne);
+
+                kpm.SetCustomTextColourTwo(customTextColourTwo);
+
+                kpm.SetCustomTextColourThree(customTextColourThree);
+
+                kpm.SetCustomTextColourFour(customTextColourFour);
+
+                kpm.SetCustomTextColourFive(customTextColourFive);
+
+                kpm.SetMenuTextColour(menuTextColour);
+
+                kpm.SetStatusTextColour(statusTextColour);
+
+                kpm.SetRibbonTabTextColour(ribbonTabTextColour);
             }
             catch (Exception exc)
             {
@@ -758,7 +816,67 @@ namespace ExtendedControls.Base.Code.Theming
         {
             try
             {
+                KryptonPaletteManager kpm = new KryptonPaletteManager();
 
+                kpm.SetBaseColour(baseColour);
+
+                kpm.SetDarkColour(darkColour);
+
+                kpm.SetMiddleColour(middleColour);
+
+                kpm.SetLightColour(lightColour);
+
+                kpm.SetLightestColour(lightestColour);
+
+                kpm.SetBorderColour(borderColour);
+
+                kpm.SetAlternativeNormalTextColour(alternativeNormalTextColour);
+
+                kpm.SetNormalTextColour(normalTextColour);
+
+                kpm.SetDisabledTextColour(disabledTextColour);
+
+                kpm.SetFocusedTextColour(focusedTextColour);
+
+                kpm.SetPressedTextColour(pressedTextColour);
+
+                kpm.SetDisabledColour(disabledColour);
+
+                kpm.SetLinkNormalColour(linkNormalColour);
+
+                kpm.SetLinkFocusedColour(linkFocusedColour);
+
+                kpm.SetLinkHoverColour(linkHoverColour);
+
+                kpm.SetLinkVisitedColour(linkVisitedColour);
+
+                kpm.SetCustomColourOne(customColourOne);
+
+                kpm.SetCustomColourTwo(customColourTwo);
+
+                kpm.SetCustomColourThree(customColourThree);
+
+                kpm.SetCustomColourFour(customColourFour);
+
+                kpm.SetCustomColourFive(customColourFive);
+
+                kpm.SetCustomTextColourOne(customTextColourOne);
+
+                kpm.SetCustomTextColourTwo(customTextColourTwo);
+
+                kpm.SetCustomTextColourThree(customTextColourThree);
+
+                kpm.SetCustomTextColourFour(customTextColourFour);
+
+                kpm.SetCustomTextColourFive(customTextColourFive);
+
+                kpm.SetMenuTextColour(menuTextColour);
+
+                kpm.SetStatusTextColour(statusTextColour);
+
+                kpm.SetRibbonTabTextColour(ribbonTabTextColour);
+
+                kpm.SetPaletteMode(paletteMode);
             }
             catch (Exception exc)
             {
@@ -770,7 +888,65 @@ namespace ExtendedControls.Base.Code.Theming
         {
             try
             {
+                KryptonPaletteManager kpm = new KryptonPaletteManager();
 
+                kpm.SetBaseColour(baseColour.BackColor);
+
+                kpm.SetDarkColour(darkColour.BackColor);
+
+                kpm.SetMiddleColour(middleColour.BackColor);
+
+                kpm.SetLightColour(lightColour.BackColor);
+
+                kpm.SetLightestColour(lightestColour.BackColor);
+
+                kpm.SetBorderColour(borderColour.BackColor);
+
+                kpm.SetAlternativeNormalTextColour(alternativeNormalTextColour.BackColor);
+
+                kpm.SetNormalTextColour(normalTextColour.BackColor);
+
+                kpm.SetDisabledTextColour(disabledTextColour.BackColor);
+
+                kpm.SetFocusedTextColour(focusedTextColour.BackColor);
+
+                kpm.SetPressedTextColour(pressedTextColour.BackColor);
+
+                kpm.SetDisabledColour(disabledColour.BackColor);
+
+                kpm.SetLinkNormalColour(linkNormalColour.BackColor);
+
+                kpm.SetLinkFocusedColour(linkFocusedColour.BackColor);
+
+                kpm.SetLinkHoverColour(linkHoverColour.BackColor);
+
+                kpm.SetLinkVisitedColour(linkVisitedColour.BackColor);
+
+                kpm.SetCustomColourOne(customColourOne.BackColor);
+
+                kpm.SetCustomColourTwo(customColourTwo.BackColor);
+
+                kpm.SetCustomColourThree(customColourThree.BackColor);
+
+                kpm.SetCustomColourFour(customColourFour.BackColor);
+
+                kpm.SetCustomColourFive(customColourFive.BackColor);
+
+                kpm.SetCustomTextColourOne(customTextColourOne.BackColor);
+
+                kpm.SetCustomTextColourTwo(customTextColourTwo.BackColor);
+
+                kpm.SetCustomTextColourThree(customTextColourThree.BackColor);
+
+                kpm.SetCustomTextColourFour(customTextColourFour.BackColor);
+
+                kpm.SetCustomTextColourFive(customTextColourFive.BackColor);
+
+                kpm.SetMenuTextColour(menuTextColour.BackColor);
+
+                kpm.SetStatusTextColour(statusTextColour.BackColor);
+
+                kpm.SetRibbonTabTextColour(ribbonTabTextColour.BackColor);
             }
             catch (Exception exc)
             {
@@ -780,7 +956,545 @@ namespace ExtendedControls.Base.Code.Theming
         #endregion
 
         #region Setters & Getters
+        /// <summary>
+        /// Sets the value of BaseColour to value.
+        /// </summary>
+        /// <param name="value">The value of BaseColour.</param>
+        public void SetBaseColour(Color value)
+        {
+            BaseColour = value;
+        }
 
+        /// <summary>
+        /// Returns the value of BaseColour.
+        /// </summary>
+        /// <returns>The value of BaseColour.</returns>
+        public Color GetBaseColour()
+        {
+            return BaseColour;
+        }
+
+        /// <summary>
+        /// Sets the value of DarkColour to value.
+        /// </summary>
+        /// <param name="value">The value of DarkColour.</param>
+        public void SetDarkColour(Color value)
+        {
+            DarkColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of DarkColour.
+        /// </summary>
+        /// <returns>The value of DarkColour.</returns>
+        public Color GetDarkColour()
+        {
+            return DarkColour;
+        }
+
+        /// <summary>
+        /// Sets the value of MiddleColour to value.
+        /// </summary>
+        /// <param name="value">The value of MiddleColour.</param>
+        public void SetMiddleColour(Color value)
+        {
+            MiddleColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of MiddleColour.
+        /// </summary>
+        /// <returns>The value of MiddleColour.</returns>
+        public Color GetMiddleColour()
+        {
+            return MiddleColour;
+        }
+
+        /// <summary>
+        /// Sets the value of LightColour to value.
+        /// </summary>
+        /// <param name="value">The value of LightColour.</param>
+        public void SetLightColour(Color value)
+        {
+            LightColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LightColour.
+        /// </summary>
+        /// <returns>The value of LightColour.</returns>
+        public Color GetLightColour()
+        {
+            return LightColour;
+        }
+
+        /// <summary>
+        /// Sets the value of LightestColour to value.
+        /// </summary>
+        /// <param name="value">The value of LightestColour.</param>
+        public void SetLightestColour(Color value)
+        {
+            LightestColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LightestColour.
+        /// </summary>
+        /// <returns>The value of LightestColour.</returns>
+        public Color GetLightestColour()
+        {
+            return LightestColour;
+        }
+
+        /// <summary>
+        /// Sets the value of BorderColour to value.
+        /// </summary>
+        /// <param name="value">The value of BorderColour.</param>
+        public void SetBorderColour(Color value)
+        {
+            BorderColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of BorderColour.
+        /// </summary>
+        /// <returns>The value of BorderColour.</returns>
+        public Color GetBorderColour()
+        {
+            return BorderColour;
+        }
+
+        /// <summary>
+        /// Sets the value of AlternativeNormalTextColour to value.
+        /// </summary>
+        /// <param name="value">The value of AlternativeNormalTextColour.</param>
+        public void SetAlternativeNormalTextColour(Color value)
+        {
+            AlternativeNormalTextColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of AlternativeNormalTextColour.
+        /// </summary>
+        /// <returns>The value of AlternativeNormalTextColour.</returns>
+        public Color GetAlternativeNormalTextColour()
+        {
+            return AlternativeNormalTextColour;
+        }
+
+        /// <summary>
+        /// Sets the value of NormalTextColour to value.
+        /// </summary>
+        /// <param name="value">The value of NormalTextColour.</param>
+        public void SetNormalTextColour(Color value)
+        {
+            NormalTextColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of NormalTextColour.
+        /// </summary>
+        /// <returns>The value of NormalTextColour.</returns>
+        public Color GetNormalTextColour()
+        {
+            return NormalTextColour;
+        }
+
+        /// <summary>
+        /// Sets the value of DisabledTextColour to value.
+        /// </summary>
+        /// <param name="value">The value of DisabledTextColour.</param>
+        public void SetDisabledTextColour(Color value)
+        {
+            DiisabledTextColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of DisabledTextColour.
+        /// </summary>
+        /// <returns>The value of DisabledTextColour.</returns>
+        public Color GetDisabledTextColour()
+        {
+            return DiisabledTextColour;
+        }
+
+        /// <summary>
+        /// Sets the value of FocusedTextColour to value.
+        /// </summary>
+        /// <param name="value">The value of FocusedTextColour.</param>
+        public void SetFocusedTextColour(Color value)
+        {
+            FocusedTextColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of FocusedTextColour.
+        /// </summary>
+        /// <returns>The value of FocusedTextColour.</returns>
+        public Color GetFocusedTextColour()
+        {
+            return FocusedTextColour;
+        }
+
+        /// <summary>
+        /// Sets the value of PressedTextColour to value.
+        /// </summary>
+        /// <param name="value">The value of PressedTextColour.</param>
+        public void SetPressedTextColour(Color value)
+        {
+            PressedTextColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of PressedTextColour.
+        /// </summary>
+        /// <returns>The value of PressedTextColour.</returns>
+        public Color GetPressedTextColour()
+        {
+            return PressedTextColour;
+        }
+
+        /// <summary>
+        /// Sets the value of DisabledColour to value.
+        /// </summary>
+        /// <param name="value">The value of DisabledColour.</param>
+        public void SetDisabledColour(Color value)
+        {
+            DisabledColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of DisabledColour.
+        /// </summary>
+        /// <returns>The value of DisabledColour.</returns>
+        public Color GetDisabledColour()
+        {
+            return DisabledColour;
+        }
+
+        /// <summary>
+        /// Sets the value of LinkNormalColour to value.
+        /// </summary>
+        /// <param name="value">The value of LinkNormalColour.</param>
+        public void SetLinkNormalColour(Color value)
+        {
+            LinkNormalColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkNormalColour.
+        /// </summary>
+        /// <returns>The value of LinkNormalColour.</returns>
+        public Color GetLinkNormalColour()
+        {
+            return LinkNormalColour;
+        }
+
+        /// <summary>
+        /// Sets the value of LinkFocusedColour to value.
+        /// </summary>
+        /// <param name="value">The value of LinkFocusedColour.</param>
+        public void SetLinkFocusedColour(Color value)
+        {
+            LinkFocusedColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkFocusedColour.
+        /// </summary>
+        /// <returns>The value of LinkFocusedColour.</returns>
+        public Color GetLinkFocusedColour()
+        {
+            return LinkFocusedColour;
+        }
+
+        /// <summary>
+        /// Sets the value of LinkHoverColour to value.
+        /// </summary>
+        /// <param name="value">The value of LinkHoverColour.</param>
+        public void SetLinkHoverColour(Color value)
+        {
+            LinkHoverColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkHoverColour.
+        /// </summary>
+        /// <returns>The value of LinkHoverColour.</returns>
+        public Color GetLinkHoverColour()
+        {
+            return LinkHoverColour;
+        }
+
+        /// <summary>
+        /// Sets the value of LinkVisitedColour to value.
+        /// </summary>
+        /// <param name="value">The value of LinkVisitedColour.</param>
+        public void SetLinkVisitedColour(Color value)
+        {
+            LinkVisitedColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkVisitedColour.
+        /// </summary>
+        /// <returns>The value of LinkVisitedColour.</returns>
+        public Color GetLinkVisitedColour()
+        {
+            return LinkVisitedColour;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourOne to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourOne.</param>
+        public void SetCustomColourOne(Color value)
+        {
+            CustomColourOne = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourOne.
+        /// </summary>
+        /// <returns>The value of CustomColourOne.</returns>
+        public Color GetCustomColourOne()
+        {
+            return CustomColourOne;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourTwo to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourTwo.</param>
+        public void SetCustomColourTwo(Color value)
+        {
+            CustomColourTwo = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourTwo.
+        /// </summary>
+        /// <returns>The value of CustomColourTwo.</returns>
+        public Color GetCustomColourTwo()
+        {
+            return CustomColourTwo;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourThree to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourThree.</param>
+        public void SetCustomColourThree(Color value)
+        {
+            CustomColourThree = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourThree.
+        /// </summary>
+        /// <returns>The value of CustomColourThree.</returns>
+        public Color GetCustomColourThree()
+        {
+            return CustomColourThree;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourFour to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourFour.</param>
+        public void SetCustomColourFour(Color value)
+        {
+            CustomColourFour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourFour.
+        /// </summary>
+        /// <returns>The value of CustomColourFour.</returns>
+        public Color GetCustomColourFour()
+        {
+            return CustomColourFour;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourFive to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourFive.</param>
+        public void SetCustomColourFive(Color value)
+        {
+            CustomColourFive = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourFive.
+        /// </summary>
+        /// <returns>The value of CustomColourFive.</returns>
+        public Color GetCustomColourFive()
+        {
+            return CustomColourFive;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourOne to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourOne.</param>
+        public void SetCustomTextColourOne(Color value)
+        {
+            CustomTextColourOne = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourOne.
+        /// </summary>
+        /// <returns>The value of CustomTextColourOne.</returns>
+        public Color GetCustomTextColourOne()
+        {
+            return CustomTextColourOne;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourTwo to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourTwo.</param>
+        public void SetCustomTextColourTwo(Color value)
+        {
+            CustomTextColourTwo = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourTwo.
+        /// </summary>
+        /// <returns>The value of CustomTextColourTwo.</returns>
+        public Color GetCustomTextColourTwo()
+        {
+            return CustomTextColourTwo;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourThree to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourThree.</param>
+        public void SetCustomTextColourThree(Color value)
+        {
+            CustomTextColourThree = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourThree.
+        /// </summary>
+        /// <returns>The value of CustomTextColourThree.</returns>
+        public Color GetCustomTextColourThree()
+        {
+            return CustomTextColourThree;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourFour to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourFour.</param>
+        public void SetCustomTextColourFour(Color value)
+        {
+            CustomTextColourFour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourFour.
+        /// </summary>
+        /// <returns>The value of CustomTextColourFour.</returns>
+        public Color GetCustomTextColourFour()
+        {
+            return CustomTextColourFour;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourFive to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourFive.</param>
+        public void SetCustomTextColourFive(Color value)
+        {
+            CustomTextColourFive = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourFive.
+        /// </summary>
+        /// <returns>The value of CustomTextColourFive.</returns>
+        public Color GetCustomTextColourFive()
+        {
+            return CustomTextColourFive;
+        }
+
+        /// <summary>
+        /// Sets the value of MenuTextColour to value.
+        /// </summary>
+        /// <param name="value">The value of MenuTextColour.</param>
+        public void SetMenuTextColour(Color value)
+        {
+            MenuTextColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of MenuTextColour.
+        /// </summary>
+        /// <returns>The value of MenuTextColour.</returns>
+        public Color GetMenuTextColour()
+        {
+            return MenuTextColour;
+        }
+
+        /// <summary>
+        /// Sets the value of StatusTextColour to value.
+        /// </summary>
+        /// <param name="value">The value of StatusTextColour.</param>
+        public void SetStatusTextColour(Color value)
+        {
+            StatusTextColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of StatusTextColour.
+        /// </summary>
+        /// <returns>The value of StatusTextColour.</returns>
+        public Color GetStatusTextColour()
+        {
+            return StatusTextColour;
+        }
+
+        /// <summary>
+        /// Sets the value of RibbonTabTextColour to value.
+        /// </summary>
+        /// <param name="value">The value of RibbonTabTextColour.</param>
+        public void SetRibbonTabTextColour(Color value)
+        {
+            RibbonTabTextColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of RibbonTabTextColour.
+        /// </summary>
+        /// <returns>The value of RibbonTabTextColour.</returns>
+        public Color GetRibbonTabTextColour()
+        {
+            return RibbonTabTextColour;
+        }
+
+        /// <summary>
+        /// Sets the value of PaletteMode to value.
+        /// </summary>
+        /// <param name="value">The value of PaletteMode.</param>
+        public void SetPaletteMode(PaletteMode value)
+        {
+            Mode = value;
+        }
+
+        /// <summary>
+        /// Returns the value of PaletteMode.
+        /// </summary>
+        /// <returns>The value of PaletteMode.</returns>
+        public PaletteMode GetPaletteMode()
+        {
+            return Mode;
+        }
         #endregion
     }
 }

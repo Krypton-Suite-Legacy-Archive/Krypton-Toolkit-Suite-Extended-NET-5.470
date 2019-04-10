@@ -284,7 +284,7 @@ namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls
             Renderer.DrawNaviGroupHeader(e.Graphics, headerRectangle, viewState, expanded,
                RightToLeft == RightToLeft.Yes);
 
-            Renderer.DrawText(e.Graphics, Renderer.CalcGroupTextbounds(headerTextBounds), this.Font, Renderer.ColorTable.Text, caption,
+            Renderer.DrawText(e.Graphics, Renderer.CalcGroupTextbounds(headerTextBounds), this.Font, Renderer.ColourTable.Text, caption,
                RightToLeft == RightToLeft.Yes);
 
             if (DesignMode)

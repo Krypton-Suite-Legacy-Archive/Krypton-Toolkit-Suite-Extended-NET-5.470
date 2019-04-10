@@ -43,9 +43,9 @@ namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Common
     [ToolboxItem(false)]
     public partial class NaviControl : ContainerControl
     {
-        private NaviLayoutStyle layoutStyle = NaviLayoutStyle.Office2007Blue;
-        private EventHandler layoutStyleChanged;
-        private NaviRenderer renderer;
+        NaviLayoutStyle layoutStyle = NaviLayoutStyle.Office2007Blue;
+        EventHandler layoutStyleChanged;
+        NaviRenderer renderer;
 
         protected readonly object threadLock = new object();
 

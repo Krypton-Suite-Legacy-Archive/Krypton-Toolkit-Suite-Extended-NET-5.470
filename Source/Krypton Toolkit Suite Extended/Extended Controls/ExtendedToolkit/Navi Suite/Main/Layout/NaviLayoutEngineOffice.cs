@@ -137,7 +137,7 @@ namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Layout
 
             foreach (NaviBand band in Bar.Bands)
             {
-                band.Renderer = renderer;
+                //band.Renderer = renderer;
                 if (band.Button != null)
                     band.Button.Renderer = renderer;
             }
@@ -164,7 +164,7 @@ namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Layout
 
                 band.OwnerBar = OwnerBar;
                 band.Button.Renderer = renderer;
-                band.Renderer = renderer;
+                //band.Renderer = renderer;
 
                 if (!Bar.InternalControls.Contains(band.Button))
                     Bar.Controls.Add(band.Button);

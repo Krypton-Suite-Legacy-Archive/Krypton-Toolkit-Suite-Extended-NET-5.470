@@ -34,7 +34,7 @@ using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Colours
 {
-    public class NaviToolstripColorTable : ProfessionalColorTable
+    public class NaviToolstripColourTable : ProfessionalColorTable
     {
         /// <summary>
         /// Overriden. Gets the color of the border of an menu item

@@ -52,15 +52,16 @@ namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls
     {
         #region Fields
 
-        private NaviButton button;
-        private NaviBar ownerBar;
-        private Image largeImage;
-        private Image smallImage;
-        private NaviBandClientArea clientArea;
-        private int order;
-        private int originalOrder;
-        private int largeImageIndex;
-        private int smallImageIndex;
+        NaviButton button;
+        NaviBar ownerBar;
+        Image largeImage;
+        Image smallImage;
+        NaviBandClientArea clientArea;
+
+        int order;
+        int originalOrder;
+        int largeImageIndex;
+        int smallImageIndex;
 
         #endregion
 
@@ -238,6 +239,7 @@ namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls
             set { clientArea = value; }
         }
 
+        /*
         /// <summary>
         /// Gets or sets the renderer for this control
         /// </summary>
@@ -250,6 +252,8 @@ namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls
             get { return base.Renderer; }
             set { base.Renderer = value; clientArea.Renderer = value; Invalidate(); }
         }
+        */
+        //public override NaviRenderer Renderer { get => Renderer; set { Renderer = value; clientArea.Renderer = value; Invalidate(); } }
 
         /// <summary>
         /// Gets or sets the owner bar for this control
@@ -284,7 +288,7 @@ namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls
             clientArea.Name = "ClientArea";
             clientArea.Location = new Point(0, 0);
             clientArea.Size = Size;
-            clientArea.Renderer = Renderer;
+            //clientArea.Renderer = Renderer;
 
             if (!Controls.Contains(clientArea))
                 Controls.Add(clientArea);
@@ -303,7 +307,7 @@ namespace ExtendedControls.ExtendedToolkit.NaviSuite.Main.Controls
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            Renderer.DrawNaviBandBg(e.Graphics, ClientRectangle);
+            //Renderer.DrawNaviBandBg(e.Graphics, ClientRectangle);
         }
 
         /// <summary>
