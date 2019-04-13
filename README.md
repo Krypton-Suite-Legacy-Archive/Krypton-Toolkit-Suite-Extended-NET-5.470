@@ -16,6 +16,12 @@
 
 ======
 
+## Control Examples
+
+Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Examples.md) to see what each control looks like.
+
+======
+
 ## 2019-03-01 Build 796
 * Build 796 (build date Friday 1st, March 2019) is now available on NuGet
 * New colour wheel colour dialog
