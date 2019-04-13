@@ -2,6 +2,7 @@
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace KryptonExtendedToolkit.Base.Code
@@ -88,6 +89,64 @@ namespace KryptonExtendedToolkit.Base.Code
             else
             {
                 ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: { exception.Message }.", title, buttons, icon, messageboxTypeface: defaultTypeface);
+            }
+        }
+
+        /// <summary>
+        /// Captures a stacktrace of the exception.
+        /// </summary>
+        /// <param name="exc">The incoming exception.</param>
+        /// <param name="fileName">The file to write the exception stacktrace to.</param>
+        public static void PrintStackTrace(Exception exc, string fileName)
+        {
+            try
+            {
+                if (!File.Exists(fileName))
+                {
+                    File.Create(fileName);
+                }
+
+                StreamWriter writer = new StreamWriter(fileName);
+
+                writer.Write(exc.ToString());
+
+                writer.Close();
+
+                writer.Dispose();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Captures a stacktrace of the exception.
+        /// </summary>
+        /// <param name="exc">The incoming exception.</param>
+        /// <param name="fileName">The file to write the exception stacktrace to.</param>
+        public static void PrintExceptionStackTrace(Exception exc, string fileName)
+        {
+            try
+            {
+                if (!File.Exists(fileName))
+                {
+                    File.Create(fileName);
+                }
+
+                StreamWriter writer = new StreamWriter(fileName);
+
+                writer.Write(exc.StackTrace);
+
+                writer.Close();
+
+                writer.Dispose();
+            }
+            catch (Exception e)
+            {
+
+                throw;
             }
         }
         #endregion

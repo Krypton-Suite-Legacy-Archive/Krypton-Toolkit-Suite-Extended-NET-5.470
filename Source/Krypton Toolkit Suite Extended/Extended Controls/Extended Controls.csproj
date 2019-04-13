@@ -603,9 +603,7 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPanelEx.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPowerComboBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPowerComboBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonProgressBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1325,7 +1323,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.856</Version>
+      <Version>5.470.872</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.1</Version>

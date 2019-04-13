@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 {
-    public class KryptonPowerComboBox : KryptonComboBox
+    public class KryptonPowerComboBox : ComponentFactory.Krypton.Toolkit.KryptonComboBox
     {
         //Members
         private IPalette _palette;

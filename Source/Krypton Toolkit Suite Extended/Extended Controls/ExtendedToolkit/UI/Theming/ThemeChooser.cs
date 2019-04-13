@@ -301,7 +301,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
         {
             if (kcmbSelection.Text != "")
             {
-                ThemeManager.ApplyGlobalTheme(Manager, ThemeManager.ApplyThemeMode(kcmbSelection.Text));
+                ThemeManager.SetTheme(kcmbSelection.Text, Manager);
             }
 
             Debug.WriteLine($"[{ DateTime.Now.ToString() }]: Theme has changed to: { Manager.GlobalPaletteMode.ToString() }");
