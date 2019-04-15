@@ -6,6 +6,9 @@ using System.Drawing;
 
 namespace ExtendedControls.Base.Code.Theming
 {
+    /// <summary>
+    /// This class manages the <see cref="KryptonPalette"/> and its associated colours.
+    /// </summary>
     public class KryptonPaletteManager
     {
         #region Variables
@@ -315,7 +318,421 @@ namespace ExtendedControls.Base.Code.Theming
 
                 if (invertColours)
                 {
+                    #region Button Cluster
+                    palette.ButtonStyles.ButtonCluster.OverrideDefault.Back.Color1 = lightestColour;
 
+                    palette.ButtonStyles.ButtonCluster.OverrideFocus.Back.Color1 = lightestColour;
+
+                    palette.ButtonStyles.ButtonCluster.StateCheckedNormal.Back.Color1 = lightestColour;
+
+                    palette.ButtonStyles.ButtonCluster.StateCommon.Back.ColorStyle = PaletteColorStyle.GlassCheckedFull;
+
+                    palette.ButtonStyles.ButtonCluster.StateNormal.Back.Color1 = customColourOne;
+
+                    palette.ButtonStyles.ButtonCluster.StatePressed.Back.Color1 = lightColour;
+
+                    palette.ButtonStyles.ButtonCluster.StateTracking.Back.Color1 = lightestColour;
+                    #endregion
+
+                    #region Button Common
+                    palette.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color1 = lightestColour;
+
+                    palette.ButtonStyles.ButtonCommon.OverrideDefault.Content.LongText.Color1 = normalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.OverrideDefault.Content.ShortText.Color1 = normalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedNormal.Back.Color1 = baseColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedNormal.Back.Color2 = darkColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedNormal.Back.ColorStyle = PaletteColorStyle.GlassCheckedFull;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.LongText.Color1 = alternativeNormalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.ShortText.Color1 = alternativeNormalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Back.Color1 = baseColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Back.Color2 = darkColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Back.ColorStyle = PaletteColorStyle.GlassCheckedStump;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Border.DrawBorders = PaletteDrawBorders.All;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Content.LongText.Color1 = alternativeNormalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedPressed.Content.ShortText.Color1 = alternativeNormalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedTracking.Back.Color1 = baseColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedTracking.Back.Color2 = darkColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedTracking.Border.DrawBorders = PaletteDrawBorders.All;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedTracking.Content.LongText.Color1 = alternativeNormalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCheckedTracking.Content.ShortText.Color1 = alternativeNormalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateCommon.Back.Color1 = lightestColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1 = customColourOne;
+
+                    palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color2 = customColourOne;
+
+                    /*
+                    palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1 = lightestColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateDisabled.Back.Color2 = lightestColour;
+                    */
+
+                    palette.ButtonStyles.ButtonCommon.StateDisabled.Content.LongText.Color1 = customTextColourOne;
+
+                    palette.ButtonStyles.ButtonCommon.StateDisabled.Content.ShortText.Color1 = customTextColourOne;
+
+                    palette.ButtonStyles.ButtonCommon.StateNormal.Back.Color1 = lightestColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateNormal.Back.Color2 = lightestColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateNormal.Content.LongText.Color1 = normalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateNormal.Content.LongText.Color2 = normalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateNormal.Content.ShortText.Color1 = normalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateNormal.Content.ShortText.Color2 = normalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StatePressed.Back.Color1 = baseColour;
+
+                    palette.ButtonStyles.ButtonCommon.StatePressed.Back.Color2 = darkColour;
+
+                    palette.ButtonStyles.ButtonCommon.StatePressed.Content.LongText.Color1 = alternativeNormalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StatePressed.Content.ShortText.Color1 = alternativeNormalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateTracking.Back.Color1 = lightestColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateTracking.Back.Color2 = lightColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateTracking.Content.LongText.Color1 = normalTextColour;
+
+                    palette.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Color1 = normalTextColour;
+                    #endregion
+
+                    #region Common
+                    palette.Common.StateCommon.Back.Color1 = baseColour;
+
+                    palette.Common.StateCommon.Back.Color2 = lightestColour;
+
+                    palette.Common.StateCommon.Border.Color1 = lightestColour;
+
+                    palette.Common.StateCommon.Border.Color2 = lightColour;
+
+                    palette.Common.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
+
+                    palette.Common.StateCommon.Content.LongText.Color1 = normalTextColour;
+
+                    palette.Common.StateCommon.Content.LongText.Color2 = normalTextColour;
+
+                    palette.Common.StateCommon.Content.ShortText.Color1 = normalTextColour;
+
+                    palette.Common.StateCommon.Content.ShortText.Color2 = normalTextColour;
+                    #endregion
+
+                    #region Form Styles
+                    palette.FormStyles.FormCommon.StateActive.Back.Color1 = lightestColour;
+
+                    palette.FormStyles.FormCommon.StateActive.Border.DrawBorders = PaletteDrawBorders.All;
+                    #endregion
+
+                    #region Grid Styles
+                    palette.GridStyles.GridSheet.StateCommon.HeaderColumn.Content.Color1 = baseColour;
+
+                    palette.GridStyles.GridSheet.StateCommon.HeaderRow.Content.Color1 = baseColour;
+
+                    palette.GridStyles.GridSheet.StateNormal.HeaderColumn.Content.Color1 = lightColour;
+
+                    palette.GridStyles.GridSheet.StateNormal.HeaderColumn.Content.Color2 = customColourOne;
+
+                    palette.GridStyles.GridSheet.StateNormal.HeaderRow.Content.Color1 = lightColour;
+
+                    palette.GridStyles.GridSheet.StateTracking.HeaderColumn.Content.Color1 = lightestColour;
+                    #endregion
+
+                    #region Header Styles
+                    palette.HeaderStyles.HeaderCommon.StateCommon.Back.Color1 = customColourOne;
+
+                    palette.HeaderStyles.HeaderCommon.StateCommon.Back.Color2 = darkColour;
+
+                    palette.HeaderStyles.HeaderCommon.StateDisabled.Back.Color1 = darkColour;
+
+                    palette.HeaderStyles.HeaderCommon.StateDisabled.Back.Color2 = baseColour;
+
+                    palette.HeaderStyles.HeaderCommon.StateDisabled.Content.LongText.Color1 = customTextColourOne;
+
+                    palette.HeaderStyles.HeaderCommon.StateDisabled.Content.LongText.Color2 = lightestColour;
+
+                    palette.HeaderStyles.HeaderCommon.StateDisabled.Content.ShortText.Color1 = customTextColourOne;
+
+                    palette.HeaderStyles.HeaderCommon.StateDisabled.Content.ShortText.Color2 = lightestColour;
+
+                    palette.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = customColourOne;
+
+                    palette.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = darkColour;
+
+                    palette.HeaderStyles.HeaderForm.StateDisabled.Back.Color1 = customColourTwo;
+
+                    palette.HeaderStyles.HeaderForm.StateDisabled.Back.Color2 = lightestColour;
+
+                    palette.HeaderStyles.HeaderForm.StateDisabled.Content.LongText.Color1 = customTextColourOne;
+
+                    palette.HeaderStyles.HeaderForm.StateDisabled.Content.ShortText.Color1 = customTextColourOne;
+                    #endregion
+
+                    #region Label Styles
+                    palette.LabelStyles.LabelNormalControl.OverrideNotVisited.LongText.Color1 = customTextColourThree;
+
+                    palette.LabelStyles.LabelNormalControl.OverrideNotVisited.ShortText.Color1 = customTextColourThree;
+
+                    palette.LabelStyles.LabelNormalControl.OverridePressed.LongText.Color1 = customTextColourFour;
+
+                    palette.LabelStyles.LabelNormalControl.OverridePressed.ShortText.Color1 = customTextColourFour;
+
+                    palette.LabelStyles.LabelNormalControl.OverrideVisited.LongText.Color1 = customTextColourFive;
+
+                    palette.LabelStyles.LabelNormalControl.OverrideVisited.ShortText.Color1 = customTextColourFive;
+
+                    palette.LabelStyles.LabelNormalControl.StateDisabled.LongText.Color1 = customTextColourTwo;
+
+                    palette.LabelStyles.LabelNormalControl.StateDisabled.ShortText.Color1 = customTextColourTwo;
+
+                    palette.LabelStyles.LabelNormalControl.StateNormal.LongText.Color1 = alternativeNormalTextColour;
+
+                    palette.LabelStyles.LabelNormalControl.StateNormal.ShortText.Color1 = alternativeNormalTextColour;
+                    #endregion
+
+                    #region Ribbon
+                    palette.Ribbon.RibbonAppButton.StateCommon.BackColor2 = lightestColour;
+
+                    palette.Ribbon.RibbonAppButton.StateCommon.BackColor3 = customColourFive;
+
+                    palette.Ribbon.RibbonAppButton.StateCommon.BackColor5 = lightestColour;
+
+                    palette.Ribbon.RibbonAppButton.StatePressed.BackColor5 = lightColour;
+
+                    palette.Ribbon.RibbonAppButton.StateTracking.BackColor5 = customColourThree;
+
+                    palette.Ribbon.RibbonGroupArea.StateCheckedNormal.BackColor1 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupArea.StateCheckedNormal.BackColor2 = customColourFour;
+
+                    palette.Ribbon.RibbonGroupArea.StateCheckedNormal.BackColor3 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupArea.StateCheckedNormal.BackColor4 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupArea.StateCheckedNormal.BackColor5 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupButtonText.StateCommon.TextColor = customTextColourFour;
+
+                    palette.Ribbon.RibbonGroupCheckBoxText.StateCommon.TextColor = customTextColourFour;
+
+                    palette.Ribbon.RibbonGroupCollapsedBack.StateNormal.BackColor1 = SystemColors.Window;
+
+                    palette.Ribbon.RibbonGroupCollapsedBack.StateNormal.BackColor2 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedBack.StateNormal.BackColor3 = darkColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedBack.StateNormal.BackColor4 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedBack.StateTracking.BackColor1 = SystemColors.Window;
+
+                    palette.Ribbon.RibbonGroupCollapsedBack.StateTracking.BackColor2 = darkColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedBack.StateTracking.BackColor3 = baseColour; // Or 230, 230, 230
+
+                    palette.Ribbon.RibbonGroupCollapsedBack.StateTracking.BackColor4 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedBorder.StateCommon.BackColor1 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedBorder.StateCommon.BackColor2 = customColourOne;
+
+                    palette.Ribbon.RibbonGroupCollapsedBorder.StateCommon.BackColor3 = darkColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedBorder.StateCommon.BackColor4 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedBorder.StateCommon.BackColor5 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedFrameBack.StateCommon.BackColor1 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedFrameBack.StateCommon.BackColor2 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedFrameBack.StateCommon.BackColor3 = darkColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedFrameBack.StateCommon.BackColor4 = darkColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedFrameBack.StateCommon.BackColor5 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedFrameBorder.StateCommon.BackColor1 = darkColour;
+
+                    palette.Ribbon.RibbonGroupCollapsedFrameBorder.StateCommon.BackColor2 = baseColour; // Or 230, 230, 230
+
+                    palette.Ribbon.RibbonGroupCollapsedText.StateCommon.TextColor = normalTextColour;
+
+                    palette.Ribbon.RibbonGroupNormalBorder.StateCommon.BackColor1 = lightestColour;
+
+                    palette.Ribbon.RibbonGroupNormalBorder.StateCommon.BackColor2 = customColourOne;
+
+                    palette.Ribbon.RibbonGroupNormalTitle.StateCommon.BackColor1 = baseColour; // Or 230, 230, 230
+
+                    palette.Ribbon.RibbonGroupNormalTitle.StateCommon.BackColor2 = customColourOne;
+
+                    palette.Ribbon.RibbonGroupNormalTitle.StateCommon.TextColor = customTextColourOne;
+
+                    palette.Ribbon.RibbonGroupNormalTitle.StateTracking.BackColor1 = baseColour;
+
+                    palette.Ribbon.RibbonGroupNormalTitle.StateTracking.BackColor2 = customColourOne;
+
+                    palette.Ribbon.RibbonQATFullbar.BackColor1 = customColourOne;
+
+                    palette.Ribbon.RibbonQATFullbar.BackColor2 = customColourOne;
+
+                    palette.Ribbon.RibbonQATFullbar.BackColor3 = customColourOne;
+
+                    palette.Ribbon.RibbonQATMinibar.StateCommon.BackColor1 = customColourOne;
+
+                    palette.Ribbon.RibbonQATMinibar.StateCommon.BackColor2 = customColourOne;
+
+                    palette.Ribbon.RibbonQATMinibar.StateCommon.BackColor3 = customColourOne;
+
+                    palette.Ribbon.RibbonQATMinibar.StateCommon.BackColor4 = customColourOne;
+
+                    palette.Ribbon.RibbonQATOverflow.BackColor1 = customColourOne;
+
+                    palette.Ribbon.RibbonQATOverflow.BackColor2 = customColourOne;
+
+                    palette.Ribbon.RibbonTab.StateCheckedTracking.BackColor1 = customColourOne;
+
+                    palette.Ribbon.RibbonTab.StateCheckedTracking.BackColor2 = baseColour;
+
+                    palette.Ribbon.RibbonTab.StateCheckedTracking.BackColor3 = lightColour;
+
+                    palette.Ribbon.RibbonTab.StateCheckedTracking.BackColor4 = customColourOne;
+
+                    palette.Ribbon.RibbonTab.StateCommon.BackColor1 = customColourOne;
+
+                    palette.Ribbon.RibbonTab.StateCommon.BackColor3 = customColourOne;
+
+                    palette.Ribbon.RibbonTab.StateCommon.BackColor4 = darkColour;
+
+                    palette.Ribbon.RibbonTab.StateCommon.BackColor5 = darkColour;
+
+                    palette.Ribbon.RibbonTab.StateCommon.TextColor = alternativeNormalTextColour;
+
+                    palette.Ribbon.RibbonTab.StateContextCheckedTracking.BackColor2 = customColourOne;
+
+                    palette.Ribbon.RibbonTab.StateTracking.BackColor2 = customColourOne;
+                    #endregion
+
+                    #region Separator Styles
+                    palette.SeparatorStyles.SeparatorCommon.StateCommon.Back.Color1 = lightestColour;
+
+                    palette.SeparatorStyles.SeparatorCommon.StateCommon.Back.Color2 = lightestColour;
+
+                    palette.SeparatorStyles.SeparatorCommon.StateCommon.Border.Color1 = lightestColour;
+
+                    palette.SeparatorStyles.SeparatorCommon.StateCommon.Border.Color1 = lightestColour;
+
+                    palette.SeparatorStyles.SeparatorCommon.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
+                    #endregion
+
+                    #region Tool Menu Status
+                    palette.ToolMenuStatus.Button.ButtonPressedBorder = lightestColour;
+
+                    palette.ToolMenuStatus.Button.ButtonSelectedBorder = lightestColour;
+
+                    palette.ToolMenuStatus.Button.OverflowButtonGradientBegin = lightColour;
+
+                    palette.ToolMenuStatus.Button.OverflowButtonGradientEnd = lightestColour;
+
+                    palette.ToolMenuStatus.Button.OverflowButtonGradientMiddle = customColourOne;
+
+                    palette.ToolMenuStatus.Grip.GripDark = lightestColour;
+
+                    palette.ToolMenuStatus.Grip.GripLight = customColourTwo;
+
+                    palette.ToolMenuStatus.Menu.ImageMarginGradientBegin = lightestColour;
+
+                    palette.ToolMenuStatus.Menu.ImageMarginGradientEnd = lightColour;
+
+                    palette.ToolMenuStatus.Menu.ImageMarginGradientMiddle = customColourOne;
+
+                    palette.ToolMenuStatus.Menu.ImageMarginRevealedGradientBegin = lightestColour;
+
+                    palette.ToolMenuStatus.Menu.ImageMarginRevealedGradientEnd = lightColour;
+
+                    palette.ToolMenuStatus.Menu.ImageMarginRevealedGradientMiddle = customColourOne;
+
+                    palette.ToolMenuStatus.Menu.MenuBorder = lightestColour;
+
+                    palette.ToolMenuStatus.Menu.MenuItemBorder = lightColour;
+
+                    palette.ToolMenuStatus.Menu.MenuItemPressedGradientBegin = lightestColour;
+
+                    palette.ToolMenuStatus.Menu.MenuItemPressedGradientEnd = lightColour;
+
+                    palette.ToolMenuStatus.Menu.MenuItemPressedGradientMiddle = customColourOne;
+
+                    palette.ToolMenuStatus.Menu.MenuItemSelected = customColourOne;
+
+                    palette.ToolMenuStatus.Menu.MenuItemSelectedGradientBegin = lightColour;
+
+                    palette.ToolMenuStatus.Menu.MenuItemSelectedGradientEnd = lightestColour;
+
+                    palette.ToolMenuStatus.Menu.MenuItemText = customTextColourFive;
+
+                    palette.ToolMenuStatus.MenuStrip.MenuStripGradientBegin = lightestColour;
+
+                    palette.ToolMenuStatus.MenuStrip.MenuStripGradientEnd = lightColour;
+
+                    palette.ToolMenuStatus.MenuStrip.MenuStripText = alternativeNormalTextColour;
+
+                    palette.ToolMenuStatus.Rafting.RaftingContainerGradientBegin = customColourOne;
+
+                    palette.ToolMenuStatus.Rafting.RaftingContainerGradientEnd = darkColour;
+
+                    palette.ToolMenuStatus.Separator.SeparatorDark = lightestColour;
+
+                    palette.ToolMenuStatus.Separator.SeparatorLight = darkColour;
+
+                    palette.ToolMenuStatus.StatusStrip.StatusStripGradientBegin = lightestColour;
+
+                    palette.ToolMenuStatus.StatusStrip.StatusStripGradientEnd = baseColour;
+
+                    palette.ToolMenuStatus.StatusStrip.StatusStripText = alternativeNormalTextColour;
+
+                    palette.ToolMenuStatus.ToolStrip.ToolStripBorder = lightColour;
+
+                    palette.ToolMenuStatus.ToolStrip.ToolStripContentPanelGradientBegin = darkColour;
+
+                    palette.ToolMenuStatus.ToolStrip.ToolStripContentPanelGradientEnd = lightColour;
+
+                    palette.ToolMenuStatus.ToolStrip.ToolStripDropDownBackground = customColourOne;
+
+                    palette.ToolMenuStatus.ToolStrip.ToolStripGradientBegin = lightColour;
+
+                    palette.ToolMenuStatus.ToolStrip.ToolStripGradientEnd = darkColour;
+
+                    palette.ToolMenuStatus.ToolStrip.ToolStripGradientMiddle = customColourOne;
+
+                    palette.ToolMenuStatus.ToolStrip.ToolStripPanelGradientBegin = darkColour;
+
+                    palette.ToolMenuStatus.ToolStrip.ToolStripPanelGradientEnd = lightColour;
+
+                    palette.ToolMenuStatus.ToolStrip.ToolStripText = alternativeNormalTextColour;
+                    #endregion
+
+                    #region Trackbar
+                    palette.TrackBar.StateCommon.Position.Color4 = lightColour;
+                    #endregion
                 }
                 else
                 {
@@ -742,6 +1159,38 @@ namespace ExtendedControls.Base.Code.Theming
             }
         }
 
+        /// <summary>
+        /// Populates the colours.
+        /// </summary>
+        /// <param name="baseColour">The base colour.</param>
+        /// <param name="darkColour">The dark colour.</param>
+        /// <param name="middleColour">The middle colour.</param>
+        /// <param name="lightColour">The light colour.</param>
+        /// <param name="lightestColour">The lightest colour.</param>
+        /// <param name="borderColour">The border colour.</param>
+        /// <param name="alternativeNormalTextColour">The alternative normal text colour.</param>
+        /// <param name="normalTextColour">The normal text colour.</param>
+        /// <param name="disabledTextColour">The disabled text colour.</param>
+        /// <param name="focusedTextColour">The focused text colour.</param>
+        /// <param name="pressedTextColour">The pressed text colour.</param>
+        /// <param name="disabledColour">The disabled colour.</param>
+        /// <param name="linkNormalColour">The link normal colour.</param>
+        /// <param name="linkFocusedColour">The link focused colour.</param>
+        /// <param name="linkHoverColour">The link hover colour.</param>
+        /// <param name="linkVisitedColour">The link visited colour.</param>
+        /// <param name="customColourOne">The custom colour one.</param>
+        /// <param name="customColourTwo">The custom colour two.</param>
+        /// <param name="customColourThree">The custom colour three.</param>
+        /// <param name="customColourFour">The custom colour four.</param>
+        /// <param name="customColourFive">The custom colour five.</param>
+        /// <param name="customTextColourOne">The custom text colour one.</param>
+        /// <param name="customTextColourTwo">The custom text colour two.</param>
+        /// <param name="customTextColourThree">The custom text colour three.</param>
+        /// <param name="customTextColourFour">The custom text colour four.</param>
+        /// <param name="customTextColourFive">The custom text colour five.</param>
+        /// <param name="menuTextColour">The menu text colour.</param>
+        /// <param name="statusTextColour">The status text colour.</param>
+        /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
         public static void PopulateColours(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour)
         {
             try
@@ -812,6 +1261,39 @@ namespace ExtendedControls.Base.Code.Theming
             }
         }
 
+        /// <summary>
+        /// Populates the colours.
+        /// </summary>
+        /// <param name="paletteMode">The palette mode.</param>
+        /// <param name="baseColour">The base colour.</param>
+        /// <param name="darkColour">The dark colour.</param>
+        /// <param name="middleColour">The middle colour.</param>
+        /// <param name="lightColour">The light colour.</param>
+        /// <param name="lightestColour">The lightest colour.</param>
+        /// <param name="borderColour">The border colour.</param>
+        /// <param name="alternativeNormalTextColour">The alternative normal text colour.</param>
+        /// <param name="normalTextColour">The normal text colour.</param>
+        /// <param name="disabledTextColour">The disabled text colour.</param>
+        /// <param name="focusedTextColour">The focused text colour.</param>
+        /// <param name="pressedTextColour">The pressed text colour.</param>
+        /// <param name="disabledColour">The disabled colour.</param>
+        /// <param name="linkNormalColour">The link normal colour.</param>
+        /// <param name="linkFocusedColour">The link focused colour.</param>
+        /// <param name="linkHoverColour">The link hover colour.</param>
+        /// <param name="linkVisitedColour">The link visited colour.</param>
+        /// <param name="customColourOne">The custom colour one.</param>
+        /// <param name="customColourTwo">The custom colour two.</param>
+        /// <param name="customColourThree">The custom colour three.</param>
+        /// <param name="customColourFour">The custom colour four.</param>
+        /// <param name="customColourFive">The custom colour five.</param>
+        /// <param name="customTextColourOne">The custom text colour one.</param>
+        /// <param name="customTextColourTwo">The custom text colour two.</param>
+        /// <param name="customTextColourThree">The custom text colour three.</param>
+        /// <param name="customTextColourFour">The custom text colour four.</param>
+        /// <param name="customTextColourFive">The custom text colour five.</param>
+        /// <param name="menuTextColour">The menu text colour.</param>
+        /// <param name="statusTextColour">The status text colour.</param>
+        /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
         public static void PopulateColours(PaletteMode paletteMode, Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour)
         {
             try
@@ -884,6 +1366,38 @@ namespace ExtendedControls.Base.Code.Theming
             }
         }
 
+        /// <summary>
+        /// Populates the colours.
+        /// </summary>
+        /// <param name="baseColour">The base colour.</param>
+        /// <param name="darkColour">The dark colour.</param>
+        /// <param name="middleColour">The middle colour.</param>
+        /// <param name="lightColour">The light colour.</param>
+        /// <param name="lightestColour">The lightest colour.</param>
+        /// <param name="borderColour">The border colour.</param>
+        /// <param name="alternativeNormalTextColour">The alternative normal text colour.</param>
+        /// <param name="normalTextColour">The normal text colour.</param>
+        /// <param name="disabledTextColour">The disabled text colour.</param>
+        /// <param name="focusedTextColour">The focused text colour.</param>
+        /// <param name="pressedTextColour">The pressed text colour.</param>
+        /// <param name="disabledColour">The disabled colour.</param>
+        /// <param name="linkNormalColour">The link normal colour.</param>
+        /// <param name="linkFocusedColour">The link focused colour.</param>
+        /// <param name="linkHoverColour">The link hover colour.</param>
+        /// <param name="linkVisitedColour">The link visited colour.</param>
+        /// <param name="customColourOne">The custom colour one.</param>
+        /// <param name="customColourTwo">The custom colour two.</param>
+        /// <param name="customColourThree">The custom colour three.</param>
+        /// <param name="customColourFour">The custom colour four.</param>
+        /// <param name="customColourFive">The custom colour five.</param>
+        /// <param name="customTextColourOne">The custom text colour one.</param>
+        /// <param name="customTextColourTwo">The custom text colour two.</param>
+        /// <param name="customTextColourThree">The custom text colour three.</param>
+        /// <param name="customTextColourFour">The custom text colour four.</param>
+        /// <param name="customTextColourFive">The custom text colour five.</param>
+        /// <param name="menuTextColour">The menu text colour.</param>
+        /// <param name="statusTextColour">The status text colour.</param>
+        /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
         public static void PopulateColours(CircularPictureBox baseColour, CircularPictureBox darkColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, CircularPictureBox borderColour, CircularPictureBox alternativeNormalTextColour, CircularPictureBox normalTextColour, CircularPictureBox disabledTextColour, CircularPictureBox focusedTextColour, CircularPictureBox pressedTextColour, CircularPictureBox disabledColour, CircularPictureBox linkNormalColour, CircularPictureBox linkFocusedColour, CircularPictureBox linkHoverColour, CircularPictureBox linkVisitedColour, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColour, CircularPictureBox statusTextColour, CircularPictureBox ribbonTabTextColour)
         {
             try

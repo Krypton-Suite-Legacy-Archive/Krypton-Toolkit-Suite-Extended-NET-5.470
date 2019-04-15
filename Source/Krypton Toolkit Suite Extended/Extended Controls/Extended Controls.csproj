@@ -302,6 +302,7 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMarqueeLabel.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMessageBoxExtended.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteChooserComboBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteSelector.cs">
@@ -336,6 +337,11 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonToggleSwitchToolbarControl.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Crash Report Tool\Classes\DrDump\AnonymousData.cs" />
+    <Compile Include="ExtendedToolkit\Crash Report Tool\Classes\DrDump\DrDumpService.cs" />
+    <Compile Include="ExtendedToolkit\Crash Report Tool\UX\CrashReportToolMainWindow.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Error Reporting\Classes\DrDump\AnonymousData.cs" />
     <Compile Include="ExtendedToolkit\Error Reporting\Classes\DrDump\DrDumpService.cs" />
@@ -1199,6 +1205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\PasswordStrengthControl.resx">
       <DependentUpon>PasswordStrengthControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Crash Report Tool\UX\CrashReportToolMainWindow.resx">
+      <DependentUpon>CrashReportToolMainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Error Reporting\UX\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
