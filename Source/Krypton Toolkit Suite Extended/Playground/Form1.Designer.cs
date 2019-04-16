@@ -44,13 +44,6 @@ namespace Playground
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues9 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues10 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues11 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues12 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues13 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues14 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues15 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues16 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues17 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues18 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             this.ms = new System.Windows.Forms.MenuStrip();
             this.recentFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
@@ -108,15 +101,8 @@ namespace Playground
             this.kryptonCommandLinkButton2 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkButton();
             this.kryptonCommandLinkVersion21 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion2();
             this.kryptonPromptTextBox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
-            this.kcbtnBackwardDiagonal = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
-            this.kcbtnForwardDiagonal = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
-            this.kcbtnVertical = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
-            this.kcbtnHorizontal = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.kcmbGradientDirection = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kcbtnTextColour = new ComponentFactory.Krypton.Toolkit.KryptonColorButton();
-            this.kcbtnGradientColour2 = new ComponentFactory.Krypton.Toolkit.KryptonColorButton();
-            this.kcbtnGradientColour1 = new ComponentFactory.Krypton.Toolkit.KryptonColorButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.tsAlignLeft = new System.Windows.Forms.ToolStripButton();
             this.tsAlignCentre = new System.Windows.Forms.ToolStripButton();
@@ -223,8 +209,7 @@ namespace Playground
             this.kuacsbElevate.Name = "kuacsbElevate";
             this.kuacsbElevate.Size = new System.Drawing.Size(135, 26);
             this.kuacsbElevate.TabIndex = 0;
-            popupPositionValues1.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues1.PlacementTarget = null;
+            popupPositionValues1.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
             this.kuacsbElevate.ToolTipValues.ToolTipPosition = popupPositionValues1;
             this.kuacsbElevate.Values.Image = ((System.Drawing.Image)(resources.GetObject("kuacsbElevate.Values.Image")));
             this.kuacsbElevate.Values.Text = "Elevate";
@@ -532,15 +517,8 @@ namespace Playground
             this.kryptonPanel1.Controls.Add(this.kryptonCommandLinkButton2);
             this.kryptonPanel1.Controls.Add(this.kryptonCommandLinkVersion21);
             this.kryptonPanel1.Controls.Add(this.kryptonPromptTextBox1);
-            this.kryptonPanel1.Controls.Add(this.kcbtnBackwardDiagonal);
-            this.kryptonPanel1.Controls.Add(this.kcbtnForwardDiagonal);
-            this.kryptonPanel1.Controls.Add(this.kcbtnVertical);
-            this.kryptonPanel1.Controls.Add(this.kcbtnHorizontal);
             this.kryptonPanel1.Controls.Add(this.kcmbGradientDirection);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel1);
-            this.kryptonPanel1.Controls.Add(this.kcbtnTextColour);
-            this.kryptonPanel1.Controls.Add(this.kcbtnGradientColour2);
-            this.kryptonPanel1.Controls.Add(this.kcbtnGradientColour1);
             this.kryptonPanel1.Controls.Add(this.toolStrip2);
             this.kryptonPanel1.Controls.Add(this.rxrbTextPad);
             this.kryptonPanel1.Controls.Add(this.kuacsbElevate);
@@ -553,6 +531,7 @@ namespace Playground
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 659);
             this.kryptonPanel1.TabIndex = 2;
+            this.kryptonPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.KryptonPanel1_Paint);
             // 
             // kryptonButton1
             // 
@@ -560,8 +539,7 @@ namespace Playground
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(218, 25);
             this.kryptonButton1.TabIndex = 52;
-            popupPositionValues2.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues2.PlacementTarget = null;
+            popupPositionValues2.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
             this.kryptonButton1.ToolTipValues.ToolTipPosition = popupPositionValues2;
             this.kryptonButton1.Values.Text = "Test Bench";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click_1);
@@ -572,8 +550,7 @@ namespace Playground
             this.kryptonButton21.Name = "kryptonButton21";
             this.kryptonButton21.Size = new System.Drawing.Size(218, 25);
             this.kryptonButton21.TabIndex = 51;
-            popupPositionValues3.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues3.PlacementTarget = null;
+            popupPositionValues3.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
             this.kryptonButton21.ToolTipValues.ToolTipPosition = popupPositionValues3;
             this.kryptonButton21.Values.Text = "Test Bench";
             this.kryptonButton21.Click += new System.EventHandler(this.kryptonButton21_Click);
@@ -634,8 +611,7 @@ namespace Playground
             this.kryptonCommandLinkButton2.StateCommon.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.kryptonCommandLinkButton2.StateCommon.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.kryptonCommandLinkButton2.TabIndex = 34;
-            popupPositionValues4.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues4.PlacementTarget = null;
+            popupPositionValues4.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
             this.kryptonCommandLinkButton2.ToolTipValues.ToolTipPosition = popupPositionValues4;
             this.kryptonCommandLinkButton2.Click += new System.EventHandler(this.kryptonCommandLinkButton2_Click);
             // 
@@ -647,12 +623,12 @@ namespace Playground
             this.kryptonCommandLinkVersion21.Size = new System.Drawing.Size(252, 55);
             this.kryptonCommandLinkVersion21.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonCommandLinkVersion21.TabIndex = 33;
-            popupPositionValues5.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues5.PlacementTarget = null;
+            popupPositionValues5.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
             this.kryptonCommandLinkVersion21.ToolTipValues.ToolTipPosition = popupPositionValues5;
             this.kryptonCommandLinkVersion21.Values.ExtraText = "Here be the extra Text";
             this.kryptonCommandLinkVersion21.Values.Image = global::Playground.Properties.Resources.KR_32_x_32_Orange;
             this.kryptonCommandLinkVersion21.Values.Text = "Command Link V2";
+            this.kryptonCommandLinkVersion21.Click += new System.EventHandler(this.KryptonCommandLinkVersion21_Click);
             // 
             // kryptonPromptTextBox1
             // 
@@ -666,55 +642,6 @@ namespace Playground
             this.kryptonPromptTextBox1.Size = new System.Drawing.Size(252, 20);
             this.kryptonPromptTextBox1.TabIndex = 4;
             // 
-            // kcbtnBackwardDiagonal
-            // 
-            this.kcbtnBackwardDiagonal.Location = new System.Drawing.Point(14, 351);
-            this.kcbtnBackwardDiagonal.Name = "kcbtnBackwardDiagonal";
-            this.kcbtnBackwardDiagonal.Size = new System.Drawing.Size(150, 25);
-            this.kcbtnBackwardDiagonal.TabIndex = 19;
-            popupPositionValues6.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues6.PlacementTarget = null;
-            this.kcbtnBackwardDiagonal.ToolTipValues.ToolTipPosition = popupPositionValues6;
-            this.kcbtnBackwardDiagonal.Values.Text = "&Backward Diagonal";
-            this.kcbtnBackwardDiagonal.Click += new System.EventHandler(this.kcbtnBackwardDiagonal_Click);
-            // 
-            // kcbtnForwardDiagonal
-            // 
-            this.kcbtnForwardDiagonal.Checked = true;
-            this.kcbtnForwardDiagonal.Location = new System.Drawing.Point(325, 320);
-            this.kcbtnForwardDiagonal.Name = "kcbtnForwardDiagonal";
-            this.kcbtnForwardDiagonal.Size = new System.Drawing.Size(150, 25);
-            this.kcbtnForwardDiagonal.TabIndex = 18;
-            popupPositionValues7.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues7.PlacementTarget = null;
-            this.kcbtnForwardDiagonal.ToolTipValues.ToolTipPosition = popupPositionValues7;
-            this.kcbtnForwardDiagonal.Values.Text = "&Forward Diagonal";
-            this.kcbtnForwardDiagonal.Click += new System.EventHandler(this.kcbtnForwardDiagonal_Click);
-            // 
-            // kcbtnVertical
-            // 
-            this.kcbtnVertical.Location = new System.Drawing.Point(170, 320);
-            this.kcbtnVertical.Name = "kcbtnVertical";
-            this.kcbtnVertical.Size = new System.Drawing.Size(150, 25);
-            this.kcbtnVertical.TabIndex = 17;
-            popupPositionValues8.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues8.PlacementTarget = null;
-            this.kcbtnVertical.ToolTipValues.ToolTipPosition = popupPositionValues8;
-            this.kcbtnVertical.Values.Text = "Ver&tical";
-            this.kcbtnVertical.Click += new System.EventHandler(this.kcbtnVertical_Click);
-            // 
-            // kcbtnHorizontal
-            // 
-            this.kcbtnHorizontal.Location = new System.Drawing.Point(13, 320);
-            this.kcbtnHorizontal.Name = "kcbtnHorizontal";
-            this.kcbtnHorizontal.Size = new System.Drawing.Size(150, 25);
-            this.kcbtnHorizontal.TabIndex = 16;
-            popupPositionValues9.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues9.PlacementTarget = null;
-            this.kcbtnHorizontal.ToolTipValues.ToolTipPosition = popupPositionValues9;
-            this.kcbtnHorizontal.Values.Text = "&Horizontal";
-            this.kcbtnHorizontal.Click += new System.EventHandler(this.kcbtnHorizontal_Click);
-            // 
             // kcmbGradientDirection
             // 
             this.kcmbGradientDirection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -725,9 +652,8 @@ namespace Playground
             this.kcmbGradientDirection.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbGradientDirection.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbGradientDirection.TabIndex = 15;
-            popupPositionValues10.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues10.PlacementTarget = null;
-            this.kcmbGradientDirection.ToolTipValues.ToolTipPosition = popupPositionValues10;
+            popupPositionValues6.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kcmbGradientDirection.ToolTipValues.ToolTipPosition = popupPositionValues6;
             this.kcmbGradientDirection.SelectedIndexChanged += new System.EventHandler(this.kcmbGradientDirection_SelectedIndexChanged);
             this.kcmbGradientDirection.TextChanged += new System.EventHandler(this.kcmbGradientDirection_TextChanged);
             // 
@@ -738,49 +664,9 @@ namespace Playground
             this.kryptonLabel1.Size = new System.Drawing.Size(149, 26);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 14;
-            popupPositionValues11.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues11.PlacementTarget = null;
-            this.kryptonLabel1.ToolTipValues.ToolTipPosition = popupPositionValues11;
+            popupPositionValues7.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kryptonLabel1.ToolTipValues.ToolTipPosition = popupPositionValues7;
             this.kryptonLabel1.Values.Text = "Gradient Direction:";
-            // 
-            // kcbtnTextColour
-            // 
-            this.kcbtnTextColour.AutoSize = true;
-            this.kcbtnTextColour.Location = new System.Drawing.Point(609, 93);
-            this.kcbtnTextColour.Name = "kcbtnTextColour";
-            this.kcbtnTextColour.Size = new System.Drawing.Size(136, 25);
-            this.kcbtnTextColour.TabIndex = 13;
-            popupPositionValues12.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues12.PlacementTarget = null;
-            this.kcbtnTextColour.ToolTipValues.ToolTipPosition = popupPositionValues12;
-            this.kcbtnTextColour.Values.Text = "Text Colour";
-            this.kcbtnTextColour.SelectedColorChanged += new System.EventHandler<ComponentFactory.Krypton.Toolkit.ColorEventArgs>(this.kcbtnTextColour_SelectedColorChanged);
-            // 
-            // kcbtnGradientColour2
-            // 
-            this.kcbtnGradientColour2.AutoSize = true;
-            this.kcbtnGradientColour2.Location = new System.Drawing.Point(467, 93);
-            this.kcbtnGradientColour2.Name = "kcbtnGradientColour2";
-            this.kcbtnGradientColour2.Size = new System.Drawing.Size(136, 25);
-            this.kcbtnGradientColour2.TabIndex = 12;
-            popupPositionValues13.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues13.PlacementTarget = null;
-            this.kcbtnGradientColour2.ToolTipValues.ToolTipPosition = popupPositionValues13;
-            this.kcbtnGradientColour2.Values.Text = "Gradient Colour 2";
-            this.kcbtnGradientColour2.SelectedColorChanged += new System.EventHandler<ComponentFactory.Krypton.Toolkit.ColorEventArgs>(this.kcbtnGradientColour2_SelectedColorChanged);
-            // 
-            // kcbtnGradientColour1
-            // 
-            this.kcbtnGradientColour1.AutoSize = true;
-            this.kcbtnGradientColour1.Location = new System.Drawing.Point(325, 93);
-            this.kcbtnGradientColour1.Name = "kcbtnGradientColour1";
-            this.kcbtnGradientColour1.Size = new System.Drawing.Size(136, 25);
-            this.kcbtnGradientColour1.TabIndex = 11;
-            popupPositionValues14.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues14.PlacementTarget = null;
-            this.kcbtnGradientColour1.ToolTipValues.ToolTipPosition = popupPositionValues14;
-            this.kcbtnGradientColour1.Values.Text = "Gradient Colour 1";
-            this.kcbtnGradientColour1.SelectedColorChanged += new System.EventHandler<ComponentFactory.Krypton.Toolkit.ColorEventArgs>(this.kcbtnGradientColour1_SelectedColorChanged);
             // 
             // toolStrip2
             // 
@@ -861,9 +747,8 @@ namespace Playground
             this.rxrbTextPad.Size = new System.Drawing.Size(151, 117);
             this.rxrbTextPad.TabIndex = 6;
             this.rxrbTextPad.Text = "kryptonRichTextBoxExtended2";
-            popupPositionValues15.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues15.PlacementTarget = null;
-            this.rxrbTextPad.ToolTipValues.ToolTipPosition = popupPositionValues15;
+            popupPositionValues8.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.rxrbTextPad.ToolTipValues.ToolTipPosition = popupPositionValues8;
             // 
             // tsTest
             // 
@@ -978,14 +863,14 @@ namespace Playground
             this.toolStripMenuItemUACSheld1});
             this.toolStrip1.Location = new System.Drawing.Point(14, 208);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(282, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(848, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // kryptonNumericUpDownToolStripItem1
             // 
             this.kryptonNumericUpDownToolStripItem1.Name = "kryptonNumericUpDownToolStripItem1";
-            this.kryptonNumericUpDownToolStripItem1.Size = new System.Drawing.Size(45, 22);
+            this.kryptonNumericUpDownToolStripItem1.Size = new System.Drawing.Size(642, 22);
             this.kryptonNumericUpDownToolStripItem1.Text = "0";
             this.kryptonNumericUpDownToolStripItem1.Value = new decimal(new int[] {
             0,
@@ -1008,9 +893,8 @@ namespace Playground
             this.krtbEditor.Size = new System.Drawing.Size(140, 145);
             this.krtbEditor.TabIndex = 1;
             this.krtbEditor.Text = "";
-            popupPositionValues16.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues16.PlacementTarget = null;
-            this.krtbEditor.ToolTipValues.ToolTipPosition = popupPositionValues16;
+            popupPositionValues9.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.krtbEditor.ToolTipValues.ToolTipPosition = popupPositionValues9;
             // 
             // klblAdminMode
             // 
@@ -1019,9 +903,8 @@ namespace Playground
             this.klblAdminMode.Size = new System.Drawing.Size(283, 26);
             this.klblAdminMode.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblAdminMode.TabIndex = 0;
-            popupPositionValues17.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues17.PlacementTarget = null;
-            this.klblAdminMode.ToolTipValues.ToolTipPosition = popupPositionValues17;
+            popupPositionValues10.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.klblAdminMode.ToolTipValues.ToolTipPosition = popupPositionValues10;
             this.klblAdminMode.Values.Text = "Is running in Administrator mode: No";
             // 
             // kryptonRichTextBoxExtended1
@@ -1032,9 +915,8 @@ namespace Playground
             this.kryptonRichTextBoxExtended1.Size = new System.Drawing.Size(100, 96);
             this.kryptonRichTextBoxExtended1.TabIndex = 0;
             this.kryptonRichTextBoxExtended1.Text = "";
-            popupPositionValues18.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues18.PlacementTarget = null;
-            this.kryptonRichTextBoxExtended1.ToolTipValues.ToolTipPosition = popupPositionValues18;
+            popupPositionValues11.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kryptonRichTextBoxExtended1.ToolTipValues.ToolTipPosition = popupPositionValues11;
             // 
             // statusStrip1
             // 
@@ -1080,14 +962,6 @@ namespace Playground
             this.flashingLabel1.Name = "flashingLabel1";
             this.flashingLabel1.Size = new System.Drawing.Size(83, 20);
             this.flashingLabel1.Text = "flashingLabel1";
-            // 
-            // kryptonCheckSet1
-            // 
-            this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnHorizontal);
-            this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnVertical);
-            this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnForwardDiagonal);
-            this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnBackwardDiagonal);
-            this.kryptonCheckSet1.CheckedButton = this.kcbtnForwardDiagonal;
             // 
             // timer1
             // 
@@ -1209,15 +1083,8 @@ namespace Playground
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton tsInsertText;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonRichTextBoxExtended rxrbTextPad;
-        private ComponentFactory.Krypton.Toolkit.KryptonColorButton kcbtnTextColour;
-        private ComponentFactory.Krypton.Toolkit.KryptonColorButton kcbtnGradientColour2;
-        private ComponentFactory.Krypton.Toolkit.KryptonColorButton kcbtnGradientColour1;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kcmbGradientDirection;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcbtnBackwardDiagonal;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcbtnForwardDiagonal;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcbtnVertical;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcbtnHorizontal;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckSet kryptonCheckSet1;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox kryptonPromptTextBox1;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion2 kryptonCommandLinkVersion21;

@@ -142,6 +142,7 @@
     <Compile Include="Base\Code\UtilityMethods.cs" />
     <Compile Include="Base\Enumerations\Enumerations.cs" />
     <Compile Include="Base\Interfaces\IColourEditor.cs" />
+    <Compile Include="Base\Interfaces\IRibbonMerger.cs" />
     <Compile Include="Base\Structs\Colour Wheel\HSLColour.cs" />
     <Compile Include="Base\Structs\File Explorer\ItemType.cs" />
     <Compile Include="Base\Structures\HSLColour.cs" />
@@ -296,13 +297,16 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\CircularProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonFlashingLabel.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonLineNumberedRichTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMarqueeLabel.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMarqueeLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMessageBoxExtended.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteChooserComboBox.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteSelector.cs">
@@ -451,6 +455,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Text.resx</DependentUpon>
     </Compile>
+    <Compile Include="ExtendedToolkit\Ribbon\RibbonMerger.cs" />
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1197,6 +1202,9 @@
     <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.resx">
       <DependentUpon>KryptonListView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMarqueeLabel.resx">
+      <DependentUpon>KryptonMarqueeLabel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteSelector.resx">
       <DependentUpon>KryptonPaletteSelector.cs</DependentUpon>
     </EmbeddedResource>
@@ -1332,7 +1340,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.872</Version>
+      <Version>5.470.901</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.1</Version>

@@ -227,17 +227,17 @@ namespace Playground
 
         private void kcbtnGradientColour1_SelectedColorChanged(object sender, ColorEventArgs e)
         {
-            etslBlinkTest.GradientColourOne = kcbtnGradientColour1.SelectedColor;
+           
         }
 
         private void kcbtnGradientColour2_SelectedColorChanged(object sender, ColorEventArgs e)
         {
-            etslBlinkTest.GradientColourTwo = kcbtnGradientColour2.SelectedColor;
+            
         }
 
         private void kcbtnTextColour_SelectedColorChanged(object sender, ColorEventArgs e)
         {
-            etslBlinkTest.ForeColor = kcbtnTextColour.SelectedColor;
+            
         }
 
         private void kcmbGradientDirection_SelectedIndexChanged(object sender, EventArgs e)
@@ -252,54 +252,22 @@ namespace Playground
 
         private void kcbtnHorizontal_Click(object sender, EventArgs e)
         {
-            etslBlinkTest.GradientMode = LinearGradientMode.Horizontal;
-
-            kcbtnHorizontal.Checked = true;
-
-            kcbtnVertical.Checked = false;
-
-            kcbtnForwardDiagonal.Checked = false;
-
-            kcbtnBackwardDiagonal.Checked = false;
+           
         }
 
         private void kcbtnVertical_Click(object sender, EventArgs e)
         {
-            etslBlinkTest.GradientMode = LinearGradientMode.Vertical;
-
-            kcbtnHorizontal.Checked = false;
-
-            kcbtnVertical.Checked = true;
-
-            kcbtnForwardDiagonal.Checked = false;
-
-            kcbtnBackwardDiagonal.Checked = false;
+          
         }
 
         private void kcbtnForwardDiagonal_Click(object sender, EventArgs e)
         {
-            etslBlinkTest.GradientMode = LinearGradientMode.ForwardDiagonal;
-
-            kcbtnHorizontal.Checked = false;
-
-            kcbtnVertical.Checked = false;
-
-            kcbtnForwardDiagonal.Checked = true;
-
-            kcbtnBackwardDiagonal.Checked = false;
+           
         }
 
         private void kcbtnBackwardDiagonal_Click(object sender, EventArgs e)
         {
-            etslBlinkTest.GradientMode = LinearGradientMode.BackwardDiagonal;
-
-            kcbtnHorizontal.Checked = false;
-
-            kcbtnVertical.Checked = false;
-
-            kcbtnForwardDiagonal.Checked = false;
-
-            kcbtnBackwardDiagonal.Checked = true;
+           
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
@@ -394,10 +362,7 @@ namespace Playground
 
         private void kryptonCommandLinkButton2_Click(object sender, EventArgs e)
         {
-            using (CommandLinkStyles cls = new CommandLinkStyles())
-            {
-                cls.ShowDialog(this);
-            }
+           
         }
 
         private void kryptonCheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -475,7 +440,7 @@ namespace Playground
 
         private void kryptonButton21_Click(object sender, EventArgs e)
         {
-            TestRig tr = new TestRig();
+            Examples tr = new Examples();
 
             tr.Show();
         }
@@ -488,6 +453,16 @@ namespace Playground
         }
 
         private void toolStripMenuItemUACSheld1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KryptonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void KryptonCommandLinkVersion21_Click(object sender, EventArgs e)
         {
 
         }
