@@ -17,3 +17,15 @@
 ## Krypton Colour Wheel
 
 ![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonColourWheel.png)
+
+## Krypton Knob Control
+
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonKnobControl.png)
+
+## Krypton Palette Colour Shader
+
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonPaletteColourShader.png)
+
+## Krypton Property Grid
+
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonPropertyGrid.png)
