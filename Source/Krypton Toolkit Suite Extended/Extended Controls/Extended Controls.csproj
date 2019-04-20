@@ -132,6 +132,7 @@
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarOrientation.cs" />
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarState.cs" />
     <Compile Include="Base\Code\ScrollBar\WIN32.cs" />
+    <Compile Include="Base\Code\Security\HashingAlgorithms.cs" />
     <Compile Include="Base\Code\Security\PasswordStrength.cs" />
     <Compile Include="Base\Code\Security\SecurityMethods.cs" />
     <Compile Include="Base\Code\Security\VirusTotalAPI.cs" />
@@ -139,6 +140,9 @@
     <Compile Include="Base\Code\Theming\KryptonPaletteManager.cs" />
     <Compile Include="Base\Code\Theming\KryptonThemeManager.cs" />
     <Compile Include="Base\Code\TypefaceHelper.cs" />
+    <Compile Include="Base\Code\Utilities\FileVersionUtility.cs" />
+    <Compile Include="Base\Code\Utilities\Utility.cs" />
+    <Compile Include="Base\Code\Utilities\WIN32.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
     <Compile Include="Base\Enumerations\Enumerations.cs" />
     <Compile Include="Base\Interfaces\IColourEditor.cs" />
@@ -943,6 +947,9 @@
     <Compile Include="ExtendedToolkit\UI\Security\File Hashing\HashFile.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Security\File Hashing\VarifyFileHash.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Security\RandomPasswordGenerator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1305,6 +1312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Security\File Hashing\HashFile.resx">
       <DependentUpon>HashFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Security\File Hashing\VarifyFileHash.resx">
+      <DependentUpon>VarifyFileHash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Security\RandomPasswordGenerator.resx">
       <DependentUpon>RandomPasswordGenerator.cs</DependentUpon>

@@ -12,7 +12,7 @@ namespace ExtendedControls.Base.Code.Theming
     public class KryptonPaletteManager
     {
         #region Variables
-        private Color _baseColour, _darkColour, _middleColour, _lightColour, _lightestColour, _borderColour, _alternativeNormalTextColour, _normalTextColour, _disabledTextColour, _focusedTextColour, _pressedTextColour, _disabledColour, _linkNormalColour, _linkFocusedColour, _linkHoverColour, _linkVisitedColour, _customColourOne, _customColourTwo, _customColourThree, _customColourFour, _customColourFive, _customTextColourOne, _customTextColourTwo, _customTextColourThree, _customTextColourFour, _customTextColourFive, _menuTextColour, _statusTextColour, _ribbonTabTextColour;
+        private Color _baseColour, _darkColour, _middleColour, _lightColour, _lightestColour, _borderColour, _alternativeNormalTextColour, _normalTextColour, _disabledTextColour, _focusedTextColour, _pressedTextColour, _disabledColour, _linkNormalColour, _linkFocusedColour, _linkHoverColour, _linkVisitedColour, _customColourOne, _customColourTwo, _customColourThree, _customColourFour, _customColourFive, _customColourSix, _customTextColourOne, _customTextColourTwo, _customTextColourThree, _customTextColourFour, _customTextColourFive, _customTextColourSix, _menuTextColour, _statusTextColour, _ribbonTabTextColour;
         private PaletteMode _paletteMode;
         #endregion
 
@@ -186,6 +186,14 @@ namespace ExtendedControls.Base.Code.Theming
         public Color CustomColourFive { get => _customColourFive; set => _customColourFive = value; }
 
         /// <summary>
+        /// Gets or sets the custom colour six.
+        /// </summary>
+        /// <value>
+        /// The custom colour six.
+        /// </value>
+        public Color CustomColourSix { get => _customColourSix; set => _customColourSix = value; }
+
+        /// <summary>
         /// Gets or sets the custom text colour one.
         /// </summary>
         /// <value>
@@ -224,6 +232,14 @@ namespace ExtendedControls.Base.Code.Theming
         /// The custom text colour five.
         /// </value>
         public Color CustomTextColourFive { get => _customTextColourFive; set => _customTextColourFive = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour six.
+        /// </summary>
+        /// <value>
+        /// The custom text colour six.
+        /// </value>
+        public Color CustomTextColourSix { get => _customTextColourSix; set => _customTextColourSix = value; }
 
         /// <summary>
         /// Gets or sets the menu text colour.
@@ -265,7 +281,7 @@ namespace ExtendedControls.Base.Code.Theming
         }
         #endregion
 
-        #region Methods        
+        #region Methods                
         /// <summary>
         /// Creates the new palette.
         /// </summary>
@@ -292,18 +308,20 @@ namespace ExtendedControls.Base.Code.Theming
         /// <param name="customColourThree">The custom colour three.</param>
         /// <param name="customColourFour">The custom colour four.</param>
         /// <param name="customColourFive">The custom colour five.</param>
+        /// <param name="customColourSix">The custom colour six.</param>
         /// <param name="customTextColourOne">The custom text colour one.</param>
         /// <param name="customTextColourTwo">The custom text colour two.</param>
         /// <param name="customTextColourThree">The custom text colour three.</param>
         /// <param name="customTextColourFour">The custom text colour four.</param>
         /// <param name="customTextColourFive">The custom text colour five.</param>
+        /// <param name="customTextColourSix">The custom text colour six.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
         /// <param name="statusTextColour">The status text colour.</param>
         /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
         /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
         /// <param name="silent">if set to <c>true</c> [silent].</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public static void CreateNewPalette(KryptonPalette palette, PaletteMode paletteMode, Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour, bool invertColours = false, bool silent = false)
+        public static void CreateNewPalette(KryptonPalette palette, PaletteMode paletteMode, Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customColourSix, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color customTextColourSix, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour, bool invertColours = false, bool silent = false)
         {
             try
             {
@@ -1183,15 +1201,17 @@ namespace ExtendedControls.Base.Code.Theming
         /// <param name="customColourThree">The custom colour three.</param>
         /// <param name="customColourFour">The custom colour four.</param>
         /// <param name="customColourFive">The custom colour five.</param>
+        /// <param name="customColourSix">The custom colour six.</param>
         /// <param name="customTextColourOne">The custom text colour one.</param>
         /// <param name="customTextColourTwo">The custom text colour two.</param>
         /// <param name="customTextColourThree">The custom text colour three.</param>
         /// <param name="customTextColourFour">The custom text colour four.</param>
         /// <param name="customTextColourFive">The custom text colour five.</param>
+        /// <param name="customTextColourSix">The custom text colour six.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
         /// <param name="statusTextColour">The status text colour.</param>
         /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
-        public static void PopulateColours(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour)
+        public static void PopulateColours(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customColourSix, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color customTextColourSix, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour)
         {
             try
             {
@@ -1239,6 +1259,8 @@ namespace ExtendedControls.Base.Code.Theming
 
                 kpm.SetCustomColourFive(customColourFive);
 
+                kpm.SetCustomColourSix(customColourSix);
+
                 kpm.SetCustomTextColourOne(customTextColourOne);
 
                 kpm.SetCustomTextColourTwo(customTextColourTwo);
@@ -1248,6 +1270,8 @@ namespace ExtendedControls.Base.Code.Theming
                 kpm.SetCustomTextColourFour(customTextColourFour);
 
                 kpm.SetCustomTextColourFive(customTextColourFive);
+
+                kpm.SetCustomTextColourSix(customTextColourSix);
 
                 kpm.SetMenuTextColour(menuTextColour);
 
@@ -1286,15 +1310,17 @@ namespace ExtendedControls.Base.Code.Theming
         /// <param name="customColourThree">The custom colour three.</param>
         /// <param name="customColourFour">The custom colour four.</param>
         /// <param name="customColourFive">The custom colour five.</param>
+        /// <param name="customColourSix">The custom colour six.</param>
         /// <param name="customTextColourOne">The custom text colour one.</param>
         /// <param name="customTextColourTwo">The custom text colour two.</param>
         /// <param name="customTextColourThree">The custom text colour three.</param>
         /// <param name="customTextColourFour">The custom text colour four.</param>
         /// <param name="customTextColourFive">The custom text colour five.</param>
+        /// <param name="customTextColourSix">The custom text colour six.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
         /// <param name="statusTextColour">The status text colour.</param>
         /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
-        public static void PopulateColours(PaletteMode paletteMode, Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour)
+        public static void PopulateColours(PaletteMode paletteMode, Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customColourSix, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color customTextColourSix, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour)
         {
             try
             {
@@ -1342,6 +1368,8 @@ namespace ExtendedControls.Base.Code.Theming
 
                 kpm.SetCustomColourFive(customColourFive);
 
+                kpm.SetCustomColourSix(customColourSix);
+
                 kpm.SetCustomTextColourOne(customTextColourOne);
 
                 kpm.SetCustomTextColourTwo(customTextColourTwo);
@@ -1351,6 +1379,8 @@ namespace ExtendedControls.Base.Code.Theming
                 kpm.SetCustomTextColourFour(customTextColourFour);
 
                 kpm.SetCustomTextColourFive(customTextColourFive);
+
+                kpm.SetCustomTextColourSix(customTextColourSix);
 
                 kpm.SetMenuTextColour(menuTextColour);
 
@@ -1390,15 +1420,17 @@ namespace ExtendedControls.Base.Code.Theming
         /// <param name="customColourThree">The custom colour three.</param>
         /// <param name="customColourFour">The custom colour four.</param>
         /// <param name="customColourFive">The custom colour five.</param>
+        /// <param name="customColourSix">The custom colour six.</param>
         /// <param name="customTextColourOne">The custom text colour one.</param>
         /// <param name="customTextColourTwo">The custom text colour two.</param>
         /// <param name="customTextColourThree">The custom text colour three.</param>
         /// <param name="customTextColourFour">The custom text colour four.</param>
         /// <param name="customTextColourFive">The custom text colour five.</param>
+        /// <param name="customTextColourSix">The custom text colour six.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
         /// <param name="statusTextColour">The status text colour.</param>
         /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
-        public static void PopulateColours(CircularPictureBox baseColour, CircularPictureBox darkColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, CircularPictureBox borderColour, CircularPictureBox alternativeNormalTextColour, CircularPictureBox normalTextColour, CircularPictureBox disabledTextColour, CircularPictureBox focusedTextColour, CircularPictureBox pressedTextColour, CircularPictureBox disabledColour, CircularPictureBox linkNormalColour, CircularPictureBox linkFocusedColour, CircularPictureBox linkHoverColour, CircularPictureBox linkVisitedColour, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColour, CircularPictureBox statusTextColour, CircularPictureBox ribbonTabTextColour)
+        public static void PopulateColours(CircularPictureBox baseColour, CircularPictureBox darkColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, CircularPictureBox borderColour, CircularPictureBox alternativeNormalTextColour, CircularPictureBox normalTextColour, CircularPictureBox disabledTextColour, CircularPictureBox focusedTextColour, CircularPictureBox pressedTextColour, CircularPictureBox disabledColour, CircularPictureBox linkNormalColour, CircularPictureBox linkFocusedColour, CircularPictureBox linkHoverColour, CircularPictureBox linkVisitedColour, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customColourSix, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox customTextColourSix, CircularPictureBox menuTextColour, CircularPictureBox statusTextColour, CircularPictureBox ribbonTabTextColour)
         {
             try
             {
@@ -1446,6 +1478,8 @@ namespace ExtendedControls.Base.Code.Theming
 
                 kpm.SetCustomColourFive(customColourFive.BackColor);
 
+                kpm.SetCustomColourSix(customColourSix.BackColor);
+
                 kpm.SetCustomTextColourOne(customTextColourOne.BackColor);
 
                 kpm.SetCustomTextColourTwo(customTextColourTwo.BackColor);
@@ -1455,6 +1489,8 @@ namespace ExtendedControls.Base.Code.Theming
                 kpm.SetCustomTextColourFour(customTextColourFour.BackColor);
 
                 kpm.SetCustomTextColourFive(customTextColourFive.BackColor);
+
+                kpm.SetCustomTextColourSix(customTextColourSix.BackColor);
 
                 kpm.SetMenuTextColour(menuTextColour.BackColor);
 
@@ -1849,6 +1885,24 @@ namespace ExtendedControls.Base.Code.Theming
         }
 
         /// <summary>
+        /// Sets the value of CustomColourSix to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourSix.</param>
+        public void SetCustomColourSix(Color value)
+        {
+            CustomColourSix = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourSix.
+        /// </summary>
+        /// <returns>The value of CustomColourSix.</returns>
+        public Color GetCustomColourSix()
+        {
+            return CustomColourSix;
+        }
+
+        /// <summary>
         /// Sets the value of CustomTextColourOne to value.
         /// </summary>
         /// <param name="value">The value of CustomTextColourOne.</param>
@@ -1936,6 +1990,24 @@ namespace ExtendedControls.Base.Code.Theming
         public Color GetCustomTextColourFive()
         {
             return CustomTextColourFive;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourSix to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourSix.</param>
+        public void SetCustomTextColourSix(Color value)
+        {
+            CustomTextColourSix = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourSix.
+        /// </summary>
+        /// <returns>The value of CustomTextColourSix.</returns>
+        public Color GetCustomTextColourSix()
+        {
+            return CustomTextColourSix;
         }
 
         /// <summary>

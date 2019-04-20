@@ -91,6 +91,7 @@
     <Compile Include="Classes\Other\ToolTipManager.cs" />
     <Compile Include="Classes\Other\TypefaceHelper.cs" />
     <Compile Include="Classes\Palette\PaletteCompisitionEngine.cs" />
+    <Compile Include="Classes\Security\HashingAlgorithms.cs" />
     <Compile Include="Classes\Security\RandomPassword.cs" />
     <Compile Include="Classes\Security\SecurityMethods.cs" />
     <Compile Include="Classes\Theming\PaletteColourManagementEngine.cs" />

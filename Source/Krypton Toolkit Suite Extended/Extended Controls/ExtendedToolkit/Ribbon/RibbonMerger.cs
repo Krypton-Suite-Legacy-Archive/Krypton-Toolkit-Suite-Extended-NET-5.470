@@ -83,7 +83,8 @@ namespace ExtendedControls.ExtendedToolkit.Ribbon
                 {
                     int temp = parsedValueResult;
 
-                    return parsedValueResult.Max(0).Min(maxValue);
+                    // TODO: Why doesn't this work?
+                    //return parsedValueResult.Max(0).Min(maxValue);
                 }
             }
 
