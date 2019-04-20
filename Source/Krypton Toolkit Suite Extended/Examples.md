@@ -29,3 +29,17 @@
 ## Krypton Property Grid
 
 ![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonPropertyGrid.png)
+
+## Krypton Scrollbars
+
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonScrollBars.png)
+
+## Krypton Theme Selector
+
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonThemeSelector.png)
+
+## Krypton Toast Notification
+
+### Version 1
+
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonToastNotificationV1.png)
