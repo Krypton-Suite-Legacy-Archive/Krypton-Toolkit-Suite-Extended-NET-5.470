@@ -43,3 +43,11 @@
 ### Version 1
 
 ![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonToastNotificationV1.png)
+
+## Krypton Toggle Switch
+
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonToggleSwitch.png)
+
+## Krypton View Bar
+
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonViewBar.png)
