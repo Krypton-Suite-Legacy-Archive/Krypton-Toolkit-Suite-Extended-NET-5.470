@@ -359,106 +359,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\MessageBoxes\UI\KryptonExceptionMessageBox.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\AnimationCache.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\ExtCollection.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\ExtDrawing.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\LargeImageIndexConverter.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\LargeImageIndexEditor.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\NativeMethods.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\PopupWindowHelper.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\PopupWindowHelperMessageFilter.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\SmallImageIndexConverter.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Classes\SmallImageIndexEditor.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Enumerations\Enumerations.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Event Arguments\AnimationEventArgs.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Event Arguments\ExtCollectionEventArgs.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Event Arguments\PopupCancelEventArgs.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Event Arguments\PopupClosedEventArgs.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Interfaces\IObservable.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\Interfaces\IObserver.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Common\User Controls\NaviControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Design\Designers\NaviBandDesigner.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Design\Designers\NaviBarDesigner.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Design\Designers\NaviBarToolboxItem.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Design\Designers\NaviGroupDesigner.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTable.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2003Blue.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2003Green.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2003Silver.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2007Black.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2007Blue.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2007Silver.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Black.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Blue.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviColourTableOffice2010Silver.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Colours\NaviToolstripColourTable.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandCollection.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandEnumerator.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandEventArgs.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandOrderComparer.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandOrgOrderComparer.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBandSetting.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviBarSettings.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Common\NaviControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviBand.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviBandClientArea.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviBandCollapsed.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviBar.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviButtonCollapse.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviButtonOptions.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviCheckedListBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviContextMenu.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Controls\NaviGroup.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Drawing\NaviOffice2003Renderer.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Drawing\NaviOffice2010Renderer.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Drawing\NaviOffice2007Renderer.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Drawing\NaviRenderer.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Drawing\NaviToolstripRenderer.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Forms\NaviBandPopup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Forms\NaviOptionsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Layout\NaviLayoutEngine.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Layout\NaviLayoutEngineOffice.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Layout\NaviLayoutFactory.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Layout\NaviLayoutStyle.cs" />
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Resources\NaviSuiteResource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NaviSuiteResource.resx</DependentUpon>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Navi Suite\Main\Resources\Text.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Text.resx</DependentUpon>
-    </Compile>
     <Compile Include="ExtendedToolkit\Ribbon\RibbonMerger.cs" />
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
       <SubType>Form</SubType>
@@ -1052,11 +952,9 @@
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceProperties.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Content Include="ExtendedToolkit\Navi Suite\Credits.txt" />
     <Content Include="ExtendedToolkit\Wizard\Images\Wizard.bmp" />
     <Content Include="ExtendedToolkit\Wizard\Images\wizBigOnlineFolder.gif" />
     <Content Include="Notes\IMPORTANT.txt" />
-    <None Include="ExtendedToolkit\Navi Suite\License.md" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1226,14 +1124,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Error Reporting\UX\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ExtendedToolkit\Navi Suite\Main\Resources\NaviSuiteResource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>NaviSuiteResource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ExtendedToolkit\Navi Suite\Main\Resources\Text.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Text.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceProperties.resx">
       <DependentUpon>TypefaceProperties.cs</DependentUpon>
