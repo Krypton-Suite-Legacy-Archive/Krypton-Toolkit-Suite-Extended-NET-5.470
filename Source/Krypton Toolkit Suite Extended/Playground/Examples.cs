@@ -8,6 +8,7 @@ using ExtendedControls.ExtendedToolkit.Controls.KryptonControls;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using ExtendedControls.ExtendedToolkit.SystemDialogs.Typeface;
 using ExtendedControls.ExtendedToolkit.UI.Colours;
+using ExtendedControls.ExtendedToolkit.UI.GraphicsTools;
 using ExtendedControls.ExtendedToolkit.UI.Security;
 using ExtendedControls.ExtendedToolkit.UI.Security.FileHashing;
 using ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal;
@@ -61,6 +62,8 @@ namespace Playground
         private KryptonButton kbtnKryptonCommandLinks;
         private KryptonButton kbtnCircularPictureBox;
         private KryptonButton kbtnFileHashValidator;
+        private KryptonButton kbtnMRU;
+        private KryptonButton kbtnResizeImages;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
@@ -100,9 +103,13 @@ namespace Playground
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues34 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues35 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues36 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues37 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
+            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues38 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues1 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Examples));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnMRU = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnFileHashValidator = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnCircularPictureBox = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnKryptonCommandLinks = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnStatusStripItems = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -138,13 +145,15 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnFileHashValidator = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnResizeImages = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnResizeImages);
+            this.kryptonPanel1.Controls.Add(this.kbtnMRU);
             this.kryptonPanel1.Controls.Add(this.kbtnFileHashValidator);
             this.kryptonPanel1.Controls.Add(this.kbtnCircularPictureBox);
             this.kryptonPanel1.Controls.Add(this.kbtnKryptonCommandLinks);
@@ -187,6 +196,30 @@ namespace Playground
             this.kryptonPanel1.Size = new System.Drawing.Size(971, 597);
             this.kryptonPanel1.TabIndex = 0;
             // 
+            // kbtnMRU
+            // 
+            this.kbtnMRU.Location = new System.Drawing.Point(12, 368);
+            this.kbtnMRU.Name = "kbtnMRU";
+            this.kbtnMRU.Size = new System.Drawing.Size(218, 25);
+            this.kbtnMRU.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnMRU.TabIndex = 87;
+            popupPositionValues2.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnMRU.ToolTipValues.ToolTipPosition = popupPositionValues2;
+            this.kbtnMRU.Values.Text = "MRU Example";
+            this.kbtnMRU.Click += new System.EventHandler(this.KbtnMRU_Click);
+            // 
+            // kbtnFileHashValidator
+            // 
+            this.kbtnFileHashValidator.Location = new System.Drawing.Point(737, 326);
+            this.kbtnFileHashValidator.Name = "kbtnFileHashValidator";
+            this.kbtnFileHashValidator.Size = new System.Drawing.Size(218, 25);
+            this.kbtnFileHashValidator.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnFileHashValidator.TabIndex = 86;
+            popupPositionValues3.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnFileHashValidator.ToolTipValues.ToolTipPosition = popupPositionValues3;
+            this.kbtnFileHashValidator.Values.Text = "File Hash Validator";
+            this.kbtnFileHashValidator.Click += new System.EventHandler(this.KbtnFileHashValidator_Click);
+            // 
             // kbtnCircularPictureBox
             // 
             this.kbtnCircularPictureBox.Location = new System.Drawing.Point(497, 326);
@@ -194,8 +227,8 @@ namespace Playground
             this.kbtnCircularPictureBox.Size = new System.Drawing.Size(218, 25);
             this.kbtnCircularPictureBox.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCircularPictureBox.TabIndex = 85;
-            popupPositionValues2.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnCircularPictureBox.ToolTipValues.ToolTipPosition = popupPositionValues2;
+            popupPositionValues4.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnCircularPictureBox.ToolTipValues.ToolTipPosition = popupPositionValues4;
             this.kbtnCircularPictureBox.Values.Text = "Circular Picturebox";
             this.kbtnCircularPictureBox.Click += new System.EventHandler(this.KbtnCircularPictureBox_Click);
             // 
@@ -205,8 +238,8 @@ namespace Playground
             this.kbtnKryptonCommandLinks.Name = "kbtnKryptonCommandLinks";
             this.kbtnKryptonCommandLinks.Size = new System.Drawing.Size(218, 25);
             this.kbtnKryptonCommandLinks.TabIndex = 84;
-            popupPositionValues3.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnKryptonCommandLinks.ToolTipValues.ToolTipPosition = popupPositionValues3;
+            popupPositionValues5.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnKryptonCommandLinks.ToolTipValues.ToolTipPosition = popupPositionValues5;
             this.kbtnKryptonCommandLinks.Values.Text = "Krypton Command Links";
             this.kbtnKryptonCommandLinks.Click += new System.EventHandler(this.KbtnKryptonCommandLinks_Click);
             // 
@@ -216,8 +249,8 @@ namespace Playground
             this.kbtnStatusStripItems.Name = "kbtnStatusStripItems";
             this.kbtnStatusStripItems.Size = new System.Drawing.Size(218, 25);
             this.kbtnStatusStripItems.TabIndex = 83;
-            popupPositionValues4.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnStatusStripItems.ToolTipValues.ToolTipPosition = popupPositionValues4;
+            popupPositionValues6.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnStatusStripItems.ToolTipValues.ToolTipPosition = popupPositionValues6;
             this.kbtnStatusStripItems.Values.Text = "Status Strip Items";
             this.kbtnStatusStripItems.Click += new System.EventHandler(this.KbtnStatusStripItems_Click);
             // 
@@ -227,8 +260,8 @@ namespace Playground
             this.kbtnToastV2.Name = "kbtnToastV2";
             this.kbtnToastV2.Size = new System.Drawing.Size(218, 25);
             this.kbtnToastV2.TabIndex = 82;
-            popupPositionValues5.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnToastV2.ToolTipValues.ToolTipPosition = popupPositionValues5;
+            popupPositionValues7.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnToastV2.ToolTipValues.ToolTipPosition = popupPositionValues7;
             this.kbtnToastV2.Values.Text = "Toast v2";
             this.kbtnToastV2.Click += new System.EventHandler(this.kbtnToastV2_Click);
             // 
@@ -238,8 +271,8 @@ namespace Playground
             this.kbtnScanFiles.Name = "kbtnScanFiles";
             this.kbtnScanFiles.Size = new System.Drawing.Size(218, 25);
             this.kbtnScanFiles.TabIndex = 81;
-            popupPositionValues6.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnScanFiles.ToolTipValues.ToolTipPosition = popupPositionValues6;
+            popupPositionValues8.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnScanFiles.ToolTipValues.ToolTipPosition = popupPositionValues8;
             this.kbtnScanFiles.Values.Text = "Scan Files";
             this.kbtnScanFiles.Click += new System.EventHandler(this.kbtnScanFiles_Click);
             // 
@@ -249,8 +282,8 @@ namespace Playground
             this.kbtnRandomPasswords.Name = "kbtnRandomPasswords";
             this.kbtnRandomPasswords.Size = new System.Drawing.Size(218, 25);
             this.kbtnRandomPasswords.TabIndex = 80;
-            popupPositionValues7.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnRandomPasswords.ToolTipValues.ToolTipPosition = popupPositionValues7;
+            popupPositionValues9.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnRandomPasswords.ToolTipValues.ToolTipPosition = popupPositionValues9;
             this.kbtnRandomPasswords.Values.Text = "Random Password Generator";
             this.kbtnRandomPasswords.Click += new System.EventHandler(this.kbtnRandomPasswords_Click);
             // 
@@ -260,8 +293,8 @@ namespace Playground
             this.kbtnCircularProgressBar.Name = "kbtnCircularProgressBar";
             this.kbtnCircularProgressBar.Size = new System.Drawing.Size(218, 25);
             this.kbtnCircularProgressBar.TabIndex = 79;
-            popupPositionValues8.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnCircularProgressBar.ToolTipValues.ToolTipPosition = popupPositionValues8;
+            popupPositionValues10.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnCircularProgressBar.ToolTipValues.ToolTipPosition = popupPositionValues10;
             this.kbtnCircularProgressBar.Values.Text = "Circular Progress Bar";
             this.kbtnCircularProgressBar.Click += new System.EventHandler(this.kbtnCircularProgressBar_Click);
             // 
@@ -271,8 +304,8 @@ namespace Playground
             this.Toast.Name = "Toast";
             this.Toast.Size = new System.Drawing.Size(218, 25);
             this.Toast.TabIndex = 78;
-            popupPositionValues9.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.Toast.ToolTipValues.ToolTipPosition = popupPositionValues9;
+            popupPositionValues11.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.Toast.ToolTipValues.ToolTipPosition = popupPositionValues11;
             this.Toast.Values.Text = "Toast";
             this.Toast.Click += new System.EventHandler(this.Toast_Click);
             // 
@@ -282,8 +315,8 @@ namespace Playground
             this.kbtnThemeChooser.Name = "kbtnThemeChooser";
             this.kbtnThemeChooser.Size = new System.Drawing.Size(218, 25);
             this.kbtnThemeChooser.TabIndex = 77;
-            popupPositionValues10.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnThemeChooser.ToolTipValues.ToolTipPosition = popupPositionValues10;
+            popupPositionValues12.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnThemeChooser.ToolTipValues.ToolTipPosition = popupPositionValues12;
             this.kbtnThemeChooser.Values.Text = "Theme Chooser";
             this.kbtnThemeChooser.Click += new System.EventHandler(this.kbtnThemeChooser_Click);
             // 
@@ -293,8 +326,8 @@ namespace Playground
             this.kbtnAeroWizard.Name = "kbtnAeroWizard";
             this.kbtnAeroWizard.Size = new System.Drawing.Size(218, 25);
             this.kbtnAeroWizard.TabIndex = 76;
-            popupPositionValues11.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnAeroWizard.ToolTipValues.ToolTipPosition = popupPositionValues11;
+            popupPositionValues13.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnAeroWizard.ToolTipValues.ToolTipPosition = popupPositionValues13;
             this.kbtnAeroWizard.Values.Text = "Aero Wizard";
             // 
             // kbtnListView
@@ -303,8 +336,8 @@ namespace Playground
             this.kbtnListView.Name = "kbtnListView";
             this.kbtnListView.Size = new System.Drawing.Size(218, 25);
             this.kbtnListView.TabIndex = 75;
-            popupPositionValues12.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnListView.ToolTipValues.ToolTipPosition = popupPositionValues12;
+            popupPositionValues14.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnListView.ToolTipValues.ToolTipPosition = popupPositionValues14;
             this.kbtnListView.Values.Text = "List View";
             this.kbtnListView.Click += new System.EventHandler(this.kbtnListView_Click);
             // 
@@ -315,8 +348,8 @@ namespace Playground
             this.kbtnPropertyGrid.Size = new System.Drawing.Size(218, 25);
             this.kbtnPropertyGrid.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnPropertyGrid.TabIndex = 74;
-            popupPositionValues13.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnPropertyGrid.ToolTipValues.ToolTipPosition = popupPositionValues13;
+            popupPositionValues15.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnPropertyGrid.ToolTipValues.ToolTipPosition = popupPositionValues15;
             this.kbtnPropertyGrid.Values.Text = "Property Grid";
             this.kbtnPropertyGrid.Click += new System.EventHandler(this.kbtnPropertyGrid_Click);
             // 
@@ -327,8 +360,8 @@ namespace Playground
             this.kbtnMessageboxTest2.Size = new System.Drawing.Size(218, 25);
             this.kbtnMessageboxTest2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnMessageboxTest2.TabIndex = 73;
-            popupPositionValues14.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnMessageboxTest2.ToolTipValues.ToolTipPosition = popupPositionValues14;
+            popupPositionValues16.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnMessageboxTest2.ToolTipValues.ToolTipPosition = popupPositionValues16;
             this.kbtnMessageboxTest2.Values.Text = "Messagebox Test 2";
             this.kbtnMessageboxTest2.Click += new System.EventHandler(this.kbtnMessageboxTest2_Click);
             // 
@@ -338,8 +371,8 @@ namespace Playground
             this.kbtnFileExplorer.Name = "kbtnFileExplorer";
             this.kbtnFileExplorer.Size = new System.Drawing.Size(218, 25);
             this.kbtnFileExplorer.TabIndex = 72;
-            popupPositionValues15.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnFileExplorer.ToolTipValues.ToolTipPosition = popupPositionValues15;
+            popupPositionValues17.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnFileExplorer.ToolTipValues.ToolTipPosition = popupPositionValues17;
             this.kbtnFileExplorer.Values.Text = "File Explorer";
             this.kbtnFileExplorer.Click += new System.EventHandler(this.kbtnFileExplorer_Click);
             // 
@@ -349,8 +382,8 @@ namespace Playground
             this.kbtnFileBrowser.Name = "kbtnFileBrowser";
             this.kbtnFileBrowser.Size = new System.Drawing.Size(218, 25);
             this.kbtnFileBrowser.TabIndex = 71;
-            popupPositionValues16.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnFileBrowser.ToolTipValues.ToolTipPosition = popupPositionValues16;
+            popupPositionValues18.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnFileBrowser.ToolTipValues.ToolTipPosition = popupPositionValues18;
             this.kbtnFileBrowser.Values.Text = "File Browser";
             this.kbtnFileBrowser.Click += new System.EventHandler(this.kbtnFileBrowser_Click);
             // 
@@ -360,8 +393,8 @@ namespace Playground
             this.kbtnAdobeColourDialog.Name = "kbtnAdobeColourDialog";
             this.kbtnAdobeColourDialog.Size = new System.Drawing.Size(218, 25);
             this.kbtnAdobeColourDialog.TabIndex = 70;
-            popupPositionValues17.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnAdobeColourDialog.ToolTipValues.ToolTipPosition = popupPositionValues17;
+            popupPositionValues19.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnAdobeColourDialog.ToolTipValues.ToolTipPosition = popupPositionValues19;
             this.kbtnAdobeColourDialog.Values.Text = "Adobe Colour Dialog";
             this.kbtnAdobeColourDialog.Click += new System.EventHandler(this.kbtnAdobeColourDialog_Click);
             // 
@@ -371,8 +404,8 @@ namespace Playground
             this.kbtnColourWheel.Name = "kbtnColourWheel";
             this.kbtnColourWheel.Size = new System.Drawing.Size(218, 25);
             this.kbtnColourWheel.TabIndex = 69;
-            popupPositionValues18.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnColourWheel.ToolTipValues.ToolTipPosition = popupPositionValues18;
+            popupPositionValues20.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnColourWheel.ToolTipValues.ToolTipPosition = popupPositionValues20;
             this.kbtnColourWheel.Values.Text = "Colour Wheel";
             this.kbtnColourWheel.Click += new System.EventHandler(this.kbtnColourWheel_Click);
             // 
@@ -382,8 +415,8 @@ namespace Playground
             this.kbtnMoreControls.Name = "kbtnMoreControls";
             this.kbtnMoreControls.Size = new System.Drawing.Size(218, 25);
             this.kbtnMoreControls.TabIndex = 68;
-            popupPositionValues19.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnMoreControls.ToolTipValues.ToolTipPosition = popupPositionValues19;
+            popupPositionValues21.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnMoreControls.ToolTipValues.ToolTipPosition = popupPositionValues21;
             this.kbtnMoreControls.Values.Text = "More Controls...";
             this.kbtnMoreControls.Click += new System.EventHandler(this.kbtnMoreControls_Click);
             // 
@@ -393,8 +426,8 @@ namespace Playground
             this.kbtnKryptonWizard.Name = "kbtnKryptonWizard";
             this.kbtnKryptonWizard.Size = new System.Drawing.Size(218, 25);
             this.kbtnKryptonWizard.TabIndex = 67;
-            popupPositionValues20.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnKryptonWizard.ToolTipValues.ToolTipPosition = popupPositionValues20;
+            popupPositionValues22.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnKryptonWizard.ToolTipValues.ToolTipPosition = popupPositionValues22;
             this.kbtnKryptonWizard.Values.Text = "Wizard";
             this.kbtnKryptonWizard.Click += new System.EventHandler(this.kbtnKryptonWizard_Click);
             // 
@@ -404,8 +437,8 @@ namespace Playground
             this.kbtnRGBToHEX.Name = "kbtnRGBToHEX";
             this.kbtnRGBToHEX.Size = new System.Drawing.Size(218, 25);
             this.kbtnRGBToHEX.TabIndex = 66;
-            popupPositionValues21.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnRGBToHEX.ToolTipValues.ToolTipPosition = popupPositionValues21;
+            popupPositionValues23.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnRGBToHEX.ToolTipValues.ToolTipPosition = popupPositionValues23;
             this.kbtnRGBToHEX.Values.Text = "Convert Colour (RGB to Hex)";
             this.kbtnRGBToHEX.Click += new System.EventHandler(this.kbtnRGBToHEX_Click);
             // 
@@ -415,8 +448,8 @@ namespace Playground
             this.kbtnGlobalOptions.Name = "kbtnGlobalOptions";
             this.kbtnGlobalOptions.Size = new System.Drawing.Size(218, 25);
             this.kbtnGlobalOptions.TabIndex = 65;
-            popupPositionValues22.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnGlobalOptions.ToolTipValues.ToolTipPosition = popupPositionValues22;
+            popupPositionValues24.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnGlobalOptions.ToolTipValues.ToolTipPosition = popupPositionValues24;
             this.kbtnGlobalOptions.Values.Text = "Global Options";
             this.kbtnGlobalOptions.Click += new System.EventHandler(this.kbtnGlobalOptions_Click);
             // 
@@ -426,8 +459,8 @@ namespace Playground
             this.kbtnThemeOptions.Name = "kbtnThemeOptions";
             this.kbtnThemeOptions.Size = new System.Drawing.Size(218, 25);
             this.kbtnThemeOptions.TabIndex = 64;
-            popupPositionValues23.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnThemeOptions.ToolTipValues.ToolTipPosition = popupPositionValues23;
+            popupPositionValues25.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnThemeOptions.ToolTipValues.ToolTipPosition = popupPositionValues25;
             this.kbtnThemeOptions.Values.Text = "Theme Options";
             this.kbtnThemeOptions.Click += new System.EventHandler(this.kbtnThemeOptions_Click);
             // 
@@ -437,8 +470,8 @@ namespace Playground
             this.kbtnSettings.Name = "kbtnSettings";
             this.kbtnSettings.Size = new System.Drawing.Size(218, 25);
             this.kbtnSettings.TabIndex = 63;
-            popupPositionValues24.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnSettings.ToolTipValues.ToolTipPosition = popupPositionValues24;
+            popupPositionValues26.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnSettings.ToolTipValues.ToolTipPosition = popupPositionValues26;
             this.kbtnSettings.Values.Text = "Settings Options";
             this.kbtnSettings.Click += new System.EventHandler(this.kbtnSettings_Click);
             // 
@@ -448,8 +481,8 @@ namespace Playground
             this.kbtnColourChooser1.Name = "kbtnColourChooser1";
             this.kbtnColourChooser1.Size = new System.Drawing.Size(218, 25);
             this.kbtnColourChooser1.TabIndex = 62;
-            popupPositionValues25.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnColourChooser1.ToolTipValues.ToolTipPosition = popupPositionValues25;
+            popupPositionValues27.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnColourChooser1.ToolTipValues.ToolTipPosition = popupPositionValues27;
             this.kbtnColourChooser1.Values.Text = "Colour Chooser 1";
             this.kbtnColourChooser1.Click += new System.EventHandler(this.kbtnColourChooser1_Click);
             // 
@@ -459,8 +492,8 @@ namespace Playground
             this.kbtnColourChooser2.Name = "kbtnColourChooser2";
             this.kbtnColourChooser2.Size = new System.Drawing.Size(218, 25);
             this.kbtnColourChooser2.TabIndex = 61;
-            popupPositionValues26.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnColourChooser2.ToolTipValues.ToolTipPosition = popupPositionValues26;
+            popupPositionValues28.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnColourChooser2.ToolTipValues.ToolTipPosition = popupPositionValues28;
             this.kbtnColourChooser2.Values.Text = "Colour Chooser 2";
             this.kbtnColourChooser2.Click += new System.EventHandler(this.kbtnColourChooser2_Click);
             // 
@@ -470,8 +503,8 @@ namespace Playground
             this.kbtnScrollbars.Name = "kbtnScrollbars";
             this.kbtnScrollbars.Size = new System.Drawing.Size(218, 25);
             this.kbtnScrollbars.TabIndex = 60;
-            popupPositionValues27.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnScrollbars.ToolTipValues.ToolTipPosition = popupPositionValues27;
+            popupPositionValues29.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnScrollbars.ToolTipValues.ToolTipPosition = popupPositionValues29;
             this.kbtnScrollbars.Values.Text = "Scrollbars";
             this.kbtnScrollbars.Click += new System.EventHandler(this.kbtnScrollbars_Click);
             // 
@@ -481,8 +514,8 @@ namespace Playground
             this.kbtnToolstrips.Name = "kbtnToolstrips";
             this.kbtnToolstrips.Size = new System.Drawing.Size(218, 25);
             this.kbtnToolstrips.TabIndex = 59;
-            popupPositionValues28.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnToolstrips.ToolTipValues.ToolTipPosition = popupPositionValues28;
+            popupPositionValues30.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnToolstrips.ToolTipValues.ToolTipPosition = popupPositionValues30;
             this.kbtnToolstrips.Values.Text = "Toolstrips";
             this.kbtnToolstrips.Click += new System.EventHandler(this.kbtnToolstrips_Click);
             // 
@@ -492,8 +525,8 @@ namespace Playground
             this.kbtnTypefaceSelectionDialogue.Name = "kbtnTypefaceSelectionDialogue";
             this.kbtnTypefaceSelectionDialogue.Size = new System.Drawing.Size(218, 25);
             this.kbtnTypefaceSelectionDialogue.TabIndex = 58;
-            popupPositionValues29.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnTypefaceSelectionDialogue.ToolTipValues.ToolTipPosition = popupPositionValues29;
+            popupPositionValues31.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnTypefaceSelectionDialogue.ToolTipValues.ToolTipPosition = popupPositionValues31;
             this.kbtnTypefaceSelectionDialogue.Values.Text = "Typeface Selection Dialogue";
             this.kbtnTypefaceSelectionDialogue.Click += new System.EventHandler(this.kbtnTypefaceSelectionDialogue_Click);
             // 
@@ -503,8 +536,8 @@ namespace Playground
             this.kbtnPaletteEditor.Name = "kbtnPaletteEditor";
             this.kbtnPaletteEditor.Size = new System.Drawing.Size(218, 25);
             this.kbtnPaletteEditor.TabIndex = 57;
-            popupPositionValues30.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnPaletteEditor.ToolTipValues.ToolTipPosition = popupPositionValues30;
+            popupPositionValues32.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnPaletteEditor.ToolTipValues.ToolTipPosition = popupPositionValues32;
             this.kbtnPaletteEditor.Values.Text = "Palette Editor";
             this.kbtnPaletteEditor.Click += new System.EventHandler(this.kbtnPaletteEditor_Click);
             // 
@@ -515,8 +548,8 @@ namespace Playground
             this.kbtnMessageboxTest.Size = new System.Drawing.Size(218, 25);
             this.kbtnMessageboxTest.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnMessageboxTest.TabIndex = 56;
-            popupPositionValues31.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnMessageboxTest.ToolTipValues.ToolTipPosition = popupPositionValues31;
+            popupPositionValues33.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnMessageboxTest.ToolTipValues.ToolTipPosition = popupPositionValues33;
             this.kbtnMessageboxTest.Values.Text = "Messagebox Test";
             this.kbtnMessageboxTest.Click += new System.EventHandler(this.kbtnMessageboxTest_Click);
             // 
@@ -526,8 +559,8 @@ namespace Playground
             this.kbtnFileCreator.Name = "kbtnFileCreator";
             this.kbtnFileCreator.Size = new System.Drawing.Size(218, 25);
             this.kbtnFileCreator.TabIndex = 55;
-            popupPositionValues32.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnFileCreator.ToolTipValues.ToolTipPosition = popupPositionValues32;
+            popupPositionValues34.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnFileCreator.ToolTipValues.ToolTipPosition = popupPositionValues34;
             this.kbtnFileCreator.Values.Text = "File Creator";
             this.kbtnFileCreator.Click += new System.EventHandler(this.kbtnFileCreator_Click);
             // 
@@ -537,8 +570,8 @@ namespace Playground
             this.kbtnColourCreator.Name = "kbtnColourCreator";
             this.kbtnColourCreator.Size = new System.Drawing.Size(218, 25);
             this.kbtnColourCreator.TabIndex = 54;
-            popupPositionValues33.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnColourCreator.ToolTipValues.ToolTipPosition = popupPositionValues33;
+            popupPositionValues35.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnColourCreator.ToolTipValues.ToolTipPosition = popupPositionValues35;
             this.kbtnColourCreator.Values.Text = "Colour Creator";
             this.kbtnColourCreator.Click += new System.EventHandler(this.kbtnColourCreator_Click);
             // 
@@ -548,8 +581,8 @@ namespace Playground
             this.kbtnColourMixer.Name = "kbtnColourMixer";
             this.kbtnColourMixer.Size = new System.Drawing.Size(218, 25);
             this.kbtnColourMixer.TabIndex = 53;
-            popupPositionValues34.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnColourMixer.ToolTipValues.ToolTipPosition = popupPositionValues34;
+            popupPositionValues36.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnColourMixer.ToolTipValues.ToolTipPosition = popupPositionValues36;
             this.kbtnColourMixer.Values.Text = "Colour Mixer";
             this.kbtnColourMixer.Click += new System.EventHandler(this.kbtnColourMixer_Click);
             // 
@@ -559,8 +592,8 @@ namespace Playground
             this.kbtnHexToRGB.Name = "kbtnHexToRGB";
             this.kbtnHexToRGB.Size = new System.Drawing.Size(218, 25);
             this.kbtnHexToRGB.TabIndex = 52;
-            popupPositionValues35.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnHexToRGB.ToolTipValues.ToolTipPosition = popupPositionValues35;
+            popupPositionValues37.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnHexToRGB.ToolTipValues.ToolTipPosition = popupPositionValues37;
             this.kbtnHexToRGB.Values.Text = "Convert Colour (Hex to RGB)";
             this.kbtnHexToRGB.Click += new System.EventHandler(this.kbtnHexToRGB_Click);
             // 
@@ -570,22 +603,22 @@ namespace Playground
             this.kbtnConvertColour.Name = "kbtnConvertColour";
             this.kbtnConvertColour.Size = new System.Drawing.Size(218, 25);
             this.kbtnConvertColour.TabIndex = 51;
-            popupPositionValues36.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnConvertColour.ToolTipValues.ToolTipPosition = popupPositionValues36;
+            popupPositionValues38.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
+            this.kbtnConvertColour.ToolTipValues.ToolTipPosition = popupPositionValues38;
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
-            // kbtnFileHashValidator
+            // kbtnResizeImages
             // 
-            this.kbtnFileHashValidator.Location = new System.Drawing.Point(737, 326);
-            this.kbtnFileHashValidator.Name = "kbtnFileHashValidator";
-            this.kbtnFileHashValidator.Size = new System.Drawing.Size(218, 25);
-            this.kbtnFileHashValidator.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnFileHashValidator.TabIndex = 86;
+            this.kbtnResizeImages.Location = new System.Drawing.Point(255, 368);
+            this.kbtnResizeImages.Name = "kbtnResizeImages";
+            this.kbtnResizeImages.Size = new System.Drawing.Size(218, 25);
+            this.kbtnResizeImages.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnResizeImages.TabIndex = 88;
             popupPositionValues1.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnFileHashValidator.ToolTipValues.ToolTipPosition = popupPositionValues1;
-            this.kbtnFileHashValidator.Values.Text = "File Hash Validator";
-            this.kbtnFileHashValidator.Click += new System.EventHandler(this.KbtnFileHashValidator_Click);
+            this.kbtnResizeImages.ToolTipValues.ToolTipPosition = popupPositionValues1;
+            this.kbtnResizeImages.Values.Text = "Resize Images";
+            this.kbtnResizeImages.Click += new System.EventHandler(this.KbtnResizeImages_Click);
             // 
             // Examples
             // 
@@ -893,6 +926,20 @@ namespace Playground
             HashFile hashFile = new HashFile();
 
             hashFile.Show();
+        }
+
+        private void KbtnMRU_Click(object sender, EventArgs e)
+        {
+            MRUExample mru = new MRUExample();
+
+            mru.Show();
+        }
+
+        private void KbtnResizeImages_Click(object sender, EventArgs e)
+        {
+            KryptonImageResizingToolWindow window = new KryptonImageResizingToolWindow();
+
+            window.Show();
         }
     }
 }

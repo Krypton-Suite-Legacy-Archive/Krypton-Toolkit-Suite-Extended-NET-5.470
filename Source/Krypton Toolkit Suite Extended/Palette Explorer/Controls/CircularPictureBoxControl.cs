@@ -1,8 +1,13 @@
 ﻿using ExtendedControls.ExtendedToolkit.Controls;
+using System;
 using System.Windows.Forms;
 
 namespace PaletteExplorer.Controls
 {
+    /// <summary>
+    /// A drop in <seealso cref="UserControl"/> for <seealso cref="ComponentFactory.Krypton.Toolkit.KryptonPalette"/> management.
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.UserControl" />
     public class CircularPictureBoxControl : UserControl
     {
         #region Designer Code
@@ -436,6 +441,7 @@ namespace PaletteExplorer.Controls
             this.cbxLightColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.cbxLightColourPreview.TabIndex = 29;
             this.cbxLightColourPreview.TabStop = false;
+            this.cbxLightColourPreview.MouseHover += new System.EventHandler(this.CbxLightColourPreview_MouseHover);
             // 
             // cbxMiddleColourPreview
             // 
@@ -446,6 +452,7 @@ namespace PaletteExplorer.Controls
             this.cbxMiddleColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.cbxMiddleColourPreview.TabIndex = 28;
             this.cbxMiddleColourPreview.TabStop = false;
+            this.cbxMiddleColourPreview.MouseHover += new System.EventHandler(this.CbxMiddleColourPreview_MouseHover);
             // 
             // cbxDarkColourPreview
             // 
@@ -456,6 +463,7 @@ namespace PaletteExplorer.Controls
             this.cbxDarkColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.cbxDarkColourPreview.TabIndex = 27;
             this.cbxDarkColourPreview.TabStop = false;
+            this.cbxDarkColourPreview.MouseHover += new System.EventHandler(this.CbxDarkColourPreview_MouseHover);
             // 
             // cbxBaseColourPreview
             // 
@@ -466,6 +474,7 @@ namespace PaletteExplorer.Controls
             this.cbxBaseColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.cbxBaseColourPreview.TabIndex = 26;
             this.cbxBaseColourPreview.TabStop = false;
+            this.cbxBaseColourPreview.MouseHover += new System.EventHandler(this.CbxBaseColourPreview_MouseHover);
             // 
             // CircularPictureBoxControl
             // 
@@ -515,7 +524,7 @@ namespace PaletteExplorer.Controls
         #endregion
 
         #region Variables
-        private CircularPictureBox baseColourPreview, darkColourPreview, middleColourPreview, lightColourPreview, lightestColourPreview, borderColourPreview, alternativeNormalTextColourPreview, normalTextColourPreview, disabledTextColourPreview, focusedTextColourPreview, pressedTextColourPreview, disabledColourPreview, linkNormalColourPreview, linkFocusedColourPreview, linkHoverColourPreview, linkVisitedColourPreview, customColourOnePreview, customColourTwoPreview, customColourThreePreview, customColourFourPreview, customColourFivePreview, customColourSixPreview, customTextColourOnePreview, customTextColourTwoPreview, customTextColourThreePreview, customTextColourFourPreview, customTextColourFivePreview, customTextColourSixPreview, menuTextColourPreview, statusTextColourPreview, ribbonTabTextColourPreview;
+        private CircularPictureBox baseColourPreview, darkColourPreview, middleColourPreview, lightColourPreview, lightestColourPreview, borderColourPreview, alternativeNormalTextColourPreview, normalTextColourPreview, disabledTextColourPreview, focusedTextColourPreview, pressedTextColourPreview, disabledControlColourPreview, linkNormalColourPreview, linkFocusedColourPreview, linkHoverColourPreview, linkVisitedColourPreview, customColourOnePreview, customColourTwoPreview, customColourThreePreview, customColourFourPreview, customColourFivePreview, customColourSixPreview, customTextColourOnePreview, customTextColourTwoPreview, customTextColourThreePreview, customTextColourFourPreview, customTextColourFivePreview, customTextColourSixPreview, menuTextColourPreview, statusTextColourPreview, ribbonTabTextColourPreview;
 
         private ContextMenuStrip baseColourMenu, darkColourMenu, middleColourMenu, lightColourMenu, lightestColourMenu, borderColourMenu, alternativeNormalTextColourMenu, normalTextColourMenu, disabledTextColourMenu, focusedTextColourMenu, pressedTextColourMenu, disabledColourMenu, linkNormalColourMenu, linkFocusedColourMenu, linkHoverColourMenu, linkVisitedColourMenu, customColourOneMenu, customColourTwoMenu, customColourThreeMenu, customColourFourMenu, customColourFiveMenu, customColourSixMenu, customTextColourOneMenu, customTextColourTwoMenu, customTextColourThreeMenu, customTextColourFourMenu, customTextColourFiveMenu, customTextColourSixMenu, menuTextColourMenu, statusTextColourMenu, ribbonTabTextColourMenu;
         #endregion
@@ -612,12 +621,12 @@ namespace PaletteExplorer.Controls
         public CircularPictureBox PressedTextColourPreview { get => pressedTextColourPreview; set => pressedTextColourPreview = value; }
 
         /// <summary>
-        /// Gets or sets the disabled colour preview.
+        /// Gets or sets the disabled control colour preview.
         /// </summary>
         /// <value>
-        /// The disabled colour preview.
+        /// The disabled colour control preview.
         /// </value>
-        public CircularPictureBox DisabledColourPreview { get => disabledColourPreview; set => disabledColourPreview = value; }
+        public CircularPictureBox DisabledControlColourPreview { get => disabledControlColourPreview; set => disabledControlColourPreview = value; }
 
         /// <summary>
         /// Gets or sets the link normal colour preview.
@@ -783,7 +792,7 @@ namespace PaletteExplorer.Controls
         public ContextMenuStrip DisabledTextColourMenu { get; set; }
         public ContextMenuStrip FocusedTextColourMenu { get; set; }
         public ContextMenuStrip PressedTextColourMenu { get; set; }
-        public ContextMenuStrip DisabledColourMenu { get; set; }
+        public ContextMenuStrip DisabledControlColourMenu { get; set; }
         public ContextMenuStrip LinkNormalColourMenu { get; set; }
         public ContextMenuStrip LinkFocusedColourMenu { get; set; }
         public ContextMenuStrip LinkHoverColourMenu { get; set; }
@@ -809,6 +818,70 @@ namespace PaletteExplorer.Controls
         public CircularPictureBoxControl()
         {
             InitializeComponent();
+
+            #region Circular Picture Boxes
+            SetBaseColourPreview(cbxBaseColourPreview);
+
+            SetDarkColourPreview(cbxDarkColourPreview);
+
+            SetMiddleColourPreview(cbxMiddleColourPreview);
+
+            SetLightColourPreview(cbxLightColourPreview);
+
+            SetLightestColourPreview(cbxLightestColourPreview);
+
+            SetBorderColourPreview(cbxBorderColourPreview);
+
+            SetAlternativeNormalTextColourPreview(cbxAlternativeNormalTextColourPreview);
+
+            SetNormalColourPreview(cbxNormalTextColourPreview);
+
+            SetDisabledTextColourPreview(cbxDisabledTextColourPreview);
+
+            SetFocusedTextColourPreview(cbxFocusedTextColourPreview);
+
+            SetPressedTextColourPreview(cbxPressedTextColourPreview);
+
+            SetDisabledControlColourPreview(cbxDisabledControlColourPreview);
+
+            SetLinkNormalColourPreview(cbxLinkNormalColourPreview);
+
+            SetLinkFocusedColourPreview(cbxLinkFocusedColourPreview);
+
+            SetLinkHoverColourPreview(cbxLinkHoverColourPreview);
+
+            SetLinkVisitedColourPreview(cbxLinkVisitedColourPreview);
+
+            SetCustomColourOneColourPreview(cbxCustomColourOnePreview);
+
+            SetCustomColourTwoColourPreview(cbxCustomColourTwoPreview);
+
+            SetCustomColourThreeColourPreview(cbxCustomColourThreePreview);
+
+            SetCustomColourFourColourPreview(cbxCustomColourFourPreview);
+
+            SetCustomColourFiveColourPreview(cbxCustomColourFivePreview);
+
+            SetCustomColourSixColourPreview(cbxCustomColourSixPreview);
+
+            SetCustomTextColourOneColourPreview(cbxCustomTextColourOnePreview);
+
+            SetCustomTextColourTwoColourPreview(cbxCustomTextColourTwoPreview);
+
+            SetCustomTextColourThreeColourPreview(cbxCustomTextColourThreePreview);
+
+            SetCustomTextColourFourColourPreview(cbxCustomTextColourFourPreview);
+
+            SetCustomTextColourFiveColourPreview(cbxCustomTextColourFivePreview);
+
+            SetCustomTextColourSixColourPreview(cbxCustomTextColourSixPreview);
+
+            SetMenuTextColourPreview(cbxMenuTextColourPreview);
+
+            SetStatusTextColourPreview(cbxStatusTextColourPreview);
+
+            SetRibbonTabTextColourPreview(cbxRibbonTabTextColourPreview);
+            #endregion
         }
         #endregion
 
@@ -849,6 +922,24 @@ namespace PaletteExplorer.Controls
         public CircularPictureBox GetDarkColourPreview()
         {
             return DarkColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of MiddleColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of MiddleColourPreview.</param>
+        public void SetMiddleColourPreview(CircularPictureBox value)
+        {
+            MiddleColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of MiddleColourPreview.
+        /// </summary>
+        /// <returns>The value of MiddleColourPreview.</returns>
+        public CircularPictureBox GetMiddleColourPreview()
+        {
+            return MiddleColourPreview;
         }
 
         /// <summary>
@@ -996,21 +1087,21 @@ namespace PaletteExplorer.Controls
         }
 
         /// <summary>
-        /// Sets the value of DisabledColourPreview to value.
+        /// Sets the value of DisabledControlColourPreview to value.
         /// </summary>
-        /// <param name="value">The value of DisabledColourPreview.</param>
-        public void SetDisabledColourPreview(CircularPictureBox value)
+        /// <param name="value">The value of DisabledControlColourPreview.</param>
+        public void SetDisabledControlColourPreview(CircularPictureBox value)
         {
-            DisabledColourPreview = value;
+            DisabledControlColourPreview = value;
         }
 
         /// <summary>
-        /// Returns the value of DisabledColourPreview.
+        /// Returns the value of DisabledControlColourPreview.
         /// </summary>
-        /// <returns>The value of DisabledColourPreview.</returns>
-        public CircularPictureBox GetDisabledColourPreview()
+        /// <returns>The value of DisabledControlColourPreview.</returns>
+        public CircularPictureBox GetDisabledControlColourPreview()
         {
-            return DisabledColourPreview;
+            return DisabledControlColourPreview;
         }
 
         /// <summary>
@@ -1394,6 +1485,24 @@ namespace PaletteExplorer.Controls
         }
 
         /// <summary>
+        /// Sets the value of MiddleColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of MiddleColourMenu.</param>
+        public void SetMiddleColourMenu(ContextMenuStrip value)
+        {
+            MiddleColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of MiddleColourMenu.
+        /// </summary>
+        /// <returns>The value of MiddleColourMenu.</returns>
+        public ContextMenuStrip GetMiddleColourMenu()
+        {
+            return MiddleColourMenu;
+        }
+
+        /// <summary>
         /// Sets the value of LightColourMenu to value.
         /// </summary>
         /// <param name="value">The value of LightColourMenu.</param>
@@ -1538,21 +1647,21 @@ namespace PaletteExplorer.Controls
         }
 
         /// <summary>
-        /// Sets the value of DisabledColourMenu to value.
+        /// Sets the value of DisabledControlColourMenu to value.
         /// </summary>
-        /// <param name="value">The value of DisabledColourMenu.</param>
-        public void SetDisabledColourMenu(ContextMenuStrip value)
+        /// <param name="value">The value of DisabledControlColourMenu.</param>
+        public void SetDisabledControlColourMenu(ContextMenuStrip value)
         {
-            DisabledColourMenu = value;
+            DisabledControlColourMenu = value;
         }
 
         /// <summary>
-        /// Returns the value of DisabledColourMenu.
+        /// Returns the value of DisabledControlColourMenu.
         /// </summary>
-        /// <returns>The value of DisabledColourMenu.</returns>
-        public ContextMenuStrip GetDisabledColourMenu()
+        /// <returns>The value of DisabledControlColourMenu.</returns>
+        public ContextMenuStrip GetDisabledControlColourMenu()
         {
-            return DisabledColourMenu;
+            return DisabledControlColourMenu;
         }
 
         /// <summary>
@@ -1898,6 +2007,28 @@ namespace PaletteExplorer.Controls
         }
         #endregion
 
+        #endregion
+
+        #region Mouse Hover
+        private void CbxBaseColourPreview_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxDarkColourPreview_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxMiddleColourPreview_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxLightColourPreview_MouseHover(object sender, EventArgs e)
+        {
+
+        }
         #endregion
     }
 }

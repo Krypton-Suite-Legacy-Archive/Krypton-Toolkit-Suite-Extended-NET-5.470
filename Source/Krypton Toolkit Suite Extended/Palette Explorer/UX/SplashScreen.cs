@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using PaletteExplorer.UX.New;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -117,7 +118,7 @@ namespace PaletteExplorer.UX
 
             if (kpbProgress.Value == 100)
             {
-                MainWindow window = new MainWindow();
+                RibbonWindow window = new RibbonWindow();
 
                 window.Show();
 

@@ -115,6 +115,7 @@
     <Compile Include="Base\Code\Exceptions\ExceptionHandler.cs" />
     <Compile Include="Base\Code\File Explorer\FileSizeFormatProvider.cs" />
     <Compile Include="Base\Code\File Explorer\WIN32.cs" />
+    <Compile Include="Base\Code\Graphics Tools\GraphicsUtilities.cs" />
     <Compile Include="Base\Code\IconExtractor.cs" />
     <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
     <Compile Include="Base\Code\Linq\LinqBridge-1.3.cs" />
@@ -829,6 +830,9 @@
     <Compile Include="ExtendedToolkit\UI\Find and Replace\KryptonFindAndReplaceDialog.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Graphics Tools\KryptonImageResizingToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\KryptonFormWithDropShadow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1196,6 +1200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Find and Replace\KryptonFindAndReplaceDialog.resx">
       <DependentUpon>KryptonFindAndReplaceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Graphics Tools\KryptonImageResizingToolWindow.resx">
+      <DependentUpon>KryptonImageResizingToolWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\KryptonSplashScreen.resx">
       <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
