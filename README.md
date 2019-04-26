@@ -20,7 +20,7 @@
 
 Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Examples.md) to see what each control looks like.
 
-======
+<!--======
 
 ## 2019-05-01 Build 9xx - May Update
 * Outlook 2003 style toast notification
@@ -35,7 +35,7 @@ Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Exte
 * General tidyup of code & API updates
 * Upgraded to Krypton Toolkit Suite - version: **5.470.901**
 * Build 9xx (build date Wednesday 1st, May 2019) is now available on NuGet
-
+-->
 ======
 
 ## 2019-04-01 Build 855 April Update
