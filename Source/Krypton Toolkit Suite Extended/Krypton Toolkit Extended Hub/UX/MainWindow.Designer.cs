@@ -30,13 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.kpnlTop = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnClose = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.ss = new System.Windows.Forms.StatusStrip();
             this.tsslCurrentStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.kpnlFill = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonNavigator1 = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
+            this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlTop)).BeginInit();
             this.kpnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -44,6 +47,11 @@
             this.kryptonPanel3.SuspendLayout();
             this.ss.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlFill)).BeginInit();
+            this.kpnlFill.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).BeginInit();
+            this.kryptonNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
             this.SuspendLayout();
             // 
             // kpnlTop
@@ -57,18 +65,6 @@
             this.kpnlTop.Size = new System.Drawing.Size(1204, 114);
             this.kpnlTop.TabIndex = 0;
             // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
-            this.kryptonLabel1.Location = new System.Drawing.Point(12, 62);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(533, 33);
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.kryptonLabel1.TabIndex = 4;
-            this.kryptonLabel1.Values.ExtraText = "Built for .NET Framework 4.7";
-            this.kryptonLabel1.Values.Text = "Krypton Toolkit Extended Hub 5.470";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -80,6 +76,18 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
+            this.kryptonLabel1.Location = new System.Drawing.Point(12, 62);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(546, 33);
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.kryptonLabel1.TabIndex = 4;
+            this.kryptonLabel1.Values.ExtraText = "Built for .NET Framework 4.7";
+            this.kryptonLabel1.Values.Text = "Krypton Toolkit Extended Hub 5.470";
             // 
             // kryptonPanel3
             // 
@@ -121,11 +129,51 @@
             // 
             // kpnlFill
             // 
+            this.kpnlFill.Controls.Add(this.kryptonNavigator1);
             this.kpnlFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kpnlFill.Location = new System.Drawing.Point(0, 114);
             this.kpnlFill.Name = "kpnlFill";
             this.kpnlFill.Size = new System.Drawing.Size(1204, 635);
             this.kpnlFill.TabIndex = 3;
+            // 
+            // kryptonNavigator1
+            // 
+            this.kryptonNavigator1.Bar.ItemAlignment = ComponentFactory.Krypton.Toolkit.RelativePositionAlign.Center;
+            this.kryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonNavigator1.Name = "kryptonNavigator1";
+            this.kryptonNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarCheckButtonOnly;
+            this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
+            this.kryptonPage1,
+            this.kryptonPage2});
+            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonNavigator1.Size = new System.Drawing.Size(1204, 635);
+            this.kryptonNavigator1.TabIndex = 0;
+            this.kryptonNavigator1.Text = "kryptonNavigator1";
+            // 
+            // kryptonPage1
+            // 
+            this.kryptonPage1.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage1.Flags = 65534;
+            this.kryptonPage1.LastVisibleSet = true;
+            this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage1.Name = "kryptonPage1";
+            this.kryptonPage1.Size = new System.Drawing.Size(1202, 603);
+            this.kryptonPage1.Text = "kryptonPage1";
+            this.kryptonPage1.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage1.UniqueName = "212F2C57626D441D9E9F55D171D9880E";
+            // 
+            // kryptonPage2
+            // 
+            this.kryptonPage2.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage2.Flags = 65534;
+            this.kryptonPage2.LastVisibleSet = true;
+            this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage2.Name = "kryptonPage2";
+            this.kryptonPage2.Size = new System.Drawing.Size(100, 100);
+            this.kryptonPage2.Text = "kryptonPage2";
+            this.kryptonPage2.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage2.UniqueName = "068A60B333A74F2F7989620AA556BB8B";
             // 
             // MainWindow
             // 
@@ -152,6 +200,11 @@
             this.ss.ResumeLayout(false);
             this.ss.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlFill)).EndInit();
+            this.kpnlFill.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonNavigator1)).EndInit();
+            this.kryptonNavigator1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -166,5 +219,8 @@
         private System.Windows.Forms.StatusStrip ss;
         private System.Windows.Forms.ToolStripStatusLabel tsslCurrentStatus;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlFill;
+        private ComponentFactory.Krypton.Navigator.KryptonNavigator kryptonNavigator1;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage1;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage2;
     }
 }

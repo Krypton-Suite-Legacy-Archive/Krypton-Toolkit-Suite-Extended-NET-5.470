@@ -6,6 +6,12 @@
 
 =======
 
+| NuGet | Current NuGet Version | Github License |
+|---|---|---|
+| [![NuGet](https://img.shields.io/badge/NuGet-Krypton%20Extended%20.NET%205.470-brightgreen.svg)](https://www.nuget.org/packages/KryptonExtendedToolkit5470/) | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470.svg) | ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470.svg)
+
+=======
+
 ## NOTE: 20/06/2018 Background menu colours will be implemented in the coming weeks. Stay tuned for updates!
 
 ======
@@ -14,9 +20,41 @@
 
 ## In order to compile the code, you MUST restore/update the NuGet packages in order to build successfully!
 
+## [Toolkit Examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Examples.md)
+
 ======
 
-## 01-02-2019 Extended Renderer Integration
+## 2019-04-01 Build 855 April Update
+* Build 855 (build date Monday 1st, April 2019) is now available on NuGet
+* New palette theme selector
+* New `KryptonToastNotification` window
+* New circular progressbar control
+* Random password generator (for use on future user creation dialog)
+* New developer API tools for internal development of the toolkit
+* Begun re-working the `Palette Explorer` application
+* New `Palette Upgrade Tool` application for upgrading any older palette `xml` files
+* Upgraded to Krypton Toolkit Suite - version: **5.470.794**
+* Theme `*.xml` files are now available to view and edit in the Visual Studio solution under the **themes** folder
+* All theme files are now bundled with the NuGet package
+
+======
+
+## 2019-03-01 Build 796
+* Build 796 (build date Friday 1st, March 2019) is now available on NuGet
+* New colour wheel colour dialog
+* New toggle switch control
+* New rounded textbox control
+* Integrated `ookii.dialogs` code
+* Working on new folder browser dialog and file browser
+* New theme chooser component (proof of concept for a more sophisticated UI for next update)
+* Groundwork for new elements for next update
+* Upgraded to Krypton Toolkit Suite - version: **5.470.720**
+* Removed **LinqBridge** requirement, [#48](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/48)
+* Reorganised `Playground` test application
+
+======
+
+## 2019-02-01 Extended Renderer Integration
 * Fully merged the `ExtendedRenderer` project codebase
 * Tidy up control placement in code
 * Upgraded to Krypton Toolkit Suite - version: **5.470.717**

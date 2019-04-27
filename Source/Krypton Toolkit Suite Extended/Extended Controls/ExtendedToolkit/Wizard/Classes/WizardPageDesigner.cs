@@ -29,9 +29,9 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Classes
 
             DesignerTransaction dt = h.CreateTransaction("Remove Page");
 
-            if (page.Parent is Controls.Wizard)
+            if (page.Parent is Controls.KryptonWizard)
             {
-                Controls.Wizard wiz = page.Parent as Controls.Wizard;
+                Controls.KryptonWizard wiz = page.Parent as Controls.KryptonWizard;
 
                 c.OnComponentChanging(wiz, null);
                 //Drop from wizard

@@ -281,6 +281,29 @@ namespace PaletteExplorer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;!--Created by exporting the settings of a KryptonPalette instance.--&gt;
+        ///&lt;!--For more information about Krypton visit www.ComponentFactory.com--&gt;
+        ///&lt;!--WARNING: Modifying this file may render it invalid for importing.--&gt;
+        ///&lt;KryptonPalette Version=&quot;18&quot; Generated=&quot;{0}&quot;&gt;
+        ///  &lt;Properties&gt;
+        ///    &lt;ButtonStyles&gt;
+        ///      &lt;ButtonCommon&gt;
+        ///        &lt;StateCommon&gt;
+        ///          &lt;Back&gt;
+        ///            &lt;Color1 Type=&quot;Color&quot; Value=&quot;{1}&quot; /&gt;
+        ///          &lt;/Back&gt;
+        ///          &lt;Content&gt;
+        ///            &lt;ShortText&gt;
+        ///          [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string NewPaletteFile {
+            get {
+                return ResourceManager.GetString("NewPaletteFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Open_File_16_x_16 {
@@ -393,6 +416,36 @@ namespace PaletteExplorer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Redo_128_x_128 {
+            get {
+                object obj = ResourceManager.GetObject("Redo_128_x_128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Redo_16_x_16 {
+            get {
+                object obj = ResourceManager.GetObject("Redo_16_x_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Redo_32_x_32 {
+            get {
+                object obj = ResourceManager.GetObject("Redo_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Refresh_16_x_16 {
             get {
                 object obj = ResourceManager.GetObject("Refresh_16_x_16", resourceCulture);
@@ -476,6 +529,36 @@ namespace PaletteExplorer.Properties {
         internal static System.Drawing.Bitmap Text_Colour_v1_32_x_32 {
             get {
                 object obj = ResourceManager.GetObject("Text_Colour_v1_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Undo_128_x_128 {
+            get {
+                object obj = ResourceManager.GetObject("Undo_128_x_128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Undo_16_x_16 {
+            get {
+                object obj = ResourceManager.GetObject("Undo_16_x_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Undo_32_x_32 {
+            get {
+                object obj = ResourceManager.GetObject("Undo_32_x_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,9 +1,11 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Core.Enumerations;
+using Core.Settings.Classes;
+using Core.Classes;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Core.Enumerations;
-using Core.Settings.Classes;
+using Core;
 
 namespace Classes.Colours
 {
@@ -405,6 +407,7 @@ namespace Classes.Colours
                         globalStringSettingsManager.SaveStringSettings();
                         break;
                     case SettingTypes.INTEGER:
+                        colourIntegerSettingsManager.SaveColourIntegerSettings();
                         break;
                     default:
                         break;
@@ -412,8 +415,7 @@ namespace Classes.Colours
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
         }
         #endregion

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GlobalUtilities.Classes
+namespace Core.Classes
 {
     public class TranslationMethods
     {

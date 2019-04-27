@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GlobalUtilities.Properties {
+namespace Core.Properties {
     using System;
     
     

@@ -15,4 +15,29 @@
         GREEN,
         BLUE
     }
+
+    public enum SupportedExplorerTypes
+    {
+        FILE,
+        FOLDER
+    }
+
+    public enum DevelopmentState
+    {
+        PREALPHA,
+        ALPHA,
+        BETA,
+        RTM,
+        CURRENT,
+        EOL
+    }
+
+    public enum PaletteFileEditorStatusIndicator
+    {
+        CREATENEWFILE,
+        CHANGEZOOMLEVEL,
+        READY,
+        OPENFILE,
+        SAVEFILE
+    }
 }

@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Core.Classes;
 using GlobalUtilities.Classes;
 using KryptonExtendedToolkit.Base.Code;
 using System;

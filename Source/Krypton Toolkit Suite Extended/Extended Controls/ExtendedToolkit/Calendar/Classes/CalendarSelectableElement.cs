@@ -13,7 +13,7 @@ namespace ExtendedControls.ExtendedToolkit.Calendar.Classes
         #region Fields
         private KryptonCalendar _calendar;
         private Rectangle _bounds;
-        private DateTime _date;
+        private DateTime _date = DateTime.Now;
         private bool _selected;
         #endregion
 

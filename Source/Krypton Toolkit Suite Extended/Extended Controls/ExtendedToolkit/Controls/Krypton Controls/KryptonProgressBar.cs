@@ -3,10 +3,11 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 {
-    [System.Drawing.ToolboxBitmap(typeof(ProgressBar)), ToolboxItem(true)]
+    [ToolboxBitmap(typeof(ProgressBar)), ToolboxItem(true), ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.All)]
     public class KryptonProgressBar : StandardControls.Common.ProgressBar
     {
         private Color _foreColour = Color.Empty;

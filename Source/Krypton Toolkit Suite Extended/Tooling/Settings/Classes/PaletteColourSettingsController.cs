@@ -1,4 +1,4 @@
-﻿using GlobalUtilities.Classes;
+﻿using Core.Classes;
 using System;
 using System.Drawing;
 

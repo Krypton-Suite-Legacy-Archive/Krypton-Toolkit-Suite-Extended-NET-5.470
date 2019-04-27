@@ -3,7 +3,7 @@ using ComponentFactory.Krypton.Toolkit;
 using Core.Classes.Other;
 using Core.Settings.Classes;
 using Core.UX;
-using GlobalUtilities.Interfaces;
+using Core.Interfaces;
 using KryptonExtendedToolkit.Base.Code;
 using PaletteEditor.Classes;
 using PaletteEditor.UX.New;

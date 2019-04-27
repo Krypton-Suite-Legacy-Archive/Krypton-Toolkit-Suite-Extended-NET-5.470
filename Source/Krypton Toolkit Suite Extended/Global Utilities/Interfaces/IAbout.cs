@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace GlobalUtilities.Interfaces
+namespace Core.Interfaces
 {
     public interface IAbout
     {

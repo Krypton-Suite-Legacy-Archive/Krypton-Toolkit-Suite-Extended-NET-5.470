@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ExtendedControls.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DebugMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PaletteExplorerLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultXCoordinate" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DefaultYCoordinate" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="GlobalManager" Type="ComponentFactory.Krypton.Toolkit.KryptonManager" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultTheme" Type="ComponentFactory.Krypton.Toolkit.PaletteMode" Scope="User">
+      <Value Profile="(Default)">Office 2010 - Blue</Value>
+    </Setting>
+    <Setting Name="VirusTotalAPIKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">80ada9eb0fd6d87e23d89cf1b4ba84ebd13a99053ec3c2edd26059af2e146ba0</Value>
+    </Setting>
+    <Setting Name="VirusTotalUseTLS" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

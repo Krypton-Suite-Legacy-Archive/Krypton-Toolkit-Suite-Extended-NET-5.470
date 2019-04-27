@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace GlobalUtilities.Classes
+namespace Core.Classes
 {
     /// <summary>
     /// Provides some methods from the user32 and uxtheme libraries.

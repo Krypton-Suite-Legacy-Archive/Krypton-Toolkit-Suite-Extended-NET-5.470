@@ -1,6 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using Core.Classes.Options.Theming;
-using Core.Classes.Theming;
 using Core.Settings.Classes;
 using System;
 using System.Windows.Forms;
@@ -1062,9 +1061,9 @@ namespace Core.UX.Options
         #region Variables
         private KryptonManager _manager = new KryptonManager();
         private KryptonPalette _palette = new KryptonPalette();
-        private ThemeManager _themeManager = new ThemeManager();
+        private Classes.Theming.ThemeManager _themeManager = new Classes.Theming.ThemeManager();
         private ThemingLogic _themingLogic = new ThemingLogic();
-        PaletteThemeSettingsManager _paletteThemeSettingsManager = new PaletteThemeSettingsManager();
+        private PaletteThemeSettingsManager _paletteThemeSettingsManager = new PaletteThemeSettingsManager();
         #endregion
 
         public GlobalOptionsMenu()
@@ -1097,7 +1096,7 @@ namespace Core.UX.Options
 
             ktxtCustomPath.Text = _palette.GetCustomisedKryptonPaletteFilePath();
 
-            ThemeManager.SetCustomTheme(_manager, _palette, ktxtCustomPath.Text);
+            Classes.Theming.ThemeManager.SetCustomTheme(_manager, _palette, ktxtCustomPath.Text);
         }
 
         private void kcmbPaletteTheme_SelectedIndexChanged(object sender, EventArgs e)
@@ -1106,61 +1105,61 @@ namespace Core.UX.Options
 
             if (kcmbPaletteTheme.Text == "Professional System")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.ProfessionalSystem, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.ProfessionalSystem, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Professional Office 2003")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.ProfessionalOffice2003, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.ProfessionalOffice2003, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Office 2007 Black")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.Office2007Black, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.Office2007Black, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Office 2007 Blue")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.Office2007Blue, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.Office2007Blue, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Office 2007 Silver")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.Office2007Silver, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.Office2007Silver, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Office 2010 Black")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.Office2010Black, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.Office2010Black, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Office 2010 Blue")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.Office2010Blue, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.Office2010Blue, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Office 2010 Silver")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.Office2010Silver, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.Office2010Silver, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Office 2013")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.Office2013, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.Office2013, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Office 2013 White")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.Office2013White, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.Office2013White, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Sparkle Blue")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.SparkleBlue, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.SparkleBlue, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Sparkle Orange")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.SparkleOrange, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.SparkleOrange, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Sparkle Purple")
             {
-                ThemeManager.SwitchTheme(PaletteModeManager.SparklePurple, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.SparklePurple, _manager);
             }
             else if (kcmbPaletteTheme.Text == "Custom")
             {
-                ThemeManager.EnableCustomThemeControls(klblCustomTheme, ktxtCustomPath, kbtnImportPalette, true);
+                Classes.Theming.ThemeManager.EnableCustomThemeControls(klblCustomTheme, ktxtCustomPath, kbtnImportPalette, true);
 
-                ThemeManager.SwitchTheme(PaletteModeManager.Custom, _manager);
+                Classes.Theming.ThemeManager.SwitchTheme(PaletteModeManager.Custom, _manager);
             }
         }
 

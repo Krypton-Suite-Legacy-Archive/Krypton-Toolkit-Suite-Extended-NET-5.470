@@ -7,12 +7,12 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Classes
     /// </summary>
     public class PageCollection : CollectionBase
     {
-        private Controls.Wizard vParent;
+        private Controls.KryptonWizard vParent;
         /// <summary>
         /// Constructor requires the  wizard that owns this collection
         /// </summary>
         /// <param name="parent">Wizard</param>
-        public PageCollection(Controls.Wizard parent) : base()
+        public PageCollection(Controls.KryptonWizard parent) : base()
         {
             vParent = parent;
         }
@@ -20,7 +20,7 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Classes
         /// <summary>
         /// Returns the wizard that owns this collection
         /// </summary>
-        public Controls.Wizard Parent
+        public Controls.KryptonWizard Parent
         {
             get
             {

@@ -6,8 +6,8 @@ using System.Windows.Forms;
 
 using ComponentFactory.Krypton.Toolkit;
 
+using Core.Classes;
 using GlobalUtilities.Classes;
-
 using KryptonApplicationUpdater.Classes;
 using KryptonApplicationUpdater.Classes.SettingsManager;
 

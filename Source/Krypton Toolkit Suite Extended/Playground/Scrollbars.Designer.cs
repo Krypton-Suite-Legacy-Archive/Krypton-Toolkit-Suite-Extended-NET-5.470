@@ -31,13 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.kryptonScrollBar1 = new ExtendedControls.ExtendedToolkit.Controls.ScrollBar.CustomScrollBar.KryptonScrollBar();
             this.kryptonScrollBar2 = new ExtendedControls.ExtendedToolkit.Controls.ScrollBar.CustomScrollBar.KryptonScrollBar();
-            this.kcmbThemeSelector = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.kcmbThemeSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
-            this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonScrollBar1
@@ -55,36 +51,17 @@
             this.kryptonScrollBar2.Size = new System.Drawing.Size(200, 19);
             this.kryptonScrollBar2.TabIndex = 1;
             // 
-            // kcmbThemeSelector
-            // 
-            this.kcmbThemeSelector.DropDownWidth = 121;
-            this.kcmbThemeSelector.Location = new System.Drawing.Point(188, 88);
-            this.kcmbThemeSelector.Name = "kcmbThemeSelector";
-            this.kcmbThemeSelector.Size = new System.Drawing.Size(288, 27);
-            this.kcmbThemeSelector.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcmbThemeSelector.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcmbThemeSelector.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcmbThemeSelector.TabIndex = 2;
-            // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.kcmbThemeSelector);
-            this.kryptonPanel1.Controls.Add(this.kryptonLabel1);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(800, 450);
             this.kryptonPanel1.TabIndex = 3;
             // 
-            // kryptonLabel1
+            // kryptonManager1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(52, 88);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(130, 26);
-            this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.TabIndex = 0;
-            this.kryptonLabel1.Values.Text = "Chosen Theme:";
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Blue;
             // 
             // Scrollbars
             // 
@@ -97,10 +74,7 @@
             this.Name = "Scrollbars";
             this.Text = "Scrollbars";
             this.Load += new System.EventHandler(this.Scrollbars_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.kcmbThemeSelector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
-            this.kryptonPanel1.ResumeLayout(false);
-            this.kryptonPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -109,9 +83,7 @@
 
         private ExtendedControls.ExtendedToolkit.Controls.ScrollBar.CustomScrollBar.KryptonScrollBar kryptonScrollBar1;
         private ExtendedControls.ExtendedToolkit.Controls.ScrollBar.CustomScrollBar.KryptonScrollBar kryptonScrollBar2;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kcmbThemeSelector;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonManager kryptonManager1;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }

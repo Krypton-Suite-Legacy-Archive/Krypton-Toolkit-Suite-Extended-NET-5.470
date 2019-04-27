@@ -8,6 +8,7 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Classes
     /// <summary>
     /// 
     /// </summary>
+    [ToolboxItem(false)]
     [Designer(typeof(WizardPageDesigner))]
     public class WizardPage : KryptonPanel
     {
@@ -36,7 +37,7 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Classes
         /// </summary>
         /// <param name="wiz">Wizard to pass into the sender argument</param>
         /// <returns>Index of Page that the event handlers would like to see next</returns>
-        public int OnCloseFromBack(Controls.Wizard wiz)
+        public int OnCloseFromBack(Controls.KryptonWizard wiz)
         {
             //Event args thinks that the next pgae will be the one before this one
             PageEventArgs e = new PageEventArgs(wiz.PageIndex - 1, wiz.Pages);
@@ -51,7 +52,7 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Classes
         /// Fires the CloseFromNextEvent
         /// </summary>
         /// <param name="wiz">Sender</param>
-        public int OnCloseFromNext(Controls.Wizard wiz)
+        public int OnCloseFromNext(Controls.KryptonWizard wiz)
         {
             //Event args thinks that the next pgae will be the one before this one
             PageEventArgs e = new PageEventArgs(wiz.PageIndex + 1, wiz.Pages);
@@ -66,7 +67,7 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Classes
         /// Fires the showFromBack event
         /// </summary>
         /// <param name="wiz">sender</param>
-        public void OnShowFromBack(Controls.Wizard wiz)
+        public void OnShowFromBack(Controls.KryptonWizard wiz)
         {
             if (ShowFromBack != null)
                 ShowFromBack(wiz, EventArgs.Empty);
@@ -76,7 +77,7 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Classes
         /// Fires the showFromNext event
         /// </summary>
         /// <param name="wiz">Sender</param>
-        public void OnShowFromNext(Controls.Wizard wiz)
+        public void OnShowFromNext(Controls.KryptonWizard wiz)
         {
             if (ShowFromNext != null)
                 ShowFromNext(wiz, EventArgs.Empty);

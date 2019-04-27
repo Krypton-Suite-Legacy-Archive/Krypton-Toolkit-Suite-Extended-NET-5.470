@@ -471,6 +471,8 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
 
             _helpInformation = helpInformation;
 
+            TopMost = topMost;
+
             MessageBoxTypeface = messageboxTypeface ?? new Font(@"Segoe UI", 12F);
 
             ShowDoNotShowAgainOption = showDoNotShowAgainOption;
@@ -511,13 +513,20 @@ namespace ExtendedControls.ExtendedToolkit.MessageBoxes.UI
 
             SetUpTimeOutDelayTimer(useTimeOutOption, timeOutDelay, new Timer());
 
-            TopMost = topMost;
-
             UpdateTextExtra(showCtrlCopy);
 
             // Finally calculate and set form sizing
             UpdateSizing(showOwner);
 
+            // Arrange the 'Z' order, based on topmost
+            if (topMost)
+            {
+                BringToFront();
+            }
+            else
+            {
+                SendToBack();
+            }
         }
 
         /// <summary>

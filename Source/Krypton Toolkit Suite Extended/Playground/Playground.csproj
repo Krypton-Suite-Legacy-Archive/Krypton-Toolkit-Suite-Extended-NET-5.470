@@ -57,6 +57,9 @@
     <Compile Include="CalandarAndControls.Designer.cs">
       <DependentUpon>CalandarAndControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="CircularProgressBarTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ColourTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,11 +75,20 @@
     <Compile Include="CommandLinkStyles.Designer.cs">
       <DependentUpon>CommandLinkStyles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlashingLabelTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LineNumberedTextBox.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
@@ -101,11 +113,23 @@
     <Compile Include="Scrollbars.Designer.cs">
       <DependentUpon>Scrollbars.cs</DependentUpon>
     </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestContextMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestRig.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WizardTest.cs">
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="CalandarAndControls.resx">
       <DependentUpon>CalandarAndControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CircularProgressBarTest.resx">
+      <DependentUpon>CircularProgressBarTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ColourTest.resx">
       <DependentUpon>ColourTest.cs</DependentUpon>
@@ -116,8 +140,17 @@
     <EmbeddedResource Include="CommandLinkStyles.resx">
       <DependentUpon>CommandLinkStyles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlashingLabelTest.resx">
+      <DependentUpon>FlashingLabelTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LineNumberedTextBox.resx">
+      <DependentUpon>LineNumberedTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -143,6 +176,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Scrollbars.resx">
       <DependentUpon>Scrollbars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestRig.resx">
+      <DependentUpon>TestRig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WizardTest.resx">
       <DependentUpon>WizardTest.cs</DependentUpon>
@@ -177,6 +216,10 @@
       <Project>{2A10C696-45AD-48AA-8EAD-2CB322672972}</Project>
       <Name>Krypton Outlook Grid</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Palette Explorer\Palette Explorer.csproj">
+      <Project>{246b3b50-3a2d-4a6a-bb69-e56d94108ac1}</Project>
+      <Name>Palette Explorer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tooling\Core.csproj">
       <Project>{efb997fb-1e05-444b-ba02-16c004e1a111}</Project>
       <Name>Core</Name>
@@ -184,13 +227,20 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.717</Version>
+      <Version>5.470.794</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\..\Assets\PNG\32 x 32\KR 32 x 32 Orange.png">
       <Link>Resources\KR 32 x 32 Orange.png</Link>
     </Content>
+    <None Include="Resources\Critical 128 x 128.png" />
+    <None Include="Resources\Hand 128 x 128.png" />
+    <None Include="Resources\Information 128 x 128.png" />
+    <None Include="Resources\Ok 128 x 128.png" />
+    <None Include="Resources\Question 128 x 128.png" />
+    <None Include="Resources\Stop 128 x 128.png" />
+    <None Include="Resources\Warning 128 x 128.png" />
     <None Include="Resources\KR 48 x 48 Orange.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

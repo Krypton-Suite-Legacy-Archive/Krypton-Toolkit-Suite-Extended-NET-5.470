@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Core.Classes.Other;
 using Core.Settings.Classes;
 using Core.UX;
-using GlobalUtilities.Interfaces;
+using Core.Interfaces;
 
 namespace PaletteEditor.UX.New
 {
