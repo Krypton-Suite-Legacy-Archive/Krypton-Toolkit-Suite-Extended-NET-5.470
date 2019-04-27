@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using ExtendedControls.ExtendedToolkit.Controls.KryptonControls;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 
 namespace Playground
@@ -50,7 +51,6 @@ namespace Playground
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues15 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues16 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues17 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues18 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             this.ms = new System.Windows.Forms.MenuStrip();
             this.recentFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
@@ -106,7 +106,6 @@ namespace Playground
             this.modernProgressBar1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.ModernProgressBar();
             this.circularPictureBox1 = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.kryptonCommandLinkButton2 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkButton();
-            this.kryptonCommandLinkVersion21 = new ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion2();
             this.kryptonPromptTextBox1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             this.kcbtnBackwardDiagonal = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.kcbtnForwardDiagonal = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
@@ -146,20 +145,17 @@ namespace Playground
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
-            this.circularPictureBox1 = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.kryptonSlideButton1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonSlideButton();
-            this.modernProgressBar1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.ModernProgressBar();
-            this.kryptonSearchBox1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonSearchBox();
+            this.kryptonSlideButton1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonSliderButton();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbGradientDirection)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.tsTest.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonCheckSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ms
@@ -279,7 +275,7 @@ namespace Playground
             this.newToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripMenuItem1.Name = "newToolStripMenuItem1";
             this.newToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
+            this.newToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.newToolStripMenuItem1.Text = "&New";
             // 
             // openToolStripMenuItem1
@@ -288,13 +284,13 @@ namespace Playground
             this.openToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem1.Name = "openToolStripMenuItem1";
             this.openToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
+            this.openToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem1.Text = "&Open";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(171, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
             // 
             // saveToolStripMenuItem1
             // 
@@ -302,26 +298,26 @@ namespace Playground
             this.saveToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
             this.saveToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
+            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem1.Text = "&Save";
             // 
             // saveAsToolStripMenuItem1
             // 
             this.saveAsToolStripMenuItem1.Name = "saveAsToolStripMenuItem1";
-            this.saveAsToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
+            this.saveAsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.saveAsToolStripMenuItem1.Text = "Save &As";
             this.saveAsToolStripMenuItem1.Click += new System.EventHandler(this.saveAsToolStripMenuItem1_Click);
             // 
             // recentDocumentsToolStripMenuItem
             // 
             this.recentDocumentsToolStripMenuItem.Name = "recentDocumentsToolStripMenuItem";
-            this.recentDocumentsToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.recentDocumentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.recentDocumentsToolStripMenuItem.Text = "Re&cent Documents";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(171, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(177, 6);
             // 
             // printToolStripMenuItem1
             // 
@@ -329,7 +325,7 @@ namespace Playground
             this.printToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
             this.printToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
+            this.printToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.printToolStripMenuItem1.Text = "&Print";
             // 
             // printPreviewToolStripMenuItem1
@@ -337,18 +333,18 @@ namespace Playground
             this.printPreviewToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewToolStripMenuItem1.Image")));
             this.printPreviewToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printPreviewToolStripMenuItem1.Name = "printPreviewToolStripMenuItem1";
-            this.printPreviewToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
+            this.printPreviewToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.printPreviewToolStripMenuItem1.Text = "Print Pre&view";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(171, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(174, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem1.Text = "E&xit";
             // 
             // editToolStripMenuItem1
@@ -370,20 +366,20 @@ namespace Playground
             // 
             this.undoToolStripMenuItem1.Name = "undoToolStripMenuItem1";
             this.undoToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.undoToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.undoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.undoToolStripMenuItem1.Text = "&Undo";
             // 
             // redoToolStripMenuItem1
             // 
             this.redoToolStripMenuItem1.Name = "redoToolStripMenuItem1";
             this.redoToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.redoToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.redoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.redoToolStripMenuItem1.Text = "&Redo";
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(177, 6);
             // 
             // cutToolStripMenuItem1
             // 
@@ -391,7 +387,7 @@ namespace Playground
             this.cutToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutToolStripMenuItem1.Name = "cutToolStripMenuItem1";
             this.cutToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.cutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.cutToolStripMenuItem1.Text = "Cu&t";
             // 
             // copyToolStripMenuItem1
@@ -400,7 +396,7 @@ namespace Playground
             this.copyToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyToolStripMenuItem1.Name = "copyToolStripMenuItem1";
             this.copyToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.copyToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.copyToolStripMenuItem1.Text = "&Copy";
             // 
             // pasteToolStripMenuItem1
@@ -409,18 +405,18 @@ namespace Playground
             this.pasteToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteToolStripMenuItem1.Name = "pasteToolStripMenuItem1";
             this.pasteToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.pasteToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.pasteToolStripMenuItem1.Text = "&Paste";
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(177, 6);
             // 
             // selectAllToolStripMenuItem1
             // 
             this.selectAllToolStripMenuItem1.Name = "selectAllToolStripMenuItem1";
-            this.selectAllToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.selectAllToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.selectAllToolStripMenuItem1.Text = "Select &All";
             // 
             // toolsToolStripMenuItem1
@@ -437,7 +433,7 @@ namespace Playground
             this.adobeColourDialogToolStripMenuItem,
             this.aeroWizardToolStripMenuItem});
             this.samplesToolStripMenuItem.Name = "samplesToolStripMenuItem";
-            this.samplesToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.samplesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.samplesToolStripMenuItem.Text = "&Samples";
             // 
             // adobeColourDialogToolStripMenuItem
@@ -468,30 +464,30 @@ namespace Playground
             // contentsToolStripMenuItem1
             // 
             this.contentsToolStripMenuItem1.Name = "contentsToolStripMenuItem1";
-            this.contentsToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.contentsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.contentsToolStripMenuItem1.Text = "&Contents";
             // 
             // indexToolStripMenuItem1
             // 
             this.indexToolStripMenuItem1.Name = "indexToolStripMenuItem1";
-            this.indexToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.indexToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.indexToolStripMenuItem1.Text = "&Index";
             // 
             // searchToolStripMenuItem1
             // 
             this.searchToolStripMenuItem1.Name = "searchToolStripMenuItem1";
-            this.searchToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.searchToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.searchToolStripMenuItem1.Text = "&Search";
             // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(168, 6);
+            this.toolStripSeparator11.Size = new System.Drawing.Size(177, 6);
             // 
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem1.Text = "&About...";
             // 
             // checkForUpdatesToolStripMenuItem1
@@ -499,7 +495,7 @@ namespace Playground
             this.checkForUpdatesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.testsToolStripMenuItem});
             this.checkForUpdatesToolStripMenuItem1.Name = "checkForUpdatesToolStripMenuItem1";
-            this.checkForUpdatesToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.checkForUpdatesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.checkForUpdatesToolStripMenuItem1.Text = "&Check for Updates";
             // 
             // testsToolStripMenuItem
@@ -532,7 +528,6 @@ namespace Playground
             this.kryptonPanel1.Controls.Add(this.modernProgressBar1);
             this.kryptonPanel1.Controls.Add(this.circularPictureBox1);
             this.kryptonPanel1.Controls.Add(this.kryptonCommandLinkButton2);
-            this.kryptonPanel1.Controls.Add(this.kryptonCommandLinkVersion21);
             this.kryptonPanel1.Controls.Add(this.kryptonPromptTextBox1);
             this.kryptonPanel1.Controls.Add(this.kcbtnBackwardDiagonal);
             this.kryptonPanel1.Controls.Add(this.kcbtnForwardDiagonal);
@@ -553,7 +548,7 @@ namespace Playground
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1166, 659);
+            this.kryptonPanel1.Size = new System.Drawing.Size(942, 457);
             this.kryptonPanel1.TabIndex = 2;
             // 
             // kryptonButton1
@@ -586,7 +581,7 @@ namespace Playground
             this.roundedTextbox1.Brush = System.Drawing.Color.White;
             this.roundedTextbox1.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.roundedTextbox1.ForeColor = System.Drawing.Color.DimGray;
-            this.roundedTextbox1.Location = new System.Drawing.Point(827, 168);
+            this.roundedTextbox1.Location = new System.Drawing.Point(663, 168);
             this.roundedTextbox1.Name = "roundedTextbox1";
             this.roundedTextbox1.Size = new System.Drawing.Size(197, 33);
             this.roundedTextbox1.TabIndex = 43;
@@ -612,7 +607,7 @@ namespace Playground
             // 
             this.circularPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.circularPictureBox1.Image = global::Playground.Properties.Resources.KR_32_x_32_Orange;
-            this.circularPictureBox1.Location = new System.Drawing.Point(827, 28);
+            this.circularPictureBox1.Location = new System.Drawing.Point(581, 151);
             this.circularPictureBox1.Name = "circularPictureBox1";
             this.circularPictureBox1.Size = new System.Drawing.Size(69, 50);
             this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -622,12 +617,14 @@ namespace Playground
             // kryptonCommandLinkButton2
             // 
             this.kryptonCommandLinkButton2.CommandLinkImageValue.Image = null;
-            this.kryptonCommandLinkButton2.Location = new System.Drawing.Point(902, 23);
+            this.kryptonCommandLinkButton2.CommandLinkTextValues.Description = "  \"Click Me\" to see new examples";
+            this.kryptonCommandLinkButton2.CommandLinkTextValues.Heading = "Command Link (Old)";
+            this.kryptonCommandLinkButton2.Location = new System.Drawing.Point(325, 146);
             this.kryptonCommandLinkButton2.Name = "kryptonCommandLinkButton2";
             this.kryptonCommandLinkButton2.OverrideFocus.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.kryptonCommandLinkButton2.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-                                                                                                                                       | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
-                                                                                                                                      | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonCommandLinkButton2.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonCommandLinkButton2.OverrideFocus.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.kryptonCommandLinkButton2.Size = new System.Drawing.Size(250, 55);
             this.kryptonCommandLinkButton2.StateCommon.Content.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
@@ -640,21 +637,6 @@ namespace Playground
             popupPositionValues4.PlacementTarget = null;
             this.kryptonCommandLinkButton2.ToolTipValues.ToolTipPosition = popupPositionValues4;
             this.kryptonCommandLinkButton2.Click += new System.EventHandler(this.kryptonCommandLinkButton2_Click);
-            // 
-            // kryptonCommandLinkVersion21
-            // 
-            this.kryptonCommandLinkVersion21.Location = new System.Drawing.Point(503, 401);
-            this.kryptonCommandLinkVersion21.Name = "kryptonCommandLinkVersion21";
-            this.kryptonCommandLinkVersion21.ShowUACShield = true;
-            this.kryptonCommandLinkVersion21.Size = new System.Drawing.Size(252, 55);
-            this.kryptonCommandLinkVersion21.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonCommandLinkVersion21.TabIndex = 33;
-            popupPositionValues5.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues5.PlacementTarget = null;
-            this.kryptonCommandLinkVersion21.ToolTipValues.ToolTipPosition = popupPositionValues5;
-            this.kryptonCommandLinkVersion21.Values.ExtraText = "Here be the extra Text";
-            this.kryptonCommandLinkVersion21.Values.Image = global::Playground.Properties.Resources.KR_32_x_32_Orange;
-            this.kryptonCommandLinkVersion21.Values.Text = "Command Link V2";
             // 
             // kryptonPromptTextBox1
             // 
@@ -674,9 +656,9 @@ namespace Playground
             this.kcbtnBackwardDiagonal.Name = "kcbtnBackwardDiagonal";
             this.kcbtnBackwardDiagonal.Size = new System.Drawing.Size(150, 25);
             this.kcbtnBackwardDiagonal.TabIndex = 19;
-            popupPositionValues6.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues6.PlacementTarget = null;
-            this.kcbtnBackwardDiagonal.ToolTipValues.ToolTipPosition = popupPositionValues6;
+            popupPositionValues5.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues5.PlacementTarget = null;
+            this.kcbtnBackwardDiagonal.ToolTipValues.ToolTipPosition = popupPositionValues5;
             this.kcbtnBackwardDiagonal.Values.Text = "&Backward Diagonal";
             this.kcbtnBackwardDiagonal.Click += new System.EventHandler(this.kcbtnBackwardDiagonal_Click);
             // 
@@ -687,9 +669,9 @@ namespace Playground
             this.kcbtnForwardDiagonal.Name = "kcbtnForwardDiagonal";
             this.kcbtnForwardDiagonal.Size = new System.Drawing.Size(150, 25);
             this.kcbtnForwardDiagonal.TabIndex = 18;
-            popupPositionValues7.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues7.PlacementTarget = null;
-            this.kcbtnForwardDiagonal.ToolTipValues.ToolTipPosition = popupPositionValues7;
+            popupPositionValues6.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues6.PlacementTarget = null;
+            this.kcbtnForwardDiagonal.ToolTipValues.ToolTipPosition = popupPositionValues6;
             this.kcbtnForwardDiagonal.Values.Text = "&Forward Diagonal";
             this.kcbtnForwardDiagonal.Click += new System.EventHandler(this.kcbtnForwardDiagonal_Click);
             // 
@@ -699,9 +681,9 @@ namespace Playground
             this.kcbtnVertical.Name = "kcbtnVertical";
             this.kcbtnVertical.Size = new System.Drawing.Size(150, 25);
             this.kcbtnVertical.TabIndex = 17;
-            popupPositionValues8.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues8.PlacementTarget = null;
-            this.kcbtnVertical.ToolTipValues.ToolTipPosition = popupPositionValues8;
+            popupPositionValues7.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues7.PlacementTarget = null;
+            this.kcbtnVertical.ToolTipValues.ToolTipPosition = popupPositionValues7;
             this.kcbtnVertical.Values.Text = "Ver&tical";
             this.kcbtnVertical.Click += new System.EventHandler(this.kcbtnVertical_Click);
             // 
@@ -711,9 +693,9 @@ namespace Playground
             this.kcbtnHorizontal.Name = "kcbtnHorizontal";
             this.kcbtnHorizontal.Size = new System.Drawing.Size(150, 25);
             this.kcbtnHorizontal.TabIndex = 16;
-            popupPositionValues9.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues9.PlacementTarget = null;
-            this.kcbtnHorizontal.ToolTipValues.ToolTipPosition = popupPositionValues9;
+            popupPositionValues8.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues8.PlacementTarget = null;
+            this.kcbtnHorizontal.ToolTipValues.ToolTipPosition = popupPositionValues8;
             this.kcbtnHorizontal.Values.Text = "&Horizontal";
             this.kcbtnHorizontal.Click += new System.EventHandler(this.kcbtnHorizontal_Click);
             // 
@@ -727,9 +709,9 @@ namespace Playground
             this.kcmbGradientDirection.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbGradientDirection.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbGradientDirection.TabIndex = 15;
-            popupPositionValues10.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues10.PlacementTarget = null;
-            this.kcmbGradientDirection.ToolTipValues.ToolTipPosition = popupPositionValues10;
+            popupPositionValues9.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues9.PlacementTarget = null;
+            this.kcmbGradientDirection.ToolTipValues.ToolTipPosition = popupPositionValues9;
             this.kcmbGradientDirection.SelectedIndexChanged += new System.EventHandler(this.kcmbGradientDirection_SelectedIndexChanged);
             this.kcmbGradientDirection.TextChanged += new System.EventHandler(this.kcmbGradientDirection_TextChanged);
             // 
@@ -740,9 +722,9 @@ namespace Playground
             this.kryptonLabel1.Size = new System.Drawing.Size(149, 26);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 14;
-            popupPositionValues11.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues11.PlacementTarget = null;
-            this.kryptonLabel1.ToolTipValues.ToolTipPosition = popupPositionValues11;
+            popupPositionValues10.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues10.PlacementTarget = null;
+            this.kryptonLabel1.ToolTipValues.ToolTipPosition = popupPositionValues10;
             this.kryptonLabel1.Values.Text = "Gradient Direction:";
             // 
             // kcbtnTextColour
@@ -752,9 +734,9 @@ namespace Playground
             this.kcbtnTextColour.Name = "kcbtnTextColour";
             this.kcbtnTextColour.Size = new System.Drawing.Size(136, 25);
             this.kcbtnTextColour.TabIndex = 13;
-            popupPositionValues12.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues12.PlacementTarget = null;
-            this.kcbtnTextColour.ToolTipValues.ToolTipPosition = popupPositionValues12;
+            popupPositionValues11.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues11.PlacementTarget = null;
+            this.kcbtnTextColour.ToolTipValues.ToolTipPosition = popupPositionValues11;
             this.kcbtnTextColour.Values.Text = "Text Colour";
             this.kcbtnTextColour.SelectedColorChanged += new System.EventHandler<ComponentFactory.Krypton.Toolkit.ColorEventArgs>(this.kcbtnTextColour_SelectedColorChanged);
             // 
@@ -765,9 +747,9 @@ namespace Playground
             this.kcbtnGradientColour2.Name = "kcbtnGradientColour2";
             this.kcbtnGradientColour2.Size = new System.Drawing.Size(136, 25);
             this.kcbtnGradientColour2.TabIndex = 12;
-            popupPositionValues13.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues13.PlacementTarget = null;
-            this.kcbtnGradientColour2.ToolTipValues.ToolTipPosition = popupPositionValues13;
+            popupPositionValues12.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues12.PlacementTarget = null;
+            this.kcbtnGradientColour2.ToolTipValues.ToolTipPosition = popupPositionValues12;
             this.kcbtnGradientColour2.Values.Text = "Gradient Colour 2";
             this.kcbtnGradientColour2.SelectedColorChanged += new System.EventHandler<ComponentFactory.Krypton.Toolkit.ColorEventArgs>(this.kcbtnGradientColour2_SelectedColorChanged);
             // 
@@ -778,9 +760,9 @@ namespace Playground
             this.kcbtnGradientColour1.Name = "kcbtnGradientColour1";
             this.kcbtnGradientColour1.Size = new System.Drawing.Size(136, 25);
             this.kcbtnGradientColour1.TabIndex = 11;
-            popupPositionValues14.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues14.PlacementTarget = null;
-            this.kcbtnGradientColour1.ToolTipValues.ToolTipPosition = popupPositionValues14;
+            popupPositionValues13.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues13.PlacementTarget = null;
+            this.kcbtnGradientColour1.ToolTipValues.ToolTipPosition = popupPositionValues13;
             this.kcbtnGradientColour1.Values.Text = "Gradient Colour 1";
             this.kcbtnGradientColour1.SelectedColorChanged += new System.EventHandler<ComponentFactory.Krypton.Toolkit.ColorEventArgs>(this.kcbtnGradientColour1_SelectedColorChanged);
             // 
@@ -863,9 +845,9 @@ namespace Playground
             this.rxrbTextPad.Size = new System.Drawing.Size(151, 117);
             this.rxrbTextPad.TabIndex = 6;
             this.rxrbTextPad.Text = "kryptonRichTextBoxExtended2";
-            popupPositionValues15.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues15.PlacementTarget = null;
-            this.rxrbTextPad.ToolTipValues.ToolTipPosition = popupPositionValues15;
+            popupPositionValues14.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues14.PlacementTarget = null;
+            this.rxrbTextPad.ToolTipValues.ToolTipPosition = popupPositionValues14;
             // 
             // tsTest
             // 
@@ -882,7 +864,7 @@ namespace Playground
             this.pasteToolStripButton,
             this.toolStripSeparator1,
             this.helpToolStripButton});
-            this.tsTest.Location = new System.Drawing.Point(656, 439);
+            this.tsTest.Location = new System.Drawing.Point(584, 28);
             this.tsTest.Name = "tsTest";
             this.tsTest.Size = new System.Drawing.Size(208, 25);
             this.tsTest.TabIndex = 4;
@@ -980,7 +962,7 @@ namespace Playground
             this.toolStripMenuItemUACSheld1});
             this.toolStrip1.Location = new System.Drawing.Point(14, 208);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(282, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(251, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -1010,9 +992,9 @@ namespace Playground
             this.krtbEditor.Size = new System.Drawing.Size(140, 145);
             this.krtbEditor.TabIndex = 1;
             this.krtbEditor.Text = "";
-            popupPositionValues16.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues16.PlacementTarget = null;
-            this.krtbEditor.ToolTipValues.ToolTipPosition = popupPositionValues16;
+            popupPositionValues15.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues15.PlacementTarget = null;
+            this.krtbEditor.ToolTipValues.ToolTipPosition = popupPositionValues15;
             // 
             // klblAdminMode
             // 
@@ -1021,9 +1003,9 @@ namespace Playground
             this.klblAdminMode.Size = new System.Drawing.Size(283, 26);
             this.klblAdminMode.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblAdminMode.TabIndex = 0;
-            popupPositionValues17.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues17.PlacementTarget = null;
-            this.klblAdminMode.ToolTipValues.ToolTipPosition = popupPositionValues17;
+            popupPositionValues16.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues16.PlacementTarget = null;
+            this.klblAdminMode.ToolTipValues.ToolTipPosition = popupPositionValues16;
             this.klblAdminMode.Values.Text = "Is running in Administrator mode: No";
             // 
             // kryptonRichTextBoxExtended1
@@ -1034,9 +1016,9 @@ namespace Playground
             this.kryptonRichTextBoxExtended1.Size = new System.Drawing.Size(100, 96);
             this.kryptonRichTextBoxExtended1.TabIndex = 0;
             this.kryptonRichTextBoxExtended1.Text = "";
-            popupPositionValues18.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues18.PlacementTarget = null;
-            this.kryptonRichTextBoxExtended1.ToolTipValues.ToolTipPosition = popupPositionValues18;
+            popupPositionValues17.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
+            popupPositionValues17.PlacementTarget = null;
+            this.kryptonRichTextBoxExtended1.ToolTipValues.ToolTipPosition = popupPositionValues17;
             // 
             // statusStrip1
             // 
@@ -1044,10 +1026,10 @@ namespace Playground
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.etslBlinkTest});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 637);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 435);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-            this.statusStrip1.Size = new System.Drawing.Size(1166, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(942, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -1080,50 +1062,30 @@ namespace Playground
             this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnBackwardDiagonal);
             this.kryptonCheckSet1.CheckedButton = this.kcbtnForwardDiagonal;
             // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.circularPictureBox1.Image = global::Playground.Properties.Resources.KR_32_x_32_Orange;
-            this.circularPictureBox1.Location = new System.Drawing.Point(811, 406);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(69, 50);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 35;
-            this.circularPictureBox1.TabStop = false;
-            // 
             // kryptonSlideButton1
             // 
+            this.kryptonSlideButton1.BackColor = System.Drawing.Color.Transparent;
+            this.kryptonSlideButton1.ButtonStyle = ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonSliderButton.ButtonStyles.MinusButton;
+            this.kryptonSlideButton1.EventFireRate = 1000;
+            this.kryptonSlideButton1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.kryptonSlideButton1.Location = new System.Drawing.Point(811, 479);
             this.kryptonSlideButton1.Name = "kryptonSlideButton1";
+            this.kryptonSlideButton1.Orientation = ComponentFactory.Krypton.Toolkit.VisualOrientation.Top;
+            this.kryptonSlideButton1.SingleClick = false;
             this.kryptonSlideButton1.Size = new System.Drawing.Size(158, 38);
             this.kryptonSlideButton1.TabIndex = 36;
-            this.kryptonSlideButton1.Text = "kryptonSlideButton1";
-            // 
-            // modernProgressBar1
-            // 
-            this.modernProgressBar1.AutoSize = true;
-            this.modernProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.modernProgressBar1.Location = new System.Drawing.Point(325, 236);
-            this.modernProgressBar1.Name = "modernProgressBar1";
-            this.modernProgressBar1.Size = new System.Drawing.Size(307, 10);
-            this.modernProgressBar1.TabIndex = 37;
-            // 
-            // kryptonSearchBox1
-            // 
-            this.kryptonSearchBox1.Location = new System.Drawing.Point(505, 253);
-            this.kryptonSearchBox1.Name = "kryptonSearchBox1";
-            this.kryptonSearchBox1.Size = new System.Drawing.Size(250, 25);
-            this.kryptonSearchBox1.TabIndex = 38;
+            this.kryptonSlideButton1.VisualLook = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonStandalone;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1166, 659);
+            this.ClientSize = new System.Drawing.Size(942, 457);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.kryptonPanel1);
             this.MainMenuStrip = this.ms;
+            this.MinimumSize = new System.Drawing.Size(950, 490);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1132,6 +1094,7 @@ namespace Playground
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbGradientDirection)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
@@ -1142,7 +1105,6 @@ namespace Playground
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonCheckSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1241,7 +1203,6 @@ namespace Playground
         private ComponentFactory.Krypton.Toolkit.KryptonCheckButton kcbtnHorizontal;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckSet kryptonCheckSet1;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox kryptonPromptTextBox1;
-        private ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkVersion2 kryptonCommandLinkVersion21;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonCommandLinkButton kryptonCommandLinkButton2;
         private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonSearchBox kryptonSearchBox1;
         private KryptonExtendedToolkit.ExtendedToolkit.Controls.ModernProgressBar modernProgressBar1;
@@ -1254,6 +1215,7 @@ namespace Playground
         private ToolStripMenuItem adobeColourDialogToolStripMenuItem;
         private ToolStripMenuItem aeroWizardToolStripMenuItem;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonSliderButton kryptonSlideButton1;
     }
 }
 
