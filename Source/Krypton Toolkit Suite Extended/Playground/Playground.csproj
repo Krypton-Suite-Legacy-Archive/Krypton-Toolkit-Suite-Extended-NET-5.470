@@ -57,6 +57,9 @@
     <Compile Include="CalandarAndControls.Designer.cs">
       <DependentUpon>CalandarAndControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="CircularPictureBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CircularProgressBarTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +90,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="KryptonCommandLinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LineNumberedTextBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,10 +102,16 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="MarqueeLabelTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MessageBoxTest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MoreControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MRUExample.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -113,13 +125,16 @@
     <Compile Include="Scrollbars.Designer.cs">
       <DependentUpon>Scrollbars.cs</DependentUpon>
     </Compile>
+    <Compile Include="StatusStripControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TestContextMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestRig.cs">
+    <Compile Include="Examples.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WizardTest.cs">
@@ -127,6 +142,9 @@
     </Compile>
     <EmbeddedResource Include="CalandarAndControls.resx">
       <DependentUpon>CalandarAndControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CircularPictureBox.resx">
+      <DependentUpon>CircularPictureBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CircularProgressBarTest.resx">
       <DependentUpon>CircularProgressBarTest.cs</DependentUpon>
@@ -149,17 +167,26 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KryptonCommandLinks.resx">
+      <DependentUpon>KryptonCommandLinks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LineNumberedTextBox.resx">
       <DependentUpon>LineNumberedTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarqueeLabelTest.resx">
+      <DependentUpon>MarqueeLabelTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MessageBoxTest.resx">
       <DependentUpon>MessageBoxTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoreControls.resx">
       <DependentUpon>MoreControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MRUExample.resx">
+      <DependentUpon>MRUExample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -177,11 +204,14 @@
     <EmbeddedResource Include="Scrollbars.resx">
       <DependentUpon>Scrollbars.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StatusStripControls.resx">
+      <DependentUpon>StatusStripControls.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestRig.resx">
-      <DependentUpon>TestRig.cs</DependentUpon>
+    <EmbeddedResource Include="Examples.resx">
+      <DependentUpon>Examples.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WizardTest.resx">
       <DependentUpon>WizardTest.cs</DependentUpon>
@@ -226,11 +256,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.794</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="..\..\..\Assets\PNG\32 x 32\KR 32 x 32 Orange.png">
       <Link>Resources\KR 32 x 32 Orange.png</Link>
     </Content>
@@ -242,6 +267,11 @@
     <None Include="Resources\Stop 128 x 128.png" />
     <None Include="Resources\Warning 128 x 128.png" />
     <None Include="Resources\KR 48 x 48 Orange.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5470">
+      <Version>5.470.901</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

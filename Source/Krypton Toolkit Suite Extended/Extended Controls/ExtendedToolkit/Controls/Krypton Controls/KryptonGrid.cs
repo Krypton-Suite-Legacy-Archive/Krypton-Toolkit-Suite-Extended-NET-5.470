@@ -42,7 +42,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
             this.DefaultCellStyle.SelectionForeColor = Color.Navy;
             this.RowTemplate.DefaultCellStyle.SelectionForeColor = Color.Navy;
             this.AlternatingRowsDefaultCellStyle.BackColor = _palette.ColorTable.ToolStripGradientBegin;
-
+            BackgroundColor = Color.FromArgb(179, 196, 216);
         }
 
         private void OnGlobalPaletteChanged(object sender, EventArgs e)

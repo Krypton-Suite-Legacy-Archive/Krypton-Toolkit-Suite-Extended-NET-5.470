@@ -6,12 +6,6 @@
 
 =======
 
-| NuGet | Current NuGet Version | Github License |
-|---|---|---|
-| [![NuGet](https://img.shields.io/badge/NuGet-Krypton%20Extended%20.NET%205.470-brightgreen.svg)](https://www.nuget.org/packages/KryptonExtendedToolkit5470/) | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470.svg) | ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470.svg)
-
-=======
-
 ## NOTE: 20/06/2018 Background menu colours will be implemented in the coming weeks. Stay tuned for updates!
 
 ======
@@ -20,8 +14,28 @@
 
 ## In order to compile the code, you MUST restore/update the NuGet packages in order to build successfully!
 
-## [Toolkit Examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Examples.md)
+======
 
+## Control Examples
+
+Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Examples.md) to see what each control looks like.
+
+<!--======
+
+## 2019-05-01 Build 9xx - May Update
+* Outlook 2003 style toast notification
+* File checksum calculator (MD5, SHA-1, SHA-256, SHA-384, SHA-512 and RIPEMD-160)
+* New `KryptonPaletteManager` class for dealing with creating custom `KryptonPalette`'s
+* Ribbon enhancements, merge two ribbons together
+* Capture version information from another file
+* Playground application reorganisation
+* Images of controls to show developers what they look like
+* Image resizing utility - resize & save images on the fly
+* New palette explorer user controls - will make it quicker to design the application
+* General tidyup of code & API updates
+* Upgraded to Krypton Toolkit Suite - version: **5.470.901**
+* Build 9xx (build date Wednesday 1st, May 2019) is now available on NuGet
+-->
 ======
 
 ## 2019-04-01 Build 855 April Update

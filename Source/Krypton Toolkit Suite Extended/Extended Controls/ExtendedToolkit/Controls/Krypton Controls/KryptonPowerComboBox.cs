@@ -245,7 +245,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         }
 
         //overrides
-        protected override void OnDropDownClosed(System.EventArgs e)
+        protected override void OnDropDownClosed(EventArgs e)
         {
 
             mKillEvents1 = 0; //clefranc BUG2
@@ -256,6 +256,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             }
 
         }
+
         protected override void OnSelectedIndexChanged(System.EventArgs e)
         {
             Int32 i = 0;

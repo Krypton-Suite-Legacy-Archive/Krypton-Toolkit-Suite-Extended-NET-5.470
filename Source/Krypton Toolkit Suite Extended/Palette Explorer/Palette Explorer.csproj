@@ -60,8 +60,17 @@
     <Compile Include="Classes\PaletteComposerEngine.cs" />
     <Compile Include="Classes\SettingsCopier.cs" />
     <Compile Include="Classes\UserInterfaceManager.cs" />
+    <Compile Include="Controls\CircularPictureBoxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\PalettePropertyGrid.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StandardPictureBoxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UX\KryptonPalettePropertiesWindow.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>PersistentColourSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UX\KryptonColourPalettePropertiesWindow.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="UX\MainWindow.cs">
       <SubType>Form</SubType>
@@ -91,8 +103,14 @@
     <Compile Include="Windows\ChromeTMS.cs">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="Controls\CircularPictureBoxControl.resx">
+      <DependentUpon>CircularPictureBoxControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\PalettePropertyGrid.resx">
       <DependentUpon>PalettePropertyGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StandardPictureBoxControl.resx">
+      <DependentUpon>StandardPictureBoxControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,6 +122,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UX\KryptonColourPalettePropertiesWindow.resx">
+      <DependentUpon>KryptonColourPalettePropertiesWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\KryptonPalettePropertiesWindow.resx">
+      <DependentUpon>KryptonPalettePropertiesWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UX\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,7 +294,7 @@
       <Version>3.6.3</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.794</Version>
+      <Version>5.470.901</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>
