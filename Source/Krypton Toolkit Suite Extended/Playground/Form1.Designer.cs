@@ -145,19 +145,21 @@ namespace Playground
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.etslBlinkTest = new ExtendedControls.ExtendedToolkit.ToolstripControls.ExtendedToolStripStatusLabel();
-            this.flashingLabel1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.FlashingLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.circularPictureBox1 = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.kryptonSlideButton1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonSlideButton();
+            this.modernProgressBar1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.ModernProgressBar();
+            this.kryptonSearchBox1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonSearchBox();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbGradientDirection)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.tsTest.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonCheckSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ms
@@ -249,7 +251,7 @@ namespace Playground
             this.helpToolStripMenuItem1});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(175, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(176, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -426,7 +428,7 @@ namespace Playground
             this.toolsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.samplesToolStripMenuItem});
             this.toolsToolStripMenuItem1.Name = "toolsToolStripMenuItem1";
-            this.toolsToolStripMenuItem1.Size = new System.Drawing.Size(47, 20);
+            this.toolsToolStripMenuItem1.Size = new System.Drawing.Size(48, 20);
             this.toolsToolStripMenuItem1.Text = "&Tools";
             // 
             // samplesToolStripMenuItem
@@ -506,7 +508,7 @@ namespace Playground
             this.advancedToolStripMenuItem,
             this.basicToolStripMenuItem});
             this.testsToolStripMenuItem.Name = "testsToolStripMenuItem";
-            this.testsToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.testsToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.testsToolStripMenuItem.Text = "Tes&ts";
             // 
             // advancedToolStripMenuItem
@@ -623,9 +625,9 @@ namespace Playground
             this.kryptonCommandLinkButton2.Location = new System.Drawing.Point(902, 23);
             this.kryptonCommandLinkButton2.Name = "kryptonCommandLinkButton2";
             this.kryptonCommandLinkButton2.OverrideFocus.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.kryptonCommandLinkButton2.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonCommandLinkButton2.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+                                                                                                                                       | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+                                                                                                                                      | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonCommandLinkButton2.OverrideFocus.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.kryptonCommandLinkButton2.Size = new System.Drawing.Size(250, 55);
             this.kryptonCommandLinkButton2.StateCommon.Content.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
@@ -641,7 +643,7 @@ namespace Playground
             // 
             // kryptonCommandLinkVersion21
             // 
-            this.kryptonCommandLinkVersion21.Location = new System.Drawing.Point(902, 93);
+            this.kryptonCommandLinkVersion21.Location = new System.Drawing.Point(503, 401);
             this.kryptonCommandLinkVersion21.Name = "kryptonCommandLinkVersion21";
             this.kryptonCommandLinkVersion21.ShowUACShield = true;
             this.kryptonCommandLinkVersion21.Size = new System.Drawing.Size(252, 55);
@@ -658,7 +660,7 @@ namespace Playground
             // 
             this.kryptonPromptTextBox1.DrawPrompt = true;
             this.kryptonPromptTextBox1.FocusSelect = true;
-            this.kryptonPromptTextBox1.Location = new System.Drawing.Point(569, 28);
+            this.kryptonPromptTextBox1.Location = new System.Drawing.Point(503, 284);
             this.kryptonPromptTextBox1.Name = "kryptonPromptTextBox1";
             this.kryptonPromptTextBox1.PromptForeColour = System.Drawing.SystemColors.GrayText;
             this.kryptonPromptTextBox1.PromptText = "Some text...";
@@ -1041,8 +1043,7 @@ namespace Playground
             this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
-            this.etslBlinkTest,
-            this.flashingLabel1});
+            this.etslBlinkTest});
             this.statusStrip1.Location = new System.Drawing.Point(0, 637);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
@@ -1068,18 +1069,8 @@ namespace Playground
             this.etslBlinkTest.GradientColourOne = System.Drawing.Color.Lime;
             this.etslBlinkTest.GradientColourTwo = System.Drawing.Color.Red;
             this.etslBlinkTest.Name = "etslBlinkTest";
-            this.etslBlinkTest.Size = new System.Drawing.Size(168, 17);
+            this.etslBlinkTest.Size = new System.Drawing.Size(169, 17);
             this.etslBlinkTest.Text = "extendedToolStripStatusLabel2";
-            // 
-            // flashingLabel1
-            // 
-            this.flashingLabel1.EnableFlashing = true;
-            this.flashingLabel1.FlashColour1 = System.Drawing.Color.Transparent;
-            this.flashingLabel1.FlashColour2 = System.Drawing.Color.Red;
-            this.flashingLabel1.FlashTimeout = 500;
-            this.flashingLabel1.Name = "flashingLabel1";
-            this.flashingLabel1.Size = new System.Drawing.Size(83, 20);
-            this.flashingLabel1.Text = "flashingLabel1";
             // 
             // kryptonCheckSet1
             // 
@@ -1089,9 +1080,40 @@ namespace Playground
             this.kryptonCheckSet1.CheckButtons.Add(this.kcbtnBackwardDiagonal);
             this.kryptonCheckSet1.CheckedButton = this.kcbtnForwardDiagonal;
             // 
-            // timer1
+            // circularPictureBox1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.circularPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.circularPictureBox1.Image = global::Playground.Properties.Resources.KR_32_x_32_Orange;
+            this.circularPictureBox1.Location = new System.Drawing.Point(811, 406);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(69, 50);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox1.TabIndex = 35;
+            this.circularPictureBox1.TabStop = false;
+            // 
+            // kryptonSlideButton1
+            // 
+            this.kryptonSlideButton1.Location = new System.Drawing.Point(811, 479);
+            this.kryptonSlideButton1.Name = "kryptonSlideButton1";
+            this.kryptonSlideButton1.Size = new System.Drawing.Size(158, 38);
+            this.kryptonSlideButton1.TabIndex = 36;
+            this.kryptonSlideButton1.Text = "kryptonSlideButton1";
+            // 
+            // modernProgressBar1
+            // 
+            this.modernProgressBar1.AutoSize = true;
+            this.modernProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.modernProgressBar1.Location = new System.Drawing.Point(325, 236);
+            this.modernProgressBar1.Name = "modernProgressBar1";
+            this.modernProgressBar1.Size = new System.Drawing.Size(307, 10);
+            this.modernProgressBar1.TabIndex = 37;
+            // 
+            // kryptonSearchBox1
+            // 
+            this.kryptonSearchBox1.Location = new System.Drawing.Point(505, 253);
+            this.kryptonSearchBox1.Name = "kryptonSearchBox1";
+            this.kryptonSearchBox1.Size = new System.Drawing.Size(250, 25);
+            this.kryptonSearchBox1.TabIndex = 38;
             // 
             // Form1
             // 
@@ -1101,7 +1123,6 @@ namespace Playground
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.kryptonPanel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.ms;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1111,7 +1132,6 @@ namespace Playground
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbGradientDirection)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
@@ -1122,6 +1142,7 @@ namespace Playground
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonCheckSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
