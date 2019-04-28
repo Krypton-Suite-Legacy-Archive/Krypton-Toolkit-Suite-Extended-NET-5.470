@@ -31,6 +31,7 @@ Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Exte
 * New `Palette Explorer` controls
 * Merged all settings into `Toolkit Settings.dll`
 * Begun work on [#70](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/70)
+* Upgraded to Krypton Toolkit Suite - version: **5.470.xxx**
 * Build 10xx (build date Saturday 1st, June 2019) is now available on NuGet
 -->
 
