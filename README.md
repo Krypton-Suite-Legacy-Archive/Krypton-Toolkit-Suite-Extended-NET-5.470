@@ -27,6 +27,14 @@
 Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Examples.md) to see what each control looks like.
 
 <!--======
+## 2019-06-01 Build 10xx - June Update
+* New `Palette Explorer` controls
+* Merged all settings into `Toolkit Settings.dll`
+* Begun work on [#70](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/70)
+* Build 10xx (build date Saturday 1st, June 2019) is now available on NuGet
+-->
+
+<!--======
 
 ## 2019-05-01 Build 9xx - May Update
 * Outlook 2003 style toast notification
