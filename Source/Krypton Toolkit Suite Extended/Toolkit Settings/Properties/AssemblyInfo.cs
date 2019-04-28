@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Toolkit Settings")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This assembly contains all the settings for this toolkit all in one place.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Toolkit Settings")]

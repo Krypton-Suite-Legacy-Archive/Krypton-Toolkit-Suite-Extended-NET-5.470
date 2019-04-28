@@ -1754,6 +1754,70 @@ namespace PaletteExplorer.Controls
 
             SetRibbonTabTextColourPreview(cbxRibbonTabTextColourPreview);
             #endregion
+
+            #region Context Menu Strips
+            SetBaseColourMenu(ctxBaseColour);
+
+            SetDarkColourMenu(ctxDarkColour);
+
+            SetMiddleColourMenu(ctxMediumColour);
+
+            SetLightColourMenu(ctxLightColour);
+
+            SetLightestColourMenu(ctxLightestColour);
+
+            SetBorderColourMenu(ctxBorderColour);
+
+            SetAlternativeNormalTextColourMenu(ctxAlternativeNormalTextColour);
+
+            SetNormalColourMenu(ctxNormalTextColour);
+
+            SetDisabledTextColourMenu(ctxDisabedTextColour);
+
+            SetFocusedTextColourMenu(ctxFocusedTextColour);
+
+            SetPressedTextColourMenu(ctxPressedTextColour);
+
+            SetDisabledControlColourMenu(ctxDisabledControlColour);
+
+            SetLinkNormalColourMenu(ctxLinkNormalTextColour);
+
+            SetLinkHoverColourMenu(ctxLinkHoverTextColour);
+
+            SetLinkFocusedColourMenu(ctxLinkFocusedTextColour);
+
+            SetLinkVisitedColourMenu(ctxLinkVisitedTextColour);
+
+            SetCustomColourOneColourMenu(ctxCustomColourOneColour);
+
+            SetCustomColourTwoColourMenu(ctxCustomColourTwoColour);
+
+            SetCustomColourThreeColourMenu(ctxCustomColourThreeColour);
+
+            SetCustomColourFourColourMenu(ctxCustomColourFourColour);
+
+            SetCustomColourFiveColourMenu(ctxCustomColourFiveColour);
+
+            SetCustomColourSixColourMenu(ctxCustomColourSixColour);
+
+            SetCustomTextColourOneColourMenu(ctxCustomTextColourOneColour);
+
+            SetCustomTextColourTwoColourMenu(ctxCustomTextColourTwoColour);
+
+            SetCustomTextColourThreeColourMenu(ctxCustomTextColourThreeColour);
+
+            SetCustomTextColourFourColourMenu(ctxCustomTextColourFourColour);
+
+            SetCustomTextColourFiveColourMenu(ctxCustomTextColourFiveColour);
+
+            SetCustomTextColourSixColourMenu(ctxCustomTextColourSixColour);
+
+            SetMenuTextColourMenu(ctxMenuTextColour);
+
+            SetStatusTextColourMenu(ctxStatusStripTextColour);
+
+            SetRibbonTabTextColourMenu(ctxRibbonTabTextColour);
+            #endregion
         }
         #endregion
 
