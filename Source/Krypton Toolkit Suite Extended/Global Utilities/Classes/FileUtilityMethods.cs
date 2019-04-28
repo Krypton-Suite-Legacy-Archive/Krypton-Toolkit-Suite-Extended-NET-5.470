@@ -14,6 +14,9 @@ namespace Core.Classes
     {
         //GlobalMethods globalMethods = new GlobalMethods();
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FileUtilityMethods"/> class.
+        /// </summary>
         public FileUtilityMethods()
         {
 

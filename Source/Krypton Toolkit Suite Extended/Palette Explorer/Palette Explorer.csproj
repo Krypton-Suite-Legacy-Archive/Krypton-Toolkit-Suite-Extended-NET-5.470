@@ -58,6 +58,7 @@
     <Compile Include="Classes\GlobalMethods.cs" />
     <Compile Include="Classes\Models\ColourContextMenuModel.cs" />
     <Compile Include="Classes\PaletteComposerEngine.cs" />
+    <Compile Include="Classes\PaletteUtilities.cs" />
     <Compile Include="Classes\SettingsCopier.cs" />
     <Compile Include="Classes\UserInterfaceManager.cs" />
     <Compile Include="Controls\CircularPictureBoxControl.cs">

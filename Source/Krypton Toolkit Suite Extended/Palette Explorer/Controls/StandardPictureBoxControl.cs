@@ -39,10 +39,74 @@ namespace PaletteExplorer.Controls
         private PictureBox pbxLightestColour;
         private PictureBox pbxDarkColour;
         private PictureBox pbxLightColour;
+        private ContextMenuStrip ctxRibbonTabTextColour;
+        private System.ComponentModel.IContainer components;
+        private ToolStripMenuItem tsmiRibbonTabTextColour;
+        private ContextMenuStrip ctxMenuTextColour;
+        private ToolStripMenuItem tsmiMenuTextColour;
+        private ContextMenuStrip ctxCustomTextColourSixColour;
+        private ToolStripMenuItem tsmiCustomTextColourSixColour;
+        private ContextMenuStrip ctxCustomTextColourFiveColour;
+        private ToolStripMenuItem tsmiCustomTextColourFiveColour;
+        private ContextMenuStrip ctxCustomTextColourFourColour;
+        private ToolStripMenuItem tsmiCustomTextColourFourColour;
+        private ContextMenuStrip ctxCustomTextColourThreeColour;
+        private ToolStripMenuItem tsmiCustomTextColourThreeColour;
+        private ContextMenuStrip ctxCustomTextColourTwoColour;
+        private ToolStripMenuItem tsmiCustomTextColourTwoColour;
+        private ContextMenuStrip ctxCustomTextColourOneColour;
+        private ToolStripMenuItem tsmiCustomTextColourOneColour;
+        private ContextMenuStrip ctxCustomColourSixColour;
+        private ToolStripMenuItem tsmiCustomColourSixColour;
+        private ContextMenuStrip ctxCustomColourOneColour;
+        private ToolStripMenuItem tsmiCustomColourOneColour;
+        private ContextMenuStrip ctxLinkVisitedTextColour;
+        private ToolStripMenuItem tsmiLinkVisitedTextColour;
+        private ContextMenuStrip ctxLinkHoverTextColour;
+        private ToolStripMenuItem tsmiLinkHoverTextColour;
+        private ContextMenuStrip ctxAlternativeNormalTextColour;
+        private ToolStripMenuItem tsmiAlternativeNormalTextColour;
+        private ContextMenuStrip ctxBorderColour;
+        private ToolStripMenuItem tsmiBorderColour;
+        private ContextMenuStrip ctxStatusStripTextColour;
+        private ToolStripMenuItem tsmiStatusStripTextColour;
+        private ContextMenuStrip ctxNormalTextColour;
+        private ToolStripMenuItem tsmiNormalTextColour;
+        private ContextMenuStrip ctxDisabledControlColour;
+        private ToolStripMenuItem tsmiDisabledControlColour;
+        private ContextMenuStrip ctxDisabedTextColour;
+        private ToolStripMenuItem tsmiDisabledTextColour;
+        private ContextMenuStrip ctxFocusedTextColour;
+        private ToolStripMenuItem tsmiFocusedTextColour;
+        private ContextMenuStrip ctxPressedTextColour;
+        private ToolStripMenuItem tsmiPressedTextColour;
+        private ContextMenuStrip ctxLinkFocusedTextColour;
+        private ToolStripMenuItem tsmiLinkFocusedTextColour;
+        private ContextMenuStrip ctxCustomColourFiveColour;
+        private ToolStripMenuItem tsmlCustomColourFiveColour;
+        private ContextMenuStrip ctxCustomColourFourColour;
+        private ToolStripMenuItem tsmiCustomColourFourColour;
+        private ContextMenuStrip ctxCustomColourThreeColour;
+        private ToolStripMenuItem tsmiCustomColourThreeColour;
+        private ContextMenuStrip ctxCustomColourTwoColour;
+        private ToolStripMenuItem tsmiCustomColourTwoColour;
+        private ContextMenuStrip ctxBaseColour;
+        private ToolStripMenuItem useBaseColourAsBaseToolStripMenuItem;
+        private ContextMenuStrip ctxDarkColour;
+        private ToolStripMenuItem tsiDarkColour;
+        private ContextMenuStrip ctxMediumColour;
+        private ToolStripMenuItem tsmiMediumColour;
+        private ContextMenuStrip ctxLightColour;
+        private ToolStripMenuItem tsmiLightColour;
+        private ContextMenuStrip ctxLinkNormalTextColour;
+        private ToolStripMenuItem tsmiLinkNormalTextColour;
+        private ContextMenuStrip ctxLightestColour;
+        private ToolStripMenuItem tsmiLightestColour;
         private PictureBox pbxMiddleColour;
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues1 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             this.kgbPreviewPane = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.pbxLinkFocusedColourPreview = new System.Windows.Forms.PictureBox();
@@ -75,6 +139,68 @@ namespace PaletteExplorer.Controls
             this.pbxDarkColour = new System.Windows.Forms.PictureBox();
             this.pbxLightColour = new System.Windows.Forms.PictureBox();
             this.pbxMiddleColour = new System.Windows.Forms.PictureBox();
+            this.ctxRibbonTabTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiRibbonTabTextColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxMenuTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiMenuTextColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxCustomTextColourSixColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCustomTextColourSixColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxCustomTextColourFiveColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCustomTextColourFiveColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxCustomTextColourFourColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCustomTextColourFourColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxCustomTextColourThreeColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCustomTextColourThreeColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxCustomTextColourTwoColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCustomTextColourTwoColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxCustomTextColourOneColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCustomTextColourOneColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxCustomColourSixColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCustomColourSixColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxCustomColourOneColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCustomColourOneColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxLinkVisitedTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiLinkVisitedTextColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxLinkHoverTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiLinkHoverTextColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxAlternativeNormalTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiAlternativeNormalTextColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxBorderColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiBorderColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxStatusStripTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiStatusStripTextColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxNormalTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiNormalTextColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxDisabledControlColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiDisabledControlColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxDisabedTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiDisabledTextColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxFocusedTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiFocusedTextColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxPressedTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiPressedTextColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxLinkFocusedTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiLinkFocusedTextColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxCustomColourFiveColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmlCustomColourFiveColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxCustomColourFourColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCustomColourFourColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxCustomColourThreeColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCustomColourThreeColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxCustomColourTwoColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCustomColourTwoColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxBaseColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.useBaseColourAsBaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxDarkColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsiDarkColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxMediumColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiMediumColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxLightColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiLightColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxLinkNormalTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiLinkNormalTextColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxLightestColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiLightestColour = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.kgbPreviewPane)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kgbPreviewPane.Panel)).BeginInit();
             this.kgbPreviewPane.Panel.SuspendLayout();
@@ -109,6 +235,37 @@ namespace PaletteExplorer.Controls
             ((System.ComponentModel.ISupportInitialize)(this.pbxDarkColour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLightColour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMiddleColour)).BeginInit();
+            this.ctxRibbonTabTextColour.SuspendLayout();
+            this.ctxMenuTextColour.SuspendLayout();
+            this.ctxCustomTextColourSixColour.SuspendLayout();
+            this.ctxCustomTextColourFiveColour.SuspendLayout();
+            this.ctxCustomTextColourFourColour.SuspendLayout();
+            this.ctxCustomTextColourThreeColour.SuspendLayout();
+            this.ctxCustomTextColourTwoColour.SuspendLayout();
+            this.ctxCustomTextColourOneColour.SuspendLayout();
+            this.ctxCustomColourSixColour.SuspendLayout();
+            this.ctxCustomColourOneColour.SuspendLayout();
+            this.ctxLinkVisitedTextColour.SuspendLayout();
+            this.ctxLinkHoverTextColour.SuspendLayout();
+            this.ctxAlternativeNormalTextColour.SuspendLayout();
+            this.ctxBorderColour.SuspendLayout();
+            this.ctxStatusStripTextColour.SuspendLayout();
+            this.ctxNormalTextColour.SuspendLayout();
+            this.ctxDisabledControlColour.SuspendLayout();
+            this.ctxDisabedTextColour.SuspendLayout();
+            this.ctxFocusedTextColour.SuspendLayout();
+            this.ctxPressedTextColour.SuspendLayout();
+            this.ctxLinkFocusedTextColour.SuspendLayout();
+            this.ctxCustomColourFiveColour.SuspendLayout();
+            this.ctxCustomColourFourColour.SuspendLayout();
+            this.ctxCustomColourThreeColour.SuspendLayout();
+            this.ctxCustomColourTwoColour.SuspendLayout();
+            this.ctxBaseColour.SuspendLayout();
+            this.ctxDarkColour.SuspendLayout();
+            this.ctxMediumColour.SuspendLayout();
+            this.ctxLightColour.SuspendLayout();
+            this.ctxLinkNormalTextColour.SuspendLayout();
+            this.ctxLightestColour.SuspendLayout();
             this.SuspendLayout();
             // 
             // kgbPreviewPane
@@ -488,6 +645,440 @@ namespace PaletteExplorer.Controls
             this.pbxMiddleColour.TabIndex = 6;
             this.pbxMiddleColour.TabStop = false;
             // 
+            // ctxRibbonTabTextColour
+            // 
+            this.ctxRibbonTabTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxRibbonTabTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiRibbonTabTextColour});
+            this.ctxRibbonTabTextColour.Name = "ctxBaseColour";
+            this.ctxRibbonTabTextColour.Size = new System.Drawing.Size(261, 26);
+            // 
+            // tsmiRibbonTabTextColour
+            // 
+            this.tsmiRibbonTabTextColour.Name = "tsmiRibbonTabTextColour";
+            this.tsmiRibbonTabTextColour.Size = new System.Drawing.Size(260, 22);
+            this.tsmiRibbonTabTextColour.Text = "Use &Ribbon Tab Text Colour as Base";
+            // 
+            // ctxMenuTextColour
+            // 
+            this.ctxMenuTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxMenuTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiMenuTextColour});
+            this.ctxMenuTextColour.Name = "ctxBaseColour";
+            this.ctxMenuTextColour.Size = new System.Drawing.Size(232, 26);
+            // 
+            // tsmiMenuTextColour
+            // 
+            this.tsmiMenuTextColour.Name = "tsmiMenuTextColour";
+            this.tsmiMenuTextColour.Size = new System.Drawing.Size(231, 22);
+            this.tsmiMenuTextColour.Text = "Use &Menu Text Colour as Base";
+            // 
+            // ctxCustomTextColourSixColour
+            // 
+            this.ctxCustomTextColourSixColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxCustomTextColourSixColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCustomTextColourSixColour});
+            this.ctxCustomTextColourSixColour.Name = "ctxBaseColour";
+            this.ctxCustomTextColourSixColour.Size = new System.Drawing.Size(299, 26);
+            // 
+            // tsmiCustomTextColourSixColour
+            // 
+            this.tsmiCustomTextColourSixColour.Name = "tsmiCustomTextColourSixColour";
+            this.tsmiCustomTextColourSixColour.Size = new System.Drawing.Size(298, 22);
+            this.tsmiCustomTextColourSixColour.Text = "Use Custom Text Colour &Six Colour as Base";
+            // 
+            // ctxCustomTextColourFiveColour
+            // 
+            this.ctxCustomTextColourFiveColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxCustomTextColourFiveColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCustomTextColourFiveColour});
+            this.ctxCustomTextColourFiveColour.Name = "ctxBaseColour";
+            this.ctxCustomTextColourFiveColour.Size = new System.Drawing.Size(306, 26);
+            // 
+            // tsmiCustomTextColourFiveColour
+            // 
+            this.tsmiCustomTextColourFiveColour.Name = "tsmiCustomTextColourFiveColour";
+            this.tsmiCustomTextColourFiveColour.Size = new System.Drawing.Size(305, 22);
+            this.tsmiCustomTextColourFiveColour.Text = "Use Custom Text Colour &Five Colour as Base";
+            // 
+            // ctxCustomTextColourFourColour
+            // 
+            this.ctxCustomTextColourFourColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxCustomTextColourFourColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCustomTextColourFourColour});
+            this.ctxCustomTextColourFourColour.Name = "ctxBaseColour";
+            this.ctxCustomTextColourFourColour.Size = new System.Drawing.Size(309, 26);
+            // 
+            // tsmiCustomTextColourFourColour
+            // 
+            this.tsmiCustomTextColourFourColour.Name = "tsmiCustomTextColourFourColour";
+            this.tsmiCustomTextColourFourColour.Size = new System.Drawing.Size(308, 22);
+            this.tsmiCustomTextColourFourColour.Text = "Use Custom Text Colour &Four Colour as Base";
+            // 
+            // ctxCustomTextColourThreeColour
+            // 
+            this.ctxCustomTextColourThreeColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxCustomTextColourThreeColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCustomTextColourThreeColour});
+            this.ctxCustomTextColourThreeColour.Name = "ctxBaseColour";
+            this.ctxCustomTextColourThreeColour.Size = new System.Drawing.Size(315, 26);
+            // 
+            // tsmiCustomTextColourThreeColour
+            // 
+            this.tsmiCustomTextColourThreeColour.Name = "tsmiCustomTextColourThreeColour";
+            this.tsmiCustomTextColourThreeColour.Size = new System.Drawing.Size(314, 22);
+            this.tsmiCustomTextColourThreeColour.Text = "Use Custom Text Colour &Three Colour as Base";
+            // 
+            // ctxCustomTextColourTwoColour
+            // 
+            this.ctxCustomTextColourTwoColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxCustomTextColourTwoColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCustomTextColourTwoColour});
+            this.ctxCustomTextColourTwoColour.Name = "ctxBaseColour";
+            this.ctxCustomTextColourTwoColour.Size = new System.Drawing.Size(307, 26);
+            // 
+            // tsmiCustomTextColourTwoColour
+            // 
+            this.tsmiCustomTextColourTwoColour.Name = "tsmiCustomTextColourTwoColour";
+            this.tsmiCustomTextColourTwoColour.Size = new System.Drawing.Size(306, 22);
+            this.tsmiCustomTextColourTwoColour.Text = "Use Custom Text Colour &Two Colour as Base";
+            // 
+            // ctxCustomTextColourOneColour
+            // 
+            this.ctxCustomTextColourOneColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxCustomTextColourOneColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCustomTextColourOneColour});
+            this.ctxCustomTextColourOneColour.Name = "ctxBaseColour";
+            this.ctxCustomTextColourOneColour.Size = new System.Drawing.Size(307, 26);
+            // 
+            // tsmiCustomTextColourOneColour
+            // 
+            this.tsmiCustomTextColourOneColour.Name = "tsmiCustomTextColourOneColour";
+            this.tsmiCustomTextColourOneColour.Size = new System.Drawing.Size(306, 22);
+            this.tsmiCustomTextColourOneColour.Text = "Use Custom Text Colour &One Colour as Base";
+            // 
+            // ctxCustomColourSixColour
+            // 
+            this.ctxCustomColourSixColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxCustomColourSixColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCustomColourSixColour});
+            this.ctxCustomColourSixColour.Name = "ctxBaseColour";
+            this.ctxCustomColourSixColour.Size = new System.Drawing.Size(275, 26);
+            // 
+            // tsmiCustomColourSixColour
+            // 
+            this.tsmiCustomColourSixColour.Name = "tsmiCustomColourSixColour";
+            this.tsmiCustomColourSixColour.Size = new System.Drawing.Size(274, 22);
+            this.tsmiCustomColourSixColour.Text = "Use Custom Colour &Six Colour as Base";
+            // 
+            // ctxCustomColourOneColour
+            // 
+            this.ctxCustomColourOneColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxCustomColourOneColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCustomColourOneColour});
+            this.ctxCustomColourOneColour.Name = "ctxBaseColour";
+            this.ctxCustomColourOneColour.Size = new System.Drawing.Size(283, 26);
+            // 
+            // tsmiCustomColourOneColour
+            // 
+            this.tsmiCustomColourOneColour.Name = "tsmiCustomColourOneColour";
+            this.tsmiCustomColourOneColour.Size = new System.Drawing.Size(282, 22);
+            this.tsmiCustomColourOneColour.Text = "Use Custom Colour &One Colour as Base";
+            // 
+            // ctxLinkVisitedTextColour
+            // 
+            this.ctxLinkVisitedTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxLinkVisitedTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiLinkVisitedTextColour});
+            this.ctxLinkVisitedTextColour.Name = "ctxBaseColour";
+            this.ctxLinkVisitedTextColour.Size = new System.Drawing.Size(261, 26);
+            // 
+            // tsmiLinkVisitedTextColour
+            // 
+            this.tsmiLinkVisitedTextColour.Name = "tsmiLinkVisitedTextColour";
+            this.tsmiLinkVisitedTextColour.Size = new System.Drawing.Size(260, 22);
+            this.tsmiLinkVisitedTextColour.Text = "Use Link &Visited Text Colour as Base";
+            // 
+            // ctxLinkHoverTextColour
+            // 
+            this.ctxLinkHoverTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxLinkHoverTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiLinkHoverTextColour});
+            this.ctxLinkHoverTextColour.Name = "ctxBaseColour";
+            this.ctxLinkHoverTextColour.Size = new System.Drawing.Size(258, 26);
+            // 
+            // tsmiLinkHoverTextColour
+            // 
+            this.tsmiLinkHoverTextColour.Name = "tsmiLinkHoverTextColour";
+            this.tsmiLinkHoverTextColour.Size = new System.Drawing.Size(257, 22);
+            this.tsmiLinkHoverTextColour.Text = "Use Link &Hover Text Colour as Base";
+            // 
+            // ctxAlternativeNormalTextColour
+            // 
+            this.ctxAlternativeNormalTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxAlternativeNormalTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiAlternativeNormalTextColour});
+            this.ctxAlternativeNormalTextColour.Name = "ctxBaseColour";
+            this.ctxAlternativeNormalTextColour.Size = new System.Drawing.Size(301, 26);
+            // 
+            // tsmiAlternativeNormalTextColour
+            // 
+            this.tsmiAlternativeNormalTextColour.Name = "tsmiAlternativeNormalTextColour";
+            this.tsmiAlternativeNormalTextColour.Size = new System.Drawing.Size(300, 22);
+            this.tsmiAlternativeNormalTextColour.Text = "Use &Alternative Normal Text Colour as Base";
+            // 
+            // ctxBorderColour
+            // 
+            this.ctxBorderColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxBorderColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiBorderColour});
+            this.ctxBorderColour.Name = "ctxBaseColour";
+            this.ctxBorderColour.Size = new System.Drawing.Size(212, 26);
+            // 
+            // tsmiBorderColour
+            // 
+            this.tsmiBorderColour.Name = "tsmiBorderColour";
+            this.tsmiBorderColour.Size = new System.Drawing.Size(211, 22);
+            this.tsmiBorderColour.Text = "Use &Border Colour as Base";
+            // 
+            // ctxStatusStripTextColour
+            // 
+            this.ctxStatusStripTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxStatusStripTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiStatusStripTextColour});
+            this.ctxStatusStripTextColour.Name = "ctxBaseColour";
+            this.ctxStatusStripTextColour.Size = new System.Drawing.Size(260, 26);
+            // 
+            // tsmiStatusStripTextColour
+            // 
+            this.tsmiStatusStripTextColour.Name = "tsmiStatusStripTextColour";
+            this.tsmiStatusStripTextColour.Size = new System.Drawing.Size(259, 22);
+            this.tsmiStatusStripTextColour.Text = "Use &Status Strip Text Colour as Base";
+            // 
+            // ctxNormalTextColour
+            // 
+            this.ctxNormalTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxNormalTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiNormalTextColour});
+            this.ctxNormalTextColour.Name = "ctxBaseColour";
+            this.ctxNormalTextColour.Size = new System.Drawing.Size(241, 26);
+            // 
+            // tsmiNormalTextColour
+            // 
+            this.tsmiNormalTextColour.Name = "tsmiNormalTextColour";
+            this.tsmiNormalTextColour.Size = new System.Drawing.Size(240, 22);
+            this.tsmiNormalTextColour.Text = "Use &Normal Text Colour as Base";
+            // 
+            // ctxDisabledControlColour
+            // 
+            this.ctxDisabledControlColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxDisabledControlColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDisabledControlColour});
+            this.ctxDisabledControlColour.Name = "ctxBaseColour";
+            this.ctxDisabledControlColour.Size = new System.Drawing.Size(265, 26);
+            // 
+            // tsmiDisabledControlColour
+            // 
+            this.tsmiDisabledControlColour.Name = "tsmiDisabledControlColour";
+            this.tsmiDisabledControlColour.Size = new System.Drawing.Size(264, 22);
+            this.tsmiDisabledControlColour.Text = "Use &Disabled Control Colour as Base";
+            // 
+            // ctxDisabedTextColour
+            // 
+            this.ctxDisabedTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxDisabedTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDisabledTextColour});
+            this.ctxDisabedTextColour.Name = "ctxBaseColour";
+            this.ctxDisabedTextColour.Size = new System.Drawing.Size(246, 26);
+            // 
+            // tsmiDisabledTextColour
+            // 
+            this.tsmiDisabledTextColour.Name = "tsmiDisabledTextColour";
+            this.tsmiDisabledTextColour.Size = new System.Drawing.Size(245, 22);
+            this.tsmiDisabledTextColour.Text = "Use &Disabled Text Colour as Base";
+            // 
+            // ctxFocusedTextColour
+            // 
+            this.ctxFocusedTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxFocusedTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiFocusedTextColour});
+            this.ctxFocusedTextColour.Name = "ctxBaseColour";
+            this.ctxFocusedTextColour.Size = new System.Drawing.Size(245, 26);
+            // 
+            // tsmiFocusedTextColour
+            // 
+            this.tsmiFocusedTextColour.Name = "tsmiFocusedTextColour";
+            this.tsmiFocusedTextColour.Size = new System.Drawing.Size(244, 22);
+            this.tsmiFocusedTextColour.Text = "Use &Focused Text Colour as Base";
+            // 
+            // ctxPressedTextColour
+            // 
+            this.ctxPressedTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxPressedTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiPressedTextColour});
+            this.ctxPressedTextColour.Name = "ctxBaseColour";
+            this.ctxPressedTextColour.Size = new System.Drawing.Size(241, 26);
+            // 
+            // tsmiPressedTextColour
+            // 
+            this.tsmiPressedTextColour.Name = "tsmiPressedTextColour";
+            this.tsmiPressedTextColour.Size = new System.Drawing.Size(240, 22);
+            this.tsmiPressedTextColour.Text = "Use &Pressed Text Colour as Base";
+            // 
+            // ctxLinkFocusedTextColour
+            // 
+            this.ctxLinkFocusedTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxLinkFocusedTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiLinkFocusedTextColour});
+            this.ctxLinkFocusedTextColour.Name = "ctxBaseColour";
+            this.ctxLinkFocusedTextColour.Size = new System.Drawing.Size(270, 26);
+            // 
+            // tsmiLinkFocusedTextColour
+            // 
+            this.tsmiLinkFocusedTextColour.Name = "tsmiLinkFocusedTextColour";
+            this.tsmiLinkFocusedTextColour.Size = new System.Drawing.Size(269, 22);
+            this.tsmiLinkFocusedTextColour.Text = "Use Link &Focused Text Colour as Base";
+            // 
+            // ctxCustomColourFiveColour
+            // 
+            this.ctxCustomColourFiveColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxCustomColourFiveColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmlCustomColourFiveColour});
+            this.ctxCustomColourFiveColour.Name = "ctxBaseColour";
+            this.ctxCustomColourFiveColour.Size = new System.Drawing.Size(282, 26);
+            // 
+            // tsmlCustomColourFiveColour
+            // 
+            this.tsmlCustomColourFiveColour.Name = "tsmlCustomColourFiveColour";
+            this.tsmlCustomColourFiveColour.Size = new System.Drawing.Size(281, 22);
+            this.tsmlCustomColourFiveColour.Text = "Use Custom Colour &Five Colour as Base";
+            // 
+            // ctxCustomColourFourColour
+            // 
+            this.ctxCustomColourFourColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxCustomColourFourColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCustomColourFourColour});
+            this.ctxCustomColourFourColour.Name = "ctxBaseColour";
+            this.ctxCustomColourFourColour.Size = new System.Drawing.Size(285, 26);
+            // 
+            // tsmiCustomColourFourColour
+            // 
+            this.tsmiCustomColourFourColour.Name = "tsmiCustomColourFourColour";
+            this.tsmiCustomColourFourColour.Size = new System.Drawing.Size(284, 22);
+            this.tsmiCustomColourFourColour.Text = "Use Custom Colour &Four Colour as Base";
+            // 
+            // ctxCustomColourThreeColour
+            // 
+            this.ctxCustomColourThreeColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxCustomColourThreeColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCustomColourThreeColour});
+            this.ctxCustomColourThreeColour.Name = "ctxBaseColour";
+            this.ctxCustomColourThreeColour.Size = new System.Drawing.Size(291, 26);
+            // 
+            // tsmiCustomColourThreeColour
+            // 
+            this.tsmiCustomColourThreeColour.Name = "tsmiCustomColourThreeColour";
+            this.tsmiCustomColourThreeColour.Size = new System.Drawing.Size(290, 22);
+            this.tsmiCustomColourThreeColour.Text = "Use Custom Colour &Three Colour as Base";
+            // 
+            // ctxCustomColourTwoColour
+            // 
+            this.ctxCustomColourTwoColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxCustomColourTwoColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCustomColourTwoColour});
+            this.ctxCustomColourTwoColour.Name = "ctxBaseColour";
+            this.ctxCustomColourTwoColour.Size = new System.Drawing.Size(283, 26);
+            // 
+            // tsmiCustomColourTwoColour
+            // 
+            this.tsmiCustomColourTwoColour.Name = "tsmiCustomColourTwoColour";
+            this.tsmiCustomColourTwoColour.Size = new System.Drawing.Size(282, 22);
+            this.tsmiCustomColourTwoColour.Text = "Use Custom Colour &Two Colour as Base";
+            // 
+            // ctxBaseColour
+            // 
+            this.ctxBaseColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxBaseColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.useBaseColourAsBaseToolStripMenuItem});
+            this.ctxBaseColour.Name = "ctxBaseColour";
+            this.ctxBaseColour.Size = new System.Drawing.Size(201, 26);
+            // 
+            // useBaseColourAsBaseToolStripMenuItem
+            // 
+            this.useBaseColourAsBaseToolStripMenuItem.Name = "useBaseColourAsBaseToolStripMenuItem";
+            this.useBaseColourAsBaseToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.useBaseColourAsBaseToolStripMenuItem.Text = "Use &Base Colour as Base";
+            // 
+            // ctxDarkColour
+            // 
+            this.ctxDarkColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxDarkColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsiDarkColour});
+            this.ctxDarkColour.Name = "ctxBaseColour";
+            this.ctxDarkColour.Size = new System.Drawing.Size(201, 26);
+            // 
+            // tsiDarkColour
+            // 
+            this.tsiDarkColour.Name = "tsiDarkColour";
+            this.tsiDarkColour.Size = new System.Drawing.Size(200, 22);
+            this.tsiDarkColour.Text = "Use &Dark Colour as Base";
+            // 
+            // ctxMediumColour
+            // 
+            this.ctxMediumColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxMediumColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiMediumColour});
+            this.ctxMediumColour.Name = "ctxBaseColour";
+            this.ctxMediumColour.Size = new System.Drawing.Size(222, 26);
+            // 
+            // tsmiMediumColour
+            // 
+            this.tsmiMediumColour.Name = "tsmiMediumColour";
+            this.tsmiMediumColour.Size = new System.Drawing.Size(221, 22);
+            this.tsmiMediumColour.Text = "Use &Medium Colour as Base";
+            // 
+            // ctxLightColour
+            // 
+            this.ctxLightColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxLightColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiLightColour});
+            this.ctxLightColour.Name = "ctxBaseColour";
+            this.ctxLightColour.Size = new System.Drawing.Size(204, 26);
+            // 
+            // tsmiLightColour
+            // 
+            this.tsmiLightColour.Name = "tsmiLightColour";
+            this.tsmiLightColour.Size = new System.Drawing.Size(203, 22);
+            this.tsmiLightColour.Text = "Use &Light Colour as Base";
+            // 
+            // ctxLinkNormalTextColour
+            // 
+            this.ctxLinkNormalTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxLinkNormalTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiLinkNormalTextColour});
+            this.ctxLinkNormalTextColour.Name = "ctxBaseColour";
+            this.ctxLinkNormalTextColour.Size = new System.Drawing.Size(266, 26);
+            // 
+            // tsmiLinkNormalTextColour
+            // 
+            this.tsmiLinkNormalTextColour.Name = "tsmiLinkNormalTextColour";
+            this.tsmiLinkNormalTextColour.Size = new System.Drawing.Size(265, 22);
+            this.tsmiLinkNormalTextColour.Text = "Use Link &Normal Text Colour as Base";
+            // 
+            // ctxLightestColour
+            // 
+            this.ctxLightestColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxLightestColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiLightestColour});
+            this.ctxLightestColour.Name = "ctxBaseColour";
+            this.ctxLightestColour.Size = new System.Drawing.Size(219, 48);
+            // 
+            // tsmiLightestColour
+            // 
+            this.tsmiLightestColour.Name = "tsmiLightestColour";
+            this.tsmiLightestColour.Size = new System.Drawing.Size(218, 22);
+            this.tsmiLightestColour.Text = "Use &Lightest Colour as Base";
+            // 
             // StandardPictureBoxControl
             // 
             this.BackColor = System.Drawing.Color.Transparent;
@@ -529,6 +1120,37 @@ namespace PaletteExplorer.Controls
             ((System.ComponentModel.ISupportInitialize)(this.pbxDarkColour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLightColour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMiddleColour)).EndInit();
+            this.ctxRibbonTabTextColour.ResumeLayout(false);
+            this.ctxMenuTextColour.ResumeLayout(false);
+            this.ctxCustomTextColourSixColour.ResumeLayout(false);
+            this.ctxCustomTextColourFiveColour.ResumeLayout(false);
+            this.ctxCustomTextColourFourColour.ResumeLayout(false);
+            this.ctxCustomTextColourThreeColour.ResumeLayout(false);
+            this.ctxCustomTextColourTwoColour.ResumeLayout(false);
+            this.ctxCustomTextColourOneColour.ResumeLayout(false);
+            this.ctxCustomColourSixColour.ResumeLayout(false);
+            this.ctxCustomColourOneColour.ResumeLayout(false);
+            this.ctxLinkVisitedTextColour.ResumeLayout(false);
+            this.ctxLinkHoverTextColour.ResumeLayout(false);
+            this.ctxAlternativeNormalTextColour.ResumeLayout(false);
+            this.ctxBorderColour.ResumeLayout(false);
+            this.ctxStatusStripTextColour.ResumeLayout(false);
+            this.ctxNormalTextColour.ResumeLayout(false);
+            this.ctxDisabledControlColour.ResumeLayout(false);
+            this.ctxDisabedTextColour.ResumeLayout(false);
+            this.ctxFocusedTextColour.ResumeLayout(false);
+            this.ctxPressedTextColour.ResumeLayout(false);
+            this.ctxLinkFocusedTextColour.ResumeLayout(false);
+            this.ctxCustomColourFiveColour.ResumeLayout(false);
+            this.ctxCustomColourFourColour.ResumeLayout(false);
+            this.ctxCustomColourThreeColour.ResumeLayout(false);
+            this.ctxCustomColourTwoColour.ResumeLayout(false);
+            this.ctxBaseColour.ResumeLayout(false);
+            this.ctxDarkColour.ResumeLayout(false);
+            this.ctxMediumColour.ResumeLayout(false);
+            this.ctxLightColour.ResumeLayout(false);
+            this.ctxLinkNormalTextColour.ResumeLayout(false);
+            this.ctxLightestColour.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

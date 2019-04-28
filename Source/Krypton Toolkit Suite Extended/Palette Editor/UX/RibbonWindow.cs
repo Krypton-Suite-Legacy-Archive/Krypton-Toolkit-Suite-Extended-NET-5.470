@@ -296,8 +296,8 @@ namespace PaletteEditor.UX
             this.pbxDarkColour = new System.Windows.Forms.PictureBox();
             this.pbxLightColour = new System.Windows.Forms.PictureBox();
             this.pbxMiddleColour = new System.Windows.Forms.PictureBox();
-            this.kdmPalette = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kdmPalette = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -370,11 +370,11 @@ namespace PaletteEditor.UX
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
+            this.kryptonRibbon1.SelectedContext = null;
             this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1649, 115);
             this.kryptonRibbon1.TabIndex = 1;
-            popupPositionValues1.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues1.PlacementTarget = null;
+            popupPositionValues1.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
             this.kryptonRibbon1.ToolTipValues.ToolTipPosition = popupPositionValues1;
             // 
             // krqatbNew
@@ -882,8 +882,7 @@ namespace PaletteEditor.UX
             this.kbtnClose.Size = new System.Drawing.Size(51, 30);
             this.kbtnClose.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnClose.TabIndex = 64;
-            popupPositionValues2.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues2.PlacementTarget = null;
+            popupPositionValues2.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
             this.kbtnClose.ToolTipValues.ToolTipPosition = popupPositionValues2;
             this.kbtnClose.Values.Text = "&Close";
             // 
@@ -894,8 +893,7 @@ namespace PaletteEditor.UX
             this.lblColourOutput.Size = new System.Drawing.Size(6, 2);
             this.lblColourOutput.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColourOutput.TabIndex = 63;
-            popupPositionValues3.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues3.PlacementTarget = null;
+            popupPositionValues3.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
             this.lblColourOutput.ToolTipValues.ToolTipPosition = popupPositionValues3;
             this.lblColourOutput.Values.Text = "";
             // 
@@ -916,12 +914,11 @@ namespace PaletteEditor.UX
             this.kdnPalette.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kpPaletteColours,
             this.kryptonPage1});
-            this.kdnPalette.SelectedIndex = 0;
+            this.kdnPalette.SelectedIndex = 1;
             this.kdnPalette.Size = new System.Drawing.Size(1649, 717);
             this.kdnPalette.TabIndex = 0;
             this.kdnPalette.Text = "kdnPalette";
-            popupPositionValues5.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues5.PlacementTarget = null;
+            popupPositionValues5.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
             this.kdnPalette.ToolTipValues.ToolTipPosition = popupPositionValues5;
             // 
             // kpPaletteColours
@@ -977,8 +974,7 @@ namespace PaletteEditor.UX
             this.kgbPreviewPane.Size = new System.Drawing.Size(1625, 661);
             this.kgbPreviewPane.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kgbPreviewPane.TabIndex = 11;
-            popupPositionValues4.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues4.PlacementTarget = null;
+            popupPositionValues4.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
             this.kgbPreviewPane.ToolTipValues.ToolTipPosition = popupPositionValues4;
             this.kgbPreviewPane.Values.Heading = "Colour Preview";
             // 
@@ -1321,7 +1317,7 @@ namespace PaletteEditor.UX
             this.kryptonPage1.LastVisibleSet = true;
             this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
             this.kryptonPage1.Name = "kryptonPage1";
-            this.kryptonPage1.Size = new System.Drawing.Size(100, 100);
+            this.kryptonPage1.Size = new System.Drawing.Size(1647, 690);
             this.kryptonPage1.Text = "kryptonPage1";
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "f8c92afc9844492ba80e3e09a37a3ff0";
