@@ -31,7 +31,8 @@ Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Exte
 * New `Palette Explorer` controls
 * Merged all settings into `Toolkit Settings.dll`
 * Begun work on [#70](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/70)
-* Implement [NaviSuite](https://github.com/jacobmesu/Guifreaks-Navisuite) by [Jacobmesu](https://github.com/jacobmesu)
+* Implemented [NaviSuite](https://github.com/jacobmesu/Guifreaks-Navisuite) by [Jacobmesu](https://github.com/jacobmesu)
+* New file varifier app to work with May's file checksum calculator
 * Upgraded to Krypton Toolkit Suite - version: **5.470.xxx**
 * Build 10xx (build date Saturday 1st, June 2019) is now available on NuGet
 -->
