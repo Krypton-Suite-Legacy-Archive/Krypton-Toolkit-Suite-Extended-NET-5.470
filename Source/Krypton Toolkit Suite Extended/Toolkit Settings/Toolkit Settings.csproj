@@ -64,7 +64,17 @@
     <Compile Include="Classes\Application Updater\XMLFileApplicationUpdaterSettingsManager.cs" />
     <Compile Include="Classes\Extended Controls\BooleanSettingsManager.cs" />
     <Compile Include="Classes\Extended Controls\StringSettingsManager.cs" />
+    <Compile Include="Classes\Extended Controls\ThemeSettingsManager.cs" />
+    <Compile Include="Classes\Extended Controls\WindowLocationSettingsManager.cs" />
     <Compile Include="Classes\Global\GlobalBooleanSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\AllMergedColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\BasicColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\CustomColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\CustomTextColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\LinkTextColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\MiscellaneousColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\StandardControlTextColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\TextColourSettingsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\Application Updater\InternalApplicationUpdaterSettings.Designer.cs">
       <AutoGen>True</AutoGen>
