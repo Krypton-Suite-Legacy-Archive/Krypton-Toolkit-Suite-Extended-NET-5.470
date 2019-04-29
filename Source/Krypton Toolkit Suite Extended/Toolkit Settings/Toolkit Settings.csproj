@@ -78,6 +78,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>XMLFileApplicationUpdaterSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Extended Controls\StringSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>StringSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Settings\Global\GlobalBooleanSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -148,6 +153,10 @@
     <None Include="Settings\Application Updater\XMLFileApplicationUpdaterSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>XMLFileApplicationUpdaterSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Extended Controls\StringSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>StringSettings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Settings\Global\GlobalBooleanSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
