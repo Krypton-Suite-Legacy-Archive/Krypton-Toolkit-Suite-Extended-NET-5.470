@@ -32,9 +32,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Krypton Docking, Version=5.470.695.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\KryptonToolkitSuite5470.5.470.901\lib\net47\Krypton Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Navigator, Version=5.470.677.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\KryptonToolkitSuite5470.5.470.901\lib\net47\Krypton Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Ribbon, Version=5.470.719.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\KryptonToolkitSuite5470.5.470.901\lib\net47\Krypton Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Toolkit, Version=5.470.901.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\KryptonToolkitSuite5470.5.470.901\lib\net47\Krypton Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Workspace, Version=5.470.673.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\KryptonToolkitSuite5470.5.470.901\lib\net47\Krypton Workspace.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,7 +59,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Application Updater\InternalApplicationUpdaterSettingsManager.cs" />
+    <Compile Include="Classes\Application Updater\ThemeSettingsManager.cs" />
+    <Compile Include="Classes\Application Updater\XMLFileApplicationUpdaterSettingsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\Application Updater\InternalApplicationUpdaterSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>InternalApplicationUpdaterSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Application Updater\ThemeSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ThemeSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Application Updater\XMLFileApplicationUpdaterSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>XMLFileApplicationUpdaterSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Settings\Global\GlobalBooleanSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -68,6 +102,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>LinkTextColourSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\Colours\MergedColourSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>MergedColourSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="Settings\Palette Explorer\Colours\MiscellaneousColourSettings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -97,6 +136,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Settings\Application Updater\InternalApplicationUpdaterSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>InternalApplicationUpdaterSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Application Updater\ThemeSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ThemeSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Application Updater\XMLFileApplicationUpdaterSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>XMLFileApplicationUpdaterSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Settings\Global\GlobalBooleanSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>GlobalBooleanSettings.Designer.cs</LastGenOutput>
@@ -116,6 +168,10 @@
     <None Include="Settings\Palette Explorer\Colours\LinkTextColourSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>LinkTextColourSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\Colours\MergedColourSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MergedColourSettings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Settings\Palette Explorer\Colours\MiscellaneousColourSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

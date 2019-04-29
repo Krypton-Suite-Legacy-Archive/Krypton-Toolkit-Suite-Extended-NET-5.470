@@ -51,6 +51,7 @@ Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Exte
 * New palette explorer user controls - will make it quicker to design the application
 * Fix palette theme selector, issue [#71](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/71)
 * General tidyup of code & API updates
+* XML documentation files for DLLs
 * Upgraded to Krypton Toolkit Suite - version: **5.470.901**
 * Build 9xx (build date Wednesday 1st, May 2019) is now available on NuGet
 -->
