@@ -1,18 +1,15 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System.Windows.Forms;
-using ToolkitSettings.Settings.Application_Updater;
+using ToolkitSettings.Settings.Extended_Controls;
 
-namespace ToolkitSettings.Classes.ApplicationUpdater
+namespace ToolkitSettings.Classes.ExtendedControls
 {
-    /// <summary>
-    /// Manages the theme settings.
-    /// </summary>
-    public class ThemeSettingsManager
+    public class StringSettingsManager
     {
         #region Variables
         private bool _alwaysUsePrompt = false, _settingsModified = false;
 
-        private ThemeSettings _themeSettings = new ThemeSettings();
+        private StringSettings _stringSettings = new StringSettings();
         #endregion
 
         #region Properties
@@ -55,16 +52,6 @@ namespace ToolkitSettings.Classes.ApplicationUpdater
         }
         #endregion
 
-        #region Constructors
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ThemeSettingsManager"/> class.
-        /// </summary>
-        public ThemeSettingsManager()
-        {
-
-        }
-        #endregion
-
         #region Settings Manipulation
         /// <summary>
         /// Sets the value of AlwaysUsePrompt to value.
@@ -103,45 +90,52 @@ namespace ToolkitSettings.Classes.ApplicationUpdater
         }
         #endregion
 
+        #region Constructors
+        public StringSettingsManager()
+        {
+
+        }
+        #endregion
+
         #region Setters and Getters
         /// <summary>
-        /// Sets the value of CurrentApplicationTheme to mode.
+        /// Sets the value of PaletteExplorerLocation to locationValue.
         /// </summary>
-        /// <param name="mode">The value of CurrentApplicationTheme.</param>
-        public void SetCurrentApplicationTheme(PaletteMode mode)
+        /// <param name="locationValue">The value of PaletteExplorerLocation.</param>
+        public void SetPaletteExplorerLocation(string locationValue)
         {
-            _themeSettings.CurrentApplicationTheme = mode;
+            _stringSettings.PaletteExplorerLocation = locationValue;
 
             SetSettingsModified(true);
         }
 
         /// <summary>
-        /// Returns the value of CurrentApplicationTheme.
+        /// Returns the value of PaletteExplorerLocation.
         /// </summary>
-        /// <returns>The value of CurrentApplicationTheme.</returns>
-        public PaletteMode GetCurrentApplicationTheme()
+        /// <returns>The value of PaletteExplorerLocation.</returns>
+        public string GetPaletteExplorerLocation()
         {
-            return _themeSettings.CurrentApplicationTheme;
+            return _stringSettings.PaletteExplorerLocation;
         }
 
         /// <summary>
-        /// Sets the value of CustomThemePath to themePath.
+        /// Sets the value of VirusTotalAPIKey to apiKey.
         /// </summary>
-        /// <param name="themePath">The value of CustomThemePath.</param>
-        public void SetCustomThemePath(string themePath)
+        /// <param name="apiKey">The value of VirusTotalAPIKey.</param>
+        public void SetVirusTotalAPIKey(string apiKey)
         {
-            _themeSettings.CustomThemePath = themePath;
+            _stringSettings.VirusTotalAPIKey = apiKey;
 
             SetSettingsModified(true);
         }
 
         /// <summary>
-        /// Returns the value of CustomThemePath.
+        /// Returns the value of VirusTotalAPIKey.
         /// </summary>
-        /// <returns>The value of CustomThemePath.</returns>
-        public string GetCustomThemePath()
+        /// <returns>The value of VirusTotalAPIKey.</returns>
+        public string GetVirusTotalAPIKey()
         {
-            return _themeSettings.CustomThemePath;
+            return _stringSettings.VirusTotalAPIKey;
         }
         #endregion
 
@@ -153,9 +147,9 @@ namespace ToolkitSettings.Classes.ApplicationUpdater
         {
             if (KryptonMessageBox.Show("WARNING! You are about to reset these settings back to their original state. This action cannot be undone!\nDo you want to proceed?", "Reset Settings", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                SetCurrentApplicationTheme(PaletteMode.Office2010Blue);
+                SetPaletteExplorerLocation("");
 
-                SetCustomThemePath("");
+                SetVirusTotalAPIKey("");
 
                 if (KryptonMessageBox.Show($"Done! Do you want to restart the application now?", "Action Complete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -174,14 +168,14 @@ namespace ToolkitSettings.Classes.ApplicationUpdater
             {
                 if (KryptonMessageBox.Show("You have changed a setting value. Do you want to save these changes?", "Setting Values Changed", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    _themeSettings.Save();
+                    _stringSettings.Save();
 
                     SetSettingsModified(false);
                 }
             }
             else
             {
-                _themeSettings.Save();
+                _stringSettings.Save();
 
                 SetSettingsModified(false);
             }

@@ -1,18 +1,15 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System.Windows.Forms;
-using ToolkitSettings.Settings.Application_Updater;
+using ToolkitSettings.Settings.Extended_Controls;
 
-namespace ToolkitSettings.Classes.ApplicationUpdater
+namespace ToolkitSettings.Classes.ExtendedControls
 {
-    /// <summary>
-    /// Manages the theme settings.
-    /// </summary>
-    public class ThemeSettingsManager
+    public class BooleanSettingsManager
     {
         #region Variables
         private bool _alwaysUsePrompt = false, _settingsModified = false;
 
-        private ThemeSettings _themeSettings = new ThemeSettings();
+        private BooleanSettings _booleanSettings = new BooleanSettings();
         #endregion
 
         #region Properties
@@ -55,11 +52,8 @@ namespace ToolkitSettings.Classes.ApplicationUpdater
         }
         #endregion
 
-        #region Constructors
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ThemeSettingsManager"/> class.
-        /// </summary>
-        public ThemeSettingsManager()
+        #region Constructor
+        public BooleanSettingsManager()
         {
 
         }
@@ -105,43 +99,23 @@ namespace ToolkitSettings.Classes.ApplicationUpdater
 
         #region Setters and Getters
         /// <summary>
-        /// Sets the value of CurrentApplicationTheme to mode.
+        /// Sets the value of UseVirusTotalUseTLS to value.
         /// </summary>
-        /// <param name="mode">The value of CurrentApplicationTheme.</param>
-        public void SetCurrentApplicationTheme(PaletteMode mode)
+        /// <param name="value">The value of UseVirusTotalUseTLS.</param>
+        public void SetUseVirusTotalUseTLS(bool value)
         {
-            _themeSettings.CurrentApplicationTheme = mode;
+            _booleanSettings.UseVirusTotalUseTLS = value;
 
-            SetSettingsModified(true);
+            SetUseVirusTotalUseTLS(true);
         }
 
         /// <summary>
-        /// Returns the value of CurrentApplicationTheme.
+        /// Returns the value of UseVirusTotalUseTLS.
         /// </summary>
-        /// <returns>The value of CurrentApplicationTheme.</returns>
-        public PaletteMode GetCurrentApplicationTheme()
+        /// <returns>The value of UseVirusTotalUseTLS.</returns>
+        public bool GetUseVirusTotalUseTLS()
         {
-            return _themeSettings.CurrentApplicationTheme;
-        }
-
-        /// <summary>
-        /// Sets the value of CustomThemePath to themePath.
-        /// </summary>
-        /// <param name="themePath">The value of CustomThemePath.</param>
-        public void SetCustomThemePath(string themePath)
-        {
-            _themeSettings.CustomThemePath = themePath;
-
-            SetSettingsModified(true);
-        }
-
-        /// <summary>
-        /// Returns the value of CustomThemePath.
-        /// </summary>
-        /// <returns>The value of CustomThemePath.</returns>
-        public string GetCustomThemePath()
-        {
-            return _themeSettings.CustomThemePath;
+            return _booleanSettings.UseVirusTotalUseTLS;
         }
         #endregion
 
@@ -153,9 +127,7 @@ namespace ToolkitSettings.Classes.ApplicationUpdater
         {
             if (KryptonMessageBox.Show("WARNING! You are about to reset these settings back to their original state. This action cannot be undone!\nDo you want to proceed?", "Reset Settings", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                SetCurrentApplicationTheme(PaletteMode.Office2010Blue);
-
-                SetCustomThemePath("");
+                SetUseVirusTotalUseTLS(false);
 
                 if (KryptonMessageBox.Show($"Done! Do you want to restart the application now?", "Action Complete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -174,14 +146,14 @@ namespace ToolkitSettings.Classes.ApplicationUpdater
             {
                 if (KryptonMessageBox.Show("You have changed a setting value. Do you want to save these changes?", "Setting Values Changed", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    _themeSettings.Save();
+                    _booleanSettings.Save();
 
                     SetSettingsModified(false);
                 }
             }
             else
             {
-                _themeSettings.Save();
+                _booleanSettings.Save();
 
                 SetSettingsModified(false);
             }

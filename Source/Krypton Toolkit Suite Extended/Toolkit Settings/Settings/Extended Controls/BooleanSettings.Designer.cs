@@ -26,12 +26,12 @@ namespace ToolkitSettings.Settings.Extended_Controls {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool VirusTotalUseTLS {
+        public bool UseVirusTotalUseTLS {
             get {
-                return ((bool)(this["VirusTotalUseTLS"]));
+                return ((bool)(this["UseVirusTotalUseTLS"]));
             }
             set {
-                this["VirusTotalUseTLS"] = value;
+                this["UseVirusTotalUseTLS"] = value;
             }
         }
     }

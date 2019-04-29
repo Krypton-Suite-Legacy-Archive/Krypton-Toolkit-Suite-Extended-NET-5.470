@@ -37,12 +37,12 @@ namespace ToolkitSettings.Classes.ApplicationUpdater
         }
 
         /// <summary>
-        /// Gets or sets a value indicating whether [settings modifed].
+        /// Gets or sets a value indicating whether [settings modified].
         /// </summary>
         /// <value>
-        ///   <c>true</c> if [settings modifed]; otherwise, <c>false</c>.
+        ///   <c>true</c> if [settings modified]; otherwise, <c>false</c>.
         /// </value>
-        public bool SettingsModifed
+        public bool SettingsModified
         {
             get
             {
@@ -92,7 +92,7 @@ namespace ToolkitSettings.Classes.ApplicationUpdater
         /// <param name="value">The desired value of SettingsModified.</param>
         public void SetSettingsModified(bool value)
         {
-            SettingsModifed = value;
+            SettingsModified = value;
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace ToolkitSettings.Classes.ApplicationUpdater
         /// <returns>The value of the SettingsModified.</returns>
         public bool GetSettingsModified()
         {
-            return SettingsModifed;
+            return SettingsModified;
         }
 
         /// <summary>

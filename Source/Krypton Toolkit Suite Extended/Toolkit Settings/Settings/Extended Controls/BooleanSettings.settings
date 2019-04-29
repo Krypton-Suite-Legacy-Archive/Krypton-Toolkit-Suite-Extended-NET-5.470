@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ToolkitSettings.Settings.Extended_Controls" GeneratedClassName="BooleanSettings">
   <Profiles />
   <Settings>
-    <Setting Name="VirusTotalUseTLS" Type="System.Boolean" Scope="User">
+    <Setting Name="UseVirusTotalUseTLS" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
