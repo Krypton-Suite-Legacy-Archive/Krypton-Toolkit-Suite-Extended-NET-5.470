@@ -78,15 +78,35 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>XMLFileApplicationUpdaterSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Extended Controls\BooleanSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>BooleanSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Settings\Extended Controls\StringSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>StringSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Extended Controls\ThemeSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ThemeSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Extended Controls\WindowLocationSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>WindowLocationSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Settings\Global\GlobalBooleanSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>GlobalBooleanSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\Colours\AllMergedColourSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>AllMergedColourSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="Settings\Palette Explorer\Colours\BasicColourSettings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -107,11 +127,6 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>LinkTextColourSettings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Settings\Palette Explorer\Colours\MergedColourSettings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>MergedColourSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="Settings\Palette Explorer\Colours\MiscellaneousColourSettings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -154,13 +169,29 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>XMLFileApplicationUpdaterSettings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Settings\Extended Controls\BooleanSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>BooleanSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Settings\Extended Controls\StringSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>StringSettings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Settings\Extended Controls\ThemeSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ThemeSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Extended Controls\WindowLocationSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>WindowLocationSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Settings\Global\GlobalBooleanSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>GlobalBooleanSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\Colours\AllMergedColourSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>AllMergedColourSettings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Settings\Palette Explorer\Colours\BasicColourSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -177,10 +208,6 @@
     <None Include="Settings\Palette Explorer\Colours\LinkTextColourSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>LinkTextColourSettings.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Settings\Palette Explorer\Colours\MergedColourSettings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>MergedColourSettings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Settings\Palette Explorer\Colours\MiscellaneousColourSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
