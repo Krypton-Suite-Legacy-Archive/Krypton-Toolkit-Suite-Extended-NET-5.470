@@ -140,7 +140,7 @@ namespace ToolkitSettings.Classes.ExtendedControls
         /// Saves the XML file application updater settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveXMLFileApplicationUpdaterSettings(bool alwaysUsePrompt = false)
+        public void SaveBooleanSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {

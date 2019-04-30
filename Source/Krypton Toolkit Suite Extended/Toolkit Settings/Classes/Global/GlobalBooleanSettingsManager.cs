@@ -133,7 +133,7 @@ namespace ToolkitSettings.Classes.Global
             {
                 SetIsInDeveloperMode(false);
 
-                SaveXMLFileApplicationUpdaterSettings(GetAlwaysUsePrompt());
+                SaveGlobalBooleanSettings(GetAlwaysUsePrompt());
 
                 if (KryptonMessageBox.Show($"Done! Do you want to restart the application now?", "Action Complete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -146,7 +146,7 @@ namespace ToolkitSettings.Classes.Global
         /// Saves the XML file application updater settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveXMLFileApplicationUpdaterSettings(bool alwaysUsePrompt = false)
+        public void SaveGlobalBooleanSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {

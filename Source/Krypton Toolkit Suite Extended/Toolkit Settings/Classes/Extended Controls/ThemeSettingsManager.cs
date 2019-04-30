@@ -4,6 +4,9 @@ using ToolkitSettings.Settings.Extended_Controls;
 
 namespace ToolkitSettings.Classes.ExtendedControls
 {
+    /// <summary>
+    /// Manages the theme settings.
+    /// </summary>
     public class ThemeSettingsManager
     {
         #region Variables
@@ -91,6 +94,9 @@ namespace ToolkitSettings.Classes.ExtendedControls
         #endregion
 
         #region Constructors
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ThemeSettingsManager"/> class.
+        /// </summary>
         public ThemeSettingsManager()
         {
 
@@ -162,7 +168,7 @@ namespace ToolkitSettings.Classes.ExtendedControls
         /// Saves the XML file application updater settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveXMLFileApplicationUpdaterSettings(bool alwaysUsePrompt = false)
+        public void SaveThemeSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {
