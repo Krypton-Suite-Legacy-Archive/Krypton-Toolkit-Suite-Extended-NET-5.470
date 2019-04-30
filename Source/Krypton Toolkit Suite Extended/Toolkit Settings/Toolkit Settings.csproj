@@ -75,6 +75,7 @@
     <Compile Include="Classes\Palette Explorer\Colours\MiscellaneousColourSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\Colours\StandardControlTextColourSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\Colours\TextColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\GeneralPaletteExplorerSettingsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\Application Updater\InternalApplicationUpdaterSettings.Designer.cs">
       <AutoGen>True</AutoGen>
