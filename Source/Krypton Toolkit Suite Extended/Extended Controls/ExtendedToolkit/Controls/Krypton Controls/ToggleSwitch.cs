@@ -1,4 +1,13 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code.Drawing;
 using System;
 using System.ComponentModel;
@@ -50,7 +59,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _textEnabled = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -83,7 +92,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _useGradientOnKnob = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -96,7 +105,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _useKryptonRenderer = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -109,7 +118,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _offColour = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -122,7 +131,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _borderColour = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -135,7 +144,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _disabledKnobColour = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -148,7 +157,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _onColour = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -160,7 +169,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _disabledColour = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -172,7 +181,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _enabledTextColour = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -184,7 +193,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _disabledTextColour = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -196,7 +205,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _knobColour = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -208,7 +217,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _startGradientColour = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -232,7 +241,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _endGradientColour = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -245,7 +254,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _penColour = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -257,7 +266,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _mode = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -270,7 +279,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _enabledText = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -283,7 +292,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             {
                 _disabledText = value;
 
-               Invalidate();
+                Invalidate();
             }
         }
 
@@ -399,7 +408,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
                     _circle = new RectangleF(x, 1, _diameter, _diameter);
 
-                   Invalidate();
+                    Invalidate();
                 }
                 else
                 {
@@ -407,7 +416,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
                     _circle = new RectangleF(x, 1, _diameter, _diameter);
 
-                   Invalidate();
+                    Invalidate();
 
                     _paintTicker.Stop();
                 }
@@ -421,7 +430,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
                     _circle = new RectangleF(x, 1, _diameter, _diameter);
 
-                   Invalidate();
+                    Invalidate();
                 }
                 else
                 {
@@ -429,7 +438,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
                     _circle = new RectangleF(x, 1, _diameter, _diameter);
 
-                   Invalidate();
+                    Invalidate();
 
                     _paintTicker.Stop();
 
@@ -451,19 +460,19 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
                 _palette.PalettePaint += new EventHandler<PaletteLayoutEventArgs>(OnPalettePaint);
             }
 
-           Invalidate();
+            Invalidate();
         }
 
         private void OnPalettePaint(object sender, PaletteLayoutEventArgs e)
         {
-           Invalidate();
+            Invalidate();
         }
         #endregion
 
         #region Overrides
         protected override void OnEnabledChanged(EventArgs e)
         {
-           Invalidate();
+            Invalidate();
 
             base.OnEnabledChanged(e);
         }

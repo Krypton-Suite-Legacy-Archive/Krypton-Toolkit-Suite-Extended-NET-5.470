@@ -806,6 +806,9 @@
     <Compile Include="ExtendedToolkit\UI\Dialogues\KryptonCredentialDialog.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Dialogues\KryptonFileInformationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Dialogues\KrypyonUserCreationDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1182,6 +1185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\KryptonCredentialDialog.resx">
       <DependentUpon>KryptonCredentialDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\KryptonFileInformationDialog.resx">
+      <DependentUpon>KryptonFileInformationDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\KrypyonUserCreationDialog.resx">
       <DependentUpon>KrypyonUserCreationDialog.cs</DependentUpon>

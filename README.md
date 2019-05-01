@@ -33,6 +33,7 @@ Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Exte
 * Begun work on [#70](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/70)
 * Implemented [NaviSuite](https://github.com/jacobmesu/Guifreaks-Navisuite) by [Jacobmesu](https://github.com/jacobmesu)
 * New file varifier app to work with May's file checksum calculator
+* New `KryptonFileInformationDialog` to replace the Windows default one with some extra features
 * Upgraded to Krypton Toolkit Suite - version: **5.470.xxx**
 * Build 10xx (build date Saturday 1st, June 2019) is now available on NuGet
 -->

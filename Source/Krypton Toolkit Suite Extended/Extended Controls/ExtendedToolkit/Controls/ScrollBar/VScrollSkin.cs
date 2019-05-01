@@ -1,4 +1,13 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code.ScrollBar;
 using ExtendedControls.Base.Code.ScrollBar.CustomScrollBar;
 using ExtendedControls.ExtendedToolkit.Controls.KryptonControls;

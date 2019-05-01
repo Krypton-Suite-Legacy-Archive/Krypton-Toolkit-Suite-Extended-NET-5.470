@@ -1,11 +1,18 @@
-﻿using System;
-using System.ComponentModel;
-using System.Drawing;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
 
 using ComponentFactory.Krypton.Toolkit;
-
 using Core.Classes;
 using GlobalUtilities.Classes;
+using System;
+using System.ComponentModel;
+using System.Drawing;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 {
@@ -18,7 +25,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
     [DesignerCategory("Code")]
     [DisplayName("Cue KryptonComboBox")]
     [Description("A KryptonComboBox with cue banner support.")]
-    [ToolboxItem(true)]
+    [ToolboxItem(false)]
     [ToolboxBitmap(typeof(KryptonComboBox))]
     public partial class KryptonCueComboBox : KryptonComboBox
     {

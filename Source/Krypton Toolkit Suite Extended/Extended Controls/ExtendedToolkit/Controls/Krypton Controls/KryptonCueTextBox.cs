@@ -1,4 +1,13 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 using Core.Classes;
 using GlobalUtilities.Classes;
 using System;
@@ -15,7 +24,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
     /// </remarks>
     [DesignerCategory("Code")]
     [DisplayName("Cue KryptonTextBox")]
-    [Description("A KryptonTextBox with cue banner support.")]
+    [Description("A KryptonTextBox with cue banner support. (Depreciated, please use the standard KryptonTextBox in conjunction with the 'hint' property instead.)")]
     [ToolboxItem(false)]
     [ToolboxBitmap(typeof(KryptonTextBox))]
     public partial class KryptonCueTextBox : KryptonTextBox
