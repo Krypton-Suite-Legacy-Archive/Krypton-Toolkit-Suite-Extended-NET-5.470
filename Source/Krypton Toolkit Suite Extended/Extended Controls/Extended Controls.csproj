@@ -359,7 +359,6 @@
     <Compile Include="ExtendedToolkit\Error Reporting\UX\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\MessageBoxes\UI\KryptonExceptionMessageBox.cs" />
     <Compile Include="ExtendedToolkit\Ribbon\RibbonMerger.cs" />
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
       <SubType>Form</SubType>

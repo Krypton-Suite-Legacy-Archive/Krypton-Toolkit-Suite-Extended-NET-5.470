@@ -9,10 +9,6 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
 {
@@ -335,6 +331,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.MinimizeBox = false;
             this.Name = "KryptonFileInformationDialog";
             this.Text = "{0} Properties";
+            this.Load += new System.EventHandler(this.KryptonFileInformationDialog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
@@ -354,6 +351,11 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonGroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxFileIcon)).EndInit();
             this.ResumeLayout(false);
+
+        }
+
+        private void KryptonFileInformationDialog_Load(object sender, EventArgs e)
+        {
 
         }
     }

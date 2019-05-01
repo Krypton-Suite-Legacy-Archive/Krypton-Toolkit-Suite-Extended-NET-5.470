@@ -1,7 +1,15 @@
-﻿using System.ComponentModel;
-using System.Drawing;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using System.ComponentModel;
+using System.Drawing;
 
 namespace ExtendedControls.ExtendedToolkit.Values
 {
@@ -75,11 +83,11 @@ namespace ExtendedControls.ExtendedToolkit.Values
         {
             Image = defaultImage;
         }
-        
+
         /// <summary>
-                 /// Gets the content short text.
-                 /// </summary>
-                 /// <returns>String value.</returns>
+        /// Gets the content short text.
+        /// </summary>
+        /// <returns>String value.</returns>
         public Image GetImage(PaletteState state)
         {
             return Image;
