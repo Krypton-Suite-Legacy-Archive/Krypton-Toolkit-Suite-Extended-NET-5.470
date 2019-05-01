@@ -10,7 +10,7 @@ namespace ToolkitSettings.Classes.Helpers
         #region Variables
         AllMergedColourSettingsManager _amcsm = new AllMergedColourSettingsManager();
 
-        Color baseColour, darkColour, middleColour, lightColour, lightestColour, borderColour, alternativeNormalTextColour, normalTextColour, disabledTextColour, focusedTextColour, pressedTextColour, disabledColour, linkNormalColour, linkFocusedColour, linkHoverColour, linkVisitedColour, customColourOne, customColourTwo, customColourThree, customColourFour, customColourFive, customColourSix, customTextColourOne, customTextColourTwo, customTextColourThree, customTextColourFour, customTextColourFive, customTextColourSix, menuTextColour, statusTextColour, ribbonTabTextColour;
+        Color baseColour, darkColour, middleColour, lightColour, lightestColour, borderColour, alternativeNormalTextColour, normalTextColour, disabledTextColour, focusedTextColour, pressedTextColour, disabledControlColour, linkNormalColour, linkFocusedColour, linkHoverColour, linkVisitedColour, customColourOne, customColourTwo, customColourThree, customColourFour, customColourFive, customColourSix, customTextColourOne, customTextColourTwo, customTextColourThree, customTextColourFour, customTextColourFive, customTextColourSix, menuTextColour, statusTextColour, ribbonTabTextColour;
         #endregion
 
         #region Properties
@@ -22,7 +22,17 @@ namespace ToolkitSettings.Classes.Helpers
         #endregion
 
         #region Public Methods
+        public static void MergeColours(bool usePrompt = false)
+        {
+            if (usePrompt)
+            {
 
+            }
+            else
+            {
+
+            }
+        }
         #endregion
 
         #region Internal Methods                
@@ -40,7 +50,7 @@ namespace ToolkitSettings.Classes.Helpers
         /// <param name="disabledTextColour">The disabled text colour.</param>
         /// <param name="focusedTextColour">The focused text colour.</param>
         /// <param name="pressedTextColour">The pressed text colour.</param>
-        /// <param name="disabledColour">The disabled colour.</param>
+        /// <param name="disabledControlColour">The disabled control colour.</param>
         /// <param name="linkNormalColour">The link normal colour.</param>
         /// <param name="linkFocusedColour">The link focused colour.</param>
         /// <param name="linkHoverColour">The link hover colour.</param>
@@ -61,7 +71,7 @@ namespace ToolkitSettings.Classes.Helpers
         /// <param name="statusTextColour">The status text colour.</param>
         /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
         /// <param name="askForConfirmation">if set to <c>true</c> [ask for confirmation].</param>
-        internal static void MergeAllPaletteColours(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customColourSix, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color customTextColourSix, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour, bool askForConfirmation = false)
+        internal static void MergeAllPaletteColours(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledControlColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customColourSix, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color customTextColourSix, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour, bool askForConfirmation = false)
         {
             try
             {
@@ -69,13 +79,13 @@ namespace ToolkitSettings.Classes.Helpers
 
                 if (SettingsVarifier.AreAllMergedColourSettingsDefault())
                 {
-                    MergeAllPaletteColoursIntoOneSettingsFile(baseColour, darkColour, middleColour, lightColour, lightestColour, borderColour, alternativeNormalTextColour, normalTextColour, disabledTextColour, focusedTextColour, pressedTextColour, disabledColour, linkNormalColour, linkFocusedColour, linkHoverColour, linkVisitedColour, customColourOne, customColourTwo, customColourThree, customColourFour, customColourFive, customColourSix, customTextColourOne, customTextColourTwo, customTextColourThree, customTextColourFour, customTextColourFive, customTextColourSix, menuTextColour, statusTextColour, ribbonTabTextColour);
+                    MergeAllPaletteColoursIntoOneSettingsFile(baseColour, darkColour, middleColour, lightColour, lightestColour, borderColour, alternativeNormalTextColour, normalTextColour, disabledTextColour, focusedTextColour, pressedTextColour, disabledControlColour, linkNormalColour, linkFocusedColour, linkHoverColour, linkVisitedColour, customColourOne, customColourTwo, customColourThree, customColourFour, customColourFive, customColourSix, customTextColourOne, customTextColourTwo, customTextColourThree, customTextColourFour, customTextColourFive, customTextColourSix, menuTextColour, statusTextColour, ribbonTabTextColour);
                 }
                 else
                 {
                     manager.ResetToDefaults();
 
-                    MergeAllPaletteColoursIntoOneSettingsFile(baseColour, darkColour, middleColour, lightColour, lightestColour, borderColour, alternativeNormalTextColour, normalTextColour, disabledTextColour, focusedTextColour, pressedTextColour, disabledColour, linkNormalColour, linkFocusedColour, linkHoverColour, linkVisitedColour, customColourOne, customColourTwo, customColourThree, customColourFour, customColourFive, customColourSix, customTextColourOne, customTextColourTwo, customTextColourThree, customTextColourFour, customTextColourFive, customTextColourSix, menuTextColour, statusTextColour, ribbonTabTextColour);
+                    MergeAllPaletteColoursIntoOneSettingsFile(baseColour, darkColour, middleColour, lightColour, lightestColour, borderColour, alternativeNormalTextColour, normalTextColour, disabledTextColour, focusedTextColour, pressedTextColour, disabledControlColour, linkNormalColour, linkFocusedColour, linkHoverColour, linkVisitedColour, customColourOne, customColourTwo, customColourThree, customColourFour, customColourFive, customColourSix, customTextColourOne, customTextColourTwo, customTextColourThree, customTextColourFour, customTextColourFive, customTextColourSix, menuTextColour, statusTextColour, ribbonTabTextColour);
                 }
             }
             catch (Exception exc)
@@ -98,7 +108,7 @@ namespace ToolkitSettings.Classes.Helpers
         /// <param name="disabledTextColour">The disabled text colour.</param>
         /// <param name="focusedTextColour">The focused text colour.</param>
         /// <param name="pressedTextColour">The pressed text colour.</param>
-        /// <param name="disabledColour">The disabled colour.</param>
+        /// <param name="disabledControlColour">The disabled control colour.</param>
         /// <param name="linkNormalColour">The link normal colour.</param>
         /// <param name="linkFocusedColour">The link focused colour.</param>
         /// <param name="linkHoverColour">The link hover colour.</param>
@@ -118,9 +128,73 @@ namespace ToolkitSettings.Classes.Helpers
         /// <param name="menuTextColour">The menu text colour.</param>
         /// <param name="statusTextColour">The status text colour.</param>
         /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
-        private static void MergeAllPaletteColoursIntoOneSettingsFile(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customColourSix, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color customTextColourSix, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour)
+        private static void MergeAllPaletteColoursIntoOneSettingsFile(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledControlColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customColourSix, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color customTextColourSix, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour)
         {
-            throw new NotImplementedException();
+            AllMergedColourSettingsManager manager = new AllMergedColourSettingsManager();
+
+            manager.SetBaseColour(baseColour);
+
+            manager.SetDarkColour(darkColour);
+
+            manager.SetMediumColour(middleColour);
+
+            manager.SetLightColour(lightColour);
+
+            manager.SetLightestColour(lightestColour);
+
+            manager.SetBorderColour(borderColour);
+
+            manager.SetAlternativeNormalTextColour(alternativeNormalTextColour);
+
+            manager.SetNormalTextColour(normalTextColour);
+
+            manager.SetDisabledTextColour(disabledTextColour);
+
+            manager.SetFocusedTextColour(focusedTextColour);
+
+            manager.SetPressedTextColour(pressedTextColour);
+
+            manager.SetDisabledControlColour(disabledControlColour);
+
+            manager.SetLinkNormalColour(linkNormalColour);
+
+            manager.SetLinkFocusedColour(linkFocusedColour);
+
+            manager.SetLinkHoverColour(linkHoverColour);
+
+            manager.SetLinkVisitedColour(linkVisitedColour);
+
+            manager.SetCustomColourOne(customColourOne);
+
+            manager.SetCustomColourTwo(customColourTwo);
+
+            manager.SetCustomColourThree(customColourThree);
+
+            manager.SetCustomColourFour(customColourFour);
+
+            manager.SetCustomColourFive(customColourFive);
+
+            manager.SetCustomColourSix(customColourSix);
+
+            manager.SetCustomTextColourOne(customTextColourOne);
+
+            manager.SetCustomTextColourTwo(customTextColourTwo);
+
+            manager.SetCustomTextColourThree(customTextColourThree);
+
+            manager.SetCustomTextColourFour(customTextColourFour);
+
+            manager.SetCustomTextColourFive(customTextColourFive);
+
+            manager.SetCustomTextColourSix(customTextColourSix);
+
+            manager.SetMenuTextColour(menuTextColour);
+
+            manager.SetStatusStripTextColour(statusTextColour);
+
+            manager.SetRibbonTabTextColour(ribbonTabTextColour);
+
+            manager.SaveAllMergedColourSettings(manager.GetAlwaysUsePrompt());
         }
         #endregion
     }

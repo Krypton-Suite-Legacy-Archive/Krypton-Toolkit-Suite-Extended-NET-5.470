@@ -1,10 +1,19 @@
-﻿using Classes.Colours;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using Classes.Colours;
 using ComponentFactory.Krypton.Toolkit;
+using Core.Enumerations;
+using Core.Settings.Classes;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Core.Enumerations;
-using Core.Settings.Classes;
 
 namespace Core.Classes.Other
 {

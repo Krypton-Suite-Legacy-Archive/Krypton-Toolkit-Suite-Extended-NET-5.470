@@ -1,9 +1,18 @@
-﻿using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
 using Core.Classes.Colours;
 using Core.Enumerations;
 using Core.STRUCTS;
+using System.ComponentModel;
+using System.Drawing;
+using System.Linq;
 
 namespace Core.Controls.Colours
 {

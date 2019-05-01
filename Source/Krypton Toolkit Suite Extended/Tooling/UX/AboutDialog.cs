@@ -1,5 +1,13 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using Core.Interfaces;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 using System;
 
 namespace Core.UX
@@ -7,7 +15,7 @@ namespace Core.UX
     public partial class AboutDialog : KryptonForm
     {
         #region Variables
-        private IAbout _about;
+        private Core.Interfaces.IAboutStripped _about;
         #endregion
 
         public AboutDialog()
@@ -17,14 +25,14 @@ namespace Core.UX
 
         private void AboutDialog_Load(object sender, EventArgs e)
         {
-            ShowIcon = _about.UseIcon;
+            //ShowIcon = _about.UseIcon;
 
             if (_about.ApplicationIcon != null)
             {
                 Icon = _about.ApplicationIcon;
             }
 
-            kbtnSystemInformation.Visible = _about.ShowSystemInformationButton;
+            //kbtnSystemInformation.Visible = _about.ShowSystemInformationButton;
 
             Text = $"About { _about.ApplicationName }";
 
