@@ -161,7 +161,15 @@ namespace ToolkitSettings.Classes.Helpers
             }
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static bool AreAllMergedColourSettingsDefault()
+        {
+            // TODO: Come back later!
+            return false;
+        }
         #endregion
     }
 }
