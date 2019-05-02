@@ -8,7 +8,6 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
-using KryptonExtendedToolkit.Base.Code;
 using KryptonExtendedToolkit.ExtendedToolkit.UI;
 using System;
 using System.Windows.Forms;
@@ -105,9 +104,9 @@ namespace KryptonExtendedToolkit.Base.ButtonSpec
                     if (GetView().ClientRectangle.Contains(mea.Location))
                     {
                         // Toggle between minimized and restored
-                        KryptonForm.SendSysCommand(KryptonForm.WindowState == FormWindowState.Minimized
-                            ? PI.SC_RESTORE
-                            : PI.SC_MINIMIZE);
+                        //KryptonForm.SendSysCommand(KryptonForm.WindowState == FormWindowState.Minimized
+                        //    ? PI.SC_RESTORE
+                        //    : PI.SC_MINIMIZE);
 
                         // Let base class fire any other attached events
                         base.OnClick(e);

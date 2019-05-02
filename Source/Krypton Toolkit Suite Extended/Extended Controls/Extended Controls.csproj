@@ -880,6 +880,9 @@
     <Compile Include="ExtendedToolkit\UI\Windows\FileInformation.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Windows\KryptonFileCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Utilities\Classes\Utility.cs" />
     <Compile Include="ExtendedToolkit\Utilities\Classes\WIN32.cs" />
     <Compile Include="ExtendedToolkit\Utilities\Controls\ToolStripControlHostFixed.cs">
@@ -1241,6 +1244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Windows\FileInformation.resx">
       <DependentUpon>FileInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Windows\KryptonFileCopy.resx">
+      <DependentUpon>KryptonFileCopy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
