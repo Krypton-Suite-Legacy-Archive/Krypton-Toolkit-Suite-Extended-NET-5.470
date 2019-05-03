@@ -1,12 +1,19 @@
-﻿using Classes.Colours;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using Classes.Colours;
 using ComponentFactory.Krypton.Toolkit;
 using Core.Classes.Other;
+using Core.Interfaces;
 using Core.Settings.Classes;
 using Core.UX;
-using Core.Interfaces;
 using KryptonExtendedToolkit.Base.Code;
-using PaletteEditor.Classes;
-using PaletteEditor.UX.New;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -43,7 +50,7 @@ namespace PaletteEditor.UX
 
         private Timer _colourUpdateTimer;
 
-        private IAbout _about;
+        private IAboutStripped _about;
         #endregion
 
         #region Properties

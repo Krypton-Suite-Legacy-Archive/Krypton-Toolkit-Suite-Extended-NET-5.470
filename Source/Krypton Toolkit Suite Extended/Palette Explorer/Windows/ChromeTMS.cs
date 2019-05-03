@@ -1,14 +1,19 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 
 namespace PaletteExplorer.Windows
 {
     public class ChromeTMS : KryptonForm
     {
+        #region Designer Code
         private System.Windows.Forms.StatusStrip ss;
         private System.Windows.Forms.ToolStripStatusLabel tslExample;
         private KryptonPanel kryptonPanel2;
@@ -567,5 +572,6 @@ namespace PaletteExplorer.Windows
             this.ResumeLayout(false);
 
         }
+        #endregion
     }
 }

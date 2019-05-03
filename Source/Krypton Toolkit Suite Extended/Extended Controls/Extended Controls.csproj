@@ -134,6 +134,7 @@
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarState.cs" />
     <Compile Include="Base\Code\ScrollBar\WIN32.cs" />
     <Compile Include="Base\Code\Security\HashingAlgorithms.cs" />
+    <Compile Include="Base\Code\Security\HashingHelper.cs" />
     <Compile Include="Base\Code\Security\PasswordStrength.cs" />
     <Compile Include="Base\Code\Security\SecurityMethods.cs" />
     <Compile Include="Base\Code\Security\VirusTotalAPI.cs" />
