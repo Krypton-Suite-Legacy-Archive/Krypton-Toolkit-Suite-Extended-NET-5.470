@@ -34,5 +34,17 @@ namespace ToolkitSettings.Settings.Global {
                 this["IsInDeveloperMode"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AutomaticallyUpdateColours {
+            get {
+                return ((bool)(this["AutomaticallyUpdateColours"]));
+            }
+            set {
+                this["AutomaticallyUpdateColours"] = value;
+            }
+        }
     }
 }

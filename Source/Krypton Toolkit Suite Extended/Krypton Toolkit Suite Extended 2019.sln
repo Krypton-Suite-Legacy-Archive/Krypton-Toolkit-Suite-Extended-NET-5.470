@@ -18,15 +18,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{3B7410AE-4D93-411E-9C06-5CB84636CBD5}"
 	ProjectSection(SolutionItems) = preProject
 		Examples.md = Examples.md
-		..\..\LICENSE = ..\..\LICENSE
-		..\..\README.md = ..\..\README.md
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Update File Creator", "Update File Creator\Update File Creator.csproj", "{589068CB-78CE-40FA-95AA-9FEAD9C183F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B4B787F0-53A2-498F-8893-091C709F73E4}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\.gitignore = ..\..\.gitignore
+		..\.gitignore = ..\.gitignore
 		License Code Header.txt = License Code Header.txt
 	EndProjectSection
 EndProject
@@ -34,18 +34,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Updates", "Updates", "{D4AD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Changelog", "Changelog", "{D2B92C0D-A67E-4739-A6F9-DFA7F5DF7E3E}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\Updates\Changelog\changelog.html = ..\..\Updates\Changelog\changelog.html
+		..\Updates\Changelog\changelog.html = ..\Updates\Changelog\changelog.html
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{7E8CB4D3-B017-4E65-81CD-74DBFA0E30DB}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\Updates\Changelog\CSS\main.css = ..\..\Updates\Changelog\CSS\main.css
-		..\..\Updates\Changelog\CSS\table.css = ..\..\Updates\Changelog\CSS\table.css
+		..\Updates\Changelog\CSS\main.css = ..\Updates\Changelog\CSS\main.css
+		..\Updates\Changelog\CSS\table.css = ..\Updates\Changelog\CSS\table.css
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IMG", "IMG", "{3FBD4A85-FA04-470D-BD52-F086246B78FA}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\Updates\Changelog\IMG\Krypton.ico = ..\..\Updates\Changelog\IMG\Krypton.ico
+		..\Updates\Changelog\IMG\Krypton.ico = ..\Updates\Changelog\IMG\Krypton.ico
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palette Composer", "Palette Composer\Palette Composer.csproj", "{6F708C9A-C7C7-42F6-B80E-8B4CB3209C8A}"
@@ -83,7 +83,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Update File Maker", "Update
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet Specification", "NuGet Specification", "{7413922C-F694-4507-B00C-9ED0A03A411D}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\Setup\NuGet\KryptonExtendedToolkit5470.nupkg = ..\..\Setup\NuGet\KryptonExtendedToolkit5470.nupkg
+		..\Setup\NuGet\KryptonExtendedToolkit5470.nupkg = ..\Setup\NuGet\KryptonExtendedToolkit5470.nupkg
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{450BC07C-6C2D-4915-8922-03A41088B50C}"
@@ -153,6 +153,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krypton Palette Upgrade Tool", "Krypton Palette Converter\Krypton Palette Upgrade Tool.csproj", "{ECB9CDA4-C0B9-4272-B8FC-921F29D688ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolkit Settings", "Toolkit Settings\Toolkit Settings.csproj", "{EA6E7878-FCCB-416C-8FE1-E626D478A7A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaviSuite", "NaviSuite\NaviSuite.csproj", "{82ABD367-ED24-424C-B572-6661F968E2D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -385,6 +387,18 @@ Global
 		{EA6E7878-FCCB-416C-8FE1-E626D478A7A7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EA6E7878-FCCB-416C-8FE1-E626D478A7A7}.Release|x86.ActiveCfg = Release|Any CPU
 		{EA6E7878-FCCB-416C-8FE1-E626D478A7A7}.Release|x86.Build.0 = Release|Any CPU
+		{82ABD367-ED24-424C-B572-6661F968E2D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82ABD367-ED24-424C-B572-6661F968E2D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82ABD367-ED24-424C-B572-6661F968E2D6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{82ABD367-ED24-424C-B572-6661F968E2D6}.Debug|x86.Build.0 = Debug|Any CPU
+		{82ABD367-ED24-424C-B572-6661F968E2D6}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{82ABD367-ED24-424C-B572-6661F968E2D6}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{82ABD367-ED24-424C-B572-6661F968E2D6}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{82ABD367-ED24-424C-B572-6661F968E2D6}.Installer Only|x86.Build.0 = Release|Any CPU
+		{82ABD367-ED24-424C-B572-6661F968E2D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82ABD367-ED24-424C-B572-6661F968E2D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82ABD367-ED24-424C-B572-6661F968E2D6}.Release|x86.ActiveCfg = Release|Any CPU
+		{82ABD367-ED24-424C-B572-6661F968E2D6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
