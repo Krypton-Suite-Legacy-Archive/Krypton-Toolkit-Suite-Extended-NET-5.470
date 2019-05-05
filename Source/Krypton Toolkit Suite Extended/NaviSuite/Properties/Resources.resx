@@ -117,11 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BarAddOrRemove" xml:space="preserve">
+    <value>Add or Remove Buttons</value>
+    <comment>2.0</comment>
+  </data>
+  <data name="BarOptions" xml:space="preserve">
+    <value>Navigation Pane Options</value>
+    <comment>2.0</comment>
+  </data>
+  <data name="BarShowLess" xml:space="preserve">
+    <value>Show Fewer Buttons</value>
+    <comment>2.0</comment>
+  </data>
+  <data name="BarShowMore" xml:space="preserve">
+    <value>Show More Buttons</value>
+    <comment>2.0</comment>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="NaviBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NaviBar.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NaviGroup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NaviGroup.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OptionsCancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>2.0</comment>
+  </data>
+  <data name="OptionsIntro" xml:space="preserve">
+    <value>Display buttons in this order</value>
+    <comment>2.0</comment>
+  </data>
+  <data name="OptionsMoveDown" xml:space="preserve">
+    <value>Move Down</value>
+    <comment>2.0</comment>
+  </data>
+  <data name="OptionsMoveUp" xml:space="preserve">
+    <value>Move Up</value>
+    <comment>2.0</comment>
+  </data>
+  <data name="OptionsOk" xml:space="preserve">
+    <value>Ok</value>
+    <comment>2.0</comment>
+  </data>
+  <data name="OptionsReset" xml:space="preserve">
+    <value>Reset</value>
+    <comment>2.0</comment>
+  </data>
+  <data name="OptionsTitle" xml:space="preserve">
+    <value>Navigation Pane Options</value>
+    <comment>2.0</comment>
   </data>
 </root>

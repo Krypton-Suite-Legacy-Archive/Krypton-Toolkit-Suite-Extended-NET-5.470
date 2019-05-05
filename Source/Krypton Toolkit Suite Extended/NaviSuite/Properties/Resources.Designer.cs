@@ -19,7 +19,7 @@ namespace NaviSuite.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -61,6 +61,42 @@ namespace NaviSuite.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add or Remove Buttons.
+        /// </summary>
+        internal static string BarAddOrRemove {
+            get {
+                return ResourceManager.GetString("BarAddOrRemove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Navigation Pane Options.
+        /// </summary>
+        internal static string BarOptions {
+            get {
+                return ResourceManager.GetString("BarOptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Fewer Buttons.
+        /// </summary>
+        internal static string BarShowLess {
+            get {
+                return ResourceManager.GetString("BarShowLess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show More Buttons.
+        /// </summary>
+        internal static string BarShowMore {
+            get {
+                return ResourceManager.GetString("BarShowMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap NaviBar {
@@ -77,6 +113,69 @@ namespace NaviSuite.Properties {
             get {
                 object obj = ResourceManager.GetObject("NaviGroup", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string OptionsCancel {
+            get {
+                return ResourceManager.GetString("OptionsCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display buttons in this order.
+        /// </summary>
+        internal static string OptionsIntro {
+            get {
+                return ResourceManager.GetString("OptionsIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Move Down.
+        /// </summary>
+        internal static string OptionsMoveDown {
+            get {
+                return ResourceManager.GetString("OptionsMoveDown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Move Up.
+        /// </summary>
+        internal static string OptionsMoveUp {
+            get {
+                return ResourceManager.GetString("OptionsMoveUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ok.
+        /// </summary>
+        internal static string OptionsOk {
+            get {
+                return ResourceManager.GetString("OptionsOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset.
+        /// </summary>
+        internal static string OptionsReset {
+            get {
+                return ResourceManager.GetString("OptionsReset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Navigation Pane Options.
+        /// </summary>
+        internal static string OptionsTitle {
+            get {
+                return ResourceManager.GetString("OptionsTitle", resourceCulture);
             }
         }
     }
