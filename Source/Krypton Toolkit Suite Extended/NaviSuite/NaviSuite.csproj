@@ -71,9 +71,14 @@
     <Compile Include="Main\Colours\NaviColourTableOff10Blue.cs" />
     <Compile Include="Main\Colours\NaviColourTableOff10Silver.cs" />
     <Compile Include="Main\Colours\NaviColourTableOff3Blue.cs" />
+    <Compile Include="Main\Colours\NaviColourTableOff3Green.cs" />
+    <Compile Include="Main\Colours\NaviColourTableOff3Silver.cs" />
+    <Compile Include="Main\Colours\NaviColourTableOff7Black.cs" />
     <Compile Include="Main\Colours\NaviColourTableOff7Blue.cs" />
     <Compile Include="Main\Colours\NaviColourTable.cs" />
     <Compile Include="Main\Colours\NaviColourTableOff10Black.cs" />
+    <Compile Include="Main\Colours\NaviColourTableOff7Silver.cs" />
+    <Compile Include="Main\Colours\NaviToolstripColourTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -97,6 +102,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NaviGroup.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
