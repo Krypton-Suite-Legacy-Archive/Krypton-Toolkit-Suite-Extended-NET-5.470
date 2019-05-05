@@ -29,76 +29,77 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
+
 using System.Drawing;
 
 namespace NaviSuite.Main.Colours
 {
-    public class NaviColourTableOff7Blue : NaviColourTable
+    public class NaviColourTableOff10Blue : NaviColourTable
     {
         // General colors 
-        public override Color Border { get { return Color.FromArgb(101, 147, 207); } }
         public override Color BorderInner { get { return Color.FromArgb(255, 255, 255); } }
-        public override Color Text { get { return Color.FromArgb(21, 66, 139); } }
+        public override Color Border { get { return Color.FromArgb(133, 158, 191); } }
+        public override Color Text { get { return Color.FromArgb(0, 25, 91); } }
+        public override Color Background { get { return Color.FromArgb(197, 214, 233); } }
         public override Color ShapesFront { get { return Color.FromArgb(86, 125, 177); } }
-        public override Color Background { get { return Color.FromArgb(255, 255, 255); } }
 
         // Designtime only
         public override Color DashedLineColor { get { return Color.FromArgb(101, 147, 207); } }
 
         // NaviBandCollapsed
-        public override Color BandCollapsedBgColor1 { get { return Color.FromArgb(213, 228, 242); } }
-        public override Color BandCollapsedBgColor2 { get { return Color.FromArgb(209, 214, 220); } }
-        public override Color BandCollapsedHoveredColor1 { get { return Color.FromArgb(255, 231, 162); } }
-        public override Color BandCollapsedClickedColor1 { get { return Color.FromArgb(251, 140, 60); } }
+        public override Color BandCollapsedBgColor1 { get { return Color.FromArgb(207, 221, 238); } }
+        public override Color BandCollapsedBgColor2 { get { return Color.FromArgb(207, 221, 238); } }
+        public override Color BandCollapsedHoveredColor1 { get { return Color.FromArgb(207, 221, 238); } }
+        public override Color BandCollapsedClickedColor1 { get { return Color.FromArgb(207, 221, 238); } }
 
         // NaviBand Popup
         public override Color PopupBandBackground1 { get { return Color.FromArgb(227, 239, 255); } }
         public override Color PopupBandBackground2 { get { return Color.FromArgb(227, 239, 255); } }
 
         // NaviBar header
-        public override Color HeaderColor1 { get { return Color.FromArgb(175, 210, 255); } }
+        public override Color HeaderColor1 { get { return Color.FromArgb(207, 221, 238); } }
         public override Color HeaderColor2 { get { return Color.FromArgb(227, 239, 255); } }
-        public override Color HeaderText { get { return Color.FromArgb(21, 66, 139); } }
+        public override Color HeaderText { get { return Color.FromArgb(0, 25, 91); } }
 
         // NaviBar Overflowpanel
-        public override Color OverflowColor1 { get { return Color.FromArgb(209, 214, 220); } }
-        public override Color OverflowColor2 { get { return Color.FromArgb(209, 214, 220); } }
+        public override Color OverflowColor1 { get { return Color.FromArgb(194, 212, 232); } }
+        public override Color OverflowColor2 { get { return Color.FromArgb(194, 212, 232); } }
 
         // NaviButton Normal
-        public override Color ButtonNormalColor1 { get { return Color.FromArgb(192, 219, 255); } } // Light
-        public override Color ButtonNormalColor2 { get { return Color.FromArgb(173, 209, 255); } } // Dark
-        public override Color ButtonNormalColor3 { get { return Color.FromArgb(196, 221, 255); } } // Hightlight dark
-        public override Color ButtonNormalColor4 { get { return Color.FromArgb(227, 239, 255); } } // Highlight light
+        public override Color ButtonNormalColor1 { get { return Color.FromArgb(195, 212, 232); } }
+        public override Color ButtonNormalColor2 { get { return Color.FromArgb(173, 209, 255); } }
+        public override Color ButtonNormalColor3 { get { return Color.FromArgb(196, 221, 255); } }
+        public override Color ButtonNormalColor4 { get { return Color.FromArgb(227, 239, 255); } }
 
         // NaviButton hovered
-        public override Color ButtonHoveredColor1 { get { return Color.FromArgb(255, 230, 159); } }
-        public override Color ButtonHoveredColor2 { get { return Color.FromArgb(255, 215, 103); } }
-        public override Color ButtonHoveredColor3 { get { return Color.FromArgb(255, 233, 168); } }
-        public override Color ButtonHoveredColor4 { get { return Color.FromArgb(255, 254, 228); } }
+        public override Color ButtonHoveredColor1 { get { return Color.FromArgb(210, 228, 245); } }
+        public override Color ButtonHoveredColor2 { get { return Color.FromArgb(196, 218, 241); } }
+        public override Color ButtonHoveredColor3 { get { return Color.FromArgb(229, 241, 252); } }
+        public override Color ButtonHoveredColor4 { get { return Color.FromArgb(255, 255, 255); } }
 
         // NaviButton active
-        public override Color ButtonActiveColor1 { get { return Color.FromArgb(254, 225, 122); } }
-        public override Color ButtonActiveColor2 { get { return Color.FromArgb(255, 171, 63); } }
-        public override Color ButtonActiveColor3 { get { return Color.FromArgb(255, 188, 111); } }
-        public override Color ButtonActiveColor4 { get { return Color.FromArgb(255, 217, 170); } }
+        public override Color ButtonActiveColor1 { get { return Color.FromArgb(204, 223, 241); } }
+        public override Color ButtonActiveColor2 { get { return Color.FromArgb(179, 202, 229); } }
+        public override Color ButtonActiveColor3 { get { return Color.FromArgb(200, 219, 239); } }
+        public override Color ButtonActiveColor4 { get { return Color.FromArgb(255, 255, 255); } }
 
         // NaviButton clicked
-        public override Color ButtonClickedColor1 { get { return Color.FromArgb(255, 211, 101); } }
-        public override Color ButtonClickedColor2 { get { return Color.FromArgb(251, 140, 60); } }
-        public override Color ButtonClickedColor3 { get { return Color.FromArgb(255, 173, 67); } }
+        public override Color ButtonClickedColor1 { get { return Color.FromArgb(138, 163, 194); } }
+        public override Color ButtonClickedColor2 { get { return Color.FromArgb(159, 183, 214); } }
+        public override Color ButtonClickedColor3 { get { return Color.FromArgb(159, 183, 214); } }
         public override Color ButtonClickedColor4 { get { return Color.FromArgb(255, 189, 105); } }
 
         // NaviClientArea
-        public override Color NaviClientareaBgColor1 { get { return Color.FromArgb(209, 214, 220); } }
-        public override Color NaviClientareaBgColor2 { get { return Color.FromArgb(231, 235, 239); } }
+        public override Color NaviClientareaBgColor1 { get { return Color.FromArgb(197, 214, 233); } }
+        public override Color NaviClientareaBgColor2 { get { return Color.FromArgb(207, 221, 238); } }
 
         // NaviCollapseButton Normal
-        public override Color CollapseButtonNormalColor1 { get { return Color.FromArgb(227, 239, 255); } }
-        public override Color CollapseButtonNormalColor2 { get { return Color.FromArgb(175, 210, 255); } }
+        public override Color CollapseButtonNormalColor1 { get { return Color.FromArgb(232, 127, 8); } }
+        public override Color CollapseButtonNormalColor2 { get { return Color.FromArgb(247, 217, 121); } }
 
         // NaviCollapseButton Hovered
-        public override Color CollapseButtonHoveredColor1 { get { return Color.FromArgb(248, 194, 94); } } // Dark
-        public override Color CollapseButtonHoveredColor2 { get { return Color.FromArgb(255, 255, 220); } } // Light
+        public override Color CollapseButtonHoveredColor1 { get { return Color.FromArgb(248, 194, 94); } }
+        public override Color CollapseButtonHoveredColor2 { get { return Color.FromArgb(255, 255, 220); } }
 
         // NaviCollapseButton Clicked
         public override Color CollapseButtonClickedColor1 { get { return Color.FromArgb(232, 127, 8); } }
@@ -125,5 +126,10 @@ namespace NaviSuite.Main.Colours
         public override Color SplitterColor1 { get { return Color.FromArgb(182, 214, 255); } }
         public override Color SplitterColor2 { get { return Color.FromArgb(255, 255, 255); } }
         public override Color SplitterColor3 { get { return Color.FromArgb(255, 255, 255); } }
+
+        // TODO
+        // Options button
+        //public override Color ButtonOptionsOuter { get { return Color.FromArgb(67, 113, 176); } }
+        //public override Color ButtonOptionsInner { get { return Color.FromArgb(255, 248, 203); } }
     }
 }
