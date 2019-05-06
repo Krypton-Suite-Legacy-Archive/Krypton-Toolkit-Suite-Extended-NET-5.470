@@ -79,6 +79,60 @@
     <Compile Include="Main\Colours\NaviColourTableOff10Black.cs" />
     <Compile Include="Main\Colours\NaviColourTableOff7Silver.cs" />
     <Compile Include="Main\Colours\NaviToolstripColourTable.cs" />
+    <Compile Include="Main\Common\NaviBandCollection.cs" />
+    <Compile Include="Main\Common\NaviBandEnumerator.cs" />
+    <Compile Include="Main\Common\NaviBandEventArgs.cs" />
+    <Compile Include="Main\Common\NaviBandOrderComparer.cs" />
+    <Compile Include="Main\Common\NaviBandOrgOrderComparer.cs" />
+    <Compile Include="Main\Common\NaviBandSetting.cs" />
+    <Compile Include="Main\Common\NaviBarSettings.cs" />
+    <Compile Include="Main\Common\NaviControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\NaviBand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\NaviBandClientArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\NaviBandCollapsed.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\NaviBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\NaviButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\NaviButtonCollapse.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\NaviButtonOptions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\NaviCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\NaviContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Controls\NaviGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Drawing\NaviOffice10Renderer.cs" />
+    <Compile Include="Main\Drawing\NaviOffice3Renderer.cs" />
+    <Compile Include="Main\Drawing\NaviOffice7Renderer.cs" />
+    <Compile Include="Main\Drawing\NaviRenderer.cs" />
+    <Compile Include="Main\Drawing\NaviToolstripRenderer.cs" />
+    <Compile Include="Main\Forms\NaviBandPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Forms\NaviOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Layout\NaviLayoutEngine.cs" />
+    <Compile Include="Main\Layout\NaviLayoutEngineOffice.cs" />
+    <Compile Include="Main\Layout\NaviLayoutFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

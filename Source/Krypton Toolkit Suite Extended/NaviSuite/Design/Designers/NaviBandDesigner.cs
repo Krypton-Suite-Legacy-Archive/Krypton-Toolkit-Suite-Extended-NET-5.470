@@ -29,6 +29,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
+using NaviSuite.Main.Controls;
 using System.Windows.Forms.Design;
 
 namespace NaviSuite.Design.Designers
@@ -38,7 +39,7 @@ namespace NaviSuite.Design.Designers
     /// </summary>
     public class NaviBandDesigner : ParentControlDesigner
     {
-        NaviBand designingComponent;
+        private NaviBand designingComponent;
 
         public override void Initialize(System.ComponentModel.IComponent component)
         {

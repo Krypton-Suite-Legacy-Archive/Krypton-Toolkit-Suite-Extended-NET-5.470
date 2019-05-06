@@ -29,60 +29,24 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
-using NaviSuite.Main.Controls;
-using System;
+using System.ComponentModel;
 
-namespace NaviSuite.Main.Common
+namespace NaviSuite.Main.Controls
 {
-    public delegate void NaviBandEventHandler(object sender, NaviBandEventArgs e);
-
-    /// <summary>
-    /// Contains additional event info
-    /// </summary>
-    public class NaviBandEventArgs : EventArgs
+    [ToolboxItem(false)]
+    public partial class NaviButtonOptions : NaviButton
     {
-        #region Fields
+        #region Overrides
 
-        private NaviBand newActiveBand;
-        private bool cancel = false;
-
-        #endregion
-
-        #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the NaviBandEventArgs class
-        /// </summary>
-        /// <param name="newActiveButton">The new active band</param>
-        public NaviBandEventArgs(NaviBand newActiveBand)
-           : base()
+        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
-            this.newActiveBand = newActiveBand;
+            base.OnPaint(e);
+            Renderer.DrawOptionsTriangle(e.Graphics, ClientRectangle);
         }
 
         #endregion
 
-        #region Properties
-
-        /// <summary>
-        /// Gets or sets the new active band
-        /// </summary>
-        public NaviBand NewActiveBand
-        {
-            get { return newActiveBand; }
-            set { newActiveBand = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets whether the event is canceled
-        /// </summary>
-        public bool Canceled
-        {
-            get { return cancel; }
-            set { cancel = value; }
-        }
-
+        #region Event Handling
         #endregion
     }
-
 }

@@ -29,60 +29,23 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
-using NaviSuite.Main.Controls;
-using System;
+using System.Windows.Forms;
 
-namespace NaviSuite.Main.Common
+namespace NaviSuite.Main.Drawing
 {
-    public delegate void NaviBandEventHandler(object sender, NaviBandEventArgs e);
-
-    /// <summary>
-    /// Contains additional event info
-    /// </summary>
-    public class NaviBandEventArgs : EventArgs
+    public class NaviToolstripRenderer : ToolStripProfessionalRenderer
     {
-        #region Fields
-
-        private NaviBand newActiveBand;
-        private bool cancel = false;
-
-        #endregion
-
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance of the NaviBandEventArgs class
+        /// Initializes a new instance of the ToolstripOffice07Renderer class
         /// </summary>
-        /// <param name="newActiveButton">The new active band</param>
-        public NaviBandEventArgs(NaviBand newActiveBand)
-           : base()
+        /// <param name="colourTable">The colors used to draw the MenuStrip</param>
+        public NaviToolstripRenderer(ProfessionalColorTable colourTable)
+           : base(colourTable)
         {
-            this.newActiveBand = newActiveBand;
-        }
-
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        /// Gets or sets the new active band
-        /// </summary>
-        public NaviBand NewActiveBand
-        {
-            get { return newActiveBand; }
-            set { newActiveBand = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets whether the event is canceled
-        /// </summary>
-        public bool Canceled
-        {
-            get { return cancel; }
-            set { cancel = value; }
         }
 
         #endregion
     }
-
 }

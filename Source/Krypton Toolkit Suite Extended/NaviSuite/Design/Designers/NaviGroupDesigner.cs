@@ -29,6 +29,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
+using NaviSuite.Main.Controls;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Drawing;
@@ -41,9 +42,9 @@ namespace NaviSuite.Design.Designers
     {
         #region Fields
 
-        IComponentChangeService changeService = null;
-        ISelectionService selectionService = null;
-        NaviGroup m_designingControl;
+        private IComponentChangeService changeService = null;
+        private ISelectionService selectionService = null;
+        private NaviGroup m_designingControl;
 
         #endregion
 

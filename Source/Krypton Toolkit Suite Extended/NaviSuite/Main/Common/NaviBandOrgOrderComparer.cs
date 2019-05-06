@@ -31,58 +31,25 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using NaviSuite.Main.Controls;
 using System;
+using System.Collections;
 
 namespace NaviSuite.Main.Common
 {
-    public delegate void NaviBandEventHandler(object sender, NaviBandEventArgs e);
-
-    /// <summary>
-    /// Contains additional event info
-    /// </summary>
-    public class NaviBandEventArgs : EventArgs
+    public class NaviBandOrgOrderComparer : IComparer
     {
-        #region Fields
+        #region IComparer Members
 
-        private NaviBand newActiveBand;
-        private bool cancel = false;
-
-        #endregion
-
-        #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the NaviBandEventArgs class
-        /// </summary>
-        /// <param name="newActiveButton">The new active band</param>
-        public NaviBandEventArgs(NaviBand newActiveBand)
-           : base()
+        public int Compare(object x, object y)
         {
-            this.newActiveBand = newActiveBand;
-        }
+            if (!(x is NaviBand) || !(y is NaviBand))
+                throw new ArgumentException("Both of the argument should be of type NaviBand");
 
-        #endregion
+            NaviBand bandx = (NaviBand)x;
+            NaviBand bandy = (NaviBand)y;
 
-        #region Properties
-
-        /// <summary>
-        /// Gets or sets the new active band
-        /// </summary>
-        public NaviBand NewActiveBand
-        {
-            get { return newActiveBand; }
-            set { newActiveBand = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets whether the event is canceled
-        /// </summary>
-        public bool Canceled
-        {
-            get { return cancel; }
-            set { cancel = value; }
+            return bandx.OriginalOrder.CompareTo(bandy.OriginalOrder);
         }
 
         #endregion
     }
-
 }

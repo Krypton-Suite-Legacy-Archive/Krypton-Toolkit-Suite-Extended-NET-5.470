@@ -29,6 +29,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
+using NaviSuite.Main.Controls;
 using System.Collections.Generic;
 
 namespace NaviSuite.Main.Common

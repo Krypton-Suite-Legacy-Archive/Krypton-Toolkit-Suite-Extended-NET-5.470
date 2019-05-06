@@ -29,60 +29,61 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
+using NaviSuite.Common.Enumerations;
 using NaviSuite.Main.Controls;
-using System;
 
-namespace NaviSuite.Main.Common
+namespace NaviSuite.Main.Layout
 {
-    public delegate void NaviBandEventHandler(object sender, NaviBandEventArgs e);
-
     /// <summary>
-    /// Contains additional event info
+    /// Responsible for reinitializing the LayoutEngine
     /// </summary>
-    public class NaviBandEventArgs : EventArgs
+    public class NaviLayoutFactory
     {
-        #region Fields
-
-        private NaviBand newActiveBand;
-        private bool cancel = false;
-
-        #endregion
+        // Fields
+        private NaviBar ownerBar;
 
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance of the NaviBandEventArgs class
+        /// Initializes a new instance of the NaviLayoutFactory class 
         /// </summary>
-        /// <param name="newActiveButton">The new active band</param>
-        public NaviBandEventArgs(NaviBand newActiveBand)
-           : base()
+        /// <param name="owner">The owner control</param>
+        public NaviLayoutFactory(NaviBar owner)
         {
-            this.newActiveBand = newActiveBand;
-        }
-
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        /// Gets or sets the new active band
-        /// </summary>
-        public NaviBand NewActiveBand
-        {
-            get { return newActiveBand; }
-            set { newActiveBand = value; }
+            ownerBar = owner;
         }
 
         /// <summary>
-        /// Gets or sets whether the event is canceled
+        /// Reinitializes the layout
         /// </summary>
-        public bool Canceled
+        public void ReinitializeLayout()
         {
-            get { return cancel; }
-            set { cancel = value; }
+            if (ownerBar.NaviLayoutEngine != null)
+                ownerBar.NaviLayoutEngine.Cleanup();
+
+            if (ownerBar.LayoutStyle == NaviLayoutStyle.StyleFromOwner)
+                ownerBar.LayoutStyle = NaviLayoutStyle.Office2007Blue;
+
+            switch (ownerBar.LayoutStyle)
+            {
+                case NaviLayoutStyle.Office2003Blue:
+                case NaviLayoutStyle.Office2003Green:
+                case NaviLayoutStyle.Office2003Silver:
+                case NaviLayoutStyle.Office2007Blue:
+                case NaviLayoutStyle.Office2007Silver:
+                case NaviLayoutStyle.Office2007Black:
+                case NaviLayoutStyle.Office2010Blue:
+                case NaviLayoutStyle.Office2010Silver:
+                case NaviLayoutStyle.Office2010Black:
+                    ownerBar.NaviLayoutEngine = new NaviLayoutEngineOffice(ownerBar);
+                    break;
+                default:
+                    break;
+            }
+
+            ownerBar.NaviLayoutEngine.Initialize();
         }
 
         #endregion
     }
-
 }

@@ -29,60 +29,45 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
-using NaviSuite.Main.Controls;
-using System;
+using NaviSuite.Main.Colours;
+using NaviSuite.Main.Drawing;
+using System.ComponentModel;
+using System.Windows.Forms;
 
-namespace NaviSuite.Main.Common
+namespace NaviSuite.Main.Controls
 {
-    public delegate void NaviBandEventHandler(object sender, NaviBandEventArgs e);
-
     /// <summary>
-    /// Contains additional event info
+    /// Represents a Context Menu in the Office 2007 colors
     /// </summary>
-    public class NaviBandEventArgs : EventArgs
+    [ToolboxItem(false)]
+    public class NaviContextMenu : ContextMenuStrip
     {
-        #region Fields
-
-        private NaviBand newActiveBand;
-        private bool cancel = false;
-
-        #endregion
+        // Fields
+        private ToolStripRenderer renderer;
+        private ProfessionalColorTable colorTable;
 
         #region Constructor
 
-        /// <summary>
-        /// Initializes a new instance of the NaviBandEventArgs class
-        /// </summary>
-        /// <param name="newActiveButton">The new active band</param>
-        public NaviBandEventArgs(NaviBand newActiveBand)
+        public NaviContextMenu()
            : base()
         {
-            this.newActiveBand = newActiveBand;
+            Initialize();
         }
 
         #endregion
 
-        #region Properties
+        #region Methods
 
         /// <summary>
-        /// Gets or sets the new active band
+        /// Initializes the control for the first time
         /// </summary>
-        public NaviBand NewActiveBand
+        private void Initialize()
         {
-            get { return newActiveBand; }
-            set { newActiveBand = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets whether the event is canceled
-        /// </summary>
-        public bool Canceled
-        {
-            get { return cancel; }
-            set { cancel = value; }
+            colorTable = new NaviToolstripColourTable();
+            renderer = new NaviToolstripRenderer(colorTable);
+            base.Renderer = renderer;
         }
 
         #endregion
     }
-
 }

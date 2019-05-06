@@ -29,35 +29,24 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
-using NaviSuite.Main.Controls;
-using System;
+using System.ComponentModel;
+using System.Windows.Forms;
 
-namespace NaviSuite.Main.Common
+namespace NaviSuite.Main.Controls
 {
-    public delegate void NaviBandEventHandler(object sender, NaviBandEventArgs e);
-
-    /// <summary>
-    /// Contains additional event info
-    /// </summary>
-    public class NaviBandEventArgs : EventArgs
+    [ToolboxItem(false)]
+    public partial class NaviButtonCollapse : NaviButton
     {
-        #region Fields
-
-        private NaviBand newActiveBand;
-        private bool cancel = false;
-
-        #endregion
+        // Fields
+        private bool collapsed;
 
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance of the NaviBandEventArgs class
+        /// Initializes a new instance of the NavigationBarButton
         /// </summary>
-        /// <param name="newActiveButton">The new active band</param>
-        public NaviBandEventArgs(NaviBand newActiveBand)
-           : base()
+        public NaviButtonCollapse()
         {
-            this.newActiveBand = newActiveBand;
         }
 
         #endregion
@@ -65,24 +54,39 @@ namespace NaviSuite.Main.Common
         #region Properties
 
         /// <summary>
-        /// Gets or sets the new active band
+        /// Gets or sets whether the buttons should be drawn in minimized mode or not
         /// </summary>
-        public NaviBand NewActiveBand
+        [
+        Browsable(false),
+        DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden),
+        ]
+        public override bool Collapsed
         {
-            get { return newActiveBand; }
-            set { newActiveBand = value; }
+            get { return collapsed; }
+            set
+            {
+                // We need an explicit override with Invalidate otherwise the control is not 
+                // invalidated properly. 
+                collapsed = value;
+                Invalidate();
+            }
         }
 
+        #endregion
+
+        #region Overrides
+
         /// <summary>
-        /// Gets or sets whether the event is canceled
+        /// Overriden. Raises the Paint event 
         /// </summary>
-        public bool Canceled
+        /// <param name="e">Additional paint info</param>
+        protected override void OnPaint(PaintEventArgs e)
         {
-            get { return cancel; }
-            set { cancel = value; }
+            base.OnPaint(e);
+            Renderer.DrawButtonCollapseBg(e.Graphics, ClientRectangle, inputState,
+               RightToLeft == RightToLeft.Yes, collapsed);
         }
 
         #endregion
     }
-
 }

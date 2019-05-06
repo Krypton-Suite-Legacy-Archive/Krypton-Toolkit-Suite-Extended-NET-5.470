@@ -29,60 +29,19 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
-using NaviSuite.Main.Controls;
-using System;
+using System.Xml.Serialization;
 
 namespace NaviSuite.Main.Common
 {
-    public delegate void NaviBandEventHandler(object sender, NaviBandEventArgs e);
-
-    /// <summary>
-    /// Contains additional event info
-    /// </summary>
-    public class NaviBandEventArgs : EventArgs
+    public class NaviBandSetting
     {
-        #region Fields
+        [XmlAttribute("name")]
+        public string Name { get; set; }
 
-        private NaviBand newActiveBand;
-        private bool cancel = false;
+        [XmlAttribute("order")]
+        public int Order { get; set; }
 
-        #endregion
-
-        #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the NaviBandEventArgs class
-        /// </summary>
-        /// <param name="newActiveButton">The new active band</param>
-        public NaviBandEventArgs(NaviBand newActiveBand)
-           : base()
-        {
-            this.newActiveBand = newActiveBand;
-        }
-
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        /// Gets or sets the new active band
-        /// </summary>
-        public NaviBand NewActiveBand
-        {
-            get { return newActiveBand; }
-            set { newActiveBand = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets whether the event is canceled
-        /// </summary>
-        public bool Canceled
-        {
-            get { return cancel; }
-            set { cancel = value; }
-        }
-
-        #endregion
+        [XmlAttribute("visible")]
+        public bool Visible { get; set; }
     }
-
 }

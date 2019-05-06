@@ -29,60 +29,52 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #endregion
 
-using NaviSuite.Main.Controls;
-using System;
+using System.ComponentModel;
+using System.Windows.Forms;
 
-namespace NaviSuite.Main.Common
+namespace NaviSuite.Main.Controls
 {
-    public delegate void NaviBandEventHandler(object sender, NaviBandEventArgs e);
-
-    /// <summary>
-    /// Contains additional event info
-    /// </summary>
-    public class NaviBandEventArgs : EventArgs
+    [ToolboxItem(false)]
+    public class NaviCheckedListBox : CheckedListBox
     {
-        #region Fields
+        private int checkBoxWidth = 18;
+        private bool checkHandled = false;
+        private bool itemChecked;
 
-        private NaviBand newActiveBand;
-        private bool cancel = false;
-
-        #endregion
-
-        #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the NaviBandEventArgs class
-        /// </summary>
-        /// <param name="newActiveButton">The new active band</param>
-        public NaviBandEventArgs(NaviBand newActiveBand)
-           : base()
+        protected override void OnItemCheck(ItemCheckEventArgs ice)
         {
-            this.newActiveBand = newActiveBand;
+            base.OnItemCheck(ice);
+            if (checkHandled)
+            {
+                if (itemChecked)
+                    ice.NewValue = CheckState.Checked;
+                else
+                    ice.NewValue = CheckState.Unchecked;
+            }
         }
 
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        /// Gets or sets the new active band
-        /// </summary>
-        public NaviBand NewActiveBand
+        protected override void OnMouseDown(MouseEventArgs e)
         {
-            get { return newActiveBand; }
-            set { newActiveBand = value; }
+            base.OnMouseDown(e);
+            checkHandled = false;
+            if (e.Button == MouseButtons.Left)
+            {
+                int index = -1;
+                for (int i = 0; i < Items.Count; i++)
+                {
+                    if (GetItemRectangle(i).Contains(e.X, e.Y))
+                    {
+                        index = i;
+                        break;
+                    }
+                }
+                if (index != -1 && e.X <= checkBoxWidth)
+                {
+                    itemChecked = !GetItemChecked(index);
+                    checkHandled = true;
+                    SetItemChecked(index, itemChecked);
+                }
+            }
         }
-
-        /// <summary>
-        /// Gets or sets whether the event is canceled
-        /// </summary>
-        public bool Canceled
-        {
-            get { return cancel; }
-            set { cancel = value; }
-        }
-
-        #endregion
     }
-
 }

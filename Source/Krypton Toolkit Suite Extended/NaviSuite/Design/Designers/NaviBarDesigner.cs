@@ -30,11 +30,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #endregion
 
 using NaviSuite.Common.Classes;
+using NaviSuite.Main.Controls;
 using System;
 using System.Collections;
 using System.ComponentModel;
 using System.ComponentModel.Design;
-using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
@@ -45,10 +45,10 @@ namespace NaviSuite.Design.Designers
     {
         #region Fields
 
-        NaviBar designingControl;
-        ISelectionService selectionService;
-        IComponentChangeService componentChangeService;
-        IDesignerHost host;
+        private NaviBar designingControl;
+        private ISelectionService selectionService;
+        private IComponentChangeService componentChangeService;
+        private IDesignerHost host;
 
         #endregion
 
@@ -193,7 +193,7 @@ namespace NaviSuite.Design.Designers
 
         #region Event Handling
 
-        void selectionService_SelectionChanged(object sender, System.EventArgs e)
+        private void selectionService_SelectionChanged(object sender, System.EventArgs e)
         {
             if (selectionService.PrimarySelection is NaviBand)
             {
@@ -203,7 +203,7 @@ namespace NaviSuite.Design.Designers
             }
         }
 
-        void AddBandVerbClicked(object sender, EventArgs e)
+        private void AddBandVerbClicked(object sender, EventArgs e)
         {
             NaviBand band = host.CreateComponent(typeof(NaviBand)) as NaviBand;
             if (band != null)
