@@ -21,7 +21,7 @@ namespace PaletteExplorer.Controls
         #region Designer Code
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kgbPreviewPane;
         private PictureBox pbxLinkFocusedColourPreview;
-        private PictureBox pictureBox5;
+        private PictureBox pbxCustomColourSixPreview;
         private PictureBox pbxRibbonTabTextColourPreview;
         private PictureBox pbxStatusTextColourPreview;
         private PictureBox pbxMenuTextColourPreview;
@@ -37,18 +37,18 @@ namespace PaletteExplorer.Controls
         private PictureBox pbxCustomColourOnePreview;
         private PictureBox pbxLinkVisitedColourPreview;
         private PictureBox pbxLinkHoverColourPreview;
-        private PictureBox pbxAlternativeNormalTextColour;
+        private PictureBox pbxAlternativeNormalTextColourPreview;
         private PictureBox pbxLinkNormalColourPreview;
-        private PictureBox pbxDisabledColourPreview;
+        private PictureBox pbxDisabledControlColourPreview;
         private PictureBox pbxPressedTextColourPreview;
         private PictureBox pbxFocusedTextColourPreview;
         private PictureBox pbxDisabledTextColourPreview;
         private PictureBox pbxNormalTextColourPreview;
         private PictureBox pbxBorderColourPreview;
-        private PictureBox pbxBaseColour;
-        private PictureBox pbxLightestColour;
-        private PictureBox pbxDarkColour;
-        private PictureBox pbxLightColour;
+        private PictureBox pbxBaseColourPreview;
+        private PictureBox pbxLightestColourPreview;
+        private PictureBox pbxDarkColourPreview;
+        private PictureBox pbxLightColourPreview;
         private ContextMenuStrip ctxRibbonTabTextColour;
         private System.ComponentModel.IContainer components;
         private ToolStripMenuItem tsmiRibbonTabTextColour;
@@ -112,15 +112,15 @@ namespace PaletteExplorer.Controls
         private ToolStripMenuItem tsmiLinkNormalTextColour;
         private ContextMenuStrip ctxLightestColour;
         private ToolStripMenuItem tsmiLightestColour;
-        private PictureBox pbxMiddleColour;
+        private PictureBox pbxCustomTextColourSixPreview;
+        private PictureBox pbxMediumColourPreview;
 
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues1 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             this.kgbPreviewPane = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.pbxLinkFocusedColourPreview = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pbxCustomColourSixPreview = new System.Windows.Forms.PictureBox();
             this.pbxRibbonTabTextColourPreview = new System.Windows.Forms.PictureBox();
             this.pbxStatusTextColourPreview = new System.Windows.Forms.PictureBox();
             this.pbxMenuTextColourPreview = new System.Windows.Forms.PictureBox();
@@ -136,19 +136,19 @@ namespace PaletteExplorer.Controls
             this.pbxCustomColourOnePreview = new System.Windows.Forms.PictureBox();
             this.pbxLinkVisitedColourPreview = new System.Windows.Forms.PictureBox();
             this.pbxLinkHoverColourPreview = new System.Windows.Forms.PictureBox();
-            this.pbxAlternativeNormalTextColour = new System.Windows.Forms.PictureBox();
+            this.pbxAlternativeNormalTextColourPreview = new System.Windows.Forms.PictureBox();
             this.pbxLinkNormalColourPreview = new System.Windows.Forms.PictureBox();
-            this.pbxDisabledColourPreview = new System.Windows.Forms.PictureBox();
+            this.pbxDisabledControlColourPreview = new System.Windows.Forms.PictureBox();
             this.pbxPressedTextColourPreview = new System.Windows.Forms.PictureBox();
             this.pbxFocusedTextColourPreview = new System.Windows.Forms.PictureBox();
             this.pbxDisabledTextColourPreview = new System.Windows.Forms.PictureBox();
             this.pbxNormalTextColourPreview = new System.Windows.Forms.PictureBox();
             this.pbxBorderColourPreview = new System.Windows.Forms.PictureBox();
-            this.pbxBaseColour = new System.Windows.Forms.PictureBox();
-            this.pbxLightestColour = new System.Windows.Forms.PictureBox();
-            this.pbxDarkColour = new System.Windows.Forms.PictureBox();
-            this.pbxLightColour = new System.Windows.Forms.PictureBox();
-            this.pbxMiddleColour = new System.Windows.Forms.PictureBox();
+            this.pbxBaseColourPreview = new System.Windows.Forms.PictureBox();
+            this.pbxLightestColourPreview = new System.Windows.Forms.PictureBox();
+            this.pbxDarkColourPreview = new System.Windows.Forms.PictureBox();
+            this.pbxLightColourPreview = new System.Windows.Forms.PictureBox();
+            this.pbxMediumColourPreview = new System.Windows.Forms.PictureBox();
             this.ctxRibbonTabTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiRibbonTabTextColour = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxMenuTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -211,12 +211,13 @@ namespace PaletteExplorer.Controls
             this.tsmiLinkNormalTextColour = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxLightestColour = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiLightestColour = new System.Windows.Forms.ToolStripMenuItem();
+            this.pbxCustomTextColourSixPreview = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kgbPreviewPane)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kgbPreviewPane.Panel)).BeginInit();
             this.kgbPreviewPane.Panel.SuspendLayout();
             this.kgbPreviewPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLinkFocusedColourPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCustomColourSixPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxRibbonTabTextColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStatusTextColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMenuTextColourPreview)).BeginInit();
@@ -232,19 +233,19 @@ namespace PaletteExplorer.Controls
             ((System.ComponentModel.ISupportInitialize)(this.pbxCustomColourOnePreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLinkVisitedColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLinkHoverColourPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxAlternativeNormalTextColour)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAlternativeNormalTextColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLinkNormalColourPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxDisabledColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDisabledControlColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPressedTextColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFocusedTextColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDisabledTextColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxNormalTextColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBorderColourPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxBaseColour)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLightestColour)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxDarkColour)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLightColour)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxMiddleColour)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBaseColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLightestColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDarkColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLightColourPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxMediumColourPreview)).BeginInit();
             this.ctxRibbonTabTextColour.SuspendLayout();
             this.ctxMenuTextColour.SuspendLayout();
             this.ctxCustomTextColourSixColour.SuspendLayout();
@@ -276,6 +277,7 @@ namespace PaletteExplorer.Controls
             this.ctxLightColour.SuspendLayout();
             this.ctxLinkNormalTextColour.SuspendLayout();
             this.ctxLightestColour.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCustomTextColourSixPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // kgbPreviewPane
@@ -286,8 +288,9 @@ namespace PaletteExplorer.Controls
             // 
             // kgbPreviewPane.Panel
             // 
+            this.kgbPreviewPane.Panel.Controls.Add(this.pbxCustomTextColourSixPreview);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxLinkFocusedColourPreview);
-            this.kgbPreviewPane.Panel.Controls.Add(this.pictureBox5);
+            this.kgbPreviewPane.Panel.Controls.Add(this.pbxCustomColourSixPreview);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxRibbonTabTextColourPreview);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxStatusTextColourPreview);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxMenuTextColourPreview);
@@ -303,24 +306,22 @@ namespace PaletteExplorer.Controls
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxCustomColourOnePreview);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxLinkVisitedColourPreview);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxLinkHoverColourPreview);
-            this.kgbPreviewPane.Panel.Controls.Add(this.pbxAlternativeNormalTextColour);
+            this.kgbPreviewPane.Panel.Controls.Add(this.pbxAlternativeNormalTextColourPreview);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxLinkNormalColourPreview);
-            this.kgbPreviewPane.Panel.Controls.Add(this.pbxDisabledColourPreview);
+            this.kgbPreviewPane.Panel.Controls.Add(this.pbxDisabledControlColourPreview);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxPressedTextColourPreview);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxFocusedTextColourPreview);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxDisabledTextColourPreview);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxNormalTextColourPreview);
             this.kgbPreviewPane.Panel.Controls.Add(this.pbxBorderColourPreview);
-            this.kgbPreviewPane.Panel.Controls.Add(this.pbxBaseColour);
-            this.kgbPreviewPane.Panel.Controls.Add(this.pbxLightestColour);
-            this.kgbPreviewPane.Panel.Controls.Add(this.pbxDarkColour);
-            this.kgbPreviewPane.Panel.Controls.Add(this.pbxLightColour);
-            this.kgbPreviewPane.Panel.Controls.Add(this.pbxMiddleColour);
+            this.kgbPreviewPane.Panel.Controls.Add(this.pbxBaseColourPreview);
+            this.kgbPreviewPane.Panel.Controls.Add(this.pbxLightestColourPreview);
+            this.kgbPreviewPane.Panel.Controls.Add(this.pbxDarkColourPreview);
+            this.kgbPreviewPane.Panel.Controls.Add(this.pbxLightColourPreview);
+            this.kgbPreviewPane.Panel.Controls.Add(this.pbxMediumColourPreview);
             this.kgbPreviewPane.Size = new System.Drawing.Size(1625, 660);
             this.kgbPreviewPane.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kgbPreviewPane.TabIndex = 13;
-            popupPositionValues1.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kgbPreviewPane.ToolTipValues.ToolTipPosition = popupPositionValues1;
             this.kgbPreviewPane.Values.Heading = "Colour Preview";
             // 
             // pbxLinkFocusedColourPreview
@@ -333,25 +334,23 @@ namespace PaletteExplorer.Controls
             this.pbxLinkFocusedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbxLinkFocusedColourPreview.TabIndex = 87;
             this.pbxLinkFocusedColourPreview.TabStop = false;
-            this.pbxLinkFocusedColourPreview.Visible = false;
             // 
-            // pictureBox5
+            // pbxCustomColourSixPreview
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox5.Location = new System.Drawing.Point(1104, 549);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 86;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Visible = false;
+            this.pbxCustomColourSixPreview.BackColor = System.Drawing.Color.Transparent;
+            this.pbxCustomColourSixPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxCustomColourSixPreview.Location = new System.Drawing.Point(1104, 371);
+            this.pbxCustomColourSixPreview.Name = "pbxCustomColourSixPreview";
+            this.pbxCustomColourSixPreview.Size = new System.Drawing.Size(64, 64);
+            this.pbxCustomColourSixPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbxCustomColourSixPreview.TabIndex = 86;
+            this.pbxCustomColourSixPreview.TabStop = false;
             // 
             // pbxRibbonTabTextColourPreview
             // 
             this.pbxRibbonTabTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxRibbonTabTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxRibbonTabTextColourPreview.Location = new System.Drawing.Point(887, 549);
+            this.pbxRibbonTabTextColourPreview.Location = new System.Drawing.Point(1321, 549);
             this.pbxRibbonTabTextColourPreview.Name = "pbxRibbonTabTextColourPreview";
             this.pbxRibbonTabTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxRibbonTabTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -362,7 +361,7 @@ namespace PaletteExplorer.Controls
             // 
             this.pbxStatusTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxStatusTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxStatusTextColourPreview.Location = new System.Drawing.Point(670, 549);
+            this.pbxStatusTextColourPreview.Location = new System.Drawing.Point(1104, 549);
             this.pbxStatusTextColourPreview.Name = "pbxStatusTextColourPreview";
             this.pbxStatusTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxStatusTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -373,7 +372,7 @@ namespace PaletteExplorer.Controls
             // 
             this.pbxMenuTextColourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxMenuTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxMenuTextColourPreview.Location = new System.Drawing.Point(453, 549);
+            this.pbxMenuTextColourPreview.Location = new System.Drawing.Point(887, 549);
             this.pbxMenuTextColourPreview.Name = "pbxMenuTextColourPreview";
             this.pbxMenuTextColourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxMenuTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -395,7 +394,7 @@ namespace PaletteExplorer.Controls
             // 
             this.pbxCustomTextColourFivePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourFivePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomTextColourFivePreview.Location = new System.Drawing.Point(236, 549);
+            this.pbxCustomTextColourFivePreview.Location = new System.Drawing.Point(453, 549);
             this.pbxCustomTextColourFivePreview.Name = "pbxCustomTextColourFivePreview";
             this.pbxCustomTextColourFivePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -406,7 +405,7 @@ namespace PaletteExplorer.Controls
             // 
             this.pbxCustomTextColourFourPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourFourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomTextColourFourPreview.Location = new System.Drawing.Point(19, 549);
+            this.pbxCustomTextColourFourPreview.Location = new System.Drawing.Point(236, 549);
             this.pbxCustomTextColourFourPreview.Name = "pbxCustomTextColourFourPreview";
             this.pbxCustomTextColourFourPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -417,7 +416,7 @@ namespace PaletteExplorer.Controls
             // 
             this.pbxCustomTextColourThreePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourThreePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomTextColourThreePreview.Location = new System.Drawing.Point(1538, 371);
+            this.pbxCustomTextColourThreePreview.Location = new System.Drawing.Point(19, 549);
             this.pbxCustomTextColourThreePreview.Name = "pbxCustomTextColourThreePreview";
             this.pbxCustomTextColourThreePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -428,7 +427,7 @@ namespace PaletteExplorer.Controls
             // 
             this.pbxCustomTextColourTwoPreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourTwoPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(1321, 371);
+            this.pbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(1538, 371);
             this.pbxCustomTextColourTwoPreview.Name = "pbxCustomTextColourTwoPreview";
             this.pbxCustomTextColourTwoPreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -439,7 +438,7 @@ namespace PaletteExplorer.Controls
             // 
             this.pbxCustomTextColourOnePreview.BackColor = System.Drawing.Color.Transparent;
             this.pbxCustomTextColourOnePreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxCustomTextColourOnePreview.Location = new System.Drawing.Point(1104, 371);
+            this.pbxCustomTextColourOnePreview.Location = new System.Drawing.Point(1321, 371);
             this.pbxCustomTextColourOnePreview.Name = "pbxCustomTextColourOnePreview";
             this.pbxCustomTextColourOnePreview.Size = new System.Drawing.Size(64, 64);
             this.pbxCustomTextColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -512,16 +511,16 @@ namespace PaletteExplorer.Controls
             this.pbxLinkHoverColourPreview.TabIndex = 71;
             this.pbxLinkHoverColourPreview.TabStop = false;
             // 
-            // pbxAlternativeNormalTextColour
+            // pbxAlternativeNormalTextColourPreview
             // 
-            this.pbxAlternativeNormalTextColour.BackColor = System.Drawing.Color.Transparent;
-            this.pbxAlternativeNormalTextColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxAlternativeNormalTextColour.Location = new System.Drawing.Point(1321, 16);
-            this.pbxAlternativeNormalTextColour.Name = "pbxAlternativeNormalTextColour";
-            this.pbxAlternativeNormalTextColour.Size = new System.Drawing.Size(64, 64);
-            this.pbxAlternativeNormalTextColour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbxAlternativeNormalTextColour.TabIndex = 70;
-            this.pbxAlternativeNormalTextColour.TabStop = false;
+            this.pbxAlternativeNormalTextColourPreview.BackColor = System.Drawing.Color.Transparent;
+            this.pbxAlternativeNormalTextColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxAlternativeNormalTextColourPreview.Location = new System.Drawing.Point(1321, 16);
+            this.pbxAlternativeNormalTextColourPreview.Name = "pbxAlternativeNormalTextColourPreview";
+            this.pbxAlternativeNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.pbxAlternativeNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbxAlternativeNormalTextColourPreview.TabIndex = 70;
+            this.pbxAlternativeNormalTextColourPreview.TabStop = false;
             // 
             // pbxLinkNormalColourPreview
             // 
@@ -534,16 +533,16 @@ namespace PaletteExplorer.Controls
             this.pbxLinkNormalColourPreview.TabIndex = 69;
             this.pbxLinkNormalColourPreview.TabStop = false;
             // 
-            // pbxDisabledColourPreview
+            // pbxDisabledControlColourPreview
             // 
-            this.pbxDisabledColourPreview.BackColor = System.Drawing.Color.Transparent;
-            this.pbxDisabledColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxDisabledColourPreview.Location = new System.Drawing.Point(670, 193);
-            this.pbxDisabledColourPreview.Name = "pbxDisabledColourPreview";
-            this.pbxDisabledColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.pbxDisabledColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbxDisabledColourPreview.TabIndex = 68;
-            this.pbxDisabledColourPreview.TabStop = false;
+            this.pbxDisabledControlColourPreview.BackColor = System.Drawing.Color.Transparent;
+            this.pbxDisabledControlColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxDisabledControlColourPreview.Location = new System.Drawing.Point(670, 193);
+            this.pbxDisabledControlColourPreview.Name = "pbxDisabledControlColourPreview";
+            this.pbxDisabledControlColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.pbxDisabledControlColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbxDisabledControlColourPreview.TabIndex = 68;
+            this.pbxDisabledControlColourPreview.TabStop = false;
             // 
             // pbxPressedTextColourPreview
             // 
@@ -600,60 +599,60 @@ namespace PaletteExplorer.Controls
             this.pbxBorderColourPreview.TabIndex = 63;
             this.pbxBorderColourPreview.TabStop = false;
             // 
-            // pbxBaseColour
+            // pbxBaseColourPreview
             // 
-            this.pbxBaseColour.BackColor = System.Drawing.Color.Transparent;
-            this.pbxBaseColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxBaseColour.Location = new System.Drawing.Point(19, 15);
-            this.pbxBaseColour.Name = "pbxBaseColour";
-            this.pbxBaseColour.Size = new System.Drawing.Size(64, 64);
-            this.pbxBaseColour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbxBaseColour.TabIndex = 4;
-            this.pbxBaseColour.TabStop = false;
+            this.pbxBaseColourPreview.BackColor = System.Drawing.Color.Transparent;
+            this.pbxBaseColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxBaseColourPreview.Location = new System.Drawing.Point(19, 15);
+            this.pbxBaseColourPreview.Name = "pbxBaseColourPreview";
+            this.pbxBaseColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.pbxBaseColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbxBaseColourPreview.TabIndex = 4;
+            this.pbxBaseColourPreview.TabStop = false;
             // 
-            // pbxLightestColour
+            // pbxLightestColourPreview
             // 
-            this.pbxLightestColour.BackColor = System.Drawing.Color.Transparent;
-            this.pbxLightestColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxLightestColour.Location = new System.Drawing.Point(887, 16);
-            this.pbxLightestColour.Name = "pbxLightestColour";
-            this.pbxLightestColour.Size = new System.Drawing.Size(64, 64);
-            this.pbxLightestColour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbxLightestColour.TabIndex = 8;
-            this.pbxLightestColour.TabStop = false;
+            this.pbxLightestColourPreview.BackColor = System.Drawing.Color.Transparent;
+            this.pbxLightestColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxLightestColourPreview.Location = new System.Drawing.Point(887, 16);
+            this.pbxLightestColourPreview.Name = "pbxLightestColourPreview";
+            this.pbxLightestColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.pbxLightestColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbxLightestColourPreview.TabIndex = 8;
+            this.pbxLightestColourPreview.TabStop = false;
             // 
-            // pbxDarkColour
+            // pbxDarkColourPreview
             // 
-            this.pbxDarkColour.BackColor = System.Drawing.Color.Transparent;
-            this.pbxDarkColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxDarkColour.Location = new System.Drawing.Point(236, 16);
-            this.pbxDarkColour.Name = "pbxDarkColour";
-            this.pbxDarkColour.Size = new System.Drawing.Size(64, 64);
-            this.pbxDarkColour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbxDarkColour.TabIndex = 5;
-            this.pbxDarkColour.TabStop = false;
+            this.pbxDarkColourPreview.BackColor = System.Drawing.Color.Transparent;
+            this.pbxDarkColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxDarkColourPreview.Location = new System.Drawing.Point(236, 16);
+            this.pbxDarkColourPreview.Name = "pbxDarkColourPreview";
+            this.pbxDarkColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.pbxDarkColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbxDarkColourPreview.TabIndex = 5;
+            this.pbxDarkColourPreview.TabStop = false;
             // 
-            // pbxLightColour
+            // pbxLightColourPreview
             // 
-            this.pbxLightColour.BackColor = System.Drawing.Color.Transparent;
-            this.pbxLightColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxLightColour.Location = new System.Drawing.Point(670, 16);
-            this.pbxLightColour.Name = "pbxLightColour";
-            this.pbxLightColour.Size = new System.Drawing.Size(64, 64);
-            this.pbxLightColour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbxLightColour.TabIndex = 7;
-            this.pbxLightColour.TabStop = false;
+            this.pbxLightColourPreview.BackColor = System.Drawing.Color.Transparent;
+            this.pbxLightColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxLightColourPreview.Location = new System.Drawing.Point(670, 16);
+            this.pbxLightColourPreview.Name = "pbxLightColourPreview";
+            this.pbxLightColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.pbxLightColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbxLightColourPreview.TabIndex = 7;
+            this.pbxLightColourPreview.TabStop = false;
             // 
-            // pbxMiddleColour
+            // pbxMediumColourPreview
             // 
-            this.pbxMiddleColour.BackColor = System.Drawing.Color.Transparent;
-            this.pbxMiddleColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxMiddleColour.Location = new System.Drawing.Point(453, 16);
-            this.pbxMiddleColour.Name = "pbxMiddleColour";
-            this.pbxMiddleColour.Size = new System.Drawing.Size(64, 64);
-            this.pbxMiddleColour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbxMiddleColour.TabIndex = 6;
-            this.pbxMiddleColour.TabStop = false;
+            this.pbxMediumColourPreview.BackColor = System.Drawing.Color.Transparent;
+            this.pbxMediumColourPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxMediumColourPreview.Location = new System.Drawing.Point(453, 16);
+            this.pbxMediumColourPreview.Name = "pbxMediumColourPreview";
+            this.pbxMediumColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.pbxMediumColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbxMediumColourPreview.TabIndex = 6;
+            this.pbxMediumColourPreview.TabStop = false;
             // 
             // ctxRibbonTabTextColour
             // 
@@ -1081,13 +1080,24 @@ namespace PaletteExplorer.Controls
             this.ctxLightestColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiLightestColour});
             this.ctxLightestColour.Name = "ctxBaseColour";
-            this.ctxLightestColour.Size = new System.Drawing.Size(219, 48);
+            this.ctxLightestColour.Size = new System.Drawing.Size(219, 26);
             // 
             // tsmiLightestColour
             // 
             this.tsmiLightestColour.Name = "tsmiLightestColour";
             this.tsmiLightestColour.Size = new System.Drawing.Size(218, 22);
             this.tsmiLightestColour.Text = "Use &Lightest Colour as Base";
+            // 
+            // pbxCustomTextColourSixPreview
+            // 
+            this.pbxCustomTextColourSixPreview.BackColor = System.Drawing.Color.Transparent;
+            this.pbxCustomTextColourSixPreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxCustomTextColourSixPreview.Location = new System.Drawing.Point(670, 549);
+            this.pbxCustomTextColourSixPreview.Name = "pbxCustomTextColourSixPreview";
+            this.pbxCustomTextColourSixPreview.Size = new System.Drawing.Size(64, 64);
+            this.pbxCustomTextColourSixPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbxCustomTextColourSixPreview.TabIndex = 88;
+            this.pbxCustomTextColourSixPreview.TabStop = false;
             // 
             // StandardPictureBoxControl
             // 
@@ -1101,7 +1111,7 @@ namespace PaletteExplorer.Controls
             ((System.ComponentModel.ISupportInitialize)(this.kgbPreviewPane)).EndInit();
             this.kgbPreviewPane.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLinkFocusedColourPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCustomColourSixPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxRibbonTabTextColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStatusTextColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMenuTextColourPreview)).EndInit();
@@ -1117,19 +1127,19 @@ namespace PaletteExplorer.Controls
             ((System.ComponentModel.ISupportInitialize)(this.pbxCustomColourOnePreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLinkVisitedColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLinkHoverColourPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxAlternativeNormalTextColour)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAlternativeNormalTextColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLinkNormalColourPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxDisabledColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDisabledControlColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPressedTextColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFocusedTextColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDisabledTextColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxNormalTextColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBorderColourPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxBaseColour)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLightestColour)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxDarkColour)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLightColour)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxMiddleColour)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBaseColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLightestColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDarkColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLightColourPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxMediumColourPreview)).EndInit();
             this.ctxRibbonTabTextColour.ResumeLayout(false);
             this.ctxMenuTextColour.ResumeLayout(false);
             this.ctxCustomTextColourSixColour.ResumeLayout(false);
@@ -1161,10 +1171,1858 @@ namespace PaletteExplorer.Controls
             this.ctxLightColour.ResumeLayout(false);
             this.ctxLinkNormalTextColour.ResumeLayout(false);
             this.ctxLightestColour.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCustomTextColourSixPreview)).EndInit();
             this.ResumeLayout(false);
 
         }
         #endregion
 
+        #region Variables
+        private PictureBox baseColourPreview, darkColourPreview, middleColourPreview, lightColourPreview, lightestColourPreview, borderColourPreview, alternativeNormalTextColourPreview, normalTextColourPreview, disabledTextColourPreview, focusedTextColourPreview, pressedTextColourPreview, disabledControlColourPreview, linkNormalColourPreview, linkFocusedColourPreview, linkHoverColourPreview, linkVisitedColourPreview, customColourOnePreview, customColourTwoPreview, customColourThreePreview, customColourFourPreview, customColourFivePreview, customColourSixPreview, customTextColourOnePreview, customTextColourTwoPreview, customTextColourThreePreview, customTextColourFourPreview, customTextColourFivePreview, customTextColourSixPreview, menuTextColourPreview, statusTextColourPreview, ribbonTabTextColourPreview;
+
+        private ContextMenuStrip baseColourMenu, darkColourMenu, middleColourMenu, lightColourMenu, lightestColourMenu, borderColourMenu, alternativeNormalTextColourMenu, normalTextColourMenu, disabledTextColourMenu, focusedTextColourMenu, pressedTextColourMenu, disabledControlColourMenu, linkNormalColourMenu, linkFocusedColourMenu, linkHoverColourMenu, linkVisitedColourMenu, customColourOneMenu, customColourTwoMenu, customColourThreeMenu, customColourFourMenu, customColourFiveMenu, customColourSixMenu, customTextColourOneMenu, customTextColourTwoMenu, customTextColourThreeMenu, customTextColourFourMenu, customTextColourFiveMenu, customTextColourSixMenu, menuTextColourMenu, statusTextColourMenu, ribbonTabTextColourMenu;
+        #endregion
+
+        #region Properties
+
+        #region Picture Box
+        /// <summary>
+        /// Gets or sets the base colour preview.
+        /// </summary>
+        /// <value>
+        /// The base colour preview.
+        /// </value>
+        public PictureBox BaseColourPreview { get => baseColourPreview; set => baseColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the dark colour preview.
+        /// </summary>
+        /// <value>
+        /// The dark colour preview.
+        /// </value>
+        public PictureBox DarkColourPreview { get => darkColourPreview; set => darkColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the middle colour preview.
+        /// </summary>
+        /// <value>
+        /// The middle colour preview.
+        /// </value>
+        public PictureBox MiddleColourPreview { get => middleColourPreview; set => middleColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the light colour preview.
+        /// </summary>
+        /// <value>
+        /// The light colour preview.
+        /// </value>
+        public PictureBox LightColourPreview { get => lightColourPreview; set => lightColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the lightest colour preview.
+        /// </summary>
+        /// <value>
+        /// The lightest colour preview.
+        /// </value>
+        public PictureBox LightestColourPreview { get => lightestColourPreview; set => lightestColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the border colour preview.
+        /// </summary>
+        /// <value>
+        /// The border colour preview.
+        /// </value>
+        public PictureBox BorderColourPreview { get => borderColourPreview; set => borderColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the alternative normal text colour preview.
+        /// </summary>
+        /// <value>
+        /// The alternative normal text colour preview.
+        /// </value>
+        public PictureBox AlternativeNormalTextColourPreview { get => alternativeNormalTextColourPreview; set => alternativeNormalTextColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the normal text colour preview.
+        /// </summary>
+        /// <value>
+        /// The normal text colour preview.
+        /// </value>
+        public PictureBox NormalTextColourPreview { get => normalTextColourPreview; set => normalTextColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the disabled text colour preview.
+        /// </summary>
+        /// <value>
+        /// The disabled text colour preview.
+        /// </value>
+        public PictureBox DisabledTextColourPreview { get => disabledTextColourPreview; set => disabledTextColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the focused text colour preview.
+        /// </summary>
+        /// <value>
+        /// The focused text colour preview.
+        /// </value>
+        public PictureBox FocusedTextColourPreview { get => focusedTextColourPreview; set => focusedTextColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the pressed text colour preview.
+        /// </summary>
+        /// <value>
+        /// The pressed text colour preview.
+        /// </value>
+        public PictureBox PressedTextColourPreview { get => pressedTextColourPreview; set => pressedTextColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the disabled control colour preview.
+        /// </summary>
+        /// <value>
+        /// The disabled colour control preview.
+        /// </value>
+        public PictureBox DisabledControlColourPreview { get => disabledControlColourPreview; set => disabledControlColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the link normal colour preview.
+        /// </summary>
+        /// <value>
+        /// The link normal colour preview.
+        /// </value>
+        public PictureBox LinkNormalColourPreview { get => linkNormalColourPreview; set => linkNormalColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the link focused colour preview.
+        /// </summary>
+        /// <value>
+        /// The link focused colour preview.
+        /// </value>
+        public PictureBox LinkFocusedColourPreview { get => linkFocusedColourPreview; set => linkFocusedColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the link hover colour preview.
+        /// </summary>
+        /// <value>
+        /// The link hover colour preview.
+        /// </value>
+        public PictureBox LinkHoverColourPreview { get => linkHoverColourPreview; set => linkHoverColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the link visited colour preview.
+        /// </summary>
+        /// <value>
+        /// The link visited colour preview.
+        /// </value>
+        public PictureBox LinkVisitedColourPreview { get => linkVisitedColourPreview; set => linkVisitedColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the custom colour one preview.
+        /// </summary>
+        /// <value>
+        /// The custom colour one preview.
+        /// </value>
+        public PictureBox CustomColourOnePreview { get => customColourOnePreview; set => customColourOnePreview = value; }
+
+        /// <summary>
+        /// Gets or sets the custom colour two preview.
+        /// </summary>
+        /// <value>
+        /// The custom colour two preview.
+        /// </value>
+        public PictureBox CustomColourTwoPreview { get => customColourTwoPreview; set => customColourTwoPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the custom colour three preview.
+        /// </summary>
+        /// <value>
+        /// The custom colour three preview.
+        /// </value>
+        public PictureBox CustomColourThreePreview { get => customColourThreePreview; set => customColourThreePreview = value; }
+
+        /// <summary>
+        /// Gets or sets the custom colour four preview.
+        /// </summary>
+        /// <value>
+        /// The custom colour four preview.
+        /// </value>
+        public PictureBox CustomColourFourPreview { get => customColourFourPreview; set => customColourFourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the custom colour five preview.
+        /// </summary>
+        /// <value>
+        /// The custom colour five preview.
+        /// </value>
+        public PictureBox CustomColourFivePreview { get => customColourFivePreview; set => customColourFivePreview = value; }
+
+        /// <summary>
+        /// Gets or sets the custom colour six preview.
+        /// </summary>
+        /// <value>
+        /// The custom colour six preview.
+        /// </value>
+        public PictureBox CustomColourSixPreview { get => customColourSixPreview; set => customColourSixPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour one preview.
+        /// </summary>
+        /// <value>
+        /// The custom text colour one preview.
+        /// </value>
+        public PictureBox CustomTextColourOnePreview { get => customTextColourOnePreview; set => customTextColourOnePreview = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour two preview.
+        /// </summary>
+        /// <value>
+        /// The custom text colour two preview.
+        /// </value>
+        public PictureBox CustomTextColourTwoPreview { get => customTextColourTwoPreview; set => customTextColourTwoPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour three preview.
+        /// </summary>
+        /// <value>
+        /// The custom text colour three preview.
+        /// </value>
+        public PictureBox CustomTextColourThreePreview { get => customTextColourThreePreview; set => customTextColourThreePreview = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour four preview.
+        /// </summary>
+        /// <value>
+        /// The custom text colour four preview.
+        /// </value>
+        public PictureBox CustomTextColourFourPreview { get => customTextColourFourPreview; set => customTextColourFourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour five preview.
+        /// </summary>
+        /// <value>
+        /// The custom text colour five preview.
+        /// </value>
+        public PictureBox CustomTextColourFivePreview { get => customTextColourFivePreview; set => customTextColourFivePreview = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour six preview.
+        /// </summary>
+        /// <value>
+        /// The custom text colour six preview.
+        /// </value>
+        public PictureBox CustomTextColourSixPreview { get => customTextColourSixPreview; set => customTextColourSixPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the menu text colour preview.
+        /// </summary>
+        /// <value>
+        /// The menu text colour preview.
+        /// </value>
+        public PictureBox MenuTextColourPreview { get => menuTextColourPreview; set => menuTextColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the status text colour preview.
+        /// </summary>
+        /// <value>
+        /// The status text colour preview.
+        /// </value>
+        public PictureBox StatusTextColourPreview { get => statusTextColourPreview; set => statusTextColourPreview = value; }
+
+        /// <summary>
+        /// Gets or sets the ribbon tab text colour.
+        /// </summary>
+        /// <value>
+        /// The ribbon tab text colour.
+        /// </value>
+        public PictureBox RibbonTabTextColourPreview { get => ribbonTabTextColourPreview; set => ribbonTabTextColourPreview = value; }
+        #endregion
+
+        #region Context Menu Strips        
+        /// <summary>
+        /// Gets or sets the base colour menu.
+        /// </summary>
+        /// <value>
+        /// The base colour menu.
+        /// </value>
+        public ContextMenuStrip BaseColourMenu { get => baseColourMenu; set => baseColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the dark colour menu.
+        /// </summary>
+        /// <value>
+        /// The dark colour menu.
+        /// </value>
+        public ContextMenuStrip DarkColourMenu { get => darkColourMenu; set => darkColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the middle colour menu.
+        /// </summary>
+        /// <value>
+        /// The middle colour menu.
+        /// </value>
+        public ContextMenuStrip MiddleColourMenu { get => middleColourMenu; set => middleColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the light colour menu.
+        /// </summary>
+        /// <value>
+        /// The light colour menu.
+        /// </value>
+        public ContextMenuStrip LightColourMenu { get => lightColourMenu; set => lightColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the lightest colour menu.
+        /// </summary>
+        /// <value>
+        /// The lightest colour menu.
+        /// </value>
+        public ContextMenuStrip LightestColourMenu { get => lightestColourMenu; set => lightestColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the border colour menu.
+        /// </summary>
+        /// <value>
+        /// The border colour menu.
+        /// </value>
+        public ContextMenuStrip BorderColourMenu { get => borderColourMenu; set => borderColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the alternative normal text colour menu.
+        /// </summary>
+        /// <value>
+        /// The alternative normal text colour menu.
+        /// </value>
+        public ContextMenuStrip AlternativeNormalTextColourMenu { get => alternativeNormalTextColourMenu; set => alternativeNormalTextColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the normal text colour menu.
+        /// </summary>
+        /// <value>
+        /// The normal text colour menu.
+        /// </value>
+        public ContextMenuStrip NormalTextColourMenu { get => normalTextColourMenu; set => normalTextColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the disabled text colour menu.
+        /// </summary>
+        /// <value>
+        /// The disabled text colour menu.
+        /// </value>
+        public ContextMenuStrip DisabledTextColourMenu { get => disabledTextColourMenu; set => disabledTextColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the focused text colour menu.
+        /// </summary>
+        /// <value>
+        /// The focused text colour menu.
+        /// </value>
+        public ContextMenuStrip FocusedTextColourMenu { get => focusedTextColourMenu; set => focusedTextColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the pressed text colour menu.
+        /// </summary>
+        /// <value>
+        /// The pressed text colour menu.
+        /// </value>
+        public ContextMenuStrip PressedTextColourMenu { get => pressedTextColourMenu; set => pressedTextColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the disabled control colour menu.
+        /// </summary>
+        /// <value>
+        /// The disabled control colour menu.
+        /// </value>
+        public ContextMenuStrip DisabledControlColourMenu { get => disabledControlColourMenu; set => disabledControlColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the link normal colour menu.
+        /// </summary>
+        /// <value>
+        /// The link normal colour menu.
+        /// </value>
+        public ContextMenuStrip LinkNormalColourMenu { get => linkNormalColourMenu; set => linkNormalColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the link focused colour menu.
+        /// </summary>
+        /// <value>
+        /// The link focused colour menu.
+        /// </value>
+        public ContextMenuStrip LinkFocusedColourMenu { get => linkFocusedColourMenu; set => linkFocusedColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the link hover colour menu.
+        /// </summary>
+        /// <value>
+        /// The link hover colour menu.
+        /// </value>
+        public ContextMenuStrip LinkHoverColourMenu { get => linkHoverColourMenu; set => linkHoverColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the link visited colour menu.
+        /// </summary>
+        /// <value>
+        /// The link visited colour menu.
+        /// </value>
+        public ContextMenuStrip LinkVisitedColourMenu { get => linkVisitedColourMenu; set => linkVisitedColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the custom colour one menu.
+        /// </summary>
+        /// <value>
+        /// The custom colour one menu.
+        /// </value>
+        public ContextMenuStrip CustomColourOneMenu { get => customColourOneMenu; set => customColourOneMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the custom colour two menu.
+        /// </summary>
+        /// <value>
+        /// The custom colour two menu.
+        /// </value>
+        public ContextMenuStrip CustomColourTwoMenu { get => customColourTwoMenu; set => customColourTwoMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the custom colour three menu.
+        /// </summary>
+        /// <value>
+        /// The custom colour three menu.
+        /// </value>
+        public ContextMenuStrip CustomColourThreeMenu { get => customColourThreeMenu; set => customColourThreeMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the custom colour four menu.
+        /// </summary>
+        /// <value>
+        /// The custom colour four menu.
+        /// </value>
+        public ContextMenuStrip CustomColourFourMenu { get => customColourFourMenu; set => customColourFourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the custom colour five menu.
+        /// </summary>
+        /// <value>
+        /// The custom colour five menu.
+        /// </value>
+        public ContextMenuStrip CustomColourFiveMenu { get => customColourFiveMenu; set => customColourFiveMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the custom colour six menu.
+        /// </summary>
+        /// <value>
+        /// The custom colour six menu.
+        /// </value>
+        public ContextMenuStrip CustomColourSixMenu { get => customColourSixMenu; set => customColourSixMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour one menu.
+        /// </summary>
+        /// <value>
+        /// The custom text colour one menu.
+        /// </value>
+        public ContextMenuStrip CustomTextColourOneMenu { get => customTextColourOneMenu; set => customTextColourOneMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour two menu.
+        /// </summary>
+        /// <value>
+        /// The custom text colour two menu.
+        /// </value>
+        public ContextMenuStrip CustomTextColourTwoMenu { get => customTextColourTwoMenu; set => customTextColourTwoMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour three menu.
+        /// </summary>
+        /// <value>
+        /// The custom text colour three menu.
+        /// </value>
+        public ContextMenuStrip CustomTextColourThreeMenu { get => customTextColourThreeMenu; set => customTextColourThreeMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour four menu.
+        /// </summary>
+        /// <value>
+        /// The custom text colour four menu.
+        /// </value>
+        public ContextMenuStrip CustomTextColourFourMenu { get => customTextColourFourMenu; set => customTextColourFourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour five menu.
+        /// </summary>
+        /// <value>
+        /// The custom text colour five menu.
+        /// </value>
+        public ContextMenuStrip CustomTextColourFiveMenu { get => customTextColourFiveMenu; set => customTextColourFiveMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the custom text colour six menu.
+        /// </summary>
+        /// <value>
+        /// The custom text colour six menu.
+        /// </value>
+        public ContextMenuStrip CustomTextColourSixMenu { get => customTextColourSixMenu; set => customTextColourSixMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the menu text colour menu.
+        /// </summary>
+        /// <value>
+        /// The menu text colour menu.
+        /// </value>
+        public ContextMenuStrip MenuTextColourMenu { get => menuTextColourMenu; set => menuTextColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the status text colour menu.
+        /// </summary>
+        /// <value>
+        /// The status text colour menu.
+        /// </value>
+        public ContextMenuStrip StatusTextColourMenu { get => statusTextColourMenu; set => statusTextColourMenu = value; }
+
+        /// <summary>
+        /// Gets or sets the ribbon tab text colour menu.
+        /// </summary>
+        /// <value>
+        /// The ribbon tab text colour menu.
+        /// </value>
+        public ContextMenuStrip RibbonTabTextColourMenu { get => ribbonTabTextColourMenu; set => ribbonTabTextColourMenu = value; }
+        #endregion
+
+        #endregion
+
+        #region Constructor        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="StandardPictureBoxControl"/> class.
+        /// </summary>
+        public StandardPictureBoxControl()
+        {
+            InitializeComponent();
+
+            #region Picture Boxes
+            SetBaseColourPreview(pbxBaseColourPreview);
+
+            SetDarkColourPreview(pbxDarkColourPreview);
+
+            SetMiddleColourPreview(pbxMediumColourPreview);
+
+            SetLightColourPreview(pbxLightColourPreview);
+
+            SetLightestColourPreview(pbxLightestColourPreview);
+
+            SetBorderColourPreview(pbxBorderColourPreview);
+
+            SetAlternativeNormalTextColourPreview(pbxAlternativeNormalTextColourPreview);
+
+            SetNormalColourPreview(pbxNormalTextColourPreview);
+
+            SetDisabledTextColourPreview(pbxDisabledTextColourPreview);
+
+            SetFocusedTextColourPreview(pbxFocusedTextColourPreview);
+
+            SetPressedTextColourPreview(pbxPressedTextColourPreview);
+
+            SetDisabledControlColourPreview(pbxDisabledControlColourPreview);
+
+            SetLinkNormalColourPreview(pbxLinkNormalColourPreview);
+
+            SetLinkFocusedColourPreview(pbxLinkFocusedColourPreview);
+
+            SetLinkHoverColourPreview(pbxLinkHoverColourPreview);
+
+            SetLinkVisitedColourPreview(pbxLinkVisitedColourPreview);
+
+            SetCustomColourOneColourPreview(pbxCustomColourOnePreview);
+
+            SetCustomColourTwoColourPreview(pbxCustomColourTwoPreview);
+
+            SetCustomColourThreeColourPreview(pbxCustomColourThreePreview);
+
+            SetCustomColourFourColourPreview(pbxCustomColourFourPreview);
+
+            SetCustomColourFiveColourPreview(pbxCustomColourFivePreview);
+
+            SetCustomColourSixColourPreview(pbxCustomColourSixPreview);
+
+            SetCustomTextColourOneColourPreview(pbxCustomTextColourOnePreview);
+
+            SetCustomTextColourTwoColourPreview(pbxCustomTextColourTwoPreview);
+
+            SetCustomTextColourThreeColourPreview(pbxCustomTextColourThreePreview);
+
+            SetCustomTextColourFourColourPreview(pbxCustomTextColourFourPreview);
+
+            SetCustomTextColourFiveColourPreview(pbxCustomTextColourFivePreview);
+
+            SetCustomTextColourSixColourPreview(pbxCustomTextColourSixPreview);
+
+            SetMenuTextColourPreview(pbxMenuTextColourPreview);
+
+            SetStatusTextColourPreview(pbxStatusTextColourPreview);
+
+            SetRibbonTabTextColourPreview(pbxRibbonTabTextColourPreview);
+            #endregion
+
+            #region Context Menu Strips
+            SetBaseColourMenu(ctxBaseColour);
+
+            SetDarkColourMenu(ctxDarkColour);
+
+            SetMiddleColourMenu(ctxMediumColour);
+
+            SetLightColourMenu(ctxLightColour);
+
+            SetLightestColourMenu(ctxLightestColour);
+
+            SetBorderColourMenu(ctxBorderColour);
+
+            SetAlternativeNormalTextColourMenu(ctxAlternativeNormalTextColour);
+
+            SetNormalColourMenu(ctxNormalTextColour);
+
+            SetDisabledTextColourMenu(ctxDisabedTextColour);
+
+            SetFocusedTextColourMenu(ctxFocusedTextColour);
+
+            SetPressedTextColourMenu(ctxPressedTextColour);
+
+            SetDisabledControlColourMenu(ctxDisabledControlColour);
+
+            SetLinkNormalColourMenu(ctxLinkNormalTextColour);
+
+            SetLinkHoverColourMenu(ctxLinkHoverTextColour);
+
+            SetLinkFocusedColourMenu(ctxLinkFocusedTextColour);
+
+            SetLinkVisitedColourMenu(ctxLinkVisitedTextColour);
+
+            SetCustomColourOneColourMenu(ctxCustomColourOneColour);
+
+            SetCustomColourTwoColourMenu(ctxCustomColourTwoColour);
+
+            SetCustomColourThreeColourMenu(ctxCustomColourThreeColour);
+
+            SetCustomColourFourColourMenu(ctxCustomColourFourColour);
+
+            SetCustomColourFiveColourMenu(ctxCustomColourFiveColour);
+
+            SetCustomColourSixColourMenu(ctxCustomColourSixColour);
+
+            SetCustomTextColourOneColourMenu(ctxCustomTextColourOneColour);
+
+            SetCustomTextColourTwoColourMenu(ctxCustomTextColourTwoColour);
+
+            SetCustomTextColourThreeColourMenu(ctxCustomTextColourThreeColour);
+
+            SetCustomTextColourFourColourMenu(ctxCustomTextColourFourColour);
+
+            SetCustomTextColourFiveColourMenu(ctxCustomTextColourFiveColour);
+
+            SetCustomTextColourSixColourMenu(ctxCustomTextColourSixColour);
+
+            SetMenuTextColourMenu(ctxMenuTextColour);
+
+            SetStatusTextColourMenu(ctxStatusStripTextColour);
+
+            SetRibbonTabTextColourMenu(ctxRibbonTabTextColour);
+            #endregion
+
+            #region Context Menu Assign
+            AssignContextMenuToControl(GetBaseColourPreview(), GetBaseColourMenu());
+
+            AssignContextMenuToControl(GetDarkColourPreview(), GetDarkColourMenu());
+
+            AssignContextMenuToControl(GetMiddleColourPreview(), GetMiddleColourMenu());
+
+            AssignContextMenuToControl(GetLightColourPreview(), GetLightColourMenu());
+
+            AssignContextMenuToControl(GetLightestColourPreview(), GetLightestColourMenu());
+
+            AssignContextMenuToControl(GetBorderColourPreview(), GetBorderColourMenu());
+
+            AssignContextMenuToControl(GetAlternativeNormalTextColourPreview(), GetAlternativeNormalTextColourMenu());
+
+            AssignContextMenuToControl(GetNormalColourPreview(), GetNormalColourMenu());
+
+            AssignContextMenuToControl(GetDisabledTextColourPreview(), GetDisabledTextColourMenu());
+
+            AssignContextMenuToControl(GetFocusedTextColourPreview(), GetFocusedTextColourMenu());
+
+            AssignContextMenuToControl(GetPressedTextColourPreview(), GetPressedTextColourMenu());
+
+            AssignContextMenuToControl(GetDisabledControlColourPreview(), GetDisabledControlColourMenu());
+
+            AssignContextMenuToControl(GetLinkNormalColourPreview(), GetLinkNormalColourMenu());
+
+            AssignContextMenuToControl(GetLinkFocusedColourPreview(), GetLinkFocusedColourMenu());
+
+            AssignContextMenuToControl(GetLinkHoverColourPreview(), GetLinkHoverColourMenu());
+
+            AssignContextMenuToControl(GetLinkVisitedColourPreview(), GetLinkVisitedColourMenu());
+
+            AssignContextMenuToControl(GetCustomColourOneColourPreview(), GetCustomColourOneColourMenu());
+
+            AssignContextMenuToControl(GetCustomColourTwoColourPreview(), GetCustomColourTwoColourMenu());
+
+            AssignContextMenuToControl(GetCustomColourThreeColourPreview(), GetCustomColourThreeColourMenu());
+
+            AssignContextMenuToControl(GetCustomColourFourColourPreview(), GetCustomColourFourColourMenu());
+
+            AssignContextMenuToControl(GetCustomColourFiveColourPreview(), GetCustomColourFiveColourMenu());
+
+            AssignContextMenuToControl(GetCustomColourSixColourPreview(), GetCustomColourSixColourMenu());
+
+            AssignContextMenuToControl(GetCustomTextColourOneColourPreview(), GetCustomTextColourOneColourMenu());
+
+            AssignContextMenuToControl(GetCustomTextColourTwoColourPreview(), GetCustomTextColourTwoColourMenu());
+
+            AssignContextMenuToControl(GetCustomTextColourThreeColourPreview(), GetCustomTextColourThreeColourMenu());
+
+            AssignContextMenuToControl(GetCustomTextColourFourColourPreview(), GetCustomTextColourFourColourMenu());
+
+            AssignContextMenuToControl(GetCustomTextColourFiveColourPreview(), GetCustomTextColourFiveColourMenu());
+
+            AssignContextMenuToControl(GetCustomTextColourSixColourPreview(), GetCustomTextColourSixColourMenu());
+
+            AssignContextMenuToControl(GetMenuTextColourPreview(), GetMenuTextColourMenu());
+
+            AssignContextMenuToControl(GetStatusTextColourPreview(), GetStatusTextColourMenu());
+
+            AssignContextMenuToControl(GetRibbonTabTextColourPreview(), GetRibbonTabTextColourMenu());
+            #endregion
+        }
+        #endregion
+
+        #region Setters and Getters
+
+        #region Picture Box
+        /// <summary>
+        /// Sets the value of BaseColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of BaseColourPreview.</param>
+        public void SetBaseColourPreview(PictureBox value)
+        {
+            BaseColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of BaseColourPreview.
+        /// </summary>
+        /// <returns>The value of BaseColourPreview.</returns>
+        public PictureBox GetBaseColourPreview()
+        {
+            return BaseColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of DarkColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of DarkColourPreview.</param>
+        public void SetDarkColourPreview(PictureBox value)
+        {
+            DarkColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of DarkColourPreview.
+        /// </summary>
+        /// <returns>The value of DarkColourPreview.</returns>
+        public PictureBox GetDarkColourPreview()
+        {
+            return DarkColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of MiddleColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of MiddleColourPreview.</param>
+        public void SetMiddleColourPreview(PictureBox value)
+        {
+            MiddleColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of MiddleColourPreview.
+        /// </summary>
+        /// <returns>The value of MiddleColourPreview.</returns>
+        public PictureBox GetMiddleColourPreview()
+        {
+            return MiddleColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of LightColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of LightColourPreview.</param>
+        public void SetLightColourPreview(PictureBox value)
+        {
+            LightColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LightColourPreview.
+        /// </summary>
+        /// <returns>The value of LightColourPreview.</returns>
+        public PictureBox GetLightColourPreview()
+        {
+            return LightColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of LightestColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of LightestColourPreview.</param>
+        public void SetLightestColourPreview(PictureBox value)
+        {
+            LightestColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LightestColourPreview.
+        /// </summary>
+        /// <returns>The value of LightestColourPreview.</returns>
+        public PictureBox GetLightestColourPreview()
+        {
+            return LightestColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of BorderColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of BorderColourPreview.</param>
+        public void SetBorderColourPreview(PictureBox value)
+        {
+            BorderColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of BorderColourPreview.
+        /// </summary>
+        /// <returns>The value of BorderColourPreview.</returns>
+        public PictureBox GetBorderColourPreview()
+        {
+            return BorderColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of AlternativeNormalTextColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of AlternativeNormalTextColourPreview.</param>
+        public void SetAlternativeNormalTextColourPreview(PictureBox value)
+        {
+            AlternativeNormalTextColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of AlternativeNormalTextColourPreview.
+        /// </summary>
+        /// <returns>The value of AlternativeNormalTextColourPreview.</returns>
+        public PictureBox GetAlternativeNormalTextColourPreview()
+        {
+            return AlternativeNormalTextColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of NormalColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of NormalColourPreview.</param>
+        public void SetNormalColourPreview(PictureBox value)
+        {
+            NormalTextColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of NormalColourPreview.
+        /// </summary>
+        /// <returns>The value of NormalColourPreview.</returns>
+        public PictureBox GetNormalColourPreview()
+        {
+            return NormalTextColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of DisabledTextColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of DisabledTextColourPreview.</param>
+        public void SetDisabledTextColourPreview(PictureBox value)
+        {
+            DisabledTextColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of DisabledTextColourPreview.
+        /// </summary>
+        /// <returns>The value of DisabledTextColourPreview.</returns>
+        public PictureBox GetDisabledTextColourPreview()
+        {
+            return DisabledTextColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of FocusedTextColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of FocusedTextColourPreview.</param>
+        public void SetFocusedTextColourPreview(PictureBox value)
+        {
+            FocusedTextColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of FocusedTextColourPreview.
+        /// </summary>
+        /// <returns>The value of FocusedTextColourPreview.</returns>
+        public PictureBox GetFocusedTextColourPreview()
+        {
+            return FocusedTextColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of PressedTextColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of PressedTextColourPreview.</param>
+        public void SetPressedTextColourPreview(PictureBox value)
+        {
+            PressedTextColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of PressedTextColourPreview.
+        /// </summary>
+        /// <returns>The value of PressedTextColourPreview.</returns>
+        public PictureBox GetPressedTextColourPreview()
+        {
+            return PressedTextColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of DisabledControlColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of DisabledControlColourPreview.</param>
+        public void SetDisabledControlColourPreview(PictureBox value)
+        {
+            DisabledControlColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of DisabledControlColourPreview.
+        /// </summary>
+        /// <returns>The value of DisabledControlColourPreview.</returns>
+        public PictureBox GetDisabledControlColourPreview()
+        {
+            return DisabledControlColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of LinkNormalColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of LinkNormalColourPreview.</param>
+        public void SetLinkNormalColourPreview(PictureBox value)
+        {
+            LinkNormalColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkNormalColourPreview.
+        /// </summary>
+        /// <returns>The value of LinkNormalColourPreview.</returns>
+        public PictureBox GetLinkNormalColourPreview()
+        {
+            return LinkNormalColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of LinkFocusedColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of LinkFocusedColourPreview.</param>
+        public void SetLinkFocusedColourPreview(PictureBox value)
+        {
+            LinkFocusedColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkFocusedColourPreview.
+        /// </summary>
+        /// <returns>The value of LinkFocusedColourPreview.</returns>
+        public PictureBox GetLinkFocusedColourPreview()
+        {
+            return LinkFocusedColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of LinkHoverColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of LinkHoverColourPreview.</param>
+        public void SetLinkHoverColourPreview(PictureBox value)
+        {
+            LinkHoverColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkHoverColourPreview.
+        /// </summary>
+        /// <returns>The value of LinkHoverColourPreview.</returns>
+        public PictureBox GetLinkHoverColourPreview()
+        {
+            return LinkHoverColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of LinkVisitedColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of LinkVisitedColourPreview.</param>
+        public void SetLinkVisitedColourPreview(PictureBox value)
+        {
+            LinkVisitedColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkVisitedColourPreview.
+        /// </summary>
+        /// <returns>The value of LinkVisitedColourPreview.</returns>
+        public PictureBox GetLinkVisitedColourPreview()
+        {
+            return LinkVisitedColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourOneColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourOneColourPreview.</param>
+        public void SetCustomColourOneColourPreview(PictureBox value)
+        {
+            CustomColourOnePreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourOneColourPreview.
+        /// </summary>
+        /// <returns>The value of CustomColourOneColourPreview.</returns>
+        public PictureBox GetCustomColourOneColourPreview()
+        {
+            return CustomColourOnePreview;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourTwoColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourTwoColourPreview.</param>
+        public void SetCustomColourTwoColourPreview(PictureBox value)
+        {
+            CustomColourTwoPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourTwoColourPreview.
+        /// </summary>
+        /// <returns>The value of CustomColourTwoColourPreview.</returns>
+        public PictureBox GetCustomColourTwoColourPreview()
+        {
+            return CustomColourTwoPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourThreeColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourThreeColourPreview.</param>
+        public void SetCustomColourThreeColourPreview(PictureBox value)
+        {
+            CustomColourThreePreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourThreeColourPreview.
+        /// </summary>
+        /// <returns>The value of CustomColourThreeColourPreview.</returns>
+        public PictureBox GetCustomColourThreeColourPreview()
+        {
+            return CustomColourThreePreview;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourFourColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourFourColourPreview.</param>
+        public void SetCustomColourFourColourPreview(PictureBox value)
+        {
+            CustomColourFourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourFourColourPreview.
+        /// </summary>
+        /// <returns>The value of CustomColourFourColourPreview.</returns>
+        public PictureBox GetCustomColourFourColourPreview()
+        {
+            return CustomColourFourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourFiveColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourFiveColourPreview.</param>
+        public void SetCustomColourFiveColourPreview(PictureBox value)
+        {
+            CustomColourFivePreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourFiveColourPreview.
+        /// </summary>
+        /// <returns>The value of CustomColourFiveColourPreview.</returns>
+        public PictureBox GetCustomColourFiveColourPreview()
+        {
+            return CustomColourFivePreview;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourSixColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourSixColourPreview.</param>
+        public void SetCustomColourSixColourPreview(PictureBox value)
+        {
+            CustomColourSixPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourSixColourPreview.
+        /// </summary>
+        /// <returns>The value of CustomColourSixColourPreview.</returns>
+        public PictureBox GetCustomColourSixColourPreview()
+        {
+            return CustomColourSixPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourOneColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourOneColourPreview.</param>
+        public void SetCustomTextColourOneColourPreview(PictureBox value)
+        {
+            CustomTextColourOnePreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourOneColourPreview.
+        /// </summary>
+        /// <returns>The value of CustomTextColourOneColourPreview.</returns>
+        public PictureBox GetCustomTextColourOneColourPreview()
+        {
+            return CustomTextColourOnePreview;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourTwoColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourTwoColourPreview.</param>
+        public void SetCustomTextColourTwoColourPreview(PictureBox value)
+        {
+            CustomTextColourTwoPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourTwoColourPreview.
+        /// </summary>
+        /// <returns>The value of CustomTextColourTwoColourPreview.</returns>
+        public PictureBox GetCustomTextColourTwoColourPreview()
+        {
+            return CustomTextColourTwoPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourThreeColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourThreeColourPreview.</param>
+        public void SetCustomTextColourThreeColourPreview(PictureBox value)
+        {
+            CustomTextColourThreePreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourThreeColourPreview.
+        /// </summary>
+        /// <returns>The value of CustomTextColourThreeColourPreview.</returns>
+        public PictureBox GetCustomTextColourThreeColourPreview()
+        {
+            return CustomTextColourThreePreview;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourFourColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourFourColourPreview.</param>
+        public void SetCustomTextColourFourColourPreview(PictureBox value)
+        {
+            CustomTextColourFourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourFourColourPreview.
+        /// </summary>
+        /// <returns>The value of CustomTextColourFourColourPreview.</returns>
+        public PictureBox GetCustomTextColourFourColourPreview()
+        {
+            return CustomTextColourFourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourFiveColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourFiveColourPreview.</param>
+        public void SetCustomTextColourFiveColourPreview(PictureBox value)
+        {
+            CustomTextColourFivePreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourFiveColourPreview.
+        /// </summary>
+        /// <returns>The value of CustomTextColourFiveColourPreview.</returns>
+        public PictureBox GetCustomTextColourFiveColourPreview()
+        {
+            return CustomTextColourFivePreview;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourSixColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourSixColourPreview.</param>
+        public void SetCustomTextColourSixColourPreview(PictureBox value)
+        {
+            CustomTextColourSixPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourSixColourPreview.
+        /// </summary>
+        /// <returns>The value of CustomTextColourSixColourPreview.</returns>
+        public PictureBox GetCustomTextColourSixColourPreview()
+        {
+            return CustomTextColourSixPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of MenuTextColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of MenuTextColourPreview.</param>
+        public void SetMenuTextColourPreview(PictureBox value)
+        {
+            MenuTextColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of MenuTextColourPreview.
+        /// </summary>
+        /// <returns>The value of MenuTextColourPreview.</returns>
+        public PictureBox GetMenuTextColourPreview()
+        {
+            return MenuTextColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of StatusTextColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of StatusTextColourPreview.</param>
+        public void SetStatusTextColourPreview(PictureBox value)
+        {
+            StatusTextColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of StatusTextColourPreview.
+        /// </summary>
+        /// <returns>The value of StatusTextColourPreview.</returns>
+        public PictureBox GetStatusTextColourPreview()
+        {
+            return StatusTextColourPreview;
+        }
+
+        /// <summary>
+        /// Sets the value of RibbonTabTextColourPreview to value.
+        /// </summary>
+        /// <param name="value">The value of RibbonTabTextColourPreview.</param>
+        public void SetRibbonTabTextColourPreview(PictureBox value)
+        {
+            RibbonTabTextColourPreview = value;
+        }
+
+        /// <summary>
+        /// Returns the value of RibbonTabTextColourPreview.
+        /// </summary>
+        /// <returns>The value of RibbonTabTextColourPreview.</returns>
+        public PictureBox GetRibbonTabTextColourPreview()
+        {
+            return RibbonTabTextColourPreview;
+        }
+        #endregion
+
+        #region Context Menu Strips
+        /// <summary>
+        /// Sets the value of BaseColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of BaseColourMenu.</param>
+        public void SetBaseColourMenu(ContextMenuStrip value)
+        {
+            BaseColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of BaseColourMenu.
+        /// </summary>
+        /// <returns>The value of BaseColourMenu.</returns>
+        public ContextMenuStrip GetBaseColourMenu()
+        {
+            return BaseColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of DarkColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of DarkColourMenu.</param>
+        public void SetDarkColourMenu(ContextMenuStrip value)
+        {
+            DarkColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of DarkColourMenu.
+        /// </summary>
+        /// <returns>The value of DarkColourMenu.</returns>
+        public ContextMenuStrip GetDarkColourMenu()
+        {
+            return DarkColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of MiddleColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of MiddleColourMenu.</param>
+        public void SetMiddleColourMenu(ContextMenuStrip value)
+        {
+            MiddleColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of MiddleColourMenu.
+        /// </summary>
+        /// <returns>The value of MiddleColourMenu.</returns>
+        public ContextMenuStrip GetMiddleColourMenu()
+        {
+            return MiddleColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of LightColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of LightColourMenu.</param>
+        public void SetLightColourMenu(ContextMenuStrip value)
+        {
+            LightColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LightColourMenu.
+        /// </summary>
+        /// <returns>The value of LightColourMenu.</returns>
+        public ContextMenuStrip GetLightColourMenu()
+        {
+            return LightColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of LightestColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of LightestColourMenu.</param>
+        public void SetLightestColourMenu(ContextMenuStrip value)
+        {
+            LightestColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LightestColourMenu.
+        /// </summary>
+        /// <returns>The value of LightestColourMenu.</returns>
+        public ContextMenuStrip GetLightestColourMenu()
+        {
+            return LightestColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of BorderColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of BorderColourMenu.</param>
+        public void SetBorderColourMenu(ContextMenuStrip value)
+        {
+            BorderColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of BorderColourMenu.
+        /// </summary>
+        /// <returns>The value of BorderColourMenu.</returns>
+        public ContextMenuStrip GetBorderColourMenu()
+        {
+            return BorderColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of AlternativeNormalTextColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of AlternativeNormalTextColourMenu.</param>
+        public void SetAlternativeNormalTextColourMenu(ContextMenuStrip value)
+        {
+            AlternativeNormalTextColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of AlternativeNormalTextColourMenu.
+        /// </summary>
+        /// <returns>The value of AlternativeNormalTextColourMenu.</returns>
+        public ContextMenuStrip GetAlternativeNormalTextColourMenu()
+        {
+            return AlternativeNormalTextColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of NormalColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of NormalColourMenu.</param>
+        public void SetNormalColourMenu(ContextMenuStrip value)
+        {
+            NormalTextColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of NormalColourMenu.
+        /// </summary>
+        /// <returns>The value of NormalColourMenu.</returns>
+        public ContextMenuStrip GetNormalColourMenu()
+        {
+            return NormalTextColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of DisabledTextColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of DisabledTextColourMenu.</param>
+        public void SetDisabledTextColourMenu(ContextMenuStrip value)
+        {
+            DisabledTextColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of DisabledTextColourMenu.
+        /// </summary>
+        /// <returns>The value of DisabledTextColourMenu.</returns>
+        public ContextMenuStrip GetDisabledTextColourMenu()
+        {
+            return DisabledTextColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of FocusedTextColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of FocusedTextColourMenu.</param>
+        public void SetFocusedTextColourMenu(ContextMenuStrip value)
+        {
+            FocusedTextColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of FocusedTextColourMenu.
+        /// </summary>
+        /// <returns>The value of FocusedTextColourMenu.</returns>
+        public ContextMenuStrip GetFocusedTextColourMenu()
+        {
+            return FocusedTextColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of PressedTextColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of PressedTextColourMenu.</param>
+        public void SetPressedTextColourMenu(ContextMenuStrip value)
+        {
+            PressedTextColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of PressedTextColourMenu.
+        /// </summary>
+        /// <returns>The value of PressedTextColourMenu.</returns>
+        public ContextMenuStrip GetPressedTextColourMenu()
+        {
+            return PressedTextColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of DisabledControlColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of DisabledControlColourMenu.</param>
+        public void SetDisabledControlColourMenu(ContextMenuStrip value)
+        {
+            DisabledControlColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of DisabledControlColourMenu.
+        /// </summary>
+        /// <returns>The value of DisabledControlColourMenu.</returns>
+        public ContextMenuStrip GetDisabledControlColourMenu()
+        {
+            return DisabledControlColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of LinkNormalColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of LinkNormalColourMenu.</param>
+        public void SetLinkNormalColourMenu(ContextMenuStrip value)
+        {
+            LinkNormalColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkNormalColourMenu.
+        /// </summary>
+        /// <returns>The value of LinkNormalColourMenu.</returns>
+        public ContextMenuStrip GetLinkNormalColourMenu()
+        {
+            return LinkNormalColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of LinkFocusedColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of LinkFocusedColourMenu.</param>
+        public void SetLinkFocusedColourMenu(ContextMenuStrip value)
+        {
+            LinkFocusedColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkFocusedColourMenu.
+        /// </summary>
+        /// <returns>The value of LinkFocusedColourMenu.</returns>
+        public ContextMenuStrip GetLinkFocusedColourMenu()
+        {
+            return LinkFocusedColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of LinkHoverColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of LinkHoverColourMenu.</param>
+        public void SetLinkHoverColourMenu(ContextMenuStrip value)
+        {
+            LinkHoverColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkHoverColourMenu.
+        /// </summary>
+        /// <returns>The value of LinkHoverColourMenu.</returns>
+        public ContextMenuStrip GetLinkHoverColourMenu()
+        {
+            return LinkHoverColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of LinkVisitedColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of LinkVisitedColourMenu.</param>
+        public void SetLinkVisitedColourMenu(ContextMenuStrip value)
+        {
+            LinkVisitedColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkVisitedColourMenu.
+        /// </summary>
+        /// <returns>The value of LinkVisitedColourMenu.</returns>
+        public ContextMenuStrip GetLinkVisitedColourMenu()
+        {
+            return LinkVisitedColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourOneColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourOneColourMenu.</param>
+        public void SetCustomColourOneColourMenu(ContextMenuStrip value)
+        {
+            CustomColourOneMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourOneColourMenu.
+        /// </summary>
+        /// <returns>The value of CustomColourOneColourMenu.</returns>
+        public ContextMenuStrip GetCustomColourOneColourMenu()
+        {
+            return CustomColourOneMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourTwoColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourTwoColourMenu.</param>
+        public void SetCustomColourTwoColourMenu(ContextMenuStrip value)
+        {
+            CustomColourTwoMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourTwoColourMenu.
+        /// </summary>
+        /// <returns>The value of CustomColourTwoColourMenu.</returns>
+        public ContextMenuStrip GetCustomColourTwoColourMenu()
+        {
+            return CustomColourTwoMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourThreeColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourThreeColourMenu.</param>
+        public void SetCustomColourThreeColourMenu(ContextMenuStrip value)
+        {
+            CustomColourThreeMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourThreeColourMenu.
+        /// </summary>
+        /// <returns>The value of CustomColourThreeColourMenu.</returns>
+        public ContextMenuStrip GetCustomColourThreeColourMenu()
+        {
+            return CustomColourThreeMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourFourColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourFourColourMenu.</param>
+        public void SetCustomColourFourColourMenu(ContextMenuStrip value)
+        {
+            CustomColourFourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourFourColourMenu.
+        /// </summary>
+        /// <returns>The value of CustomColourFourColourMenu.</returns>
+        public ContextMenuStrip GetCustomColourFourColourMenu()
+        {
+            return CustomColourFourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourFiveColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourFiveColourMenu.</param>
+        public void SetCustomColourFiveColourMenu(ContextMenuStrip value)
+        {
+            CustomColourFiveMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourFiveColourMenu.
+        /// </summary>
+        /// <returns>The value of CustomColourFiveColourMenu.</returns>
+        public ContextMenuStrip GetCustomColourFiveColourMenu()
+        {
+            return CustomColourFiveMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomColourSixColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of CustomColourSixColourMenu.</param>
+        public void SetCustomColourSixColourMenu(ContextMenuStrip value)
+        {
+            CustomColourSixMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomColourSixColourMenu.
+        /// </summary>
+        /// <returns>The value of CustomColourSixColourMenu.</returns>
+        public ContextMenuStrip GetCustomColourSixColourMenu()
+        {
+            return CustomColourSixMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourOneColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourOneColourMenu.</param>
+        public void SetCustomTextColourOneColourMenu(ContextMenuStrip value)
+        {
+            CustomTextColourOneMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourOneColourMenu.
+        /// </summary>
+        /// <returns>The value of CustomTextColourOneColourMenu.</returns>
+        public ContextMenuStrip GetCustomTextColourOneColourMenu()
+        {
+            return CustomTextColourOneMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourTwoColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourTwoColourMenu.</param>
+        public void SetCustomTextColourTwoColourMenu(ContextMenuStrip value)
+        {
+            CustomTextColourTwoMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourTwoColourMenu.
+        /// </summary>
+        /// <returns>The value of CustomTextColourTwoColourMenu.</returns>
+        public ContextMenuStrip GetCustomTextColourTwoColourMenu()
+        {
+            return CustomTextColourTwoMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourThreeColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourThreeColourMenu.</param>
+        public void SetCustomTextColourThreeColourMenu(ContextMenuStrip value)
+        {
+            CustomTextColourThreeMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourThreeColourMenu.
+        /// </summary>
+        /// <returns>The value of CustomTextColourThreeColourMenu.</returns>
+        public ContextMenuStrip GetCustomTextColourThreeColourMenu()
+        {
+            return CustomTextColourThreeMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourFourColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourFourColourMenu.</param>
+        public void SetCustomTextColourFourColourMenu(ContextMenuStrip value)
+        {
+            CustomTextColourFourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourFourColourMenu.
+        /// </summary>
+        /// <returns>The value of CustomTextColourFourColourMenu.</returns>
+        public ContextMenuStrip GetCustomTextColourFourColourMenu()
+        {
+            return CustomTextColourFourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourFiveColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourFiveColourMenu.</param>
+        public void SetCustomTextColourFiveColourMenu(ContextMenuStrip value)
+        {
+            CustomTextColourFiveMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourFiveColourMenu.
+        /// </summary>
+        /// <returns>The value of CustomTextColourFiveColourMenu.</returns>
+        public ContextMenuStrip GetCustomTextColourFiveColourMenu()
+        {
+            return CustomTextColourFiveMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of CustomTextColourSixColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of CustomTextColourSixColourMenu.</param>
+        public void SetCustomTextColourSixColourMenu(ContextMenuStrip value)
+        {
+            CustomTextColourSixMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of CustomTextColourSixColourMenu.
+        /// </summary>
+        /// <returns>The value of CustomTextColourSixColourMenu.</returns>
+        public ContextMenuStrip GetCustomTextColourSixColourMenu()
+        {
+            return CustomTextColourSixMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of MenuTextColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of MenuTextColourMenu.</param>
+        public void SetMenuTextColourMenu(ContextMenuStrip value)
+        {
+            MenuTextColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of MenuTextColourMenu.
+        /// </summary>
+        /// <returns>The value of MenuTextColourMenu.</returns>
+        public ContextMenuStrip GetMenuTextColourMenu()
+        {
+            return MenuTextColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of StatusTextColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of StatusTextColourMenu.</param>
+        public void SetStatusTextColourMenu(ContextMenuStrip value)
+        {
+            StatusTextColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of StatusTextColourMenu.
+        /// </summary>
+        /// <returns>The value of StatusTextColourMenu.</returns>
+        public ContextMenuStrip GetStatusTextColourMenu()
+        {
+            return StatusTextColourMenu;
+        }
+
+        /// <summary>
+        /// Sets the value of RibbonTabTextColourMenu to value.
+        /// </summary>
+        /// <param name="value">The value of RibbonTabTextColourMenu.</param>
+        public void SetRibbonTabTextColourMenu(ContextMenuStrip value)
+        {
+            RibbonTabTextColourMenu = value;
+        }
+
+        /// <summary>
+        /// Returns the value of RibbonTabTextColourMenu.
+        /// </summary>
+        /// <returns>The value of RibbonTabTextColourMenu.</returns>
+        public ContextMenuStrip GetRibbonTabTextColourMenu()
+        {
+            return RibbonTabTextColourMenu;
+        }
+        #endregion
+
+        #endregion
+
+        #region Methods        
+        /// <summary>
+        /// Assigns the context menu to control.
+        /// </summary>
+        /// <param name="control">The control.</param>
+        /// <param name="contextMenu">The context menu.</param>
+        private void AssignContextMenuToControl(Control control, ContextMenuStrip contextMenu)
+        {
+            control.ContextMenuStrip = contextMenu;
+        }
+        #endregion
     }
 }

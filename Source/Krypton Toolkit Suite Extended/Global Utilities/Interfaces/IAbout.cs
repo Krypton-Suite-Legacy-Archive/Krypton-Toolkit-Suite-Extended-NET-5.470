@@ -12,6 +12,9 @@ using System.Drawing;
 
 namespace Core.Interfaces
 {
+    /// <summary>
+    /// For 'About' windows.
+    /// </summary>
     public interface IAbout
     {
         /// <summary>
@@ -62,12 +65,36 @@ namespace Core.Interfaces
         /// </value>
         Version FrameworkVersion { get; set; }
 
+        /// <summary>
+        /// Gets or sets the application icon.
+        /// </summary>
+        /// <value>
+        /// The application icon.
+        /// </value>
         Icon ApplicationIcon { get; set; }
 
+        /// <summary>
+        /// Gets or sets the application icon image.
+        /// </summary>
+        /// <value>
+        /// The application icon image.
+        /// </value>
         Bitmap ApplicationIconImage { get; set; }
 
+        /// <summary>
+        /// Gets or sets the name of the authour.
+        /// </summary>
+        /// <value>
+        /// The name of the authour.
+        /// </value>
         string AuthourName { get; set; }
 
+        /// <summary>
+        /// Gets or sets the install location.
+        /// </summary>
+        /// <value>
+        /// The install location.
+        /// </value>
         string InstallLocation { get; set; }
     }
 }

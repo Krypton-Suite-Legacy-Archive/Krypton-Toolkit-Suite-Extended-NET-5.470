@@ -14,13 +14,29 @@ using System.Drawing;
 
 namespace Core.UI.Elements
 {
+    /// <summary>
+    /// Displays the application information.
+    /// </summary>
+    /// <seealso cref="ComponentFactory.Krypton.Toolkit.KryptonForm" />
+    /// <seealso cref="Core.Interfaces.IAbout" />
     public partial class AboutBox : KryptonForm, IAbout
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AboutBox"/> class.
+        /// </summary>
         public AboutBox()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether [use icon].
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [use icon]; otherwise, <c>false</c>.
+        /// </value>
+        /// <exception cref="NotImplementedException">
+        /// </exception>
         public bool UseIcon { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public bool ShowSystemInformationButton { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public DateTime CreationDateTime { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

@@ -9,6 +9,7 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code.Exceptions;
+using ExtendedControls.Base.Code.IO;
 using ExtendedControls.Base.Code.Security;
 using System;
 using System.Drawing;
@@ -17,6 +18,10 @@ using System.Text;
 
 namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
 {
+    /// <summary>
+    /// Displays the properties of a file or directory.
+    /// </summary>
+    /// <seealso cref="ComponentFactory.Krypton.Toolkit.KryptonForm" />
     public class KryptonFileInformationDialog : KryptonForm
     {
         #region Designer Code
@@ -35,11 +40,11 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
         private KryptonLabel klblModified;
         private KryptonLabel klblCreated;
         private System.Windows.Forms.Panel panel3;
-        private KryptonLabel kryptonLabel4;
-        private KryptonLabel kryptonLabel3;
-        private KryptonLabel kryptonLabel2;
+        private KryptonLabel klblSizeOnDisk;
+        private KryptonLabel klblFileSize;
+        private KryptonLabel klblFileLocation;
         private System.Windows.Forms.Panel panel2;
-        private KryptonLabel kryptonLabel1;
+        private KryptonLabel klblFileType;
         private System.Windows.Forms.Panel panel1;
         private KryptonComboBox kcmbHashType1;
         private KryptonLabel klblTotalFiles;
@@ -71,11 +76,11 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.klblModified = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.klblCreated = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblSizeOnDisk = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblFileSize = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblFileLocation = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblFileType = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ktbFileName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.pbxFileIcon = new System.Windows.Forms.PictureBox();
@@ -196,11 +201,11 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonPage1.Controls.Add(this.klblModified);
             this.kryptonPage1.Controls.Add(this.klblCreated);
             this.kryptonPage1.Controls.Add(this.panel3);
-            this.kryptonPage1.Controls.Add(this.kryptonLabel4);
-            this.kryptonPage1.Controls.Add(this.kryptonLabel3);
-            this.kryptonPage1.Controls.Add(this.kryptonLabel2);
+            this.kryptonPage1.Controls.Add(this.klblSizeOnDisk);
+            this.kryptonPage1.Controls.Add(this.klblFileSize);
+            this.kryptonPage1.Controls.Add(this.klblFileLocation);
             this.kryptonPage1.Controls.Add(this.panel2);
-            this.kryptonPage1.Controls.Add(this.kryptonLabel1);
+            this.kryptonPage1.Controls.Add(this.klblFileType);
             this.kryptonPage1.Controls.Add(this.panel1);
             this.kryptonPage1.Controls.Add(this.ktbFileName);
             this.kryptonPage1.Controls.Add(this.pbxFileIcon);
@@ -251,35 +256,35 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.panel3.Size = new System.Drawing.Size(651, 1);
             this.panel3.TabIndex = 5;
             // 
-            // kryptonLabel4
+            // klblSizeOnDisk
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(20, 284);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(117, 24);
-            this.kryptonLabel4.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel4.TabIndex = 7;
-            this.kryptonLabel4.Values.Text = "Size on disk: {0}";
+            this.klblSizeOnDisk.Location = new System.Drawing.Point(20, 284);
+            this.klblSizeOnDisk.Name = "klblSizeOnDisk";
+            this.klblSizeOnDisk.Size = new System.Drawing.Size(117, 24);
+            this.klblSizeOnDisk.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblSizeOnDisk.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblSizeOnDisk.TabIndex = 7;
+            this.klblSizeOnDisk.Values.Text = "Size on disk: {0}";
             // 
-            // kryptonLabel3
+            // klblFileSize
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(20, 233);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(64, 24);
-            this.kryptonLabel3.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel3.TabIndex = 6;
-            this.kryptonLabel3.Values.Text = "Size: {0}";
+            this.klblFileSize.Location = new System.Drawing.Point(20, 233);
+            this.klblFileSize.Name = "klblFileSize";
+            this.klblFileSize.Size = new System.Drawing.Size(64, 24);
+            this.klblFileSize.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblFileSize.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblFileSize.TabIndex = 6;
+            this.klblFileSize.Values.Text = "Size: {0}";
             // 
-            // kryptonLabel2
+            // klblFileLocation
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(20, 182);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(95, 24);
-            this.kryptonLabel2.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel2.TabIndex = 5;
-            this.kryptonLabel2.Values.Text = "Location: {0}";
+            this.klblFileLocation.Location = new System.Drawing.Point(20, 182);
+            this.klblFileLocation.Name = "klblFileLocation";
+            this.klblFileLocation.Size = new System.Drawing.Size(95, 24);
+            this.klblFileLocation.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblFileLocation.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblFileLocation.TabIndex = 5;
+            this.klblFileLocation.Values.Text = "Location: {0}";
             // 
             // panel2
             // 
@@ -289,15 +294,15 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.panel2.Size = new System.Drawing.Size(651, 1);
             this.panel2.TabIndex = 4;
             // 
-            // kryptonLabel1
+            // klblFileType
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(20, 107);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(112, 24);
-            this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.TabIndex = 3;
-            this.kryptonLabel1.Values.Text = "Type of file: {0}";
+            this.klblFileType.Location = new System.Drawing.Point(20, 107);
+            this.klblFileType.Name = "klblFileType";
+            this.klblFileType.Size = new System.Drawing.Size(112, 24);
+            this.klblFileType.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblFileType.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblFileType.TabIndex = 3;
+            this.klblFileType.Values.Text = "Type of file: {0}";
             // 
             // panel1
             // 
@@ -558,6 +563,10 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
         public string FilePath { get => _filePath; set => _filePath = value; }
         #endregion
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="KryptonFileInformationDialog"/> class.
+        /// </summary>
+        /// <param name="filePath">The file path.</param>
         public KryptonFileInformationDialog(string filePath)
         {
             InitializeComponent();
@@ -633,6 +642,18 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
                 if (filePath == string.Empty) throw new ArgumentNullException();
 
                 FileInfo fileInfo = new FileInfo(filePath);
+
+                klblFileType.Text = $"Type of file: *{ Path.GetExtension(filePath) }";
+
+                klblFileLocation.Text = $"Location: { Path.GetFullPath(filePath) }";
+
+                klblFileSize.Text = $"Size: { FileUtilities.GetReadableFileSize(fileInfo.Length) }";
+
+                klblCreated.Text = $"Created: { GetDateTimeAsString(fileInfo.CreationTime) }";
+
+                klblAccessed.Text = $"Accessed: { GetDateTimeAsString(fileInfo.LastAccessTime) }";
+
+                klblModified.Text = $"Modified: { GetDateTimeAsString(fileInfo.LastWriteTime) }";
             }
             catch (Exception exc)
             {
@@ -681,7 +702,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
         /// <returns></returns>
         private static string GetDateTimeAsString(DateTime dateTime)
         {
-            return dateTime.ToString();
+            return dateTime.ToLongDateString();
         }
     }
 }

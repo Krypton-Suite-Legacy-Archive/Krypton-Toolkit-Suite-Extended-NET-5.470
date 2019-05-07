@@ -328,6 +328,9 @@ namespace Core.Classes
             return new FileInfo(FilePath);
         }
 
+        /// <summary>
+        /// Finalizes an instance of the <see cref="FileUtilityMethods"/> class.
+        /// </summary>
         ~FileUtilityMethods()
         {
             GC.SuppressFinalize(this);

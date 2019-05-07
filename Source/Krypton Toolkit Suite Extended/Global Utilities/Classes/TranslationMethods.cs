@@ -11,9 +11,15 @@ using System;
 
 namespace Core.Classes
 {
+    /// <summary>
+    /// Some translation methods.
+    /// </summary>
     public class TranslationMethods
     {
-        #region Constructors
+        #region Constructors        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TranslationMethods"/> class.
+        /// </summary>
         public TranslationMethods()
         {
 

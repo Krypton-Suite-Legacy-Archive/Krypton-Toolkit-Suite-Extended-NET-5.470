@@ -313,6 +313,10 @@
       <Project>{efb997fb-1e05-444b-ba02-16c004e1a111}</Project>
       <Name>Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Toolkit Settings\Toolkit Settings.csproj">
+      <Project>{ea6e7878-fccb-416c-8fe1-e626d478a7a7}</Project>
+      <Name>Toolkit Settings</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Warning_16_x_16.png" />

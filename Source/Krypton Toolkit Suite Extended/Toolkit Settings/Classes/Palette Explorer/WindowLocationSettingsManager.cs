@@ -183,6 +183,8 @@ namespace ToolkitSettings.Classes.PaletteExplorer
 
                 SetPalettePropertiesPaneWindowLocation(new Point(0, 0));
 
+                SaveWindowLocationSettings();
+
                 if (KryptonMessageBox.Show($"Done! Do you want to restart the application now?", "Action Complete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Application.Restart();
@@ -191,10 +193,10 @@ namespace ToolkitSettings.Classes.PaletteExplorer
         }
 
         /// <summary>
-        /// Saves the XML file application updater settings.
+        /// Saves the window location settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveXMLFileApplicationUpdaterSettings(bool alwaysUsePrompt = false)
+        public void SaveWindowLocationSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {
