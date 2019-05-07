@@ -75,12 +75,14 @@ namespace Playground
         private KryptonButton kbtnMRU;
         private KryptonButton kbtnResizeImages;
         private KryptonButton kryptonButton1;
+        private KryptonButton kbtnFileInformation;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Examples));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnResizeImages = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnMRU = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnFileHashValidator = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -119,13 +121,14 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnFileInformation = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnFileInformation);
             this.kryptonPanel1.Controls.Add(this.kryptonButton1);
             this.kryptonPanel1.Controls.Add(this.kbtnResizeImages);
             this.kryptonPanel1.Controls.Add(this.kbtnMRU);
@@ -170,6 +173,15 @@ namespace Playground
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(971, 597);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(497, 368);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.TabIndex = 89;
+            this.kryptonButton1.Values.Text = "Resize Images";
             // 
             // kbtnResizeImages
             // 
@@ -520,14 +532,15 @@ namespace Playground
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
-            // kryptonButton1
+            // kbtnFileInformation
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(497, 368);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(218, 25);
-            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton1.TabIndex = 89;
-            this.kryptonButton1.Values.Text = "Resize Images";
+            this.kbtnFileInformation.Location = new System.Drawing.Point(737, 368);
+            this.kbtnFileInformation.Name = "kbtnFileInformation";
+            this.kbtnFileInformation.Size = new System.Drawing.Size(218, 25);
+            this.kbtnFileInformation.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnFileInformation.TabIndex = 90;
+            this.kbtnFileInformation.Values.Text = "File Information";
+            this.kbtnFileInformation.Click += new System.EventHandler(this.KbtnFileInformation_Click);
             // 
             // Examples
             // 
@@ -855,6 +868,13 @@ namespace Playground
         private void KbtnAeroWizard_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void KbtnFileInformation_Click(object sender, EventArgs e)
+        {
+            KryptonFileInformationExample fileInformationExample = new KryptonFileInformationExample();
+
+            fileInformationExample.Show();
         }
     }
 }

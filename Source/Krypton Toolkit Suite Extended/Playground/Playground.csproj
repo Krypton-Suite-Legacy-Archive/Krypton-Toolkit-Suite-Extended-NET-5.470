@@ -94,6 +94,9 @@
     <Compile Include="KryptonCommandLinks.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="KryptonFileInformationExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="KryptonWizardExample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +119,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MRUExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NaviSuiteExample.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -171,6 +177,9 @@
     <EmbeddedResource Include="KryptonCommandLinks.resx">
       <DependentUpon>KryptonCommandLinks.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KryptonFileInformationExample.resx">
+      <DependentUpon>KryptonFileInformationExample.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KryptonWizardExample.resx">
       <DependentUpon>KryptonWizardExample.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MRUExample.resx">
       <DependentUpon>MRUExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NaviSuiteExample.resx">
+      <DependentUpon>NaviSuiteExample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -251,6 +263,10 @@
       <Project>{CA97E339-2014-47E3-890B-DF35F31EC11F}</Project>
       <Name>Krypton Wizard</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NaviSuite\NaviSuite.csproj">
+      <Project>{82ABD367-ED24-424C-B572-6661F968E2D6}</Project>
+      <Name>NaviSuite</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Palette Explorer\Palette Explorer.csproj">
       <Project>{246b3b50-3a2d-4a6a-bb69-e56d94108ac1}</Project>
       <Name>Palette Explorer</Name>
@@ -276,6 +292,9 @@
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
       <Version>5.470.968</Version>
+    </PackageReference>
+    <PackageReference Include="WindowsAPICodePack">
+      <Version>1.1.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
