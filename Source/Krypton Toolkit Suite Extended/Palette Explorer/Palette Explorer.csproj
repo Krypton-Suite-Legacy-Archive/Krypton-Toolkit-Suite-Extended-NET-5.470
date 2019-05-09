@@ -64,6 +64,9 @@
     <Compile Include="Controls\CircularPictureBoxControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\CircularPictureBoxControlOld.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\PalettePropertyGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,8 +107,8 @@
     <Compile Include="Windows\ChromeTMS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="Controls\CircularPictureBoxControl.resx">
-      <DependentUpon>CircularPictureBoxControl.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\CircularPictureBoxControlOld.resx">
+      <DependentUpon>CircularPictureBoxControlOld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\PalettePropertyGrid.resx">
       <DependentUpon>PalettePropertyGrid.cs</DependentUpon>
@@ -350,6 +353,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Undo 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export_32_x_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

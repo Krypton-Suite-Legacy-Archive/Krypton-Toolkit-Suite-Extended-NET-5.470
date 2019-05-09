@@ -9,16 +9,16 @@
 
 using System.Windows.Forms;
 using ToolkitSettings.BackEnd;
-using ToolkitSettings.Settings.Palette_Explorer;
+using ToolkitSettings.Settings.Palette_Explorer.Properties;
 
-namespace ToolkitSettings.Classes.PaletteExplorer
+namespace ToolkitSettings.Classes.PaletteExplorer.Properties
 {
-    public class GeneralPaletteExplorerSettingsManager
+    public class ColourPropertyWindowSettingsManager
     {
         #region Variables
         private bool _alwaysUsePrompt = false, _settingsModified = false;
 
-        private GeneralPaletteExplorerSettings _generalPaletteExplorerSettings = new GeneralPaletteExplorerSettings();
+        private ColourPropertyWindowSettings _colourPropertyWindowSettings = new ColourPropertyWindowSettings();
         #endregion
 
         #region Properties
@@ -99,8 +99,8 @@ namespace ToolkitSettings.Classes.PaletteExplorer
         }
         #endregion
 
-        #region Constructors
-        public GeneralPaletteExplorerSettingsManager()
+        #region Constructor
+        public ColourPropertyWindowSettingsManager()
         {
 
         }
@@ -108,97 +108,39 @@ namespace ToolkitSettings.Classes.PaletteExplorer
 
         #region Setters and Getters
         /// <summary>
-        /// Sets the value of ShowColourPropertiesPane to value.
+        /// Sets the value of HotColourControl to control.
         /// </summary>
-        /// <param name="value">The value of ShowColourPropertiesPane.</param>
-        public void SetShowColourPropertiesPane(bool value)
+        /// <param name="control">The value of HotColourControl.</param>
+        public void SetHotColourControl(Control control)
         {
-            _generalPaletteExplorerSettings.ShowColourPropertiesPane = value;
-
-            SetSettingsModified(true);
+            _colourPropertyWindowSettings.HotColourControl = control;
         }
 
         /// <summary>
-        /// Returns the value of ShowColourPropertiesPane.
+        /// Returns the value of HotColourControl.
         /// </summary>
-        /// <returns>The value of ShowColourPropertiesPane.</returns>
-        public bool GetShowColourPropertiesPane()
+        /// <returns>The value of HotColourControl.</returns>
+        public Control GetHotColourControl()
         {
-            return _generalPaletteExplorerSettings.ShowColourPropertiesPane;
+            return _colourPropertyWindowSettings.HotColourControl;
         }
 
         /// <summary>
-        /// Sets the value of ShowPalettePropertiesPane to value.
+        /// Sets the value of ColourControlText to value.
         /// </summary>
-        /// <param name="value">The value of ShowPalettePropertiesPane.</param>
-        public void SetShowPalettePropertiesPane(bool value)
+        /// <param name="value">The value of ColourControlText.</param>
+        public void SetColourControlText(string value)
         {
-            _generalPaletteExplorerSettings.ShowPalettePropertiesPane = value;
-
-            SetSettingsModified(true);
+            _colourPropertyWindowSettings.ColourControlText = value;
         }
 
         /// <summary>
-        /// Returns the value of ShowPalettePropertiesPane.
+        /// Returns the value of ColourControlText.
         /// </summary>
-        /// <returns>The value of ShowPalettePropertiesPane.</returns>
-        public bool GetShowPalettePropertiesPane()
+        /// <returns>The value of ColourControlText.</returns>
+        public string GetColourControlText()
         {
-            return _generalPaletteExplorerSettings.ShowPalettePropertiesPane;
-        }
-
-        /// <summary>
-        /// Sets the value of ShowCircularDisplay to value.
-        /// </summary>
-        /// <param name="value">The value of ShowCircularDisplay.</param>
-        public void SetShowCircularDisplay(bool value)
-        {
-            _generalPaletteExplorerSettings.ShowCircularDisplay = value;
-        }
-
-        /// <summary>
-        /// Returns the value of ShowCircularDisplay.
-        /// </summary>
-        /// <returns>The value of ShowCircularDisplay.</returns>
-        public bool GetShowCircularDisplay()
-        {
-            return _generalPaletteExplorerSettings.ShowCircularDisplay;
-        }
-
-        /// <summary>
-        /// Sets the value of ShowStandardDisplay to value.
-        /// </summary>
-        /// <param name="value">The value of ShowStandardDisplay.</param>
-        public void SetShowStandardDisplay(bool value)
-        {
-            _generalPaletteExplorerSettings.ShowStandardDisplay = value;
-        }
-
-        /// <summary>
-        /// Returns the value of ShowStandardDisplay.
-        /// </summary>
-        /// <returns>The value of ShowStandardDisplay.</returns>
-        public bool GetShowStandardDisplay()
-        {
-            return _generalPaletteExplorerSettings.ShowStandardDisplay;
-        }
-
-        /// <summary>
-        /// Sets the value of DisplayIndex to value.
-        /// </summary>
-        /// <param name="value">The value of DisplayIndex.</param>
-        public void SetDisplayIndex(int value)
-        {
-            _generalPaletteExplorerSettings.DisplayIndex = value;
-        }
-
-        /// <summary>
-        /// Returns the value of DisplayIndex.
-        /// </summary>
-        /// <returns>The value of DisplayIndex.</returns>
-        public int GetDisplayIndex()
-        {
-            return _generalPaletteExplorerSettings.DisplayIndex;
+            return _colourPropertyWindowSettings.ColourControlText;
         }
         #endregion
 
@@ -210,17 +152,11 @@ namespace ToolkitSettings.Classes.PaletteExplorer
         {
             if (ExtendedKryptonMessageBox.Show("WARNING! You are about to reset these settings back to their original state. This action cannot be undone!\nDo you want to proceed?", "Reset Settings", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
-                SetShowColourPropertiesPane(false);
+                SetHotColourControl(null);
 
-                SetShowPalettePropertiesPane(false);
+                SetColourControlText(string.Empty);
 
-                SetShowCircularDisplay(false);
-
-                SetShowStandardDisplay(true);
-
-                SetDisplayIndex(0);
-
-                SaveGeneralPaletteExplorerSettings();
+                SaveColourPropertyWindowSettings();
 
                 if (ExtendedKryptonMessageBox.Show($"Done! Do you want to restart the application now?", "Action Complete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -230,23 +166,23 @@ namespace ToolkitSettings.Classes.PaletteExplorer
         }
 
         /// <summary>
-        /// Saves the general palette explorer settings.
+        /// Saves the colour property window settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveGeneralPaletteExplorerSettings(bool alwaysUsePrompt = false)
+        public void SaveColourPropertyWindowSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {
                 if (ExtendedKryptonMessageBox.Show("You have changed a setting value. Do you want to save these changes?", "Setting Values Changed", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    _generalPaletteExplorerSettings.Save();
+                    _colourPropertyWindowSettings.Save();
 
                     SetSettingsModified(false);
                 }
             }
             else
             {
-                _generalPaletteExplorerSettings.Save();
+                _colourPropertyWindowSettings.Save();
 
                 SetSettingsModified(false);
             }

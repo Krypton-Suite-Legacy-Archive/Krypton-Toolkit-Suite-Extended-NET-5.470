@@ -163,6 +163,26 @@ namespace PaletteExplorer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Export_16_x_16 {
+            get {
+                object obj = ResourceManager.GetObject("Export_16_x_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Export_32_x_32 {
+            get {
+                object obj = ResourceManager.GetObject("Export_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Generate_Colours_16_x_16 {
             get {
                 object obj = ResourceManager.GetObject("Generate_Colours_16_x_16", resourceCulture);

@@ -10,6 +10,7 @@
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace ExtendedControls.Base.Code.Utilities
 {
@@ -114,6 +115,19 @@ namespace ExtendedControls.Base.Code.Utilities
             }
 
             return stringFormat;
+        }
+
+        public static bool IsWindowOpen(Type formType)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType().Name == form.Name)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
         #endregion
     }

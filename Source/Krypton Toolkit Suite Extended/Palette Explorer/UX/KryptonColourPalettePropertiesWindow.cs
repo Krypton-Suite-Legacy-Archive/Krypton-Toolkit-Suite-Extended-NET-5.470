@@ -55,6 +55,7 @@ namespace PaletteExplorer.UX
 
         #region Variables
         private WindowLocationSettingsManager _locationSettingsManager = new WindowLocationSettingsManager();
+        private GeneralPaletteExplorerSettingsManager _generalPaletteExplorerSettingsManager = new GeneralPaletteExplorerSettingsManager();
         #endregion
 
         #region Constructor
@@ -106,11 +107,19 @@ namespace PaletteExplorer.UX
         private void KryptonColourPalettePropertiesWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             _locationSettingsManager.SaveWindowLocationSettings();
+
+            _generalPaletteExplorerSettingsManager.SetShowColourPropertiesPane(false);
+
+            _generalPaletteExplorerSettingsManager.SaveGeneralPaletteExplorerSettings();
         }
 
         private void KryptonColourPalettePropertiesWindow_Load(object sender, EventArgs e)
         {
             Location = _locationSettingsManager.GetColourPropertiesWindowLocation();
+
+            _generalPaletteExplorerSettingsManager.SetShowColourPropertiesPane(true);
+
+            _generalPaletteExplorerSettingsManager.SaveGeneralPaletteExplorerSettings();
         }
     }
 }
