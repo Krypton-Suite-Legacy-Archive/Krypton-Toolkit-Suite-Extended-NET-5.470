@@ -12,7 +12,9 @@ using ComponentFactory.Krypton.Navigator;
 using ComponentFactory.Krypton.Toolkit;
 using PaletteExplorer.Controls;
 using System;
+using System.Reflection;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.Global;
 using ToolkitSettings.Classes.PaletteExplorer;
 using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
@@ -134,11 +136,11 @@ namespace PaletteExplorer.UX.New
         private KryptonPage kryptonPage1;
         private KryptonPage kryptonPage2;
         private StandardPictureBoxControl standardPictureBoxControl1;
-        private CircularPictureBoxControlOld circularPictureBoxControl1;
         private ContextMenuStrip ctxViewTypes;
         private ToolStripMenuItem standardDisplayToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem1;
         private ToolStripMenuItem circularDisplayToolStripMenuItem;
+        private CircularPictureBoxControl circularPictureBoxControl1;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbCheckForUpdates;
 
         private void InitializeComponent()
@@ -260,7 +262,7 @@ namespace PaletteExplorer.UX.New
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.standardPictureBoxControl1 = new PaletteExplorer.Controls.StandardPictureBoxControl();
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.circularPictureBoxControl1 = new PaletteExplorer.Controls.CircularPictureBoxControlOld();
+            this.circularPictureBoxControl1 = new PaletteExplorer.Controls.CircularPictureBoxControl();
             this.kdm = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
             this.ilImages = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.krControls)).BeginInit();
@@ -947,6 +949,8 @@ namespace PaletteExplorer.UX.New
             this.MaximizeBox = false;
             this.Name = "RibbonWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "{0} - Palette Explorer";
+            this.UseDropShadow = false;
             this.Load += new System.EventHandler(this.RibbonWindow_Load);
             this.Shown += new System.EventHandler(this.RibbonWindow_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.krControls)).EndInit();
@@ -973,10 +977,12 @@ namespace PaletteExplorer.UX.New
 
         #region Variables
         GeneralPaletteExplorerSettingsManager _generalPaletteExplorerSettingsManager = new GeneralPaletteExplorerSettingsManager();
+        GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
         Timer _uiUpdateTimer;
         KryptonPage _page;
         PalettePropertyGrid _palettePropertyGrid;
         KryptonPalette _palette = new KryptonPalette();
+        Version _currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
         #endregion
 
         #region Properties        
@@ -1000,6 +1006,8 @@ namespace PaletteExplorer.UX.New
             _uiUpdateTimer.Tick += UIUpdateTimer_Tick;
 
             _uiUpdateTimer.Start();
+
+            if (_globalBooleanSettingsManager.GetIsInDeveloperMode()) TextExtra = $"(Build: { _currentVersion.Build.ToString() })";
         }
         #endregion
 

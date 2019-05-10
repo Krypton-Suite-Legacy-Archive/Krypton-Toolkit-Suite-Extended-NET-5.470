@@ -9,6 +9,7 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Drawing;
 using System.IO;
@@ -27,7 +28,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
         private Controls.KryptonPromptTextBox kptxtApplicationExecutable;
         private KryptonLabel kryptonLabel3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private KryptonRichTextBox krtbImportedResult;
         private KryptonLabel kryptonLabel4;
         private KryptonRichTextBox krtbActualResult;
         private KryptonButton kbtnGenerateFileHash;
@@ -54,23 +54,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private KryptonButton kbtnComputeHash;
+        private KryptonRichTextBox krtbImportedResult;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues1 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues2 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues3 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues4 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues5 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues6 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues7 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues8 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues9 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues10 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues11 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues12 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.ss = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -82,15 +71,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.krtbImportedResult = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
-            this.ctxResult = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmiCut = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiPaste = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiSelectAll = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.krtbActualResult = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.kbtnGenerateFileHash = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -100,12 +80,21 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kbtnBrowse = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kptxtApplicationExecutable = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.ctxResult = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCut = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiPaste = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiSelectAll = new System.Windows.Forms.ToolStripMenuItem();
             this.bgwMD5 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA1 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA256 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA384 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA512 = new System.ComponentModel.BackgroundWorker();
             this.bgwRIPEMD160 = new System.ComponentModel.BackgroundWorker();
+            this.krtbImportedResult = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.ss.SuspendLayout();
@@ -113,8 +102,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kryptonPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
             this.kryptonPanel3.SuspendLayout();
-            this.ctxResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kcbxHashAlgorithimType)).BeginInit();
+            this.ctxResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -181,8 +170,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kbtnComputeHash.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnComputeHash.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnComputeHash.TabIndex = 13;
-            popupPositionValues1.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnComputeHash.ToolTipValues.ToolTipPosition = popupPositionValues1;
             this.kbtnComputeHash.Values.Text = "&Compute Hash";
             this.kbtnComputeHash.Click += new System.EventHandler(this.KbtnComputeHash_Click);
             // 
@@ -196,8 +183,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kbtnVarify.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnVarify.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnVarify.TabIndex = 12;
-            popupPositionValues2.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnVarify.ToolTipValues.ToolTipPosition = popupPositionValues2;
             this.kbtnVarify.Values.Text = "V&arify Hash";
             this.kbtnVarify.Click += new System.EventHandler(this.KbtnVarify_Click);
             // 
@@ -210,8 +195,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kbtnCancel.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.TabIndex = 10;
-            popupPositionValues3.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnCancel.ToolTipValues.ToolTipPosition = popupPositionValues3;
             this.kbtnCancel.Values.Text = "&Cancel";
             this.kbtnCancel.Click += new System.EventHandler(this.KbtnCancel_Click);
             // 
@@ -242,17 +225,111 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kryptonPanel3.Size = new System.Drawing.Size(1335, 420);
             this.kryptonPanel3.TabIndex = 5;
             // 
-            // krtbImportedResult
+            // kryptonLabel4
             // 
-            this.krtbImportedResult.ContextMenuStrip = this.ctxResult;
-            this.krtbImportedResult.Location = new System.Drawing.Point(12, 306);
-            this.krtbImportedResult.Name = "krtbImportedResult";
-            this.krtbImportedResult.Size = new System.Drawing.Size(1307, 96);
-            this.krtbImportedResult.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.krtbImportedResult.TabIndex = 15;
-            this.krtbImportedResult.Text = "";
-            popupPositionValues4.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.krtbImportedResult.ToolTipValues.ToolTipPosition = popupPositionValues4;
+            this.kryptonLabel4.Location = new System.Drawing.Point(12, 274);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(196, 26);
+            this.kryptonLabel4.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel4.TabIndex = 14;
+            this.kryptonLabel4.Values.Text = "Imported/Copied Result:";
+            // 
+            // krtbActualResult
+            // 
+            this.krtbActualResult.Location = new System.Drawing.Point(12, 160);
+            this.krtbActualResult.Name = "krtbActualResult";
+            this.krtbActualResult.ReadOnly = true;
+            this.krtbActualResult.Size = new System.Drawing.Size(1307, 96);
+            this.krtbActualResult.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.krtbActualResult.TabIndex = 13;
+            this.krtbActualResult.Text = "";
+            this.krtbActualResult.TextChanged += new System.EventHandler(this.KrtbActualResult_TextChanged);
+            // 
+            // kbtnGenerateFileHash
+            // 
+            this.kbtnGenerateFileHash.Enabled = false;
+            this.kbtnGenerateFileHash.Location = new System.Drawing.Point(398, 67);
+            this.kbtnGenerateFileHash.Name = "kbtnGenerateFileHash";
+            this.kbtnGenerateFileHash.Size = new System.Drawing.Size(156, 27);
+            this.kbtnGenerateFileHash.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateFileHash.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateFileHash.TabIndex = 12;
+            this.kbtnGenerateFileHash.Values.Text = "&Generate";
+            this.kbtnGenerateFileHash.Click += new System.EventHandler(this.KbtnGenerateFileHash_Click);
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(12, 128);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(114, 26);
+            this.kryptonLabel2.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel2.TabIndex = 11;
+            this.kryptonLabel2.Values.Text = "Actual Result:";
+            // 
+            // kcbxHashAlgorithimType
+            // 
+            this.kcbxHashAlgorithimType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.kcbxHashAlgorithimType.DropDownWidth = 223;
+            this.kcbxHashAlgorithimType.Items.AddRange(new object[] {
+            "MD5",
+            "SHA-1",
+            "SHA-256",
+            "SHA-384",
+            "SHA-512",
+            "RIPEMD-160"});
+            this.kcbxHashAlgorithimType.Location = new System.Drawing.Point(169, 67);
+            this.kcbxHashAlgorithimType.Name = "kcbxHashAlgorithimType";
+            this.kcbxHashAlgorithimType.Size = new System.Drawing.Size(223, 27);
+            this.kcbxHashAlgorithimType.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbxHashAlgorithimType.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbxHashAlgorithimType.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbxHashAlgorithimType.TabIndex = 10;
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(12, 68);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(138, 26);
+            this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.TabIndex = 9;
+            this.kryptonLabel1.Values.Text = "Hash Algorithim:";
+            // 
+            // kbtnBrowse
+            // 
+            this.kbtnBrowse.Location = new System.Drawing.Point(1284, 12);
+            this.kbtnBrowse.Name = "kbtnBrowse";
+            this.kbtnBrowse.Size = new System.Drawing.Size(35, 29);
+            this.kbtnBrowse.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnBrowse.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnBrowse.TabIndex = 6;
+            this.kbtnBrowse.Values.Text = "...";
+            this.kbtnBrowse.Click += new System.EventHandler(this.KbtnBrowse_Click);
+            // 
+            // kptxtApplicationExecutable
+            // 
+            this.kptxtApplicationExecutable.DrawPrompt = true;
+            this.kptxtApplicationExecutable.FocusSelect = true;
+            this.kptxtApplicationExecutable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtApplicationExecutable.Location = new System.Drawing.Point(245, 12);
+            this.kptxtApplicationExecutable.Name = "kptxtApplicationExecutable";
+            this.kptxtApplicationExecutable.PromptForeColour = System.Drawing.SystemColors.GrayText;
+            this.kptxtApplicationExecutable.PromptText = "File Path";
+            this.kptxtApplicationExecutable.PromptTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtApplicationExecutable.Size = new System.Drawing.Size(1033, 29);
+            this.kptxtApplicationExecutable.TabIndex = 5;
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(12, 12);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(227, 26);
+            this.kryptonLabel3.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel3.TabIndex = 4;
+            this.kryptonLabel3.Values.Text = "Application Binary/Hash File:";
             // 
             // ctxResult
             // 
@@ -307,128 +384,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.tsmiSelectAll.Size = new System.Drawing.Size(122, 22);
             this.tsmiSelectAll.Text = "Select &All";
             // 
-            // kryptonLabel4
-            // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(12, 274);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(196, 26);
-            this.kryptonLabel4.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel4.TabIndex = 14;
-            popupPositionValues5.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kryptonLabel4.ToolTipValues.ToolTipPosition = popupPositionValues5;
-            this.kryptonLabel4.Values.Text = "Imported/Copied Result:";
-            // 
-            // krtbActualResult
-            // 
-            this.krtbActualResult.Location = new System.Drawing.Point(12, 160);
-            this.krtbActualResult.Name = "krtbActualResult";
-            this.krtbActualResult.ReadOnly = true;
-            this.krtbActualResult.Size = new System.Drawing.Size(1307, 96);
-            this.krtbActualResult.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.krtbActualResult.TabIndex = 13;
-            this.krtbActualResult.Text = "";
-            popupPositionValues6.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.krtbActualResult.ToolTipValues.ToolTipPosition = popupPositionValues6;
-            this.krtbActualResult.TextChanged += new System.EventHandler(this.KrtbActualResult_TextChanged);
-            // 
-            // kbtnGenerateFileHash
-            // 
-            this.kbtnGenerateFileHash.Enabled = false;
-            this.kbtnGenerateFileHash.Location = new System.Drawing.Point(398, 67);
-            this.kbtnGenerateFileHash.Name = "kbtnGenerateFileHash";
-            this.kbtnGenerateFileHash.Size = new System.Drawing.Size(156, 27);
-            this.kbtnGenerateFileHash.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGenerateFileHash.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGenerateFileHash.TabIndex = 12;
-            popupPositionValues7.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnGenerateFileHash.ToolTipValues.ToolTipPosition = popupPositionValues7;
-            this.kbtnGenerateFileHash.Values.Text = "&Generate";
-            this.kbtnGenerateFileHash.Click += new System.EventHandler(this.KbtnGenerateFileHash_Click);
-            // 
-            // kryptonLabel2
-            // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(12, 128);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(114, 26);
-            this.kryptonLabel2.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel2.TabIndex = 11;
-            popupPositionValues8.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kryptonLabel2.ToolTipValues.ToolTipPosition = popupPositionValues8;
-            this.kryptonLabel2.Values.Text = "Actual Result:";
-            // 
-            // kcbxHashAlgorithimType
-            // 
-            this.kcbxHashAlgorithimType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.kcbxHashAlgorithimType.DropDownWidth = 223;
-            this.kcbxHashAlgorithimType.Items.AddRange(new object[] {
-            "MD5",
-            "SHA-1",
-            "SHA-256",
-            "SHA-384",
-            "SHA-512",
-            "RIPEMD-160"});
-            this.kcbxHashAlgorithimType.Location = new System.Drawing.Point(169, 67);
-            this.kcbxHashAlgorithimType.Name = "kcbxHashAlgorithimType";
-            this.kcbxHashAlgorithimType.Size = new System.Drawing.Size(223, 27);
-            this.kcbxHashAlgorithimType.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbxHashAlgorithimType.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbxHashAlgorithimType.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbxHashAlgorithimType.TabIndex = 10;
-            popupPositionValues9.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kcbxHashAlgorithimType.ToolTipValues.ToolTipPosition = popupPositionValues9;
-            // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(12, 68);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(138, 26);
-            this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.TabIndex = 9;
-            popupPositionValues10.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kryptonLabel1.ToolTipValues.ToolTipPosition = popupPositionValues10;
-            this.kryptonLabel1.Values.Text = "Hash Algorithim:";
-            // 
-            // kbtnBrowse
-            // 
-            this.kbtnBrowse.Location = new System.Drawing.Point(1284, 12);
-            this.kbtnBrowse.Name = "kbtnBrowse";
-            this.kbtnBrowse.Size = new System.Drawing.Size(35, 29);
-            this.kbtnBrowse.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnBrowse.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnBrowse.TabIndex = 6;
-            popupPositionValues11.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnBrowse.ToolTipValues.ToolTipPosition = popupPositionValues11;
-            this.kbtnBrowse.Values.Text = "...";
-            this.kbtnBrowse.Click += new System.EventHandler(this.KbtnBrowse_Click);
-            // 
-            // kptxtApplicationExecutable
-            // 
-            this.kptxtApplicationExecutable.DrawPrompt = true;
-            this.kptxtApplicationExecutable.FocusSelect = true;
-            this.kptxtApplicationExecutable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kptxtApplicationExecutable.Location = new System.Drawing.Point(245, 12);
-            this.kptxtApplicationExecutable.Name = "kptxtApplicationExecutable";
-            this.kptxtApplicationExecutable.PromptForeColour = System.Drawing.SystemColors.GrayText;
-            this.kptxtApplicationExecutable.PromptText = "File Path";
-            this.kptxtApplicationExecutable.PromptTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kptxtApplicationExecutable.Size = new System.Drawing.Size(1033, 29);
-            this.kptxtApplicationExecutable.TabIndex = 5;
-            // 
-            // kryptonLabel3
-            // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(12, 12);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(227, 26);
-            this.kryptonLabel3.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel3.TabIndex = 4;
-            popupPositionValues12.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kryptonLabel3.ToolTipValues.ToolTipPosition = popupPositionValues12;
-            this.kryptonLabel3.Values.Text = "Application Binary/Hash File:";
-            // 
             // bgwMD5
             // 
             this.bgwMD5.WorkerReportsProgress = true;
@@ -459,6 +414,16 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.bgwRIPEMD160.WorkerReportsProgress = true;
             this.bgwRIPEMD160.WorkerSupportsCancellation = true;
             // 
+            // krtbImportedResult
+            // 
+            this.krtbImportedResult.Location = new System.Drawing.Point(12, 306);
+            this.krtbImportedResult.Name = "krtbImportedResult";
+            this.krtbImportedResult.ReadOnly = true;
+            this.krtbImportedResult.Size = new System.Drawing.Size(1307, 96);
+            this.krtbImportedResult.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.krtbImportedResult.TabIndex = 15;
+            this.krtbImportedResult.Text = "";
+            // 
             // VarifyFileHash
             // 
             this.ClientSize = new System.Drawing.Size(1335, 529);
@@ -482,8 +447,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
             this.kryptonPanel3.ResumeLayout(false);
             this.kryptonPanel3.PerformLayout();
-            this.ctxResult.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kcbxHashAlgorithimType)).EndInit();
+            this.ctxResult.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -513,7 +478,14 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
         private void KbtnBrowse_Click(object sender, EventArgs e)
         {
+            CommonOpenFileDialog cofd = new CommonOpenFileDialog();
 
+            cofd.Title = "Select a file:";
+
+            if (cofd.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                krtbActualResult.Text = Path.GetFullPath(cofd.FileName);
+            }
         }
 
         private void KbtnGenerateFileHash_Click(object sender, EventArgs e)

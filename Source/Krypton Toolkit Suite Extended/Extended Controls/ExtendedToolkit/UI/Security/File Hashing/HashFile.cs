@@ -9,6 +9,7 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using Microsoft.WindowsAPICodePack.Taskbar;
 using System;
 using System.ComponentModel;
 using System.IO;
@@ -488,6 +489,13 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
             tspbHashProgess.Value = e.ProgressPercentage;
 
+            if (TaskbarManager.IsPlatformSupported)
+            {
+                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
+
+                TaskbarManager.Instance.SetProgressValue(e.ProgressPercentage, 100);
+            }
+
             tslHashProgressValue.Text = $"{ tspbHashProgess.Value.ToString() }%";
         }
 
@@ -504,6 +512,13 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             if (kcbShowLength.Checked)
             {
                 GetHashLength();
+            }
+
+            if (TaskbarManager.IsPlatformSupported)
+            {
+                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
+
+                TaskbarManager.Instance.SetProgressValue(0, 100);
             }
 
             //bgwMD5.IsBusy;

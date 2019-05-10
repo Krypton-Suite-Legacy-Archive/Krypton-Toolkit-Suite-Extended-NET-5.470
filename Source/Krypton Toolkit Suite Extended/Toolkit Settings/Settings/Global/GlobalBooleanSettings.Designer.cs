@@ -25,7 +25,7 @@ namespace ToolkitSettings.Settings.Global {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool IsInDeveloperMode {
             get {
                 return ((bool)(this["IsInDeveloperMode"]));

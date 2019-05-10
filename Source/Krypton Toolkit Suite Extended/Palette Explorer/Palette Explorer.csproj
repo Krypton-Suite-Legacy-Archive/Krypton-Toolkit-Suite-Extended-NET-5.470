@@ -107,6 +107,9 @@
     <Compile Include="Windows\ChromeTMS.cs">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="Controls\CircularPictureBoxControl.resx">
+      <DependentUpon>CircularPictureBoxControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\CircularPictureBoxControlOld.resx">
       <DependentUpon>CircularPictureBoxControlOld.cs</DependentUpon>
     </EmbeddedResource>

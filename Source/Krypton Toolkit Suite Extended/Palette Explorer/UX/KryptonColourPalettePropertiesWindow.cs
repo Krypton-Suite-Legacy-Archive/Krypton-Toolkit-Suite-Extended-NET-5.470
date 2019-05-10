@@ -11,6 +11,7 @@ using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Windows.Forms;
 using ToolkitSettings.Classes.PaletteExplorer;
+using ToolkitSettings.Classes.PaletteExplorer.Properties;
 
 namespace PaletteExplorer.UX
 {
@@ -54,6 +55,8 @@ namespace PaletteExplorer.UX
         #endregion
 
         #region Variables
+        private Timer _uiUpdateTimer = null;
+        private ColourPropertyWindowSettingsManager _colourPropertyWindowSettingsManager = new ColourPropertyWindowSettingsManager();
         private WindowLocationSettingsManager _locationSettingsManager = new WindowLocationSettingsManager();
         private GeneralPaletteExplorerSettingsManager _generalPaletteExplorerSettingsManager = new GeneralPaletteExplorerSettingsManager();
         #endregion
@@ -62,11 +65,15 @@ namespace PaletteExplorer.UX
         public KryptonColourPalettePropertiesWindow()
         {
             InitializeComponent();
+
+            SetupUITimer();
         }
 
         public KryptonColourPalettePropertiesWindow(Control control)
         {
             InitializeComponent();
+
+            SetupUITimer();
 
             ppgColours.PalettePropertyGridControl.SelectedObject = control;
 
@@ -95,6 +102,11 @@ namespace PaletteExplorer.UX
         }
         #endregion
 
+        private void UIUpdateTimer_Tick(object sender, EventArgs e)
+        {
+            UpdateUI(_colourPropertyWindowSettingsManager.GetHotColourControl(), _colourPropertyWindowSettingsManager.GetColourControlText());
+        }
+
         private void KryptonColourPalettePropertiesWindow_LocationChanged(object sender, EventArgs e)
         {
             ttInfo.SetToolTip(this, $"Current Location: (X: { Location.X.ToString() }, Y: { Location.Y.ToString() })");
@@ -120,6 +132,17 @@ namespace PaletteExplorer.UX
             _generalPaletteExplorerSettingsManager.SetShowColourPropertiesPane(true);
 
             _generalPaletteExplorerSettingsManager.SaveGeneralPaletteExplorerSettings();
+        }
+
+        private void SetupUITimer()
+        {
+            _uiUpdateTimer = new Timer();
+
+            _uiUpdateTimer.Enabled = true;
+
+            _uiUpdateTimer.Interval = 500;
+
+            _uiUpdateTimer.Tick += UIUpdateTimer_Tick;
         }
     }
 }
