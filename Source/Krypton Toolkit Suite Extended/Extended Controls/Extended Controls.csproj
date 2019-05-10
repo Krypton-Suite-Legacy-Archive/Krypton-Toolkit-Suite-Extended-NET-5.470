@@ -147,6 +147,7 @@
     <Compile Include="Base\Code\Utilities\Utility.cs" />
     <Compile Include="Base\Code\Utilities\WIN32.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
+    <Compile Include="Base\Code\Windows\WindowsAPICodePackModel.cs" />
     <Compile Include="Base\Enumerations\Enumerations.cs" />
     <Compile Include="Base\Interfaces\IColourEditor.cs" />
     <Compile Include="Base\Interfaces\IRibbonMerger.cs" />

@@ -8,6 +8,7 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Base.Code.Windows;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using System;
@@ -57,28 +58,16 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues2 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues3 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues4 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues5 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues6 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues7 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues8 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues9 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues10 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues11 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues1 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kcbShowLength = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kbtnGenerateFileHash = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.klblResult = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.ctxResult = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ctxResult = new System.Windows.Forms.ContextMenuStrip();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kcbxHashAlgorithimType = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kbtnBrowse = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kptxtApplicationExecutable = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -95,7 +84,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.bgwSHA384 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA512 = new System.ComponentModel.BackgroundWorker();
             this.bgwRIPEMD160 = new System.ComponentModel.BackgroundWorker();
-            this.kcbShowLength = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kptxtApplicationExecutable = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.ctxResult.SuspendLayout();
@@ -122,6 +111,16 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kryptonPanel1.Size = new System.Drawing.Size(853, 427);
             this.kryptonPanel1.TabIndex = 0;
             // 
+            // kcbShowLength
+            // 
+            this.kcbShowLength.Location = new System.Drawing.Point(572, 109);
+            this.kcbShowLength.Name = "kcbShowLength";
+            this.kcbShowLength.Size = new System.Drawing.Size(119, 26);
+            this.kcbShowLength.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbShowLength.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbShowLength.TabIndex = 9;
+            this.kcbShowLength.Values.Text = "Show &Length";
+            // 
             // kbtnGenerateFileHash
             // 
             this.kbtnGenerateFileHash.Enabled = false;
@@ -131,8 +130,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kbtnGenerateFileHash.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnGenerateFileHash.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnGenerateFileHash.TabIndex = 8;
-            popupPositionValues2.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnGenerateFileHash.ToolTipValues.ToolTipPosition = popupPositionValues2;
             this.kbtnGenerateFileHash.Values.Text = "&Generate";
             this.kbtnGenerateFileHash.Click += new System.EventHandler(this.KbtnGenerateFileHash_Click);
             // 
@@ -150,8 +147,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.klblResult.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.klblResult.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.klblResult.TabIndex = 7;
-            popupPositionValues3.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.klblResult.ToolTipValues.ToolTipPosition = popupPositionValues3;
             this.klblResult.Values.Text = "";
             // 
             // ctxResult
@@ -160,12 +155,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.ctxResult.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copyToolStripMenuItem});
             this.ctxResult.Name = "ctxResult";
-            this.ctxResult.Size = new System.Drawing.Size(103, 26);
+            this.ctxResult.Size = new System.Drawing.Size(181, 48);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.copyToolStripMenuItem.Text = "C&opy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
@@ -177,8 +172,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kryptonLabel2.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 6;
-            popupPositionValues4.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kryptonLabel2.ToolTipValues.ToolTipPosition = popupPositionValues4;
             this.kryptonLabel2.Values.Text = "Result:";
             // 
             // kcbxHashAlgorithimType
@@ -199,8 +192,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kcbxHashAlgorithimType.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcbxHashAlgorithimType.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcbxHashAlgorithimType.TabIndex = 5;
-            popupPositionValues5.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kcbxHashAlgorithimType.ToolTipValues.ToolTipPosition = popupPositionValues5;
             this.kcbxHashAlgorithimType.SelectedIndexChanged += new System.EventHandler(this.KcbxHashAlgorithimType_SelectedIndexChanged);
             // 
             // kryptonLabel1
@@ -211,8 +202,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel1.TabIndex = 4;
-            popupPositionValues6.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kryptonLabel1.ToolTipValues.ToolTipPosition = popupPositionValues6;
             this.kryptonLabel1.Values.Text = "Hash Algorithim:";
             // 
             // kbtnBrowse
@@ -223,23 +212,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kbtnBrowse.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnBrowse.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnBrowse.TabIndex = 3;
-            popupPositionValues7.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnBrowse.ToolTipValues.ToolTipPosition = popupPositionValues7;
             this.kbtnBrowse.Values.Text = "...";
             this.kbtnBrowse.Click += new System.EventHandler(this.KbtnBrowse_Click);
-            // 
-            // kptxtApplicationExecutable
-            // 
-            this.kptxtApplicationExecutable.DrawPrompt = true;
-            this.kptxtApplicationExecutable.FocusSelect = true;
-            this.kptxtApplicationExecutable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kptxtApplicationExecutable.Location = new System.Drawing.Point(181, 44);
-            this.kptxtApplicationExecutable.Name = "kptxtApplicationExecutable";
-            this.kptxtApplicationExecutable.PromptForeColour = System.Drawing.SystemColors.GrayText;
-            this.kptxtApplicationExecutable.PromptText = "Executable Path";
-            this.kptxtApplicationExecutable.PromptTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kptxtApplicationExecutable.Size = new System.Drawing.Size(613, 29);
-            this.kptxtApplicationExecutable.TabIndex = 2;
             // 
             // kryptonLabel3
             // 
@@ -249,8 +223,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kryptonLabel3.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel3.TabIndex = 1;
-            popupPositionValues8.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kryptonLabel3.ToolTipValues.ToolTipPosition = popupPositionValues8;
             this.kryptonLabel3.Values.Text = "Application Binary:";
             // 
             // kbtnCancel
@@ -262,8 +234,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kbtnCancel.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.TabIndex = 9;
-            popupPositionValues9.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnCancel.ToolTipValues.ToolTipPosition = popupPositionValues9;
             this.kbtnCancel.Values.Text = "&Cancel";
             // 
             // kryptonPanel2
@@ -287,9 +257,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kbtnVarify.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnVarify.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnVarify.TabIndex = 11;
-            popupPositionValues10.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnVarify.ToolTipValues.ToolTipPosition = popupPositionValues10;
             this.kbtnVarify.Values.Text = "V&arify Hash";
+            this.kbtnVarify.Click += new System.EventHandler(this.KbtnVarify_Click);
             // 
             // kbtnSaveHash
             // 
@@ -300,8 +269,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kbtnSaveHash.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnSaveHash.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnSaveHash.TabIndex = 10;
-            popupPositionValues11.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kbtnSaveHash.ToolTipValues.ToolTipPosition = popupPositionValues11;
             this.kbtnSaveHash.Values.Text = "S&ave";
             // 
             // ss
@@ -321,7 +288,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(705, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(838, 17);
             this.toolStripStatusLabel1.Spring = true;
             this.toolStripStatusLabel1.Text = "Ready";
             this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -330,12 +297,14 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             // 
             this.tspbHashProgess.Name = "tspbHashProgess";
             this.tspbHashProgess.Size = new System.Drawing.Size(100, 16);
+            this.tspbHashProgess.Visible = false;
             // 
             // tslHashProgressValue
             // 
             this.tslHashProgressValue.Name = "tslHashProgressValue";
             this.tslHashProgressValue.Size = new System.Drawing.Size(31, 17);
             this.tslHashProgressValue.Text = "{0}%";
+            this.tslHashProgressValue.Visible = false;
             // 
             // panel1
             // 
@@ -394,17 +363,18 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.bgwRIPEMD160.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgwRIPEMD160_ProgressChanged);
             this.bgwRIPEMD160.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwRIPEMD160_RunWorkerCompleted);
             // 
-            // kcbShowLength
+            // kptxtApplicationExecutable
             // 
-            this.kcbShowLength.Location = new System.Drawing.Point(572, 109);
-            this.kcbShowLength.Name = "kcbShowLength";
-            this.kcbShowLength.Size = new System.Drawing.Size(119, 26);
-            this.kcbShowLength.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbShowLength.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbShowLength.TabIndex = 9;
-            popupPositionValues1.PlacementMode = ComponentFactory.Krypton.Toolkit.PlacementMode.Bottom;
-            this.kcbShowLength.ToolTipValues.ToolTipPosition = popupPositionValues1;
-            this.kcbShowLength.Values.Text = "Show &Length";
+            this.kptxtApplicationExecutable.DrawPrompt = true;
+            this.kptxtApplicationExecutable.FocusSelect = true;
+            this.kptxtApplicationExecutable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtApplicationExecutable.Location = new System.Drawing.Point(181, 44);
+            this.kptxtApplicationExecutable.Name = "kptxtApplicationExecutable";
+            this.kptxtApplicationExecutable.PromptForeColour = System.Drawing.SystemColors.GrayText;
+            this.kptxtApplicationExecutable.PromptText = "Executable Path";
+            this.kptxtApplicationExecutable.PromptTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtApplicationExecutable.Size = new System.Drawing.Size(613, 29);
+            this.kptxtApplicationExecutable.TabIndex = 2;
             // 
             // HashFile
             // 
@@ -489,12 +459,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
             tspbHashProgess.Value = e.ProgressPercentage;
 
-            if (TaskbarManager.IsPlatformSupported)
-            {
-                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
-
-                TaskbarManager.Instance.SetProgressValue(e.ProgressPercentage, 100);
-            }
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
 
             tslHashProgressValue.Text = $"{ tspbHashProgess.Value.ToString() }%";
         }
@@ -514,12 +479,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
                 GetHashLength();
             }
 
-            if (TaskbarManager.IsPlatformSupported)
-            {
-                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress);
-
-                TaskbarManager.Instance.SetProgressValue(0, 100);
-            }
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
 
             //bgwMD5.IsBusy;
         }
@@ -566,6 +526,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
             tspbHashProgess.Value = e.ProgressPercentage;
 
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
+
             tslHashProgressValue.Text = $"{ tspbHashProgess.Value.ToString() }%";
         }
 
@@ -583,6 +545,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             {
                 GetHashLength();
             }
+
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
         }
 
         private void bgwSHA256_DoWork(object sender, DoWorkEventArgs e)
@@ -627,6 +591,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
             tspbHashProgess.Value = e.ProgressPercentage;
 
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
+
             tslHashProgressValue.Text = $"{ tspbHashProgess.Value.ToString() }%";
         }
 
@@ -644,6 +610,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             {
                 GetHashLength();
             }
+
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
         }
 
         private void bgwSHA384_DoWork(object sender, DoWorkEventArgs e)
@@ -688,6 +656,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
             tspbHashProgess.Value = e.ProgressPercentage;
 
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
+
             tslHashProgressValue.Text = $"{ tspbHashProgess.Value.ToString() }%";
         }
 
@@ -705,6 +675,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             {
                 GetHashLength();
             }
+
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
         }
 
         private void bgwSHA512_DoWork(object sender, DoWorkEventArgs e)
@@ -749,6 +721,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
             tspbHashProgess.Value = e.ProgressPercentage;
 
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
+
             tslHashProgressValue.Text = $"{ tspbHashProgess.Value.ToString() }%";
         }
 
@@ -766,6 +740,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             {
                 GetHashLength();
             }
+
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
         }
 
         private void bgwRIPEMD160_DoWork(object sender, DoWorkEventArgs e)
@@ -810,6 +786,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
             tspbHashProgess.Value = e.ProgressPercentage;
 
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
+
             tslHashProgressValue.Text = $"{ tspbHashProgess.Value.ToString() }%";
         }
 
@@ -827,6 +805,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             {
                 GetHashLength();
             }
+
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
         }
         #endregion
 
@@ -983,7 +963,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
         #endregion
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Clipboard.SetText(klblResult.Text);
         }
 
         private void KbtnBrowse_Click(object sender, EventArgs e)
@@ -1034,6 +1014,13 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
         private void GetHashLength()
         {
             MessageBox.Show($"Length of hash: { klblResult.Text.Length.ToString() }");
+        }
+
+        private void KbtnVarify_Click(object sender, EventArgs e)
+        {
+            VarifyFileHash varifyFileHash = new VarifyFileHash(kptxtApplicationExecutable.Text, kcbxHashAlgorithimType.Text, klblResult.Text);
+
+            varifyFileHash.Show();
         }
     }
 }

@@ -10,6 +10,7 @@
 using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code.Exceptions;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 
 namespace ExtendedControls.Base.Code.Security
@@ -120,6 +121,61 @@ namespace ExtendedControls.Base.Code.Security
             else
             {
                 ValidateFileHash(fileHash, hash);
+            }
+        }
+
+        /// <summary>
+        /// Determines whether [is background worker busy] [the specified MD5].
+        /// </summary>
+        /// <param name="md5">The MD5.</param>
+        /// <param name="ripemd160">The ripemd160.</param>
+        /// <param name="sha1">The sha1.</param>
+        /// <param name="sha256">The sha256.</param>
+        /// <param name="sha384">The sha384.</param>
+        /// <param name="sha512">The sha512.</param>
+        /// <returns>
+        ///   <c>true</c> if [is background worker busy] [the specified MD5]; otherwise, <c>false</c>.
+        /// </returns>
+        public static bool IsBackgroundWorkerBusy(BackgroundWorker md5, BackgroundWorker ripemd160, BackgroundWorker sha1, BackgroundWorker sha256, BackgroundWorker sha384, BackgroundWorker sha512)
+        {
+            if (md5.IsBusy || ripemd160.IsBusy || sha1.IsBusy || sha256.IsBusy || sha384.IsBusy || sha512.IsBusy)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Cancels the background worker progress.
+        /// </summary>
+        /// <param name="md5">The MD5.</param>
+        /// <param name="ripemd160">The ripemd160.</param>
+        /// <param name="sha1">The sha1.</param>
+        /// <param name="sha256">The sha256.</param>
+        /// <param name="sha384">The sha384.</param>
+        /// <param name="sha512">The sha512.</param>
+        public static void CancelBackgroundWorkerProgress(BackgroundWorker md5, BackgroundWorker ripemd160, BackgroundWorker sha1, BackgroundWorker sha256, BackgroundWorker sha384, BackgroundWorker sha512)
+        {
+            try
+            {
+                md5.CancelAsync();
+
+                ripemd160.CancelAsync();
+
+                sha1.CancelAsync();
+
+                sha256.CancelAsync();
+
+                sha384.CancelAsync();
+
+                sha512.CancelAsync();
+            }
+            catch (Exception exc)
+            {
+                ExceptionHandler.CaptureException(exc);
             }
         }
         #endregion
