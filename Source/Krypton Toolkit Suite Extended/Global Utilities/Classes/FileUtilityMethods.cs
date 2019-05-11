@@ -1,4 +1,13 @@
-﻿using System;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using System;
 using System.IO;
 using System.Net;
 using System.Windows.Forms;
@@ -14,6 +23,9 @@ namespace Core.Classes
     {
         //GlobalMethods globalMethods = new GlobalMethods();
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FileUtilityMethods"/> class.
+        /// </summary>
         public FileUtilityMethods()
         {
 
@@ -316,6 +328,9 @@ namespace Core.Classes
             return new FileInfo(FilePath);
         }
 
+        /// <summary>
+        /// Finalizes an instance of the <see cref="FileUtilityMethods"/> class.
+        /// </summary>
         ~FileUtilityMethods()
         {
             GC.SuppressFinalize(this);

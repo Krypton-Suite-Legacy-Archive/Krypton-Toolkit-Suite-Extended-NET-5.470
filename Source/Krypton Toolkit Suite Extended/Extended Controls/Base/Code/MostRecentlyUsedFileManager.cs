@@ -1,5 +1,13 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using Core.Classes;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using GlobalUtilities.Classes;
 using KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls;
 using Microsoft.Win32;
@@ -71,11 +79,11 @@ namespace KryptonExtendedToolkit.Base.Code
                     {
                         if (globalMethods.GetIsTargetPlatformSupported())
                         {
-                            if (KryptonMessageBox.Show("You are about to clear your recent files list. Do you want to continue?", "Clear Recent Files", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            if (ExtendedKryptonMessageBox.Show("You are about to clear your recent files list. Do you want to continue?", "Clear Recent Files", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 ClearRecentFiles();
                             }
-                            else if (MessageBox.Show("You are about to clear your recent files list. Do you want to continue?", "Clear Recent Files", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            else if (ExtendedKryptonMessageBox.Show("You are about to clear your recent files list. Do you want to continue?", "Clear Recent Files", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 ClearRecentFiles();
                             }

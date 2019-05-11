@@ -1,14 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
 using ComponentFactory.Krypton.Toolkit;
-using ExtendedToolkit.CalendarLibrary;
 using ExtendedControls.ExtendedToolkit.CalendarLibrary;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace ExtendedToolkit.CalendarLibrary
 {
@@ -125,9 +128,9 @@ namespace ExtendedToolkit.CalendarLibrary
             this.BackgroundColor = ColorTable.BackColor;
         }
 
-       
+
     }
 
-   
+
 
 }

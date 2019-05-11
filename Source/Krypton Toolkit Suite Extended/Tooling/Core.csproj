@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Core.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -90,6 +91,7 @@
     <Compile Include="Classes\Other\ToolTipManager.cs" />
     <Compile Include="Classes\Other\TypefaceHelper.cs" />
     <Compile Include="Classes\Palette\PaletteCompisitionEngine.cs" />
+    <Compile Include="Classes\Security\HashingAlgorithms.cs" />
     <Compile Include="Classes\Security\RandomPassword.cs" />
     <Compile Include="Classes\Security\SecurityMethods.cs" />
     <Compile Include="Classes\Theming\PaletteColourManagementEngine.cs" />
@@ -500,7 +502,7 @@
       <Version>1.0.5</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.794</Version>
+      <Version>5.470.968</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>

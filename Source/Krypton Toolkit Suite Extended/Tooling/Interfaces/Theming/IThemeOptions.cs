@@ -1,4 +1,13 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 using System.Windows.Forms;
 
 namespace Core.Interfaces.Theming
@@ -9,6 +18,12 @@ namespace Core.Interfaces.Theming
         /// <value>The palette mode.</value>
         PaletteMode PaletteMode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the krypton manager.
+        /// </summary>
+        /// <value>
+        /// The krypton manager.
+        /// </value>
         KryptonManager KryptonManager { get; set; }
 
         /// <summary>Gets or sets the palette mode container.</summary>

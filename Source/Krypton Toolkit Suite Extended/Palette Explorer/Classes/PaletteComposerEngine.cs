@@ -1,5 +1,15 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.ExtendedToolkit.Controls;
+using KryptonExtendedToolkit.Base.Code;
 using System;
 using System.Drawing;
 using System.IO;
@@ -9,6 +19,11 @@ namespace PaletteExplorer.Classes
 {
     public class PaletteComposerEngine
     {
+        #region Variables
+        private Color baseColour, darkColour, middleColour, lightColour, lightestColour, borderColour, alternativeNormalTextColour, normalTextColour, disabledTextColour, focusedTextColour, pressedTextColour, disabledColour, linkNormalColour, linkFocusedColour, linkHoverColour, linkVisitedColour, customColourOne, customColourTwo, customColourThree, customColourFour, customColourFive, customTextColourOne, customTextColourTwo, customTextColourThree, customTextColourFour, customTextColourFive, menuTextColour, statusTextColour, ribbonTabTextColour;
+        #endregion
+
+        #region Methods
         /// <summary>
         /// Exports the palette theme.
         /// </summary>
@@ -625,7 +640,21 @@ namespace PaletteExplorer.Classes
 
                 if (invertColours)
                 {
+                    #region Button Cluster
+                    palette.ButtonStyles.ButtonCluster.OverrideDefault.Back.Color1 = darkColour;
 
+                    palette.ButtonStyles.ButtonCluster.OverrideFocus.Back.Color1 = darkColour;
+
+                    palette.ButtonStyles.ButtonCluster.StateCheckedNormal.Back.Color1 = darkColour;
+
+                    palette.ButtonStyles.ButtonCluster.StateCommon.Back.ColorStyle = PaletteColorStyle.GlassNormalFull;
+
+                    palette.ButtonStyles.ButtonCluster.StateNormal.Back.Color1 = lightColour;
+
+                    palette.ButtonStyles.ButtonCluster.StatePressed.Back.Color1 = baseColour;
+
+                    palette.ButtonStyles.ButtonCluster.StateTracking.Back.Color1 = darkColour;
+                    #endregion
                 }
                 else
                 {
@@ -1596,5 +1625,19 @@ namespace PaletteExplorer.Classes
             //    statusState.Text = $"An error has occurred: { exc.Message }";
             //}
         }
+
+
+        public static void PopulateColours(CircularPictureBox baseColour, CircularPictureBox darkColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, CircularPictureBox borderColour, CircularPictureBox alternativeNormalTextColour, CircularPictureBox normalTextColour, CircularPictureBox disabledTextColour, CircularPictureBox focusedTextColour, CircularPictureBox pressedTextColour, CircularPictureBox disabledColour, CircularPictureBox linkNormalColour, CircularPictureBox linkFocusedColour, CircularPictureBox linkHoverColour, CircularPictureBox linkVisitedColour, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColour, CircularPictureBox statusTextColour, CircularPictureBox ribbonTabTextColour)
+        {
+            try
+            {
+
+            }
+            catch (Exception exc)
+            {
+                ExceptionHandler.CaptureException(exc, null);
+            }
+        }
+        #endregion
     }
 }

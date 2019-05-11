@@ -1,10 +1,25 @@
-﻿using System;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using System;
 
 namespace Core.Classes
 {
+    /// <summary>
+    /// Some translation methods.
+    /// </summary>
     public class TranslationMethods
     {
-        #region Constructors
+        #region Constructors        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TranslationMethods"/> class.
+        /// </summary>
         public TranslationMethods()
         {
 

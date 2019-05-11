@@ -46,6 +46,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -56,6 +57,9 @@
     </Compile>
     <Compile Include="CalandarAndControls.Designer.cs">
       <DependentUpon>CalandarAndControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CircularPictureBox.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="CircularProgressBarTest.cs">
       <SubType>Form</SubType>
@@ -87,6 +91,15 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="KryptonCommandLinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KryptonFileInformationExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KryptonWizardExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LineNumberedTextBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,10 +109,19 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="MarqueeLabelTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MessageBoxTest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MoreControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MRUExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NaviSuiteExample.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -113,20 +135,23 @@
     <Compile Include="Scrollbars.Designer.cs">
       <DependentUpon>Scrollbars.cs</DependentUpon>
     </Compile>
+    <Compile Include="StatusStripControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TestContextMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestRig.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WizardTest.cs">
+    <Compile Include="Examples.cs">
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="CalandarAndControls.resx">
       <DependentUpon>CalandarAndControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CircularPictureBox.resx">
+      <DependentUpon>CircularPictureBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CircularProgressBarTest.resx">
       <DependentUpon>CircularProgressBarTest.cs</DependentUpon>
@@ -149,17 +174,35 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KryptonCommandLinks.resx">
+      <DependentUpon>KryptonCommandLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KryptonFileInformationExample.resx">
+      <DependentUpon>KryptonFileInformationExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KryptonWizardExample.resx">
+      <DependentUpon>KryptonWizardExample.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LineNumberedTextBox.resx">
       <DependentUpon>LineNumberedTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarqueeLabelTest.resx">
+      <DependentUpon>MarqueeLabelTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MessageBoxTest.resx">
       <DependentUpon>MessageBoxTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoreControls.resx">
       <DependentUpon>MoreControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MRUExample.resx">
+      <DependentUpon>MRUExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NaviSuiteExample.resx">
+      <DependentUpon>NaviSuiteExample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -177,14 +220,14 @@
     <EmbeddedResource Include="Scrollbars.resx">
       <DependentUpon>Scrollbars.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StatusStripControls.resx">
+      <DependentUpon>StatusStripControls.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestRig.resx">
-      <DependentUpon>TestRig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WizardTest.resx">
-      <DependentUpon>WizardTest.cs</DependentUpon>
+    <EmbeddedResource Include="Examples.resx">
+      <DependentUpon>Examples.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -216,6 +259,14 @@
       <Project>{2A10C696-45AD-48AA-8EAD-2CB322672972}</Project>
       <Name>Krypton Outlook Grid</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Krypton Wizard\Krypton Wizard.csproj">
+      <Project>{CA97E339-2014-47E3-890B-DF35F31EC11F}</Project>
+      <Name>Krypton Wizard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NaviSuite\NaviSuite.csproj">
+      <Project>{82ABD367-ED24-424C-B572-6661F968E2D6}</Project>
+      <Name>NaviSuite</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Palette Explorer\Palette Explorer.csproj">
       <Project>{246b3b50-3a2d-4a6a-bb69-e56d94108ac1}</Project>
       <Name>Palette Explorer</Name>
@@ -224,11 +275,6 @@
       <Project>{efb997fb-1e05-444b-ba02-16c004e1a111}</Project>
       <Name>Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.794</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\..\Assets\PNG\32 x 32\KR 32 x 32 Orange.png">
@@ -242,6 +288,14 @@
     <None Include="Resources\Stop 128 x 128.png" />
     <None Include="Resources\Warning 128 x 128.png" />
     <None Include="Resources\KR 48 x 48 Orange.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5470">
+      <Version>5.470.968</Version>
+    </PackageReference>
+    <PackageReference Include="WindowsAPICodePack">
+      <Version>1.1.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

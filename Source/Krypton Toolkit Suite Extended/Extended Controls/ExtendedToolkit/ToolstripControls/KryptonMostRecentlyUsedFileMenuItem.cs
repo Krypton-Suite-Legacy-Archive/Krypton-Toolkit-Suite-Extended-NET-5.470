@@ -1,4 +1,13 @@
-﻿using System;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -630,9 +639,8 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls
 namespace KryptonExtendedToolkit.Windows.Forms
 {
     #region Using Statements
-    using System.Windows.Forms;
-
     using KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls;
+    using System.Windows.Forms;
     #endregion
 
     #region MenuStripMRUManager Class

@@ -1,4 +1,13 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.SystemDialogs
 {
@@ -43,8 +52,8 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.SystemDialogs
             // 
             // ebFolder
             // 
-            this.ebFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.ebFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ebFolder.Location = new System.Drawing.Point(12, 46);
             this.ebFolder.Name = "ebFolder";
@@ -54,7 +63,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.SystemDialogs
             // 
             // kbcPath
             // 
-            this.kbcPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.kbcPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.kbcPath.AutoSize = false;
             this.kbcPath.Location = new System.Drawing.Point(93, 12);
@@ -79,7 +88,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.SystemDialogs
             // 
             // kryptonComboBox1
             // 
-            this.kryptonComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.kryptonComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonComboBox1.DropDownWidth = 568;
             this.kryptonComboBox1.Location = new System.Drawing.Point(134, 470);

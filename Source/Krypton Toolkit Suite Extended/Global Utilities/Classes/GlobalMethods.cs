@@ -1,4 +1,13 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using System;
 using System.ComponentModel;
@@ -9,6 +18,9 @@ using System.Windows.Forms;
 
 namespace GlobalUtilities.Classes
 {
+    /// <summary>
+    /// Methods that can be used anywhere.
+    /// </summary>
     public class GlobalMethods
     {
         #region Variables
@@ -345,6 +357,9 @@ namespace GlobalUtilities.Classes
 
 
     #region Static Class
+    /// <summary>
+    /// Static methods that can be used anywhere.
+    /// </summary>
     public static class GlobalMethodsStatic
     {
         #region Variables

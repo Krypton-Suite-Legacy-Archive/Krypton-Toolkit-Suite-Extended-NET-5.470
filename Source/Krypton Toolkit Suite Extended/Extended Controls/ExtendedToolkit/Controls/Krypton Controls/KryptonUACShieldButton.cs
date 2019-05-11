@@ -1,10 +1,21 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 using Core.Classes;
 using GlobalUtilities.Classes;
 using KryptonExtendedToolkit.Base.Code;
 using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
+using System.Security.Principal;
 using System.Windows.Forms;
 
 namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
@@ -150,7 +161,7 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
                     {
                         if (ProcessName != string.Empty)
                         {
-                            UtilityMethods.ElevateProcessWithAdministrativeRights(ProcessName);
+                            ElevateProcessWithAdministrativeRights(ProcessName);
                         }
                     }
                 }
@@ -159,12 +170,54 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
             {
                 if (_globalMethods.GetIsTargetPlatformSupported())
                 {
-                    KryptonMessageBox.Show($"An error has occurred: { ex.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ExceptionHandler.CaptureException(ex, null, this);
                 }
                 else
                 {
                     MessageBox.Show($"An error has occurred: { ex.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+        #endregion
+
+        #region Methods
+        public void ElevateProcessWithAdministrativeRights(string processName)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(ProcessName))
+                {
+                    processName = ProcessName;
+                }
+
+                // Get current user privileges
+                WindowsPrincipal currentIdentity = new WindowsPrincipal(WindowsIdentity.GetCurrent());
+
+                bool hasAdministrativeRights = currentIdentity.IsInRole(WindowsBuiltInRole.Administrator);
+
+                if (hasAdministrativeRights)
+                {
+                    // Launch the process with administrative privileges
+                    ProcessStartInfo psi = new ProcessStartInfo();
+
+                    psi.Verb = "runas";
+
+                    psi.FileName = processName;
+
+                    // Try to run the process
+                    try
+                    {
+                        Process.Start(psi);
+                    }
+                    catch (Win32Exception wexc)
+                    {
+                        ExceptionHandler.CaptureException(wexc, null, this);
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                ExceptionHandler.CaptureException(exc, null, this);
             }
         }
         #endregion

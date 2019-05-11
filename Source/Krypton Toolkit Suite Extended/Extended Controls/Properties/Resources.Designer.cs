@@ -313,6 +313,26 @@ namespace ExtendedControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Error_Report_128_x_128 {
+            get {
+                object obj = ResourceManager.GetObject("Error_Report_128_x_128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Error_Report_48_x_48 {
+            get {
+                object obj = ResourceManager.GetObject("Error_Report_48_x_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Event_16x {
             get {
                 object obj = ResourceManager.GetObject("Event_16x", resourceCulture);
@@ -376,6 +396,16 @@ namespace ExtendedControls.Properties {
         internal static System.Drawing.Bitmap GridSortOrder {
             get {
                 object obj = ResourceManager.GetObject("GridSortOrder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Grip {
+            get {
+                object obj = ResourceManager.GetObject("Grip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

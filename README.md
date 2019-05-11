@@ -20,7 +20,42 @@
 
 ## In order to compile the code, you MUST restore/update the NuGet packages in order to build successfully!
 
-## [Toolkit Examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Examples.md)
+======
+
+## Control Examples
+
+Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Examples.md) to see what each control looks like.
+
+<!--======
+## 2019-06-01 Build 10xx - June Update
+* Implement `WindowsAPICodePackModel.cs` class for dealing with **WindowsAPICodePack** features 
+* New `Palette Explorer` controls
+* Merged all settings into `Toolkit Settings.dll`
+* Begun work on [#70](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/70)
+* Implemented [NaviSuite](https://github.com/jacobmesu/Guifreaks-Navisuite) by [Jacobmesu](https://github.com/jacobmesu)
+* New file varifier app to work with May's file checksum calculator
+* New `KryptonFileInformationDialog` to replace the Windows default one with some extra features
+* Upgraded to Krypton Toolkit Suite - version: **5.470.xxx**
+* Build 10xx (build date Saturday 1st, June 2019) is now available on NuGet
+-->
+
+======
+
+## 2019-05-01 Build 934 - May Update
+* Outlook 2003 style toast notification
+* File checksum calculator (MD5, SHA-1, SHA-256, SHA-384, SHA-512 and RIPEMD-160)
+* New `KryptonPaletteManager` class for dealing with creating custom `KryptonPalette`'s
+* Ribbon enhancements, merge two ribbons together [#150](https://github.com/Wagnerp/Krypton-NET-5.470/issues/150)
+* Capture version information from another file
+* Playground application reorganisation
+* Images of controls to show developers what they look like
+* Image resizing utility - resize & save images on the fly
+* New palette explorer user controls - will make it quicker to design the application
+* Fix palette theme selector, issue [#71](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/71)
+* General tidyup of code & API updates
+* XML documentation files for DLLs
+* Upgraded to Krypton Toolkit Suite - version: **5.470.901**
+* Build 934 (build date Wednesday 1st, May 2019) is now available on NuGet
 
 ======
 

@@ -1,7 +1,18 @@
-﻿using System;
-using System.Windows.Forms;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using System;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 
 namespace KryptonExtendedToolkit.Base.Code
 {
@@ -54,6 +65,97 @@ namespace KryptonExtendedToolkit.Base.Code
             else if (useConsole)
             {
                 Console.WriteLine($"[ { DateTime.Now.ToString() } ]: { exceptionMessage }");
+            }
+        }
+
+        /// <summary>
+        /// Captures the exception.
+        /// </summary>
+        /// <param name="exception">The exception.</param>
+        /// <param name="currentWindow">The current window.</param>
+        /// <param name="title">The title.</param>
+        /// <param name="buttons">The buttons.</param>
+        /// <param name="icon">The icon.</param>
+        /// <param name="className">Name of the class.</param>
+        /// <param name="methodSignature">The method signature.</param>
+        /// <param name="defaultTypeface">The default typeface.</param>
+        public static void CaptureException(Exception exception, KryptonForm currentWindow, Control control = null, string title = @"Exception Caught", MessageBoxButtons buttons = MessageBoxButtons.OK, MessageBoxIcon icon = MessageBoxIcon.Error, string className = "", string methodSignature = "", Font defaultTypeface = null)
+        {
+            defaultTypeface = new Font(currentWindow.Font.FontFamily, currentWindow.Font.Size, currentWindow.Font.Style, currentWindow.Font.Unit);
+
+            if (className != "")
+            {
+                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: { exception.Message }.\n\nError in class: '{ className }.cs'.", title, buttons, icon, messageboxTypeface: defaultTypeface);
+            }
+            else if (methodSignature != "")
+            {
+                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: { exception.Message }.\n\nError in method: '{ methodSignature }'.", title, buttons, icon, messageboxTypeface: defaultTypeface);
+            }
+            else if (className != "" && methodSignature != "")
+            {
+                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: { exception.Message }.\n\nError in class: '{ className }.cs'.\n\nError in method: '{ methodSignature }'.", title, buttons, icon, messageboxTypeface: defaultTypeface);
+            }
+            else
+            {
+                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: { exception.Message }.", title, buttons, icon, messageboxTypeface: defaultTypeface);
+            }
+        }
+
+        /// <summary>
+        /// Captures a stacktrace of the exception.
+        /// </summary>
+        /// <param name="exc">The incoming exception.</param>
+        /// <param name="fileName">The file to write the exception stacktrace to.</param>
+        public static void PrintStackTrace(Exception exc, string fileName)
+        {
+            try
+            {
+                if (!File.Exists(fileName))
+                {
+                    File.Create(fileName);
+                }
+
+                StreamWriter writer = new StreamWriter(fileName);
+
+                writer.Write(exc.ToString());
+
+                writer.Close();
+
+                writer.Dispose();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Captures a stacktrace of the exception.
+        /// </summary>
+        /// <param name="exc">The incoming exception.</param>
+        /// <param name="fileName">The file to write the exception stacktrace to.</param>
+        public static void PrintExceptionStackTrace(Exception exc, string fileName)
+        {
+            try
+            {
+                if (!File.Exists(fileName))
+                {
+                    File.Create(fileName);
+                }
+
+                StreamWriter writer = new StreamWriter(fileName);
+
+                writer.Write(exc.StackTrace);
+
+                writer.Close();
+
+                writer.Dispose();
+            }
+            catch (Exception e)
+            {
+
+                throw;
             }
         }
         #endregion

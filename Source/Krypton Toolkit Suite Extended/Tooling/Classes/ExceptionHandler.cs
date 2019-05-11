@@ -1,5 +1,16 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 using System;
+using System.IO;
+using System.Runtime.ExceptionServices;
 using System.Windows.Forms;
 
 namespace Core
@@ -82,6 +93,68 @@ namespace Core
             else if (useConsole)
             {
                 Console.WriteLine($"[ { DateTime.Now.ToString() } ]: { exceptionMessage }");
+            }
+        }
+
+        /// <summary>
+        /// Captures a stacktrace of the exception.
+        /// </summary>
+        /// <param name="exc">The incoming exception.</param>
+        /// <param name="fileName">The file to write the exception stacktrace to.</param>
+        public static void PrintStackTrace(Exception exc, string fileName)
+        {
+            try
+            {
+                ExceptionDispatchInfo exceptionInfo = null;
+
+                if (!File.Exists(fileName))
+                {
+                    File.Create(fileName);
+                }
+
+                exceptionInfo = ExceptionDispatchInfo.Capture(exc);
+
+                StreamWriter writer = new StreamWriter(fileName);
+
+                writer.Write(exc.ToString());
+
+                writer.Close();
+
+                writer.Dispose();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Captures a stacktrace of the exception.
+        /// </summary>
+        /// <param name="exc">The incoming exception.</param>
+        /// <param name="fileName">The file to write the exception stacktrace to.</param>
+        public static void PrintExceptionStackTrace(Exception exc, string fileName)
+        {
+            try
+            {
+                if (!File.Exists(fileName))
+                {
+                    File.Create(fileName);
+                }
+
+                StreamWriter writer = new StreamWriter(fileName);
+
+                writer.Write(exc.StackTrace);
+
+                writer.Close();
+
+                writer.Dispose();
+            }
+            catch (Exception e)
+            {
+
+                throw;
             }
         }
         #endregion

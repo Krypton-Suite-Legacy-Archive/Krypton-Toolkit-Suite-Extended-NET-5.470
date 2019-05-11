@@ -1,6 +1,16 @@
-﻿using System;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace ExtendedControls.Base.Code.Utilities
 {
@@ -105,6 +115,19 @@ namespace ExtendedControls.Base.Code.Utilities
             }
 
             return stringFormat;
+        }
+
+        public static bool IsWindowOpen(Type formType)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType().Name == form.Name)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
         #endregion
     }

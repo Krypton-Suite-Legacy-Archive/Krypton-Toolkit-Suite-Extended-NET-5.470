@@ -196,7 +196,7 @@
             this.tearOffToolStrip2.Location = new System.Drawing.Point(318, 177);
             this.tearOffToolStrip2.Name = "tearOffToolStrip2";
             this.tearOffToolStrip2.RightToolStripPanel = null;
-            this.tearOffToolStrip2.Size = new System.Drawing.Size(356, 25);
+            this.tearOffToolStrip2.Size = new System.Drawing.Size(356, 26);
             this.tearOffToolStrip2.TabIndex = 1;
             this.tearOffToolStrip2.Text = "tearOffToolStrip2";
             this.tearOffToolStrip2.TopToolStripPanel = null;
@@ -207,7 +207,7 @@
             this.newToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton1.Image")));
             this.newToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton1.Name = "newToolStripButton1";
-            this.newToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton1.Size = new System.Drawing.Size(23, 23);
             this.newToolStripButton1.Text = "&New";
             // 
             // openToolStripButton1
@@ -216,7 +216,7 @@
             this.openToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton1.Image")));
             this.openToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripButton1.Name = "openToolStripButton1";
-            this.openToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.openToolStripButton1.Size = new System.Drawing.Size(23, 23);
             this.openToolStripButton1.Text = "&Open";
             // 
             // saveToolStripButton1
@@ -225,7 +225,7 @@
             this.saveToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton1.Image")));
             this.saveToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton1.Name = "saveToolStripButton1";
-            this.saveToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton1.Size = new System.Drawing.Size(23, 23);
             this.saveToolStripButton1.Text = "&Save";
             // 
             // printToolStripButton1
@@ -234,13 +234,13 @@
             this.printToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton1.Image")));
             this.printToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripButton1.Name = "printToolStripButton1";
-            this.printToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.printToolStripButton1.Size = new System.Drawing.Size(23, 23);
             this.printToolStripButton1.Text = "&Print";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 26);
             // 
             // cutToolStripButton1
             // 
@@ -248,7 +248,7 @@
             this.cutToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripButton1.Image")));
             this.cutToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutToolStripButton1.Name = "cutToolStripButton1";
-            this.cutToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.cutToolStripButton1.Size = new System.Drawing.Size(23, 23);
             this.cutToolStripButton1.Text = "C&ut";
             // 
             // copyToolStripButton1
@@ -257,7 +257,7 @@
             this.copyToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripButton1.Image")));
             this.copyToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyToolStripButton1.Name = "copyToolStripButton1";
-            this.copyToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.copyToolStripButton1.Size = new System.Drawing.Size(23, 23);
             this.copyToolStripButton1.Text = "&Copy";
             // 
             // pasteToolStripButton1
@@ -266,13 +266,13 @@
             this.pasteToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripButton1.Image")));
             this.pasteToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteToolStripButton1.Name = "pasteToolStripButton1";
-            this.pasteToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.pasteToolStripButton1.Size = new System.Drawing.Size(23, 23);
             this.pasteToolStripButton1.Text = "&Paste";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 26);
             // 
             // helpToolStripButton1
             // 
@@ -280,7 +280,7 @@
             this.helpToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton1.Image")));
             this.helpToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.helpToolStripButton1.Name = "helpToolStripButton1";
-            this.helpToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.helpToolStripButton1.Size = new System.Drawing.Size(23, 23);
             this.helpToolStripButton1.Text = "He&lp";
             // 
             // kryptonViewBar1
@@ -288,9 +288,9 @@
             this.kryptonViewBar1.BackColor = System.Drawing.Color.Transparent;
             this.kryptonViewBar1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.kryptonViewBar1.Name = "kryptonViewBar1";
-            this.kryptonViewBar1.Size = new System.Drawing.Size(117, 22);
+            this.kryptonViewBar1.Size = new System.Drawing.Size(117, 23);
             this.kryptonViewBar1.Text = "kryptonViewBar1";
-            this.kryptonViewBar1.ViewBarSize = new System.Drawing.Size(117, 22);
+            this.kryptonViewBar1.ViewBarSize = new System.Drawing.Size(117, 23);
             // 
             // MainWindow
             // 

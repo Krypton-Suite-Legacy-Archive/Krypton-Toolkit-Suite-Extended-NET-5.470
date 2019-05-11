@@ -1,10 +1,18 @@
-﻿using ComponentFactory.Krypton.Toolkit;
-using Core.Classes.SpecialEffects;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
+using Core.Settings.Classes;
 using System;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using Core.Settings.Classes;
 
 namespace PaletteEditor.UX
 {
@@ -13,7 +21,7 @@ namespace PaletteEditor.UX
         #region Variables
         private Timer _tmrUpdate;
 
-        private FadeEffects _fadeEffects = new FadeEffects();
+        //private FadeEffects _fadeEffects = new FadeEffects();
 
         private Version _currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
 
@@ -152,7 +160,7 @@ namespace PaletteEditor.UX
 
             _tmrUpdate.Tick += Update_Tick;
 
-            _fadeEffects.FadeInWindow(this);
+            //_fadeEffects.FadeInWindow(this);
         }
 
         private void Update_Tick(object sender, EventArgs e)

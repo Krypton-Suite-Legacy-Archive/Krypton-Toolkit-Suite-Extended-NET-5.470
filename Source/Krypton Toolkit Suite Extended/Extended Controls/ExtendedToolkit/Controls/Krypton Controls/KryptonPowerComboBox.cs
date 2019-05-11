@@ -1,4 +1,13 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -245,7 +254,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
         }
 
         //overrides
-        protected override void OnDropDownClosed(System.EventArgs e)
+        protected override void OnDropDownClosed(EventArgs e)
         {
 
             mKillEvents1 = 0; //clefranc BUG2
@@ -256,6 +265,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             }
 
         }
+
         protected override void OnSelectedIndexChanged(System.EventArgs e)
         {
             Int32 i = 0;

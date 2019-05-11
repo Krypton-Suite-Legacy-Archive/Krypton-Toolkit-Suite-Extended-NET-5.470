@@ -1,4 +1,13 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code.Development;
 using ExtendedControls.Base.Code.Settings;
 using ExtendedControls.Base.Enumerations;
@@ -260,8 +269,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
         #region Variables
         private ArrayList _styles;
         private bool _developmentMode;
-        private KryptonManager _manager;
-        private KryptonPalette _kryptonPalette;
+        private KryptonManager _manager = new KryptonManager();
+        private KryptonPalette _kryptonPalette = new KryptonPalette();
         private Version _currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
         #endregion
 
@@ -301,7 +310,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
         {
             if (kcmbSelection.Text != "")
             {
-                ThemeManager.ApplyGlobalTheme(Manager, ThemeManager.ApplyThemeMode(kcmbSelection.Text));
+                ThemeManager.SetTheme(kcmbSelection.Text, Manager);
             }
 
             Debug.WriteLine($"[{ DateTime.Now.ToString() }]: Theme has changed to: { Manager.GlobalPaletteMode.ToString() }");
@@ -311,16 +320,23 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
         {
             CommonOpenFileDialog cofd = new CommonOpenFileDialog();
 
-            cofd.Title = "Open Palette File:";
+            cofd.Title = "Open a Customised Theme File:";
 
-            cofd.Filters.Add(new CommonFileDialogFilter("Palette Files", "*.xml"));
-
-            cofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            cofd.Filters.Add(new CommonFileDialogFilter("Krypton Theme Files", ".xml"));
 
             if (cofd.ShowDialog() == CommonFileDialogResult.Ok)
             {
                 kptxtCustomThemePath.Text = Path.GetFullPath(cofd.FileName);
+
+                EnableImportItems(true);
             }
+        }
+
+        private void EnableImportItems(bool enabled)
+        {
+            kcbSilent.Enabled = enabled;
+
+            kbtnImport.Enabled = enabled;
         }
 
         private void kbtnCancel_Click(object sender, EventArgs e)
@@ -348,11 +364,22 @@ namespace ExtendedControls.ExtendedToolkit.UI.Theming
 
         private void kbtnImport_Click(object sender, EventArgs e)
         {
-            KryptonPalette = new KryptonPalette();
+            try
+            {
+                if (!string.IsNullOrEmpty(kptxtCustomThemePath.Text))
+                {
+                    _kryptonPalette.Import(kptxtCustomThemePath.Text, kcbSilent.Checked);
 
-            KryptonPalette.Import(kptxtCustomThemePath.Text, kcbSilent.Checked);
+                    _manager.GlobalPalette = _kryptonPalette;
 
-            kbtnImport.Enabled = false;
+                    _manager.GlobalPaletteMode = PaletteModeManager.Custom;
+                }
+            }
+            catch (Exception exc)
+            {
+
+                throw;
+            }
         }
 
         private void kcmbSelection_SelectedIndexChanged(object sender, EventArgs e)

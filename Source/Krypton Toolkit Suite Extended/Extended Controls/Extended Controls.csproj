@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
     <LangVersion>latest</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Krypton Extended Toolkit.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -61,10 +62,13 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="Microsoft.CSharp" />
@@ -111,7 +115,9 @@
     <Compile Include="Base\Code\Exceptions\ExceptionHandler.cs" />
     <Compile Include="Base\Code\File Explorer\FileSizeFormatProvider.cs" />
     <Compile Include="Base\Code\File Explorer\WIN32.cs" />
+    <Compile Include="Base\Code\Graphics Tools\GraphicsUtilities.cs" />
     <Compile Include="Base\Code\IconExtractor.cs" />
+    <Compile Include="Base\Code\IO\FileUtilities.cs" />
     <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
     <Compile Include="Base\Code\Linq\LinqBridge-1.3.cs" />
     <Compile Include="Base\Code\ListViewColumnSorter.cs" />
@@ -128,15 +134,23 @@
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarOrientation.cs" />
     <Compile Include="Base\Code\ScrollBar\CustomScrollBar\ScrollBarState.cs" />
     <Compile Include="Base\Code\ScrollBar\WIN32.cs" />
+    <Compile Include="Base\Code\Security\HashingAlgorithms.cs" />
+    <Compile Include="Base\Code\Security\HashingHelper.cs" />
     <Compile Include="Base\Code\Security\PasswordStrength.cs" />
     <Compile Include="Base\Code\Security\SecurityMethods.cs" />
     <Compile Include="Base\Code\Security\VirusTotalAPI.cs" />
     <Compile Include="Base\Code\Settings\SettingsManager.cs" />
+    <Compile Include="Base\Code\Theming\KryptonPaletteManager.cs" />
     <Compile Include="Base\Code\Theming\KryptonThemeManager.cs" />
     <Compile Include="Base\Code\TypefaceHelper.cs" />
+    <Compile Include="Base\Code\Utilities\FileVersionUtility.cs" />
+    <Compile Include="Base\Code\Utilities\Utility.cs" />
+    <Compile Include="Base\Code\Utilities\WIN32.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
+    <Compile Include="Base\Code\Windows\WindowsAPICodePackModel.cs" />
     <Compile Include="Base\Enumerations\Enumerations.cs" />
     <Compile Include="Base\Interfaces\IColourEditor.cs" />
+    <Compile Include="Base\Interfaces\IRibbonMerger.cs" />
     <Compile Include="Base\Structs\Colour Wheel\HSLColour.cs" />
     <Compile Include="Base\Structs\File Explorer\ItemType.cs" />
     <Compile Include="Base\Structures\HSLColour.cs" />
@@ -291,10 +305,14 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\CircularProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonFlashingLabel.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonLineNumberedRichTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMarqueeLabel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMessageBoxExtended.cs" />
@@ -307,6 +325,9 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToastNotification.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToastNotificationPopup.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
@@ -329,7 +350,19 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonToggleSwitchToolbarControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\MessageBoxes\UI\KryptonExceptionMessageBox.cs" />
+    <Compile Include="ExtendedToolkit\Crash Report Tool\Classes\DrDump\AnonymousData.cs" />
+    <Compile Include="ExtendedToolkit\Crash Report Tool\Classes\DrDump\DrDumpService.cs" />
+    <Compile Include="ExtendedToolkit\Crash Report Tool\UX\CrashReportToolMainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Error Reporting\Classes\DrDump\AnonymousData.cs" />
+    <Compile Include="ExtendedToolkit\Error Reporting\Classes\DrDump\DrDumpService.cs" />
+    <Compile Include="ExtendedToolkit\Error Reporting\Classes\DrDump\SendRequestCompletedEventArgs.cs" />
+    <Compile Include="ExtendedToolkit\Error Reporting\Classes\ScreenCapture.cs" />
+    <Compile Include="ExtendedToolkit\Error Reporting\UX\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Ribbon\RibbonMerger.cs" />
     <Compile Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceSelector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -775,6 +808,9 @@
     <Compile Include="ExtendedToolkit\UI\Dialogues\KryptonCredentialDialog.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Dialogues\KryptonFileInformationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Dialogues\KrypyonUserCreationDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -799,6 +835,9 @@
     <Compile Include="ExtendedToolkit\UI\Find and Replace\KryptonFindAndReplaceDialog.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Graphics Tools\KryptonImageResizingToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\KryptonFormWithDropShadow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -815,6 +854,9 @@
       <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\Security\File Hashing\HashFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Security\File Hashing\VarifyFileHash.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\UI\Security\RandomPasswordGenerator.cs">
@@ -835,7 +877,13 @@
     <Compile Include="ExtendedToolkit\UI\Theming\ThemeChooser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Toast Notification\KryptonToastNotificationPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Windows\FileInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\UI\Windows\KryptonFileCopy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Utilities\Classes\Utility.cs" />
@@ -939,9 +987,17 @@
     <None Include="Resources\text_lowercase.png" />
     <None Include="Resources\text_strikethrough.png" />
     <None Include="Resources\text_underline.png" />
+    <None Include="Resources\Grip.png" />
+    <None Include="Resources\Error_Report_48_x_48.png" />
+    <None Include="Resources\Error_Report_128_x_128.png" />
+    <None Include="Resources\NaviBar.bmp" />
+    <None Include="Resources\NaviGroup.bmp" />
+    <None Include="Resources\NaviDown.png" />
+    <None Include="Resources\NaviUp.png" />
     <Content Include="ToolboxBitmaps\CircularProgressBar.bmp" />
     <Content Include="ToolboxBitmaps\DataBar.bmp" />
     <Content Include="ToolboxBitmaps\DataChart.bmp" />
+    <Content Include="ToolboxBitmaps\KR 48 x 48 Orange.ico" />
     <Content Include="ToolboxBitmaps\ToggleSwich.bmp" />
     <Content Include="ToolboxBitmaps\UACButton.bmp" />
     <None Include="Resources\help2.png" />
@@ -1063,6 +1119,9 @@
     <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.resx">
       <DependentUpon>KryptonListView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonMarqueeLabel.resx">
+      <DependentUpon>KryptonMarqueeLabel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonPaletteSelector.resx">
       <DependentUpon>KryptonPaletteSelector.cs</DependentUpon>
     </EmbeddedResource>
@@ -1071,6 +1130,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\PasswordStrengthControl.resx">
       <DependentUpon>PasswordStrengthControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Crash Report Tool\UX\CrashReportToolMainWindow.resx">
+      <DependentUpon>CrashReportToolMainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Error Reporting\UX\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\SystemDialogs\Typeface\TypefaceProperties.resx">
       <DependentUpon>TypefaceProperties.cs</DependentUpon>
@@ -1126,6 +1191,9 @@
     <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\KryptonCredentialDialog.resx">
       <DependentUpon>KryptonCredentialDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\KryptonFileInformationDialog.resx">
+      <DependentUpon>KryptonFileInformationDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\KrypyonUserCreationDialog.resx">
       <DependentUpon>KrypyonUserCreationDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -1144,11 +1212,17 @@
     <EmbeddedResource Include="ExtendedToolkit\UI\Find and Replace\KryptonFindAndReplaceDialog.resx">
       <DependentUpon>KryptonFindAndReplaceDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Graphics Tools\KryptonImageResizingToolWindow.resx">
+      <DependentUpon>KryptonImageResizingToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\KryptonSplashScreen.resx">
       <DependentUpon>KryptonSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Security\File Hashing\HashFile.resx">
       <DependentUpon>HashFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Security\File Hashing\VarifyFileHash.resx">
+      <DependentUpon>VarifyFileHash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Security\RandomPasswordGenerator.resx">
       <DependentUpon>RandomPasswordGenerator.cs</DependentUpon>
@@ -1168,8 +1242,14 @@
     <EmbeddedResource Include="ExtendedToolkit\UI\Theming\ThemeChooser.resx">
       <DependentUpon>ThemeChooser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Toast Notification\KryptonToastNotificationPopupForm.resx">
+      <DependentUpon>KryptonToastNotificationPopupForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Windows\FileInformation.resx">
       <DependentUpon>FileInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Windows\KryptonFileCopy.resx">
+      <DependentUpon>KryptonFileCopy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1181,10 +1261,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.794</Version>
+      <Version>5.470.968</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.1</Version>
+      <Version>12.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Resource.Embedder">
+      <Version>2.0.0</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>
