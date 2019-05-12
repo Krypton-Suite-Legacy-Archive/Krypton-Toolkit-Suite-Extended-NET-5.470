@@ -2,7 +2,7 @@
 name: Theme suggestion
 about: Suggest a new theme
 title: "[New Theme]"
-labels: enhancement, Ideas, Feedback
+labels: enhancement, Ideas, Feedback, theme suggestion
 assignees: Wagnerp
 
 ---
