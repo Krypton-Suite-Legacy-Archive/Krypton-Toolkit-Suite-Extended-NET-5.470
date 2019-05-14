@@ -82,5 +82,29 @@ namespace ToolkitSettings.Settings.Palette_Explorer {
                 this["DisplayIndex"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowAdvancedDetails {
+            get {
+                return ((bool)(this["ShowAdvancedDetails"]));
+            }
+            set {
+                this["ShowAdvancedDetails"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Transparent")]
+        public global::System.Drawing.Color DefaultColour {
+            get {
+                return ((global::System.Drawing.Color)(this["DefaultColour"]));
+            }
+            set {
+                this["DefaultColour"] = value;
+            }
+        }
     }
 }

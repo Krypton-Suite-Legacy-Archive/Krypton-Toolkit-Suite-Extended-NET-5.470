@@ -76,6 +76,10 @@ namespace PaletteExplorer.UX
             // 
             this.kMan.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Blue;
             // 
+            // kryptonPalette1
+            // 
+            this.kryptonPalette1.CustomisedKryptonPaletteFilePath = null;
+            // 
             // kryptonPanel1
             // 
             this.kryptonPanel1.Controls.Add(this.kbtnCancel);
@@ -221,12 +225,14 @@ namespace PaletteExplorer.UX
             // 
             // kcbTheme
             // 
+            this.kcbTheme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kcbTheme.DropDownWidth = 182;
             this.kcbTheme.Location = new System.Drawing.Point(124, 12);
             this.kcbTheme.Name = "kcbTheme";
             this.kcbTheme.Size = new System.Drawing.Size(182, 25);
             this.kcbTheme.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcbTheme.TabIndex = 1;
+            this.kcbTheme.SelectedIndexChanged += new System.EventHandler(this.KcbTheme_SelectedIndexChanged);
             // 
             // kryptonLabel1
             // 
@@ -295,15 +301,17 @@ namespace PaletteExplorer.UX
         {
             try
             {
-                foreach (string themeValues in Enum.GetValues(typeof(PaletteModeManager)))
-                {
-                    kcbTheme.Items.Add(themeValues);
-                }
+                ThemeManager.PropagateThemeSelector(kcbTheme);
             }
             catch (Exception exc)
             {
                 ExceptionHandler.CaptureException(exc);
             }
+        }
+
+        private void KcbTheme_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ThemeManager.SetTheme(kcbTheme.Text, kMan);
         }
     }
 }

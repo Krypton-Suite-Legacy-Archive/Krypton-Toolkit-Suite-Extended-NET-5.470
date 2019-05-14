@@ -8,6 +8,7 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using Core.Classes;
 using ExtendedControls.ExtendedToolkit.Controls;
 using System.Drawing;
 using System.Windows.Forms;
@@ -381,6 +382,27 @@ namespace PaletteExplorer.Classes
         public static void PictureboxHiddenPropertiesLocation(KryptonGroupBox standardColourPreviewPane, PictureBox baseColourPreview, PictureBox darkColourPreview, PictureBox middleColourPreview, PictureBox lightColourPreview, PictureBox lightestColourPreview, PictureBox borderColourPreview, PictureBox alternativeNormalTextColourPreview, PictureBox normalTextColourPreview, PictureBox disabledTextColourPreview, PictureBox focusedTextColourPreview, PictureBox pressedTextColourPreview, PictureBox disabledColourPreview, PictureBox linkNormalColourPreview, PictureBox linkFocusedColourPreview, PictureBox linkHoverColourPreview, PictureBox linkVisitedColourPreview, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColourPreview, PictureBox statusTextColourPreview, PictureBox ribbonTabTextColourPreview)
         {
             standardColourPreviewPane.Size = new Size(1189, 467);
+        }
+
+        /// <summary>
+        /// Displays the tool tip information.
+        /// </summary>
+        /// <param name="control">The control.</param>
+        /// <param name="colour">The colour.</param>
+        /// <param name="colourDescription">The colour description.</param>
+        /// <param name="showAdvancedDetails">if set to <c>true</c> [show advanced details].</param>
+        public static void DisplayToolTipInformation(Control control, Color colour, string colourDescription, bool showAdvancedDetails = false)
+        {
+            ToolTip colourToolTip = new ToolTip();
+
+            if (showAdvancedDetails)
+            {
+                colourToolTip.SetToolTip(control, $"{ colourDescription } Colour\n{ TranslationMethods.TranslateColourToARGB(colour)}\n{ TranslationMethods.TranslateColourToRGB(colour) }\n{ TranslationMethods.TranslateColourToHexadecimal(colour) }\n{ TranslationMethods.GetColourBrightness(colour) }\n{ TranslationMethods.GetColourHue(colour) }\n{ TranslationMethods.GetColourSaturation(colour) }");
+            }
+            else
+            {
+                colourToolTip.SetToolTip(control, $"{ colourDescription } Colour\n{ TranslationMethods.TranslateColourToRGB(colour) }");
+            }
         }
     }
 }

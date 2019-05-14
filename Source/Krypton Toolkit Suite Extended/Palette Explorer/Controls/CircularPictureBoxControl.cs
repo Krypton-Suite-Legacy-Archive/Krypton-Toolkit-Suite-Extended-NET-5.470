@@ -1,4 +1,9 @@
-﻿using ExtendedControls.ExtendedToolkit.Controls;
+﻿using Core;
+using ExtendedControls.ExtendedToolkit.Controls;
+using PaletteExplorer.Classes;
+using System;
+using System.Collections;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PaletteExplorer.Controls
@@ -620,6 +625,7 @@ namespace PaletteExplorer.Controls
             this.cbxBaseColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.cbxBaseColourPreview.TabIndex = 26;
             this.cbxBaseColourPreview.TabStop = false;
+            this.cbxBaseColourPreview.MouseEnter += new System.EventHandler(this.CbxBaseColourPreview_MouseEnter);
             // 
             // ctxBaseColour
             // 
@@ -634,6 +640,7 @@ namespace PaletteExplorer.Controls
             this.useBaseColourAsBaseToolStripMenuItem.Name = "useBaseColourAsBaseToolStripMenuItem";
             this.useBaseColourAsBaseToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.useBaseColourAsBaseToolStripMenuItem.Text = "Use &Base Colour as Base";
+            this.useBaseColourAsBaseToolStripMenuItem.Click += new System.EventHandler(this.UseBaseColourAsBaseToolStripMenuItem_Click);
             // 
             // ctxMediumColour
             // 
@@ -648,6 +655,7 @@ namespace PaletteExplorer.Controls
             this.tsmiMediumColour.Name = "tsmiMediumColour";
             this.tsmiMediumColour.Size = new System.Drawing.Size(221, 22);
             this.tsmiMediumColour.Text = "Use &Medium Colour as Base";
+            this.tsmiMediumColour.Click += new System.EventHandler(this.TsmiMediumColour_Click);
             // 
             // ctxLightColour
             // 
@@ -662,6 +670,7 @@ namespace PaletteExplorer.Controls
             this.tsmiLightColour.Name = "tsmiLightColour";
             this.tsmiLightColour.Size = new System.Drawing.Size(203, 22);
             this.tsmiLightColour.Text = "Use &Light Colour as Base";
+            this.tsmiLightColour.Click += new System.EventHandler(this.TsmiLightColour_Click);
             // 
             // ctxLightestColour
             // 
@@ -676,6 +685,7 @@ namespace PaletteExplorer.Controls
             this.tsmiLightestColour.Name = "tsmiLightestColour";
             this.tsmiLightestColour.Size = new System.Drawing.Size(218, 22);
             this.tsmiLightestColour.Text = "Use &Lightest Colour as Base";
+            this.tsmiLightestColour.Click += new System.EventHandler(this.TsmiLightestColour_Click);
             // 
             // ctxAlternativeNormalTextColour
             // 
@@ -690,6 +700,7 @@ namespace PaletteExplorer.Controls
             this.tsmiAlternativeNormalTextColour.Name = "tsmiAlternativeNormalTextColour";
             this.tsmiAlternativeNormalTextColour.Size = new System.Drawing.Size(300, 22);
             this.tsmiAlternativeNormalTextColour.Text = "Use &Alternative Normal Text Colour as Base";
+            this.tsmiAlternativeNormalTextColour.Click += new System.EventHandler(this.TsmiAlternativeNormalTextColour_Click);
             // 
             // ctxBorderColour
             // 
@@ -704,6 +715,7 @@ namespace PaletteExplorer.Controls
             this.tsmiBorderColour.Name = "tsmiBorderColour";
             this.tsmiBorderColour.Size = new System.Drawing.Size(211, 22);
             this.tsmiBorderColour.Text = "Use &Border Colour as Base";
+            this.tsmiBorderColour.Click += new System.EventHandler(this.TsmiBorderColour_Click);
             // 
             // ctxNormalTextColour
             // 
@@ -718,6 +730,7 @@ namespace PaletteExplorer.Controls
             this.tsmiNormalTextColour.Name = "tsmiNormalTextColour";
             this.tsmiNormalTextColour.Size = new System.Drawing.Size(240, 22);
             this.tsmiNormalTextColour.Text = "Use &Normal Text Colour as Base";
+            this.tsmiNormalTextColour.Click += new System.EventHandler(this.TsmiNormalTextColour_Click);
             // 
             // ctxLinkNormalTextColour
             // 
@@ -732,6 +745,7 @@ namespace PaletteExplorer.Controls
             this.tsmiLinkNormalTextColour.Name = "tsmiLinkNormalTextColour";
             this.tsmiLinkNormalTextColour.Size = new System.Drawing.Size(265, 22);
             this.tsmiLinkNormalTextColour.Text = "Use Link &Normal Text Colour as Base";
+            this.tsmiLinkNormalTextColour.Click += new System.EventHandler(this.TsmiLinkNormalTextColour_Click);
             // 
             // ctxDisabledControlColour
             // 
@@ -746,6 +760,7 @@ namespace PaletteExplorer.Controls
             this.tsmiDisabledControlColour.Name = "tsmiDisabledControlColour";
             this.tsmiDisabledControlColour.Size = new System.Drawing.Size(264, 22);
             this.tsmiDisabledControlColour.Text = "Use &Disabled Control Colour as Base";
+            this.tsmiDisabledControlColour.Click += new System.EventHandler(this.TsmiDisabledControlColour_Click);
             // 
             // ctxDisabedTextColour
             // 
@@ -760,6 +775,7 @@ namespace PaletteExplorer.Controls
             this.tsmiDisabledTextColour.Name = "tsmiDisabledTextColour";
             this.tsmiDisabledTextColour.Size = new System.Drawing.Size(245, 22);
             this.tsmiDisabledTextColour.Text = "Use &Disabled Text Colour as Base";
+            this.tsmiDisabledTextColour.Click += new System.EventHandler(this.TsmiDisabledTextColour_Click);
             // 
             // ctxFocusedTextColour
             // 
@@ -774,6 +790,7 @@ namespace PaletteExplorer.Controls
             this.tsmiFocusedTextColour.Name = "tsmiFocusedTextColour";
             this.tsmiFocusedTextColour.Size = new System.Drawing.Size(244, 22);
             this.tsmiFocusedTextColour.Text = "Use &Focused Text Colour as Base";
+            this.tsmiFocusedTextColour.Click += new System.EventHandler(this.TsmiFocusedTextColour_Click);
             // 
             // ctxPressedTextColour
             // 
@@ -788,6 +805,7 @@ namespace PaletteExplorer.Controls
             this.tsmiPressedTextColour.Name = "tsmiPressedTextColour";
             this.tsmiPressedTextColour.Size = new System.Drawing.Size(240, 22);
             this.tsmiPressedTextColour.Text = "Use &Pressed Text Colour as Base";
+            this.tsmiPressedTextColour.Click += new System.EventHandler(this.TsmiPressedTextColour_Click);
             // 
             // ctxLinkHoverTextColour
             // 
@@ -802,6 +820,7 @@ namespace PaletteExplorer.Controls
             this.tsmiLinkHoverTextColour.Name = "tsmiLinkHoverTextColour";
             this.tsmiLinkHoverTextColour.Size = new System.Drawing.Size(257, 22);
             this.tsmiLinkHoverTextColour.Text = "Use Link &Hover Text Colour as Base";
+            this.tsmiLinkHoverTextColour.Click += new System.EventHandler(this.TsmiLinkHoverTextColour_Click);
             // 
             // ctxCustomColourFourColour
             // 
@@ -816,6 +835,7 @@ namespace PaletteExplorer.Controls
             this.tsmiCustomColourFourColour.Name = "tsmiCustomColourFourColour";
             this.tsmiCustomColourFourColour.Size = new System.Drawing.Size(284, 22);
             this.tsmiCustomColourFourColour.Text = "Use Custom Colour &Four Colour as Base";
+            this.tsmiCustomColourFourColour.Click += new System.EventHandler(this.TsmiCustomColourFourColour_Click);
             // 
             // ctxDarkColour
             // 
@@ -830,6 +850,7 @@ namespace PaletteExplorer.Controls
             this.tsiDarkColour.Name = "tsiDarkColour";
             this.tsiDarkColour.Size = new System.Drawing.Size(200, 22);
             this.tsiDarkColour.Text = "Use &Dark Colour as Base";
+            this.tsiDarkColour.Click += new System.EventHandler(this.TsiDarkColour_Click);
             // 
             // ctxCustomColourThreeColour
             // 
@@ -844,6 +865,7 @@ namespace PaletteExplorer.Controls
             this.tsmiCustomColourThreeColour.Name = "tsmiCustomColourThreeColour";
             this.tsmiCustomColourThreeColour.Size = new System.Drawing.Size(290, 22);
             this.tsmiCustomColourThreeColour.Text = "Use Custom Colour &Three Colour as Base";
+            this.tsmiCustomColourThreeColour.Click += new System.EventHandler(this.TsmiCustomColourThreeColour_Click);
             // 
             // ctxCustomColourOneColour
             // 
@@ -858,6 +880,7 @@ namespace PaletteExplorer.Controls
             this.tsmiCustomColourOneColour.Name = "tsmiCustomColourOneColour";
             this.tsmiCustomColourOneColour.Size = new System.Drawing.Size(282, 22);
             this.tsmiCustomColourOneColour.Text = "Use Custom Colour &One Colour as Base";
+            this.tsmiCustomColourOneColour.Click += new System.EventHandler(this.TsmiCustomColourOneColour_Click);
             // 
             // ctxCustomColourTwoColour
             // 
@@ -872,6 +895,7 @@ namespace PaletteExplorer.Controls
             this.tsmiCustomColourTwoColour.Name = "tsmiCustomColourTwoColour";
             this.tsmiCustomColourTwoColour.Size = new System.Drawing.Size(282, 22);
             this.tsmiCustomColourTwoColour.Text = "Use Custom Colour &Two Colour as Base";
+            this.tsmiCustomColourTwoColour.Click += new System.EventHandler(this.TsmiCustomColourTwoColour_Click);
             // 
             // ctxCustomColourFiveColour
             // 
@@ -886,6 +910,7 @@ namespace PaletteExplorer.Controls
             this.tsmlCustomColourFiveColour.Name = "tsmlCustomColourFiveColour";
             this.tsmlCustomColourFiveColour.Size = new System.Drawing.Size(281, 22);
             this.tsmlCustomColourFiveColour.Text = "Use Custom Colour &Five Colour as Base";
+            this.tsmlCustomColourFiveColour.Click += new System.EventHandler(this.TsmlCustomColourFiveColour_Click);
             // 
             // ctxCustomTextColourOneColour
             // 
@@ -900,6 +925,7 @@ namespace PaletteExplorer.Controls
             this.tsmiCustomTextColourOneColour.Name = "tsmiCustomTextColourOneColour";
             this.tsmiCustomTextColourOneColour.Size = new System.Drawing.Size(306, 22);
             this.tsmiCustomTextColourOneColour.Text = "Use Custom Text Colour &One Colour as Base";
+            this.tsmiCustomTextColourOneColour.Click += new System.EventHandler(this.TsmiCustomTextColourOneColour_Click);
             // 
             // ctxCustomTextColourFiveColour
             // 
@@ -914,6 +940,7 @@ namespace PaletteExplorer.Controls
             this.tsmiCustomTextColourFiveColour.Name = "tsmiCustomTextColourFiveColour";
             this.tsmiCustomTextColourFiveColour.Size = new System.Drawing.Size(305, 22);
             this.tsmiCustomTextColourFiveColour.Text = "Use Custom Text Colour &Five Colour as Base";
+            this.tsmiCustomTextColourFiveColour.Click += new System.EventHandler(this.TsmiCustomTextColourFiveColour_Click);
             // 
             // ctxCustomTextColourFourColour
             // 
@@ -928,6 +955,7 @@ namespace PaletteExplorer.Controls
             this.tsmiCustomTextColourFourColour.Name = "tsmiCustomTextColourFourColour";
             this.tsmiCustomTextColourFourColour.Size = new System.Drawing.Size(308, 22);
             this.tsmiCustomTextColourFourColour.Text = "Use Custom Text Colour &Four Colour as Base";
+            this.tsmiCustomTextColourFourColour.Click += new System.EventHandler(this.TsmiCustomTextColourFourColour_Click);
             // 
             // ctxMenuTextColour
             // 
@@ -942,6 +970,7 @@ namespace PaletteExplorer.Controls
             this.tsmiMenuTextColour.Name = "tsmiMenuTextColour";
             this.tsmiMenuTextColour.Size = new System.Drawing.Size(231, 22);
             this.tsmiMenuTextColour.Text = "Use &Menu Text Colour as Base";
+            this.tsmiMenuTextColour.Click += new System.EventHandler(this.TsmiMenuTextColour_Click);
             // 
             // ctxCustomTextColourTwoColour
             // 
@@ -956,6 +985,7 @@ namespace PaletteExplorer.Controls
             this.tsmiCustomTextColourTwoColour.Name = "tsmiCustomTextColourTwoColour";
             this.tsmiCustomTextColourTwoColour.Size = new System.Drawing.Size(306, 22);
             this.tsmiCustomTextColourTwoColour.Text = "Use Custom Text Colour &Two Colour as Base";
+            this.tsmiCustomTextColourTwoColour.Click += new System.EventHandler(this.TsmiCustomTextColourTwoColour_Click);
             // 
             // ctxCustomTextColourThreeColour
             // 
@@ -970,6 +1000,7 @@ namespace PaletteExplorer.Controls
             this.tsmiCustomTextColourThreeColour.Name = "tsmiCustomTextColourThreeColour";
             this.tsmiCustomTextColourThreeColour.Size = new System.Drawing.Size(314, 22);
             this.tsmiCustomTextColourThreeColour.Text = "Use Custom Text Colour &Three Colour as Base";
+            this.tsmiCustomTextColourThreeColour.Click += new System.EventHandler(this.TsmiCustomTextColourThreeColour_Click);
             // 
             // ctxStatusStripTextColour
             // 
@@ -984,6 +1015,7 @@ namespace PaletteExplorer.Controls
             this.tsmiStatusStripTextColour.Name = "tsmiStatusStripTextColour";
             this.tsmiStatusStripTextColour.Size = new System.Drawing.Size(259, 22);
             this.tsmiStatusStripTextColour.Text = "Use &Status Strip Text Colour as Base";
+            this.tsmiStatusStripTextColour.Click += new System.EventHandler(this.TsmiStatusStripTextColour_Click);
             // 
             // ctxLinkFocusedTextColour
             // 
@@ -998,6 +1030,7 @@ namespace PaletteExplorer.Controls
             this.tsmiLinkFocusedTextColour.Name = "tsmiLinkFocusedTextColour";
             this.tsmiLinkFocusedTextColour.Size = new System.Drawing.Size(269, 22);
             this.tsmiLinkFocusedTextColour.Text = "Use Link &Focused Text Colour as Base";
+            this.tsmiLinkFocusedTextColour.Click += new System.EventHandler(this.TsmiLinkFocusedTextColour_Click);
             // 
             // ctxRibbonTabTextColour
             // 
@@ -1012,6 +1045,7 @@ namespace PaletteExplorer.Controls
             this.tsmiRibbonTabTextColour.Name = "tsmiRibbonTabTextColour";
             this.tsmiRibbonTabTextColour.Size = new System.Drawing.Size(260, 22);
             this.tsmiRibbonTabTextColour.Text = "Use &Ribbon Tab Text Colour as Base";
+            this.tsmiRibbonTabTextColour.Click += new System.EventHandler(this.TsmiRibbonTabTextColour_Click);
             // 
             // ctxCustomColourSixColour
             // 
@@ -1026,6 +1060,7 @@ namespace PaletteExplorer.Controls
             this.tsmiCustomColourSixColour.Name = "tsmiCustomColourSixColour";
             this.tsmiCustomColourSixColour.Size = new System.Drawing.Size(274, 22);
             this.tsmiCustomColourSixColour.Text = "Use Custom Colour &Six Colour as Base";
+            this.tsmiCustomColourSixColour.Click += new System.EventHandler(this.TsmiCustomColourSixColour_Click);
             // 
             // ctxLinkVisitedTextColour
             // 
@@ -1040,6 +1075,7 @@ namespace PaletteExplorer.Controls
             this.tsmiLinkVisitedTextColour.Name = "tsmiLinkVisitedTextColour";
             this.tsmiLinkVisitedTextColour.Size = new System.Drawing.Size(260, 22);
             this.tsmiLinkVisitedTextColour.Text = "Use Link &Visited Text Colour as Base";
+            this.tsmiLinkVisitedTextColour.Click += new System.EventHandler(this.TsmiLinkVisitedTextColour_Click);
             // 
             // ctxCustomTextColourSixColour
             // 
@@ -1054,6 +1090,7 @@ namespace PaletteExplorer.Controls
             this.tsmiCustomTextColourSixColour.Name = "tsmiCustomTextColourSixColour";
             this.tsmiCustomTextColourSixColour.Size = new System.Drawing.Size(298, 22);
             this.tsmiCustomTextColourSixColour.Text = "Use Custom Text Colour &Six Colour as Base";
+            this.tsmiCustomTextColourSixColour.Click += new System.EventHandler(this.TsmiCustomTextColourSixColour_Click);
             // 
             // CircularPictureBoxControl
             // 
@@ -1134,9 +1171,13 @@ namespace PaletteExplorer.Controls
         #endregion
 
         #region Variables
+        private ArrayList _boxListCollection = new ArrayList();
+
         private CircularPictureBox baseColourPreview, darkColourPreview, middleColourPreview, lightColourPreview, lightestColourPreview, borderColourPreview, alternativeNormalTextColourPreview, normalTextColourPreview, disabledTextColourPreview, focusedTextColourPreview, pressedTextColourPreview, disabledControlColourPreview, linkNormalColourPreview, linkFocusedColourPreview, linkHoverColourPreview, linkVisitedColourPreview, customColourOnePreview, customColourTwoPreview, customColourThreePreview, customColourFourPreview, customColourFivePreview, customColourSixPreview, customTextColourOnePreview, customTextColourTwoPreview, customTextColourThreePreview, customTextColourFourPreview, customTextColourFivePreview, customTextColourSixPreview, menuTextColourPreview, statusTextColourPreview, ribbonTabTextColourPreview;
 
         private ContextMenuStrip baseColourMenu, darkColourMenu, middleColourMenu, lightColourMenu, lightestColourMenu, borderColourMenu, alternativeNormalTextColourMenu, normalTextColourMenu, disabledTextColourMenu, focusedTextColourMenu, pressedTextColourMenu, disabledControlColourMenu, linkNormalColourMenu, linkFocusedColourMenu, linkHoverColourMenu, linkVisitedColourMenu, customColourOneMenu, customColourTwoMenu, customColourThreeMenu, customColourFourMenu, customColourFiveMenu, customColourSixMenu, customTextColourOneMenu, customTextColourTwoMenu, customTextColourThreeMenu, customTextColourFourMenu, customTextColourFiveMenu, customTextColourSixMenu, menuTextColourMenu, statusTextColourMenu, ribbonTabTextColourMenu;
+
+        private CircularPictureBox[] _circularPictureBoxCollection;
         #endregion
 
         #region Properties
@@ -1663,7 +1704,7 @@ namespace PaletteExplorer.Controls
 
             SetAlternativeNormalTextColourPreview(cbxAlternativeNormalTextColourPreview);
 
-            SetNormalColourPreview(cbxNormalTextColourPreview);
+            SetNormalTextColourPreview(cbxNormalTextColourPreview);
 
             SetDisabledTextColourPreview(cbxDisabledTextColourPreview);
 
@@ -1727,7 +1768,7 @@ namespace PaletteExplorer.Controls
 
             SetAlternativeNormalTextColourMenu(ctxAlternativeNormalTextColour);
 
-            SetNormalColourMenu(ctxNormalTextColour);
+            SetNormalTextColourMenu(ctxNormalTextColour);
 
             SetDisabledTextColourMenu(ctxDisabedTextColour);
 
@@ -1791,7 +1832,7 @@ namespace PaletteExplorer.Controls
 
             AssignContextMenuToControl(GetAlternativeNormalTextColourPreview(), GetAlternativeNormalTextColourMenu());
 
-            AssignContextMenuToControl(GetNormalColourPreview(), GetNormalColourMenu());
+            AssignContextMenuToControl(GetNormalTextColourPreview(), GetNormalTextColourMenu());
 
             AssignContextMenuToControl(GetDisabledTextColourPreview(), GetDisabledTextColourMenu());
 
@@ -1839,6 +1880,234 @@ namespace PaletteExplorer.Controls
 
             AssignContextMenuToControl(GetRibbonTabTextColourPreview(), GetRibbonTabTextColourMenu());
             #endregion
+
+            #region Fill ArrayList
+            AddToBoxListCollection(GetBaseColourPreview());
+
+            AddToBoxListCollection(GetDarkColourPreview());
+
+            AddToBoxListCollection(GetMiddleColourPreview());
+
+            AddToBoxListCollection(GetLightColourPreview());
+
+            AddToBoxListCollection(GetLightestColourPreview());
+
+            AddToBoxListCollection(GetBorderColourPreview());
+
+            AddToBoxListCollection(GetAlternativeNormalTextColourPreview());
+
+            AddToBoxListCollection(GetNormalTextColourPreview());
+
+            AddToBoxListCollection(GetDisabledTextColourPreview());
+
+            AddToBoxListCollection(GetFocusedTextColourPreview());
+
+            AddToBoxListCollection(GetPressedTextColourPreview());
+
+            AddToBoxListCollection(GetDisabledControlColourPreview());
+
+            AddToBoxListCollection(GetLinkNormalColourPreview());
+
+            AddToBoxListCollection(GetLinkFocusedColourPreview());
+
+            AddToBoxListCollection(GetLinkHoverColourPreview());
+
+            AddToBoxListCollection(GetLinkVisitedColourPreview());
+
+            AddToBoxListCollection(GetCustomColourOneColourPreview());
+
+            AddToBoxListCollection(GetCustomColourTwoColourPreview());
+
+            AddToBoxListCollection(GetCustomColourThreeColourPreview());
+
+            AddToBoxListCollection(GetCustomColourFourColourPreview());
+
+            AddToBoxListCollection(GetCustomColourFiveColourPreview());
+
+            AddToBoxListCollection(GetCustomColourSixColourPreview());
+
+            AddToBoxListCollection(GetCustomTextColourOneColourPreview());
+
+            AddToBoxListCollection(GetCustomTextColourTwoColourPreview());
+
+            AddToBoxListCollection(GetCustomTextColourThreeColourPreview());
+
+            AddToBoxListCollection(GetCustomTextColourFourColourPreview());
+
+            AddToBoxListCollection(GetCustomTextColourFiveColourPreview());
+
+            AddToBoxListCollection(GetCustomTextColourSixColourPreview());
+
+            AddToBoxListCollection(GetMenuTextColourPreview());
+
+            AddToBoxListCollection(GetStatusTextColourPreview());
+
+            AddToBoxListCollection(GetRibbonTabTextColourPreview());
+            #endregion
+        }
+        #endregion
+
+        #region Event Handlers
+        private void CbxBaseColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(GetBaseColourPreview(), GetBaseColourPreview().BackColor, "Base", true);
+        }
+        #endregion
+
+        #region Colour Handlers
+        private void UseBaseColourAsBaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetBaseColourPreview());
+        }
+
+        private void TsmiMediumColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetMiddleColourPreview());
+        }
+
+        private void TsmiLightColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetLightColourPreview());
+        }
+
+        private void TsmiLightestColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetLightestColourPreview());
+        }
+
+        private void TsmiAlternativeNormalTextColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetAlternativeNormalTextColourPreview());
+        }
+
+        private void TsmiBorderColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetBorderColourPreview());
+        }
+
+        private void TsmiNormalTextColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetNormalTextColourPreview());
+        }
+
+        private void TsmiLinkNormalTextColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetLinkNormalColourPreview());
+        }
+
+        private void TsmiDisabledControlColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetDisabledControlColourPreview());
+        }
+
+        private void TsmiDisabledTextColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetDisabledTextColourPreview());
+        }
+
+        private void TsmiFocusedTextColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetFocusedTextColourPreview());
+        }
+
+        private void TsmiPressedTextColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetPressedTextColourPreview());
+        }
+
+        private void TsmiLinkHoverTextColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetLinkHoverColourPreview());
+        }
+
+        private void TsmiCustomColourFourColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetCustomColourFourColourPreview());
+        }
+
+        private void TsiDarkColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetDarkColourPreview());
+        }
+
+        private void TsmiCustomColourThreeColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetCustomColourThreeColourPreview());
+        }
+
+        private void TsmiCustomColourOneColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetCustomColourOneColourPreview());
+        }
+
+        private void TsmiCustomColourTwoColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetCustomColourTwoColourPreview());
+        }
+
+        private void TsmlCustomColourFiveColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetCustomColourFiveColourPreview());
+        }
+
+        private void TsmiCustomTextColourOneColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetCustomTextColourOneColourPreview());
+        }
+
+        private void TsmiCustomTextColourFiveColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetCustomTextColourFiveColourPreview());
+        }
+
+        private void TsmiCustomTextColourFourColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetCustomTextColourFourColourPreview());
+        }
+
+        private void TsmiMenuTextColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetMenuTextColourPreview());
+        }
+
+        private void TsmiCustomTextColourTwoColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetCustomTextColourTwoColourPreview());
+        }
+
+        private void TsmiCustomTextColourThreeColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetCustomTextColourThreeColourPreview());
+        }
+
+        private void TsmiStatusStripTextColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetStatusTextColourPreview());
+        }
+
+        private void TsmiLinkFocusedTextColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetLinkFocusedColourPreview());
+        }
+
+        private void TsmiRibbonTabTextColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetRibbonTabTextColourPreview());
+        }
+
+        private void TsmiCustomColourSixColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetCustomColourSixColourPreview());
+        }
+
+        private void TsmiLinkVisitedTextColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetLinkVisitedColourPreview());
+        }
+
+        private void TsmiCustomTextColourSixColour_Click(object sender, EventArgs e)
+        {
+            ColourHelpers.RecreatePaletteColours(GetCustomTextColourSixColourPreview());
         }
         #endregion
 
@@ -1972,19 +2241,19 @@ namespace PaletteExplorer.Controls
         }
 
         /// <summary>
-        /// Sets the value of NormalColourPreview to value.
+        /// Sets the value of NormalTextColourPreview to value.
         /// </summary>
-        /// <param name="value">The value of NormalColourPreview.</param>
-        public void SetNormalColourPreview(CircularPictureBox value)
+        /// <param name="value">The value of NormalTextColourPreview.</param>
+        public void SetNormalTextColourPreview(CircularPictureBox value)
         {
             NormalTextColourPreview = value;
         }
 
         /// <summary>
-        /// Returns the value of NormalColourPreview.
+        /// Returns the value of NormalTextColourPreview.
         /// </summary>
-        /// <returns>The value of NormalColourPreview.</returns>
-        public CircularPictureBox GetNormalColourPreview()
+        /// <returns>The value of NormalTextColourPreview.</returns>
+        public CircularPictureBox GetNormalTextColourPreview()
         {
             return NormalTextColourPreview;
         }
@@ -2532,19 +2801,19 @@ namespace PaletteExplorer.Controls
         }
 
         /// <summary>
-        /// Sets the value of NormalColourMenu to value.
+        /// Sets the value of NormalTextColourMenu to value.
         /// </summary>
-        /// <param name="value">The value of NormalColourMenu.</param>
-        public void SetNormalColourMenu(ContextMenuStrip value)
+        /// <param name="value">The value of NormalTextColourMenu.</param>
+        public void SetNormalTextColourMenu(ContextMenuStrip value)
         {
             NormalTextColourMenu = value;
         }
 
         /// <summary>
-        /// Returns the value of NormalColourMenu.
+        /// Returns the value of NormalTextColourMenu.
         /// </summary>
-        /// <returns>The value of NormalColourMenu.</returns>
-        public ContextMenuStrip GetNormalColourMenu()
+        /// <returns>The value of NormalTextColourMenu.</returns>
+        public ContextMenuStrip GetNormalTextColourMenu()
         {
             return NormalTextColourMenu;
         }
@@ -2975,6 +3244,228 @@ namespace PaletteExplorer.Controls
         private void AssignContextMenuToControl(Control control, ContextMenuStrip contextMenu)
         {
             control.ContextMenuStrip = contextMenu;
+        }
+
+        public static void SetDefaultColour(Color defaultColour, CircularPictureBoxControl control)
+        {
+            control.GetBaseColourPreview().BackColor = defaultColour;
+
+            control.GetDarkColourPreview().BackColor = defaultColour;
+
+            control.GetMiddleColourMenu().BackColor = defaultColour;
+
+            control.GetLightColourPreview().BackColor = defaultColour;
+
+            control.GetLightestColourPreview().BackColor = defaultColour;
+
+            control.GetBorderColourPreview().BackColor = defaultColour;
+
+            control.GetAlternativeNormalTextColourPreview().BackColor = defaultColour;
+
+            control.GetNormalTextColourPreview().BackColor = defaultColour;
+
+            control.GetDisabledTextColourPreview().BackColor = defaultColour;
+
+            control.GetFocusedTextColourPreview().BackColor = defaultColour;
+
+            control.GetPressedTextColourPreview().BackColor = defaultColour;
+
+            control.GetDisabledControlColourPreview().BackColor = defaultColour;
+
+            control.GetLinkNormalColourPreview().BackColor = defaultColour;
+
+            control.GetLinkFocusedColourPreview().BackColor = defaultColour;
+
+            control.GetLinkHoverColourPreview().BackColor = defaultColour;
+
+            control.GetLinkVisitedColourPreview().BackColor = defaultColour;
+
+            control.GetCustomColourOneColourPreview().BackColor = defaultColour;
+
+            control.GetCustomColourTwoColourPreview().BackColor = defaultColour;
+
+            control.GetCustomColourThreeColourPreview().BackColor = defaultColour;
+
+            control.GetCustomColourFourColourPreview().BackColor = defaultColour;
+
+            control.GetCustomColourFiveColourPreview().BackColor = defaultColour;
+
+            control.GetCustomColourSixColourPreview().BackColor = defaultColour;
+
+            control.GetCustomTextColourOneColourPreview().BackColor = defaultColour;
+
+            control.GetCustomTextColourTwoColourPreview().BackColor = defaultColour;
+
+            control.GetCustomTextColourThreeColourPreview().BackColor = defaultColour;
+
+            control.GetCustomTextColourFourColourPreview().BackColor = defaultColour;
+
+            control.GetCustomTextColourFiveColourPreview().BackColor = defaultColour;
+
+            control.GetCustomTextColourSixColourPreview().BackColor = defaultColour;
+
+            control.GetMenuTextColourPreview().BackColor = defaultColour;
+
+            control.GetStatusTextColourPreview().BackColor = defaultColour;
+
+            control.GetRibbonTabTextColourPreview().BackColor = defaultColour;
+        }
+
+        public static void ResetColours(CircularPictureBoxControl control)
+        {
+            Color transparent = Color.Transparent;
+
+            control.GetBaseColourPreview().BackColor = transparent;
+
+            control.GetDarkColourPreview().BackColor = transparent;
+
+            control.GetMiddleColourMenu().BackColor = transparent;
+
+            control.GetLightColourPreview().BackColor = transparent;
+
+            control.GetLightestColourPreview().BackColor = transparent;
+
+            control.GetBorderColourPreview().BackColor = transparent;
+
+            control.GetAlternativeNormalTextColourPreview().BackColor = transparent;
+
+            control.GetNormalTextColourPreview().BackColor = transparent;
+
+            control.GetDisabledTextColourPreview().BackColor = transparent;
+
+            control.GetFocusedTextColourPreview().BackColor = transparent;
+
+            control.GetPressedTextColourPreview().BackColor = transparent;
+
+            control.GetDisabledControlColourPreview().BackColor = transparent;
+
+            control.GetLinkNormalColourPreview().BackColor = transparent;
+
+            control.GetLinkFocusedColourPreview().BackColor = transparent;
+
+            control.GetLinkHoverColourPreview().BackColor = transparent;
+
+            control.GetLinkVisitedColourPreview().BackColor = transparent;
+
+            control.GetCustomColourOneColourPreview().BackColor = transparent;
+
+            control.GetCustomColourTwoColourPreview().BackColor = transparent;
+
+            control.GetCustomColourThreeColourPreview().BackColor = transparent;
+
+            control.GetCustomColourFourColourPreview().BackColor = transparent;
+
+            control.GetCustomColourFiveColourPreview().BackColor = transparent;
+
+            control.GetCustomColourSixColourPreview().BackColor = transparent;
+
+            control.GetCustomTextColourOneColourPreview().BackColor = transparent;
+
+            control.GetCustomTextColourTwoColourPreview().BackColor = transparent;
+
+            control.GetCustomTextColourThreeColourPreview().BackColor = transparent;
+
+            control.GetCustomTextColourFourColourPreview().BackColor = transparent;
+
+            control.GetCustomTextColourFiveColourPreview().BackColor = transparent;
+
+            control.GetCustomTextColourSixColourPreview().BackColor = transparent;
+
+            control.GetMenuTextColourPreview().BackColor = transparent;
+
+            control.GetStatusTextColourPreview().BackColor = transparent;
+
+            control.GetRibbonTabTextColourPreview().BackColor = transparent;
+        }
+
+        public static void ResetColours()
+        {
+            CircularPictureBoxControl control = new CircularPictureBoxControl();
+
+            try
+            {
+                if (control._boxListCollection.Count > 0)
+                {
+                    foreach (CircularPictureBox box in control._boxListCollection)
+                    {
+                        box.BackColor = Color.Transparent;
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+
+                throw;
+            }
+        }
+
+        public static void ResetColours(Color defaultColour)
+        {
+            CircularPictureBoxControl control = new CircularPictureBoxControl();
+
+            try
+            {
+                foreach (CircularPictureBox box in control._boxListCollection)
+                {
+                    box.BackColor = defaultColour;
+                }
+            }
+            catch (Exception exc)
+            {
+
+                throw;
+            }
+        }
+
+        public void ResetPaletteColours()
+        {
+            try
+            {
+                if (_boxListCollection.Count > 0)
+                {
+                    foreach (CircularPictureBox box in _boxListCollection)
+                    {
+                        box.BackColor = Color.Transparent;
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+
+                throw;
+            }
+        }
+
+        public void ResetPaletteColours(Color defaultColour)
+        {
+            try
+            {
+                foreach (CircularPictureBox box in _boxListCollection)
+                {
+                    box.BackColor = defaultColour;
+                }
+            }
+            catch (Exception exc)
+            {
+
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Adds to box list collection.
+        /// </summary>
+        /// <param name="box">The box.</param>
+        private void AddToBoxListCollection(CircularPictureBox box)
+        {
+            try
+            {
+                _boxListCollection.Add(box);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.CaptureException(e);
+            }
         }
         #endregion
     }

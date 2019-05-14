@@ -8,6 +8,7 @@
 #endregion
 
 using System;
+using System.Drawing;
 
 namespace Core.Classes
 {
@@ -75,6 +76,88 @@ namespace Core.Classes
         public Version ParseVersion(string versionInput)
         {
             return Version.Parse(versionInput);
+        }
+
+        /// <summary>
+        /// Translates the colour to ARGB.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
+        public static string TranslateColourToARGB(Color colour)
+        {
+            return $"ARGB: ({ colour.A }, { colour.R }, { colour.G }, { colour.B })";
+        }
+
+        /// <summary>
+        /// Translates the colour to RGB.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
+        public static string TranslateColourToRGB(Color colour)
+        {
+            return $"RGB: ({ colour.R }, { colour.G }, { colour.B })";
+        }
+
+        /// <summary>
+        /// Translates the colour to hexadecinal.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
+        public static string TranslateColourToHexadecimal(Color colour)
+        {
+            return $"Hexadecimal Value: #{ ConvertRGBToHexadecimal(Convert.ToInt32(colour.R), Convert.ToInt32(colour.G), Convert.ToInt32(colour.B)).ToUpper() }";
+        }
+
+        /// <summary>
+        /// Gets the colour brightness.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
+        public static string GetColourBrightness(Color colour)
+        {
+            return $"Brightness: { Convert.ToInt32(colour.GetBrightness()).ToString() }";
+        }
+
+        /// <summary>
+        /// Gets the colour hue.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
+        public static string GetColourHue(Color colour)
+        {
+            return $"Hue: { colour.GetHue().ToString() }";
+        }
+
+        /// <summary>
+        /// Gets the colour saturation.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
+        public static string GetColourSaturation(Color colour)
+        {
+            return $"Saturation: { colour.GetSaturation().ToString() }";
+        }
+
+        /// <summary>
+        /// Converts the RGB to hexadecimal.
+        /// </summary>
+        /// <param name="red">The red.</param>
+        /// <param name="green">The green.</param>
+        /// <param name="blue">The blue.</param>
+        /// <returns></returns>
+        private static string ConvertRGBToHexadecimal(int red, int green, int blue)
+        {
+            return ColorTranslator.FromHtml(String.Format("#{0:X2}{1:X2}{2:X2}", red, green, blue)).Name.Remove(0, 1);
+        }
+
+        public static string GetKnownColourName(Color colour)
+        {
+            return colour.ToKnownColor().ToString();
+        }
+
+        public static string GetColourName(Color colour)
+        {
+            return colour.Name;
         }
         #endregion
     }
