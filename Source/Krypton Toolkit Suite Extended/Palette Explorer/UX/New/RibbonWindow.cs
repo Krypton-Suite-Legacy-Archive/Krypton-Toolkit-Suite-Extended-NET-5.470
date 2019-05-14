@@ -11,6 +11,7 @@ using ComponentFactory.Krypton.Docking;
 using ComponentFactory.Krypton.Navigator;
 using ComponentFactory.Krypton.Toolkit;
 using PaletteExplorer.Controls;
+using PaletteExplorer.UX.Colour;
 using System;
 using System.Reflection;
 using System.Windows.Forms;
@@ -219,6 +220,10 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonGroupSeparator9 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple13 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbResetColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.ctxReset = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.resetColourUIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.resetColourSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonRibbonGroup2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple14 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbDefineTypefaces = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -268,11 +273,8 @@ namespace PaletteExplorer.UX.New
             this.cpbcPreview = new PaletteExplorer.Controls.CircularPictureBoxControl();
             this.kdm = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
             this.ilImages = new System.Windows.Forms.ImageList(this.components);
-            this.ctxReset = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.resetColourUIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.resetColourSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.krControls)).BeginInit();
+            this.ctxReset.SuspendLayout();
             this.ctxViewTypes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlStatusStrip)).BeginInit();
             this.kpnlStatusStrip.SuspendLayout();
@@ -286,7 +288,6 @@ namespace PaletteExplorer.UX.New
             this.kryptonPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
             this.kryptonPage2.SuspendLayout();
-            this.ctxReset.SuspendLayout();
             this.SuspendLayout();
             // 
             // krControls
@@ -313,7 +314,6 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
-            this.krControls.SelectedContext = null;
             this.krControls.SelectedTab = this.kryptonRibbonTab2;
             this.krControls.Size = new System.Drawing.Size(1662, 115);
             this.krControls.TabIndex = 2;
@@ -534,6 +534,7 @@ namespace PaletteExplorer.UX.New
             this.krgbGenerateColours.ImageSmall = ((System.Drawing.Image)(resources.GetObject("krgbGenerateColours.ImageSmall")));
             this.krgbGenerateColours.TextLine1 = "Generate";
             this.krgbGenerateColours.TextLine2 = "Colours";
+            this.krgbGenerateColours.Click += new System.EventHandler(this.KrgbGenerateColours_Click);
             // 
             // kryptonRibbonGroupTriple7
             // 
@@ -638,6 +639,34 @@ namespace PaletteExplorer.UX.New
             this.krgbResetColours.ImageSmall = global::PaletteExplorer.Properties.Resources.Reset_16_x_16;
             this.krgbResetColours.TextLine1 = "Reset";
             this.krgbResetColours.TextLine2 = "Colours";
+            // 
+            // ctxReset
+            // 
+            this.ctxReset.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxReset.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.resetColourUIToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.resetColourSettingsToolStripMenuItem});
+            this.ctxReset.Name = "ctxReset";
+            this.ctxReset.Size = new System.Drawing.Size(187, 54);
+            // 
+            // resetColourUIToolStripMenuItem
+            // 
+            this.resetColourUIToolStripMenuItem.Name = "resetColourUIToolStripMenuItem";
+            this.resetColourUIToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.resetColourUIToolStripMenuItem.Text = "Reset Colour &UI";
+            this.resetColourUIToolStripMenuItem.Click += new System.EventHandler(this.ResetColourUIToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(183, 6);
+            // 
+            // resetColourSettingsToolStripMenuItem
+            // 
+            this.resetColourSettingsToolStripMenuItem.Name = "resetColourSettingsToolStripMenuItem";
+            this.resetColourSettingsToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.resetColourSettingsToolStripMenuItem.Text = "Reset Colour Settings";
             // 
             // kryptonRibbonGroup2
             // 
@@ -947,34 +976,6 @@ namespace PaletteExplorer.UX.New
             this.ilImages.ImageSize = new System.Drawing.Size(16, 16);
             this.ilImages.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // ctxReset
-            // 
-            this.ctxReset.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ctxReset.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.resetColourUIToolStripMenuItem,
-            this.toolStripMenuItem2,
-            this.resetColourSettingsToolStripMenuItem});
-            this.ctxReset.Name = "ctxReset";
-            this.ctxReset.Size = new System.Drawing.Size(187, 54);
-            // 
-            // resetColourUIToolStripMenuItem
-            // 
-            this.resetColourUIToolStripMenuItem.Name = "resetColourUIToolStripMenuItem";
-            this.resetColourUIToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.resetColourUIToolStripMenuItem.Text = "Reset Colour &UI";
-            this.resetColourUIToolStripMenuItem.Click += new System.EventHandler(this.ResetColourUIToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(183, 6);
-            // 
-            // resetColourSettingsToolStripMenuItem
-            // 
-            this.resetColourSettingsToolStripMenuItem.Name = "resetColourSettingsToolStripMenuItem";
-            this.resetColourSettingsToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.resetColourSettingsToolStripMenuItem.Text = "Reset Colour Settings";
-            // 
             // RibbonWindow
             // 
             this.ClientSize = new System.Drawing.Size(1662, 908);
@@ -992,6 +993,7 @@ namespace PaletteExplorer.UX.New
             this.Load += new System.EventHandler(this.RibbonWindow_Load);
             this.Shown += new System.EventHandler(this.RibbonWindow_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.krControls)).EndInit();
+            this.ctxReset.ResumeLayout(false);
             this.ctxViewTypes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kpnlStatusStrip)).EndInit();
             this.kpnlStatusStrip.ResumeLayout(false);
@@ -1007,7 +1009,6 @@ namespace PaletteExplorer.UX.New
             this.kryptonPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
             this.kryptonPage2.ResumeLayout(false);
-            this.ctxReset.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1186,6 +1187,13 @@ namespace PaletteExplorer.UX.New
         private void ResetColourUIToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cpbcPreview.ResetPaletteColours(_generalPaletteExplorerSettingsManager.GetDefaultColour());
+        }
+
+        private void KrgbGenerateColours_Click(object sender, EventArgs e)
+        {
+            ColourMixerAdvanced colourMixer = new ColourMixerAdvanced();
+
+            colourMixer.Show();
         }
     }
 }

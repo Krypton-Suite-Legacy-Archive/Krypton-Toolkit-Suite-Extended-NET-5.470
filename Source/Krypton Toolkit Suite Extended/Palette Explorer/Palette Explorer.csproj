@@ -77,6 +77,9 @@
     <Compile Include="UX\Colour\ColourMixerAdvanced.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UX\Colour\ColourMixerBasic.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UX\KryptonPalettePropertiesWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +138,9 @@
     </Compile>
     <EmbeddedResource Include="UX\Colour\ColourMixerAdvanced.resx">
       <DependentUpon>ColourMixerAdvanced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Colour\ColourMixerBasic.resx">
+      <DependentUpon>ColourMixerBasic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\KryptonColourPalettePropertiesWindow.resx">
       <DependentUpon>KryptonColourPalettePropertiesWindow.cs</DependentUpon>
