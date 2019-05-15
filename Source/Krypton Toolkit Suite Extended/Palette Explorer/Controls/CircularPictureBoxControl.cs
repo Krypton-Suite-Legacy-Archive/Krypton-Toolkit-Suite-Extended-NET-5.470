@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Drawing;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace PaletteExplorer.Controls
 {
@@ -3466,6 +3467,106 @@ namespace PaletteExplorer.Controls
             {
                 ExceptionHandler.CaptureException(e);
             }
+        }
+        #endregion
+
+        #region Refresh UI
+        /// <summary>
+        /// Refreshes all colours.
+        /// </summary>
+        public void RefreshColours()
+        {
+            #region Variables
+            BasicColourSettingsManager basicColourSettingsManager = new BasicColourSettingsManager();
+
+            CustomColourSettingsManager customColourSettingsManager = new CustomColourSettingsManager();
+
+            CustomTextColourSettingsManager customTextColourSettingsManager = new CustomTextColourSettingsManager();
+
+            LinkTextColourSettingsManager linkTextColourSettingsManager = new LinkTextColourSettingsManager();
+
+            MiscellaneousColourSettingsManager miscellaneousColourSettingsManager = new MiscellaneousColourSettingsManager();
+
+            StandardControlTextColourSettingsManager standardControlTextColourSettingsManager = new StandardControlTextColourSettingsManager();
+
+            TextColourSettingsManager textColourSettingsManager = new TextColourSettingsManager();
+            #endregion
+
+            #region Basics
+            GetBaseColourPreview().BackColor = basicColourSettingsManager.GetBaseColour();
+
+            GetDarkColourPreview().BackColor = basicColourSettingsManager.GetDarkColour();
+
+            GetMiddleColourPreview().BackColor = basicColourSettingsManager.GetMediumColour();
+
+            GetLightColourPreview().BackColor = basicColourSettingsManager.GetLightColour();
+
+            GetLightestColourPreview().BackColor = basicColourSettingsManager.GetLightestColour();
+            #endregion
+
+            #region Custom Colours
+            GetCustomColourOneColourPreview().BackColor = customColourSettingsManager.GetCustomColourOne();
+
+            GetCustomColourTwoColourPreview().BackColor = customColourSettingsManager.GetCustomColourTwo();
+
+            GetCustomColourThreeColourPreview().BackColor = customColourSettingsManager.GetCustomColourThree();
+
+            GetCustomColourFourColourPreview().BackColor = customColourSettingsManager.GetCustomColourFour();
+
+            GetCustomColourFiveColourPreview().BackColor = customColourSettingsManager.GetCustomColourFive();
+
+            GetCustomColourSixColourPreview().BackColor = customColourSettingsManager.GetCustomColourSix();
+            #endregion
+
+            #region Custom Text Colours
+            GetCustomTextColourOneColourPreview().BackColor = customTextColourSettingsManager.GetCustomTextColourOne();
+
+            GetCustomTextColourTwoColourPreview().BackColor = customTextColourSettingsManager.GetCustomTextColourTwo();
+
+            GetCustomTextColourThreeColourPreview().BackColor = customTextColourSettingsManager.GetCustomTextColourThree();
+
+            GetCustomTextColourFourColourPreview().BackColor = customTextColourSettingsManager.GetCustomTextColourFour();
+
+            GetCustomTextColourFiveColourPreview().BackColor = customTextColourSettingsManager.GetCustomTextColourFive();
+
+            GetCustomTextColourSixColourPreview().BackColor = customTextColourSettingsManager.GetCustomTextColourSix();
+            #endregion
+
+            #region Link Text Colours
+            GetLinkFocusedColourPreview().BackColor = linkTextColourSettingsManager.GetLinkFocusedColour();
+
+            GetLinkHoverColourPreview().BackColor = linkTextColourSettingsManager.GetLinkHoverColour();
+
+            GetLinkNormalColourPreview().BackColor = linkTextColourSettingsManager.GetLinkNormalColour();
+
+            GetLinkVisitedColourMenu().BackColor = linkTextColourSettingsManager.GetLinkVisitedColour();
+            #endregion
+
+            #region Miscellaneous Colours
+            GetBorderColourPreview().BackColor = miscellaneousColourSettingsManager.GetBorderColour();
+
+            GetDisabledControlColourPreview().BackColor = miscellaneousColourSettingsManager.GetDisabledControlColour();
+            #endregion
+
+            #region Standard Control Text Colours
+            GetMenuTextColourPreview().BackColor = standardControlTextColourSettingsManager.GetMenuTextColour();
+
+            GetStatusTextColourPreview().BackColor = standardControlTextColourSettingsManager.GetStatusStripTextColour();
+
+            GetRibbonTabTextColourPreview().BackColor = standardControlTextColourSettingsManager.GetRibbonTabTextColour();
+            #endregion
+
+            #region Text Colours
+            GetAlternativeNormalTextColourPreview().BackColor = textColourSettingsManager.GetAlternativeNormalTextColour();
+
+            GetDisabledTextColourPreview().BackColor = textColourSettingsManager.GetDisabledTextColour();
+
+            GetFocusedTextColourPreview().BackColor = textColourSettingsManager.GetFocusedTextColour();
+
+            GetNormalTextColourPreview().BackColor = textColourSettingsManager.GetNormalTextColour();
+
+            GetPressedTextColourPreview().BackColor = textColourSettingsManager.GetPressedTextColour();
+            #endregion
         }
         #endregion
     }

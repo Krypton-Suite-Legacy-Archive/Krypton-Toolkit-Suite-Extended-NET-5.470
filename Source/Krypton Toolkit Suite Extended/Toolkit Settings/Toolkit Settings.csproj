@@ -71,6 +71,7 @@
     <Compile Include="Classes\Global\GlobalBooleanSettingsManager.cs" />
     <Compile Include="Classes\Helpers\ColourMerger.cs" />
     <Compile Include="Classes\Helpers\SettingsVarifier.cs" />
+    <Compile Include="Classes\Palette Explorer\ColourCollectionStringSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\ColourIntensitySettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\Colours\AllMergedColourSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\Colours\BasicColourSettingsManager.cs" />
@@ -128,6 +129,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>GlobalBooleanSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\ColourCollectionStringSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ColourCollectionStringSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="Settings\Palette Explorer\ColourIntensitySettings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -224,6 +230,10 @@
     <None Include="Settings\Global\GlobalBooleanSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>GlobalBooleanSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\ColourCollectionStringSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ColourCollectionStringSettings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Settings\Palette Explorer\ColourIntensitySettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -7,10 +7,11 @@
  */
 #endregion 
 
-using Core.UX;
 using ExtendedControls.ExtendedToolkit.Controls;
+using PaletteExplorer.UX.Colour;
 using System;
 using System.Drawing;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace PaletteExplorer.Classes
 {
@@ -23,22 +24,26 @@ namespace PaletteExplorer.Classes
         /// <param name="control">The control.</param>
         public static void RecreatePaletteColours(CircularPictureBox control)
         {
-            PaletteColourCreator paletteColourCreator = new PaletteColourCreator(control.BackColor);
+            //PaletteColourCreator paletteColourCreator = new PaletteColourCreator(control.BackColor);
 
-            paletteColourCreator.Show();
+            //paletteColourCreator.Show();
+
+            ColourMixerAdvanced colourMixerAdvanced = new ColourMixerAdvanced(control.BackColor);
+
+            colourMixerAdvanced.Show();
         }
 
-        internal static void GenerateColourShades(Color baseColor, CircularPictureBox darkColour, CircularPictureBox mediumColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, float darkestColourIntensity, float mediumColourIntensity, float lightColourIntensity, float lightestColourIntensity)
+        internal static void GenerateColourShades(Color baseColour, CircularPictureBox darkColour, CircularPictureBox mediumColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, float darkestColourIntensity, float mediumColourIntensity, float lightColourIntensity, float lightestColourIntensity)
         {
-            if (baseColor != null || baseColor.IsEmpty || baseColor == Color.Transparent)
+            if (baseColour != null || baseColour.IsEmpty || baseColour == Color.Transparent)
             {
-                darkColour.BackColor = Darken(baseColor, darkestColourIntensity);
+                darkColour.BackColor = Darken(baseColour, darkestColourIntensity);
 
-                mediumColour.BackColor = Darken(baseColor, mediumColourIntensity);
+                mediumColour.BackColor = Darken(baseColour, mediumColourIntensity);
 
-                lightColour.BackColor = Lighten(baseColor, lightColourIntensity);
+                lightColour.BackColor = Lighten(baseColour, lightColourIntensity);
 
-                lightestColour.BackColor = Lighten(baseColor, lightestColourIntensity);
+                lightestColour.BackColor = Lighten(baseColour, lightestColourIntensity);
             }
         }
 
@@ -193,6 +198,55 @@ namespace PaletteExplorer.Classes
             Random randomColour = new Random();
 
             return Color.FromArgb(randomColour.Next(256), randomColour.Next(256), randomColour.Next(256), randomColour.Next(256));
+        }
+
+        /// <summary>
+        /// Whites the wash all colours.
+        /// </summary>
+        public static void WhiteWashAllColours()
+        {
+            #region Variables
+
+            #region Setting Managers
+            AllMergedColourSettingsManager allMergedColourSettingsManager = new AllMergedColourSettingsManager();
+
+            BasicColourSettingsManager basicColourSettingsManager = new BasicColourSettingsManager();
+
+            CustomColourSettingsManager customColourSettingsManager = new CustomColourSettingsManager();
+
+            CustomTextColourSettingsManager customTextColourSettingsManager = new CustomTextColourSettingsManager();
+
+            LinkTextColourSettingsManager linkTextColourSettingsManager = new LinkTextColourSettingsManager();
+
+            MiscellaneousColourSettingsManager miscellaneousColourSettingsManager = new MiscellaneousColourSettingsManager();
+
+            StandardControlTextColourSettingsManager standardControlTextColourSettingsManager = new StandardControlTextColourSettingsManager();
+
+            TextColourSettingsManager textColourSettingsManager = new TextColourSettingsManager();
+            #endregion
+
+            Color white = Color.White;
+            #endregion
+        }
+
+        /// <summary>
+        /// Converts the decimal to float.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public static float ConvertDecimalToFloat(decimal value)
+        {
+            return (float)value;
+        }
+
+        /// <summary>
+        /// Returns the float as string.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public static string ReturnFloatAsString(float value)
+        {
+            return $"{ value }f";
         }
         #endregion
     }

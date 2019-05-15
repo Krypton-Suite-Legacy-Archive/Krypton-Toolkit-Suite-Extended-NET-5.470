@@ -405,6 +405,15 @@ namespace PaletteExplorer.UX.Colour
         {
             InitializeComponent();
         }
+
+        public ColourMixerAdvanced(Color selectedColour)
+        {
+            InitializeComponent();
+
+            cwSelectedColour.Colour = selectedColour;
+
+            UpdateUI(selectedColour, (int)selectedColour.A);
+        }
         #endregion
 
         private void ColourMixerAdvanced_Load(object sender, EventArgs e)
