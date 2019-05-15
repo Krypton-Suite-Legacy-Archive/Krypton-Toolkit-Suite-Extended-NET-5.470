@@ -248,6 +248,11 @@ namespace PaletteExplorer.Classes
         {
             return $"{ value }f";
         }
+
+        public static void SetColour(string text, Color colour)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }

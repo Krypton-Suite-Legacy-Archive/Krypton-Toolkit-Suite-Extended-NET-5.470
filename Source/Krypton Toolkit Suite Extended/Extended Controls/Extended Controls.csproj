@@ -118,6 +118,7 @@
     <Compile Include="Base\Code\Graphics Tools\GraphicsUtilities.cs" />
     <Compile Include="Base\Code\IconExtractor.cs" />
     <Compile Include="Base\Code\IO\FileUtilities.cs" />
+    <Compile Include="Base\Code\IO\StringHandler.cs" />
     <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
     <Compile Include="Base\Code\Linq\LinqBridge-1.3.cs" />
     <Compile Include="Base\Code\ListViewColumnSorter.cs" />
@@ -1287,6 +1288,10 @@
     <ProjectReference Include="..\Krypton Outlook Grid\Krypton Outlook Grid.csproj">
       <Project>{2a10c696-45ad-48aa-8ead-2cb322672972}</Project>
       <Name>Krypton Outlook Grid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toolkit Settings\Toolkit Settings.csproj">
+      <Project>{EA6E7878-FCCB-416C-8FE1-E626D478A7A7}</Project>
+      <Name>Toolkit Settings</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

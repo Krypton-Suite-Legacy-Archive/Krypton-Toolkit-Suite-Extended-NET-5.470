@@ -9,6 +9,7 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using Core;
+using Core.Classes.Other;
 using PaletteExplorer.Classes;
 using System;
 using ToolkitSettings.Classes.PaletteExplorer;
@@ -578,6 +579,14 @@ namespace PaletteExplorer.UX
             try
             {
                 ThemeManager.PropagateThemeSelector(kcbTheme);
+
+                knumDarkValue.Value = ConversionMethods.ConvertFloatToDecimal(_colourIntensitySettingsManager.GetDarkestColourIntensity());
+
+                knumMediumValue.Value = ConversionMethods.ConvertFloatToDecimal(_colourIntensitySettingsManager.GetMediumColourIntensity());
+
+                knumLightValue.Value = ConversionMethods.ConvertFloatToDecimal(_colourIntensitySettingsManager.GetLightColourIntensity());
+
+                knumLightestValue.Value = ConversionMethods.ConvertFloatToDecimal(_colourIntensitySettingsManager.GetLightestColourIntensity());
 
                 klblDarkColourFloatValue.Text = ColourHelpers.ReturnFloatAsString(_colourIntensitySettingsManager.GetDarkestColourIntensity());
 

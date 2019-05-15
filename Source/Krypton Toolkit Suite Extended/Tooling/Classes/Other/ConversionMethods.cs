@@ -25,7 +25,13 @@ namespace Core.Classes.Other
         private double _alpha;
         #endregion
 
-        #region Properties
+        #region Properties        
+        /// <summary>
+        /// Gets or sets the red value.
+        /// </summary>
+        /// <value>
+        /// The red value.
+        /// </value>
         public int Red
         {
             get
@@ -39,6 +45,12 @@ namespace Core.Classes.Other
             }
         }
 
+        /// <summary>
+        /// Gets or sets the green value.
+        /// </summary>
+        /// <value>
+        /// The green value.
+        /// </value>
         public int Green
         {
             get
@@ -52,6 +64,12 @@ namespace Core.Classes.Other
             }
         }
 
+        /// <summary>
+        /// Gets or sets the blue value.
+        /// </summary>
+        /// <value>
+        /// The blue value.
+        /// </value>
         public int Blue
         {
             get
@@ -65,6 +83,12 @@ namespace Core.Classes.Other
             }
         }
 
+        /// <summary>
+        /// Gets or sets the alpha value.
+        /// </summary>
+        /// <value>
+        /// The alpha value.
+        /// </value>
         public double Alpha
         {
             get
@@ -79,7 +103,10 @@ namespace Core.Classes.Other
         }
         #endregion
 
-        #region Constructor
+        #region Constructor        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ConversionMethods"/> class.
+        /// </summary>
         public ConversionMethods()
         {
 
@@ -180,6 +207,11 @@ namespace Core.Classes.Other
         //    return Color.FromArgb(255, red, green, blue);
         //}
 
+        /// <summary>
+        /// Converts the hexadecimal to RGB test.
+        /// </summary>
+        /// <param name="hexColour">The hexadecimal colour.</param>
+        /// <returns></returns>
         public static int[] ConvertHexadecimalToRGBTest(string hexColour)
         {
             int[] result;
@@ -266,15 +298,40 @@ namespace Core.Classes.Other
             return $"{ colour.A.ToString() }, { colour.R.ToString() }, { colour.G.ToString() }, { colour.B.ToString() }";
         }
 
+        /// <summary>
+        /// Formats the colour to hexadecimal.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
         public static String FormatColourToHexadecimal(Color colour)
         {
             int redValue = colour.R, greenValue = colour.G, blueValue = colour.B;
 
             return ColorTranslator.FromHtml(string.Format("#{0:X2}{1:X2}{2:X2}", redValue, greenValue, blueValue)).Name.Remove(0, 1);
         }
+
+        /// <summary>
+        /// Converts the float to decimal.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public static decimal ConvertFloatToDecimal(float value)
+        {
+            return (decimal)value;
+        }
+
+        /// <summary>
+        /// Converts the float to double.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public static double ConvertFloatToDouble(float value)
+        {
+            return (double)value;
+        }
         #endregion
 
-        #region Setters & Getters        
+        #region Setters & Getters
         /// <summary>
         /// Sets the red.
         /// </summary>
@@ -300,11 +357,19 @@ namespace Core.Classes.Other
             }
         }
 
+        /// <summary>
+        /// Sets the green.
+        /// </summary>
+        /// <param name="greenValue">The green value.</param>
         public void SetGreen(int greenValue)
         {
             Green = greenValue;
         }
 
+        /// <summary>
+        /// Gets the green.
+        /// </summary>
+        /// <returns></returns>
         public int GetGreen()
         {
             if (Green < MINIMUM_COLOUR_CHANNEL_VALUE || Green > MAXIMUM_COLOUR_CHANNEL_VALUE)
@@ -317,11 +382,19 @@ namespace Core.Classes.Other
             }
         }
 
+        /// <summary>
+        /// Sets the blue.
+        /// </summary>
+        /// <param name="blueValue">The blue value.</param>
         public void SetBlue(int blueValue)
         {
             Blue = blueValue;
         }
 
+        /// <summary>
+        /// Gets the blue.
+        /// </summary>
+        /// <returns></returns>
         public int GetBlue()
         {
             if (Blue < MINIMUM_COLOUR_CHANNEL_VALUE || Blue > MAXIMUM_COLOUR_CHANNEL_VALUE)
@@ -334,11 +407,19 @@ namespace Core.Classes.Other
             }
         }
 
+        /// <summary>
+        /// Sets the alpha.
+        /// </summary>
+        /// <param name="alphaValue">The alpha value.</param>
         public void SetAlpha(double alphaValue)
         {
             Alpha = alphaValue;
         }
 
+        /// <summary>
+        /// Gets the alpha.
+        /// </summary>
+        /// <returns></returns>
         public double GetAlpha()
         {
             if (Alpha < MINIMUM_ALPHA_CHANNEL_VALUE || Alpha > MAXIMUM_ALPHA_CHANNEL_VALUE)

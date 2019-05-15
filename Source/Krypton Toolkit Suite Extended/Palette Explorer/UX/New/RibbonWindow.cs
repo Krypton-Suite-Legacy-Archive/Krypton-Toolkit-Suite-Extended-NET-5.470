@@ -72,7 +72,7 @@ namespace PaletteExplorer.UX.New
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbGetColours;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator5;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple8;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbExport;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbBasicColourMixer;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple4;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krbViewPaletteFile;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator6;
@@ -96,8 +96,6 @@ namespace PaletteExplorer.UX.New
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple14;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbDefineTypefaces;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator10;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple15;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbDefineTypefaceColour;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup4;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple16;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbViewType;
@@ -200,7 +198,7 @@ namespace PaletteExplorer.UX.New
             this.krgbGetColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator5 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple8 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.krgbExport = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.krgbBasicColourMixer = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupTriple4 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krbViewPaletteFile = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator6 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
@@ -228,8 +226,6 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonGroupTriple14 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbDefineTypefaces = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator10 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
-            this.kryptonRibbonGroupTriple15 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.krgbDefineTypefaceColour = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroup4 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple16 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbViewType = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -314,7 +310,7 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
-            this.krControls.SelectedTab = this.kryptonRibbonTab2;
+            this.krControls.SelectedTab = this.kryptonRibbonTab3;
             this.krControls.Size = new System.Drawing.Size(1662, 115);
             this.krControls.TabIndex = 2;
             // 
@@ -551,14 +547,14 @@ namespace PaletteExplorer.UX.New
             // kryptonRibbonGroupTriple8
             // 
             this.kryptonRibbonGroupTriple8.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.krgbExport});
+            this.krgbBasicColourMixer});
             this.kryptonRibbonGroupTriple8.Visible = false;
             // 
-            // krgbExport
+            // krgbBasicColourMixer
             // 
-            this.krgbExport.TextLine1 = "Export Colour";
-            this.krgbExport.TextLine2 = "Palette";
-            this.krgbExport.Visible = false;
+            this.krgbBasicColourMixer.TextLine1 = "Basic Colour";
+            this.krgbBasicColourMixer.TextLine2 = "Mixer";
+            this.krgbBasicColourMixer.Click += new System.EventHandler(this.KrgbBasicColourMixer_Click);
             // 
             // kryptonRibbonGroupTriple4
             // 
@@ -672,8 +668,7 @@ namespace PaletteExplorer.UX.New
             // 
             this.kryptonRibbonGroup2.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
             this.kryptonRibbonGroupTriple14,
-            this.kryptonRibbonGroupSeparator10,
-            this.kryptonRibbonGroupTriple15});
+            this.kryptonRibbonGroupSeparator10});
             this.kryptonRibbonGroup2.Visible = false;
             // 
             // kryptonRibbonGroupTriple14
@@ -685,16 +680,6 @@ namespace PaletteExplorer.UX.New
             // 
             this.krgbDefineTypefaces.TextLine1 = "Define";
             this.krgbDefineTypefaces.TextLine2 = "Typefaces";
-            // 
-            // kryptonRibbonGroupTriple15
-            // 
-            this.kryptonRibbonGroupTriple15.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.krgbDefineTypefaceColour});
-            // 
-            // krgbDefineTypefaceColour
-            // 
-            this.krgbDefineTypefaceColour.TextLine1 = "Define Typeface";
-            this.krgbDefineTypefaceColour.TextLine2 = "Colour";
             // 
             // kryptonRibbonGroup4
             // 
@@ -799,6 +784,10 @@ namespace PaletteExplorer.UX.New
             // 
             this.kryptonRibbonGroupTriple20.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
             this.kryptonRibbonGroupButton3});
+            // 
+            // kryptonRibbonGroupButton3
+            // 
+            this.kryptonRibbonGroupButton3.Click += new System.EventHandler(this.KryptonRibbonGroupButton3_Click);
             // 
             // kryptonRibbonGroupTriple18
             // 
@@ -1192,6 +1181,20 @@ namespace PaletteExplorer.UX.New
         private void KrgbGenerateColours_Click(object sender, EventArgs e)
         {
             ColourMixerAdvanced colourMixer = new ColourMixerAdvanced();
+
+            colourMixer.Show();
+        }
+
+        private void KrgbBasicColourMixer_Click(object sender, EventArgs e)
+        {
+            ColourMixerBasic colourMixer = new ColourMixerBasic();
+
+            colourMixer.Show();
+        }
+
+        private void KryptonRibbonGroupButton3_Click(object sender, EventArgs e)
+        {
+            ColourMixerBasic colourMixer = new ColourMixerBasic();
 
             colourMixer.Show();
         }
