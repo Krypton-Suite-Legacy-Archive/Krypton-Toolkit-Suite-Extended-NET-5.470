@@ -8,11 +8,11 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
-using Core.Settings.Classes;
 using System;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.Global;
 
 namespace PaletteEditor.UX
 {

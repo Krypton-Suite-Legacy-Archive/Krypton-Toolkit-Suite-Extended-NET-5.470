@@ -9,10 +9,10 @@
 
 using Classes.Colours;
 using ComponentFactory.Krypton.Toolkit;
-using Core.Settings.Classes;
 using System;
 using System.Collections;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace PaletteEditor.UX
 {
@@ -20,7 +20,7 @@ namespace PaletteEditor.UX
     {
         #region Variables
         private ArrayList _colourSettingsArray;
-        private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
+        private AllMergedColourSettingsManager _colourSettingsManager = new AllMergedColourSettingsManager();
         #endregion
 
         public ColourInformation(bool debugMode = false)
@@ -49,7 +49,7 @@ namespace PaletteEditor.UX
 
             _colourSettingsArray.Add($"Base Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetBaseColour()) }");
 
-            _colourSettingsArray.Add($"Dark Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetDarkestColour()) }");
+            _colourSettingsArray.Add($"Dark Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetDarkColour()) }");
 
             _colourSettingsArray.Add($"Middle Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetMediumColour()) }");
 

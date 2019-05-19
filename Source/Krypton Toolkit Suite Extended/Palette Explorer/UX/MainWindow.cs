@@ -10,8 +10,6 @@
 using Classes.Colours;
 using ComponentFactory.Krypton.Toolkit;
 using Core.Classes.Other;
-using Core.Settings.Classes;
-using Core.Settings.Colours.Classes;
 using Core.UX;
 using ExtendedControls.Base.Code.Development;
 using ExtendedControls.Base.Enumerations;
@@ -21,6 +19,8 @@ using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.Global;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace PaletteExplorer.UX
 {
@@ -34,11 +34,11 @@ namespace PaletteExplorer.UX
         private KryptonPalette _palette;
 
         private PaletteMode _paletteMode;
-        private BasicPaletteColourManager _basicPaletteColourManager = new BasicPaletteColourManager();
+        private BasicColourSettingsManager _basicPaletteColourManager = new BasicColourSettingsManager();
 
         private ConversionMethods _conversionMethods = new ConversionMethods();
 
-        private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
+        private AllMergedColourSettingsManager _colourSettingsManager = new AllMergedColourSettingsManager();
 
         private Classes.GlobalMethods _globalMethods = new Classes.GlobalMethods();
 
@@ -3350,11 +3350,11 @@ namespace PaletteExplorer.UX
 
         private void krgbGetColours_Click(object sender, EventArgs e)
         {
-            if (!BasicPaletteColourManager.AreBasicPaletteColoursEmpty())
+            if (!BasicColourSettingsManager.AreBasicPaletteColoursEmpty())
             {
                 cbxBaseColourPreview.BackColor = _basicPaletteColourManager.GetBaseColour();
 
-                cbxDarkColourPreview.BackColor = _basicPaletteColourManager.GetDarkestColour();
+                cbxDarkColourPreview.BackColor = _basicPaletteColourManager.GetDarkColour();
 
                 cbxMiddleColourPreview.BackColor = _basicPaletteColourManager.GetMediumColour();
 
@@ -3444,7 +3444,7 @@ namespace PaletteExplorer.UX
 
             ColourUtilities.PropagateBasePaletteModes(krgcbBasePaletteMode);
 
-            _colourSettingsManager.ResetSettings(DebugMode);
+            _colourSettingsManager.ResetToDefaults(); // (DebugMode);
 
             if (UseCircularPictureBoxes)
             {
