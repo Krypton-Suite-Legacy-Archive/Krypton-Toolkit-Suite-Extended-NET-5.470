@@ -65,6 +65,7 @@
     <Compile Include="Classes\Application Updater\ThemeSettingsManager.cs" />
     <Compile Include="Classes\Application Updater\XMLFileApplicationUpdaterSettingsManager.cs" />
     <Compile Include="Classes\Core\ColourIntegerSettingsManager.cs" />
+    <Compile Include="Classes\Core\ColourStringSettingsManager.cs" />
     <Compile Include="Classes\Extended Controls\BooleanSettingsManager.cs" />
     <Compile Include="Classes\Extended Controls\StringSettingsManager.cs" />
     <Compile Include="Classes\Extended Controls\ThemeSettingsManager.cs" />
@@ -112,6 +113,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>ColourIntegerSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Core\ColourStringSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ColourStringSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="Settings\Extended Controls\BooleanSettings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -232,6 +238,10 @@
     <None Include="Settings\Core\ColourIntegerSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>ColourIntegerSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Core\ColourStringSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ColourStringSettings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Settings\Extended Controls\BooleanSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

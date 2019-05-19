@@ -89,6 +89,8 @@ namespace PaletteEditor.UX
 
             _colourSettingsArray.Add($"Custom Colour Five: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomColourFive()) }");
 
+            _colourSettingsArray.Add($"Custom Colour Six: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomColourSix()) }");
+
             _colourSettingsArray.Add($"Custom Text Colour One: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomTextColourOne()) }");
 
             _colourSettingsArray.Add($"Custom Text Colour Two: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomTextColourTwo()) }");
@@ -98,6 +100,8 @@ namespace PaletteEditor.UX
             _colourSettingsArray.Add($"Custom Text Colour Four: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomTextColourFour()) }");
 
             _colourSettingsArray.Add($"Custom Text Colour Five: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomTextColourFive()) }");
+
+            _colourSettingsArray.Add($"Custom Text Colour Six: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetCustomTextColourSix()) }");
 
             _colourSettingsArray.Add($"Menu Text Colour: { ColourUtilities.FormatColourRGBString(_colourSettingsManager.GetMenuTextColour()) }");
 

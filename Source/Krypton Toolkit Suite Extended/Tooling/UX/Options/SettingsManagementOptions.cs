@@ -23,7 +23,7 @@ namespace Core.UX.Options
         private ColourIntensitySettingsManager _colourBlendingSettingsManager = new ColourIntensitySettingsManager();
         private ColourIntegerSettingsManager _colourIntegerSettingsManager = new ColourIntegerSettingsManager();
         private AllMergedColourSettingsManager _colourSettingsManager = new AllMergedColourSettingsManager();
-        //private ColourStringSettingsManager _colourStringSettingsManager = new ColourStringSettingsManager();
+        private ColourStringSettingsManager _colourStringSettingsManager = new ColourStringSettingsManager();
         private GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
         private GlobalStringSettingsManager _globalStringSettingsManager = new GlobalStringSettingsManager();
         //private PaletteTypefaceSettingsManager _paletteTypefaceSettingsManager = new PaletteTypefaceSettingsManager();
@@ -293,9 +293,9 @@ namespace Core.UX.Options
 
         private void kbtnResetColourStringSettings_Click(object sender, EventArgs e)
         {
-            //_colourStringSettingsManager.ResetColourStringSettings(kchkAskForConfirmation.Checked);
+            _colourStringSettingsManager.ResetColourStringSettings(kchkAskForConfirmation.Checked);
 
-            //_colourStringSettingsManager.SaveColourStringSettings(kchkAskForConfirmation.Checked);
+            _colourStringSettingsManager.SaveColourStringSettings(kchkAskForConfirmation.Checked);
 
             kbtnResetColourStringSettings.Enabled = false;
         }
@@ -358,9 +358,9 @@ namespace Core.UX.Options
 
                     kbtnResetColourSettings.Enabled = false;
 
-                    //_colourStringSettingsManager.ResetColourStringSettings();
+                    _colourStringSettingsManager.ResetColourStringSettings();
 
-                    //_colourStringSettingsManager.SaveColourStringSettings();
+                    _colourStringSettingsManager.SaveColourStringSettings();
 
                     kbtnResetColourStringSettings.Enabled = false;
 
