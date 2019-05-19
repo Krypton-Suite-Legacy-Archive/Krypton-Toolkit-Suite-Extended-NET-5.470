@@ -13,6 +13,9 @@ using Core.Enumerations;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.Core;
+using ToolkitSettings.Classes.Global;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace Classes.Colours
 {
@@ -33,7 +36,7 @@ namespace Classes.Colours
         /// <param name="colour">The colour.</param>
         public static void SetColourSettingsAsColour(AllAvailableColourTypes colourType, Color colour)
         {
-            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+            AllMergedColourSettingsManager colourSettingsManager = new AllMergedColourSettingsManager();
 
             switch (colourType)
             {
@@ -61,6 +64,9 @@ namespace Classes.Colours
                 case AllAvailableColourTypes.CUSTOMCOLOURFIVE:
                     colourSettingsManager.SetCustomColourFive(colour);
                     break;
+                case AllAvailableColourTypes.CUSTOMCOLOURSIX:
+                    colourSettingsManager.SetCustomColourSix(colour);
+                    break;
                 case AllAvailableColourTypes.CUSTOMTEXTCOLOURONE:
                     colourSettingsManager.SetCustomTextColourOne(colour);
                     break;
@@ -76,8 +82,11 @@ namespace Classes.Colours
                 case AllAvailableColourTypes.CUSTOMTEXTCOLOURFIVE:
                     colourSettingsManager.SetCustomTextColourFive(colour);
                     break;
+                case AllAvailableColourTypes.CUSTOMTEXTCOLOURSIX:
+                    colourSettingsManager.SetCustomTextColourSix(colour);
+                    break;
                 case AllAvailableColourTypes.DARKESTCOLOUR:
-                    colourSettingsManager.SetDarkestColour(colour);
+                    colourSettingsManager.SetDarkColour(colour);
                     break;
                 case AllAvailableColourTypes.DISABLEDCONTROLCOLOUR:
                     colourSettingsManager.SetDisabledControlColour(colour);
@@ -128,94 +137,94 @@ namespace Classes.Colours
 
         public static void SetColourSettingsAsString(AllAvailableColourTypes colourType, Color colour)
         {
-            ColourStringSettingsManager colourStringSettingsManager = new ColourStringSettingsManager();
+            //ColourStringSettingsManager colourStringSettingsManager = new ColourStringSettingsManager();
 
             switch (colourType)
             {
-                case AllAvailableColourTypes.ALTERNATIVENORMALTEXTCOLOUR:
-                    colourStringSettingsManager.SetAlternativeNormalTextColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.BASECOLOUR:
-                    colourStringSettingsManager.SetBaseColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.BORDERCOLOUR:
-                    colourStringSettingsManager.SetBorderColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.CUSTOMCOLOURONE:
-                    colourStringSettingsManager.SetCustomColourOne(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.CUSTOMCOLOURTWO:
-                    colourStringSettingsManager.SetCustomColourTwo(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.CUSTOMCOLOURTHREE:
-                    colourStringSettingsManager.SetCustomColourThree(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.CUSTOMCOLOURFOUR:
-                    colourStringSettingsManager.SetCustomColourFour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.CUSTOMCOLOURFIVE:
-                    colourStringSettingsManager.SetCustomColourFive(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.CUSTOMTEXTCOLOURONE:
-                    colourStringSettingsManager.SetCustomTextColourOne(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.CUSTOMTEXTCOLOURTWO:
-                    colourStringSettingsManager.SetCustomTextColourTwo(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.CUSTOMTEXTCOLOURTHREE:
-                    colourStringSettingsManager.SetCustomTextColourThree(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.CUSTOMTEXTCOLOURFOUR:
-                    colourStringSettingsManager.SetCustomTextColourFour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.CUSTOMTEXTCOLOURFIVE:
-                    colourStringSettingsManager.SetCustomTextColourFive(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.DARKESTCOLOUR:
-                    colourStringSettingsManager.SetDarkestColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.DISABLEDCONTROLCOLOUR:
-                    colourStringSettingsManager.SetDisabledColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.DISABLEDTEXTCOLOUR:
-                    colourStringSettingsManager.SetDisabledTextColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.FOCUSEDTEXTCOLOUR:
-                    colourStringSettingsManager.SetFocusTextColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.LIGHTCOLOUR:
-                    colourStringSettingsManager.SetLightColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.LIGHTESTCOLOUR:
-                    colourStringSettingsManager.SetLightestColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.LINKDISABLEDCOLOUR:
-                    colourStringSettingsManager.SetLinkDisabledColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.LINKHOVERCOLOUR:
-                    colourStringSettingsManager.SetLinkHoverColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.LINKNORMALCOLOUR:
-                    colourStringSettingsManager.SetLinkNormalColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.LINKVISITEDCOLOUR:
-                    colourStringSettingsManager.SetLinkVisitedColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.MEDIUMCOLOUR:
-                    colourStringSettingsManager.SetMediumColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.MENUTEXTCOLOUR:
-                    colourStringSettingsManager.SetMenuTextColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.NORMALTEXTCOLOUR:
-                    colourStringSettingsManager.SetNormalTextColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.PRESSEDTEXTCOLOUR:
-                    colourStringSettingsManager.SetPressedTextColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
-                case AllAvailableColourTypes.STATUSTEXTCOLOUR:
-                    colourStringSettingsManager.SetStatusTextColour(ColourFormatting.FormatColourAsString(colour));
-                    break;
+                //case AllAvailableColourTypes.ALTERNATIVENORMALTEXTCOLOUR:
+                //    colourStringSettingsManager.SetAlternativeNormalTextColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.BASECOLOUR:
+                //    colourStringSettingsManager.SetBaseColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.BORDERCOLOUR:
+                //    colourStringSettingsManager.SetBorderColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.CUSTOMCOLOURONE:
+                //    colourStringSettingsManager.SetCustomColourOne(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.CUSTOMCOLOURTWO:
+                //    colourStringSettingsManager.SetCustomColourTwo(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.CUSTOMCOLOURTHREE:
+                //    colourStringSettingsManager.SetCustomColourThree(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.CUSTOMCOLOURFOUR:
+                //    colourStringSettingsManager.SetCustomColourFour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.CUSTOMCOLOURFIVE:
+                //    colourStringSettingsManager.SetCustomColourFive(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.CUSTOMTEXTCOLOURONE:
+                //    colourStringSettingsManager.SetCustomTextColourOne(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.CUSTOMTEXTCOLOURTWO:
+                //    colourStringSettingsManager.SetCustomTextColourTwo(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.CUSTOMTEXTCOLOURTHREE:
+                //    colourStringSettingsManager.SetCustomTextColourThree(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.CUSTOMTEXTCOLOURFOUR:
+                //    colourStringSettingsManager.SetCustomTextColourFour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.CUSTOMTEXTCOLOURFIVE:
+                //    colourStringSettingsManager.SetCustomTextColourFive(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.DARKESTCOLOUR:
+                //    colourStringSettingsManager.SetDarkestColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.DISABLEDCONTROLCOLOUR:
+                //    colourStringSettingsManager.SetDisabledColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.DISABLEDTEXTCOLOUR:
+                //    colourStringSettingsManager.SetDisabledTextColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.FOCUSEDTEXTCOLOUR:
+                //    colourStringSettingsManager.SetFocusTextColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.LIGHTCOLOUR:
+                //    colourStringSettingsManager.SetLightColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.LIGHTESTCOLOUR:
+                //    colourStringSettingsManager.SetLightestColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.LINKDISABLEDCOLOUR:
+                //    colourStringSettingsManager.SetLinkDisabledColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.LINKHOVERCOLOUR:
+                //    colourStringSettingsManager.SetLinkHoverColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.LINKNORMALCOLOUR:
+                //    colourStringSettingsManager.SetLinkNormalColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.LINKVISITEDCOLOUR:
+                //    colourStringSettingsManager.SetLinkVisitedColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.MEDIUMCOLOUR:
+                //    colourStringSettingsManager.SetMediumColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.MENUTEXTCOLOUR:
+                //    colourStringSettingsManager.SetMenuTextColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.NORMALTEXTCOLOUR:
+                //    colourStringSettingsManager.SetNormalTextColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.PRESSEDTEXTCOLOUR:
+                //    colourStringSettingsManager.SetPressedTextColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
+                //case AllAvailableColourTypes.STATUSTEXTCOLOUR:
+                //    colourStringSettingsManager.SetStatusTextColour(ColourFormatting.FormatColourAsString(colour));
+                //    break;
                 default:
                     break;
             }
@@ -228,7 +237,7 @@ namespace Classes.Colours
         /// <param name="colour">The colour.</param>
         public static void SetBasicColours(BasicPaletteColourDefinitions basicPaletteColourDefinition, Color colour)
         {
-            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+            BasicColourSettingsManager colourSettingsManager = new BasicColourSettingsManager();
 
             switch (basicPaletteColourDefinition)
             {
@@ -236,7 +245,7 @@ namespace Classes.Colours
                     colourSettingsManager.SetBaseColour(colour);
                     break;
                 case BasicPaletteColourDefinitions.DARKESTCOLOUR:
-                    colourSettingsManager.SetDarkestColour(colour);
+                    colourSettingsManager.SetDarkColour(colour);
                     break;
                 case BasicPaletteColourDefinitions.MIDDLECOLOUR:
                     colourSettingsManager.SetMediumColour(colour);
@@ -261,7 +270,7 @@ namespace Classes.Colours
         {
             Color tempColour = Color.FromArgb(0, 0, 0, 0);
 
-            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+            AllMergedColourSettingsManager colourSettingsManager = new AllMergedColourSettingsManager();
 
             try
             {
@@ -291,6 +300,9 @@ namespace Classes.Colours
                     case AllAvailableColourTypes.CUSTOMCOLOURFIVE:
                         tempColour = colourSettingsManager.GetCustomColourFive();
                         break;
+                    case AllAvailableColourTypes.CUSTOMCOLOURSIX:
+                        tempColour = colourSettingsManager.GetCustomColourSix();
+                        break;
                     case AllAvailableColourTypes.CUSTOMTEXTCOLOURONE:
                         tempColour = colourSettingsManager.GetCustomTextColourOne();
                         break;
@@ -306,8 +318,11 @@ namespace Classes.Colours
                     case AllAvailableColourTypes.CUSTOMTEXTCOLOURFIVE:
                         tempColour = colourSettingsManager.GetCustomTextColourFive();
                         break;
+                    case AllAvailableColourTypes.CUSTOMTEXTCOLOURSIX:
+                        tempColour = colourSettingsManager.GetCustomTextColourSix();
+                        break;
                     case AllAvailableColourTypes.DARKESTCOLOUR:
-                        tempColour = colourSettingsManager.GetDarkestColour();
+                        tempColour = colourSettingsManager.GetDarkColour();
                         break;
                     case AllAvailableColourTypes.DISABLEDCONTROLCOLOUR:
                         tempColour = colourSettingsManager.GetDisabledControlColour();
@@ -368,7 +383,7 @@ namespace Classes.Colours
 
         public static void RetrieveAllColourSettingsAsColour()
         {
-            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+            AllMergedColourSettingsManager colourSettingsManager = new AllMergedColourSettingsManager();
 
             try
             {
@@ -383,9 +398,9 @@ namespace Classes.Colours
         public static void SaveSettings(SettingTypes settingType)
         {
             #region Variables
-            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+            AllMergedColourSettingsManager colourSettingsManager = new AllMergedColourSettingsManager();
 
-            ColourStringSettingsManager colourStringSettingsManager = new ColourStringSettingsManager();
+            //ColourStringSettingsManager colourStringSettingsManager = new ColourStringSettingsManager();
 
             ColourIntegerSettingsManager colourIntegerSettingsManager = new ColourIntegerSettingsManager();
 
@@ -402,10 +417,10 @@ namespace Classes.Colours
                         globalBooleanSettingsManager.SaveBooleanSettings();
                         break;
                     case SettingTypes.COLOUR:
-                        colourSettingsManager.SaveColourSettings();
+                        colourSettingsManager.SaveAllMergedColourSettings();
                         break;
                     case SettingTypes.COLOURSTRING:
-                        colourStringSettingsManager.SaveColourStringSettings();
+                        //colourStringSettingsManager.SaveColourStringSettings();
                         break;
                     case SettingTypes.COLOURINTEGER:
                         colourIntegerSettingsManager.SaveColourIntegerSettings();

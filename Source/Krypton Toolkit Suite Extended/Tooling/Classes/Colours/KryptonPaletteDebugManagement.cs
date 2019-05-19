@@ -52,7 +52,7 @@ namespace Core.Classes.Colours
 
                 hexValues.Items.Add($"Disabled Control Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetDisabledControlColour()) }");
 
-                hexValues.Items.Add($"Link Disabled Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetLinkDisabledTextColour()) }");
+                hexValues.Items.Add($"Link Disabled Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetLinkDisabledColour()) }");
 
                 hexValues.Items.Add($"Link Focused Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetLinkFocusedColour()) }");
 
