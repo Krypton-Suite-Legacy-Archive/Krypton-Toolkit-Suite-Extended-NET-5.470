@@ -8,8 +8,8 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
-using Core.Settings.Classes;
 using System.Drawing;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace Core.Classes.Colours
 {
@@ -22,13 +22,13 @@ namespace Core.Classes.Colours
 
         public static void PropagateHEXColourValues(KryptonListBox hexValues, bool useUppercase)
         {
-            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+            AllMergedColourSettingsManager colourSettingsManager = new AllMergedColourSettingsManager();
 
             if (useUppercase)
             {
                 hexValues.Items.Add($"Base Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetBaseColour()) }");
 
-                hexValues.Items.Add($"Darkest Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetDarkestColour()) }");
+                hexValues.Items.Add($"Darkest Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetDarkColour()) }");
 
                 hexValues.Items.Add($"Medium Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetMediumColour()) }");
 
@@ -52,7 +52,7 @@ namespace Core.Classes.Colours
 
                 hexValues.Items.Add($"Disabled Control Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetDisabledControlColour()) }");
 
-                hexValues.Items.Add($"Link Disabled Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetLinkDisabledColour()) }");
+                hexValues.Items.Add($"Link Disabled Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetLinkDisabledTextColour()) }");
 
                 hexValues.Items.Add($"Link Focused Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetLinkFocusedColour()) }");
 
@@ -90,7 +90,7 @@ namespace Core.Classes.Colours
             {
                 hexValues.Items.Add($"Base Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetBaseColour()).ToUpper() }");
 
-                hexValues.Items.Add($"Darkest Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetDarkestColour()).ToUpper() }");
+                hexValues.Items.Add($"Darkest Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetDarkColour()).ToUpper() }");
 
                 hexValues.Items.Add($"Medium Colour: { ColorTranslator.ToHtml(colourSettingsManager.GetMediumColour()).ToUpper() }");
 

@@ -9,18 +9,19 @@
 
 using Classes.Colours;
 using ComponentFactory.Krypton.Toolkit;
-using Core.Settings.Classes;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.IO;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.Global;
+using ToolkitSettings.Classes.PaletteExplorer;
 
 namespace Core.UX.Options
 {
     public partial class ColourBlendingOptions : KryptonForm
     {
         #region Variables
-        private ColourBlendingSettingsManager _colourBlendingSettingsManager = new ColourBlendingSettingsManager();
+        private ColourIntensitySettingsManager _colourBlendingSettingsManager = new ColourIntensitySettingsManager();
         private GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
         private GlobalStringSettingsManager _globalStringSettingsManager = new GlobalStringSettingsManager();
 

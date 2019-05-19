@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Core.Settings {
+namespace ToolkitSettings.Settings.Palette_Explorer {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.1.0.0")]
     internal sealed partial class PaletteThemeSettings : global::System.Configuration.ApplicationSettingsBase {
         
         private static PaletteThemeSettings defaultInstance = ((PaletteThemeSettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new PaletteThemeSettings())));
@@ -25,18 +25,6 @@ namespace Core.Settings {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Professional - System")]
-        public global::ComponentFactory.Krypton.Toolkit.PaletteModeManager Theme {
-            get {
-                return ((global::ComponentFactory.Krypton.Toolkit.PaletteModeManager)(this["Theme"]));
-            }
-            set {
-                this["Theme"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string CustomThemeFilePath {
             get {
@@ -44,6 +32,18 @@ namespace Core.Settings {
             }
             set {
                 this["CustomThemeFilePath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ProfessionalSystem")]
+        public global::ComponentFactory.Krypton.Toolkit.PaletteModeManager CurrentTheme {
+            get {
+                return ((global::ComponentFactory.Krypton.Toolkit.PaletteModeManager)(this["CurrentTheme"]));
+            }
+            set {
+                this["CurrentTheme"] = value;
             }
         }
     }

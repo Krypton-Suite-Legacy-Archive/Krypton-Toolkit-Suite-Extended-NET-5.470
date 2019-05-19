@@ -257,10 +257,10 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         }
 
         /// <summary>
-        /// Saves the XML file application updater settings.
+        /// Saves the custom colour settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveXMLFileApplicationUpdaterSettings(bool alwaysUsePrompt = false)
+        public void SaveCustomColourSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {
@@ -276,6 +276,22 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
                 _customColourSettings.Save();
 
                 SetSettingsModified(false);
+            }
+        }
+        #endregion
+
+        #region Detection
+        public static bool AreCustomPaletteColoursEmpty()
+        {
+            CustomColourSettingsManager customPaletteColourManager = new CustomColourSettingsManager();
+
+            if (customPaletteColourManager.GetCustomColourOne() == Color.Empty || customPaletteColourManager.GetCustomColourTwo() == Color.Empty || customPaletteColourManager.GetCustomColourThree() == Color.Empty || customPaletteColourManager.GetCustomColourFour() == Color.Empty || customPaletteColourManager.GetCustomColourFive() == Color.Empty || customPaletteColourManager.GetCustomColourSix() == Color.Empty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
         #endregion

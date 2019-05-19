@@ -7,7 +7,6 @@
  */
 #endregion
 
-using ComponentFactory.Krypton.Toolkit;
 using System.Drawing;
 using System.Windows.Forms;
 using ToolkitSettings.BackEnd;
@@ -450,6 +449,24 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         }
 
         /// <summary>
+        /// Sets the value of LinkDisabledColour to colour.
+        /// </summary>
+        /// <param name="colour">The value of LinkDisabledColour.</param>
+        public void SetLinkDisabledColour(Color colour)
+        {
+            _allMergedColourSettings.LinkDisabledColour = colour;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkDisabledColour.
+        /// </summary>
+        /// <returns>The value of LinkDisabledColour.</returns>
+        public Color GetLinkDisabledColour()
+        {
+            return _allMergedColourSettings.LinkDisabledColour;
+        }
+
+        /// <summary>
         /// Sets the value of LinkFocusedColour to colour.
         /// </summary>
         /// <param name="colour">The value of LinkFocusedColour.</param>
@@ -771,6 +788,8 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
                 SetCustomTextColourFive(Color.Empty);
 
                 SetCustomTextColourSix(Color.Empty);
+
+                SetLinkDisabledColour(Color.Empty);
 
                 SetLinkFocusedColour(Color.Empty);
 

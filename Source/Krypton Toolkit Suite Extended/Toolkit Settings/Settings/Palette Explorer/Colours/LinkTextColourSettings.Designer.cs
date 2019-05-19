@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ToolkitSettings.Settings.PaletteExplorer.Colours {
+namespace ToolkitSettings.Settings.Palette_Explorer.Colours {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -64,6 +64,17 @@ namespace ToolkitSettings.Settings.PaletteExplorer.Colours {
             }
             set {
                 this["LinkVisitedColour"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color LinkDisabledColour {
+            get {
+                return ((global::System.Drawing.Color)(this["LinkDisabledColour"]));
+            }
+            set {
+                this["LinkDisabledColour"] = value;
             }
         }
     }

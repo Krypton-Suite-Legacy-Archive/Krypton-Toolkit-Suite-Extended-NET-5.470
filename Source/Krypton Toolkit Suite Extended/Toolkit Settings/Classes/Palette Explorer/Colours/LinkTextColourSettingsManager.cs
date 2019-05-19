@@ -10,7 +10,7 @@
 using ComponentFactory.Krypton.Toolkit;
 using System.Drawing;
 using System.Windows.Forms;
-using ToolkitSettings.Settings.PaletteExplorer.Colours;
+using ToolkitSettings.Settings.Palette_Explorer.Colours;
 
 namespace ToolkitSettings.Classes.PaletteExplorer.Colours
 {
@@ -109,6 +109,24 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
 
         #region Setters and Getters
         /// <summary>
+        /// Sets the value of LinkDisabledColour to value.
+        /// </summary>
+        /// <param name="value">The value of LinkDisabledColour.</param>
+        public void SetLinkDisabledColour(Color value)
+        {
+            _linkTextColourSettings.LinkDisabledColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkDisabledColour.
+        /// </summary>
+        /// <returns>The value of LinkDisabledColour.</returns>
+        public Color GetLinkDisabledColour()
+        {
+            return _linkTextColourSettings.LinkDisabledColour;
+        }
+
+        /// <summary>
         /// Sets the value of LinkFocusedColour to colour.
         /// </summary>
         /// <param name="colour">The value of LinkFocusedColour.</param>
@@ -197,6 +215,8 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         {
             if (KryptonMessageBox.Show("WARNING! You are about to reset these settings back to their original state. This action cannot be undone!\nDo you want to proceed?", "Reset Settings", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
+                SetLinkDisabledColour(Color.Empty);
+
                 SetLinkFocusedColour(Color.Empty);
 
                 SetLinkHoverColour(Color.Empty);
@@ -213,10 +233,10 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         }
 
         /// <summary>
-        /// Saves the XML file application updater settings.
+        /// Saves the link text colour settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveXMLFileApplicationUpdaterSettings(bool alwaysUsePrompt = false)
+        public void SaveLinkTextColourSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {
@@ -232,6 +252,22 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
                 _linkTextColourSettings.Save();
 
                 SetSettingsModified(false);
+            }
+        }
+        #endregion
+
+        #region Detection
+        public static bool AreLinkTextPaletteColoursEmpty()
+        {
+            LinkTextColourSettingsManager linkTextPaletteColourManager = new LinkTextColourSettingsManager();
+
+            if (linkTextPaletteColourManager.GetLinkNormalColour() == Color.Empty || linkTextPaletteColourManager.GetLinkFocusedColour() == Color.Empty || linkTextPaletteColourManager.GetLinkHoverColour() == Color.Empty || linkTextPaletteColourManager.GetLinkNormalColour() == Color.Empty || linkTextPaletteColourManager.GetLinkVisitedColour() == Color.Empty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
         #endregion

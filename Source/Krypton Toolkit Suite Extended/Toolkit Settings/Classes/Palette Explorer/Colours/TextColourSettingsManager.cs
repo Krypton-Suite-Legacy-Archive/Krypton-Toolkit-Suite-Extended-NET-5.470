@@ -233,10 +233,10 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         }
 
         /// <summary>
-        /// Saves the XML file application updater settings.
+        /// Saves the text colour settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveXMLFileApplicationUpdaterSettings(bool alwaysUsePrompt = false)
+        public void SaveTextColourSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {
@@ -255,5 +255,22 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
             }
         }
         #endregion
+
+        #region Detection
+        public static bool AreTextPaletteColoursEmpty()
+        {
+            TextColourSettingsManager textPaletteColourManager = new TextColourSettingsManager();
+
+            if (textPaletteColourManager.GetAlternativeNormalTextColour() == Color.Empty || textPaletteColourManager.GetDisabledTextColour() == Color.Empty || textPaletteColourManager.GetFocusedTextColour() == Color.Empty || textPaletteColourManager.GetNormalTextColour() == Color.Empty || textPaletteColourManager.GetPressedTextColour() == Color.Empty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        #endregion
+
     }
 }

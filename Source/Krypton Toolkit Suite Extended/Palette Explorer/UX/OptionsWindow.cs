@@ -12,6 +12,7 @@ using Core;
 using Core.Classes.Other;
 using PaletteExplorer.Classes;
 using System;
+using System.Drawing;
 using ToolkitSettings.Classes.PaletteExplorer;
 
 namespace PaletteExplorer.UX
@@ -64,7 +65,6 @@ namespace PaletteExplorer.UX
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.ksbApply = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.knOptions = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.kpGeneral = new ComponentFactory.Krypton.Navigator.KryptonPage();
@@ -76,25 +76,26 @@ namespace PaletteExplorer.UX
             this.klblCustomThemeFilePath = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kcbTheme = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kcbTest = new ComponentFactory.Krypton.Toolkit.KryptonColorButton();
+            this.klblMediumColourFloatValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblLightColourFloatValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblDarkColourFloatValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblLightestColourFloatValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.knumDarkValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumMediumValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumLightValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knumLightestValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.cbxLightestColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.cbxLightColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.cbxMediumColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.cbxDarkColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.knumLightestValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.knumLightValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.knumMediumValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.knumDarkValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.klblLightestColourFloatValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.klblDarkColourFloatValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.klblLightColourFloatValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.klblMediumColourFloatValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kcbTest = new ComponentFactory.Krypton.Toolkit.KryptonColorButton();
+            this.ksbApply = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -145,19 +146,6 @@ namespace PaletteExplorer.UX
             this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.TabIndex = 1;
             this.kbtnCancel.Values.Text = "Can&cel";
-            // 
-            // ksbApply
-            // 
-            this.ksbApply.AutoSize = true;
-            this.ksbApply.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ksbApply.Enabled = false;
-            this.ksbApply.Location = new System.Drawing.Point(823, 13);
-            this.ksbApply.Name = "ksbApply";
-            this.ksbApply.Size = new System.Drawing.Size(71, 30);
-            this.ksbApply.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ksbApply.TabIndex = 0;
-            this.ksbApply.Values.Image = ((System.Drawing.Image)(resources.GetObject("ksbApply.Values.Image")));
-            this.ksbApply.Values.Text = "&Apply";
             // 
             // kryptonPanel2
             // 
@@ -290,15 +278,6 @@ namespace PaletteExplorer.UX
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Theme Type:";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 794);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(906, 3);
-            this.panel1.TabIndex = 2;
-            // 
             // kryptonPage1
             // 
             this.kryptonPage1.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
@@ -327,6 +306,121 @@ namespace PaletteExplorer.UX
             this.kryptonPage1.Text = "Colour Intensity";
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "e0550eb663f7425e99be7d6b7761bd8e";
+            // 
+            // kcbTest
+            // 
+            this.kcbTest.Location = new System.Drawing.Point(36, 462);
+            this.kcbTest.Name = "kcbTest";
+            this.kcbTest.Size = new System.Drawing.Size(178, 25);
+            this.kcbTest.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbTest.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbTest.TabIndex = 34;
+            this.kcbTest.Values.Text = "&Test Colour";
+            this.kcbTest.SelectedColorChanged += new System.EventHandler<ComponentFactory.Krypton.Toolkit.ColorEventArgs>(this.KcbTest_SelectedColorChanged);
+            // 
+            // klblMediumColourFloatValue
+            // 
+            this.klblMediumColourFloatValue.Location = new System.Drawing.Point(366, 172);
+            this.klblMediumColourFloatValue.Name = "klblMediumColourFloatValue";
+            this.klblMediumColourFloatValue.Size = new System.Drawing.Size(42, 33);
+            this.klblMediumColourFloatValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblMediumColourFloatValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblMediumColourFloatValue.TabIndex = 33;
+            this.klblMediumColourFloatValue.Values.Text = "{0}";
+            // 
+            // klblLightColourFloatValue
+            // 
+            this.klblLightColourFloatValue.Location = new System.Drawing.Point(366, 290);
+            this.klblLightColourFloatValue.Name = "klblLightColourFloatValue";
+            this.klblLightColourFloatValue.Size = new System.Drawing.Size(42, 33);
+            this.klblLightColourFloatValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblLightColourFloatValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblLightColourFloatValue.TabIndex = 32;
+            this.klblLightColourFloatValue.Values.Text = "{0}";
+            // 
+            // klblDarkColourFloatValue
+            // 
+            this.klblDarkColourFloatValue.Location = new System.Drawing.Point(366, 54);
+            this.klblDarkColourFloatValue.Name = "klblDarkColourFloatValue";
+            this.klblDarkColourFloatValue.Size = new System.Drawing.Size(42, 33);
+            this.klblDarkColourFloatValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblDarkColourFloatValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblDarkColourFloatValue.TabIndex = 31;
+            this.klblDarkColourFloatValue.Values.Text = "{0}";
+            // 
+            // klblLightestColourFloatValue
+            // 
+            this.klblLightestColourFloatValue.Location = new System.Drawing.Point(366, 408);
+            this.klblLightestColourFloatValue.Name = "klblLightestColourFloatValue";
+            this.klblLightestColourFloatValue.Size = new System.Drawing.Size(42, 33);
+            this.klblLightestColourFloatValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblLightestColourFloatValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblLightestColourFloatValue.TabIndex = 30;
+            this.klblLightestColourFloatValue.Values.Text = "{0}";
+            // 
+            // knumDarkValue
+            // 
+            this.knumDarkValue.DecimalPlaces = 99;
+            this.knumDarkValue.Location = new System.Drawing.Point(217, 54);
+            this.knumDarkValue.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.knumDarkValue.Name = "knumDarkValue";
+            this.knumDarkValue.Size = new System.Drawing.Size(120, 32);
+            this.knumDarkValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumDarkValue.TabIndex = 29;
+            this.knumDarkValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumDarkValue.ValueChanged += new System.EventHandler(this.KnumDarkValue_ValueChanged);
+            // 
+            // knumMediumValue
+            // 
+            this.knumMediumValue.DecimalPlaces = 99;
+            this.knumMediumValue.Location = new System.Drawing.Point(217, 172);
+            this.knumMediumValue.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.knumMediumValue.Name = "knumMediumValue";
+            this.knumMediumValue.Size = new System.Drawing.Size(120, 32);
+            this.knumMediumValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumMediumValue.TabIndex = 28;
+            this.knumMediumValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumMediumValue.ValueChanged += new System.EventHandler(this.KnumMediumValue_ValueChanged);
+            // 
+            // knumLightValue
+            // 
+            this.knumLightValue.DecimalPlaces = 99;
+            this.knumLightValue.Location = new System.Drawing.Point(217, 290);
+            this.knumLightValue.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.knumLightValue.Name = "knumLightValue";
+            this.knumLightValue.Size = new System.Drawing.Size(120, 32);
+            this.knumLightValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumLightValue.TabIndex = 27;
+            this.knumLightValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumLightValue.ValueChanged += new System.EventHandler(this.KnumLightValue_ValueChanged);
+            // 
+            // knumLightestValue
+            // 
+            this.knumLightestValue.DecimalPlaces = 99;
+            this.knumLightestValue.Location = new System.Drawing.Point(217, 408);
+            this.knumLightestValue.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.knumLightestValue.Name = "knumLightestValue";
+            this.knumLightestValue.Size = new System.Drawing.Size(120, 32);
+            this.knumLightestValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumLightestValue.TabIndex = 26;
+            this.knumLightestValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.knumLightestValue.ValueChanged += new System.EventHandler(this.KnumLightestValue_ValueChanged);
             // 
             // kryptonLabel7
             // 
@@ -368,6 +462,15 @@ namespace PaletteExplorer.UX
             this.kryptonLabel2.TabIndex = 18;
             this.kryptonLabel2.Values.Text = "Dark Colour:";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 794);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(906, 3);
+            this.panel1.TabIndex = 2;
+            // 
             // cbxLightestColour
             // 
             this.cbxLightestColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -408,115 +511,18 @@ namespace PaletteExplorer.UX
             this.cbxDarkColour.TabIndex = 22;
             this.cbxDarkColour.TabStop = false;
             // 
-            // knumLightestValue
+            // ksbApply
             // 
-            this.knumLightestValue.DecimalPlaces = 99;
-            this.knumLightestValue.Location = new System.Drawing.Point(217, 408);
-            this.knumLightestValue.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.knumLightestValue.Name = "knumLightestValue";
-            this.knumLightestValue.Size = new System.Drawing.Size(120, 32);
-            this.knumLightestValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.knumLightestValue.TabIndex = 26;
-            this.knumLightestValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // knumLightValue
-            // 
-            this.knumLightValue.DecimalPlaces = 99;
-            this.knumLightValue.Location = new System.Drawing.Point(217, 290);
-            this.knumLightValue.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.knumLightValue.Name = "knumLightValue";
-            this.knumLightValue.Size = new System.Drawing.Size(120, 32);
-            this.knumLightValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.knumLightValue.TabIndex = 27;
-            this.knumLightValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // knumMediumValue
-            // 
-            this.knumMediumValue.DecimalPlaces = 99;
-            this.knumMediumValue.Location = new System.Drawing.Point(217, 172);
-            this.knumMediumValue.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.knumMediumValue.Name = "knumMediumValue";
-            this.knumMediumValue.Size = new System.Drawing.Size(120, 32);
-            this.knumMediumValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.knumMediumValue.TabIndex = 28;
-            this.knumMediumValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // knumDarkValue
-            // 
-            this.knumDarkValue.DecimalPlaces = 99;
-            this.knumDarkValue.Location = new System.Drawing.Point(217, 54);
-            this.knumDarkValue.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.knumDarkValue.Name = "knumDarkValue";
-            this.knumDarkValue.Size = new System.Drawing.Size(120, 32);
-            this.knumDarkValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.knumDarkValue.TabIndex = 29;
-            this.knumDarkValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // klblLightestColourFloatValue
-            // 
-            this.klblLightestColourFloatValue.Location = new System.Drawing.Point(366, 408);
-            this.klblLightestColourFloatValue.Name = "klblLightestColourFloatValue";
-            this.klblLightestColourFloatValue.Size = new System.Drawing.Size(42, 33);
-            this.klblLightestColourFloatValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblLightestColourFloatValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblLightestColourFloatValue.TabIndex = 30;
-            this.klblLightestColourFloatValue.Values.Text = "{0}";
-            // 
-            // klblDarkColourFloatValue
-            // 
-            this.klblDarkColourFloatValue.Location = new System.Drawing.Point(366, 54);
-            this.klblDarkColourFloatValue.Name = "klblDarkColourFloatValue";
-            this.klblDarkColourFloatValue.Size = new System.Drawing.Size(42, 33);
-            this.klblDarkColourFloatValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblDarkColourFloatValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblDarkColourFloatValue.TabIndex = 31;
-            this.klblDarkColourFloatValue.Values.Text = "{0}";
-            // 
-            // klblLightColourFloatValue
-            // 
-            this.klblLightColourFloatValue.Location = new System.Drawing.Point(366, 290);
-            this.klblLightColourFloatValue.Name = "klblLightColourFloatValue";
-            this.klblLightColourFloatValue.Size = new System.Drawing.Size(42, 33);
-            this.klblLightColourFloatValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblLightColourFloatValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblLightColourFloatValue.TabIndex = 32;
-            this.klblLightColourFloatValue.Values.Text = "{0}";
-            // 
-            // klblMediumColourFloatValue
-            // 
-            this.klblMediumColourFloatValue.Location = new System.Drawing.Point(366, 172);
-            this.klblMediumColourFloatValue.Name = "klblMediumColourFloatValue";
-            this.klblMediumColourFloatValue.Size = new System.Drawing.Size(42, 33);
-            this.klblMediumColourFloatValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblMediumColourFloatValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblMediumColourFloatValue.TabIndex = 33;
-            this.klblMediumColourFloatValue.Values.Text = "{0}";
-            // 
-            // kcbTest
-            // 
-            this.kcbTest.Location = new System.Drawing.Point(36, 462);
-            this.kcbTest.Name = "kcbTest";
-            this.kcbTest.Size = new System.Drawing.Size(178, 25);
-            this.kcbTest.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbTest.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbTest.TabIndex = 34;
-            this.kcbTest.Values.Text = "&Test Colour";
+            this.ksbApply.AutoSize = true;
+            this.ksbApply.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ksbApply.Enabled = false;
+            this.ksbApply.Location = new System.Drawing.Point(823, 13);
+            this.ksbApply.Name = "ksbApply";
+            this.ksbApply.Size = new System.Drawing.Size(71, 30);
+            this.ksbApply.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ksbApply.TabIndex = 0;
+            this.ksbApply.Values.Image = ((System.Drawing.Image)(resources.GetObject("ksbApply.Values.Image")));
+            this.ksbApply.Values.Text = "&Apply";
             // 
             // OptionsWindow
             // 
@@ -605,6 +611,38 @@ namespace PaletteExplorer.UX
         private void KcbTheme_SelectedIndexChanged(object sender, EventArgs e)
         {
             ThemeManager.SetTheme(kcbTheme.Text, kMan);
+        }
+
+        private void KnumDarkValue_ValueChanged(object sender, EventArgs e)
+        {
+            klblDarkColourFloatValue.Text = ColourHelpers.ReturnFloatAsString((float)knumDarkValue.Value);
+
+            cbxDarkColour.BackColor = ColourHelpers.Darken(cbxDarkColour.BackColor, (float)knumDarkValue.Value);
+        }
+
+        private void KnumMediumValue_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KnumLightValue_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KnumLightestValue_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KcbTest_SelectedColorChanged(object sender, ColorEventArgs e)
+        {
+            SetColour(kcbTest.SelectedColor);
+        }
+
+        private void SetColour(Color selectedColour)
+        {
+            throw new NotImplementedException();
         }
     }
 }

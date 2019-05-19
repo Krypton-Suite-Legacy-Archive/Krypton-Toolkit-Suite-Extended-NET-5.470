@@ -1,8 +1,9 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Windows.Forms;
+using ToolkitSettings.Settings.Global;
 
-namespace Core.Settings.Classes
+namespace ToolkitSettings.Classes.Global
 {
     public class GlobalStringSettingsManager
     {

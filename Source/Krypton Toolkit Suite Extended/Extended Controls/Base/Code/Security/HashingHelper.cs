@@ -12,6 +12,7 @@ using ExtendedControls.Base.Code.Exceptions;
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Text;
 
 namespace ExtendedControls.Base.Code.Security
 {
@@ -177,6 +178,32 @@ namespace ExtendedControls.Base.Code.Security
             {
                 ExceptionHandler.CaptureException(exc);
             }
+        }
+
+        /// <summary>
+        /// Builds the file hash.
+        /// </summary>
+        /// <param name="hashBytes">The hash bytes.</param>
+        /// <param name="size">The size.</param>
+        /// <param name="toUpperCase">if set to <c>true</c> [to upper case].</param>
+        /// <returns></returns>
+        public static string BuildFileHash(byte[] hashBytes, int size, bool toUpperCase = true)
+        {
+            StringBuilder builder = new StringBuilder(size);
+
+            foreach (byte b in hashBytes)
+            {
+                if (toUpperCase)
+                {
+                    builder.Append(b.ToString("X2").ToUpper());
+                }
+                else
+                {
+                    builder.Append(b.ToString("X2").ToLower());
+                }
+            }
+
+            return builder.ToString();
         }
         #endregion
     }

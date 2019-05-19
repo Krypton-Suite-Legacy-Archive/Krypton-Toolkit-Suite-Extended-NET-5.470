@@ -8,12 +8,12 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
-using Core.Settings.Classes;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections;
 using System.IO;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.PaletteExplorer;
 
 namespace Core.UX.Options
 {

@@ -10,7 +10,6 @@
 using ComponentFactory.Krypton.Toolkit;
 using Core;
 using Core.Enumerations;
-using Core.Settings.Classes;
 using System;
 using System.Drawing;
 using System.Windows.Forms;

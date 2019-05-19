@@ -8,22 +8,25 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
-using Core.Settings.Classes;
 using System;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.Core;
+using ToolkitSettings.Classes.Global;
+using ToolkitSettings.Classes.PaletteExplorer;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace Core.UX.Options
 {
     public partial class SettingsManagementOptions : KryptonForm
     {
         #region Variables
-        private ColourBlendingSettingsManager _colourBlendingSettingsManager = new ColourBlendingSettingsManager();
+        private ColourIntensitySettingsManager _colourBlendingSettingsManager = new ColourIntensitySettingsManager();
         private ColourIntegerSettingsManager _colourIntegerSettingsManager = new ColourIntegerSettingsManager();
-        private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
-        private ColourStringSettingsManager _colourStringSettingsManager = new ColourStringSettingsManager();
+        private AllMergedColourSettingsManager _colourSettingsManager = new AllMergedColourSettingsManager();
+        //private ColourStringSettingsManager _colourStringSettingsManager = new ColourStringSettingsManager();
         private GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
         private GlobalStringSettingsManager _globalStringSettingsManager = new GlobalStringSettingsManager();
-        private PaletteTypefaceSettingsManager _paletteTypefaceSettingsManager = new PaletteTypefaceSettingsManager();
+        //private PaletteTypefaceSettingsManager _paletteTypefaceSettingsManager = new PaletteTypefaceSettingsManager();
         #endregion
 
         #region System
@@ -281,18 +284,18 @@ namespace Core.UX.Options
 
         private void kbtnResetColourSettings_Click(object sender, EventArgs e)
         {
-            _colourSettingsManager.ResetSettings(kchkAskForConfirmation.Checked);
+            _colourSettingsManager.ResetToDefaults(); // (kchkAskForConfirmation.Checked);
 
-            _colourSettingsManager.SaveColourSettings(kchkAskForConfirmation.Checked);
+            _colourSettingsManager.SaveAllMergedColourSettings(kchkAskForConfirmation.Checked);
 
             kbtnResetColourSettings.Enabled = false;
         }
 
         private void kbtnResetColourStringSettings_Click(object sender, EventArgs e)
         {
-            _colourStringSettingsManager.ResetColourStringSettings(kchkAskForConfirmation.Checked);
+            //_colourStringSettingsManager.ResetColourStringSettings(kchkAskForConfirmation.Checked);
 
-            _colourStringSettingsManager.SaveColourStringSettings(kchkAskForConfirmation.Checked);
+            //_colourStringSettingsManager.SaveColourStringSettings(kchkAskForConfirmation.Checked);
 
             kbtnResetColourStringSettings.Enabled = false;
         }
@@ -317,9 +320,9 @@ namespace Core.UX.Options
 
         private void kbtnResetPaletteTypefaceSettings_Click(object sender, EventArgs e)
         {
-            _paletteTypefaceSettingsManager.ResetPaletteTypefaceSettings(kchkAskForConfirmation.Checked);
+            //_paletteTypefaceSettingsManager.ResetPaletteTypefaceSettings(kchkAskForConfirmation.Checked);
 
-            _paletteTypefaceSettingsManager.SavePaletteTypefaceSettings(kchkAskForConfirmation.Checked);
+            //_paletteTypefaceSettingsManager.SavePaletteTypefaceSettings(kchkAskForConfirmation.Checked);
 
             kchkAskForConfirmation.Enabled = false;
         }
@@ -349,15 +352,15 @@ namespace Core.UX.Options
 
                     kbtnResetColourIntegerSettings.Enabled = false;
 
-                    _colourSettingsManager.ResetSettings();
+                    _colourSettingsManager.ResetToDefaults();
 
-                    _colourSettingsManager.SaveColourSettings();
+                    _colourSettingsManager.SaveAllMergedColourSettings();
 
                     kbtnResetColourSettings.Enabled = false;
 
-                    _colourStringSettingsManager.ResetColourStringSettings();
+                    //_colourStringSettingsManager.ResetColourStringSettings();
 
-                    _colourStringSettingsManager.SaveColourStringSettings();
+                    //_colourStringSettingsManager.SaveColourStringSettings();
 
                     kbtnResetColourStringSettings.Enabled = false;
 
@@ -373,9 +376,9 @@ namespace Core.UX.Options
 
                     kbtnResetGlobalStringSettings.Enabled = false;
 
-                    _paletteTypefaceSettingsManager.ResetPaletteTypefaceSettings();
+                    //_paletteTypefaceSettingsManager.ResetPaletteTypefaceSettings();
 
-                    _paletteTypefaceSettingsManager.SavePaletteTypefaceSettings();
+                    //_paletteTypefaceSettingsManager.SavePaletteTypefaceSettings();
 
                     kbtnResetPaletteTypefaceSettings.Enabled = false;
 

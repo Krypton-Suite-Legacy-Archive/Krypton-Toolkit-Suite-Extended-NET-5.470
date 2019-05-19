@@ -95,5 +95,8 @@
     <Setting Name="PressedTextColour" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="LinkDisabledColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -64,11 +64,13 @@
     <Compile Include="Classes\Application Updater\InternalApplicationUpdaterSettingsManager.cs" />
     <Compile Include="Classes\Application Updater\ThemeSettingsManager.cs" />
     <Compile Include="Classes\Application Updater\XMLFileApplicationUpdaterSettingsManager.cs" />
+    <Compile Include="Classes\Core\ColourIntegerSettingsManager.cs" />
     <Compile Include="Classes\Extended Controls\BooleanSettingsManager.cs" />
     <Compile Include="Classes\Extended Controls\StringSettingsManager.cs" />
     <Compile Include="Classes\Extended Controls\ThemeSettingsManager.cs" />
     <Compile Include="Classes\Extended Controls\WindowLocationSettingsManager.cs" />
     <Compile Include="Classes\Global\GlobalBooleanSettingsManager.cs" />
+    <Compile Include="Classes\Global\GlobalStringSettingsManager.cs" />
     <Compile Include="Classes\Helpers\ColourMerger.cs" />
     <Compile Include="Classes\Helpers\SettingsVarifier.cs" />
     <Compile Include="Classes\Palette Explorer\ColourCollectionStringSettingsManager.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="Classes\Palette Explorer\Colours\StandardControlTextColourSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\Colours\TextColourSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\GeneralPaletteExplorerSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\PaletteThemeSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\Properties\ColourPropertyWindowSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\WindowLocationSettingsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +107,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>XMLFileApplicationUpdaterSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Core\ColourIntegerSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ColourIntegerSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="Settings\Extended Controls\BooleanSettings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -129,6 +137,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>GlobalBooleanSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Global\GlobalStringSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>GlobalStringSettings.settings</DependentUpon>
     </Compile>
     <Compile Include="Settings\Palette Explorer\ColourCollectionStringSettings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -185,6 +198,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>GeneralPaletteExplorerSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Palette Explorer\PaletteThemeSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>PaletteThemeSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Settings\Palette Explorer\Properties\ColourPropertyWindowSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -211,6 +229,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>XMLFileApplicationUpdaterSettings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Settings\Core\ColourIntegerSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ColourIntegerSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Settings\Extended Controls\BooleanSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>BooleanSettings.Designer.cs</LastGenOutput>
@@ -230,6 +252,10 @@
     <None Include="Settings\Global\GlobalBooleanSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>GlobalBooleanSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Global\GlobalStringSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>GlobalStringSettings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Settings\Palette Explorer\ColourCollectionStringSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -274,6 +300,10 @@
     <None Include="Settings\Palette Explorer\GeneralPaletteExplorerSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>GeneralPaletteExplorerSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\PaletteThemeSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>PaletteThemeSettings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Settings\Palette Explorer\Properties\ColourPropertyWindowSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

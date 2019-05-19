@@ -11,6 +11,7 @@ using ComponentFactory.Krypton.Toolkit;
 using PaletteExplorer.Classes;
 using System;
 using System.Drawing;
+using System.Windows.Forms;
 using ToolkitSettings.Classes.PaletteExplorer;
 
 namespace PaletteExplorer.UX.Colour
@@ -48,6 +49,7 @@ namespace PaletteExplorer.UX.Colour
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColourMixerAdvanced));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnGenerateARGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -58,20 +60,19 @@ namespace PaletteExplorer.UX.Colour
             this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.cbxLightestColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxLightColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxMediumColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxDarkColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxBaseColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.knumAlpaValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.cwSelectedColour = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.ColourWheel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kbtnGenerateARGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.cbxLightestColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLightColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxMediumColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxDarkColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxBaseColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cwSelectedColour = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.ColourWheel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -93,6 +94,18 @@ namespace PaletteExplorer.UX.Colour
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(851, 65);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kbtnGenerateARGB
+            // 
+            this.kbtnGenerateARGB.AutoSize = true;
+            this.kbtnGenerateARGB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnGenerateARGB.Location = new System.Drawing.Point(215, 15);
+            this.kbtnGenerateARGB.Name = "kbtnGenerateARGB";
+            this.kbtnGenerateARGB.Size = new System.Drawing.Size(242, 30);
+            this.kbtnGenerateARGB.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerateARGB.TabIndex = 62;
+            this.kbtnGenerateARGB.Values.Text = "Gener&ate Random ARGB Colour";
+            this.kbtnGenerateARGB.Click += new System.EventHandler(this.KbtnGenerateARGB_Click);
             // 
             // kbtnGenerate
             // 
@@ -222,56 +235,6 @@ namespace PaletteExplorer.UX.Colour
             this.kryptonLabel7.TabIndex = 17;
             this.kryptonLabel7.Values.Text = "Medium Colour:";
             // 
-            // cbxLightestColour
-            // 
-            this.cbxLightestColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxLightestColour.BackColor = System.Drawing.Color.White;
-            this.cbxLightestColour.Location = new System.Drawing.Point(744, 477);
-            this.cbxLightestColour.Name = "cbxLightestColour";
-            this.cbxLightestColour.Size = new System.Drawing.Size(95, 95);
-            this.cbxLightestColour.TabIndex = 15;
-            this.cbxLightestColour.TabStop = false;
-            // 
-            // cbxLightColour
-            // 
-            this.cbxLightColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxLightColour.BackColor = System.Drawing.Color.White;
-            this.cbxLightColour.Location = new System.Drawing.Point(744, 361);
-            this.cbxLightColour.Name = "cbxLightColour";
-            this.cbxLightColour.Size = new System.Drawing.Size(95, 95);
-            this.cbxLightColour.TabIndex = 14;
-            this.cbxLightColour.TabStop = false;
-            // 
-            // cbxMediumColour
-            // 
-            this.cbxMediumColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxMediumColour.BackColor = System.Drawing.Color.White;
-            this.cbxMediumColour.Location = new System.Drawing.Point(744, 245);
-            this.cbxMediumColour.Name = "cbxMediumColour";
-            this.cbxMediumColour.Size = new System.Drawing.Size(95, 95);
-            this.cbxMediumColour.TabIndex = 13;
-            this.cbxMediumColour.TabStop = false;
-            // 
-            // cbxDarkColour
-            // 
-            this.cbxDarkColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxDarkColour.BackColor = System.Drawing.Color.White;
-            this.cbxDarkColour.Location = new System.Drawing.Point(744, 129);
-            this.cbxDarkColour.Name = "cbxDarkColour";
-            this.cbxDarkColour.Size = new System.Drawing.Size(95, 95);
-            this.cbxDarkColour.TabIndex = 12;
-            this.cbxDarkColour.TabStop = false;
-            // 
-            // cbxBaseColour
-            // 
-            this.cbxBaseColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxBaseColour.BackColor = System.Drawing.Color.White;
-            this.cbxBaseColour.Location = new System.Drawing.Point(744, 13);
-            this.cbxBaseColour.Name = "cbxBaseColour";
-            this.cbxBaseColour.Size = new System.Drawing.Size(95, 95);
-            this.cbxBaseColour.TabIndex = 11;
-            this.cbxBaseColour.TabStop = false;
-            // 
             // kryptonLabel5
             // 
             this.kryptonLabel5.Location = new System.Drawing.Point(546, 508);
@@ -338,15 +301,6 @@ namespace PaletteExplorer.UX.Colour
             this.kryptonLabel1.TabIndex = 4;
             this.kryptonLabel1.Values.Text = "Alpha:";
             // 
-            // cwSelectedColour
-            // 
-            this.cwSelectedColour.BackColor = System.Drawing.Color.Transparent;
-            this.cwSelectedColour.Location = new System.Drawing.Point(12, 12);
-            this.cwSelectedColour.Name = "cwSelectedColour";
-            this.cwSelectedColour.Size = new System.Drawing.Size(352, 362);
-            this.cwSelectedColour.TabIndex = 3;
-            this.cwSelectedColour.ColourChanged += new System.EventHandler(this.CwSelectedColour_ColourChanged);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -356,17 +310,69 @@ namespace PaletteExplorer.UX.Colour
             this.panel1.Size = new System.Drawing.Size(851, 2);
             this.panel1.TabIndex = 2;
             // 
-            // kbtnGenerateARGB
+            // cbxLightestColour
             // 
-            this.kbtnGenerateARGB.AutoSize = true;
-            this.kbtnGenerateARGB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGenerateARGB.Location = new System.Drawing.Point(215, 15);
-            this.kbtnGenerateARGB.Name = "kbtnGenerateARGB";
-            this.kbtnGenerateARGB.Size = new System.Drawing.Size(242, 30);
-            this.kbtnGenerateARGB.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnGenerateARGB.TabIndex = 62;
-            this.kbtnGenerateARGB.Values.Text = "Gener&ate Random ARGB Colour";
-            this.kbtnGenerateARGB.Click += new System.EventHandler(this.KbtnGenerateARGB_Click);
+            this.cbxLightestColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxLightestColour.BackColor = System.Drawing.Color.White;
+            this.cbxLightestColour.Location = new System.Drawing.Point(744, 477);
+            this.cbxLightestColour.Name = "cbxLightestColour";
+            this.cbxLightestColour.Size = new System.Drawing.Size(95, 95);
+            this.cbxLightestColour.TabIndex = 15;
+            this.cbxLightestColour.TabStop = false;
+            this.cbxLightestColour.MouseEnter += new System.EventHandler(this.CbxLightestColour_MouseEnter);
+            // 
+            // cbxLightColour
+            // 
+            this.cbxLightColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxLightColour.BackColor = System.Drawing.Color.White;
+            this.cbxLightColour.Location = new System.Drawing.Point(744, 361);
+            this.cbxLightColour.Name = "cbxLightColour";
+            this.cbxLightColour.Size = new System.Drawing.Size(95, 95);
+            this.cbxLightColour.TabIndex = 14;
+            this.cbxLightColour.TabStop = false;
+            this.cbxLightColour.MouseEnter += new System.EventHandler(this.CbxLightColour_MouseEnter);
+            // 
+            // cbxMediumColour
+            // 
+            this.cbxMediumColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxMediumColour.BackColor = System.Drawing.Color.White;
+            this.cbxMediumColour.Location = new System.Drawing.Point(744, 245);
+            this.cbxMediumColour.Name = "cbxMediumColour";
+            this.cbxMediumColour.Size = new System.Drawing.Size(95, 95);
+            this.cbxMediumColour.TabIndex = 13;
+            this.cbxMediumColour.TabStop = false;
+            this.cbxMediumColour.MouseEnter += new System.EventHandler(this.CbxMediumColour_MouseEnter);
+            // 
+            // cbxDarkColour
+            // 
+            this.cbxDarkColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxDarkColour.BackColor = System.Drawing.Color.White;
+            this.cbxDarkColour.Location = new System.Drawing.Point(744, 129);
+            this.cbxDarkColour.Name = "cbxDarkColour";
+            this.cbxDarkColour.Size = new System.Drawing.Size(95, 95);
+            this.cbxDarkColour.TabIndex = 12;
+            this.cbxDarkColour.TabStop = false;
+            this.cbxDarkColour.MouseEnter += new System.EventHandler(this.CbxDarkColour_MouseEnter);
+            // 
+            // cbxBaseColour
+            // 
+            this.cbxBaseColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxBaseColour.BackColor = System.Drawing.Color.White;
+            this.cbxBaseColour.Location = new System.Drawing.Point(744, 13);
+            this.cbxBaseColour.Name = "cbxBaseColour";
+            this.cbxBaseColour.Size = new System.Drawing.Size(95, 95);
+            this.cbxBaseColour.TabIndex = 11;
+            this.cbxBaseColour.TabStop = false;
+            this.cbxBaseColour.MouseEnter += new System.EventHandler(this.CbxBaseColour_MouseEnter);
+            // 
+            // cwSelectedColour
+            // 
+            this.cwSelectedColour.BackColor = System.Drawing.Color.Transparent;
+            this.cwSelectedColour.Location = new System.Drawing.Point(12, 12);
+            this.cwSelectedColour.Name = "cwSelectedColour";
+            this.cwSelectedColour.Size = new System.Drawing.Size(352, 362);
+            this.cwSelectedColour.TabIndex = 3;
+            this.cwSelectedColour.ColourChanged += new System.EventHandler(this.CwSelectedColour_ColourChanged);
             // 
             // ColourMixerAdvanced
             // 
@@ -398,6 +404,10 @@ namespace PaletteExplorer.UX.Colour
 
         #region Variables
         ColourIntensitySettingsManager _colourIntensitySettings = new ColourIntensitySettingsManager();
+
+        ToolTip toolTip = new ToolTip();
+
+        //VisualPopupToolTip toolTip = new VisualPopupToolTip();
         #endregion
 
         #region Constructors
@@ -460,6 +470,31 @@ namespace PaletteExplorer.UX.Colour
         private void KbtnGenerateARGB_Click(object sender, EventArgs e)
         {
             cwSelectedColour.Colour = ColourHelpers.GenerateRandomARGBColour();
+        }
+
+        private void CbxBaseColour_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(cbxBaseColour, cbxBaseColour.BackColor, "Base", true);
+        }
+
+        private void CbxDarkColour_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(cbxDarkColour, cbxDarkColour.BackColor, "Dark", true);
+        }
+
+        private void CbxMediumColour_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(cbxMediumColour, cbxMediumColour.BackColor, "Medium", true);
+        }
+
+        private void CbxLightColour_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(cbxLightColour, cbxLightColour.BackColor, "Light", true);
+        }
+
+        private void CbxLightestColour_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(cbxLightestColour, cbxLightestColour.BackColor, "Lightest", true);
         }
     }
 }

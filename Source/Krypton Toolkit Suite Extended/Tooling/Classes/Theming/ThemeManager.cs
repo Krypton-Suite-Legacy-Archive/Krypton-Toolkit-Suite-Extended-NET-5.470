@@ -8,9 +8,9 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
-using Core.Settings.Classes;
 using System.Collections;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.PaletteExplorer;
 
 namespace Core.Classes.Theming
 {

@@ -227,6 +227,168 @@ namespace PaletteExplorer.Classes
 
             Color white = Color.White;
             #endregion
+
+            #region Colours
+
+            #region All Merged Colours
+            allMergedColourSettingsManager.SetBaseColour(white);
+
+            allMergedColourSettingsManager.SetDarkColour(white);
+
+            allMergedColourSettingsManager.SetMediumColour(white);
+
+            allMergedColourSettingsManager.SetLightColour(white);
+
+            allMergedColourSettingsManager.SetLightestColour(white);
+
+            allMergedColourSettingsManager.SetCustomColourOne(white);
+
+            allMergedColourSettingsManager.SetCustomColourTwo(white);
+
+            allMergedColourSettingsManager.SetCustomColourThree(white);
+
+            allMergedColourSettingsManager.SetCustomColourFour(white);
+
+            allMergedColourSettingsManager.SetCustomColourFive(white);
+
+            allMergedColourSettingsManager.SetCustomColourSix(white);
+
+            allMergedColourSettingsManager.SetCustomTextColourOne(white);
+
+            allMergedColourSettingsManager.SetCustomTextColourTwo(white);
+
+            allMergedColourSettingsManager.SetCustomTextColourThree(white);
+
+            allMergedColourSettingsManager.SetCustomTextColourFour(white);
+
+            allMergedColourSettingsManager.SetCustomTextColourFive(white);
+
+            allMergedColourSettingsManager.SetCustomTextColourSix(white);
+
+            allMergedColourSettingsManager.SetLinkFocusedColour(white);
+
+            allMergedColourSettingsManager.SetLinkHoverColour(white);
+
+            allMergedColourSettingsManager.SetLinkNormalColour(white);
+
+            allMergedColourSettingsManager.SetLinkVisitedColour(white);
+
+            allMergedColourSettingsManager.SetBorderColour(white);
+
+            allMergedColourSettingsManager.SetDisabledControlColour(white);
+
+            allMergedColourSettingsManager.SetMenuTextColour(white);
+
+            allMergedColourSettingsManager.SetRibbonTabTextColour(white);
+
+            allMergedColourSettingsManager.SetStatusStripTextColour(white);
+
+            allMergedColourSettingsManager.SetAlternativeNormalTextColour(white);
+
+            allMergedColourSettingsManager.SetDisabledTextColour(white);
+
+            allMergedColourSettingsManager.SetFocusedTextColour(white);
+
+            allMergedColourSettingsManager.SetNormalTextColour(white);
+
+            allMergedColourSettingsManager.SetPressedTextColour(white);
+            #endregion
+
+            #region Basic Colours
+            basicColourSettingsManager.SetBaseColour(white);
+
+            basicColourSettingsManager.SetDarkColour(white);
+
+            basicColourSettingsManager.SetMediumColour(white);
+
+            basicColourSettingsManager.SetLightColour(white);
+
+            basicColourSettingsManager.SetLightestColour(white);
+            #endregion
+
+            #region Custom Colours
+            customColourSettingsManager.SetCustomColourOne(white);
+
+            customColourSettingsManager.SetCustomColourTwo(white);
+
+            customColourSettingsManager.SetCustomColourThree(white);
+
+            customColourSettingsManager.SetCustomColourFour(white);
+
+            customColourSettingsManager.SetCustomColourFive(white);
+
+            customColourSettingsManager.SetCustomColourSix(white);
+            #endregion
+
+            #region Custom Text Colours
+            customTextColourSettingsManager.SetCustomTextColourOne(white);
+
+            customTextColourSettingsManager.SetCustomTextColourTwo(white);
+
+            customTextColourSettingsManager.SetCustomTextColourThree(white);
+
+            customTextColourSettingsManager.SetCustomTextColourFour(white);
+
+            customTextColourSettingsManager.SetCustomTextColourFive(white);
+
+            customTextColourSettingsManager.SetCustomTextColourSix(white);
+            #endregion
+
+            #region Link Text Colours
+            linkTextColourSettingsManager.SetLinkFocusedColour(white);
+
+            linkTextColourSettingsManager.SetLinkHoverColour(white);
+
+            linkTextColourSettingsManager.SetLinkNormalColour(white);
+
+            linkTextColourSettingsManager.SetLinkVisitedColour(white);
+            #endregion
+
+            #region Miscellaneous Colours
+            miscellaneousColourSettingsManager.SetBorderColour(white);
+
+            miscellaneousColourSettingsManager.SetDisabledControlColour(white);
+            #endregion
+
+            #region Standard Control Text Colours
+            standardControlTextColourSettingsManager.SetMenuTextColour(white);
+
+            standardControlTextColourSettingsManager.SetRibbonTabTextColour(white);
+
+            standardControlTextColourSettingsManager.SetStatusStripTextColour(white);
+            #endregion
+
+            #region Text Colours
+            textColourSettingsManager.SetAlternativeNormalTextColour(white);
+
+            textColourSettingsManager.SetDisabledTextColour(white);
+
+            textColourSettingsManager.SetFocusedTextColour(white);
+
+            textColourSettingsManager.SetNormalTextColour(white);
+
+            textColourSettingsManager.SetPressedTextColour(white);
+            #endregion
+
+            #endregion
+
+            #region Save Settings
+            allMergedColourSettingsManager.SaveAllMergedColourSettings();
+
+            basicColourSettingsManager.SaveBasicColourSettings();
+
+            customColourSettingsManager.SaveCustomColourSettings();
+
+            customTextColourSettingsManager.SaveCustomTextColourSettings();
+
+            linkTextColourSettingsManager.SaveLinkTextColourSettings();
+
+            miscellaneousColourSettingsManager.SaveMiscellaneousColourSettings();
+
+            standardControlTextColourSettingsManager.SaveStandardControlTextColourSettings();
+
+            textColourSettingsManager.SaveTextColourSettings();
+            #endregion
         }
 
         /// <summary>
@@ -249,9 +411,157 @@ namespace PaletteExplorer.Classes
             return $"{ value }f";
         }
 
+        /// <summary>
+        /// Sets the colour settings.
+        /// </summary>
+        /// <param name="text">The palette colour definition.</param>
+        /// <param name="colour">The colour value.</param>
         public static void SetColour(string text, Color colour)
         {
-            throw new NotImplementedException();
+            #region Settings
+            CustomColourSettingsManager customColourSettingsManager = new CustomColourSettingsManager();
+
+            CustomTextColourSettingsManager customTextColourSettingsManager = new CustomTextColourSettingsManager();
+
+            LinkTextColourSettingsManager linkTextColourSettingsManager = new LinkTextColourSettingsManager();
+
+            MiscellaneousColourSettingsManager miscellaneousColourSettingsManager = new MiscellaneousColourSettingsManager();
+
+            StandardControlTextColourSettingsManager standardControlTextColourSettingsManager = new StandardControlTextColourSettingsManager();
+
+            TextColourSettingsManager textColourSettingsManager = new TextColourSettingsManager();
+            #endregion
+
+            #region Branching
+
+            #region Custom Colours
+            if (text == "Custom Colour One")
+            {
+                customColourSettingsManager.SetCustomColourOne(colour);
+            }
+            else if (text == "Custom Colour Two")
+            {
+                customColourSettingsManager.SetCustomColourTwo(colour);
+            }
+            else if (text == "Custom Colour Three")
+            {
+                customColourSettingsManager.SetCustomColourThree(colour);
+            }
+            else if (text == "Custom Colour Four")
+            {
+                customColourSettingsManager.SetCustomColourFour(colour);
+            }
+            else if (text == "Custom Colour Five")
+            {
+                customColourSettingsManager.SetCustomColourFive(colour);
+            }
+            else if (text == "Custom Colour Six")
+            {
+                customColourSettingsManager.SetCustomColourSix(colour);
+            }
+            #endregion
+
+            #region Custom Text Colours
+            if (text == "Custom Text Colour One")
+            {
+                customTextColourSettingsManager.SetCustomTextColourOne(colour);
+            }
+            else if (text == "Custom Text Colour Two")
+            {
+                customTextColourSettingsManager.SetCustomTextColourTwo(colour);
+            }
+            else if (text == "Custom Text Colour Three")
+            {
+                customTextColourSettingsManager.SetCustomTextColourThree(colour);
+            }
+            else if (text == "Custom Text Colour Four")
+            {
+                customTextColourSettingsManager.SetCustomTextColourFour(colour);
+            }
+            else if (text == "Custom Text Colour Five")
+            {
+                customTextColourSettingsManager.SetCustomTextColourFive(colour);
+            }
+            else if (text == "Custom Text Colour Six")
+            {
+                customTextColourSettingsManager.SetCustomTextColourSix(colour);
+            }
+            #endregion
+
+            #region Link Text Colours
+            if (text == "Link Focused Colour")
+            {
+                linkTextColourSettingsManager.SetLinkFocusedColour(colour);
+            }
+            else if (text == "Link Hover Colour")
+            {
+                linkTextColourSettingsManager.SetLinkHoverColour(colour);
+            }
+            else if (text == "Link Normal Colour")
+            {
+                linkTextColourSettingsManager.SetLinkNormalColour(colour);
+            }
+            else if (text == "Link Visited Colour")
+            {
+                linkTextColourSettingsManager.SetLinkVisitedColour(colour);
+            }
+            #endregion
+
+            #region Miscellaneous Colours
+            if (text == "Border Colour")
+            {
+                miscellaneousColourSettingsManager.SetBorderColour(colour);
+            }
+            else if (text == "Disabled Control Colour")
+            {
+                miscellaneousColourSettingsManager.SetDisabledControlColour(colour);
+            }
+            #endregion
+
+            #region Standard Control Text Colours
+            if (text == "Menu Text Colour")
+            {
+                standardControlTextColourSettingsManager.SetMenuTextColour(colour);
+            }
+            else if (text == "Status Strip Text Colour")
+            {
+                standardControlTextColourSettingsManager.SetStatusStripTextColour(colour);
+            }
+            else if (text == "Ribbon Tab Text Colour")
+            {
+                standardControlTextColourSettingsManager.SetRibbonTabTextColour(colour);
+            }
+            #endregion
+
+            #region Text Colours
+            if (text == "Alternative Normal Text Colour")
+            {
+                textColourSettingsManager.SetAlternativeNormalTextColour(colour);
+            }
+            else if (text == "Disabled Text Colour")
+            {
+                textColourSettingsManager.SetDisabledTextColour(colour);
+            }
+            else if (text == "Focused Text Colour")
+            {
+                textColourSettingsManager.SetFocusedTextColour(colour);
+            }
+            else if (text == "Normal Text Colour")
+            {
+                textColourSettingsManager.SetNormalTextColour(colour);
+            }
+            else if (text == "Pressed Text Colour")
+            {
+                textColourSettingsManager.SetPressedTextColour(colour);
+            }
+            #endregion
+
+            #endregion
+        }
+
+        public static string ConvertColourToHexadecimal(Color colour)
+        {
+            return $"#{ colour.R.ToString("X2") }{ colour.G.ToString("X2") }{ colour.B.ToString("X2") }";
         }
         #endregion
     }

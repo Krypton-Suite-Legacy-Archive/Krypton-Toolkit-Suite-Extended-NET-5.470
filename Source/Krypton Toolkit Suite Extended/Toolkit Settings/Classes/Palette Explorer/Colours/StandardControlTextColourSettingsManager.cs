@@ -191,10 +191,10 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         }
 
         /// <summary>
-        /// Saves the XML file application updater settings.
+        /// Saves the standard control text colour settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveXMLFileApplicationUpdaterSettings(bool alwaysUsePrompt = false)
+        public void SaveStandardControlTextColourSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {
@@ -210,6 +210,22 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
                 _standardControlTextColourSettings.Save();
 
                 SetSettingsModified(false);
+            }
+        }
+        #endregion
+
+        #region Detection
+        public static bool AreStandardControlTextColoursEmpty()
+        {
+            StandardControlTextColourSettingsManager standardControlTextColourSettingsManager = new StandardControlTextColourSettingsManager();
+
+            if (standardControlTextColourSettingsManager.GetMenuTextColour() == Color.Empty || standardControlTextColourSettingsManager.GetRibbonTabTextColour() == Color.Empty || standardControlTextColourSettingsManager.GetStatusStripTextColour() == Color.Empty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
         #endregion

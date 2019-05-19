@@ -7,9 +7,9 @@
  */
 #endregion
 
-using Core.Settings.Classes;
 using System;
 using System.Drawing;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace Classes.Colours
 {
@@ -27,7 +27,7 @@ namespace Classes.Colours
 
         private Random randomColour = new Random(DateTime.Now.Millisecond);
 
-        private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
+        private AllMergedColourSettingsManager _colourSettingsManager = new AllMergedColourSettingsManager();
         #endregion
 
         #region Constructor

@@ -8,10 +8,10 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
-using Core.Settings.Colours.Classes;
 using ExtendedControls.ExtendedToolkit.Controls;
 using System;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace Core.Classes.Theming
 {
@@ -35,17 +35,17 @@ namespace Core.Classes.Theming
         /// <param name="lightestColour"></param>
         public static void SetBasicPaletteColours(CircularPictureBox baseColour, CircularPictureBox darkestColour, CircularPictureBox mediumColour, CircularPictureBox lightColour, CircularPictureBox lightestColour)
         {
-            BasicPaletteColourManager basicPaletteColourManager = new BasicPaletteColourManager();
+            BasicColourSettingsManager basicPaletteColourManager = new BasicColourSettingsManager();
 
             try
             {
-                if (!BasicPaletteColourManager.AreBasicPaletteColoursEmpty())
+                if (!BasicColourSettingsManager.AreBasicPaletteColoursEmpty())
                 {
-                    basicPaletteColourManager.ResetSettings();
+                    basicPaletteColourManager.ResetToDefaults();
 
                     basicPaletteColourManager.SetBaseColour(baseColour.BackColor);
 
-                    basicPaletteColourManager.SetDarkestColour(darkestColour.BackColor);
+                    basicPaletteColourManager.SetDarkColour(darkestColour.BackColor);
 
                     basicPaletteColourManager.SetMediumColour(mediumColour.BackColor);
 
@@ -53,13 +53,13 @@ namespace Core.Classes.Theming
 
                     basicPaletteColourManager.SetLightestColour(lightestColour.BackColor);
 
-                    basicPaletteColourManager.SaveColourSettings();
+                    basicPaletteColourManager.SaveBasicColourSettings();
                 }
                 else
                 {
                     basicPaletteColourManager.SetBaseColour(baseColour.BackColor);
 
-                    basicPaletteColourManager.SetDarkestColour(darkestColour.BackColor);
+                    basicPaletteColourManager.SetDarkColour(darkestColour.BackColor);
 
                     basicPaletteColourManager.SetMediumColour(mediumColour.BackColor);
 
@@ -67,30 +67,30 @@ namespace Core.Classes.Theming
 
                     basicPaletteColourManager.SetLightestColour(lightestColour.BackColor);
 
-                    basicPaletteColourManager.SaveColourSettings();
+                    basicPaletteColourManager.SaveBasicColourSettings();
                 }
             }
             catch (Exception exc)
             {
                 KryptonMessageBox.Show($"An unexpected error has occurred: { exc.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                basicPaletteColourManager.ResetSettings();
+                basicPaletteColourManager.ResetToDefaults();
             }
         }
 
         public static void SetBasicPaletteColours(PictureBox baseColour, PictureBox darkestColour, PictureBox mediumColour, PictureBox lightColour, PictureBox lightestColour)
         {
-            BasicPaletteColourManager basicPaletteColourManager = new BasicPaletteColourManager();
+            BasicColourSettingsManager basicPaletteColourManager = new BasicColourSettingsManager();
 
             try
             {
-                if (!BasicPaletteColourManager.AreBasicPaletteColoursEmpty())
+                if (!BasicColourSettingsManager.AreBasicPaletteColoursEmpty())
                 {
-                    basicPaletteColourManager.ResetSettings();
+                    basicPaletteColourManager.ResetToDefaults();
 
                     basicPaletteColourManager.SetBaseColour(baseColour.BackColor);
 
-                    basicPaletteColourManager.SetDarkestColour(darkestColour.BackColor);
+                    basicPaletteColourManager.SetDarkColour(darkestColour.BackColor);
 
                     basicPaletteColourManager.SetMediumColour(mediumColour.BackColor);
 
@@ -98,13 +98,13 @@ namespace Core.Classes.Theming
 
                     basicPaletteColourManager.SetLightestColour(lightestColour.BackColor);
 
-                    basicPaletteColourManager.SaveColourSettings();
+                    basicPaletteColourManager.SaveBasicColourSettings();
                 }
                 else
                 {
                     basicPaletteColourManager.SetBaseColour(baseColour.BackColor);
 
-                    basicPaletteColourManager.SetDarkestColour(darkestColour.BackColor);
+                    basicPaletteColourManager.SetDarkColour(darkestColour.BackColor);
 
                     basicPaletteColourManager.SetMediumColour(mediumColour.BackColor);
 
@@ -112,14 +112,14 @@ namespace Core.Classes.Theming
 
                     basicPaletteColourManager.SetLightestColour(lightestColour.BackColor);
 
-                    basicPaletteColourManager.SaveColourSettings();
+                    basicPaletteColourManager.SaveBasicColourSettings();
                 }
             }
             catch (Exception exc)
             {
                 KryptonMessageBox.Show($"An unexpected error has occurred: { exc.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                basicPaletteColourManager.ResetSettings();
+                basicPaletteColourManager.ResetToDefaults();
             }
         }
         #endregion

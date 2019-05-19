@@ -1,7 +1,8 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System.Windows.Forms;
+using ToolkitSettings.Settings.Palette_Explorer;
 
-namespace Core.Settings.Classes
+namespace ToolkitSettings.Classes.PaletteExplorer
 {
     public class PaletteThemeSettingsManager
     {
@@ -23,7 +24,7 @@ namespace Core.Settings.Classes
         /// <param name="themeValue">The value of themeValue.</param>
         public void SetTheme(PaletteModeManager themeValue)
         {
-            _paletteThemeSettings.Theme = themeValue;
+            _paletteThemeSettings.CurrentTheme = themeValue;
         }
 
         /// <summary>
@@ -32,7 +33,7 @@ namespace Core.Settings.Classes
         /// <returns>The value of themeValue.</returns>
         public PaletteModeManager GetTheme()
         {
-            return _paletteThemeSettings.Theme;
+            return _paletteThemeSettings.CurrentTheme;
         }
 
         /// <summary>

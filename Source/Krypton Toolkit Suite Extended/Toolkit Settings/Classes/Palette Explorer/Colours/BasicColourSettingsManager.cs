@@ -235,10 +235,10 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         }
 
         /// <summary>
-        /// Saves the XML file application updater settings.
+        /// Saves the basic colour settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveXMLFileApplicationUpdaterSettings(bool alwaysUsePrompt = false)
+        public void SaveBasicColourSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {
@@ -257,5 +257,26 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
             }
         }
         #endregion
+
+        #region Detection        
+        /// <summary>
+        /// Are the basic palette colours empty.
+        /// </summary>
+        /// <returns></returns>
+        public static bool AreBasicPaletteColoursEmpty()
+        {
+            BasicColourSettingsManager basicPaletteColourManager = new BasicColourSettingsManager();
+
+            if (basicPaletteColourManager.GetBaseColour() == Color.Empty || basicPaletteColourManager.GetDarkColour() == Color.Empty || basicPaletteColourManager.GetMediumColour() == Color.Empty || basicPaletteColourManager.GetLightColour() == Color.Empty || basicPaletteColourManager.GetLightestColour() == Color.Empty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        #endregion
+
     }
 }

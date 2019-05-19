@@ -1,7 +1,8 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System.Windows.Forms;
+using ToolkitSettings.Settings.Core;
 
-namespace Core.Settings.Classes
+namespace ToolkitSettings.Classes.Core
 {
     public class ColourIntegerSettingsManager
     {

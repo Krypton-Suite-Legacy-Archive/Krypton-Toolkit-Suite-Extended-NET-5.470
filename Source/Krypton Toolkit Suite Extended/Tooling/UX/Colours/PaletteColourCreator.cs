@@ -12,12 +12,13 @@ using ComponentFactory.Krypton.Toolkit;
 using Core.Classes.Colours.Extended;
 using Core.Classes.Other;
 using Core.Classes.Theming;
-using Core.Settings.Classes;
 using Core.UX.Colours;
 using Core.UX.Debugging;
 using Core.UX.Options;
 using System;
 using System.Drawing;
+using ToolkitSettings.Classes.Global;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace Core.UX
 {
@@ -34,7 +35,7 @@ namespace Core.UX
 
         private GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
 
-        private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
+        private AllMergedColourSettingsManager _colourSettingsManager = new AllMergedColourSettingsManager();
 
         private Color _baseColour, _colourDark, _colourNormal, _colourLight, _colourLightness;
 
@@ -139,7 +140,7 @@ namespace Core.UX
 
         private void PaletteColourCreator_Load(object sender, EventArgs e)
         {
-            _colourSettingsManager.ResetSettings();
+            _colourSettingsManager.ResetToDefaults();
 
             if (PaletteColourSelector)
             {
@@ -451,7 +452,7 @@ namespace Core.UX
         {
             cpbBaseColourPreview.BackColor = _colourSettingsManager.GetBaseColour();
 
-            cpbDarkestColourPreview.BackColor = _colourSettingsManager.GetDarkestColour();
+            cpbDarkestColourPreview.BackColor = _colourSettingsManager.GetDarkColour();
 
             cpbMiddleColourPreview.BackColor = _colourSettingsManager.GetMediumColour();
 
