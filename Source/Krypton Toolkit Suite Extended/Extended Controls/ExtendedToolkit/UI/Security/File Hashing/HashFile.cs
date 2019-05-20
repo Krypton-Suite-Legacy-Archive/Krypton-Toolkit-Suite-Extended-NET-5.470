@@ -58,16 +58,19 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HashFile));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kcbShowLength = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kbtnGenerateFileHash = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.klblResult = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.ctxResult = new System.Windows.Forms.ContextMenuStrip();
+            this.ctxResult = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kcbxHashAlgorithimType = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kbtnBrowse = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kptxtApplicationExecutable = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -84,7 +87,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.bgwSHA384 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA512 = new System.ComponentModel.BackgroundWorker();
             this.bgwRIPEMD160 = new System.ComponentModel.BackgroundWorker();
-            this.kptxtApplicationExecutable = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.ctxResult.SuspendLayout();
@@ -155,12 +157,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.ctxResult.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copyToolStripMenuItem});
             this.ctxResult.Name = "ctxResult";
-            this.ctxResult.Size = new System.Drawing.Size(181, 48);
+            this.ctxResult.Size = new System.Drawing.Size(103, 26);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.copyToolStripMenuItem.Text = "C&opy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
@@ -214,6 +216,19 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kbtnBrowse.TabIndex = 3;
             this.kbtnBrowse.Values.Text = "...";
             this.kbtnBrowse.Click += new System.EventHandler(this.KbtnBrowse_Click);
+            // 
+            // kptxtApplicationExecutable
+            // 
+            this.kptxtApplicationExecutable.DrawPrompt = true;
+            this.kptxtApplicationExecutable.FocusSelect = true;
+            this.kptxtApplicationExecutable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtApplicationExecutable.Location = new System.Drawing.Point(181, 44);
+            this.kptxtApplicationExecutable.Name = "kptxtApplicationExecutable";
+            this.kptxtApplicationExecutable.PromptForeColour = System.Drawing.SystemColors.GrayText;
+            this.kptxtApplicationExecutable.PromptText = "Executable Path";
+            this.kptxtApplicationExecutable.PromptTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kptxtApplicationExecutable.Size = new System.Drawing.Size(613, 29);
+            this.kptxtApplicationExecutable.TabIndex = 2;
             // 
             // kryptonLabel3
             // 
@@ -363,19 +378,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.bgwRIPEMD160.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgwRIPEMD160_ProgressChanged);
             this.bgwRIPEMD160.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwRIPEMD160_RunWorkerCompleted);
             // 
-            // kptxtApplicationExecutable
-            // 
-            this.kptxtApplicationExecutable.DrawPrompt = true;
-            this.kptxtApplicationExecutable.FocusSelect = true;
-            this.kptxtApplicationExecutable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kptxtApplicationExecutable.Location = new System.Drawing.Point(181, 44);
-            this.kptxtApplicationExecutable.Name = "kptxtApplicationExecutable";
-            this.kptxtApplicationExecutable.PromptForeColour = System.Drawing.SystemColors.GrayText;
-            this.kptxtApplicationExecutable.PromptText = "Executable Path";
-            this.kptxtApplicationExecutable.PromptTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kptxtApplicationExecutable.Size = new System.Drawing.Size(613, 29);
-            this.kptxtApplicationExecutable.TabIndex = 2;
-            // 
             // HashFile
             // 
             this.CancelButton = this.kbtnCancel;
@@ -384,6 +386,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.Controls.Add(this.kryptonPanel2);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "HashFile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

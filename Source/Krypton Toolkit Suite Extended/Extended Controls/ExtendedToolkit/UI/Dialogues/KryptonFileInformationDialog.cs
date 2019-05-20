@@ -61,6 +61,13 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
         private System.ComponentModel.BackgroundWorker bgwSHA384;
         private System.ComponentModel.BackgroundWorker bgwSHA512;
         private System.ComponentModel.BackgroundWorker bgwRIPEMD160;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kryptonPage3;
+        private KryptonGroupBox kryptonGroupBox3;
+        private KryptonCheckBox kryptonCheckBox5;
+        private KryptonCheckBox kryptonCheckBox4;
+        private KryptonCheckBox kryptonCheckBox3;
+        private KryptonCheckBox kryptonCheckBox2;
+        private KryptonCheckBox kryptonCheckBox1;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
@@ -102,6 +109,13 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.bgwSHA384 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA512 = new System.ComponentModel.BackgroundWorker();
             this.bgwRIPEMD160 = new System.ComponentModel.BackgroundWorker();
+            this.kryptonPage3 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kryptonGroupBox3 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonCheckBox1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox2 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox3 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox4 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox5 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -123,6 +137,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonGroupBox1.Panel.SuspendLayout();
             this.kryptonGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbHashType1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage3)).BeginInit();
+            this.kryptonPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).BeginInit();
+            this.kryptonGroupBox3.Panel.SuspendLayout();
+            this.kryptonGroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -186,8 +206,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonNavigator1.Name = "kryptonNavigator1";
             this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
-            this.kryptonPage2});
-            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonPage2,
+            this.kryptonPage3});
+            this.kryptonNavigator1.SelectedIndex = 2;
             this.kryptonNavigator1.Size = new System.Drawing.Size(692, 675);
             this.kryptonNavigator1.StateCommon.Tab.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonNavigator1.StateCommon.Tab.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -382,6 +403,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.ktxtValidate.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ktxtValidate.TabIndex = 9;
             this.ktxtValidate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ktxtValidate.TextChanged += new System.EventHandler(this.KtxtValidate_TextChanged);
             // 
             // kcmbValidatedHashType
             // 
@@ -440,6 +462,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kbtnCalculateFileHash.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCalculateFileHash.TabIndex = 9;
             this.kbtnCalculateFileHash.Values.Text = "Calculat&e";
+            this.kbtnCalculateFileHash.Click += new System.EventHandler(this.KbtnCalculateFileHash_Click);
             // 
             // klblRealFileHash
             // 
@@ -508,6 +531,87 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.bgwRIPEMD160.WorkerReportsProgress = true;
             this.bgwRIPEMD160.WorkerSupportsCancellation = true;
             // 
+            // kryptonPage3
+            // 
+            this.kryptonPage3.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kryptonPage3.Controls.Add(this.kryptonGroupBox3);
+            this.kryptonPage3.Flags = 65534;
+            this.kryptonPage3.LastVisibleSet = true;
+            this.kryptonPage3.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage3.Name = "kryptonPage3";
+            this.kryptonPage3.Size = new System.Drawing.Size(690, 644);
+            this.kryptonPage3.Text = "File Attributes";
+            this.kryptonPage3.ToolTipTitle = "Page ToolTip";
+            this.kryptonPage3.UniqueName = "50a26aabd19c4b24a5d601dc8c8dcced";
+            // 
+            // kryptonGroupBox3
+            // 
+            this.kryptonGroupBox3.Location = new System.Drawing.Point(20, 14);
+            this.kryptonGroupBox3.Name = "kryptonGroupBox3";
+            // 
+            // kryptonGroupBox3.Panel
+            // 
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox5);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox4);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox3);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox2);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox1);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(651, 390);
+            this.kryptonGroupBox3.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonGroupBox3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonGroupBox3.TabIndex = 2;
+            this.kryptonGroupBox3.Values.Heading = "Validate Checksum";
+            // 
+            // kryptonCheckBox1
+            // 
+            this.kryptonCheckBox1.Location = new System.Drawing.Point(15, 19);
+            this.kryptonCheckBox1.Name = "kryptonCheckBox1";
+            this.kryptonCheckBox1.Size = new System.Drawing.Size(79, 26);
+            this.kryptonCheckBox1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox1.TabIndex = 0;
+            this.kryptonCheckBox1.Values.Text = "&Archive";
+            // 
+            // kryptonCheckBox2
+            // 
+            this.kryptonCheckBox2.Location = new System.Drawing.Point(529, 19);
+            this.kryptonCheckBox2.Name = "kryptonCheckBox2";
+            this.kryptonCheckBox2.Size = new System.Drawing.Size(97, 26);
+            this.kryptonCheckBox2.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox2.TabIndex = 1;
+            this.kryptonCheckBox2.Values.Text = "&Encrypted";
+            // 
+            // kryptonCheckBox3
+            // 
+            this.kryptonCheckBox3.Location = new System.Drawing.Point(399, 19);
+            this.kryptonCheckBox3.Name = "kryptonCheckBox3";
+            this.kryptonCheckBox3.Size = new System.Drawing.Size(91, 26);
+            this.kryptonCheckBox3.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox3.TabIndex = 2;
+            this.kryptonCheckBox3.Values.Text = "D&irectory";
+            // 
+            // kryptonCheckBox4
+            // 
+            this.kryptonCheckBox4.Location = new System.Drawing.Point(287, 19);
+            this.kryptonCheckBox4.Name = "kryptonCheckBox4";
+            this.kryptonCheckBox4.Size = new System.Drawing.Size(73, 26);
+            this.kryptonCheckBox4.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox4.TabIndex = 3;
+            this.kryptonCheckBox4.Values.Text = "D&evice";
+            // 
+            // kryptonCheckBox5
+            // 
+            this.kryptonCheckBox5.Location = new System.Drawing.Point(133, 19);
+            this.kryptonCheckBox5.Name = "kryptonCheckBox5";
+            this.kryptonCheckBox5.Size = new System.Drawing.Size(115, 26);
+            this.kryptonCheckBox5.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox5.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox5.TabIndex = 4;
+            this.kryptonCheckBox5.Values.Text = "C&ompressed";
+            // 
             // KryptonFileInformationDialog
             // 
             this.ClientSize = new System.Drawing.Size(716, 744);
@@ -544,6 +648,13 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
             this.kryptonGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kcmbHashType1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPage3)).EndInit();
+            this.kryptonPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).EndInit();
+            this.kryptonGroupBox3.Panel.ResumeLayout(false);
+            this.kryptonGroupBox3.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).EndInit();
+            this.kryptonGroupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -647,7 +758,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
 
                 klblFileLocation.Text = $"Location: { Path.GetFullPath(filePath) }";
 
-                klblFileSize.Text = $"Size: { FileUtilities.GetReadableFileSize(fileInfo.Length) }";
+                klblFileSize.Text = $"Size: { FileUtilities.GetReadableFileSize(fileInfo.Length) } ({ fileInfo.Length.ToString() } bytes)";
+
+                klblSizeOnDisk.Text = $"Size on disk: { FileUtilities.GetReadableFileSize(FileUtilities.GetFileSizeOnDisk(filePath)) }";
 
                 klblCreated.Text = $"Created: { GetDateTimeAsString(fileInfo.CreationTime) }";
 
@@ -703,6 +816,41 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
         private static string GetDateTimeAsString(DateTime dateTime)
         {
             return dateTime.ToLongDateString();
+        }
+
+        private void KbtnCalculateFileHash_Click(object sender, EventArgs e)
+        {
+            if (kcmbHashType1.Text == "MD5")
+            {
+                bgwMD5.RunWorkerAsync(ktbFileName.Text);
+            }
+            else if (kcmbHashType1.Text == "SHA-1")
+            {
+                bgwSHA1.RunWorkerAsync(ktbFileName.Text);
+            }
+            else if (kcmbHashType1.Text == "SHA-256")
+            {
+                bgwSHA256.RunWorkerAsync(ktbFileName.Text);
+            }
+            else if (kcmbHashType1.Text == "SHA-384")
+            {
+                bgwSHA384.RunWorkerAsync(ktbFileName.Text);
+            }
+            else if (kcmbHashType1.Text == "SHA-512")
+            {
+                bgwSHA512.RunWorkerAsync(ktbFileName.Text);
+            }
+            else if (kcmbHashType1.Text == "RIPEMD-160")
+            {
+                bgwRIPEMD160.RunWorkerAsync(ktbFileName.Text);
+            }
+
+            kbtnCalculateFileHash.Enabled = false;
+        }
+
+        private void KtxtValidate_TextChanged(object sender, EventArgs e)
+        {
+            HashingHelper.UpdateHashType(kcmbValidatedHashType, ktxtValidate.Text.Length);
         }
     }
 }

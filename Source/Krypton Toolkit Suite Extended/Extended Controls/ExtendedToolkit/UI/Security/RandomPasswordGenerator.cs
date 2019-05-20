@@ -245,7 +245,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security
 
         private void kbtnCancel_Click(object sender, EventArgs e)
         {
-            HideWindow();
+            Close();
         }
 
         private void RandomPasswordGenerator_FormClosing(object sender, FormClosingEventArgs e)

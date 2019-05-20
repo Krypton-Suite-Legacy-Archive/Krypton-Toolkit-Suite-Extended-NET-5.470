@@ -364,7 +364,7 @@
       <Version>1.0.5</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.968</Version>
+      <Version>5.470.1103</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>

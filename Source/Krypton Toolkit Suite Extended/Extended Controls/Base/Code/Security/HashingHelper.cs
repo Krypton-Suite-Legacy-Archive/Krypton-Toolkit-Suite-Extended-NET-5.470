@@ -205,6 +205,39 @@ namespace ExtendedControls.Base.Code.Security
 
             return builder.ToString();
         }
+
+        /// <summary>
+        /// Updates the type of the hash.
+        /// </summary>
+        /// <param name="box">The box.</param>
+        /// <param name="hashLength">Length of the hash.</param>
+        public static void UpdateHashType(KryptonComboBox box, int hashLength)
+        {
+            if (hashLength == 32)
+            {
+                box.Text = "MD5";
+            }
+            else if (hashLength == 40)
+            {
+                box.Text = "SHA-1";
+            }
+            else if (hashLength == 64)
+            {
+                box.Text = "SHA-256";
+            }
+            else if (hashLength == 96)
+            {
+                box.Text = "SHA-384";
+            }
+            else if (hashLength == 128)
+            {
+                box.Text = "SHA-512";
+            }
+            else
+            {
+                box.Text = "RIPEMD-160";
+            }
+        }
         #endregion
     }
 }

@@ -22,5 +22,17 @@ namespace ToolkitSettings.Settings.Palette_Explorer {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Microsoft Sans Serif, 8.25pt")]
+        public global::System.Drawing.Font GlobalPaletteTypeface {
+            get {
+                return ((global::System.Drawing.Font)(this["GlobalPaletteTypeface"]));
+            }
+            set {
+                this["GlobalPaletteTypeface"] = value;
+            }
+        }
     }
 }

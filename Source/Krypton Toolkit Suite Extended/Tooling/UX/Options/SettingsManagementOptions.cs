@@ -26,7 +26,7 @@ namespace Core.UX.Options
         private ColourStringSettingsManager _colourStringSettingsManager = new ColourStringSettingsManager();
         private GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
         private GlobalStringSettingsManager _globalStringSettingsManager = new GlobalStringSettingsManager();
-        //private PaletteTypefaceSettingsManager _paletteTypefaceSettingsManager = new PaletteTypefaceSettingsManager();
+        private PaletteTypefaceSettingsManager _paletteTypefaceSettingsManager = new PaletteTypefaceSettingsManager();
         #endregion
 
         #region System
@@ -320,9 +320,9 @@ namespace Core.UX.Options
 
         private void kbtnResetPaletteTypefaceSettings_Click(object sender, EventArgs e)
         {
-            //_paletteTypefaceSettingsManager.ResetPaletteTypefaceSettings(kchkAskForConfirmation.Checked);
+            _paletteTypefaceSettingsManager.ResetPaletteTypefaceSettings(kchkAskForConfirmation.Checked);
 
-            //_paletteTypefaceSettingsManager.SavePaletteTypefaceSettings(kchkAskForConfirmation.Checked);
+            _paletteTypefaceSettingsManager.SavePaletteTypefaceSettings(kchkAskForConfirmation.Checked);
 
             kchkAskForConfirmation.Enabled = false;
         }
@@ -376,9 +376,9 @@ namespace Core.UX.Options
 
                     kbtnResetGlobalStringSettings.Enabled = false;
 
-                    //_paletteTypefaceSettingsManager.ResetPaletteTypefaceSettings();
+                    _paletteTypefaceSettingsManager.ResetPaletteTypefaceSettings();
 
-                    //_paletteTypefaceSettingsManager.SavePaletteTypefaceSettings();
+                    _paletteTypefaceSettingsManager.SavePaletteTypefaceSettings();
 
                     kbtnResetPaletteTypefaceSettings.Enabled = false;
 

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
+using System.Runtime.InteropServices;
 
 namespace ExtendedControls.Base.Code.IO
 {
@@ -86,13 +82,42 @@ namespace ExtendedControls.Base.Code.IO
             {
                 return fileLength.ToString("0 B"); // Byte
             }
-            
+
             // Divide by 1024 to get fractional value
             readable = (readable / 1024);
-            
+
             // Return formatted number with suffix
             return readable.ToString("0.### ") + suffix;
         }
+
+        /// <summary>
+        /// Gets the file size on disk.
+        /// Code from: https://stackoverflow.com/questions/3750590/get-size-of-file-on-disk & https://stackoverflow.com/questions/5959983/how-to-check-logical-and-physical-file-size-on-disk-using-c-sharp-file-api
+        /// </summary>
+        /// <param name="filePath">The file path.</param>
+        /// <returns></returns>
+        /// <exception cref="Win32Exception"></exception>
+        public static long GetFileSizeOnDisk(string filePath)
+        {
+            return new FileInfo(filePath).Length;
+
+            //FileInfo info = new FileInfo(filePath);
+            //uint clusterSize;
+            //using (var searcher = new ManagementObjectSearcher("select BlockSize,NumberOfBlocks from Win32_Volume WHERE DriveLetter = '" + info.Directory.Root.FullName.TrimEnd('\\') + "'"))
+            //{
+            //    clusterSize = (uint)(((ManagementObject)(searcher.Get().First()))["BlockSize"]);
+            //}
+            //uint hosize;
+            //uint losize = GetCompressedFileSizeW(filePath, out hosize);
+            //long size;
+            //size = (long)hosize << 32 | losize;
+            //return ((size + clusterSize - 1) / clusterSize) * clusterSize;
+        }
+
+        [DllImport("kernel32.dll")]
+        static extern uint GetCompressedFileSizeW(
+           [In, MarshalAs(UnmanagedType.LPWStr)] string lpFileName,
+           [Out, MarshalAs(UnmanagedType.U4)] out uint lpFileSizeHigh);
         #endregion
     }
 }

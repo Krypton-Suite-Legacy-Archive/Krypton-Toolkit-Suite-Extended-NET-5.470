@@ -93,6 +93,10 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiSelectAll = new System.Windows.Forms.ToolStripMenuItem();
             this.klblActualResult = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.ctxActualResult = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copyHashToClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportHashToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kbtnGenerateFileHash = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -106,10 +110,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.bgwSHA384 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA512 = new System.ComponentModel.BackgroundWorker();
             this.bgwRIPEMD160 = new System.ComponentModel.BackgroundWorker();
-            this.ctxActualResult = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.copyHashToClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.exportHashToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.ss.SuspendLayout();
@@ -118,8 +118,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
             this.kryptonPanel3.SuspendLayout();
             this.ctxResult.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kcbxHashAlgorithimType)).BeginInit();
             this.ctxActualResult.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kcbxHashAlgorithimType)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -345,6 +345,35 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.klblActualResult.TabIndex = 16;
             this.klblActualResult.Values.Text = "";
             // 
+            // ctxActualResult
+            // 
+            this.ctxActualResult.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxActualResult.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyHashToClipboardToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.exportHashToFileToolStripMenuItem});
+            this.ctxActualResult.Name = "ctxActualResult";
+            this.ctxActualResult.Size = new System.Drawing.Size(211, 54);
+            // 
+            // copyHashToClipboardToolStripMenuItem
+            // 
+            this.copyHashToClipboardToolStripMenuItem.Name = "copyHashToClipboardToolStripMenuItem";
+            this.copyHashToClipboardToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.copyHashToClipboardToolStripMenuItem.Text = "&Copy Hash to Clipboard...";
+            this.copyHashToClipboardToolStripMenuItem.Click += new System.EventHandler(this.CopyHashToClipboardToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(207, 6);
+            // 
+            // exportHashToFileToolStripMenuItem
+            // 
+            this.exportHashToFileToolStripMenuItem.Name = "exportHashToFileToolStripMenuItem";
+            this.exportHashToFileToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.exportHashToFileToolStripMenuItem.Text = "E&xport Hash to File...";
+            this.exportHashToFileToolStripMenuItem.Click += new System.EventHandler(this.ExportHashToFileToolStripMenuItem_Click);
+            // 
             // kryptonLabel4
             // 
             this.kryptonLabel4.Location = new System.Drawing.Point(12, 274);
@@ -476,35 +505,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.bgwRIPEMD160.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BgwRIPEMD160_ProgressChanged);
             this.bgwRIPEMD160.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BgwRIPEMD160_RunWorkerCompleted);
             // 
-            // ctxActualResult
-            // 
-            this.ctxActualResult.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ctxActualResult.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyHashToClipboardToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.exportHashToFileToolStripMenuItem});
-            this.ctxActualResult.Name = "ctxActualResult";
-            this.ctxActualResult.Size = new System.Drawing.Size(211, 54);
-            // 
-            // copyHashToClipboardToolStripMenuItem
-            // 
-            this.copyHashToClipboardToolStripMenuItem.Name = "copyHashToClipboardToolStripMenuItem";
-            this.copyHashToClipboardToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
-            this.copyHashToClipboardToolStripMenuItem.Text = "&Copy Hash to Clipboard...";
-            this.copyHashToClipboardToolStripMenuItem.Click += new System.EventHandler(this.CopyHashToClipboardToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(207, 6);
-            // 
-            // exportHashToFileToolStripMenuItem
-            // 
-            this.exportHashToFileToolStripMenuItem.Name = "exportHashToFileToolStripMenuItem";
-            this.exportHashToFileToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
-            this.exportHashToFileToolStripMenuItem.Text = "E&xport Hash to File...";
-            this.exportHashToFileToolStripMenuItem.Click += new System.EventHandler(this.ExportHashToFileToolStripMenuItem_Click);
-            // 
             // VarifyFileHash
             // 
             this.ClientSize = new System.Drawing.Size(1335, 463);
@@ -530,8 +530,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kryptonPanel3.ResumeLayout(false);
             this.kryptonPanel3.PerformLayout();
             this.ctxResult.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kcbxHashAlgorithimType)).EndInit();
             this.ctxActualResult.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kcbxHashAlgorithimType)).EndInit();
             this.ResumeLayout(false);
 
         }

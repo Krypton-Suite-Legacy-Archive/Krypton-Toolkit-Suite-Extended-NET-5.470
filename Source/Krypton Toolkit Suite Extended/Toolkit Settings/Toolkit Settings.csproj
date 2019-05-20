@@ -86,6 +86,7 @@
     <Compile Include="Classes\Palette Explorer\Colours\TextColourSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\GeneralPaletteExplorerSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\PaletteThemeSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\PaletteTypefaceSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\Properties\ColourPropertyWindowSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\WindowLocationSettingsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -209,6 +210,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>PaletteThemeSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Palette Explorer\PaletteTypefaceSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>PaletteTypefaceSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Settings\Palette Explorer\Properties\ColourPropertyWindowSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -314,6 +320,10 @@
     <None Include="Settings\Palette Explorer\PaletteThemeSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>PaletteThemeSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\PaletteTypefaceSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>PaletteTypefaceSettings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Settings\Palette Explorer\Properties\ColourPropertyWindowSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
