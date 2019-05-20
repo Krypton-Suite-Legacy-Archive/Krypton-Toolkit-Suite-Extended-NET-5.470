@@ -68,10 +68,22 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
         private KryptonCheckBox kryptonCheckBox3;
         private KryptonCheckBox kryptonCheckBox2;
         private KryptonCheckBox kryptonCheckBox1;
+        private KryptonCheckBox kryptonCheckBox16;
+        private KryptonCheckBox kryptonCheckBox15;
+        private KryptonCheckBox kryptonCheckBox14;
+        private KryptonCheckBox kryptonCheckBox13;
+        private KryptonCheckBox kryptonCheckBox12;
+        private KryptonCheckBox kryptonCheckBox11;
+        private KryptonCheckBox kryptonCheckBox6;
+        private KryptonCheckBox kryptonCheckBox7;
+        private KryptonCheckBox kryptonCheckBox8;
+        private KryptonCheckBox kryptonCheckBox9;
+        private KryptonCheckBox kryptonCheckBox10;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KryptonFileInformationDialog));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -116,6 +128,17 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonCheckBox3 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kryptonCheckBox4 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kryptonCheckBox5 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox6 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox7 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox8 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox9 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox10 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox11 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox12 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox13 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox14 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox15 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kryptonCheckBox16 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -551,12 +574,23 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             // 
             // kryptonGroupBox3.Panel
             // 
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox16);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox15);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox14);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox13);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox12);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox11);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox6);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox7);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox8);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox9);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox10);
             this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox5);
             this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox4);
             this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox3);
             this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox2);
             this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonCheckBox1);
-            this.kryptonGroupBox3.Size = new System.Drawing.Size(651, 390);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(651, 243);
             this.kryptonGroupBox3.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonGroupBox3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonGroupBox3.TabIndex = 2;
@@ -570,6 +604,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonCheckBox1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonCheckBox1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonCheckBox1.TabIndex = 0;
+            this.kryptonCheckBox1.ToolTipValues.Description = resources.GetString("resource.Description7");
+            this.kryptonCheckBox1.ToolTipValues.Heading = "Archived";
             this.kryptonCheckBox1.Values.Text = "&Archive";
             // 
             // kryptonCheckBox2
@@ -611,6 +647,130 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonCheckBox5.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonCheckBox5.TabIndex = 4;
             this.kryptonCheckBox5.Values.Text = "C&ompressed";
+            // 
+            // kryptonCheckBox6
+            // 
+            this.kryptonCheckBox6.Location = new System.Drawing.Point(133, 67);
+            this.kryptonCheckBox6.Name = "kryptonCheckBox6";
+            this.kryptonCheckBox6.Size = new System.Drawing.Size(142, 26);
+            this.kryptonCheckBox6.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox6.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox6.TabIndex = 9;
+            this.kryptonCheckBox6.Values.Text = "I&ntegrity Stream";
+            // 
+            // kryptonCheckBox7
+            // 
+            this.kryptonCheckBox7.Location = new System.Drawing.Point(287, 67);
+            this.kryptonCheckBox7.Name = "kryptonCheckBox7";
+            this.kryptonCheckBox7.Size = new System.Drawing.Size(79, 26);
+            this.kryptonCheckBox7.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox7.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox7.TabIndex = 8;
+            this.kryptonCheckBox7.Values.Text = "No&rmal";
+            // 
+            // kryptonCheckBox8
+            // 
+            this.kryptonCheckBox8.Location = new System.Drawing.Point(399, 67);
+            this.kryptonCheckBox8.Name = "kryptonCheckBox8";
+            this.kryptonCheckBox8.Size = new System.Drawing.Size(131, 26);
+            this.kryptonCheckBox8.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox8.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox8.TabIndex = 7;
+            this.kryptonCheckBox8.Values.Text = "No &Scrub Data";
+            // 
+            // kryptonCheckBox9
+            // 
+            this.kryptonCheckBox9.Location = new System.Drawing.Point(15, 114);
+            this.kryptonCheckBox9.Name = "kryptonCheckBox9";
+            this.kryptonCheckBox9.Size = new System.Drawing.Size(176, 26);
+            this.kryptonCheckBox9.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox9.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox9.TabIndex = 6;
+            this.kryptonCheckBox9.Values.Text = "Not Co&ntext Indexed";
+            // 
+            // kryptonCheckBox10
+            // 
+            this.kryptonCheckBox10.Location = new System.Drawing.Point(15, 67);
+            this.kryptonCheckBox10.Name = "kryptonCheckBox10";
+            this.kryptonCheckBox10.Size = new System.Drawing.Size(78, 26);
+            this.kryptonCheckBox10.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox10.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox10.TabIndex = 5;
+            this.kryptonCheckBox10.ToolTipValues.Description = resources.GetString("resource.Description6");
+            this.kryptonCheckBox10.ToolTipValues.Heading = "Archived";
+            this.kryptonCheckBox10.Values.Text = "&Hidden";
+            // 
+            // kryptonCheckBox11
+            // 
+            this.kryptonCheckBox11.Location = new System.Drawing.Point(232, 114);
+            this.kryptonCheckBox11.Name = "kryptonCheckBox11";
+            this.kryptonCheckBox11.Size = new System.Drawing.Size(73, 26);
+            this.kryptonCheckBox11.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox11.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox11.TabIndex = 10;
+            this.kryptonCheckBox11.ToolTipValues.Description = resources.GetString("resource.Description5");
+            this.kryptonCheckBox11.ToolTipValues.Heading = "Archived";
+            this.kryptonCheckBox11.Values.Text = "O&ffline";
+            // 
+            // kryptonCheckBox12
+            // 
+            this.kryptonCheckBox12.Location = new System.Drawing.Point(348, 114);
+            this.kryptonCheckBox12.Name = "kryptonCheckBox12";
+            this.kryptonCheckBox12.Size = new System.Drawing.Size(100, 26);
+            this.kryptonCheckBox12.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox12.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox12.TabIndex = 11;
+            this.kryptonCheckBox12.ToolTipValues.Description = resources.GetString("resource.Description4");
+            this.kryptonCheckBox12.ToolTipValues.Heading = "Archived";
+            this.kryptonCheckBox12.Values.Text = "&Read Only";
+            // 
+            // kryptonCheckBox13
+            // 
+            this.kryptonCheckBox13.Location = new System.Drawing.Point(476, 114);
+            this.kryptonCheckBox13.Name = "kryptonCheckBox13";
+            this.kryptonCheckBox13.Size = new System.Drawing.Size(125, 26);
+            this.kryptonCheckBox13.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox13.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox13.TabIndex = 12;
+            this.kryptonCheckBox13.ToolTipValues.Description = resources.GetString("resource.Description3");
+            this.kryptonCheckBox13.ToolTipValues.Heading = "Archived";
+            this.kryptonCheckBox13.Values.Text = "Re&parse Point";
+            // 
+            // kryptonCheckBox14
+            // 
+            this.kryptonCheckBox14.Location = new System.Drawing.Point(15, 161);
+            this.kryptonCheckBox14.Name = "kryptonCheckBox14";
+            this.kryptonCheckBox14.Size = new System.Drawing.Size(102, 26);
+            this.kryptonCheckBox14.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox14.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox14.TabIndex = 13;
+            this.kryptonCheckBox14.ToolTipValues.Description = resources.GetString("resource.Description2");
+            this.kryptonCheckBox14.ToolTipValues.Heading = "Archived";
+            this.kryptonCheckBox14.Values.Text = "Spar&se File";
+            // 
+            // kryptonCheckBox15
+            // 
+            this.kryptonCheckBox15.Location = new System.Drawing.Point(133, 161);
+            this.kryptonCheckBox15.Name = "kryptonCheckBox15";
+            this.kryptonCheckBox15.Size = new System.Drawing.Size(77, 26);
+            this.kryptonCheckBox15.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox15.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox15.TabIndex = 14;
+            this.kryptonCheckBox15.ToolTipValues.Description = resources.GetString("resource.Description1");
+            this.kryptonCheckBox15.ToolTipValues.Heading = "Archived";
+            this.kryptonCheckBox15.Values.Text = "S&ystem";
+            // 
+            // kryptonCheckBox16
+            // 
+            this.kryptonCheckBox16.Location = new System.Drawing.Point(232, 161);
+            this.kryptonCheckBox16.Name = "kryptonCheckBox16";
+            this.kryptonCheckBox16.Size = new System.Drawing.Size(103, 26);
+            this.kryptonCheckBox16.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox16.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox16.TabIndex = 15;
+            this.kryptonCheckBox16.ToolTipValues.Description = resources.GetString("resource.Description");
+            this.kryptonCheckBox16.ToolTipValues.Heading = "Archived";
+            this.kryptonCheckBox16.Values.Text = "Te&mporary";
             // 
             // KryptonFileInformationDialog
             // 
