@@ -18,22 +18,38 @@ namespace ToolkitSettings.Classes.Global
         }
         #endregion
 
-        #region Setters and Getters        
+        #region Setters and Getters                
+        /// <summary>
+        /// Sets the base palette mode.
+        /// </summary>
+        /// <param name="value">The value.</param>
         public void SetBasePaletteMode(string value)
         {
             _globalStringSettings.BasePaletteMode = value;
         }
 
+        /// <summary>
+        /// Gets the base palette mode.
+        /// </summary>
+        /// <returns></returns>
         public string GetBasePaletteMode()
         {
             return _globalStringSettings.BasePaletteMode;
         }
 
+        /// <summary>
+        /// Sets the feedback text.
+        /// </summary>
+        /// <param name="value">The value.</param>
         public void SetFeedbackText(string value)
         {
             _globalStringSettings.FeedbackText = value;
         }
 
+        /// <summary>
+        /// Gets the feedback text.
+        /// </summary>
+        /// <returns></returns>
         public string GetFeedbackText()
         {
             return _globalStringSettings.FeedbackText;
@@ -55,6 +71,24 @@ namespace ToolkitSettings.Classes.Global
         public string GetPaletteExportPath()
         {
             return _globalStringSettings.PaletteExportPath;
+        }
+
+        /// <summary>
+        /// Gets the hash readable file types filter list.
+        /// </summary>
+        /// <returns></returns>
+        public string GetHashReadableFileTypesFilterList()
+        {
+            return _globalStringSettings.HashReadableFileTypesFilterList;
+        }
+
+        /// <summary>
+        /// Gets the hash file type extension list.
+        /// </summary>
+        /// <returns></returns>
+        public string GetHashFileTypeExtensionList()
+        {
+            return _globalStringSettings.HashFileTypeExtensionList;
         }
         #endregion
 

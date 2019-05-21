@@ -11,5 +11,11 @@
     <Setting Name="PaletteExportPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="HashReadableFileTypesFilterList" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MD5 Files, RIPEMD-160 Files, SHA-1 Files, SHA-256 Files, SHA-384 Files, SHA-512 Files, All Files</Value>
+    </Setting>
+    <Setting Name="HashFileTypeExtensionList" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.md5,.ripemd160,.sha1,.sha256,.sha384,.sha512,.*</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

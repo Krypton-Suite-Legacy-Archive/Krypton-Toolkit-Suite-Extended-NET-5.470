@@ -579,13 +579,13 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
         private void KbtnBrowse_Click(object sender, EventArgs e)
         {
-            CommonOpenFileDialog cofd = new CommonOpenFileDialog();
+            CommonOpenFileDialog cifofd = new CommonOpenFileDialog();
 
-            cofd.Title = "Select a file:";
+            cifofd.Title = "Select a file:";
 
-            if (cofd.ShowDialog() == CommonFileDialogResult.Ok)
+            if (cifofd.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                ktxtApplicationExecutable.Text = Path.GetFullPath(cofd.FileName);
+                ktxtApplicationExecutable.Text = Path.GetFullPath(cifofd.FileName);
             }
         }
 
@@ -1115,7 +1115,19 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
             cifofd.Title = "Import a hash file:";
 
-            cifofd.Filters.Add(new CommonFileDialogFilter(ReadableExtensionList, ExtensionList));
+            cifofd.Filters.Add(new CommonFileDialogFilter("MD5 Files", ".md5"));
+
+            cifofd.Filters.Add(new CommonFileDialogFilter("SHA-1 Files", ".sha1"));
+
+            cifofd.Filters.Add(new CommonFileDialogFilter("SHA-256 Files", ".sha256"));
+
+            cifofd.Filters.Add(new CommonFileDialogFilter("SHA-384 Files", ".sha384"));
+
+            cifofd.Filters.Add(new CommonFileDialogFilter("SHA-512 Files", ".sha512"));
+
+            cifofd.Filters.Add(CommonFileDialogStandardFilters.TextFiles);
+
+            cifofd.Filters.Add(new CommonFileDialogFilter("All Files", ".*"));
 
             if (cifofd.ShowDialog() == CommonFileDialogResult.Ok)
             {
@@ -1131,7 +1143,19 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
             chsfd.Title = "Save hash to file:";
 
-            chsfd.Filters.Add(new CommonFileDialogFilter(ReadableExtensionList, ExtensionList));
+            chsfd.Filters.Add(new CommonFileDialogFilter("MD5 Files", ".md5"));
+
+            chsfd.Filters.Add(new CommonFileDialogFilter("SHA-1 Files", ".sha1"));
+
+            chsfd.Filters.Add(new CommonFileDialogFilter("SHA-256 Files", ".sha256"));
+
+            chsfd.Filters.Add(new CommonFileDialogFilter("SHA-384 Files", ".sha384"));
+
+            chsfd.Filters.Add(new CommonFileDialogFilter("SHA-512 Files", ".sha512"));
+
+            chsfd.Filters.Add(CommonFileDialogStandardFilters.TextFiles);
+
+            chsfd.Filters.Add(new CommonFileDialogFilter("All Files", ".*"));
 
             chsfd.InitialDirectory = Environment.SpecialFolder.MyDocuments.ToString();
 

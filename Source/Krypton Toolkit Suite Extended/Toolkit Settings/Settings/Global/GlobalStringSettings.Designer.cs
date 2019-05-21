@@ -58,5 +58,30 @@ namespace ToolkitSettings.Settings.Global {
                 this["PaletteExportPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("MD5 Files, RIPEMD-160 Files, SHA-1 Files, SHA-256 Files, SHA-384 Files, SHA-512 F" +
+            "iles, All Files")]
+        public string HashReadableFileTypesFilterList {
+            get {
+                return ((string)(this["HashReadableFileTypesFilterList"]));
+            }
+            set {
+                this["HashReadableFileTypesFilterList"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".md5,.ripemd160,.sha1,.sha256,.sha384,.sha512,.*")]
+        public string HashFileTypeExtensionList {
+            get {
+                return ((string)(this["HashFileTypeExtensionList"]));
+            }
+            set {
+                this["HashFileTypeExtensionList"] = value;
+            }
+        }
     }
 }
