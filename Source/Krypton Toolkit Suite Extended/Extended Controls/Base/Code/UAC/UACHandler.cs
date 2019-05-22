@@ -8,6 +8,8 @@
 #endregion
 
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using KryptonExtendedToolkit.ExtendedToolkit.Controls;
+using KryptonExtendedToolkit.ExtendedToolkit.ToolstripControls;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Security.Principal;
@@ -26,7 +28,7 @@ namespace ExtendedControls.Base.Code.UAC
 
         #region Methods
         /// <summary>
-        /// Elevates the application to use administrative privileges. To be used with <see cref="ExtendedToolkit.Controls.KryptonUACElevatedButton"/> or <see cref="ExtendedToolkit.ToolstripControls.ToolStripMenuItemUACSheld"/> button click.
+        /// Elevates the application to use administrative privileges. To be used with <see cref="KryptonUACElevatedButton"/> or <see cref="ToolStripMenuItemUACSheld"/> button click.
         /// </summary>
         /// <param name="processName">The process name that you wish to elevate.</param>
         public static void ElevateProcessWithAdministrativeRights(string processName)

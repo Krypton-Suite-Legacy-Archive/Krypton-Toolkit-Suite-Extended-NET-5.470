@@ -146,10 +146,12 @@
     <Compile Include="Base\Code\Theming\KryptonPaletteManager.cs" />
     <Compile Include="Base\Code\Theming\KryptonThemeManager.cs" />
     <Compile Include="Base\Code\TypefaceHelper.cs" />
+    <Compile Include="Base\Code\UAC\UACHandler.cs" />
     <Compile Include="Base\Code\Utilities\FileVersionUtility.cs" />
     <Compile Include="Base\Code\Utilities\Utility.cs" />
     <Compile Include="Base\Code\Utilities\WIN32.cs" />
     <Compile Include="Base\Code\UtilityMethods.cs" />
+    <Compile Include="Base\Code\Windows\WindowHandler.cs" />
     <Compile Include="Base\Code\Windows\WindowsAPICodePackModel.cs" />
     <Compile Include="Base\Enumerations\Enumerations.cs" />
     <Compile Include="Base\Interfaces\IColourEditor.cs" />
@@ -721,9 +723,7 @@
       <DependentUpon>KryptonFloatingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ExtendedToolkit\MessageBoxes\Classes\ExtendedKryptonMessageBox.cs" />
-    <Compile Include="ExtendedToolkit\MessageBoxes\UI\ExtendedKryptonMessageboxOld.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="ExtendedToolkit\MessageBoxes\UI\ExtendedKryptonMessageboxOld.cs" />
     <Compile Include="ExtendedToolkit\Renderer\Classes\AquaGreenColourTable.cs" />
     <Compile Include="ExtendedToolkit\Renderer\Classes\AquaRenderer.cs" />
     <Compile Include="ExtendedToolkit\Renderer\Classes\ColourTableRed.cs" />
