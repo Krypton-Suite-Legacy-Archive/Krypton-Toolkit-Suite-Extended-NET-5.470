@@ -147,6 +147,9 @@
     <Compile Include="Examples.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UACAdvancedExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UACExample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Examples.resx">
       <DependentUpon>Examples.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UACAdvancedExample.resx">
+      <DependentUpon>UACAdvancedExample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UACExample.resx">
       <DependentUpon>UACExample.cs</DependentUpon>

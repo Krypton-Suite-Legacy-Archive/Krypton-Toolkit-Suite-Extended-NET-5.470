@@ -349,6 +349,9 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\ToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonColourPickerToolStripComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>

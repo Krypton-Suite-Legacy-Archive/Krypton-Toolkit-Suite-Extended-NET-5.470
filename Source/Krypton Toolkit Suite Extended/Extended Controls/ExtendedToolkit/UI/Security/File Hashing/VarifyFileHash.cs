@@ -68,7 +68,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VarifyFileHash));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.ss = new System.Windows.Forms.StatusStrip();
@@ -84,7 +83,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.ktxtApplicationExecutable = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.ktxtImportedResult = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.ctxResult = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ctxResult = new System.Windows.Forms.ContextMenuStrip();
             this.tsmiCut = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,7 +92,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiSelectAll = new System.Windows.Forms.ToolStripMenuItem();
             this.klblActualResult = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.ctxActualResult = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ctxActualResult = new System.Windows.Forms.ContextMenuStrip();
             this.copyHashToClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.exportHashToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

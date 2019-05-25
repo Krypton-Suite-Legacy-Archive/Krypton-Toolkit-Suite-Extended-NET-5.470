@@ -11,6 +11,7 @@ using ComponentFactory.Krypton.Toolkit;
 using Core.UX;
 using Core.UX.Colours;
 using Core.UX.Options;
+using ExtendedControls.Base.Code.Windows;
 using ExtendedControls.ExtendedToolkit.Controls;
 using ExtendedControls.ExtendedToolkit.Controls.Drawing.UI;
 using ExtendedControls.ExtendedToolkit.Controls.KryptonControls;
@@ -77,12 +78,14 @@ namespace Playground
         private KryptonButton kbtnVarifyHash;
         private KryptonButton kbtnFileInformation;
         private KryptonButton kbtnUAC;
+        private KryptonButton kbtnUACElevationAdvanced;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Examples));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnUAC = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnFileInformation = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnVarifyHash = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnResizeImages = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -123,13 +126,14 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnUAC = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnUACElevationAdvanced = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnUACElevationAdvanced);
             this.kryptonPanel1.Controls.Add(this.kbtnUAC);
             this.kryptonPanel1.Controls.Add(this.kbtnFileInformation);
             this.kryptonPanel1.Controls.Add(this.kbtnVarifyHash);
@@ -176,6 +180,16 @@ namespace Playground
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(971, 597);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kbtnUAC
+            // 
+            this.kbtnUAC.Location = new System.Drawing.Point(12, 408);
+            this.kbtnUAC.Name = "kbtnUAC";
+            this.kbtnUAC.Size = new System.Drawing.Size(218, 25);
+            this.kbtnUAC.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnUAC.TabIndex = 91;
+            this.kbtnUAC.Values.Text = "UAC Elevation";
+            this.kbtnUAC.Click += new System.EventHandler(this.KbtnUAC_Click);
             // 
             // kbtnFileInformation
             // 
@@ -546,15 +560,15 @@ namespace Playground
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
-            // kbtnUAC
+            // kbtnUACElevationAdvanced
             // 
-            this.kbtnUAC.Location = new System.Drawing.Point(12, 408);
-            this.kbtnUAC.Name = "kbtnUAC";
-            this.kbtnUAC.Size = new System.Drawing.Size(218, 25);
-            this.kbtnUAC.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnUAC.TabIndex = 91;
-            this.kbtnUAC.Values.Text = "UAC Elevation";
-            this.kbtnUAC.Click += new System.EventHandler(this.KbtnUAC_Click);
+            this.kbtnUACElevationAdvanced.Location = new System.Drawing.Point(255, 408);
+            this.kbtnUACElevationAdvanced.Name = "kbtnUACElevationAdvanced";
+            this.kbtnUACElevationAdvanced.Size = new System.Drawing.Size(218, 25);
+            this.kbtnUACElevationAdvanced.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnUACElevationAdvanced.TabIndex = 92;
+            this.kbtnUACElevationAdvanced.Values.Text = "UAC Elevation Advanced";
+            this.kbtnUACElevationAdvanced.Click += new System.EventHandler(this.KbtnUACElevationAdvanced_Click);
             // 
             // Examples
             // 
@@ -568,6 +582,8 @@ namespace Playground
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Krypton Toolkit Suite Extended for .NET 4.7 - Examples";
+            this.TextExtra = "(Public Build)";
+            this.Load += new System.EventHandler(this.Examples_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -901,6 +917,18 @@ namespace Playground
         private void KbtnUAC_Click(object sender, EventArgs e)
         {
             UACExample uac = new UACExample();
+
+            uac.Show();
+        }
+
+        private void Examples_Load(object sender, EventArgs e)
+        {
+            //WindowHandler.UACElevatedUpdateWindowText(this);
+        }
+
+        private void KbtnUACElevationAdvanced_Click(object sender, EventArgs e)
+        {
+            UACAdvancedExample uac = new UACAdvancedExample();
 
             uac.Show();
         }

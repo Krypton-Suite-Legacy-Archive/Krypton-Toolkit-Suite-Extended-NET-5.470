@@ -60,6 +60,7 @@
     <Compile Include="Classes\Models\ColourContextMenuModel.cs" />
     <Compile Include="Classes\PaletteComposerEngine.cs" />
     <Compile Include="Classes\PaletteUtilities.cs" />
+    <Compile Include="Classes\RandomisePaletteColours.cs" />
     <Compile Include="Classes\SettingsCopier.cs" />
     <Compile Include="Classes\UserInterfaceManager.cs" />
     <Compile Include="Controls\CircularPictureBoxControl.cs">
@@ -78,6 +79,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UX\Colour\ColourMixerBasic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\Debugging\ColourDebugConsole.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UX\KryptonPalettePropertiesWindow.cs">
@@ -375,6 +379,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Export_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb_48_x_48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

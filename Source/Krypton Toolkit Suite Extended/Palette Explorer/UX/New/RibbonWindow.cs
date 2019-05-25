@@ -10,6 +10,7 @@
 using ComponentFactory.Krypton.Docking;
 using ComponentFactory.Krypton.Navigator;
 using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using PaletteExplorer.Controls;
 using PaletteExplorer.UX.Colour;
 using System;
@@ -65,7 +66,7 @@ namespace PaletteExplorer.UX.New
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupCheckBox kryptonRibbonGroupCheckBox2;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonTab kryptonRibbonTab2;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup3;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple6;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple krgtGenerate;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbGenerateColours;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator4;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple7;
@@ -143,6 +144,12 @@ namespace PaletteExplorer.UX.New
         private ToolStripMenuItem resetColourUIToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem2;
         private ToolStripMenuItem resetColourSettingsToolStripMenuItem;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator16;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple15;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbInspireMe;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem resetColoursToolStripMenuItem;
+        private ExtendedControls.ExtendedToolkit.Controls.Drawing.Controls.Office2007ColorPickerToolStripMenuItem cpResetColour;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbCheckForUpdates;
 
         private void InitializeComponent()
@@ -191,8 +198,11 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonGroupCheckBox2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupCheckBox();
             this.kryptonRibbonTab2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
-            this.kryptonRibbonGroupTriple6 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.krgtGenerate = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbGenerateColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupSeparator16 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
+            this.kryptonRibbonGroupTriple15 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.krgbInspireMe = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator4 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple7 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbGetColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -205,11 +215,9 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonGroupTriple5 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbGenerateContrastColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator7 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
-            this.kryptonRibbonGroupTriple9 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.krgbGetColourInformation = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.kryptonRibbonGroupSeparator8 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple10 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbImport = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupSeparator8 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple11 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbInvert = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
@@ -222,6 +230,11 @@ namespace PaletteExplorer.UX.New
             this.resetColourUIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.resetColourSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.resetColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cpResetColour = new ExtendedControls.ExtendedToolkit.Controls.Drawing.Controls.Office2007ColorPickerToolStripMenuItem();
+            this.kryptonRibbonGroupTriple9 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.krgbGetColourInformation = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroup2 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple14 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbDefineTypefaces = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -310,7 +323,8 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
-            this.krControls.SelectedTab = this.kryptonRibbonTab3;
+            this.krControls.SelectedContext = null;
+            this.krControls.SelectedTab = this.kryptonRibbonTab2;
             this.krControls.Size = new System.Drawing.Size(1662, 115);
             this.krControls.TabIndex = 2;
             // 
@@ -500,7 +514,9 @@ namespace PaletteExplorer.UX.New
             // kryptonRibbonGroup3
             // 
             this.kryptonRibbonGroup3.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupContainer[] {
-            this.kryptonRibbonGroupTriple6,
+            this.krgtGenerate,
+            this.kryptonRibbonGroupSeparator16,
+            this.kryptonRibbonGroupTriple15,
             this.kryptonRibbonGroupSeparator4,
             this.kryptonRibbonGroupTriple7,
             this.kryptonRibbonGroupSeparator5,
@@ -509,19 +525,19 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonGroupSeparator6,
             this.kryptonRibbonGroupTriple5,
             this.kryptonRibbonGroupSeparator7,
-            this.kryptonRibbonGroupTriple9,
-            this.kryptonRibbonGroupSeparator8,
             this.kryptonRibbonGroupTriple10,
+            this.kryptonRibbonGroupSeparator8,
             this.kryptonRibbonGroupTriple11,
             this.kryptonRibbonGroupSeparator3,
             this.kryptonRibbonGroupTriple12,
             this.kryptonRibbonGroupSeparator9,
-            this.kryptonRibbonGroupTriple13});
+            this.kryptonRibbonGroupTriple13,
+            this.kryptonRibbonGroupTriple9});
             this.kryptonRibbonGroup3.TextLine1 = "Colour Properties";
             // 
-            // kryptonRibbonGroupTriple6
+            // krgtGenerate
             // 
-            this.kryptonRibbonGroupTriple6.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.krgtGenerate.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
             this.krgbGenerateColours});
             // 
             // krgbGenerateColours
@@ -530,7 +546,26 @@ namespace PaletteExplorer.UX.New
             this.krgbGenerateColours.ImageSmall = ((System.Drawing.Image)(resources.GetObject("krgbGenerateColours.ImageSmall")));
             this.krgbGenerateColours.TextLine1 = "Generate";
             this.krgbGenerateColours.TextLine2 = "Colours";
+            this.krgbGenerateColours.ToolTipBody = "Generates the base palette colours.";
+            this.krgbGenerateColours.ToolTipImage = global::PaletteExplorer.Properties.Resources.Generate_Colours_32_x_32;
+            this.krgbGenerateColours.ToolTipTitle = "Generate Colours";
             this.krgbGenerateColours.Click += new System.EventHandler(this.KrgbGenerateColours_Click);
+            // 
+            // kryptonRibbonGroupTriple15
+            // 
+            this.kryptonRibbonGroupTriple15.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.krgbInspireMe});
+            // 
+            // krgbInspireMe
+            // 
+            this.krgbInspireMe.ImageLarge = global::PaletteExplorer.Properties.Resources.light_bulb_32_x_32;
+            this.krgbInspireMe.ImageSmall = global::PaletteExplorer.Properties.Resources.light_bulb_16_x_16;
+            this.krgbInspireMe.TextLine1 = "Inspire";
+            this.krgbInspireMe.TextLine2 = "Me";
+            this.krgbInspireMe.ToolTipBody = "Randomise each colour.";
+            this.krgbInspireMe.ToolTipImage = global::PaletteExplorer.Properties.Resources.light_bulb_32_x_32;
+            this.krgbInspireMe.ToolTipTitle = "Inspire Me";
+            this.krgbInspireMe.Click += new System.EventHandler(this.KrgbInspireMe_Click);
             // 
             // kryptonRibbonGroupTriple7
             // 
@@ -543,6 +578,7 @@ namespace PaletteExplorer.UX.New
             this.krgbGetColours.ImageSmall = global::PaletteExplorer.Properties.Resources.Colour_Wheel_16_x_16;
             this.krgbGetColours.TextLine1 = "Get";
             this.krgbGetColours.TextLine2 = "Colours";
+            this.krgbGetColours.Click += new System.EventHandler(this.KrgbGetColours_Click);
             // 
             // kryptonRibbonGroupTriple8
             // 
@@ -575,16 +611,6 @@ namespace PaletteExplorer.UX.New
             // 
             this.krgbGenerateContrastColours.TextLine1 = "Generate";
             this.krgbGenerateContrastColours.TextLine2 = "Contrast Colours";
-            // 
-            // kryptonRibbonGroupTriple9
-            // 
-            this.kryptonRibbonGroupTriple9.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.krgbGetColourInformation});
-            // 
-            // krgbGetColourInformation
-            // 
-            this.krgbGetColourInformation.TextLine1 = "Get Colour";
-            this.krgbGetColourInformation.TextLine2 = "Information";
             // 
             // kryptonRibbonGroupTriple10
             // 
@@ -642,9 +668,11 @@ namespace PaletteExplorer.UX.New
             this.ctxReset.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.resetColourUIToolStripMenuItem,
             this.toolStripMenuItem2,
-            this.resetColourSettingsToolStripMenuItem});
+            this.resetColourSettingsToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.resetColoursToolStripMenuItem});
             this.ctxReset.Name = "ctxReset";
-            this.ctxReset.Size = new System.Drawing.Size(187, 54);
+            this.ctxReset.Size = new System.Drawing.Size(187, 104);
             // 
             // resetColourUIToolStripMenuItem
             // 
@@ -663,6 +691,49 @@ namespace PaletteExplorer.UX.New
             this.resetColourSettingsToolStripMenuItem.Name = "resetColourSettingsToolStripMenuItem";
             this.resetColourSettingsToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.resetColourSettingsToolStripMenuItem.Text = "Reset Colour Settings";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(183, 6);
+            // 
+            // resetColoursToolStripMenuItem
+            // 
+            this.resetColoursToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cpResetColour});
+            this.resetColoursToolStripMenuItem.Name = "resetColoursToolStripMenuItem";
+            this.resetColoursToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.resetColoursToolStripMenuItem.Text = "Reset &Colours";
+            // 
+            // cpResetColour
+            // 
+            this.cpResetColour.Name = "cpResetColour";
+            // 
+            // cpResetColour
+            // 
+            this.cpResetColour.Office2007ColourPickerControl.AccessibleName = "cpResetColour";
+            this.cpResetColour.Office2007ColourPickerControl.SelectedColour = System.Drawing.Color.Black;
+            this.cpResetColour.Office2007ColourPickerControl.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cpResetColour.Office2007ColourPickerControl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cpResetColour.Office2007ColourPickerControl.Items.AddRange(new object[] {
+            "Color"});
+            this.cpResetColour.Office2007ColourPickerControl.Location = new System.Drawing.Point(33, 3);
+            this.cpResetColour.Office2007ColourPickerControl.Name = "office2007ColorPickerToolStripMenuItem1";
+            this.cpResetColour.Office2007ColourPickerControl.Size = new System.Drawing.Size(121, 24);
+            this.cpResetColour.Office2007ColourPickerControl.TabIndex = 2;
+            this.cpResetColour.Office2007ColourPickerControl.SelectedColourChanged += new System.EventHandler(this.Office2007ColorPickerToolStripMenuItem1_Office2007ColourPickerControl_SelectedColourChanged);
+            this.cpResetColour.Size = new System.Drawing.Size(121, 23);
+            this.cpResetColour.Text = "Color";
+            // 
+            // kryptonRibbonGroupTriple9
+            // 
+            this.kryptonRibbonGroupTriple9.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.krgbGetColourInformation});
+            // 
+            // krgbGetColourInformation
+            // 
+            this.krgbGetColourInformation.TextLine1 = "Get Colour";
+            this.krgbGetColourInformation.TextLine2 = "Information";
             // 
             // kryptonRibbonGroup2
             // 
@@ -1164,6 +1235,18 @@ namespace PaletteExplorer.UX.New
 
             return _palettePropertyGrid;
         }
+
+        private void InspireMe()
+        {
+            if (kdnContentDisplay.SelectedIndex == 0)
+            {
+
+            }
+            else if (kdnContentDisplay.SelectedIndex == 1)
+            {
+                cpbcPreview.InspireMe();
+            }
+        }
         #endregion
 
         private void KrgbOptions_Click(object sender, EventArgs e)
@@ -1197,6 +1280,28 @@ namespace PaletteExplorer.UX.New
             ColourMixerBasic colourMixer = new ColourMixerBasic();
 
             colourMixer.Show();
+        }
+
+        private void KrgbInspireMe_Click(object sender, EventArgs e)
+        {
+            InspireMe();
+        }
+
+        private void KrgbGetColours_Click(object sender, EventArgs e)
+        {
+            if (kdnContentDisplay.SelectedIndex == 1)
+            {
+
+            }
+            else if (kdnContentDisplay.SelectedIndex == 2)
+            {
+                cpbcPreview.RefreshColours();
+            }
+        }
+
+        private void Office2007ColorPickerToolStripMenuItem1_Office2007ColourPickerControl_SelectedColourChanged(object sender, EventArgs e)
+        {
+            cpbcPreview.ResetPaletteColours(cpResetColour.Office2007ColourPickerControl.SelectedColour);
         }
     }
 }

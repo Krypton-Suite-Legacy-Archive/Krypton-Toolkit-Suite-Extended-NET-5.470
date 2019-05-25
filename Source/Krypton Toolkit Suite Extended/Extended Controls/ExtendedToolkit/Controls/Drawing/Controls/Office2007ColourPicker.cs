@@ -58,7 +58,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Drawing.Controls
         public event EventHandler SelectedColourChanged;
 
         [Browsable(true)]
-        public Color Color
+        public Color SelectedColour
         {
             get { return this._colourPlate.ColourPlate.SelectedColour; }
             set
@@ -137,7 +137,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Drawing.Controls
             if (e.Index > -1)
             {
                 // Paints the rectangle by the current color.
-                e.Graphics.FillRectangle(new SolidBrush(this.Color), e.Bounds);
+                e.Graphics.FillRectangle(new SolidBrush(this.SelectedColour), e.Bounds);
                 Rectangle rec = new Rectangle(e.Bounds.X, e.Bounds.Y, e.Bounds.Width - 1, e.Bounds.Height - 1);
 
                 if ((e.State & DrawItemState.Focus) == 0)

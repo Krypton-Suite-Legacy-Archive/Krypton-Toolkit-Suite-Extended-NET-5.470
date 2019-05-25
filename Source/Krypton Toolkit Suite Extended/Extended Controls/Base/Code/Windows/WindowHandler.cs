@@ -9,6 +9,7 @@
 
 
 using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Base.Code.UAC;
 
 namespace ExtendedControls.Base.Code.Windows
 {
@@ -28,7 +29,11 @@ namespace ExtendedControls.Base.Code.Windows
         /// <summary>
         /// Square brackets '[]'.
         /// </summary>
-        SQUAREBRACKET
+        SQUAREBRACKET,
+        /// <summary>
+        /// No bracket.
+        /// </summary>
+        NOBRACKET
     }
 
     public class WindowHandler
@@ -40,15 +45,15 @@ namespace ExtendedControls.Base.Code.Windows
         }
         #endregion
 
-        #region Methods
+        #region Methods        
         /// <summary>
-        /// 
+        /// Updates the window text.
         /// </summary>
-        /// <param name="owner"></param>
-        /// <param name="extraTitleText"></param>
-        /// <param name="bracketType"></param>
-        /// <param name="administratorText"></param>
-        public static void UpdateWindowText(KryptonForm owner, string extraTitleText = "", BracketType bracketType = BracketType.CURLYBRACKET, string administratorText = "Administrator")
+        /// <param name="owner">The owner.</param>
+        /// <param name="extraTitleText">The extra title text.</param>
+        /// <param name="bracketType">Type of the bracket.</param>
+        /// <param name="administratorText">The administrator text.</param>
+        private static void UpdateWindowText(KryptonForm owner, string extraTitleText = "", BracketType bracketType = BracketType.CURLYBRACKET, string administratorText = "Administrator")
         {
             string tempWindowTitleText = owner.Text;
 
@@ -84,8 +89,33 @@ namespace ExtendedControls.Base.Code.Windows
                         owner.Text = $"{ tempWindowTitleText } [{ administratorText }]";
                     }
                     break;
+                case BracketType.NOBRACKET:
+                    if (extraTitleText != "")
+                    {
+                        owner.Text = $"{ tempWindowTitleText } { extraTitleText } - { administratorText }";
+                    }
+                    else
+                    {
+                        owner.Text = $"{ tempWindowTitleText } - { administratorText }";
+                    }
+                    break;
                 default:
                     break;
+            }
+        }
+
+        /// <summary>
+        /// Uacs the elevated update window text.
+        /// </summary>
+        /// <param name="owner">The owner.</param>
+        /// <param name="extraTitleText">The extra title text.</param>
+        /// <param name="bracketType">Type of the bracket.</param>
+        /// <param name="administratorText">The administrator text.</param>
+        public static void UACElevatedUpdateWindowText(KryptonForm owner, string extraTitleText = "", BracketType bracketType = BracketType.CURLYBRACKET, string administratorText = "Administrator")
+        {
+            if (UACHandler.GetHasElevateProcessWithAdministrativeRights())
+            {
+                UpdateWindowText(owner, extraTitleText, bracketType, administratorText);
             }
         }
         #endregion

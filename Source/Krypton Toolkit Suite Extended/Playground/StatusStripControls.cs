@@ -120,7 +120,7 @@ namespace Playground
             // o07cptsiTest
             // 
             this.o07cptsiTest.Office2007ColourPickerControl.AccessibleName = "o07cptsiTest";
-            this.o07cptsiTest.Office2007ColourPickerControl.Color = System.Drawing.Color.Black;
+            this.o07cptsiTest.Office2007ColourPickerControl.SelectedColour = System.Drawing.Color.Black;
             this.o07cptsiTest.Office2007ColourPickerControl.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.o07cptsiTest.Office2007ColourPickerControl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.o07cptsiTest.Office2007ColourPickerControl.Items.AddRange(new object[] {
