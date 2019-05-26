@@ -1,5 +1,4 @@
-﻿using Classes.Colours;
-using Core;
+﻿using Core;
 using ExtendedControls.ExtendedToolkit.Controls;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using PaletteExplorer.Classes;
@@ -117,6 +116,40 @@ namespace PaletteExplorer.Controls
         {
             this.components = new System.ComponentModel.Container();
             this.kgbCircularColourPreviewPane = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.cbxLinkDisabledColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.ctxLinkDisabledTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.useLinkDisabledTextColourAsBaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cbxCustomTextColourSixPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomColourSixPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxRibbonTabTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLinkFocusedColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxStatusTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomTextColourThreePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomTextColourTwoPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxMenuTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomTextColourFourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomTextColourFivePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomTextColourOnePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomColourFivePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomColourTwoPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomColourOnePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLinkVisitedColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomColourThreePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxCustomColourFourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLinkHoverColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxPressedTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxFocusedTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxDisabledTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxDisabledControlColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLinkNormalColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxNormalTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxBorderColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxAlternativeNormalTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLightestColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLightColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxMediumColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxDarkColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxBaseColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.ctxBaseColour = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.useBaseColourAsBaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxMediumColour = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -179,77 +212,12 @@ namespace PaletteExplorer.Controls
             this.tsmiLinkVisitedTextColour = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxCustomTextColourSixColour = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiCustomTextColourSixColour = new System.Windows.Forms.ToolStripMenuItem();
-            this.ctxLinkDisabledTextColour = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.useLinkDisabledTextColourAsBaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cbxLinkDisabledColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxCustomTextColourSixPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxCustomColourSixPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxRibbonTabTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxLinkFocusedColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxStatusTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxCustomTextColourThreePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxCustomTextColourTwoPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxMenuTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxCustomTextColourFourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxCustomTextColourFivePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxCustomTextColourOnePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxCustomColourFivePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxCustomColourTwoPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxCustomColourOnePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxLinkVisitedColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxCustomColourThreePreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxCustomColourFourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxLinkHoverColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxPressedTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxFocusedTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxDisabledTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxDisabledControlColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxLinkNormalColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxNormalTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxBorderColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxAlternativeNormalTextColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxLightestColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxLightColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxMediumColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxDarkColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxBaseColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kgbCircularColourPreviewPane)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kgbCircularColourPreviewPane.Panel)).BeginInit();
             this.kgbCircularColourPreviewPane.Panel.SuspendLayout();
             this.kgbCircularColourPreviewPane.SuspendLayout();
-            this.ctxBaseColour.SuspendLayout();
-            this.ctxMediumColour.SuspendLayout();
-            this.ctxLightColour.SuspendLayout();
-            this.ctxLightestColour.SuspendLayout();
-            this.ctxAlternativeNormalTextColour.SuspendLayout();
-            this.ctxBorderColour.SuspendLayout();
-            this.ctxNormalTextColour.SuspendLayout();
-            this.ctxLinkNormalTextColour.SuspendLayout();
-            this.ctxDisabledControlColour.SuspendLayout();
-            this.ctxDisabedTextColour.SuspendLayout();
-            this.ctxFocusedTextColour.SuspendLayout();
-            this.ctxPressedTextColour.SuspendLayout();
-            this.ctxLinkHoverTextColour.SuspendLayout();
-            this.ctxCustomColourFourColour.SuspendLayout();
-            this.ctxDarkColour.SuspendLayout();
-            this.ctxCustomColourThreeColour.SuspendLayout();
-            this.ctxCustomColourOneColour.SuspendLayout();
-            this.ctxCustomColourTwoColour.SuspendLayout();
-            this.ctxCustomColourFiveColour.SuspendLayout();
-            this.ctxCustomTextColourOneColour.SuspendLayout();
-            this.ctxCustomTextColourFiveColour.SuspendLayout();
-            this.ctxCustomTextColourFourColour.SuspendLayout();
-            this.ctxMenuTextColour.SuspendLayout();
-            this.ctxCustomTextColourTwoColour.SuspendLayout();
-            this.ctxCustomTextColourThreeColour.SuspendLayout();
-            this.ctxStatusStripTextColour.SuspendLayout();
-            this.ctxLinkFocusedTextColour.SuspendLayout();
-            this.ctxRibbonTabTextColour.SuspendLayout();
-            this.ctxCustomColourSixColour.SuspendLayout();
-            this.ctxLinkVisitedTextColour.SuspendLayout();
-            this.ctxCustomTextColourSixColour.SuspendLayout();
-            this.ctxLinkDisabledTextColour.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxLinkDisabledColourPreview)).BeginInit();
+            this.ctxLinkDisabledTextColour.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxCustomTextColourSixPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxCustomColourSixPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxRibbonTabTextColourPreview)).BeginInit();
@@ -281,6 +249,37 @@ namespace PaletteExplorer.Controls
             ((System.ComponentModel.ISupportInitialize)(this.cbxMediumColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxDarkColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBaseColourPreview)).BeginInit();
+            this.ctxBaseColour.SuspendLayout();
+            this.ctxMediumColour.SuspendLayout();
+            this.ctxLightColour.SuspendLayout();
+            this.ctxLightestColour.SuspendLayout();
+            this.ctxAlternativeNormalTextColour.SuspendLayout();
+            this.ctxBorderColour.SuspendLayout();
+            this.ctxNormalTextColour.SuspendLayout();
+            this.ctxLinkNormalTextColour.SuspendLayout();
+            this.ctxDisabledControlColour.SuspendLayout();
+            this.ctxDisabedTextColour.SuspendLayout();
+            this.ctxFocusedTextColour.SuspendLayout();
+            this.ctxPressedTextColour.SuspendLayout();
+            this.ctxLinkHoverTextColour.SuspendLayout();
+            this.ctxCustomColourFourColour.SuspendLayout();
+            this.ctxDarkColour.SuspendLayout();
+            this.ctxCustomColourThreeColour.SuspendLayout();
+            this.ctxCustomColourOneColour.SuspendLayout();
+            this.ctxCustomColourTwoColour.SuspendLayout();
+            this.ctxCustomColourFiveColour.SuspendLayout();
+            this.ctxCustomTextColourOneColour.SuspendLayout();
+            this.ctxCustomTextColourFiveColour.SuspendLayout();
+            this.ctxCustomTextColourFourColour.SuspendLayout();
+            this.ctxMenuTextColour.SuspendLayout();
+            this.ctxCustomTextColourTwoColour.SuspendLayout();
+            this.ctxCustomTextColourThreeColour.SuspendLayout();
+            this.ctxStatusStripTextColour.SuspendLayout();
+            this.ctxLinkFocusedTextColour.SuspendLayout();
+            this.ctxRibbonTabTextColour.SuspendLayout();
+            this.ctxCustomColourSixColour.SuspendLayout();
+            this.ctxLinkVisitedTextColour.SuspendLayout();
+            this.ctxCustomTextColourSixColour.SuspendLayout();
             this.SuspendLayout();
             // 
             // kgbCircularColourPreviewPane
@@ -327,6 +326,373 @@ namespace PaletteExplorer.Controls
             this.kgbCircularColourPreviewPane.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kgbCircularColourPreviewPane.TabIndex = 40;
             this.kgbCircularColourPreviewPane.Values.Heading = "Colour Preview";
+            // 
+            // cbxLinkDisabledColourPreview
+            // 
+            this.cbxLinkDisabledColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxLinkDisabledColourPreview.ContextMenuStrip = this.ctxLinkDisabledTextColour;
+            this.cbxLinkDisabledColourPreview.Location = new System.Drawing.Point(1284, 147);
+            this.cbxLinkDisabledColourPreview.Name = "cbxLinkDisabledColourPreview";
+            this.cbxLinkDisabledColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxLinkDisabledColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxLinkDisabledColourPreview.TabIndex = 57;
+            this.cbxLinkDisabledColourPreview.TabStop = false;
+            this.cbxLinkDisabledColourPreview.MouseEnter += new System.EventHandler(this.CbxLinkDisabledColourPreview_MouseEnter);
+            // 
+            // ctxLinkDisabledTextColour
+            // 
+            this.ctxLinkDisabledTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxLinkDisabledTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.useLinkDisabledTextColourAsBaseToolStripMenuItem});
+            this.ctxLinkDisabledTextColour.Name = "ctxLinkDisabledTextColour";
+            this.ctxLinkDisabledTextColour.Size = new System.Drawing.Size(271, 26);
+            // 
+            // useLinkDisabledTextColourAsBaseToolStripMenuItem
+            // 
+            this.useLinkDisabledTextColourAsBaseToolStripMenuItem.Name = "useLinkDisabledTextColourAsBaseToolStripMenuItem";
+            this.useLinkDisabledTextColourAsBaseToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.useLinkDisabledTextColourAsBaseToolStripMenuItem.Text = "Use Lin&k Disabled Text Colour as Base";
+            // 
+            // cbxCustomTextColourSixPreview
+            // 
+            this.cbxCustomTextColourSixPreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomTextColourSixPreview.Location = new System.Drawing.Point(19, 549);
+            this.cbxCustomTextColourSixPreview.Name = "cbxCustomTextColourSixPreview";
+            this.cbxCustomTextColourSixPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomTextColourSixPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomTextColourSixPreview.TabIndex = 56;
+            this.cbxCustomTextColourSixPreview.TabStop = false;
+            this.cbxCustomTextColourSixPreview.MouseEnter += new System.EventHandler(this.CbxCustomTextColourSixPreview_MouseEnter);
+            // 
+            // cbxCustomColourSixPreview
+            // 
+            this.cbxCustomColourSixPreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomColourSixPreview.Location = new System.Drawing.Point(272, 413);
+            this.cbxCustomColourSixPreview.Name = "cbxCustomColourSixPreview";
+            this.cbxCustomColourSixPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomColourSixPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomColourSixPreview.TabIndex = 55;
+            this.cbxCustomColourSixPreview.TabStop = false;
+            this.cbxCustomColourSixPreview.MouseEnter += new System.EventHandler(this.CbxCustomColourSixPreview_MouseEnter);
+            // 
+            // cbxRibbonTabTextColourPreview
+            // 
+            this.cbxRibbonTabTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxRibbonTabTextColourPreview.Location = new System.Drawing.Point(778, 549);
+            this.cbxRibbonTabTextColourPreview.Name = "cbxRibbonTabTextColourPreview";
+            this.cbxRibbonTabTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxRibbonTabTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxRibbonTabTextColourPreview.TabIndex = 54;
+            this.cbxRibbonTabTextColourPreview.TabStop = false;
+            this.cbxRibbonTabTextColourPreview.MouseEnter += new System.EventHandler(this.CbxRibbonTabTextColourPreview_MouseEnter);
+            // 
+            // cbxLinkFocusedColourPreview
+            // 
+            this.cbxLinkFocusedColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxLinkFocusedColourPreview.Location = new System.Drawing.Point(19, 280);
+            this.cbxLinkFocusedColourPreview.Name = "cbxLinkFocusedColourPreview";
+            this.cbxLinkFocusedColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxLinkFocusedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxLinkFocusedColourPreview.TabIndex = 53;
+            this.cbxLinkFocusedColourPreview.TabStop = false;
+            this.cbxLinkFocusedColourPreview.MouseEnter += new System.EventHandler(this.CbxLinkFocusedColourPreview_MouseEnter);
+            // 
+            // cbxStatusTextColourPreview
+            // 
+            this.cbxStatusTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxStatusTextColourPreview.Location = new System.Drawing.Point(525, 549);
+            this.cbxStatusTextColourPreview.Name = "cbxStatusTextColourPreview";
+            this.cbxStatusTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxStatusTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxStatusTextColourPreview.TabIndex = 52;
+            this.cbxStatusTextColourPreview.TabStop = false;
+            this.cbxStatusTextColourPreview.MouseEnter += new System.EventHandler(this.CbxStatusTextColourPreview_MouseEnter);
+            // 
+            // cbxCustomTextColourThreePreview
+            // 
+            this.cbxCustomTextColourThreePreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomTextColourThreePreview.Location = new System.Drawing.Point(1031, 413);
+            this.cbxCustomTextColourThreePreview.Name = "cbxCustomTextColourThreePreview";
+            this.cbxCustomTextColourThreePreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomTextColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomTextColourThreePreview.TabIndex = 51;
+            this.cbxCustomTextColourThreePreview.TabStop = false;
+            this.cbxCustomTextColourThreePreview.MouseEnter += new System.EventHandler(this.CbxCustomTextColourThreePreview_MouseEnter);
+            // 
+            // cbxCustomTextColourTwoPreview
+            // 
+            this.cbxCustomTextColourTwoPreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(778, 413);
+            this.cbxCustomTextColourTwoPreview.Name = "cbxCustomTextColourTwoPreview";
+            this.cbxCustomTextColourTwoPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomTextColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomTextColourTwoPreview.TabIndex = 50;
+            this.cbxCustomTextColourTwoPreview.TabStop = false;
+            this.cbxCustomTextColourTwoPreview.MouseEnter += new System.EventHandler(this.CbxCustomTextColourTwoPreview_MouseEnter);
+            // 
+            // cbxMenuTextColourPreview
+            // 
+            this.cbxMenuTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxMenuTextColourPreview.Location = new System.Drawing.Point(272, 549);
+            this.cbxMenuTextColourPreview.Name = "cbxMenuTextColourPreview";
+            this.cbxMenuTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxMenuTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxMenuTextColourPreview.TabIndex = 49;
+            this.cbxMenuTextColourPreview.TabStop = false;
+            this.cbxMenuTextColourPreview.MouseEnter += new System.EventHandler(this.CbxMenuTextColourPreview_MouseEnter);
+            // 
+            // cbxCustomTextColourFourPreview
+            // 
+            this.cbxCustomTextColourFourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomTextColourFourPreview.Location = new System.Drawing.Point(1284, 413);
+            this.cbxCustomTextColourFourPreview.Name = "cbxCustomTextColourFourPreview";
+            this.cbxCustomTextColourFourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomTextColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomTextColourFourPreview.TabIndex = 48;
+            this.cbxCustomTextColourFourPreview.TabStop = false;
+            this.cbxCustomTextColourFourPreview.MouseEnter += new System.EventHandler(this.CbxCustomTextColourFourPreview_MouseEnter);
+            // 
+            // cbxCustomTextColourFivePreview
+            // 
+            this.cbxCustomTextColourFivePreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomTextColourFivePreview.Location = new System.Drawing.Point(1537, 413);
+            this.cbxCustomTextColourFivePreview.Name = "cbxCustomTextColourFivePreview";
+            this.cbxCustomTextColourFivePreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomTextColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomTextColourFivePreview.TabIndex = 47;
+            this.cbxCustomTextColourFivePreview.TabStop = false;
+            this.cbxCustomTextColourFivePreview.MouseEnter += new System.EventHandler(this.CbxCustomTextColourFivePreview_MouseEnter);
+            // 
+            // cbxCustomTextColourOnePreview
+            // 
+            this.cbxCustomTextColourOnePreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomTextColourOnePreview.Location = new System.Drawing.Point(525, 413);
+            this.cbxCustomTextColourOnePreview.Name = "cbxCustomTextColourOnePreview";
+            this.cbxCustomTextColourOnePreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomTextColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomTextColourOnePreview.TabIndex = 46;
+            this.cbxCustomTextColourOnePreview.TabStop = false;
+            this.cbxCustomTextColourOnePreview.MouseEnter += new System.EventHandler(this.CbxCustomTextColourOnePreview_MouseEnter);
+            // 
+            // cbxCustomColourFivePreview
+            // 
+            this.cbxCustomColourFivePreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomColourFivePreview.Location = new System.Drawing.Point(19, 413);
+            this.cbxCustomColourFivePreview.Name = "cbxCustomColourFivePreview";
+            this.cbxCustomColourFivePreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomColourFivePreview.TabIndex = 45;
+            this.cbxCustomColourFivePreview.TabStop = false;
+            this.cbxCustomColourFivePreview.MouseEnter += new System.EventHandler(this.CbxCustomColourFivePreview_MouseEnter);
+            // 
+            // cbxCustomColourTwoPreview
+            // 
+            this.cbxCustomColourTwoPreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomColourTwoPreview.Location = new System.Drawing.Point(1031, 280);
+            this.cbxCustomColourTwoPreview.Name = "cbxCustomColourTwoPreview";
+            this.cbxCustomColourTwoPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomColourTwoPreview.TabIndex = 44;
+            this.cbxCustomColourTwoPreview.TabStop = false;
+            this.cbxCustomColourTwoPreview.MouseEnter += new System.EventHandler(this.CbxCustomColourTwoPreview_MouseEnter);
+            // 
+            // cbxCustomColourOnePreview
+            // 
+            this.cbxCustomColourOnePreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomColourOnePreview.Location = new System.Drawing.Point(778, 280);
+            this.cbxCustomColourOnePreview.Name = "cbxCustomColourOnePreview";
+            this.cbxCustomColourOnePreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomColourOnePreview.TabIndex = 43;
+            this.cbxCustomColourOnePreview.TabStop = false;
+            this.cbxCustomColourOnePreview.MouseEnter += new System.EventHandler(this.CbxCustomColourOnePreview_MouseEnter);
+            // 
+            // cbxLinkVisitedColourPreview
+            // 
+            this.cbxLinkVisitedColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxLinkVisitedColourPreview.Location = new System.Drawing.Point(525, 280);
+            this.cbxLinkVisitedColourPreview.Name = "cbxLinkVisitedColourPreview";
+            this.cbxLinkVisitedColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxLinkVisitedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxLinkVisitedColourPreview.TabIndex = 42;
+            this.cbxLinkVisitedColourPreview.TabStop = false;
+            this.cbxLinkVisitedColourPreview.MouseEnter += new System.EventHandler(this.CbxLinkVisitedColourPreview_MouseEnter);
+            // 
+            // cbxCustomColourThreePreview
+            // 
+            this.cbxCustomColourThreePreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomColourThreePreview.Location = new System.Drawing.Point(1284, 280);
+            this.cbxCustomColourThreePreview.Name = "cbxCustomColourThreePreview";
+            this.cbxCustomColourThreePreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomColourThreePreview.TabIndex = 41;
+            this.cbxCustomColourThreePreview.TabStop = false;
+            this.cbxCustomColourThreePreview.MouseEnter += new System.EventHandler(this.CbxCustomColourThreePreview_MouseEnter);
+            // 
+            // cbxCustomColourFourPreview
+            // 
+            this.cbxCustomColourFourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxCustomColourFourPreview.Location = new System.Drawing.Point(1537, 280);
+            this.cbxCustomColourFourPreview.Name = "cbxCustomColourFourPreview";
+            this.cbxCustomColourFourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxCustomColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxCustomColourFourPreview.TabIndex = 40;
+            this.cbxCustomColourFourPreview.TabStop = false;
+            this.cbxCustomColourFourPreview.MouseEnter += new System.EventHandler(this.CbxCustomColourFourPreview_MouseEnter);
+            // 
+            // cbxLinkHoverColourPreview
+            // 
+            this.cbxLinkHoverColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxLinkHoverColourPreview.Location = new System.Drawing.Point(272, 280);
+            this.cbxLinkHoverColourPreview.Name = "cbxLinkHoverColourPreview";
+            this.cbxLinkHoverColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxLinkHoverColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxLinkHoverColourPreview.TabIndex = 39;
+            this.cbxLinkHoverColourPreview.TabStop = false;
+            this.cbxLinkHoverColourPreview.MouseEnter += new System.EventHandler(this.CbxLinkHoverColourPreview_MouseEnter);
+            // 
+            // cbxPressedTextColourPreview
+            // 
+            this.cbxPressedTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxPressedTextColourPreview.Location = new System.Drawing.Point(778, 147);
+            this.cbxPressedTextColourPreview.Name = "cbxPressedTextColourPreview";
+            this.cbxPressedTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxPressedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxPressedTextColourPreview.TabIndex = 38;
+            this.cbxPressedTextColourPreview.TabStop = false;
+            this.cbxPressedTextColourPreview.MouseEnter += new System.EventHandler(this.CbxPressedTextColourPreview_MouseEnter);
+            // 
+            // cbxFocusedTextColourPreview
+            // 
+            this.cbxFocusedTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxFocusedTextColourPreview.Location = new System.Drawing.Point(525, 147);
+            this.cbxFocusedTextColourPreview.Name = "cbxFocusedTextColourPreview";
+            this.cbxFocusedTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxFocusedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxFocusedTextColourPreview.TabIndex = 37;
+            this.cbxFocusedTextColourPreview.TabStop = false;
+            this.cbxFocusedTextColourPreview.MouseEnter += new System.EventHandler(this.CbxFocusedTextColourPreview_MouseEnter);
+            // 
+            // cbxDisabledTextColourPreview
+            // 
+            this.cbxDisabledTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxDisabledTextColourPreview.Location = new System.Drawing.Point(272, 147);
+            this.cbxDisabledTextColourPreview.Name = "cbxDisabledTextColourPreview";
+            this.cbxDisabledTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxDisabledTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxDisabledTextColourPreview.TabIndex = 36;
+            this.cbxDisabledTextColourPreview.TabStop = false;
+            this.cbxDisabledTextColourPreview.MouseEnter += new System.EventHandler(this.CbxDisabledTextColourPreview_MouseEnter);
+            // 
+            // cbxDisabledControlColourPreview
+            // 
+            this.cbxDisabledControlColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxDisabledControlColourPreview.Location = new System.Drawing.Point(1031, 147);
+            this.cbxDisabledControlColourPreview.Name = "cbxDisabledControlColourPreview";
+            this.cbxDisabledControlColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxDisabledControlColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxDisabledControlColourPreview.TabIndex = 35;
+            this.cbxDisabledControlColourPreview.TabStop = false;
+            this.cbxDisabledControlColourPreview.MouseEnter += new System.EventHandler(this.CbxDisabledControlColourPreview_MouseEnter);
+            // 
+            // cbxLinkNormalColourPreview
+            // 
+            this.cbxLinkNormalColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxLinkNormalColourPreview.Location = new System.Drawing.Point(1537, 147);
+            this.cbxLinkNormalColourPreview.Name = "cbxLinkNormalColourPreview";
+            this.cbxLinkNormalColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxLinkNormalColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxLinkNormalColourPreview.TabIndex = 34;
+            this.cbxLinkNormalColourPreview.TabStop = false;
+            this.cbxLinkNormalColourPreview.MouseEnter += new System.EventHandler(this.CbxLinkNormalColourPreview_MouseEnter);
+            // 
+            // cbxNormalTextColourPreview
+            // 
+            this.cbxNormalTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxNormalTextColourPreview.Location = new System.Drawing.Point(19, 147);
+            this.cbxNormalTextColourPreview.Name = "cbxNormalTextColourPreview";
+            this.cbxNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxNormalTextColourPreview.TabIndex = 33;
+            this.cbxNormalTextColourPreview.TabStop = false;
+            this.cbxNormalTextColourPreview.MouseEnter += new System.EventHandler(this.CbxNormalTextColourPreview_MouseEnter);
+            // 
+            // cbxBorderColourPreview
+            // 
+            this.cbxBorderColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxBorderColourPreview.Location = new System.Drawing.Point(1284, 18);
+            this.cbxBorderColourPreview.Name = "cbxBorderColourPreview";
+            this.cbxBorderColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxBorderColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxBorderColourPreview.TabIndex = 32;
+            this.cbxBorderColourPreview.TabStop = false;
+            this.cbxBorderColourPreview.MouseEnter += new System.EventHandler(this.CbxBorderColourPreview_MouseEnter);
+            // 
+            // cbxAlternativeNormalTextColourPreview
+            // 
+            this.cbxAlternativeNormalTextColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxAlternativeNormalTextColourPreview.Location = new System.Drawing.Point(1537, 18);
+            this.cbxAlternativeNormalTextColourPreview.Name = "cbxAlternativeNormalTextColourPreview";
+            this.cbxAlternativeNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxAlternativeNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxAlternativeNormalTextColourPreview.TabIndex = 31;
+            this.cbxAlternativeNormalTextColourPreview.TabStop = false;
+            this.cbxAlternativeNormalTextColourPreview.MouseEnter += new System.EventHandler(this.CbxAlternativeNormalTextColourPreview_MouseEnter);
+            // 
+            // cbxLightestColourPreview
+            // 
+            this.cbxLightestColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxLightestColourPreview.Location = new System.Drawing.Point(1031, 15);
+            this.cbxLightestColourPreview.Name = "cbxLightestColourPreview";
+            this.cbxLightestColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxLightestColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxLightestColourPreview.TabIndex = 30;
+            this.cbxLightestColourPreview.TabStop = false;
+            this.cbxLightestColourPreview.MouseEnter += new System.EventHandler(this.CbxLightestColourPreview_MouseEnter);
+            // 
+            // cbxLightColourPreview
+            // 
+            this.cbxLightColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxLightColourPreview.Location = new System.Drawing.Point(778, 15);
+            this.cbxLightColourPreview.Name = "cbxLightColourPreview";
+            this.cbxLightColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxLightColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxLightColourPreview.TabIndex = 29;
+            this.cbxLightColourPreview.TabStop = false;
+            this.cbxLightColourPreview.MouseEnter += new System.EventHandler(this.CbxLightColourPreview_MouseEnter);
+            // 
+            // cbxMediumColourPreview
+            // 
+            this.cbxMediumColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxMediumColourPreview.Location = new System.Drawing.Point(525, 15);
+            this.cbxMediumColourPreview.Name = "cbxMediumColourPreview";
+            this.cbxMediumColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxMediumColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxMediumColourPreview.TabIndex = 28;
+            this.cbxMediumColourPreview.TabStop = false;
+            this.cbxMediumColourPreview.MouseEnter += new System.EventHandler(this.CbxMediumColourPreview_MouseEnter);
+            // 
+            // cbxDarkColourPreview
+            // 
+            this.cbxDarkColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxDarkColourPreview.Location = new System.Drawing.Point(272, 15);
+            this.cbxDarkColourPreview.Name = "cbxDarkColourPreview";
+            this.cbxDarkColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxDarkColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxDarkColourPreview.TabIndex = 27;
+            this.cbxDarkColourPreview.TabStop = false;
+            this.cbxDarkColourPreview.MouseEnter += new System.EventHandler(this.CbxDarkColourPreview_MouseEnter);
+            // 
+            // cbxBaseColourPreview
+            // 
+            this.cbxBaseColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxBaseColourPreview.Location = new System.Drawing.Point(19, 14);
+            this.cbxBaseColourPreview.Name = "cbxBaseColourPreview";
+            this.cbxBaseColourPreview.Size = new System.Drawing.Size(64, 64);
+            this.cbxBaseColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbxBaseColourPreview.TabIndex = 26;
+            this.cbxBaseColourPreview.TabStop = false;
+            this.cbxBaseColourPreview.MouseEnter += new System.EventHandler(this.CbxBaseColourPreview_MouseEnter);
             // 
             // ctxBaseColour
             // 
@@ -793,342 +1159,6 @@ namespace PaletteExplorer.Controls
             this.tsmiCustomTextColourSixColour.Text = "Use Custom Text Colour &Six Colour as Base";
             this.tsmiCustomTextColourSixColour.Click += new System.EventHandler(this.TsmiCustomTextColourSixColour_Click);
             // 
-            // ctxLinkDisabledTextColour
-            // 
-            this.ctxLinkDisabledTextColour.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ctxLinkDisabledTextColour.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.useLinkDisabledTextColourAsBaseToolStripMenuItem});
-            this.ctxLinkDisabledTextColour.Name = "ctxLinkDisabledTextColour";
-            this.ctxLinkDisabledTextColour.Size = new System.Drawing.Size(271, 26);
-            // 
-            // useLinkDisabledTextColourAsBaseToolStripMenuItem
-            // 
-            this.useLinkDisabledTextColourAsBaseToolStripMenuItem.Name = "useLinkDisabledTextColourAsBaseToolStripMenuItem";
-            this.useLinkDisabledTextColourAsBaseToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
-            this.useLinkDisabledTextColourAsBaseToolStripMenuItem.Text = "Use Lin&k Disabled Text Colour as Base";
-            // 
-            // cbxLinkDisabledColourPreview
-            // 
-            this.cbxLinkDisabledColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxLinkDisabledColourPreview.ContextMenuStrip = this.ctxLinkDisabledTextColour;
-            this.cbxLinkDisabledColourPreview.Location = new System.Drawing.Point(1284, 147);
-            this.cbxLinkDisabledColourPreview.Name = "cbxLinkDisabledColourPreview";
-            this.cbxLinkDisabledColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxLinkDisabledColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxLinkDisabledColourPreview.TabIndex = 57;
-            this.cbxLinkDisabledColourPreview.TabStop = false;
-            // 
-            // cbxCustomTextColourSixPreview
-            // 
-            this.cbxCustomTextColourSixPreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomTextColourSixPreview.Location = new System.Drawing.Point(19, 549);
-            this.cbxCustomTextColourSixPreview.Name = "cbxCustomTextColourSixPreview";
-            this.cbxCustomTextColourSixPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxCustomTextColourSixPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxCustomTextColourSixPreview.TabIndex = 56;
-            this.cbxCustomTextColourSixPreview.TabStop = false;
-            // 
-            // cbxCustomColourSixPreview
-            // 
-            this.cbxCustomColourSixPreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomColourSixPreview.Location = new System.Drawing.Point(272, 413);
-            this.cbxCustomColourSixPreview.Name = "cbxCustomColourSixPreview";
-            this.cbxCustomColourSixPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxCustomColourSixPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxCustomColourSixPreview.TabIndex = 55;
-            this.cbxCustomColourSixPreview.TabStop = false;
-            // 
-            // cbxRibbonTabTextColourPreview
-            // 
-            this.cbxRibbonTabTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxRibbonTabTextColourPreview.Location = new System.Drawing.Point(778, 549);
-            this.cbxRibbonTabTextColourPreview.Name = "cbxRibbonTabTextColourPreview";
-            this.cbxRibbonTabTextColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxRibbonTabTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxRibbonTabTextColourPreview.TabIndex = 54;
-            this.cbxRibbonTabTextColourPreview.TabStop = false;
-            // 
-            // cbxLinkFocusedColourPreview
-            // 
-            this.cbxLinkFocusedColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxLinkFocusedColourPreview.Location = new System.Drawing.Point(19, 280);
-            this.cbxLinkFocusedColourPreview.Name = "cbxLinkFocusedColourPreview";
-            this.cbxLinkFocusedColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxLinkFocusedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxLinkFocusedColourPreview.TabIndex = 53;
-            this.cbxLinkFocusedColourPreview.TabStop = false;
-            // 
-            // cbxStatusTextColourPreview
-            // 
-            this.cbxStatusTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxStatusTextColourPreview.Location = new System.Drawing.Point(525, 549);
-            this.cbxStatusTextColourPreview.Name = "cbxStatusTextColourPreview";
-            this.cbxStatusTextColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxStatusTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxStatusTextColourPreview.TabIndex = 52;
-            this.cbxStatusTextColourPreview.TabStop = false;
-            // 
-            // cbxCustomTextColourThreePreview
-            // 
-            this.cbxCustomTextColourThreePreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomTextColourThreePreview.Location = new System.Drawing.Point(1031, 413);
-            this.cbxCustomTextColourThreePreview.Name = "cbxCustomTextColourThreePreview";
-            this.cbxCustomTextColourThreePreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxCustomTextColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxCustomTextColourThreePreview.TabIndex = 51;
-            this.cbxCustomTextColourThreePreview.TabStop = false;
-            // 
-            // cbxCustomTextColourTwoPreview
-            // 
-            this.cbxCustomTextColourTwoPreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomTextColourTwoPreview.Location = new System.Drawing.Point(778, 413);
-            this.cbxCustomTextColourTwoPreview.Name = "cbxCustomTextColourTwoPreview";
-            this.cbxCustomTextColourTwoPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxCustomTextColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxCustomTextColourTwoPreview.TabIndex = 50;
-            this.cbxCustomTextColourTwoPreview.TabStop = false;
-            // 
-            // cbxMenuTextColourPreview
-            // 
-            this.cbxMenuTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxMenuTextColourPreview.Location = new System.Drawing.Point(272, 549);
-            this.cbxMenuTextColourPreview.Name = "cbxMenuTextColourPreview";
-            this.cbxMenuTextColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxMenuTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxMenuTextColourPreview.TabIndex = 49;
-            this.cbxMenuTextColourPreview.TabStop = false;
-            // 
-            // cbxCustomTextColourFourPreview
-            // 
-            this.cbxCustomTextColourFourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomTextColourFourPreview.Location = new System.Drawing.Point(1284, 413);
-            this.cbxCustomTextColourFourPreview.Name = "cbxCustomTextColourFourPreview";
-            this.cbxCustomTextColourFourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxCustomTextColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxCustomTextColourFourPreview.TabIndex = 48;
-            this.cbxCustomTextColourFourPreview.TabStop = false;
-            // 
-            // cbxCustomTextColourFivePreview
-            // 
-            this.cbxCustomTextColourFivePreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomTextColourFivePreview.Location = new System.Drawing.Point(1537, 413);
-            this.cbxCustomTextColourFivePreview.Name = "cbxCustomTextColourFivePreview";
-            this.cbxCustomTextColourFivePreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxCustomTextColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxCustomTextColourFivePreview.TabIndex = 47;
-            this.cbxCustomTextColourFivePreview.TabStop = false;
-            // 
-            // cbxCustomTextColourOnePreview
-            // 
-            this.cbxCustomTextColourOnePreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomTextColourOnePreview.Location = new System.Drawing.Point(525, 413);
-            this.cbxCustomTextColourOnePreview.Name = "cbxCustomTextColourOnePreview";
-            this.cbxCustomTextColourOnePreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxCustomTextColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxCustomTextColourOnePreview.TabIndex = 46;
-            this.cbxCustomTextColourOnePreview.TabStop = false;
-            // 
-            // cbxCustomColourFivePreview
-            // 
-            this.cbxCustomColourFivePreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomColourFivePreview.Location = new System.Drawing.Point(19, 413);
-            this.cbxCustomColourFivePreview.Name = "cbxCustomColourFivePreview";
-            this.cbxCustomColourFivePreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxCustomColourFivePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxCustomColourFivePreview.TabIndex = 45;
-            this.cbxCustomColourFivePreview.TabStop = false;
-            // 
-            // cbxCustomColourTwoPreview
-            // 
-            this.cbxCustomColourTwoPreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomColourTwoPreview.Location = new System.Drawing.Point(1031, 280);
-            this.cbxCustomColourTwoPreview.Name = "cbxCustomColourTwoPreview";
-            this.cbxCustomColourTwoPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxCustomColourTwoPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxCustomColourTwoPreview.TabIndex = 44;
-            this.cbxCustomColourTwoPreview.TabStop = false;
-            // 
-            // cbxCustomColourOnePreview
-            // 
-            this.cbxCustomColourOnePreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomColourOnePreview.Location = new System.Drawing.Point(778, 280);
-            this.cbxCustomColourOnePreview.Name = "cbxCustomColourOnePreview";
-            this.cbxCustomColourOnePreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxCustomColourOnePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxCustomColourOnePreview.TabIndex = 43;
-            this.cbxCustomColourOnePreview.TabStop = false;
-            // 
-            // cbxLinkVisitedColourPreview
-            // 
-            this.cbxLinkVisitedColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxLinkVisitedColourPreview.Location = new System.Drawing.Point(525, 280);
-            this.cbxLinkVisitedColourPreview.Name = "cbxLinkVisitedColourPreview";
-            this.cbxLinkVisitedColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxLinkVisitedColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxLinkVisitedColourPreview.TabIndex = 42;
-            this.cbxLinkVisitedColourPreview.TabStop = false;
-            // 
-            // cbxCustomColourThreePreview
-            // 
-            this.cbxCustomColourThreePreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomColourThreePreview.Location = new System.Drawing.Point(1284, 280);
-            this.cbxCustomColourThreePreview.Name = "cbxCustomColourThreePreview";
-            this.cbxCustomColourThreePreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxCustomColourThreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxCustomColourThreePreview.TabIndex = 41;
-            this.cbxCustomColourThreePreview.TabStop = false;
-            // 
-            // cbxCustomColourFourPreview
-            // 
-            this.cbxCustomColourFourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxCustomColourFourPreview.Location = new System.Drawing.Point(1537, 280);
-            this.cbxCustomColourFourPreview.Name = "cbxCustomColourFourPreview";
-            this.cbxCustomColourFourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxCustomColourFourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxCustomColourFourPreview.TabIndex = 40;
-            this.cbxCustomColourFourPreview.TabStop = false;
-            // 
-            // cbxLinkHoverColourPreview
-            // 
-            this.cbxLinkHoverColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxLinkHoverColourPreview.Location = new System.Drawing.Point(272, 280);
-            this.cbxLinkHoverColourPreview.Name = "cbxLinkHoverColourPreview";
-            this.cbxLinkHoverColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxLinkHoverColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxLinkHoverColourPreview.TabIndex = 39;
-            this.cbxLinkHoverColourPreview.TabStop = false;
-            // 
-            // cbxPressedTextColourPreview
-            // 
-            this.cbxPressedTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxPressedTextColourPreview.Location = new System.Drawing.Point(778, 147);
-            this.cbxPressedTextColourPreview.Name = "cbxPressedTextColourPreview";
-            this.cbxPressedTextColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxPressedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxPressedTextColourPreview.TabIndex = 38;
-            this.cbxPressedTextColourPreview.TabStop = false;
-            // 
-            // cbxFocusedTextColourPreview
-            // 
-            this.cbxFocusedTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxFocusedTextColourPreview.Location = new System.Drawing.Point(525, 147);
-            this.cbxFocusedTextColourPreview.Name = "cbxFocusedTextColourPreview";
-            this.cbxFocusedTextColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxFocusedTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxFocusedTextColourPreview.TabIndex = 37;
-            this.cbxFocusedTextColourPreview.TabStop = false;
-            // 
-            // cbxDisabledTextColourPreview
-            // 
-            this.cbxDisabledTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxDisabledTextColourPreview.Location = new System.Drawing.Point(272, 147);
-            this.cbxDisabledTextColourPreview.Name = "cbxDisabledTextColourPreview";
-            this.cbxDisabledTextColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxDisabledTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxDisabledTextColourPreview.TabIndex = 36;
-            this.cbxDisabledTextColourPreview.TabStop = false;
-            // 
-            // cbxDisabledControlColourPreview
-            // 
-            this.cbxDisabledControlColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxDisabledControlColourPreview.Location = new System.Drawing.Point(1031, 147);
-            this.cbxDisabledControlColourPreview.Name = "cbxDisabledControlColourPreview";
-            this.cbxDisabledControlColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxDisabledControlColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxDisabledControlColourPreview.TabIndex = 35;
-            this.cbxDisabledControlColourPreview.TabStop = false;
-            // 
-            // cbxLinkNormalColourPreview
-            // 
-            this.cbxLinkNormalColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxLinkNormalColourPreview.Location = new System.Drawing.Point(1537, 147);
-            this.cbxLinkNormalColourPreview.Name = "cbxLinkNormalColourPreview";
-            this.cbxLinkNormalColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxLinkNormalColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxLinkNormalColourPreview.TabIndex = 34;
-            this.cbxLinkNormalColourPreview.TabStop = false;
-            // 
-            // cbxNormalTextColourPreview
-            // 
-            this.cbxNormalTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxNormalTextColourPreview.Location = new System.Drawing.Point(19, 147);
-            this.cbxNormalTextColourPreview.Name = "cbxNormalTextColourPreview";
-            this.cbxNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxNormalTextColourPreview.TabIndex = 33;
-            this.cbxNormalTextColourPreview.TabStop = false;
-            // 
-            // cbxBorderColourPreview
-            // 
-            this.cbxBorderColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxBorderColourPreview.Location = new System.Drawing.Point(1284, 18);
-            this.cbxBorderColourPreview.Name = "cbxBorderColourPreview";
-            this.cbxBorderColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxBorderColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxBorderColourPreview.TabIndex = 32;
-            this.cbxBorderColourPreview.TabStop = false;
-            // 
-            // cbxAlternativeNormalTextColourPreview
-            // 
-            this.cbxAlternativeNormalTextColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxAlternativeNormalTextColourPreview.Location = new System.Drawing.Point(1537, 18);
-            this.cbxAlternativeNormalTextColourPreview.Name = "cbxAlternativeNormalTextColourPreview";
-            this.cbxAlternativeNormalTextColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxAlternativeNormalTextColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxAlternativeNormalTextColourPreview.TabIndex = 31;
-            this.cbxAlternativeNormalTextColourPreview.TabStop = false;
-            // 
-            // cbxLightestColourPreview
-            // 
-            this.cbxLightestColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxLightestColourPreview.Location = new System.Drawing.Point(1031, 15);
-            this.cbxLightestColourPreview.Name = "cbxLightestColourPreview";
-            this.cbxLightestColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxLightestColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxLightestColourPreview.TabIndex = 30;
-            this.cbxLightestColourPreview.TabStop = false;
-            // 
-            // cbxLightColourPreview
-            // 
-            this.cbxLightColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxLightColourPreview.Location = new System.Drawing.Point(778, 15);
-            this.cbxLightColourPreview.Name = "cbxLightColourPreview";
-            this.cbxLightColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxLightColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxLightColourPreview.TabIndex = 29;
-            this.cbxLightColourPreview.TabStop = false;
-            // 
-            // cbxMediumColourPreview
-            // 
-            this.cbxMediumColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxMediumColourPreview.Location = new System.Drawing.Point(525, 15);
-            this.cbxMediumColourPreview.Name = "cbxMediumColourPreview";
-            this.cbxMediumColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxMediumColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxMediumColourPreview.TabIndex = 28;
-            this.cbxMediumColourPreview.TabStop = false;
-            // 
-            // cbxDarkColourPreview
-            // 
-            this.cbxDarkColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxDarkColourPreview.Location = new System.Drawing.Point(272, 15);
-            this.cbxDarkColourPreview.Name = "cbxDarkColourPreview";
-            this.cbxDarkColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxDarkColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxDarkColourPreview.TabIndex = 27;
-            this.cbxDarkColourPreview.TabStop = false;
-            // 
-            // cbxBaseColourPreview
-            // 
-            this.cbxBaseColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxBaseColourPreview.Location = new System.Drawing.Point(19, 14);
-            this.cbxBaseColourPreview.Name = "cbxBaseColourPreview";
-            this.cbxBaseColourPreview.Size = new System.Drawing.Size(64, 64);
-            this.cbxBaseColourPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbxBaseColourPreview.TabIndex = 26;
-            this.cbxBaseColourPreview.TabStop = false;
-            this.cbxBaseColourPreview.MouseEnter += new System.EventHandler(this.CbxBaseColourPreview_MouseEnter);
-            // 
             // CircularPictureBoxControl
             // 
             this.BackColor = System.Drawing.Color.Transparent;
@@ -1140,39 +1170,8 @@ namespace PaletteExplorer.Controls
             this.kgbCircularColourPreviewPane.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kgbCircularColourPreviewPane)).EndInit();
             this.kgbCircularColourPreviewPane.ResumeLayout(false);
-            this.ctxBaseColour.ResumeLayout(false);
-            this.ctxMediumColour.ResumeLayout(false);
-            this.ctxLightColour.ResumeLayout(false);
-            this.ctxLightestColour.ResumeLayout(false);
-            this.ctxAlternativeNormalTextColour.ResumeLayout(false);
-            this.ctxBorderColour.ResumeLayout(false);
-            this.ctxNormalTextColour.ResumeLayout(false);
-            this.ctxLinkNormalTextColour.ResumeLayout(false);
-            this.ctxDisabledControlColour.ResumeLayout(false);
-            this.ctxDisabedTextColour.ResumeLayout(false);
-            this.ctxFocusedTextColour.ResumeLayout(false);
-            this.ctxPressedTextColour.ResumeLayout(false);
-            this.ctxLinkHoverTextColour.ResumeLayout(false);
-            this.ctxCustomColourFourColour.ResumeLayout(false);
-            this.ctxDarkColour.ResumeLayout(false);
-            this.ctxCustomColourThreeColour.ResumeLayout(false);
-            this.ctxCustomColourOneColour.ResumeLayout(false);
-            this.ctxCustomColourTwoColour.ResumeLayout(false);
-            this.ctxCustomColourFiveColour.ResumeLayout(false);
-            this.ctxCustomTextColourOneColour.ResumeLayout(false);
-            this.ctxCustomTextColourFiveColour.ResumeLayout(false);
-            this.ctxCustomTextColourFourColour.ResumeLayout(false);
-            this.ctxMenuTextColour.ResumeLayout(false);
-            this.ctxCustomTextColourTwoColour.ResumeLayout(false);
-            this.ctxCustomTextColourThreeColour.ResumeLayout(false);
-            this.ctxStatusStripTextColour.ResumeLayout(false);
-            this.ctxLinkFocusedTextColour.ResumeLayout(false);
-            this.ctxRibbonTabTextColour.ResumeLayout(false);
-            this.ctxCustomColourSixColour.ResumeLayout(false);
-            this.ctxLinkVisitedTextColour.ResumeLayout(false);
-            this.ctxCustomTextColourSixColour.ResumeLayout(false);
-            this.ctxLinkDisabledTextColour.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cbxLinkDisabledColourPreview)).EndInit();
+            this.ctxLinkDisabledTextColour.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cbxCustomTextColourSixPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxCustomColourSixPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxRibbonTabTextColourPreview)).EndInit();
@@ -1204,6 +1203,37 @@ namespace PaletteExplorer.Controls
             ((System.ComponentModel.ISupportInitialize)(this.cbxMediumColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxDarkColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBaseColourPreview)).EndInit();
+            this.ctxBaseColour.ResumeLayout(false);
+            this.ctxMediumColour.ResumeLayout(false);
+            this.ctxLightColour.ResumeLayout(false);
+            this.ctxLightestColour.ResumeLayout(false);
+            this.ctxAlternativeNormalTextColour.ResumeLayout(false);
+            this.ctxBorderColour.ResumeLayout(false);
+            this.ctxNormalTextColour.ResumeLayout(false);
+            this.ctxLinkNormalTextColour.ResumeLayout(false);
+            this.ctxDisabledControlColour.ResumeLayout(false);
+            this.ctxDisabedTextColour.ResumeLayout(false);
+            this.ctxFocusedTextColour.ResumeLayout(false);
+            this.ctxPressedTextColour.ResumeLayout(false);
+            this.ctxLinkHoverTextColour.ResumeLayout(false);
+            this.ctxCustomColourFourColour.ResumeLayout(false);
+            this.ctxDarkColour.ResumeLayout(false);
+            this.ctxCustomColourThreeColour.ResumeLayout(false);
+            this.ctxCustomColourOneColour.ResumeLayout(false);
+            this.ctxCustomColourTwoColour.ResumeLayout(false);
+            this.ctxCustomColourFiveColour.ResumeLayout(false);
+            this.ctxCustomTextColourOneColour.ResumeLayout(false);
+            this.ctxCustomTextColourFiveColour.ResumeLayout(false);
+            this.ctxCustomTextColourFourColour.ResumeLayout(false);
+            this.ctxMenuTextColour.ResumeLayout(false);
+            this.ctxCustomTextColourTwoColour.ResumeLayout(false);
+            this.ctxCustomTextColourThreeColour.ResumeLayout(false);
+            this.ctxStatusStripTextColour.ResumeLayout(false);
+            this.ctxLinkFocusedTextColour.ResumeLayout(false);
+            this.ctxRibbonTabTextColour.ResumeLayout(false);
+            this.ctxCustomColourSixColour.ResumeLayout(false);
+            this.ctxLinkVisitedTextColour.ResumeLayout(false);
+            this.ctxCustomTextColourSixColour.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2011,10 +2041,169 @@ namespace PaletteExplorer.Controls
         #endregion
 
         #region Event Handlers
+
+        #region ToolTips
         private void CbxBaseColourPreview_MouseEnter(object sender, EventArgs e)
         {
             UserInterfaceManager.DisplayToolTipInformation(GetBaseColourPreview(), GetBaseColourPreview().BackColor, "Base", true);
         }
+
+        private void CbxDarkColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(GetDarkColourPreview(), GetDarkColourPreview().BackColor, "Dark", true);
+        }
+
+        private void CbxMediumColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(GetMiddleColourPreview(), GetMiddleColourPreview().BackColor, "Middle", true);
+        }
+
+        private void CbxLightColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(GetLightColourPreview(), GetLightColourPreview().BackColor, "Light", true);
+        }
+
+        private void CbxLightestColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(GetLightestColourPreview(), GetLightestColourPreview().BackColor, "Lightest", true);
+        }
+
+        private void CbxBorderColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(GetBorderColourPreview(), GetBorderColourPreview().BackColor, "Border", true);
+        }
+
+        private void CbxAlternativeNormalTextColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(GetAlternativeNormalTextColourPreview(), GetAlternativeNormalTextColourPreview().BackColor, "Alternative Normal Text", true);
+        }
+
+        private void CbxNormalTextColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+            UserInterfaceManager.DisplayToolTipInformation(GetNormalTextColourPreview(), GetNormalTextColourPreview().BackColor, "Normal Text", true);
+        }
+
+        private void CbxDisabledTextColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxFocusedTextColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxPressedTextColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxDisabledControlColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxLinkDisabledColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxLinkNormalColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxLinkFocusedColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxLinkHoverColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxLinkVisitedColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCustomColourOnePreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCustomColourTwoPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCustomColourThreePreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCustomColourFourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCustomColourFivePreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCustomColourSixPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCustomTextColourOnePreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCustomTextColourTwoPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCustomTextColourThreePreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCustomTextColourFourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCustomTextColourFivePreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxCustomTextColourSixPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxMenuTextColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxStatusTextColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbxRibbonTabTextColourPreview_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
         #endregion
 
         #region Colour Handlers
