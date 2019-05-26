@@ -150,14 +150,53 @@ namespace Core.Classes
             return ColorTranslator.FromHtml(String.Format("#{0:X2}{1:X2}{2:X2}", red, green, blue)).Name.Remove(0, 1);
         }
 
+        /// <summary>
+        /// Gets the name of the known colour.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
         public static string GetKnownColourName(Color colour)
         {
             return colour.ToKnownColor().ToString();
         }
 
+        /// <summary>
+        /// Gets the name of the colour.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
         public static string GetColourName(Color colour)
         {
             return colour.Name;
+        }
+
+        /// <summary>
+        /// Returns the safe file name date time string.
+        /// </summary>
+        /// <returns></returns>
+        public static string ReturnSafeFileNameDateTimeString()
+        {
+            return $"{ DateTime.Now.Day.ToString() }-{ DateTime.Now.Month.ToString() }-{ DateTime.Now.Year.ToString() } { DateTime.Now.Hour.ToString() }-{ DateTime.Now.Minute.ToString() }-{ DateTime.Now.Second.ToString() }";
+        }
+
+        /// <summary>
+        /// Colours the string to ARGB.
+        /// </summary>
+        /// <param name="argbString">The ARGB string.</param>
+        /// <returns></returns>
+        public static Color ColourStringToARGB(string argbString)
+        {
+            return Color.FromArgb(Convert.ToInt32(argbString));
+        }
+
+        /// <summary>
+        /// Colours the ARGB to string.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
+        public static string ColourARGBToString(Color colour)
+        {
+            return colour.ToArgb().ToString();
         }
         #endregion
     }

@@ -8,7 +8,9 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using Core.Classes;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using ToolkitSettings.Settings.PaletteExplorer.Colours;
 
@@ -255,6 +257,33 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
 
                 SetSettingsModified(false);
             }
+        }
+
+        /// <summary>
+        /// Writes the colours to file.
+        /// </summary>
+        /// <param name="colourFileName">Name of the colour file.</param>
+        public static void WriteColoursToFile(string colourFileName)
+        {
+            BasicColourSettingsManager manager = new BasicColourSettingsManager();
+
+            StreamWriter writer = new StreamWriter(colourFileName);
+
+            writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetBaseColour()));
+
+            writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetDarkColour()));
+
+            writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetMediumColour()));
+
+            writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLightColour()));
+
+            writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLightestColour()));
+
+            writer.Flush();
+
+            writer.Close();
+
+            writer.Dispose();
         }
         #endregion
 

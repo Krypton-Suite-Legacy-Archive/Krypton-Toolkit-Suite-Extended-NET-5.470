@@ -146,6 +146,9 @@
     <EmbeddedResource Include="UX\Colour\ColourMixerBasic.resx">
       <DependentUpon>ColourMixerBasic.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UX\Debugging\ColourDebugConsole.resx">
+      <DependentUpon>ColourDebugConsole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UX\KryptonColourPalettePropertiesWindow.resx">
       <DependentUpon>KryptonColourPalettePropertiesWindow.cs</DependentUpon>
     </EmbeddedResource>

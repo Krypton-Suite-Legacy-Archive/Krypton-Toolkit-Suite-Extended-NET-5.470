@@ -31,13 +31,13 @@ namespace PaletteExplorer.UX.Colour
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColourMixerBasic));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnSetColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.cbxColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.kcbThemeSelector = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.klblRedValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -48,13 +48,14 @@ namespace PaletteExplorer.UX.Colour
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.knumAlpaValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.cbxColourPreview = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.cwSelectedColour = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.ColourWheel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxColourPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcbThemeSelector)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxColourPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -133,15 +134,6 @@ namespace PaletteExplorer.UX.Colour
             this.kbtnSetColour.TabIndex = 61;
             this.kbtnSetColour.Values.Text = "&Set Colour";
             this.kbtnSetColour.Click += new System.EventHandler(this.KbtnSetColour_Click);
-            // 
-            // cbxColourPreview
-            // 
-            this.cbxColourPreview.BackColor = System.Drawing.Color.White;
-            this.cbxColourPreview.Location = new System.Drawing.Point(486, 86);
-            this.cbxColourPreview.Name = "cbxColourPreview";
-            this.cbxColourPreview.Size = new System.Drawing.Size(232, 230);
-            this.cbxColourPreview.TabIndex = 35;
-            this.cbxColourPreview.TabStop = false;
             // 
             // kcbThemeSelector
             // 
@@ -261,6 +253,15 @@ namespace PaletteExplorer.UX.Colour
             this.kryptonLabel1.TabIndex = 25;
             this.kryptonLabel1.Values.Text = "Alpha:";
             // 
+            // cbxColourPreview
+            // 
+            this.cbxColourPreview.BackColor = System.Drawing.Color.White;
+            this.cbxColourPreview.Location = new System.Drawing.Point(486, 86);
+            this.cbxColourPreview.Name = "cbxColourPreview";
+            this.cbxColourPreview.Size = new System.Drawing.Size(232, 230);
+            this.cbxColourPreview.TabIndex = 35;
+            this.cbxColourPreview.TabStop = false;
+            // 
             // cwSelectedColour
             // 
             this.cwSelectedColour.BackColor = System.Drawing.Color.Transparent;
@@ -277,9 +278,11 @@ namespace PaletteExplorer.UX.Colour
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ColourMixerBasic";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Basic Palette Colour Mixer";
             this.Load += new System.EventHandler(this.ColourMixerBasic_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
@@ -287,8 +290,8 @@ namespace PaletteExplorer.UX.Colour
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxColourPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcbThemeSelector)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxColourPreview)).EndInit();
             this.ResumeLayout(false);
 
         }

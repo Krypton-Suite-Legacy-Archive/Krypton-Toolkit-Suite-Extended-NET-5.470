@@ -364,6 +364,11 @@
   <ItemGroup>
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Global Utilities\Global Utilities.csproj">
+      <Project>{EDB87D0C-A37C-48B5-9857-F014C438A4C5}</Project>
+      <Name>Global Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

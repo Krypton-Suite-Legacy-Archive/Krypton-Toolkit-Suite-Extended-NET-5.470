@@ -8,11 +8,14 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using Core.Classes;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using PaletteExplorer.Classes;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
 using ToolkitSettings.Classes.PaletteExplorer;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace PaletteExplorer.UX.Colour
 {
@@ -43,6 +46,7 @@ namespace PaletteExplorer.UX.Colour
         private KryptonButton kbtnOk;
         private KryptonButton kbtnGenerate;
         private KryptonButton kbtnGenerateARGB;
+        private KryptonButton kbtnWriteToFile;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
@@ -73,6 +77,7 @@ namespace PaletteExplorer.UX.Colour
             this.cbxDarkColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.cbxBaseColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.cwSelectedColour = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.ColourWheel();
+            this.kbtnWriteToFile = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -86,6 +91,7 @@ namespace PaletteExplorer.UX.Colour
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnWriteToFile);
             this.kryptonPanel1.Controls.Add(this.kbtnGenerateARGB);
             this.kryptonPanel1.Controls.Add(this.kbtnGenerate);
             this.kryptonPanel1.Controls.Add(this.kbtnOk);
@@ -123,12 +129,14 @@ namespace PaletteExplorer.UX.Colour
             // 
             this.kbtnOk.AutoSize = true;
             this.kbtnOk.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnOk.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.kbtnOk.Location = new System.Drawing.Point(807, 15);
             this.kbtnOk.Name = "kbtnOk";
             this.kbtnOk.Size = new System.Drawing.Size(32, 30);
             this.kbtnOk.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnOk.TabIndex = 60;
             this.kbtnOk.Values.Text = "O&k";
+            this.kbtnOk.Click += new System.EventHandler(this.KbtnOk_Click);
             // 
             // kryptonPanel2
             // 
@@ -374,6 +382,19 @@ namespace PaletteExplorer.UX.Colour
             this.cwSelectedColour.TabIndex = 3;
             this.cwSelectedColour.ColourChanged += new System.EventHandler(this.CwSelectedColour_ColourChanged);
             // 
+            // kbtnWriteToFile
+            // 
+            this.kbtnWriteToFile.AutoSize = true;
+            this.kbtnWriteToFile.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnWriteToFile.Enabled = false;
+            this.kbtnWriteToFile.Location = new System.Drawing.Point(463, 15);
+            this.kbtnWriteToFile.Name = "kbtnWriteToFile";
+            this.kbtnWriteToFile.Size = new System.Drawing.Size(160, 30);
+            this.kbtnWriteToFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnWriteToFile.TabIndex = 63;
+            this.kbtnWriteToFile.Values.Text = "Write &Colours to File";
+            this.kbtnWriteToFile.Click += new System.EventHandler(this.KbtnWriteToFile_Click);
+            // 
             // ColourMixerAdvanced
             // 
             this.ClientSize = new System.Drawing.Size(851, 704);
@@ -403,6 +424,8 @@ namespace PaletteExplorer.UX.Colour
         #endregion
 
         #region Variables
+        BasicColourSettingsManager _basicColourSettingsManager = new BasicColourSettingsManager();
+
         ColourIntensitySettingsManager _colourIntensitySettings = new ColourIntensitySettingsManager();
 
         ToolTip toolTip = new ToolTip();
@@ -495,6 +518,43 @@ namespace PaletteExplorer.UX.Colour
         private void CbxLightestColour_MouseEnter(object sender, EventArgs e)
         {
             UserInterfaceManager.DisplayToolTipInformation(cbxLightestColour, cbxLightestColour.BackColor, "Lightest", true);
+        }
+
+        private void KbtnOk_Click(object sender, EventArgs e)
+        {
+            _basicColourSettingsManager.SetBaseColour(cbxBaseColour.BackColor);
+
+            _basicColourSettingsManager.SetDarkColour(cbxDarkColour.BackColor);
+
+            _basicColourSettingsManager.SetMediumColour(cbxMediumColour.BackColor);
+
+            _basicColourSettingsManager.SetLightColour(cbxLightColour.BackColor);
+
+            _basicColourSettingsManager.SetLightestColour(cbxLightestColour.BackColor);
+
+            _basicColourSettingsManager.SaveBasicColourSettings();
+
+            kbtnWriteToFile.Enabled = true;
+        }
+
+        private void KbtnWriteToFile_Click(object sender, EventArgs e)
+        {
+            CommonSaveFileDialog csfd = new CommonSaveFileDialog();
+
+            csfd.Title = "Save Colours To:";
+
+            csfd.Filters.Add(new CommonFileDialogFilter("Colour Configuration File", ".ccf"));
+
+            csfd.Filters.Add(new CommonFileDialogFilter("Normal Text File", ".txt"));
+
+            csfd.DefaultFileName = $"Basic Colour Configuration File - { TranslationMethods.ReturnSafeFileNameDateTimeString() }";
+
+            if (csfd.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                BasicColourSettingsManager.WriteColoursToFile(csfd.FileName);
+
+                kbtnWriteToFile.Enabled = false;
+            }
         }
     }
 }

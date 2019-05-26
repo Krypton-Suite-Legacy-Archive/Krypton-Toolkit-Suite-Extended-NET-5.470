@@ -58,13 +58,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security.FileHashing
 
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HashFile));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kcbShowLength = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kbtnGenerateFileHash = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.klblResult = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.ctxResult = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ctxResult = new System.Windows.Forms.ContextMenuStrip();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kcbxHashAlgorithimType = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();

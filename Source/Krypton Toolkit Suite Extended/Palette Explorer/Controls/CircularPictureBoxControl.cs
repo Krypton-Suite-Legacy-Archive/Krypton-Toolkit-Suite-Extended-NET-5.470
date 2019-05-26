@@ -3623,15 +3623,15 @@ namespace PaletteExplorer.Controls
         private void GenerateAllColours()
         {
             #region Basic Colours
-            GetBaseColourPreview().BackColor = ColourHelpers.GenerateRandomColour();
+            GetBaseColourPreview().BackColor = RandomisePaletteColours.ReturnBaseColour();
 
-            GetDarkColourPreview().BackColor = ColourHelpers.GenerateRandomColour();
+            GetDarkColourPreview().BackColor = RandomisePaletteColours.ReturnDarkColour();
 
-            GetMiddleColourPreview().BackColor = ColourHelpers.GenerateRandomColour();
+            GetMiddleColourPreview().BackColor = RandomisePaletteColours.ReturnMiddleColour();
 
-            GetLightColourPreview().BackColor = ColourHelpers.GenerateRandomColour();
+            GetLightColourPreview().BackColor = RandomisePaletteColours.ReturnLightColour();
 
-            GetLightestColourPreview().BackColor = ColourHelpers.GenerateRandomColour();
+            GetLightestColourPreview().BackColor = RandomisePaletteColours.ReturnLightestColour();
             #endregion
         }
         #endregion
