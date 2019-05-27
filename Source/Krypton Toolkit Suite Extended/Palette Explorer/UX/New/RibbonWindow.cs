@@ -323,7 +323,6 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
-            this.krControls.SelectedContext = null;
             this.krControls.SelectedTab = this.kryptonRibbonTab2;
             this.krControls.Size = new System.Drawing.Size(1662, 115);
             this.krControls.TabIndex = 2;
@@ -672,7 +671,7 @@ namespace PaletteExplorer.UX.New
             this.toolStripSeparator1,
             this.resetColoursToolStripMenuItem});
             this.ctxReset.Name = "ctxReset";
-            this.ctxReset.Size = new System.Drawing.Size(187, 104);
+            this.ctxReset.Size = new System.Drawing.Size(187, 82);
             // 
             // resetColourUIToolStripMenuItem
             // 
@@ -712,13 +711,13 @@ namespace PaletteExplorer.UX.New
             // cpResetColour
             // 
             this.cpResetColour.Office2007ColourPickerControl.AccessibleName = "cpResetColour";
-            this.cpResetColour.Office2007ColourPickerControl.SelectedColour = System.Drawing.Color.Black;
             this.cpResetColour.Office2007ColourPickerControl.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cpResetColour.Office2007ColourPickerControl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cpResetColour.Office2007ColourPickerControl.Items.AddRange(new object[] {
             "Color"});
             this.cpResetColour.Office2007ColourPickerControl.Location = new System.Drawing.Point(33, 3);
             this.cpResetColour.Office2007ColourPickerControl.Name = "office2007ColorPickerToolStripMenuItem1";
+            this.cpResetColour.Office2007ColourPickerControl.SelectedColour = System.Drawing.Color.Black;
             this.cpResetColour.Office2007ColourPickerControl.Size = new System.Drawing.Size(121, 24);
             this.cpResetColour.Office2007ColourPickerControl.TabIndex = 2;
             this.cpResetColour.Office2007ColourPickerControl.SelectedColourChanged += new System.EventHandler(this.Office2007ColorPickerToolStripMenuItem1_Office2007ColourPickerControl_SelectedColourChanged);
@@ -986,6 +985,7 @@ namespace PaletteExplorer.UX.New
             this.kdnContentDisplay.Size = new System.Drawing.Size(1662, 717);
             this.kdnContentDisplay.TabIndex = 0;
             this.kdnContentDisplay.Text = "kryptonDockableNavigator1";
+            this.kdnContentDisplay.TabMoved += new System.EventHandler<ComponentFactory.Krypton.Navigator.TabMovedEventArgs>(this.KdnContentDisplay_TabMoved);
             this.kdnContentDisplay.TabIndexChanged += new System.EventHandler(this.KdnContentDisplay_TabIndexChanged);
             // 
             // kryptonPage1
@@ -1302,6 +1302,11 @@ namespace PaletteExplorer.UX.New
         private void Office2007ColorPickerToolStripMenuItem1_Office2007ColourPickerControl_SelectedColourChanged(object sender, EventArgs e)
         {
             cpbcPreview.ResetPaletteColours(cpResetColour.Office2007ColourPickerControl.SelectedColour);
+        }
+
+        private void KdnContentDisplay_TabMoved(object sender, TabMovedEventArgs e)
+        {
+
         }
     }
 }

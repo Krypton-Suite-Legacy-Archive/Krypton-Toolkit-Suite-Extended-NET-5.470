@@ -2085,27 +2085,27 @@ namespace PaletteExplorer.Controls
 
         private void CbxDisabledTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetDisabledTextColourPreview(), GetDisabledTextColourPreview().BackColor, "Disabled Text", true);
         }
 
         private void CbxFocusedTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetFocusedTextColourPreview(), GetFocusedTextColourPreview().BackColor, "Focused Text", true);
         }
 
         private void CbxPressedTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetPressedTextColourPreview(), GetPressedTextColourPreview().BackColor, "Pressed Text", true);
         }
 
         private void CbxDisabledControlColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetDisabledControlColourPreview(), GetDisabledControlColourPreview().BackColor, "Disabled Control", true);
         }
 
         private void CbxLinkDisabledColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkDisabedColourPreview(), GetLinkDisabedColourPreview().BackColor, "Link Disabled", true);
         }
 
         private void CbxLinkNormalColourPreview_MouseEnter(object sender, EventArgs e)
