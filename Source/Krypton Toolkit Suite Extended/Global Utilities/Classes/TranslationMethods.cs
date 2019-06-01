@@ -9,6 +9,7 @@
 
 using System;
 using System.Drawing;
+using System.Text.RegularExpressions;
 
 namespace Core.Classes
 {
@@ -173,10 +174,19 @@ namespace Core.Classes
         /// <summary>
         /// Returns the safe file name date time string.
         /// </summary>
+        /// <param name="format">The format.
+        /// Syntax:-
+        /// dd - The current day of week.
+        /// MM - The current Month.
+        /// yy or yyyy - The current year.
+        /// HH - The current hour.
+        /// mm - The current minute.
+        /// tt - Only use this for a 12-hour clock (AM/PM).
+        /// </param>
         /// <returns></returns>
-        public static string ReturnSafeFileNameDateTimeString()
+        public static string ReturnSafeFileNameDateTimeString(string format = "dd-MM-yyyy HH-mm-ss-tt")
         {
-            return $"{ DateTime.Now.Day.ToString() }-{ DateTime.Now.Month.ToString() }-{ DateTime.Now.Year.ToString() } { DateTime.Now.Hour.ToString() }-{ DateTime.Now.Minute.ToString() }-{ DateTime.Now.Second.ToString() }";
+            return $"{ DateTime.Now.ToString(format) }";
         }
 
         /// <summary>
@@ -197,6 +207,57 @@ namespace Core.Classes
         public static string ColourARGBToString(Color colour)
         {
             return colour.ToArgb().ToString();
+        }
+
+        /// <summary>
+        /// RGBs the colour to string.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
+        public static string RGBColourToString(Color colour)
+        {
+            return $"{ Convert.ToString(colour.R) },{ Convert.ToString(colour.G) },{ Convert.ToString(colour.B) }";
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="inputColour"></param>
+        /// <returns></returns>
+        public static Color RGBStringToColour(string inputColour)
+        {
+            string[] rgbString = inputColour.Split(',');
+
+            int[] rgbValues = new int[3];
+
+            rgbValues = Array.ConvertAll<string, int>(rgbString, int.Parse);
+
+            return Color.FromArgb(rgbValues[0], rgbValues[1], rgbValues[2]);
+        }
+
+        /// <summary>
+        /// Determines whether the specified input is hexadecimal.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <returns>
+        ///   <c>true</c> if the specified input is hexadecimal; otherwise, <c>false</c>.
+        /// </returns>
+        public static bool IsHexadecimal(string input)
+        {
+            Regex validCharacters = new Regex("^[a-fA-F0-9]+$");
+
+            bool isValid = false;
+
+            if (string.IsNullOrEmpty(input))
+            {
+                isValid = false;
+            }
+            else
+            {
+                isValid = validCharacters.IsMatch(input);
+            }
+
+            return isValid;
         }
         #endregion
     }

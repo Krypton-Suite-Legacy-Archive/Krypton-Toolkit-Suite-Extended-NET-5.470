@@ -10,9 +10,9 @@
 using ComponentFactory.Krypton.Docking;
 using ComponentFactory.Krypton.Navigator;
 using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using PaletteExplorer.Controls;
 using PaletteExplorer.UX.Colour;
+using PaletteExplorer.UX.Debugging;
 using System;
 using System.Reflection;
 using System.Windows.Forms;
@@ -150,6 +150,10 @@ namespace PaletteExplorer.UX.New
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem resetColoursToolStripMenuItem;
         private ExtendedControls.ExtendedToolkit.Controls.Drawing.Controls.Office2007ColorPickerToolStripMenuItem cpResetColour;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbColourDebugConsole;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple6;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbColourContrastTool;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator17;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbCheckForUpdates;
 
         private void InitializeComponent()
@@ -207,6 +211,9 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonGroupTriple7 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbGetColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator5 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
+            this.kryptonRibbonGroupTriple6 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.krgbColourContrastTool = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupSeparator17 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple8 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbBasicColourMixer = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupTriple4 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
@@ -261,6 +268,7 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonGroupTriple18 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbOptions = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.krgbExpertMode = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.krgbColourDebugConsole = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonTab4 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup7 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple21 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
@@ -323,6 +331,7 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
+            this.krControls.SelectedContext = null;
             this.krControls.SelectedTab = this.kryptonRibbonTab2;
             this.krControls.Size = new System.Drawing.Size(1662, 115);
             this.krControls.TabIndex = 2;
@@ -519,6 +528,8 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonGroupSeparator4,
             this.kryptonRibbonGroupTriple7,
             this.kryptonRibbonGroupSeparator5,
+            this.kryptonRibbonGroupTriple6,
+            this.kryptonRibbonGroupSeparator17,
             this.kryptonRibbonGroupTriple8,
             this.kryptonRibbonGroupTriple4,
             this.kryptonRibbonGroupSeparator6,
@@ -578,6 +589,19 @@ namespace PaletteExplorer.UX.New
             this.krgbGetColours.TextLine1 = "Get";
             this.krgbGetColours.TextLine2 = "Colours";
             this.krgbGetColours.Click += new System.EventHandler(this.KrgbGetColours_Click);
+            // 
+            // kryptonRibbonGroupTriple6
+            // 
+            this.kryptonRibbonGroupTriple6.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.krgbColourContrastTool});
+            // 
+            // krgbColourContrastTool
+            // 
+            this.krgbColourContrastTool.ImageLarge = global::PaletteExplorer.Properties.Resources.Colour_Contrast_32_x_32;
+            this.krgbColourContrastTool.ImageSmall = global::PaletteExplorer.Properties.Resources.Colour_Contrast_16_x_16;
+            this.krgbColourContrastTool.TextLine1 = "Colour";
+            this.krgbColourContrastTool.TextLine2 = "Contrast Tool";
+            this.krgbColourContrastTool.Click += new System.EventHandler(this.KrgbColourContrastTool_Click);
             // 
             // kryptonRibbonGroupTriple8
             // 
@@ -863,7 +887,8 @@ namespace PaletteExplorer.UX.New
             // 
             this.kryptonRibbonGroupTriple18.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
             this.krgbOptions,
-            this.krgbExpertMode});
+            this.krgbExpertMode,
+            this.krgbColourDebugConsole});
             // 
             // krgbOptions
             // 
@@ -876,6 +901,12 @@ namespace PaletteExplorer.UX.New
             this.krgbExpertMode.TextLine1 = "Expert";
             this.krgbExpertMode.TextLine2 = "Mode";
             this.krgbExpertMode.Click += new System.EventHandler(this.krgbExpertMode_Click);
+            // 
+            // krgbColourDebugConsole
+            // 
+            this.krgbColourDebugConsole.TextLine1 = "Colour Debug";
+            this.krgbColourDebugConsole.TextLine2 = "Console";
+            this.krgbColourDebugConsole.Click += new System.EventHandler(this.KrgbColourDebugConsole_Click);
             // 
             // kryptonRibbonTab4
             // 
@@ -1307,6 +1338,20 @@ namespace PaletteExplorer.UX.New
         private void KdnContentDisplay_TabMoved(object sender, TabMovedEventArgs e)
         {
 
+        }
+
+        private void KrgbColourDebugConsole_Click(object sender, EventArgs e)
+        {
+            ColourDebugConsole debugConsole = new ColourDebugConsole();
+
+            debugConsole.Show();
+        }
+
+        private void KrgbColourContrastTool_Click(object sender, EventArgs e)
+        {
+            ColourContrastTool colourContrastTool = new ColourContrastTool();
+
+            colourContrastTool.Show();
         }
     }
 }

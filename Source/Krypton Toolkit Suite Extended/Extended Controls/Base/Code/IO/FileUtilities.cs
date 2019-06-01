@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System.Collections.Generic;
+using System.IO;
 using System.Runtime.InteropServices;
 
 namespace ExtendedControls.Base.Code.IO
@@ -118,6 +120,34 @@ namespace ExtendedControls.Base.Code.IO
         static extern uint GetCompressedFileSizeW(
            [In, MarshalAs(UnmanagedType.LPWStr)] string lpFileName,
            [Out, MarshalAs(UnmanagedType.U4)] out uint lpFileSizeHigh);
+
+        /// <summary>
+        /// Imports the content from file.
+        /// </summary>
+        /// <param name="filePath">The file path.</param>
+        /// <param name="listBox">The list box.</param>
+        public static void ImportContentFromFile(string filePath, KryptonListBox listBox)
+        {
+            List<string> fileData = new List<string>();
+
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                string line;
+
+                while ((line = reader.ReadLine()) != null)
+                {
+                    fileData.Add(line);
+                }
+            }
+
+            if (fileData.Count != 0)
+            {
+                foreach (string item in fileData)
+                {
+                    listBox.Items.Add(item);
+                }
+            }
+        }
         #endregion
     }
 }

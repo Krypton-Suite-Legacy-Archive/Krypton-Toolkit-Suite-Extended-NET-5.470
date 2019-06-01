@@ -47,6 +47,9 @@ namespace PaletteExplorer.UX.Colour
         private KryptonNumericUpDown knudBlueChannelValue;
         private KryptonNumericUpDown knudGreenChannelValue;
         private KryptonNumericUpDown knudRedChannelValue;
+        private KryptonLabel kryptonLabel6;
+        private KryptonTextBox ktxtHexValue;
+        private KryptonLabel klblHexValue;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
@@ -58,26 +61,29 @@ namespace PaletteExplorer.UX.Colour
             this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.knudBlueChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knudGreenChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.knudRedChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.cbxLightestColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLightColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxMediumColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxDarkColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxBaseColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.knumAlpaValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cbxLightestColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxLightColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxMediumColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxDarkColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxBaseColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.cwSelectedColour = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.ColourWheel();
-            this.knudRedChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.knudGreenChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.knudBlueChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.ktxtHexValue = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.klblHexValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -106,7 +112,7 @@ namespace PaletteExplorer.UX.Colour
             this.kbtnWriteToFile.AutoSize = true;
             this.kbtnWriteToFile.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.kbtnWriteToFile.Enabled = false;
-            this.kbtnWriteToFile.Location = new System.Drawing.Point(463, 15);
+            this.kbtnWriteToFile.Location = new System.Drawing.Point(215, 15);
             this.kbtnWriteToFile.Name = "kbtnWriteToFile";
             this.kbtnWriteToFile.Size = new System.Drawing.Size(160, 30);
             this.kbtnWriteToFile.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,6 +130,7 @@ namespace PaletteExplorer.UX.Colour
             this.kbtnGenerateARGB.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnGenerateARGB.TabIndex = 62;
             this.kbtnGenerateARGB.Values.Text = "Gener&ate Random ARGB Colour";
+            this.kbtnGenerateARGB.Visible = false;
             this.kbtnGenerateARGB.Click += new System.EventHandler(this.KbtnGenerateARGB_Click);
             // 
             // kbtnGenerate
@@ -153,7 +160,10 @@ namespace PaletteExplorer.UX.Colour
             // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.kryptonLabel6);
             this.kryptonPanel2.Controls.Add(this.knudBlueChannelValue);
+            this.kryptonPanel2.Controls.Add(this.ktxtHexValue);
+            this.kryptonPanel2.Controls.Add(this.klblHexValue);
             this.kryptonPanel2.Controls.Add(this.knudGreenChannelValue);
             this.kryptonPanel2.Controls.Add(this.knudRedChannelValue);
             this.kryptonPanel2.Controls.Add(this.kryptonLabel10);
@@ -177,6 +187,54 @@ namespace PaletteExplorer.UX.Colour
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.Size = new System.Drawing.Size(851, 639);
             this.kryptonPanel2.TabIndex = 1;
+            // 
+            // knudBlueChannelValue
+            // 
+            this.knudBlueChannelValue.DecimalPlaces = 99;
+            this.knudBlueChannelValue.Location = new System.Drawing.Point(98, 581);
+            this.knudBlueChannelValue.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.knudBlueChannelValue.Name = "knudBlueChannelValue";
+            this.knudBlueChannelValue.Size = new System.Drawing.Size(120, 32);
+            this.knudBlueChannelValue.StateCommon.Content.Color1 = System.Drawing.Color.Blue;
+            this.knudBlueChannelValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knudBlueChannelValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.knudBlueChannelValue.TabIndex = 26;
+            // 
+            // knudGreenChannelValue
+            // 
+            this.knudGreenChannelValue.DecimalPlaces = 99;
+            this.knudGreenChannelValue.Location = new System.Drawing.Point(98, 519);
+            this.knudGreenChannelValue.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.knudGreenChannelValue.Name = "knudGreenChannelValue";
+            this.knudGreenChannelValue.Size = new System.Drawing.Size(120, 32);
+            this.knudGreenChannelValue.StateCommon.Content.Color1 = System.Drawing.Color.Green;
+            this.knudGreenChannelValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knudGreenChannelValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.knudGreenChannelValue.TabIndex = 25;
+            // 
+            // knudRedChannelValue
+            // 
+            this.knudRedChannelValue.DecimalPlaces = 99;
+            this.knudRedChannelValue.Location = new System.Drawing.Point(98, 457);
+            this.knudRedChannelValue.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.knudRedChannelValue.Name = "knudRedChannelValue";
+            this.knudRedChannelValue.Size = new System.Drawing.Size(120, 32);
+            this.knudRedChannelValue.StateCommon.Content.Color1 = System.Drawing.Color.Red;
+            this.knudRedChannelValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knudRedChannelValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.knudRedChannelValue.TabIndex = 24;
             // 
             // kryptonLabel10
             // 
@@ -217,81 +275,6 @@ namespace PaletteExplorer.UX.Colour
             this.kryptonLabel7.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel7.TabIndex = 17;
             this.kryptonLabel7.Values.Text = "Medium Colour:";
-            // 
-            // kryptonLabel5
-            // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(546, 508);
-            this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(175, 33);
-            this.kryptonLabel5.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel5.TabIndex = 9;
-            this.kryptonLabel5.Values.Text = "Lightest Colour:";
-            // 
-            // kryptonLabel4
-            // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(546, 390);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(145, 33);
-            this.kryptonLabel4.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel4.TabIndex = 8;
-            this.kryptonLabel4.Values.Text = "Light Colour:";
-            // 
-            // kryptonLabel3
-            // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(546, 36);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(140, 33);
-            this.kryptonLabel3.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel3.TabIndex = 7;
-            this.kryptonLabel3.Values.Text = "Base Colour:";
-            // 
-            // kryptonLabel2
-            // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(546, 154);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(141, 33);
-            this.kryptonLabel2.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel2.TabIndex = 6;
-            this.kryptonLabel2.Values.Text = "Dark Colour:";
-            // 
-            // knumAlpaValue
-            // 
-            this.knumAlpaValue.DecimalPlaces = 99;
-            this.knumAlpaValue.Location = new System.Drawing.Point(98, 390);
-            this.knumAlpaValue.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.knumAlpaValue.Name = "knumAlpaValue";
-            this.knumAlpaValue.Size = new System.Drawing.Size(120, 32);
-            this.knumAlpaValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.knumAlpaValue.TabIndex = 5;
-            this.knumAlpaValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.knumAlpaValue.ValueChanged += new System.EventHandler(this.KnumAlpaValue_ValueChanged);
-            // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(12, 387);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(79, 33);
-            this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.TabIndex = 4;
-            this.kryptonLabel1.Values.Text = "Alpha:";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 637);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(851, 2);
-            this.panel1.TabIndex = 2;
             // 
             // cbxLightestColour
             // 
@@ -348,6 +331,72 @@ namespace PaletteExplorer.UX.Colour
             this.cbxBaseColour.TabStop = false;
             this.cbxBaseColour.MouseEnter += new System.EventHandler(this.CbxBaseColour_MouseEnter);
             // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(546, 508);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(175, 33);
+            this.kryptonLabel5.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel5.TabIndex = 9;
+            this.kryptonLabel5.Values.Text = "Lightest Colour:";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(546, 390);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(145, 33);
+            this.kryptonLabel4.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel4.TabIndex = 8;
+            this.kryptonLabel4.Values.Text = "Light Colour:";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(546, 36);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(140, 33);
+            this.kryptonLabel3.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel3.TabIndex = 7;
+            this.kryptonLabel3.Values.Text = "Base Colour:";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(546, 154);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(141, 33);
+            this.kryptonLabel2.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel2.TabIndex = 6;
+            this.kryptonLabel2.Values.Text = "Dark Colour:";
+            // 
+            // knumAlpaValue
+            // 
+            this.knumAlpaValue.DecimalPlaces = 99;
+            this.knumAlpaValue.Location = new System.Drawing.Point(98, 390);
+            this.knumAlpaValue.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.knumAlpaValue.Name = "knumAlpaValue";
+            this.knumAlpaValue.Size = new System.Drawing.Size(120, 32);
+            this.knumAlpaValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumAlpaValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.knumAlpaValue.TabIndex = 5;
+            this.knumAlpaValue.ValueChanged += new System.EventHandler(this.KnumAlpaValue_ValueChanged);
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(12, 387);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(79, 33);
+            this.kryptonLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.TabIndex = 4;
+            this.kryptonLabel1.Values.Text = "Alpha:";
+            // 
             // cwSelectedColour
             // 
             this.cwSelectedColour.BackColor = System.Drawing.Color.Transparent;
@@ -357,53 +406,46 @@ namespace PaletteExplorer.UX.Colour
             this.cwSelectedColour.TabIndex = 3;
             this.cwSelectedColour.ColourChanged += new System.EventHandler(this.CwSelectedColour_ColourChanged);
             // 
-            // knudRedChannelValue
+            // panel1
             // 
-            this.knudRedChannelValue.DecimalPlaces = 99;
-            this.knudRedChannelValue.Location = new System.Drawing.Point(98, 457);
-            this.knudRedChannelValue.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.knudRedChannelValue.Name = "knudRedChannelValue";
-            this.knudRedChannelValue.Size = new System.Drawing.Size(120, 32);
-            this.knudRedChannelValue.StateCommon.Content.Color1 = System.Drawing.Color.Red;
-            this.knudRedChannelValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.knudRedChannelValue.TabIndex = 24;
-            this.knudRedChannelValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 637);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(851, 2);
+            this.panel1.TabIndex = 2;
             // 
-            // knudGreenChannelValue
+            // kryptonLabel6
             // 
-            this.knudGreenChannelValue.DecimalPlaces = 99;
-            this.knudGreenChannelValue.Location = new System.Drawing.Point(98, 519);
-            this.knudGreenChannelValue.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.knudGreenChannelValue.Name = "knudGreenChannelValue";
-            this.knudGreenChannelValue.Size = new System.Drawing.Size(120, 32);
-            this.knudGreenChannelValue.StateCommon.Content.Color1 = System.Drawing.Color.Green;
-            this.knudGreenChannelValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.knudGreenChannelValue.TabIndex = 25;
-            this.knudGreenChannelValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.kryptonLabel6.Location = new System.Drawing.Point(649, 589);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(26, 33);
+            this.kryptonLabel6.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel6.TabIndex = 49;
+            this.kryptonLabel6.Values.Text = "#";
             // 
-            // knudBlueChannelValue
+            // ktxtHexValue
             // 
-            this.knudBlueChannelValue.DecimalPlaces = 99;
-            this.knudBlueChannelValue.Location = new System.Drawing.Point(98, 581);
-            this.knudBlueChannelValue.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.knudBlueChannelValue.Name = "knudBlueChannelValue";
-            this.knudBlueChannelValue.Size = new System.Drawing.Size(120, 32);
-            this.knudBlueChannelValue.StateCommon.Content.Color1 = System.Drawing.Color.Blue;
-            this.knudBlueChannelValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.knudBlueChannelValue.TabIndex = 26;
-            this.knudBlueChannelValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ktxtHexValue.Hint = "FFFFFF";
+            this.ktxtHexValue.Location = new System.Drawing.Point(681, 593);
+            this.ktxtHexValue.MaxLength = 6;
+            this.ktxtHexValue.Name = "ktxtHexValue";
+            this.ktxtHexValue.Size = new System.Drawing.Size(158, 29);
+            this.ktxtHexValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktxtHexValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
+            this.ktxtHexValue.TabIndex = 48;
+            this.ktxtHexValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // klblHexValue
+            // 
+            this.klblHexValue.Location = new System.Drawing.Point(583, 589);
+            this.klblHexValue.Name = "klblHexValue";
+            this.klblHexValue.Size = new System.Drawing.Size(60, 33);
+            this.klblHexValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHexValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHexValue.TabIndex = 47;
+            this.klblHexValue.Values.Text = "Hex:";
             // 
             // ColourMixerAdvanced
             // 
@@ -559,9 +601,13 @@ namespace PaletteExplorer.UX.Colour
 
             csfd.DefaultFileName = $"Basic Colour Configuration File - { TranslationMethods.ReturnSafeFileNameDateTimeString() }";
 
+            csfd.AlwaysAppendDefaultExtension = true;
+
+            csfd.DefaultExtension = "ccf";
+
             if (csfd.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                BasicColourSettingsManager.WriteColoursToFile(csfd.FileName);
+                BasicColourSettingsManager.WriteRGBColoursToFile(csfd.FileName);
 
                 kbtnWriteToFile.Enabled = false;
             }

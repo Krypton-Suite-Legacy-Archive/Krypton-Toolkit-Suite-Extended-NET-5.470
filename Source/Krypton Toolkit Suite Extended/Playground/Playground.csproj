@@ -7,7 +7,7 @@
     <ProjectGuid>{E10C5153-0007-4DD3-930D-9D3117DB7C44}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Playground</RootNamespace>
-    <AssemblyName>Playground</AssemblyName>
+    <AssemblyName>Demos</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -255,17 +255,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Application Updater\Application Updater.csproj">
-      <Project>{bcc482fd-377f-4918-b91a-09444ac90a8e}</Project>
-      <Name>Application Updater</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Extended Controls\Extended Controls.csproj">
       <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
       <Name>Extended Controls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Extended File Dialogs\Extended File Dialogs.csproj">
-      <Project>{D4644D8A-1C7A-43B6-8461-AB0B56FD6463}</Project>
-      <Name>Extended File Dialogs</Name>
     </ProjectReference>
     <ProjectReference Include="..\Krypton Outlook Grid\Krypton Outlook Grid.csproj">
       <Project>{2A10C696-45AD-48AA-8EAD-2CB322672972}</Project>
@@ -303,7 +295,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.1103</Version>
+      <Version>5.470.1204</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>

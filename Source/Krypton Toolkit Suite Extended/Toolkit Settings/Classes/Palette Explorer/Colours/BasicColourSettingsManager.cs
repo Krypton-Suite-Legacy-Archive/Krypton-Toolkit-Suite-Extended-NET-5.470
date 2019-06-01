@@ -260,10 +260,10 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         }
 
         /// <summary>
-        /// Writes the colours to file.
+        /// Writes the ARGB colours to file.
         /// </summary>
         /// <param name="colourFileName">Name of the colour file.</param>
-        public static void WriteColoursToFile(string colourFileName)
+        public static void WriteARGBColoursToFile(string colourFileName)
         {
             BasicColourSettingsManager manager = new BasicColourSettingsManager();
 
@@ -278,6 +278,27 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
             writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLightColour()));
 
             writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLightestColour()));
+
+            writer.Flush();
+
+            writer.Close();
+
+            writer.Dispose();
+        }
+
+        public static void WriteRGBColoursToFile(string colourFilePath)
+        {
+            BasicColourSettingsManager manager = new BasicColourSettingsManager();
+
+            StreamWriter writer = new StreamWriter(colourFilePath);
+
+            writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetBaseColour()));
+
+            writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetDarkColour()));
+
+            writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetLightColour()));
+
+            writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetLightestColour()));
 
             writer.Flush();
 

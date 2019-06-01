@@ -9,6 +9,7 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using ToolkitSettings.Settings.PaletteExplorer.Colours;
 
@@ -277,6 +278,13 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
 
                 SetSettingsModified(false);
             }
+        }
+
+        public static void WriteARGBColoursToFile(string colourFilePath)
+        {
+            CustomColourSettingsManager manager = new CustomColourSettingsManager();
+
+            StreamWriter writer = new StreamWriter(colourFilePath);
         }
         #endregion
 

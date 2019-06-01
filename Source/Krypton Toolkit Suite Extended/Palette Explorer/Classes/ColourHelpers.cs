@@ -563,6 +563,20 @@ namespace PaletteExplorer.Classes
         {
             return $"#{ colour.R.ToString("X2") }{ colour.G.ToString("X2") }{ colour.B.ToString("X2") }";
         }
+
+        public static string ColourToHexadecimal(this Color colour) => $"{colour.R:X2}{colour.G:X2}{colour.B:X2}";
+
+        public static Color ColourFromHexadecimal(string hexadecimalCode)
+        {
+            return ColorTranslator.FromHtml($"#{ hexadecimalCode }");
+        }
+
+        public static Color SetColourAlphaValue(Color colour, int alphaValue = 255)
+        {
+            int r = colour.R, g = colour.G, b = colour.B;
+
+            return Color.FromArgb(alphaValue, r, g, b);
+        }
         #endregion
     }
 }

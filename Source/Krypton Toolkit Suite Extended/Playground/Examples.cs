@@ -11,7 +11,6 @@ using ComponentFactory.Krypton.Toolkit;
 using Core.UX;
 using Core.UX.Colours;
 using Core.UX.Options;
-using ExtendedControls.Base.Code.Windows;
 using ExtendedControls.ExtendedToolkit.Controls;
 using ExtendedControls.ExtendedToolkit.Controls.Drawing.UI;
 using ExtendedControls.ExtendedToolkit.Controls.KryptonControls;
@@ -22,9 +21,7 @@ using ExtendedControls.ExtendedToolkit.UI.GraphicsTools;
 using ExtendedControls.ExtendedToolkit.UI.Security;
 using ExtendedControls.ExtendedToolkit.UI.Security.FileHashing;
 using ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal;
-using ExtendedControls.ExtendedToolkit.UI.SystemBrowser;
 using ExtendedControls.ExtendedToolkit.UI.Theming;
-using ExtendedFileDialogs.UI.SystemBrowser;
 using Playground.Properties;
 using System;
 using System.Drawing;
@@ -40,8 +37,6 @@ namespace Playground
         private KryptonButton kbtnListView;
         private KryptonButton kbtnPropertyGrid;
         private KryptonButton kbtnMessageboxTest2;
-        private KryptonButton kbtnFileExplorer;
-        private KryptonButton kbtnFileBrowser;
         private KryptonButton kbtnAdobeColourDialog;
         private KryptonButton kbtnColourWheel;
         private KryptonButton kbtnMoreControls;
@@ -78,7 +73,6 @@ namespace Playground
         private KryptonButton kbtnVarifyHash;
         private KryptonButton kbtnFileInformation;
         private KryptonButton kbtnUAC;
-        private KryptonButton kbtnUACElevationAdvanced;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
@@ -104,8 +98,6 @@ namespace Playground
             this.kbtnListView = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnPropertyGrid = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnMessageboxTest2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnFileExplorer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnFileBrowser = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnAdobeColourDialog = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnColourWheel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnMoreControls = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -126,14 +118,12 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnUACElevationAdvanced = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.kbtnUACElevationAdvanced);
             this.kryptonPanel1.Controls.Add(this.kbtnUAC);
             this.kryptonPanel1.Controls.Add(this.kbtnFileInformation);
             this.kryptonPanel1.Controls.Add(this.kbtnVarifyHash);
@@ -153,8 +143,6 @@ namespace Playground
             this.kryptonPanel1.Controls.Add(this.kbtnListView);
             this.kryptonPanel1.Controls.Add(this.kbtnPropertyGrid);
             this.kryptonPanel1.Controls.Add(this.kbtnMessageboxTest2);
-            this.kryptonPanel1.Controls.Add(this.kbtnFileExplorer);
-            this.kryptonPanel1.Controls.Add(this.kbtnFileBrowser);
             this.kryptonPanel1.Controls.Add(this.kbtnAdobeColourDialog);
             this.kryptonPanel1.Controls.Add(this.kbtnColourWheel);
             this.kryptonPanel1.Controls.Add(this.kbtnMoreControls);
@@ -183,7 +171,7 @@ namespace Playground
             // 
             // kbtnUAC
             // 
-            this.kbtnUAC.Location = new System.Drawing.Point(12, 408);
+            this.kbtnUAC.Location = new System.Drawing.Point(497, 326);
             this.kbtnUAC.Name = "kbtnUAC";
             this.kbtnUAC.Size = new System.Drawing.Size(218, 25);
             this.kbtnUAC.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -193,7 +181,7 @@ namespace Playground
             // 
             // kbtnFileInformation
             // 
-            this.kbtnFileInformation.Location = new System.Drawing.Point(737, 368);
+            this.kbtnFileInformation.Location = new System.Drawing.Point(498, 368);
             this.kbtnFileInformation.Name = "kbtnFileInformation";
             this.kbtnFileInformation.Size = new System.Drawing.Size(218, 25);
             this.kbtnFileInformation.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,7 +191,7 @@ namespace Playground
             // 
             // kbtnVarifyHash
             // 
-            this.kbtnVarifyHash.Location = new System.Drawing.Point(497, 368);
+            this.kbtnVarifyHash.Location = new System.Drawing.Point(498, 290);
             this.kbtnVarifyHash.Name = "kbtnVarifyHash";
             this.kbtnVarifyHash.Size = new System.Drawing.Size(218, 25);
             this.kbtnVarifyHash.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -243,7 +231,7 @@ namespace Playground
             // 
             // kbtnCircularPictureBox
             // 
-            this.kbtnCircularPictureBox.Location = new System.Drawing.Point(497, 326);
+            this.kbtnCircularPictureBox.Location = new System.Drawing.Point(498, 248);
             this.kbtnCircularPictureBox.Name = "kbtnCircularPictureBox";
             this.kbtnCircularPictureBox.Size = new System.Drawing.Size(218, 25);
             this.kbtnCircularPictureBox.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -343,7 +331,7 @@ namespace Playground
             // 
             // kbtnPropertyGrid
             // 
-            this.kbtnPropertyGrid.Location = new System.Drawing.Point(496, 285);
+            this.kbtnPropertyGrid.Location = new System.Drawing.Point(497, 207);
             this.kbtnPropertyGrid.Name = "kbtnPropertyGrid";
             this.kbtnPropertyGrid.Size = new System.Drawing.Size(218, 25);
             this.kbtnPropertyGrid.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -353,31 +341,13 @@ namespace Playground
             // 
             // kbtnMessageboxTest2
             // 
-            this.kbtnMessageboxTest2.Location = new System.Drawing.Point(496, 246);
+            this.kbtnMessageboxTest2.Location = new System.Drawing.Point(497, 168);
             this.kbtnMessageboxTest2.Name = "kbtnMessageboxTest2";
             this.kbtnMessageboxTest2.Size = new System.Drawing.Size(218, 25);
             this.kbtnMessageboxTest2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnMessageboxTest2.TabIndex = 73;
             this.kbtnMessageboxTest2.Values.Text = "Messagebox Test 2";
             this.kbtnMessageboxTest2.Click += new System.EventHandler(this.kbtnMessageboxTest2_Click);
-            // 
-            // kbtnFileExplorer
-            // 
-            this.kbtnFileExplorer.Location = new System.Drawing.Point(496, 207);
-            this.kbtnFileExplorer.Name = "kbtnFileExplorer";
-            this.kbtnFileExplorer.Size = new System.Drawing.Size(218, 25);
-            this.kbtnFileExplorer.TabIndex = 72;
-            this.kbtnFileExplorer.Values.Text = "File Explorer";
-            this.kbtnFileExplorer.Click += new System.EventHandler(this.kbtnFileExplorer_Click);
-            // 
-            // kbtnFileBrowser
-            // 
-            this.kbtnFileBrowser.Location = new System.Drawing.Point(496, 168);
-            this.kbtnFileBrowser.Name = "kbtnFileBrowser";
-            this.kbtnFileBrowser.Size = new System.Drawing.Size(218, 25);
-            this.kbtnFileBrowser.TabIndex = 71;
-            this.kbtnFileBrowser.Values.Text = "File Browser";
-            this.kbtnFileBrowser.Click += new System.EventHandler(this.kbtnFileBrowser_Click);
             // 
             // kbtnAdobeColourDialog
             // 
@@ -560,16 +530,6 @@ namespace Playground
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
-            // kbtnUACElevationAdvanced
-            // 
-            this.kbtnUACElevationAdvanced.Location = new System.Drawing.Point(255, 408);
-            this.kbtnUACElevationAdvanced.Name = "kbtnUACElevationAdvanced";
-            this.kbtnUACElevationAdvanced.Size = new System.Drawing.Size(218, 25);
-            this.kbtnUACElevationAdvanced.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnUACElevationAdvanced.TabIndex = 92;
-            this.kbtnUACElevationAdvanced.Values.Text = "UAC Elevation Advanced";
-            this.kbtnUACElevationAdvanced.Click += new System.EventHandler(this.KbtnUACElevationAdvanced_Click);
-            // 
             // Examples
             // 
             this.ClientSize = new System.Drawing.Size(971, 597);
@@ -738,20 +698,6 @@ namespace Playground
             AdobeColourDialog adobeColourDialog = new AdobeColourDialog(Color.White);
 
             adobeColourDialog.Show();
-        }
-
-        private void kbtnFileBrowser_Click(object sender, EventArgs e)
-        {
-            KryptonFileBrowser kryptonFileBrowser = new KryptonFileBrowser();
-
-            kryptonFileBrowser.Show();
-        }
-
-        private void kbtnFileExplorer_Click(object sender, EventArgs e)
-        {
-            KryptonFileExplorer kfe = new KryptonFileExplorer();
-
-            kfe.Show();
         }
 
         private void kbtnMessageboxTest2_Click(object sender, EventArgs e)
