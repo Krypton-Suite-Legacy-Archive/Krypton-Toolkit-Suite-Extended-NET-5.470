@@ -30,6 +30,12 @@
 
 Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Examples.md) to see what each control looks like.
 
+=======
+
+## Demo Application
+
+You can check out the pre-built demo application from downloading it [here](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Demos/Demos.zip)
+
 <!--======
 ## 2019-07-01 Build 11xx - July Update
 * Implement [TaskDialog](https://github.com/kpreisser/TaskDialog) by [Konstantin Preißer](https://github.com/kpreisser)
