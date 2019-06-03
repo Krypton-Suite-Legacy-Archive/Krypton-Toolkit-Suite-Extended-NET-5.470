@@ -146,6 +146,10 @@
     <Compile Include="Base\Code\Theming\KryptonPaletteManager.cs" />
     <Compile Include="Base\Code\Theming\KryptonThemeManager.cs" />
     <Compile Include="Base\Code\Time Span\StringCollectionEditor.cs" />
+    <Compile Include="Base\Code\Time Span\StrongListWrapper.cs" />
+    <Compile Include="Base\Code\Time Span\TimeSpan2Converter.cs" />
+    <Compile Include="Base\Code\Time Span\TimeSpanExtended.cs" />
+    <Compile Include="Base\Code\Time Span\TimeSpanFormatInfo.cs" />
     <Compile Include="Base\Code\TypefaceHelper.cs" />
     <Compile Include="Base\Code\UAC\UACHandler.cs" />
     <Compile Include="Base\Code\Utilities\FileVersionUtility.cs" />
