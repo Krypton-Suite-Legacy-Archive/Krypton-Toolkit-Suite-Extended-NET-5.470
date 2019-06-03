@@ -1349,9 +1349,9 @@ namespace PaletteExplorer.UX.New
 
         private void KrgbColourContrastTool_Click(object sender, EventArgs e)
         {
-            ColourContrastTool colourContrastTool = new ColourContrastTool();
+            ContrastColourSelector contrastColourSelector = new ContrastColourSelector();
 
-            colourContrastTool.Show();
+            contrastColourSelector.Show();
         }
     }
 }

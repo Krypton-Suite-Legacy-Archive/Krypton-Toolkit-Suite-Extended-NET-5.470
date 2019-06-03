@@ -1,6 +1,10 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using Classes.Colours;
+using ComponentFactory.Krypton.Toolkit;
+using Core.Classes.Colours;
+using PaletteExplorer.Classes;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PaletteExplorer.UX.Colour
@@ -41,12 +45,17 @@ namespace PaletteExplorer.UX.Colour
         private KryptonButton kbtnExport;
         private KryptonButton kbtnImportValues;
         private KryptonButton kbtnSaveValues;
+        private KryptonButton kbtnGenerate;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColourContrastTool));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnExport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnImportValues = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnSaveValues = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kchkUpdateValues = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kcbCustomColourTwoSelector = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -68,10 +77,7 @@ namespace PaletteExplorer.UX.Colour
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnSaveValues = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnImportValues = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnExport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -84,6 +90,7 @@ namespace PaletteExplorer.UX.Colour
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnGenerate);
             this.kryptonPanel1.Controls.Add(this.kbtnExport);
             this.kryptonPanel1.Controls.Add(this.kbtnImportValues);
             this.kryptonPanel1.Controls.Add(this.kbtnSaveValues);
@@ -94,6 +101,56 @@ namespace PaletteExplorer.UX.Colour
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(988, 55);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kbtnExport
+            // 
+            this.kbtnExport.AutoSize = true;
+            this.kbtnExport.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnExport.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.kbtnExport.Enabled = false;
+            this.kbtnExport.Location = new System.Drawing.Point(605, 13);
+            this.kbtnExport.Name = "kbtnExport";
+            this.kbtnExport.Size = new System.Drawing.Size(110, 30);
+            this.kbtnExport.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnExport.TabIndex = 64;
+            this.kbtnExport.Values.Text = "E&xport Values";
+            // 
+            // kbtnImportValues
+            // 
+            this.kbtnImportValues.AutoSize = true;
+            this.kbtnImportValues.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnImportValues.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.kbtnImportValues.Location = new System.Drawing.Point(721, 13);
+            this.kbtnImportValues.Name = "kbtnImportValues";
+            this.kbtnImportValues.Size = new System.Drawing.Size(113, 30);
+            this.kbtnImportValues.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnImportValues.TabIndex = 63;
+            this.kbtnImportValues.Values.Text = "&Import Values";
+            // 
+            // kbtnSaveValues
+            // 
+            this.kbtnSaveValues.AutoSize = true;
+            this.kbtnSaveValues.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnSaveValues.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.kbtnSaveValues.Location = new System.Drawing.Point(840, 13);
+            this.kbtnSaveValues.Name = "kbtnSaveValues";
+            this.kbtnSaveValues.Size = new System.Drawing.Size(98, 30);
+            this.kbtnSaveValues.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnSaveValues.TabIndex = 62;
+            this.kbtnSaveValues.Values.Text = "&Save Values";
+            // 
+            // kbtnOk
+            // 
+            this.kbtnOk.AutoSize = true;
+            this.kbtnOk.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnOk.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.kbtnOk.Location = new System.Drawing.Point(944, 13);
+            this.kbtnOk.Name = "kbtnOk";
+            this.kbtnOk.Size = new System.Drawing.Size(32, 30);
+            this.kbtnOk.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnOk.TabIndex = 61;
+            this.kbtnOk.Values.Text = "O&k";
+            this.kbtnOk.Click += new System.EventHandler(this.KbtnOk_Click);
             // 
             // kchkUpdateValues
             // 
@@ -394,55 +451,17 @@ namespace PaletteExplorer.UX.Colour
             this.panel1.Size = new System.Drawing.Size(988, 3);
             this.panel1.TabIndex = 2;
             // 
-            // kbtnOk
+            // kbtnGenerate
             // 
-            this.kbtnOk.AutoSize = true;
-            this.kbtnOk.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.kbtnOk.Location = new System.Drawing.Point(944, 13);
-            this.kbtnOk.Name = "kbtnOk";
-            this.kbtnOk.Size = new System.Drawing.Size(32, 30);
-            this.kbtnOk.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnOk.TabIndex = 61;
-            this.kbtnOk.Values.Text = "O&k";
-            this.kbtnOk.Click += new System.EventHandler(this.KbtnOk_Click);
-            // 
-            // kbtnSaveValues
-            // 
-            this.kbtnSaveValues.AutoSize = true;
-            this.kbtnSaveValues.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnSaveValues.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.kbtnSaveValues.Location = new System.Drawing.Point(840, 13);
-            this.kbtnSaveValues.Name = "kbtnSaveValues";
-            this.kbtnSaveValues.Size = new System.Drawing.Size(98, 30);
-            this.kbtnSaveValues.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnSaveValues.TabIndex = 62;
-            this.kbtnSaveValues.Values.Text = "&Save Values";
-            // 
-            // kbtnImportValues
-            // 
-            this.kbtnImportValues.AutoSize = true;
-            this.kbtnImportValues.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnImportValues.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.kbtnImportValues.Location = new System.Drawing.Point(721, 13);
-            this.kbtnImportValues.Name = "kbtnImportValues";
-            this.kbtnImportValues.Size = new System.Drawing.Size(113, 30);
-            this.kbtnImportValues.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnImportValues.TabIndex = 63;
-            this.kbtnImportValues.Values.Text = "&Import Values";
-            // 
-            // kbtnExport
-            // 
-            this.kbtnExport.AutoSize = true;
-            this.kbtnExport.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnExport.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.kbtnExport.Enabled = false;
-            this.kbtnExport.Location = new System.Drawing.Point(605, 13);
-            this.kbtnExport.Name = "kbtnExport";
-            this.kbtnExport.Size = new System.Drawing.Size(110, 30);
-            this.kbtnExport.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnExport.TabIndex = 64;
-            this.kbtnExport.Values.Text = "E&xport Values";
+            this.kbtnGenerate.AutoSize = true;
+            this.kbtnGenerate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnGenerate.Location = new System.Drawing.Point(402, 13);
+            this.kbtnGenerate.Name = "kbtnGenerate";
+            this.kbtnGenerate.Size = new System.Drawing.Size(197, 30);
+            this.kbtnGenerate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerate.TabIndex = 65;
+            this.kbtnGenerate.Values.Text = "Gener&ate Random Colour";
+            this.kbtnGenerate.Click += new System.EventHandler(this.KbtnGenerate_Click);
             // 
             // ColourContrastTool
             // 
@@ -551,6 +570,14 @@ namespace PaletteExplorer.UX.Colour
 
             return tempList;
         }
+
+        private void PropegateSelectionControl(KryptonComboBox comboBox, List<string> list)
+        {
+            foreach (string item in list)
+            {
+                comboBox.Items.Add(item);
+            }
+        }
         #endregion
 
         #region Setters/Getters
@@ -587,7 +614,13 @@ namespace PaletteExplorer.UX.Colour
         {
             if (contrastType == ContrastType.CUSTOMCOLOURS)
             {
+                PropagateContrastItemsListOne(new string[] { "Custom Colour One", "Custom Colour Two", "Custom Colour Three" });
 
+                PropagateContrastItemsListTwo(new string[] { "Custom Colour Four", "Custom Colour Five", "Custom Colour Six" });
+
+                PropegateSelectionControl(kcbCustomColourOneSelector, ContrastItemsListOne);
+
+                PropegateSelectionControl(kcbCustomColourTwoSelector, ContrastItemsListTwo);
             }
             else if (contrastType == ContrastType.CUSTOMTEXTCOLOURS)
             {
@@ -648,7 +681,27 @@ namespace PaletteExplorer.UX.Colour
 
         private void KcbCustomColourOneSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (GetContrastType() == ContrastType.CUSTOMCOLOURS)
+            {
+                #region Deal With Custom Colour Strings
+                if (kcbCustomColourOneSelector.Text == "Custom Colour One")
+                {
+                    kcbCustomColourTwoSelector.Text = "Custom Colour Four";
+                }
+                else if (kcbCustomColourOneSelector.Text == "Custom Colour Two")
+                {
+                    kcbCustomColourTwoSelector.Text = "Custom Colour Five";
+                }
+                else if (kcbCustomColourOneSelector.Text == "Custom Colour Three")
+                {
+                    kcbCustomColourTwoSelector.Text = "Custom Colour Six";
+                }
+                #endregion
+            }
+            else if (GetContrastType() == ContrastType.CUSTOMTEXTCOLOURS)
+            {
 
+            }
         }
 
         private void CbxContrastColourTwoPreview_MouseEnter(object sender, EventArgs e)
@@ -658,12 +711,61 @@ namespace PaletteExplorer.UX.Colour
 
         private void KcbCustomColourTwoSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (GetContrastType() == ContrastType.CUSTOMCOLOURS)
+            {
+                #region Deal With Custom Colour Strings
+                if (kcbCustomColourTwoSelector.Text == "Custom Colour Four")
+                {
+                    kcbCustomColourOneSelector.Text = "Custom Colour One";
+                }
+                else if (kcbCustomColourTwoSelector.Text == "Custom Colour Five")
+                {
+                    kcbCustomColourOneSelector.Text = "Custom Colour Two";
+                }
+                else if (kcbCustomColourTwoSelector.Text == "Custom Colour Six")
+                {
+                    kcbCustomColourOneSelector.Text = "Custom Colour Three";
+                }
+                #endregion
+            }
+            else if (GetContrastType() == ContrastType.CUSTOMTEXTCOLOURS)
+            {
 
+            }
         }
 
         private void UpdateUITimer_Tick(object sender, EventArgs e)
         {
-            
+            UpdateUI();
+        }
+
+        private void KbtnGenerate_Click(object sender, EventArgs e)
+        {
+            cbxContrastColourOnePreview.BackColor = ColourHelpers.GenerateRandomColour();
+
+            UpdateColourValues(cbxContrastColourOnePreview.BackColor);
+        }
+
+        private void UpdateColourValues(Color colour)
+        {
+            cwChosenColour.Colour = colour;
+
+            knumAlpaValue.Value = colour.A;
+
+            knudRedChannelValue.Value = colour.R;
+
+            knudGreenChannelValue.Value = colour.G;
+
+            knudBlueChannelValue.Value = colour.B;
+
+            ktxtHexValue.Text = ColourHelpers.ColourToHexadecimal(colour);
+        }
+
+        private void UpdateUI()
+        {
+            cbxContrastColourOnePreview.BackColor = Color.FromArgb(Convert.ToInt32(knumAlpaValue.Value), Convert.ToInt32(knudRedChannelValue.Value), Convert.ToInt32(knudGreenChannelValue.Value), Convert.ToInt32(knudBlueChannelValue.Value));
+
+            cbxContrastColourTwoPreview.BackColor = ColourExtensions.GetContrast(cbxContrastColourOnePreview.BackColor, true);
         }
     }
 }
