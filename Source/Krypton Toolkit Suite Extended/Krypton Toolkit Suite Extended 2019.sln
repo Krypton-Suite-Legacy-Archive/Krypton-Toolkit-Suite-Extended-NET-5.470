@@ -158,6 +158,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaviSuite", "NaviSuite\Navi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task Dialogs", "Task Dialogs\Task Dialogs.csproj", "{1B480AF7-AC66-4BF6-9F75-294A7D1A9DDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolkit Resources", "Toolkit Resources\Toolkit Resources.csproj", "{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -412,6 +414,18 @@ Global
 		{1B480AF7-AC66-4BF6-9F75-294A7D1A9DDB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1B480AF7-AC66-4BF6-9F75-294A7D1A9DDB}.Release|x86.ActiveCfg = Release|Any CPU
 		{1B480AF7-AC66-4BF6-9F75-294A7D1A9DDB}.Release|x86.Build.0 = Release|Any CPU
+		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Debug|x86.Build.0 = Debug|Any CPU
+		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Installer Only|x86.Build.0 = Release|Any CPU
+		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Release|x86.ActiveCfg = Release|Any CPU
+		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
