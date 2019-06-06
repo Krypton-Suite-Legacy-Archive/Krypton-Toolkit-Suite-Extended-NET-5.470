@@ -363,6 +363,7 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonToggleSwitchToolbarControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Time Span\KryptonTimeSpanPicker.cs" />
     <Compile Include="ExtendedToolkit\Crash Report Tool\Classes\DrDump\AnonymousData.cs" />
     <Compile Include="ExtendedToolkit\Crash Report Tool\Classes\DrDump\DrDumpService.cs" />
     <Compile Include="ExtendedToolkit\Crash Report Tool\UX\CrashReportToolMainWindow.cs">
@@ -944,6 +945,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Strings\TimeSpanResources.Designer.cs">
+      <DependentUpon>TimeSpanResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -1260,6 +1266,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings\TimeSpanResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TimeSpanResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExtendedToolkit\UI\SoftwareUpdater\Classes\" />
@@ -1292,6 +1302,10 @@
     <ProjectReference Include="..\Krypton Outlook Grid\Krypton Outlook Grid.csproj">
       <Project>{2a10c696-45ad-48aa-8ead-2cb322672972}</Project>
       <Name>Krypton Outlook Grid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toolkit Resources\Toolkit Resources.csproj">
+      <Project>{cfb34c40-6461-4ea1-a81c-5e207f2d7bfe}</Project>
+      <Name>Toolkit Resources</Name>
     </ProjectReference>
     <ProjectReference Include="..\Toolkit Settings\Toolkit Settings.csproj">
       <Project>{EA6E7878-FCCB-416C-8FE1-E626D478A7A7}</Project>

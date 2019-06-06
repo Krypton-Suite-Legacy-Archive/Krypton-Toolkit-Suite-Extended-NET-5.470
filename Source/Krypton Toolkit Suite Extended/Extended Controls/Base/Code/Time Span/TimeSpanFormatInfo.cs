@@ -4,6 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using ToolkitResources.Strings;
 
 namespace System.Globalization
 {
@@ -53,7 +54,7 @@ namespace System.Globalization
         /// <param name="culture">The culture.</param>
         internal TimeSpan2FormatInfo(CultureInfo culture)
         {
-            Properties.Resources.Culture = culture;
+            TimeSpanResources.Culture = culture;
         }
 
         /// <summary>
@@ -101,7 +102,7 @@ namespace System.Globalization
         {
             get
             {
-                try { return bool.Parse(Properties.Resources.TimeSpanWordPatternIgnoreCase); }
+                try { return bool.Parse(TimeSpanResources.TimeSpanWordPatternIgnoreCase); }
                 catch { return true; }
             }
         }
@@ -366,27 +367,27 @@ namespace System.Globalization
             switch (char.ToLower(matchValue[1]))
             {
                 case 'd':
-                    ret = value == 1 ? Properties.Resources.TimeSpanOneDayFormat : Properties.Resources.TimeSpanManyDayFormat;
+                    ret = value == 1 ? TimeSpanResources.TimeSpanOneDayFormat : TimeSpanResources.TimeSpanManyDayFormat;
                     break;
 
                 case 'h':
-                    ret = value == 1 ? Properties.Resources.TimeSpanOneHourFormat : Properties.Resources.TimeSpanManyHourFormat;
+                    ret = value == 1 ? TimeSpanResources.TimeSpanOneHourFormat : TimeSpanResources.TimeSpanManyHourFormat;
                     break;
 
                 case 'm':
-                    ret = value == 1 ? Properties.Resources.TimeSpanOneMinuteFormat : Properties.Resources.TimeSpanManyMinuteFormat;
+                    ret = value == 1 ? TimeSpanResources.TimeSpanOneMinuteFormat : TimeSpanResources.TimeSpanManyMinuteFormat;
                     break;
 
                 case 's':
-                    ret = value == 1 ? Properties.Resources.TimeSpanOneSecondFormat : Properties.Resources.TimeSpanManySecondFormat;
+                    ret = value == 1 ? TimeSpanResources.TimeSpanOneSecondFormat : TimeSpanResources.TimeSpanManySecondFormat;
                     break;
 
                 case 'k':
-                    ret = value == 1 ? Properties.Resources.TimeSpanOneMillisecondFormat : Properties.Resources.TimeSpanManyMillisecondFormat;
+                    ret = value == 1 ? TimeSpanResources.TimeSpanOneMillisecondFormat : TimeSpanResources.TimeSpanManyMillisecondFormat;
                     break;
 
                 case 't':
-                    ret = value == 1 ? Properties.Resources.TimeSpanOneTickFormat : Properties.Resources.TimeSpanManyTickFormat;
+                    ret = value == 1 ? TimeSpanResources.TimeSpanOneTickFormat : TimeSpanResources.TimeSpanManyTickFormat;
                     break;
             }
             if (ret.Length > 0 && char.IsUpper(matchValue[1]))
@@ -480,9 +481,9 @@ namespace System.Globalization
                 case 'G':
                     return LongPattern;
                 case 'f':
-                    return patternType == TimeSpanPatternType.Formatting ? Properties.Resources.TimeSpanWordFormat : Properties.Resources.TimeSpanWordPattern;
+                    return patternType == TimeSpanPatternType.Formatting ? TimeSpanResources.TimeSpanWordFormat : TimeSpanResources.TimeSpanWordPattern;
                 case 'j':
-                    return patternType == TimeSpanPatternType.Formatting ? Properties.Resources.TimeSpanJiraFormat : Properties.Resources.TimeSpanJiraPattern;
+                    return patternType == TimeSpanPatternType.Formatting ? TimeSpanResources.TimeSpanJiraFormat : TimeSpanResources.TimeSpanJiraPattern;
                 case 'x':
                     return ISO8601Pattern;
                 default:
@@ -536,22 +537,22 @@ namespace System.Globalization
             switch (entityName)
             {
                 case "vd":
-                    parseWords = Properties.Resources.TimeSpanDayStrings;
+                    parseWords = TimeSpanResources.TimeSpanDayStrings;
                     break;
                 case "vh":
-                    parseWords = Properties.Resources.TimeSpanHourStrings;
+                    parseWords = TimeSpanResources.TimeSpanHourStrings;
                     break;
                 case "vm":
-                    parseWords = Properties.Resources.TimeSpanMinuteStrings;
+                    parseWords = TimeSpanResources.TimeSpanMinuteStrings;
                     break;
                 case "vs":
-                    parseWords = Properties.Resources.TimeSpanSecondStrings;
+                    parseWords = TimeSpanResources.TimeSpanSecondStrings;
                     break;
                 case "vk":
-                    parseWords = Properties.Resources.TimeSpanMillisecondStrings;
+                    parseWords = TimeSpanResources.TimeSpanMillisecondStrings;
                     break;
                 case "vt":
-                    parseWords = Properties.Resources.TimeSpanTickStrings;
+                    parseWords = TimeSpanResources.TimeSpanTickStrings;
                     break;
                 default:
                     return string.Empty;
@@ -589,7 +590,7 @@ namespace System.Globalization
                     {
                         if (foundSep && !string.IsNullOrEmpty(e.children[i].output))
                         {
-                            sb.Append(Properties.Resources.TimeSpanSeparator);
+                            sb.Append(TimeSpanResources.TimeSpanSeparator);
                             foundSep = false;
                         }
                         if (foundSpace && !string.IsNullOrEmpty(e.children[i].output))
@@ -724,7 +725,7 @@ namespace System.Globalization
                     e.output = @"\s+";
                     break;
                 case "fs":
-                    e.output = @"\s*" + Regex.Escape(Properties.Resources.TimeSpanSeparator.Trim()) + @"\s*";
+                    e.output = @"\s*" + Regex.Escape(TimeSpanResources.TimeSpanSeparator.Trim()) + @"\s*";
                     break;
                 case "q":
                 case "e":
