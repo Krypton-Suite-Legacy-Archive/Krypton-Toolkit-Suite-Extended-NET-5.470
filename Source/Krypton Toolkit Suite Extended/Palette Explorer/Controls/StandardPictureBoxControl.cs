@@ -2050,97 +2050,97 @@ namespace PaletteExplorer.Controls
 
         private void PbxLinkNormalColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkNormalColourPreview(), GetLinkNormalColourPreview().BackColor, "Link Normal Text Colour", true);
         }
 
         private void PbxLinkFocusedColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkFocusedColourPreview(), GetLinkFocusedColourPreview().BackColor, "Link Focused Text Colour", true);
         }
 
         private void PbxLinkHoverColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkHoverColourPreview(), GetLinkHoverColourPreview().BackColor, "Link Hover Text Colour", true);
         }
 
         private void PbxLinkVisitedColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkVisitedColourPreview(), GetLinkVisitedColourPreview().BackColor, "Link Visited Text Colour", true);
         }
 
         private void PbxCustomColourOnePreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourOneColourPreview(), GetCustomColourOneColourPreview().BackColor, "Custom Colour One Colour", true);
         }
 
         private void PbxCustomColourTwoPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourTwoColourPreview(), GetCustomColourTwoColourPreview().BackColor, "Custom Colour Two Colour", true);
         }
 
         private void PbxCustomColourThreePreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourThreeColourPreview(), GetCustomColourThreeColourPreview().BackColor, "Custom Colour Three Colour", true);
         }
 
         private void PbxCustomColourFourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourFourColourPreview(), GetCustomColourFourColourPreview().BackColor, "Custom Colour Four Colour", true);
         }
 
         private void PbxCustomColourFivePreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourFiveColourPreview(), GetCustomColourFiveColourPreview().BackColor, "Custom Colour Five Colour", true);
         }
 
         private void PbxCustomColourSixPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourSixColourPreview(), GetCustomColourSixColourPreview().BackColor, "Custom Colour Six Colour", true);
         }
 
         private void PbxCustomTextColourOnePreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourOneColourPreview(), GetCustomTextColourOneColourPreview().BackColor, "Custom Text Colour One Colour", true);
         }
 
         private void PbxCustomTextColourTwoPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourTwoColourPreview(), GetCustomTextColourTwoColourPreview().BackColor, "Custom Text Colour Two Colour", true);
         }
 
         private void PbxCustomTextColourThreePreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourThreeColourPreview(), GetCustomTextColourThreeColourPreview().BackColor, "Custom Text Colour Three Colour", true);
         }
 
         private void PbxCustomTextColourFourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourFourColourPreview(), GetCustomTextColourFourColourPreview().BackColor, "Custom Text Colour Four Colour", true);
         }
 
         private void PbxCustomTextColourFivePreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourFiveColourPreview(), GetCustomTextColourFiveColourPreview().BackColor, "Custom Text Colour Five Colour", true);
         }
 
         private void PbxCustomTextColourSixPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourSixColourPreview(), GetCustomTextColourSixColourPreview().BackColor, "Custom Text Colour Six Colour", true);
         }
 
         private void PbxMenuTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetMenuTextColourPreview(), GetMenuTextColourPreview().BackColor, "Menu Text Colour", true);
         }
 
         private void PbxStatusTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetStatusTextColourPreview(), GetStatusTextColourPreview().BackColor, "Status Text Colour", true);
         }
 
         private void PbxRibbonTabTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetRibbonTabTextColourPreview(), GetRibbonTabTextColourPreview().BackColor, "Ribbon Tab Text Colour", true);
         }
         #endregion
 
