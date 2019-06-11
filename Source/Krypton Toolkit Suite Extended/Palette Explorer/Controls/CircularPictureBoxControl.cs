@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using System.Drawing;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.PaletteExplorer;
 using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace PaletteExplorer.Controls
@@ -1247,6 +1248,8 @@ namespace PaletteExplorer.Controls
         private ContextMenuStrip baseColourMenu, darkColourMenu, middleColourMenu, lightColourMenu, lightestColourMenu, borderColourMenu, alternativeNormalTextColourMenu, normalTextColourMenu, disabledTextColourMenu, focusedTextColourMenu, pressedTextColourMenu, disabledControlColourMenu, linkDisabledColourMenu, linkNormalColourMenu, linkFocusedColourMenu, linkHoverColourMenu, linkVisitedColourMenu, customColourOneMenu, customColourTwoMenu, customColourThreeMenu, customColourFourMenu, customColourFiveMenu, customColourSixMenu, customTextColourOneMenu, customTextColourTwoMenu, customTextColourThreeMenu, customTextColourFourMenu, customTextColourFiveMenu, customTextColourSixMenu, menuTextColourMenu, statusTextColourMenu, ribbonTabTextColourMenu;
 
         private CircularPictureBox[] _circularPictureBoxCollection;
+
+        private PaletteExplorerBooleanSettingsManager _paletteExplorerBooleanSettingsManager = new PaletteExplorerBooleanSettingsManager();
         #endregion
 
         #region Properties
@@ -2045,162 +2048,162 @@ namespace PaletteExplorer.Controls
         #region ToolTips
         private void CbxBaseColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetBaseColourPreview(), GetBaseColourPreview().BackColor, "Base", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetBaseColourPreview(), GetBaseColourPreview().BackColor, "Base", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxDarkColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetDarkColourPreview(), GetDarkColourPreview().BackColor, "Dark", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetDarkColourPreview(), GetDarkColourPreview().BackColor, "Dark", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxMediumColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetMiddleColourPreview(), GetMiddleColourPreview().BackColor, "Middle", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetMiddleColourPreview(), GetMiddleColourPreview().BackColor, "Middle", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxLightColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetLightColourPreview(), GetLightColourPreview().BackColor, "Light", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetLightColourPreview(), GetLightColourPreview().BackColor, "Light", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxLightestColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetLightestColourPreview(), GetLightestColourPreview().BackColor, "Lightest", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetLightestColourPreview(), GetLightestColourPreview().BackColor, "Lightest", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxBorderColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetBorderColourPreview(), GetBorderColourPreview().BackColor, "Border", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetBorderColourPreview(), GetBorderColourPreview().BackColor, "Border", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxAlternativeNormalTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetAlternativeNormalTextColourPreview(), GetAlternativeNormalTextColourPreview().BackColor, "Alternative Normal Text", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetAlternativeNormalTextColourPreview(), GetAlternativeNormalTextColourPreview().BackColor, "Alternative Normal Text", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxNormalTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetNormalTextColourPreview(), GetNormalTextColourPreview().BackColor, "Normal Text", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetNormalTextColourPreview(), GetNormalTextColourPreview().BackColor, "Normal Text", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxDisabledTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetDisabledTextColourPreview(), GetDisabledTextColourPreview().BackColor, "Disabled Text", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetDisabledTextColourPreview(), GetDisabledTextColourPreview().BackColor, "Disabled Text", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxFocusedTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetFocusedTextColourPreview(), GetFocusedTextColourPreview().BackColor, "Focused Text", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetFocusedTextColourPreview(), GetFocusedTextColourPreview().BackColor, "Focused Text", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxPressedTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetPressedTextColourPreview(), GetPressedTextColourPreview().BackColor, "Pressed Text", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetPressedTextColourPreview(), GetPressedTextColourPreview().BackColor, "Pressed Text", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxDisabledControlColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetDisabledControlColourPreview(), GetDisabledControlColourPreview().BackColor, "Disabled Control", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetDisabledControlColourPreview(), GetDisabledControlColourPreview().BackColor, "Disabled Control", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxLinkDisabledColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetLinkDisabedColourPreview(), GetLinkDisabedColourPreview().BackColor, "Link Disabled", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkDisabedColourPreview(), GetLinkDisabedColourPreview().BackColor, "Link Disabled", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxLinkNormalColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkNormalColourPreview(), GetLinkNormalColourPreview().BackColor, "Link Normal", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxLinkFocusedColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkFocusedColourPreview(), GetLinkFocusedColourPreview().BackColor, "Link Focused", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxLinkHoverColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkHoverColourPreview(), GetLinkHoverColourPreview().BackColor, "Link Hover", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxLinkVisitedColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkVisitedColourPreview(), GetLinkVisitedColourPreview().BackColor, "Link Visited", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxCustomColourOnePreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourOneColourPreview(), GetCustomColourOneColourPreview().BackColor, "Custom Colour One", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxCustomColourTwoPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourTwoColourPreview(), GetCustomColourTwoColourPreview().BackColor, "Custom Colour Two", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxCustomColourThreePreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourThreeColourPreview(), GetCustomColourThreeColourPreview().BackColor, "Custom Colour Three", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxCustomColourFourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourFourColourPreview(), GetCustomColourFourColourPreview().BackColor, "Custom Colour Four", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxCustomColourFivePreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourFiveColourPreview(), GetCustomColourFiveColourPreview().BackColor, "Custom Colour Five", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxCustomColourSixPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourSixColourPreview(), GetCustomColourSixColourPreview().BackColor, "Custom Colour Six", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxCustomTextColourOnePreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourOneColourPreview(), GetCustomTextColourOneColourPreview().BackColor, "Custom Text Colour One", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxCustomTextColourTwoPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourTwoColourPreview(), GetCustomTextColourTwoColourPreview().BackColor, "Custom Text Colour Two", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxCustomTextColourThreePreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourThreeColourPreview(), GetCustomTextColourThreeColourPreview().BackColor, "Custom Text Colour Three", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxCustomTextColourFourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourFourColourPreview(), GetCustomTextColourFourColourPreview().BackColor, "Custom Text Colour Four", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxCustomTextColourFivePreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourTwoColourPreview(), GetCustomTextColourFiveColourPreview().BackColor, "Custom Text Colour Five", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxCustomTextColourSixPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourSixColourPreview(), GetCustomTextColourSixColourPreview().BackColor, "Custom Text Colour Six", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxMenuTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetMenuTextColourPreview(), GetMenuTextColourPreview().BackColor, "Menu Text", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxStatusTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetStatusTextColourPreview(), GetStatusTextColourPreview().BackColor, "Status Text", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxRibbonTabTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-
+            UserInterfaceManager.DisplayToolTipInformation(GetRibbonTabTextColourPreview(), GetRibbonTabTextColourPreview().BackColor, "Ribbon Tab Text", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
         #endregion
 

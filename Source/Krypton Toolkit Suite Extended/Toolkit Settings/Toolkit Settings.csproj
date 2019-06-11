@@ -70,6 +70,7 @@
     <Compile Include="Classes\Palette Explorer\Colours\StandardControlTextColourSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\Colours\TextColourSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\GeneralPaletteExplorerSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\PaletteExplorerBooleanSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\PaletteThemeSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\PaletteTypefaceSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\Properties\ColourPropertyWindowSettingsManager.cs" />
@@ -195,6 +196,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>GeneralPaletteExplorerSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Palette Explorer\PaletteExplorerBooleanSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>PaletteExplorerBooleanSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Settings\Palette Explorer\PaletteThemeSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -309,6 +315,10 @@
     <None Include="Settings\Palette Explorer\GeneralPaletteExplorerSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>GeneralPaletteExplorerSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\PaletteExplorerBooleanSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>PaletteExplorerBooleanSettings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Settings\Palette Explorer\PaletteThemeSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

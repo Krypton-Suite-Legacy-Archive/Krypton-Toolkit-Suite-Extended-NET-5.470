@@ -7,6 +7,8 @@
  */
 #endregion
 
+using Classes.Colours;
+using ComponentFactory.Krypton.Ribbon;
 using ComponentFactory.Krypton.Toolkit;
 using Core.Classes;
 using Microsoft.WindowsAPICodePack.Dialogs;
@@ -50,6 +52,10 @@ namespace PaletteExplorer.UX.Colour
         private KryptonLabel kryptonLabel6;
         private KryptonTextBox ktxtHexValue;
         private KryptonLabel klblHexValue;
+        private KryptonLabel klblRedValue;
+        private KryptonLabel klblGreenValue;
+        private KryptonLabel klblBlueValue;
+        private KryptonLabel klblAlphaValue;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
@@ -61,7 +67,10 @@ namespace PaletteExplorer.UX.Colour
             this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.knudBlueChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.ktxtHexValue = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.klblHexValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.knudGreenChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.knudRedChannelValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -81,9 +90,10 @@ namespace PaletteExplorer.UX.Colour
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.cwSelectedColour = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.ColourWheel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.ktxtHexValue = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.klblHexValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblRedValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblGreenValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblBlueValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.klblAlphaValue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -160,6 +170,10 @@ namespace PaletteExplorer.UX.Colour
             // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.klblRedValue);
+            this.kryptonPanel2.Controls.Add(this.klblGreenValue);
+            this.kryptonPanel2.Controls.Add(this.klblBlueValue);
+            this.kryptonPanel2.Controls.Add(this.klblAlphaValue);
             this.kryptonPanel2.Controls.Add(this.kryptonLabel6);
             this.kryptonPanel2.Controls.Add(this.knudBlueChannelValue);
             this.kryptonPanel2.Controls.Add(this.ktxtHexValue);
@@ -188,6 +202,16 @@ namespace PaletteExplorer.UX.Colour
             this.kryptonPanel2.Size = new System.Drawing.Size(851, 639);
             this.kryptonPanel2.TabIndex = 1;
             // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(649, 589);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(26, 33);
+            this.kryptonLabel6.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel6.TabIndex = 49;
+            this.kryptonLabel6.Values.Text = "#";
+            // 
             // knudBlueChannelValue
             // 
             this.knudBlueChannelValue.DecimalPlaces = 99;
@@ -203,6 +227,30 @@ namespace PaletteExplorer.UX.Colour
             this.knudBlueChannelValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knudBlueChannelValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knudBlueChannelValue.TabIndex = 26;
+            this.knudBlueChannelValue.ValueChanged += new System.EventHandler(this.KnudBlueChannelValue_ValueChanged);
+            // 
+            // ktxtHexValue
+            // 
+            this.ktxtHexValue.Hint = "FFFFFF";
+            this.ktxtHexValue.Location = new System.Drawing.Point(681, 593);
+            this.ktxtHexValue.MaxLength = 6;
+            this.ktxtHexValue.Name = "ktxtHexValue";
+            this.ktxtHexValue.Size = new System.Drawing.Size(158, 29);
+            this.ktxtHexValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktxtHexValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
+            this.ktxtHexValue.TabIndex = 48;
+            this.ktxtHexValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ktxtHexValue.TextChanged += new System.EventHandler(this.KtxtHexValue_TextChanged);
+            // 
+            // klblHexValue
+            // 
+            this.klblHexValue.Location = new System.Drawing.Point(583, 589);
+            this.klblHexValue.Name = "klblHexValue";
+            this.klblHexValue.Size = new System.Drawing.Size(60, 33);
+            this.klblHexValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHexValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHexValue.TabIndex = 47;
+            this.klblHexValue.Values.Text = "Hex:";
             // 
             // knudGreenChannelValue
             // 
@@ -219,6 +267,7 @@ namespace PaletteExplorer.UX.Colour
             this.knudGreenChannelValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knudGreenChannelValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knudGreenChannelValue.TabIndex = 25;
+            this.knudGreenChannelValue.ValueChanged += new System.EventHandler(this.KnudGreenChannelValue_ValueChanged);
             // 
             // knudRedChannelValue
             // 
@@ -235,6 +284,7 @@ namespace PaletteExplorer.UX.Colour
             this.knudRedChannelValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knudRedChannelValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knudRedChannelValue.TabIndex = 24;
+            this.knudRedChannelValue.ValueChanged += new System.EventHandler(this.KnudRedChannelValue_ValueChanged);
             // 
             // kryptonLabel10
             // 
@@ -415,37 +465,71 @@ namespace PaletteExplorer.UX.Colour
             this.panel1.Size = new System.Drawing.Size(851, 2);
             this.panel1.TabIndex = 2;
             // 
-            // kryptonLabel6
+            // klblRedValue
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(649, 589);
-            this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(26, 33);
-            this.kryptonLabel6.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel6.TabIndex = 49;
-            this.kryptonLabel6.Values.Text = "#";
+            this.klblRedValue.Location = new System.Drawing.Point(224, 459);
+            this.klblRedValue.Name = "klblRedValue";
+            this.klblRedValue.Size = new System.Drawing.Size(6, 2);
+            this.klblRedValue.StateCommon.LongText.Color1 = System.Drawing.Color.Red;
+            this.klblRedValue.StateCommon.LongText.Color2 = System.Drawing.Color.Red;
+            this.klblRedValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblRedValue.StateCommon.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblRedValue.StateCommon.LongText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblRedValue.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
+            this.klblRedValue.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
+            this.klblRedValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblRedValue.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblRedValue.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblRedValue.TabIndex = 53;
+            this.klblRedValue.Values.Text = "";
             // 
-            // ktxtHexValue
+            // klblGreenValue
             // 
-            this.ktxtHexValue.Hint = "FFFFFF";
-            this.ktxtHexValue.Location = new System.Drawing.Point(681, 593);
-            this.ktxtHexValue.MaxLength = 6;
-            this.ktxtHexValue.Name = "ktxtHexValue";
-            this.ktxtHexValue.Size = new System.Drawing.Size(158, 29);
-            this.ktxtHexValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ktxtHexValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
-            this.ktxtHexValue.TabIndex = 48;
-            this.ktxtHexValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.klblGreenValue.Location = new System.Drawing.Point(224, 521);
+            this.klblGreenValue.Name = "klblGreenValue";
+            this.klblGreenValue.Size = new System.Drawing.Size(6, 2);
+            this.klblGreenValue.StateCommon.LongText.Color1 = System.Drawing.Color.Green;
+            this.klblGreenValue.StateCommon.LongText.Color2 = System.Drawing.Color.Green;
+            this.klblGreenValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblGreenValue.StateCommon.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblGreenValue.StateCommon.LongText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblGreenValue.StateCommon.ShortText.Color1 = System.Drawing.Color.Green;
+            this.klblGreenValue.StateCommon.ShortText.Color2 = System.Drawing.Color.Green;
+            this.klblGreenValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblGreenValue.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblGreenValue.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblGreenValue.TabIndex = 52;
+            this.klblGreenValue.Values.Text = "";
             // 
-            // klblHexValue
+            // klblBlueValue
             // 
-            this.klblHexValue.Location = new System.Drawing.Point(583, 589);
-            this.klblHexValue.Name = "klblHexValue";
-            this.klblHexValue.Size = new System.Drawing.Size(60, 33);
-            this.klblHexValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblHexValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblHexValue.TabIndex = 47;
-            this.klblHexValue.Values.Text = "Hex:";
+            this.klblBlueValue.Location = new System.Drawing.Point(224, 583);
+            this.klblBlueValue.Name = "klblBlueValue";
+            this.klblBlueValue.Size = new System.Drawing.Size(6, 2);
+            this.klblBlueValue.StateCommon.LongText.Color1 = System.Drawing.Color.Blue;
+            this.klblBlueValue.StateCommon.LongText.Color2 = System.Drawing.Color.Blue;
+            this.klblBlueValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblBlueValue.StateCommon.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblBlueValue.StateCommon.LongText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblBlueValue.StateCommon.ShortText.Color1 = System.Drawing.Color.Blue;
+            this.klblBlueValue.StateCommon.ShortText.Color2 = System.Drawing.Color.Blue;
+            this.klblBlueValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblBlueValue.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblBlueValue.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblBlueValue.TabIndex = 51;
+            this.klblBlueValue.Values.Text = "";
+            // 
+            // klblAlphaValue
+            // 
+            this.klblAlphaValue.Location = new System.Drawing.Point(224, 390);
+            this.klblAlphaValue.Name = "klblAlphaValue";
+            this.klblAlphaValue.Size = new System.Drawing.Size(6, 2);
+            this.klblAlphaValue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblAlphaValue.StateCommon.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblAlphaValue.StateCommon.LongText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.klblAlphaValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblAlphaValue.TabIndex = 50;
+            this.klblAlphaValue.Values.Text = "";
             // 
             // ColourMixerAdvanced
             // 
@@ -483,6 +567,16 @@ namespace PaletteExplorer.UX.Colour
         ToolTip toolTip = new ToolTip();
 
         //VisualPopupToolTip toolTip = new VisualPopupToolTip();
+
+        private int _r, _g, _b;
+        #endregion
+
+        #region Properties
+        public int RedValue { get => _r; set => _r = value; }
+
+        public int GreenValue { get => _g; set => _g = value; }
+
+        public int BlueValue { get => _b; set => _b = value; }
         #endregion
 
         #region Constructors
@@ -522,14 +616,16 @@ namespace PaletteExplorer.UX.Colour
             #endregion
 
             #region Numbers
-            knudRedChannelValue.Value = colour.R;
+            klblRedValue.Text = colour.R.ToString();
 
-            knudGreenChannelValue.Value = colour.G;
+            klblGreenValue.Text = colour.G.ToString();
 
-            knudBlueChannelValue.Value = colour.B;
+            klblBlueValue.Text = colour.B.ToString();
             #endregion
 
-            knumAlpaValue.Value = alphaValue;
+            klblAlphaValue.Text = alphaValue.ToString();
+
+            ktxtHexValue.Text = ColourHelpers.ColourToHexadecimal(cwSelectedColour.Colour);
         }
 
         private void KnumAlpaValue_ValueChanged(object sender, EventArgs e)
@@ -612,5 +708,71 @@ namespace PaletteExplorer.UX.Colour
                 kbtnWriteToFile.Enabled = false;
             }
         }
+
+        private void KnudRedChannelValue_ValueChanged(object sender, EventArgs e)
+        {
+            SetRedValue((int)knudRedChannelValue.Value);
+
+            UpdateUI(ReturnColour(GetRedValue(), GetGreenValue(), GetBlueValue()));
+        }
+
+        private void KnudGreenChannelValue_ValueChanged(object sender, EventArgs e)
+        {
+            SetRedValue((int)knudGreenChannelValue.Value);
+
+            UpdateUI(ReturnColour(GetRedValue(), GetGreenValue(), GetBlueValue()));
+        }
+
+        private void KnudBlueChannelValue_ValueChanged(object sender, EventArgs e)
+        {
+            SetRedValue((int)knudBlueChannelValue.Value);
+
+            UpdateUI(ReturnColour(GetRedValue(), GetGreenValue(), GetBlueValue()));
+        }
+
+        private void KtxtHexValue_TextChanged(object sender, EventArgs e)
+        {
+            cwSelectedColour.Colour = ColourHelpers.ColourFromHexadecimal(ktxtHexValue.Text);
+        }
+
+
+        #region Methods
+        private static Color ReturnColour(int r, int g, int b, int a = 255)
+        {
+            return Color.FromArgb(a, r, g, b);
+        }
+        #endregion
+
+        #region Setters and Getters
+        private void SetRedValue(int value)
+        {
+            RedValue = value;
+        }
+
+        private int GetRedValue()
+        {
+            return RedValue;
+        }
+
+        private void SetGreenValue(int value)
+        {
+            GreenValue = value;
+        }
+
+        private int GetGreenValue()
+        {
+            return GreenValue;
+        }
+
+        private void SetBlueValue(int value)
+        {
+            BlueValue = value;
+        }
+
+        private int GetBlueValue()
+        {
+            return BlueValue;
+        }
+        #endregion
     }
 }

@@ -139,7 +139,6 @@ namespace PaletteExplorer.UX.New
         private ToolStripMenuItem standardDisplayToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem1;
         private ToolStripMenuItem circularDisplayToolStripMenuItem;
-        private CircularPictureBoxControl cpbcPreview;
         private ContextMenuStrip ctxReset;
         private ToolStripMenuItem resetColourUIToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem2;
@@ -154,6 +153,7 @@ namespace PaletteExplorer.UX.New
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple6;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbColourContrastTool;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator17;
+        private CircularPictureBoxControl cpbcPreview;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbCheckForUpdates;
 
         private void InitializeComponent()
@@ -287,9 +287,9 @@ namespace PaletteExplorer.UX.New
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.standardPictureBoxControl1 = new PaletteExplorer.Controls.StandardPictureBoxControl();
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.cpbcPreview = new PaletteExplorer.Controls.CircularPictureBoxControl();
             this.kdm = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
             this.ilImages = new System.Windows.Forms.ImageList(this.components);
+            this.cpbcPreview = new PaletteExplorer.Controls.CircularPictureBoxControl();
             ((System.ComponentModel.ISupportInitialize)(this.krControls)).BeginInit();
             this.ctxReset.SuspendLayout();
             this.ctxViewTypes.SuspendLayout();
@@ -634,6 +634,10 @@ namespace PaletteExplorer.UX.New
             // 
             this.krgbGenerateContrastColours.TextLine1 = "Generate";
             this.krgbGenerateContrastColours.TextLine2 = "Contrast Colours";
+            // 
+            // kryptonRibbonGroupSeparator7
+            // 
+            this.kryptonRibbonGroupSeparator7.Visible = false;
             // 
             // kryptonRibbonGroupTriple10
             // 
@@ -1053,19 +1057,19 @@ namespace PaletteExplorer.UX.New
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
             this.kryptonPage2.UniqueName = "c93c9b60d5274878be88f907b4809e18";
             // 
-            // cpbcPreview
-            // 
-            this.cpbcPreview.BackColor = System.Drawing.Color.Transparent;
-            this.cpbcPreview.Location = new System.Drawing.Point(19, 16);
-            this.cpbcPreview.Name = "cpbcPreview";
-            this.cpbcPreview.Size = new System.Drawing.Size(1625, 660);
-            this.cpbcPreview.TabIndex = 0;
-            // 
             // ilImages
             // 
             this.ilImages.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.ilImages.ImageSize = new System.Drawing.Size(16, 16);
             this.ilImages.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // cpbcPreview
+            // 
+            this.cpbcPreview.BackColor = System.Drawing.Color.Transparent;
+            this.cpbcPreview.Location = new System.Drawing.Point(11, 16);
+            this.cpbcPreview.Name = "cpbcPreview";
+            this.cpbcPreview.Size = new System.Drawing.Size(1625, 660);
+            this.cpbcPreview.TabIndex = 0;
             // 
             // RibbonWindow
             // 
