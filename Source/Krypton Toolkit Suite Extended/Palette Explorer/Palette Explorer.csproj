@@ -116,6 +116,9 @@
     <Compile Include="UX\OptionsWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UX\PaletteColourExporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UX\PaletteFileEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\OptionsWindow.resx">
       <DependentUpon>OptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\PaletteColourExporter.resx">
+      <DependentUpon>PaletteColourExporter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\PaletteFileEditor.resx">
       <DependentUpon>PaletteFileEditor.cs</DependentUpon>
