@@ -123,6 +123,26 @@ namespace PaletteExplorer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Configration_16_x_16 {
+            get {
+                object obj = ResourceManager.GetObject("Configration_16_x_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Configration_32_x_32 {
+            get {
+                object obj = ResourceManager.GetObject("Configration_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Copy_16_x_16 {
             get {
                 object obj = ResourceManager.GetObject("Copy_16_x_16", resourceCulture);
@@ -156,6 +176,26 @@ namespace PaletteExplorer.Properties {
         internal static System.Drawing.Bitmap Cut_32_x_32 {
             get {
                 object obj = ResourceManager.GetObject("Cut_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap debug_icon_16_x_16 {
+            get {
+                object obj = ResourceManager.GetObject("debug_icon_16_x_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap debug_icon_32_x_32 {
+            get {
+                object obj = ResourceManager.GetObject("debug_icon_32_x_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -566,6 +606,26 @@ namespace PaletteExplorer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Settings_16_x_16 {
+            get {
+                object obj = ResourceManager.GetObject("Settings_16_x_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Settings_32_x_32 {
+            get {
+                object obj = ResourceManager.GetObject("Settings_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Software_Update_16_x_16 {
             get {
                 object obj = ResourceManager.GetObject("Software_Update_16_x_16", resourceCulture);
@@ -579,6 +639,56 @@ namespace PaletteExplorer.Properties {
         internal static System.Drawing.Bitmap Software_Update_32_x_32 {
             get {
                 object obj = ResourceManager.GetObject("Software_Update_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap system_software_update_128_x_128 {
+            get {
+                object obj = ResourceManager.GetObject("system_software_update_128_x_128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap system_software_update_16_x_16 {
+            get {
+                object obj = ResourceManager.GetObject("system_software_update_16_x_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap system_software_update_16_x_16_V2 {
+            get {
+                object obj = ResourceManager.GetObject("system_software_update_16_x_16_V2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap system_software_update_32_x_32 {
+            get {
+                object obj = ResourceManager.GetObject("system_software_update_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap system_software_update_32_x_32_V2 {
+            get {
+                object obj = ResourceManager.GetObject("system_software_update_32_x_32_V2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

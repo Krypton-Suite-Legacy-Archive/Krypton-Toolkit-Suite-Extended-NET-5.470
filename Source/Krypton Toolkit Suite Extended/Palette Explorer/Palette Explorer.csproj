@@ -75,6 +75,7 @@
     <Compile Include="Controls\StandardPictureBoxControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="UX\Colour\ColourContrastTool.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -412,6 +413,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Colour_Contrast_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\debug_icon_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\debug_icon_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configration_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configration_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-software-update_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-software-update_16_x_16_V2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-software-update_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-software-update_32_x_32_V2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-software-update_128_x_128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

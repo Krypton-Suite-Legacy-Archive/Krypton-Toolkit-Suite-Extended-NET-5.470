@@ -7,7 +7,9 @@
  */
 #endregion
 
+using ComponentFactory.Krypton.Toolkit;
 using PaletteExplorer.Classes;
+using PaletteExplorer.Enumerations;
 using System;
 using System.Windows.Forms;
 using ToolkitSettings.Classes.PaletteExplorer;
@@ -1250,6 +1252,8 @@ namespace PaletteExplorer.Controls
         private ContextMenuStrip baseColourMenu, darkColourMenu, middleColourMenu, lightColourMenu, lightestColourMenu, borderColourMenu, alternativeNormalTextColourMenu, normalTextColourMenu, disabledTextColourMenu, focusedTextColourMenu, pressedTextColourMenu, disabledControlColourMenu, linkDisabledColourMenu, linkNormalColourMenu, linkFocusedColourMenu, linkHoverColourMenu, linkVisitedColourMenu, customColourOneMenu, customColourTwoMenu, customColourThreeMenu, customColourFourMenu, customColourFiveMenu, customColourSixMenu, customTextColourOneMenu, customTextColourTwoMenu, customTextColourThreeMenu, customTextColourFourMenu, customTextColourFiveMenu, customTextColourSixMenu, menuTextColourMenu, statusTextColourMenu, ribbonTabTextColourMenu;
 
         private PaletteExplorerBooleanSettingsManager _paletteExplorerBooleanSettingsManager = new PaletteExplorerBooleanSettingsManager();
+
+        private KryptonLabel _colourDetailsLabel;
         #endregion
 
         #region Properties
@@ -1770,6 +1774,16 @@ namespace PaletteExplorer.Controls
         public ContextMenuStrip RibbonTabTextColourMenu { get => ribbonTabTextColourMenu; set => ribbonTabTextColourMenu = value; }
         #endregion
 
+        #region Labels        
+        /// <summary>
+        /// Gets or sets the colour details label.
+        /// </summary>
+        /// <value>
+        /// The colour details label.
+        /// </value>
+        public KryptonLabel ColourDetailsLabel { get => _colourDetailsLabel; set => _colourDetailsLabel = value; }
+        #endregion
+
         #endregion
 
         #region Constructor        
@@ -1985,162 +1999,162 @@ namespace PaletteExplorer.Controls
         #region ToolTips
         private void PbxBaseColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetBaseColourPreview(), GetBaseColourPreview().BackColor, "Base Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetBaseColourPreview(), GetBaseColourPreview().BackColor, "Base Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxDarkColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetDarkColourPreview(), GetDarkColourPreview().BackColor, "Dark Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetDarkColourPreview(), GetDarkColourPreview().BackColor, "Dark Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxMediumColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetMiddleColourPreview(), GetMiddleColourPreview().BackColor, "Middle Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetMiddleColourPreview(), GetMiddleColourPreview().BackColor, "Middle Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxLightColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetLightColourPreview(), GetLightColourPreview().BackColor, "Light Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetLightColourPreview(), GetLightColourPreview().BackColor, "Light Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxLightestColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetLightestColourPreview(), GetLightestColourPreview().BackColor, "Lightest Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetLightestColourPreview(), GetLightestColourPreview().BackColor, "Lightest Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxBorderColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetBorderColourPreview(), GetBorderColourPreview().BackColor, "Border Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetBorderColourPreview(), GetBorderColourPreview().BackColor, "Border Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxAlternativeNormalTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetAlternativeNormalTextColourPreview(), GetAlternativeNormalTextColourPreview().BackColor, "Alternative Normal Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetAlternativeNormalTextColourPreview(), GetAlternativeNormalTextColourPreview().BackColor, "Alternative Normal Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxNormalTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetLinkNormalColourPreview(), GetLinkNormalColourPreview().BackColor, "Normal Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkNormalColourPreview(), GetLinkNormalColourPreview().BackColor, "Normal Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxDisabledTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetDisabledTextColourPreview(), GetDisabledTextColourPreview().BackColor, "Disabled Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetDisabledTextColourPreview(), GetDisabledTextColourPreview().BackColor, "Disabled Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxFocusedTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetFocusedTextColourPreview(), GetFocusedTextColourPreview().BackColor, "Focused Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetFocusedTextColourPreview(), GetFocusedTextColourPreview().BackColor, "Focused Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxPressedTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetPressedTextColourPreview(), GetPressedTextColourPreview().BackColor, "Pressed Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetPressedTextColourPreview(), GetPressedTextColourPreview().BackColor, "Pressed Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxDisabledControlColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetDisabledControlColourPreview(), GetDisabledControlColourPreview().BackColor, "Disabled Control Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetDisabledControlColourPreview(), GetDisabledControlColourPreview().BackColor, "Disabled Control Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxLinkDisabledColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetLinkDisabledColourPreview(), GetLinkDisabledColourPreview().BackColor, "Link Disabled Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkDisabledColourPreview(), GetLinkDisabledColourPreview().BackColor, "Link Disabled Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxLinkNormalColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetLinkNormalColourPreview(), GetLinkNormalColourPreview().BackColor, "Link Normal Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkNormalColourPreview(), GetLinkNormalColourPreview().BackColor, "Link Normal Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxLinkFocusedColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetLinkFocusedColourPreview(), GetLinkFocusedColourPreview().BackColor, "Link Focused Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkFocusedColourPreview(), GetLinkFocusedColourPreview().BackColor, "Link Focused Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxLinkHoverColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetLinkHoverColourPreview(), GetLinkHoverColourPreview().BackColor, "Link Hover Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkHoverColourPreview(), GetLinkHoverColourPreview().BackColor, "Link Hover Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxLinkVisitedColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetLinkVisitedColourPreview(), GetLinkVisitedColourPreview().BackColor, "Link Visited Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkVisitedColourPreview(), GetLinkVisitedColourPreview().BackColor, "Link Visited Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxCustomColourOnePreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourOneColourPreview(), GetCustomColourOneColourPreview().BackColor, "Custom Colour One Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourOneColourPreview(), GetCustomColourOneColourPreview().BackColor, "Custom Colour One Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxCustomColourTwoPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourTwoColourPreview(), GetCustomColourTwoColourPreview().BackColor, "Custom Colour Two Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourTwoColourPreview(), GetCustomColourTwoColourPreview().BackColor, "Custom Colour Two Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxCustomColourThreePreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourThreeColourPreview(), GetCustomColourThreeColourPreview().BackColor, "Custom Colour Three Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourThreeColourPreview(), GetCustomColourThreeColourPreview().BackColor, "Custom Colour Three Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxCustomColourFourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourFourColourPreview(), GetCustomColourFourColourPreview().BackColor, "Custom Colour Four Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourFourColourPreview(), GetCustomColourFourColourPreview().BackColor, "Custom Colour Four Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxCustomColourFivePreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourFiveColourPreview(), GetCustomColourFiveColourPreview().BackColor, "Custom Colour Five Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourFiveColourPreview(), GetCustomColourFiveColourPreview().BackColor, "Custom Colour Five Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxCustomColourSixPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourSixColourPreview(), GetCustomColourSixColourPreview().BackColor, "Custom Colour Six Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomColourSixColourPreview(), GetCustomColourSixColourPreview().BackColor, "Custom Colour Six Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxCustomTextColourOnePreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourOneColourPreview(), GetCustomTextColourOneColourPreview().BackColor, "Custom Text Colour One Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourOneColourPreview(), GetCustomTextColourOneColourPreview().BackColor, "Custom Text Colour One Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxCustomTextColourTwoPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourTwoColourPreview(), GetCustomTextColourTwoColourPreview().BackColor, "Custom Text Colour Two Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourTwoColourPreview(), GetCustomTextColourTwoColourPreview().BackColor, "Custom Text Colour Two Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxCustomTextColourThreePreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourThreeColourPreview(), GetCustomTextColourThreeColourPreview().BackColor, "Custom Text Colour Three Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourThreeColourPreview(), GetCustomTextColourThreeColourPreview().BackColor, "Custom Text Colour Three Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxCustomTextColourFourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourFourColourPreview(), GetCustomTextColourFourColourPreview().BackColor, "Custom Text Colour Four Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourFourColourPreview(), GetCustomTextColourFourColourPreview().BackColor, "Custom Text Colour Four Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxCustomTextColourFivePreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourFiveColourPreview(), GetCustomTextColourFiveColourPreview().BackColor, "Custom Text Colour Five Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourFiveColourPreview(), GetCustomTextColourFiveColourPreview().BackColor, "Custom Text Colour Five Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxCustomTextColourSixPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourSixColourPreview(), GetCustomTextColourSixColourPreview().BackColor, "Custom Text Colour Six Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetCustomTextColourSixColourPreview(), GetCustomTextColourSixColourPreview().BackColor, "Custom Text Colour Six Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxMenuTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetMenuTextColourPreview(), GetMenuTextColourPreview().BackColor, "Menu Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetMenuTextColourPreview(), GetMenuTextColourPreview().BackColor, "Menu Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxStatusTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetStatusTextColourPreview(), GetStatusTextColourPreview().BackColor, "Status Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetStatusTextColourPreview(), GetStatusTextColourPreview().BackColor, "Status Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void PbxRibbonTabTextColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetRibbonTabTextColourPreview(), GetRibbonTabTextColourPreview().BackColor, "Ribbon Tab Text Colour", true);
+            UserInterfaceManager.DisplayToolTipInformation(GetRibbonTabTextColourPreview(), GetRibbonTabTextColourPreview().BackColor, "Ribbon Tab Text Colour", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
         #endregion
 
@@ -3296,6 +3310,20 @@ namespace PaletteExplorer.Controls
         }
         #endregion
 
+        #region Labels
+        /// <summary>
+        /// Sets the ColourDetailsLabel.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        public void SetColourDetailsLabel(KryptonLabel value) => ColourDetailsLabel = value;
+
+        /// <summary>
+        /// Gets the ColourDetailsLabel.
+        /// </summary>
+        /// <returns>The value of ColourDetailsLabel.</returns>
+        public KryptonLabel GetColourDetailsLabel() => ColourDetailsLabel;
+        #endregion
+
         #endregion
 
         #region Methods        
@@ -3307,6 +3335,26 @@ namespace PaletteExplorer.Controls
         private void AssignContextMenuToControl(Control control, ContextMenuStrip contextMenu)
         {
             control.ContextMenuStrip = contextMenu;
+        }
+
+        /// <summary>
+        /// Updates the colour details.
+        /// </summary>
+        /// <param name="control">The control.</param>
+        /// <param name="detailsType">Type of the details.</param>
+        private void UpdateColourDetails(PictureBox control, ColourDetailsType detailsType)
+        {
+            switch (detailsType)
+            {
+                case ColourDetailsType.ARGB:
+                    break;
+                case ColourDetailsType.RGB:
+                    break;
+                case ColourDetailsType.REALNAME:
+                    break;
+                default:
+                    break;
+            }
         }
         #endregion
     }

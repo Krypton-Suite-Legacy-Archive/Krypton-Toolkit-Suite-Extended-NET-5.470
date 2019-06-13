@@ -65,6 +65,7 @@ namespace PaletteExplorer.UX
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.ksbApply = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.knOptions = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.kpGeneral = new ComponentFactory.Krypton.Navigator.KryptonPage();
@@ -86,16 +87,15 @@ namespace PaletteExplorer.UX
             this.knumMediumValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.knumLightValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.knumLightestValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.cbxLightestColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxLightColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxMediumColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
+            this.cbxDarkColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbxLightestColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxLightColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxMediumColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.cbxDarkColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
-            this.ksbApply = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonUACElevatedButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -147,6 +147,19 @@ namespace PaletteExplorer.UX
             this.kbtnCancel.TabIndex = 1;
             this.kbtnCancel.Values.Text = "Can&cel";
             // 
+            // ksbApply
+            // 
+            this.ksbApply.AutoSize = true;
+            this.ksbApply.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ksbApply.Enabled = false;
+            this.ksbApply.Location = new System.Drawing.Point(823, 13);
+            this.ksbApply.Name = "ksbApply";
+            this.ksbApply.Size = new System.Drawing.Size(71, 30);
+            this.ksbApply.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ksbApply.TabIndex = 0;
+            this.ksbApply.Values.Image = ((System.Drawing.Image)(resources.GetObject("ksbApply.Values.Image")));
+            this.ksbApply.Values.Text = "&Apply";
+            // 
             // kryptonPanel2
             // 
             this.kryptonPanel2.Controls.Add(this.knOptions);
@@ -166,7 +179,7 @@ namespace PaletteExplorer.UX
             this.kpGeneral,
             this.kpTheme,
             this.kryptonPage1});
-            this.knOptions.SelectedIndex = 2;
+            this.knOptions.SelectedIndex = 0;
             this.knOptions.Size = new System.Drawing.Size(882, 776);
             this.knOptions.StateCommon.Tab.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knOptions.TabIndex = 0;
@@ -246,6 +259,7 @@ namespace PaletteExplorer.UX
             this.ktxtCustomThemePath.Name = "ktxtCustomThemePath";
             this.ktxtCustomThemePath.Size = new System.Drawing.Size(561, 27);
             this.ktxtCustomThemePath.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.ktxtCustomThemePath.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
             this.ktxtCustomThemePath.TabIndex = 3;
             // 
             // klblCustomThemeFilePath
@@ -266,6 +280,7 @@ namespace PaletteExplorer.UX
             this.kcbTheme.Name = "kcbTheme";
             this.kcbTheme.Size = new System.Drawing.Size(182, 25);
             this.kcbTheme.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbTheme.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kcbTheme.TabIndex = 1;
             this.kcbTheme.SelectedIndexChanged += new System.EventHandler(this.KcbTheme_SelectedIndexChanged);
             // 
@@ -370,8 +385,8 @@ namespace PaletteExplorer.UX
             this.knumDarkValue.Name = "knumDarkValue";
             this.knumDarkValue.Size = new System.Drawing.Size(120, 32);
             this.knumDarkValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumDarkValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knumDarkValue.TabIndex = 29;
-            this.knumDarkValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.knumDarkValue.ValueChanged += new System.EventHandler(this.KnumDarkValue_ValueChanged);
             // 
             // knumMediumValue
@@ -386,8 +401,8 @@ namespace PaletteExplorer.UX
             this.knumMediumValue.Name = "knumMediumValue";
             this.knumMediumValue.Size = new System.Drawing.Size(120, 32);
             this.knumMediumValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumMediumValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knumMediumValue.TabIndex = 28;
-            this.knumMediumValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.knumMediumValue.ValueChanged += new System.EventHandler(this.KnumMediumValue_ValueChanged);
             // 
             // knumLightValue
@@ -402,8 +417,8 @@ namespace PaletteExplorer.UX
             this.knumLightValue.Name = "knumLightValue";
             this.knumLightValue.Size = new System.Drawing.Size(120, 32);
             this.knumLightValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumLightValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knumLightValue.TabIndex = 27;
-            this.knumLightValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.knumLightValue.ValueChanged += new System.EventHandler(this.KnumLightValue_ValueChanged);
             // 
             // knumLightestValue
@@ -418,9 +433,49 @@ namespace PaletteExplorer.UX
             this.knumLightestValue.Name = "knumLightestValue";
             this.knumLightestValue.Size = new System.Drawing.Size(120, 32);
             this.knumLightestValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumLightestValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knumLightestValue.TabIndex = 26;
-            this.knumLightestValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.knumLightestValue.ValueChanged += new System.EventHandler(this.KnumLightestValue_ValueChanged);
+            // 
+            // cbxLightestColour
+            // 
+            this.cbxLightestColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxLightestColour.BackColor = System.Drawing.Color.Black;
+            this.cbxLightestColour.Location = new System.Drawing.Point(765, 374);
+            this.cbxLightestColour.Name = "cbxLightestColour";
+            this.cbxLightestColour.Size = new System.Drawing.Size(95, 95);
+            this.cbxLightestColour.TabIndex = 25;
+            this.cbxLightestColour.TabStop = false;
+            // 
+            // cbxLightColour
+            // 
+            this.cbxLightColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxLightColour.BackColor = System.Drawing.Color.Black;
+            this.cbxLightColour.Location = new System.Drawing.Point(765, 258);
+            this.cbxLightColour.Name = "cbxLightColour";
+            this.cbxLightColour.Size = new System.Drawing.Size(95, 95);
+            this.cbxLightColour.TabIndex = 24;
+            this.cbxLightColour.TabStop = false;
+            // 
+            // cbxMediumColour
+            // 
+            this.cbxMediumColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxMediumColour.BackColor = System.Drawing.Color.Black;
+            this.cbxMediumColour.Location = new System.Drawing.Point(765, 142);
+            this.cbxMediumColour.Name = "cbxMediumColour";
+            this.cbxMediumColour.Size = new System.Drawing.Size(95, 95);
+            this.cbxMediumColour.TabIndex = 23;
+            this.cbxMediumColour.TabStop = false;
+            // 
+            // cbxDarkColour
+            // 
+            this.cbxDarkColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxDarkColour.BackColor = System.Drawing.Color.Black;
+            this.cbxDarkColour.Location = new System.Drawing.Point(765, 26);
+            this.cbxDarkColour.Name = "cbxDarkColour";
+            this.cbxDarkColour.Size = new System.Drawing.Size(95, 95);
+            this.cbxDarkColour.TabIndex = 22;
+            this.cbxDarkColour.TabStop = false;
             // 
             // kryptonLabel7
             // 
@@ -470,59 +525,6 @@ namespace PaletteExplorer.UX
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(906, 3);
             this.panel1.TabIndex = 2;
-            // 
-            // cbxLightestColour
-            // 
-            this.cbxLightestColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxLightestColour.BackColor = System.Drawing.Color.Black;
-            this.cbxLightestColour.Location = new System.Drawing.Point(765, 374);
-            this.cbxLightestColour.Name = "cbxLightestColour";
-            this.cbxLightestColour.Size = new System.Drawing.Size(95, 95);
-            this.cbxLightestColour.TabIndex = 25;
-            this.cbxLightestColour.TabStop = false;
-            // 
-            // cbxLightColour
-            // 
-            this.cbxLightColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxLightColour.BackColor = System.Drawing.Color.Black;
-            this.cbxLightColour.Location = new System.Drawing.Point(765, 258);
-            this.cbxLightColour.Name = "cbxLightColour";
-            this.cbxLightColour.Size = new System.Drawing.Size(95, 95);
-            this.cbxLightColour.TabIndex = 24;
-            this.cbxLightColour.TabStop = false;
-            // 
-            // cbxMediumColour
-            // 
-            this.cbxMediumColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxMediumColour.BackColor = System.Drawing.Color.Black;
-            this.cbxMediumColour.Location = new System.Drawing.Point(765, 142);
-            this.cbxMediumColour.Name = "cbxMediumColour";
-            this.cbxMediumColour.Size = new System.Drawing.Size(95, 95);
-            this.cbxMediumColour.TabIndex = 23;
-            this.cbxMediumColour.TabStop = false;
-            // 
-            // cbxDarkColour
-            // 
-            this.cbxDarkColour.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxDarkColour.BackColor = System.Drawing.Color.Black;
-            this.cbxDarkColour.Location = new System.Drawing.Point(765, 26);
-            this.cbxDarkColour.Name = "cbxDarkColour";
-            this.cbxDarkColour.Size = new System.Drawing.Size(95, 95);
-            this.cbxDarkColour.TabIndex = 22;
-            this.cbxDarkColour.TabStop = false;
-            // 
-            // ksbApply
-            // 
-            this.ksbApply.AutoSize = true;
-            this.ksbApply.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ksbApply.Enabled = false;
-            this.ksbApply.Location = new System.Drawing.Point(823, 13);
-            this.ksbApply.Name = "ksbApply";
-            this.ksbApply.Size = new System.Drawing.Size(71, 30);
-            this.ksbApply.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ksbApply.TabIndex = 0;
-            this.ksbApply.Values.Image = ((System.Drawing.Image)(resources.GetObject("ksbApply.Values.Image")));
-            this.ksbApply.Values.Text = "&Apply";
             // 
             // OptionsWindow
             // 

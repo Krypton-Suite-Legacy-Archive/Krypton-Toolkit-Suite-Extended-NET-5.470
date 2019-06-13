@@ -12,7 +12,7 @@ namespace ToolkitSettings.Settings.Palette_Explorer {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.1.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.2.0.0")]
     internal sealed partial class GeneralPaletteExplorerSettings : global::System.Configuration.ApplicationSettingsBase {
         
         private static GeneralPaletteExplorerSettings defaultInstance = ((GeneralPaletteExplorerSettings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new GeneralPaletteExplorerSettings())));
@@ -97,7 +97,7 @@ namespace ToolkitSettings.Settings.Palette_Explorer {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Transparent")]
+        [global::System.Configuration.DefaultSettingValueAttribute("White")]
         public global::System.Drawing.Color DefaultColour {
             get {
                 return ((global::System.Drawing.Color)(this["DefaultColour"]));

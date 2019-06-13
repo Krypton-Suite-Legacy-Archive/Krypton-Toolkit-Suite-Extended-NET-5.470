@@ -109,7 +109,7 @@ namespace PaletteExplorer.UX.New
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonTab kryptonRibbonTab3;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup6;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple20;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton3;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbExportConfigurationFiles;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator14;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple18;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbOptions;
@@ -263,7 +263,7 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonTab3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup6 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple20 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.kryptonRibbonGroupButton3 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.krgbExportConfigurationFiles = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupSeparator14 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple18 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbOptions = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -287,9 +287,9 @@ namespace PaletteExplorer.UX.New
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.standardPictureBoxControl1 = new PaletteExplorer.Controls.StandardPictureBoxControl();
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.cpbcPreview = new PaletteExplorer.Controls.CircularPictureBoxControl();
             this.kdm = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
             this.ilImages = new System.Windows.Forms.ImageList(this.components);
-            this.cpbcPreview = new PaletteExplorer.Controls.CircularPictureBoxControl();
             ((System.ComponentModel.ISupportInitialize)(this.krControls)).BeginInit();
             this.ctxReset.SuspendLayout();
             this.ctxViewTypes.SuspendLayout();
@@ -671,7 +671,8 @@ namespace PaletteExplorer.UX.New
             // 
             // krgbUpdateColours
             // 
-            this.krgbUpdateColours.ButtonType = ComponentFactory.Krypton.Ribbon.GroupButtonType.Split;
+            this.krgbUpdateColours.ImageLarge = global::PaletteExplorer.Properties.Resources.Refresh_32_x_32;
+            this.krgbUpdateColours.ImageSmall = global::PaletteExplorer.Properties.Resources.Refresh_16_x_16;
             this.krgbUpdateColours.TextLine1 = "Update";
             this.krgbUpdateColours.TextLine2 = "Colours";
             // 
@@ -699,7 +700,7 @@ namespace PaletteExplorer.UX.New
             this.toolStripSeparator1,
             this.resetColoursToolStripMenuItem});
             this.ctxReset.Name = "ctxReset";
-            this.ctxReset.Size = new System.Drawing.Size(187, 82);
+            this.ctxReset.Size = new System.Drawing.Size(187, 104);
             // 
             // resetColourUIToolStripMenuItem
             // 
@@ -881,11 +882,15 @@ namespace PaletteExplorer.UX.New
             // kryptonRibbonGroupTriple20
             // 
             this.kryptonRibbonGroupTriple20.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.kryptonRibbonGroupButton3});
+            this.krgbExportConfigurationFiles});
             // 
-            // kryptonRibbonGroupButton3
+            // krgbExportConfigurationFiles
             // 
-            this.kryptonRibbonGroupButton3.Click += new System.EventHandler(this.KryptonRibbonGroupButton3_Click);
+            this.krgbExportConfigurationFiles.ImageLarge = global::PaletteExplorer.Properties.Resources.Configration_32_x_32;
+            this.krgbExportConfigurationFiles.ImageSmall = global::PaletteExplorer.Properties.Resources.Configration_16_x_16;
+            this.krgbExportConfigurationFiles.TextLine1 = "Export Colours to";
+            this.krgbExportConfigurationFiles.TextLine2 = "Configuration Files";
+            this.krgbExportConfigurationFiles.Click += new System.EventHandler(this.KryptonRibbonGroupButton3_Click);
             // 
             // kryptonRibbonGroupTriple18
             // 
@@ -896,6 +901,8 @@ namespace PaletteExplorer.UX.New
             // 
             // krgbOptions
             // 
+            this.krgbOptions.ImageLarge = global::PaletteExplorer.Properties.Resources.Settings_32_x_32;
+            this.krgbOptions.ImageSmall = global::PaletteExplorer.Properties.Resources.Settings_16_x_16;
             this.krgbOptions.TextLine1 = "Options /";
             this.krgbOptions.TextLine2 = "Settings";
             this.krgbOptions.Click += new System.EventHandler(this.KrgbOptions_Click);
@@ -904,10 +911,13 @@ namespace PaletteExplorer.UX.New
             // 
             this.krgbExpertMode.TextLine1 = "Expert";
             this.krgbExpertMode.TextLine2 = "Mode";
+            this.krgbExpertMode.Visible = false;
             this.krgbExpertMode.Click += new System.EventHandler(this.krgbExpertMode_Click);
             // 
             // krgbColourDebugConsole
             // 
+            this.krgbColourDebugConsole.ImageLarge = global::PaletteExplorer.Properties.Resources.debug_icon_32_x_32;
+            this.krgbColourDebugConsole.ImageSmall = global::PaletteExplorer.Properties.Resources.debug_icon_16_x_16;
             this.krgbColourDebugConsole.TextLine1 = "Colour Debug";
             this.krgbColourDebugConsole.TextLine2 = "Console";
             this.krgbColourDebugConsole.Click += new System.EventHandler(this.KrgbColourDebugConsole_Click);
@@ -932,6 +942,8 @@ namespace PaletteExplorer.UX.New
             // 
             // krgbAbout
             // 
+            this.krgbAbout.ImageLarge = global::PaletteExplorer.Properties.Resources.About_Information_32_x_32;
+            this.krgbAbout.ImageSmall = global::PaletteExplorer.Properties.Resources.About_Information_16_x_16;
             this.krgbAbout.TextLine1 = "About";
             // 
             // kryptonRibbonGroupTriple22
@@ -941,6 +953,8 @@ namespace PaletteExplorer.UX.New
             // 
             // krgbCheckForUpdates
             // 
+            this.krgbCheckForUpdates.ImageLarge = global::PaletteExplorer.Properties.Resources.Software_Update_32_x_32;
+            this.krgbCheckForUpdates.ImageSmall = global::PaletteExplorer.Properties.Resources.Software_Update_16_x_16;
             this.krgbCheckForUpdates.TextLine1 = "Check for";
             this.krgbCheckForUpdates.TextLine2 = "Updates";
             // 
@@ -1016,7 +1030,7 @@ namespace PaletteExplorer.UX.New
             this.kdnContentDisplay.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
             this.kryptonPage2});
-            this.kdnContentDisplay.SelectedIndex = 1;
+            this.kdnContentDisplay.SelectedIndex = 0;
             this.kdnContentDisplay.Size = new System.Drawing.Size(1662, 717);
             this.kdnContentDisplay.TabIndex = 0;
             this.kdnContentDisplay.Text = "kryptonDockableNavigator1";
@@ -1039,6 +1053,7 @@ namespace PaletteExplorer.UX.New
             // standardPictureBoxControl1
             // 
             this.standardPictureBoxControl1.BackColor = System.Drawing.Color.Transparent;
+            this.standardPictureBoxControl1.ColourDetailsLabel = this.lblColourOutput;
             this.standardPictureBoxControl1.Location = new System.Drawing.Point(20, 16);
             this.standardPictureBoxControl1.Name = "standardPictureBoxControl1";
             this.standardPictureBoxControl1.Size = new System.Drawing.Size(1625, 660);
@@ -1057,12 +1072,6 @@ namespace PaletteExplorer.UX.New
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
             this.kryptonPage2.UniqueName = "c93c9b60d5274878be88f907b4809e18";
             // 
-            // ilImages
-            // 
-            this.ilImages.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.ilImages.ImageSize = new System.Drawing.Size(16, 16);
-            this.ilImages.TransparentColor = System.Drawing.Color.Transparent;
-            // 
             // cpbcPreview
             // 
             this.cpbcPreview.BackColor = System.Drawing.Color.Transparent;
@@ -1070,6 +1079,12 @@ namespace PaletteExplorer.UX.New
             this.cpbcPreview.Name = "cpbcPreview";
             this.cpbcPreview.Size = new System.Drawing.Size(1625, 660);
             this.cpbcPreview.TabIndex = 0;
+            // 
+            // ilImages
+            // 
+            this.ilImages.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.ilImages.ImageSize = new System.Drawing.Size(16, 16);
+            this.ilImages.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // RibbonWindow
             // 
@@ -1113,7 +1128,7 @@ namespace PaletteExplorer.UX.New
         #region Variables
         GeneralPaletteExplorerSettingsManager _generalPaletteExplorerSettingsManager = new GeneralPaletteExplorerSettingsManager();
         GlobalBooleanSettingsManager _globalBooleanSettingsManager = new GlobalBooleanSettingsManager();
-        Timer _uiUpdateTimer;
+        Timer _uiUpdateTimer, _colourUpdateTimer;
         KryptonPage _page;
         PalettePropertyGrid _palettePropertyGrid;
         KryptonPalette _palette = new KryptonPalette();

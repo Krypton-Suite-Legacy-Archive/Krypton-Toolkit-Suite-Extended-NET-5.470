@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PaletteExplorer.Enumerations
+﻿namespace PaletteExplorer.Enumerations
 {
-    class Enumerations
+    public enum ColourDetailsType
     {
+        ARGB = 0,
+        RGB = 1,
+        REALNAME = 2
     }
 }
