@@ -7,7 +7,10 @@
  */
 #endregion
 
+using Core.Classes;
+using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using ToolkitSettings.BackEnd;
 using ToolkitSettings.Settings.Palette_Explorer.Colours;
@@ -846,6 +849,176 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
                 _allMergedColourSettings.Save();
 
                 SetSettingsModified(false);
+            }
+        }
+        #endregion
+
+        #region IO Stuff
+        public static void WriteARGBColoursToFile(string colourConfigurationFilePath)
+        {
+            AllMergedColourSettingsManager manager = new AllMergedColourSettingsManager();
+
+            try
+            {
+                StreamWriter writer = new StreamWriter(colourConfigurationFilePath);
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetAlternativeNormalTextColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetBaseColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetBorderColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetCustomColourOne()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetCustomColourTwo()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetCustomColourThree()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetCustomColourFour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetCustomColourFive()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetCustomColourSix()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetCustomTextColourOne()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetCustomTextColourTwo()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetCustomTextColourThree()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetCustomTextColourFour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetCustomTextColourFive()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetCustomTextColourSix()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetDarkColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetDisabledControlColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetDisabledTextColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetFocusedTextColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLightColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLightestColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLinkDisabledColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLinkFocusedColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLinkHoverColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLinkNormalColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLinkVisitedColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetMediumColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetMenuTextColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetNormalTextColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetPressedTextColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetRibbonTabTextColour()));
+
+                writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetStatusStripTextColour()));
+
+                writer.Flush();
+
+                writer.Close();
+
+                writer.Dispose();
+            }
+            catch (Exception exc)
+            {
+                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: '{ exc.Message }'", "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static void WriteRGBColoursToFile(string colourConfigurationFilePath)
+        {
+            AllMergedColourSettingsManager manager = new AllMergedColourSettingsManager();
+
+            try
+            {
+                StreamWriter writer = new StreamWriter(colourConfigurationFilePath);
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetAlternativeNormalTextColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetBaseColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetBorderColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetCustomColourOne()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetCustomColourTwo()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetCustomColourThree()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetCustomColourFour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetCustomColourFive()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetCustomColourSix()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetCustomTextColourOne()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetCustomTextColourTwo()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetCustomTextColourThree()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetCustomTextColourFour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetCustomTextColourFive()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetCustomTextColourSix()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetDarkColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetDisabledControlColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetDisabledTextColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetFocusedTextColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetLightColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetLightestColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetLinkDisabledColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetLinkFocusedColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetLinkHoverColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetLinkNormalColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetLinkVisitedColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetMediumColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetMenuTextColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetNormalTextColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetPressedTextColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetRibbonTabTextColour()));
+
+                writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetStatusStripTextColour()));
+
+                writer.Flush();
+
+                writer.Close();
+
+                writer.Dispose();
+            }
+            catch (Exception exc)
+            {
+                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: '{ exc.Message }'", "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion

@@ -332,7 +332,7 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
             this.krControls.SelectedContext = null;
-            this.krControls.SelectedTab = this.kryptonRibbonTab2;
+            this.krControls.SelectedTab = this.kryptonRibbonTab3;
             this.krControls.Size = new System.Drawing.Size(1662, 115);
             this.krControls.TabIndex = 2;
             // 
@@ -700,7 +700,7 @@ namespace PaletteExplorer.UX.New
             this.toolStripSeparator1,
             this.resetColoursToolStripMenuItem});
             this.ctxReset.Name = "ctxReset";
-            this.ctxReset.Size = new System.Drawing.Size(187, 104);
+            this.ctxReset.Size = new System.Drawing.Size(187, 82);
             // 
             // resetColourUIToolStripMenuItem
             // 
@@ -890,7 +890,7 @@ namespace PaletteExplorer.UX.New
             this.krgbExportConfigurationFiles.ImageSmall = global::PaletteExplorer.Properties.Resources.Configration_16_x_16;
             this.krgbExportConfigurationFiles.TextLine1 = "Export Colours to";
             this.krgbExportConfigurationFiles.TextLine2 = "Configuration Files";
-            this.krgbExportConfigurationFiles.Click += new System.EventHandler(this.KryptonRibbonGroupButton3_Click);
+            this.krgbExportConfigurationFiles.Click += new System.EventHandler(this.KrgbExportConfigurationFiles_Click);
             // 
             // kryptonRibbonGroupTriple18
             // 
@@ -1325,13 +1325,6 @@ namespace PaletteExplorer.UX.New
             colourMixer.Show();
         }
 
-        private void KryptonRibbonGroupButton3_Click(object sender, EventArgs e)
-        {
-            ColourMixerBasic colourMixer = new ColourMixerBasic();
-
-            colourMixer.Show();
-        }
-
         private void KrgbInspireMe_Click(object sender, EventArgs e)
         {
             InspireMe();
@@ -1364,6 +1357,13 @@ namespace PaletteExplorer.UX.New
             ColourDebugConsole debugConsole = new ColourDebugConsole();
 
             debugConsole.Show();
+        }
+
+        private void KrgbExportConfigurationFiles_Click(object sender, EventArgs e)
+        {
+            PaletteColourExporter exporter = new PaletteColourExporter();
+
+            exporter.Show();
         }
 
         private void KrgbColourContrastTool_Click(object sender, EventArgs e)

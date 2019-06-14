@@ -8,6 +8,7 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using ToolkitSettings.Settings.Palette_Explorer.Colours;
@@ -126,6 +127,11 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         public Color GetMenuTextColour()
         {
             return _standardControlTextColourSettings.MenuTextColour;
+        }
+
+        public static void WriteRGBColoursToFile(string path)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>

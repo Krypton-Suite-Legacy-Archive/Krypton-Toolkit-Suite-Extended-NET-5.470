@@ -8,6 +8,7 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using ToolkitSettings.Settings.PaletteExplorer.Colours;
@@ -117,6 +118,11 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
             _miscellaneousColourSettings.BorderColour = colour;
 
             SetSettingsModified(true);
+        }
+
+        public static void WriteRGBColoursToFile(string path)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>

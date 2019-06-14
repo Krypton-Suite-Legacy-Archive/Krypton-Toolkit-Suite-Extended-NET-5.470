@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,6 +34,12 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +48,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Enumerations.cs" />
+    <Compile Include="Classes\TaskDialogButton.cs" />
+    <Compile Include="Classes\TaskDialogButtonClickedEventArgs.cs" />
+    <Compile Include="Classes\TaskDialogCheckBox.cs" />
+    <Compile Include="Classes\TaskDialogClosingEventArgs.cs" />
+    <Compile Include="Classes\TaskDialogCommonButton.cs" />
+    <Compile Include="Classes\TaskDialogCommonButtonCollection.cs" />
+    <Compile Include="Classes\TaskDialogControl.cs" />
+    <Compile Include="Classes\TaskDialogCustomButton.cs" />
+    <Compile Include="Classes\TaskDialogCustomButtonCollection.cs" />
+    <Compile Include="Classes\TaskDialogExpander.cs" />
+    <Compile Include="Classes\TaskDialogFooter.cs" />
+    <Compile Include="Classes\TaskDialogHyperlinkClickedEventArgs.cs" />
+    <Compile Include="Classes\TaskDialogNativeMethods.cs" />
+    <Compile Include="Classes\TaskDialogPage.cs" />
+    <Compile Include="Classes\TaskDialogProgressBar.cs" />
+    <Compile Include="Classes\TaskDialogRadioButton.cs" />
+    <Compile Include="Classes\TaskDialogRadioButtonCollection.cs" />
+    <Compile Include="Classes\WindowSubclassHandler.cs" />
+    <Compile Include="Classes\WindowSubclassHandlerNativeMethods.cs" />
+    <Compile Include="Controls\TaskDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskDialog.WindowSubclassHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -48,5 +81,6 @@
       <Version>5.470.1222</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

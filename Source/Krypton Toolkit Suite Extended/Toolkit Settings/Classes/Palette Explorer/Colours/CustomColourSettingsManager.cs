@@ -8,6 +8,7 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -71,6 +72,11 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         public void SetAlwaysUsePrompt(bool value)
         {
             AlwaysUsePrompt = value;
+        }
+
+        public static void WriteRGBColoursToFile(string path)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
