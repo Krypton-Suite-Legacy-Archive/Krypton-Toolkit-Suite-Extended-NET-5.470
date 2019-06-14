@@ -1,5 +1,5 @@
 ﻿using System;
-
+using TaskDialogs.Controls;
 using TaskDialogFlags = TaskDialogs.Classes.TaskDialogNativeMethods.TASKDIALOG_FLAGS;
 
 namespace TaskDialogs.Classes

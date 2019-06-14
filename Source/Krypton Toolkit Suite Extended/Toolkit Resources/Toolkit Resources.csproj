@@ -1114,5 +1114,92 @@
   <ItemGroup>
     <None Include="Resources\System-Information-tool-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckGroupBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapsibleGroupBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapsiblePanel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapsiblePanelSplitter.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapsibleSplitter.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorListBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorPickerCtrl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorTable.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorWheelCtrl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboBoxEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FloatableToolStrip.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LabelRotate.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListBoxEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListViewEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MultiLabel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavigateBar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\None.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RadioGroupBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplitButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextBoxButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapsed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapsible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expended.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

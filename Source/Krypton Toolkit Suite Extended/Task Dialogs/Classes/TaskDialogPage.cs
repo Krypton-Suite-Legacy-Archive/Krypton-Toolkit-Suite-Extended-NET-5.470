@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-
+using TaskDialogs.Controls;
 using TaskDialogFlags = TaskDialogs.Classes.TaskDialogNativeMethods.TASKDIALOG_FLAGS;
 using TaskDialogIconElement = TaskDialogs.Classes.TaskDialogNativeMethods.TASKDIALOG_ICON_ELEMENTS;
 using TaskDialogTextElement = TaskDialogs.Classes.TaskDialogNativeMethods.TASKDIALOG_ELEMENTS;

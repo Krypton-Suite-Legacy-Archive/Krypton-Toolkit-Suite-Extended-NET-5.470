@@ -232,8 +232,10 @@ namespace TaskDialogs.Controls
             : base()
         {
             // TaskDialog is only supported on Windows.
-            if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                throw new PlatformNotSupportedException();
+            //if (!System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            //{
+            //    throw new PlatformNotSupportedException();
+            //}
 
             // Set default properties.
             _startupLocation = TaskDialogStartupLocation.CenterParent;

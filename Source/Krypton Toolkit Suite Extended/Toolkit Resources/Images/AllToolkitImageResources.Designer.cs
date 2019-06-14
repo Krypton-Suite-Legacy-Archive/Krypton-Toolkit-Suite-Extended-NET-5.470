@@ -483,9 +483,49 @@ namespace ToolkitResources.Images {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CheckGroupBox {
+            get {
+                object obj = ResourceManager.GetObject("CheckGroupBox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Class_16x {
             get {
                 object obj = ResourceManager.GetObject("Class_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close {
+            get {
+                object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap collapse {
+            get {
+                object obj = ResourceManager.GetObject("collapse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap collapsed {
+            get {
+                object obj = ResourceManager.GetObject("collapsed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -506,6 +546,56 @@ namespace ToolkitResources.Images {
         internal static System.Drawing.Bitmap CollapseIcon2010 {
             get {
                 object obj = ResourceManager.GetObject("CollapseIcon2010", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap collapsible {
+            get {
+                object obj = ResourceManager.GetObject("collapsible", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CollapsibleGroupBox {
+            get {
+                object obj = ResourceManager.GetObject("CollapsibleGroupBox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CollapsiblePanel {
+            get {
+                object obj = ResourceManager.GetObject("CollapsiblePanel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CollapsiblePanelSplitter {
+            get {
+                object obj = ResourceManager.GetObject("CollapsiblePanelSplitter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CollapsibleSplitter {
+            get {
+                object obj = ResourceManager.GetObject("CollapsibleSplitter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -576,6 +666,46 @@ namespace ToolkitResources.Images {
         internal static System.Drawing.Bitmap colorbarIndicators {
             get {
                 object obj = ResourceManager.GetObject("colorbarIndicators", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ColorListBox {
+            get {
+                object obj = ResourceManager.GetObject("ColorListBox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ColorPickerCtrl {
+            get {
+                object obj = ResourceManager.GetObject("ColorPickerCtrl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ColorTable {
+            get {
+                object obj = ResourceManager.GetObject("ColorTable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ColorWheelCtrl {
+            get {
+                object obj = ResourceManager.GetObject("ColorWheelCtrl", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -686,6 +816,16 @@ namespace ToolkitResources.Images {
         internal static System.Drawing.Bitmap ColumnHeader_UnFiltered {
             get {
                 object obj = ResourceManager.GetObject("ColumnHeader_UnFiltered", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ComboBoxEx {
+            get {
+                object obj = ResourceManager.GetObject("ComboBoxEx", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1193,6 +1333,16 @@ namespace ToolkitResources.Images {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap expended {
+            get {
+                object obj = ResourceManager.GetObject("expended", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Export_16_x_16 {
             get {
                 object obj = ResourceManager.GetObject("Export_16_x_16", resourceCulture);
@@ -1306,6 +1456,16 @@ namespace ToolkitResources.Images {
         internal static System.Drawing.Bitmap flag_scotland {
             get {
                 object obj = ResourceManager.GetObject("flag_scotland", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FloatableToolStrip {
+            get {
+                object obj = ResourceManager.GetObject("FloatableToolStrip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1536,6 +1696,16 @@ namespace ToolkitResources.Images {
         internal static System.Drawing.Bitmap Hard_Drive_v2_32_x_32 {
             get {
                 object obj = ResourceManager.GetObject("Hard_Drive_v2_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap help {
+            get {
+                object obj = ResourceManager.GetObject("help", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1893,6 +2063,16 @@ namespace ToolkitResources.Images {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LabelRotate {
+            get {
+                object obj = ResourceManager.GetObject("LabelRotate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap light_bulb {
             get {
                 object obj = ResourceManager.GetObject("light_bulb", resourceCulture);
@@ -1926,6 +2106,36 @@ namespace ToolkitResources.Images {
         internal static System.Drawing.Bitmap light_bulb_48_x_48 {
             get {
                 object obj = ResourceManager.GetObject("light_bulb_48_x_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ListBoxEx {
+            get {
+                object obj = ResourceManager.GetObject("ListBoxEx", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ListViewEx {
+            get {
+                object obj = ResourceManager.GetObject("ListViewEx", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maximize {
+            get {
+                object obj = ResourceManager.GetObject("maximize", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2003,6 +2213,26 @@ namespace ToolkitResources.Images {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minimize {
+            get {
+                object obj = ResourceManager.GetObject("minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MultiLabel {
+            get {
+                object obj = ResourceManager.GetObject("MultiLabel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Namespace_16x {
             get {
                 object obj = ResourceManager.GetObject("Namespace_16x", resourceCulture);
@@ -2053,6 +2283,16 @@ namespace ToolkitResources.Images {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NavigateBar {
+            get {
+                object obj = ResourceManager.GetObject("NavigateBar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NaviGroup {
             get {
                 object obj = ResourceManager.GetObject("NaviGroup", resourceCulture);
@@ -2086,6 +2326,16 @@ namespace ToolkitResources.Images {
         internal static System.Drawing.Bitmap New_File_32_x_32 {
             get {
                 object obj = ResourceManager.GetObject("New_File_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap None {
+            get {
+                object obj = ResourceManager.GetObject("None", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2423,6 +2673,16 @@ namespace ToolkitResources.Images {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RadioGroupBox {
+            get {
+                object obj = ResourceManager.GetObject("RadioGroupBox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Redo_128_x_128 {
             get {
                 object obj = ResourceManager.GetObject("Redo_128_x_128", resourceCulture);
@@ -2486,6 +2746,16 @@ namespace ToolkitResources.Images {
         internal static System.Drawing.Bitmap Reset_32_x_32 {
             get {
                 object obj = ResourceManager.GetObject("Reset_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restore {
+            get {
+                object obj = ResourceManager.GetObject("restore", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2686,6 +2956,16 @@ namespace ToolkitResources.Images {
         internal static System.Drawing.Bitmap SparkleIndeterminate {
             get {
                 object obj = ResourceManager.GetObject("SparkleIndeterminate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SplitButton {
+            get {
+                object obj = ResourceManager.GetObject("SplitButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3006,6 +3286,16 @@ namespace ToolkitResources.Images {
         internal static System.Drawing.Bitmap text_underline {
             get {
                 object obj = ResourceManager.GetObject("text_underline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TextBoxButton {
+            get {
+                object obj = ResourceManager.GetObject("TextBoxButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
