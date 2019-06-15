@@ -386,6 +386,9 @@
     <Compile Include="ExtendedToolkit\FloatingFramework\UX\ExistingComponentChooser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\FloatingFramework\UX\MenuStripContainerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\FloatingFramework\UX\ToolStripContainerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1193,6 +1196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\FloatingFramework\UX\ExistingComponentChooser.resx">
       <DependentUpon>ExistingComponentChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\FloatingFramework\UX\MenuStripContainerWindow.resx">
+      <DependentUpon>MenuStripContainerWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\FloatingFramework\UX\ToolStripContainerWindow.resx">
       <DependentUpon>ToolStripContainerWindow.cs</DependentUpon>
