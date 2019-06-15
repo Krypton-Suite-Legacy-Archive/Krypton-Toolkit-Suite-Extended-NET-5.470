@@ -85,6 +85,9 @@
     <Compile Include="FlashingLabelTest.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FloatingMenuStripExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FloatingToolStripExample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FlashingLabelTest.resx">
       <DependentUpon>FlashingLabelTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FloatingMenuStripExample.resx">
+      <DependentUpon>FloatingMenuStripExample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FloatingToolStripExample.resx">
       <DependentUpon>FloatingToolStripExample.cs</DependentUpon>

@@ -376,8 +376,15 @@
     <Compile Include="ExtendedToolkit\Error Reporting\UX\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\FloatingFramework\Classes\MenuStripPanelCollectionEditor.cs" />
     <Compile Include="ExtendedToolkit\FloatingFramework\Classes\ToolStripPanelCollectionEditor.cs" />
+    <Compile Include="ExtendedToolkit\FloatingFramework\Controls\FloatableMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\FloatingFramework\Controls\FloatableToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\FloatingFramework\Controls\MenuStripPanelExtened.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\FloatingFramework\Controls\ToolStripPanelExtened.cs">
@@ -387,6 +394,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\FloatingFramework\UX\MenuStripContainerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\FloatingFramework\UX\MenuStripExistingComponentChooser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\FloatingFramework\UX\ToolStripContainerWindow.cs">
@@ -741,7 +751,9 @@
     <Compile Include="ExtendedToolkit\FloatingFramework\Controls\TearOffToolStrip.Designer.cs">
       <DependentUpon>TearOffToolStrip.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExtendedToolkit\FloatingFramework\UX\KryptonFloatingForm.cs" />
+    <Compile Include="ExtendedToolkit\FloatingFramework\UX\KryptonFloatingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\FloatingFramework\UX\KryptonFloatingForm.Designer.cs">
       <DependentUpon>KryptonFloatingForm.cs</DependentUpon>
     </Compile>
@@ -1199,6 +1211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\FloatingFramework\UX\MenuStripContainerWindow.resx">
       <DependentUpon>MenuStripContainerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\FloatingFramework\UX\MenuStripExistingComponentChooser.resx">
+      <DependentUpon>MenuStripExistingComponentChooser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\FloatingFramework\UX\ToolStripContainerWindow.resx">
       <DependentUpon>ToolStripContainerWindow.cs</DependentUpon>
