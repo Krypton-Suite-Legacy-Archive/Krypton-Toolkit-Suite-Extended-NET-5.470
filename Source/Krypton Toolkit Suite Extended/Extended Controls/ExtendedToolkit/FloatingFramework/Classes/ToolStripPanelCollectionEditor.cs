@@ -38,11 +38,13 @@
 */
 #endregion
 
+using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.ExtendedToolkit.FloatingFramework.Controls;
 using ExtendedControls.ExtendedToolkit.FloatingFramework.UX;
 using System;
 using System.ComponentModel;
 using System.Drawing.Design;
+using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
 namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Classes
@@ -61,14 +63,31 @@ namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Classes
 
             FloatableToolStrip floatableToolStrip = context.Instance as FloatableToolStrip;
 
-            ExistingComponentChooser ecc = new ExistingComponentChooser(floatableToolStrip.ToolStripPanelExtendedList);
+            ExistingComponentChooser ecc = new ExistingComponentChooser(floatableToolStrip.ToolStripPanelExtenedList);
 
             ecc.Text = "ToolStripPanelCollectionEditor";
 
-            if (true)
+            if (floatableToolStrip.OriginalParent != null)
             {
-
+                if (floatableToolStrip.OriginalParent is KryptonForm)
+                {
+                    ecc.SourceComponentContainer = floatableToolStrip.OriginalParent;
+                }
+                else
+                {
+                    ecc.SourceComponentContainer = floatableToolStrip.OriginalParent.Parent;
+                }
             }
+
+            if (service != null)
+            {
+                if (service.ShowDialog(ecc) == DialogResult.OK)
+                {
+                    return ecc.SelectedComponents;
+                }
+            }
+
+            return floatableToolStrip.ToolStripPanelExtenedList;
         }
         #endregion
     }

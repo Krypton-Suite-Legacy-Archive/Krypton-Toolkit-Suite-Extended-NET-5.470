@@ -73,6 +73,7 @@ namespace Playground
         private KryptonButton kbtnVarifyHash;
         private KryptonButton kbtnFileInformation;
         private KryptonButton kbtnUAC;
+        private KryptonButton kbtnFloatingToolStrip;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
@@ -118,12 +119,14 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnFloatingToolStrip = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnFloatingToolStrip);
             this.kryptonPanel1.Controls.Add(this.kbtnUAC);
             this.kryptonPanel1.Controls.Add(this.kbtnFileInformation);
             this.kryptonPanel1.Controls.Add(this.kbtnVarifyHash);
@@ -530,6 +533,16 @@ namespace Playground
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
+            // kbtnFloatingToolStrip
+            // 
+            this.kbtnFloatingToolStrip.Location = new System.Drawing.Point(737, 368);
+            this.kbtnFloatingToolStrip.Name = "kbtnFloatingToolStrip";
+            this.kbtnFloatingToolStrip.Size = new System.Drawing.Size(218, 25);
+            this.kbtnFloatingToolStrip.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnFloatingToolStrip.TabIndex = 92;
+            this.kbtnFloatingToolStrip.Values.Text = "Floating Tool Strip";
+            this.kbtnFloatingToolStrip.Click += new System.EventHandler(this.KbtnFloatingToolStrip_Click);
+            // 
             // Examples
             // 
             this.ClientSize = new System.Drawing.Size(971, 597);
@@ -877,6 +890,13 @@ namespace Playground
             UACAdvancedExample uac = new UACAdvancedExample();
 
             uac.Show();
+        }
+
+        private void KbtnFloatingToolStrip_Click(object sender, EventArgs e)
+        {
+            FloatingToolStripExample floatingToolStripExample = new FloatingToolStripExample();
+
+            floatingToolStripExample.Show();
         }
     }
 }
