@@ -55,6 +55,10 @@ using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Controls
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.ToolStrip" />
     [ToolboxBitmap(typeof(FloatableToolStrip), "ToolboxBitmaps.FloatableToolStrip.bmp")]
     public class FloatableToolStrip : ToolStrip
     {
@@ -71,11 +75,26 @@ namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Controls
         #region Properties
         internal Control OriginalParent { get => _originalParent; }
 
+        /// <summary>
+        /// Gets or sets the tool strip panel extened list.
+        /// </summary>
+        /// <value>
+        /// The tool strip panel extened list.
+        /// </value>
         [Editor(typeof(ToolStripPanelCollectionEditor), typeof(UITypeEditor)), DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         public List<ToolStripPanelExtened> ToolStripPanelExtenedList { get => _toolStripPanelExtenedList; set => _toolStripPanelExtenedList = value; }
 
+        /// <summary>
+        /// Gets a value indicating whether this instance is floating.
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if this instance is floating; otherwise, <c>false</c>.
+        /// </value>
         public bool IsFloating { get => _isFloating; }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether the control and all its child controls are displayed.
+        /// </summary>
         public new bool Visible
         {
             get => base.Visible;
@@ -94,7 +113,11 @@ namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Controls
         }
         #endregion
 
-        #region Overrides
+        #region Overrides        
+        /// <summary>
+        /// Raises the <see cref="E:System.Windows.Forms.Control.ParentChanged" /> event.
+        /// </summary>
+        /// <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
         protected override void OnParentChanged(EventArgs e)
         {
             base.OnParentChanged(e);
@@ -113,6 +136,10 @@ namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Controls
             }
         }
 
+        /// <summary>
+        /// Raises the <see cref="E:System.Windows.Forms.Control.MouseEnter" /> event.
+        /// </summary>
+        /// <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
         protected override void OnMouseEnter(EventArgs e)
         {
             base.OnMouseEnter(e);
@@ -120,6 +147,10 @@ namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Controls
             Focus();
         }
 
+        /// <summary>
+        /// Raises the <see cref="E:System.Windows.Forms.Control.MouseDown" /> event.
+        /// </summary>
+        /// <param name="mea">A <see cref="T:System.Windows.Forms.MouseEventArgs" /> that contains the event data.</param>
         protected override void OnMouseDown(MouseEventArgs mea)
         {
             base.OnMouseDown(mea);
@@ -130,6 +161,10 @@ namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Controls
             }
         }
 
+        /// <summary>
+        /// Raises the <see cref="E:System.Windows.Forms.Control.MouseUp" /> event.
+        /// </summary>
+        /// <param name="mea">A <see cref="T:System.Windows.Forms.MouseEventArgs" /> that contains the event data.</param>
         protected override void OnMouseUp(MouseEventArgs mea)
         {
             base.OnMouseUp(mea);
@@ -175,7 +210,7 @@ namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Controls
 
         #region Runtime Methods
         [DllImport("User32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
-        private static extern void GetCursorPosition(out Point point);
+        private static extern void GetCursorPos(out Point point);
         #endregion
 
         #region Event Handlers
@@ -200,7 +235,7 @@ namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Controls
                 _parentChanged = false;
             }
 
-            GetCursorPosition(out point);
+            GetCursorPos(out point);
 
             foreach (ToolStripPanelExtened item in _toolStripPanelExtenedList)
             {
