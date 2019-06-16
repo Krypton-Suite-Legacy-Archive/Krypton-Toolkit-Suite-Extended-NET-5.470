@@ -120,7 +120,6 @@
     <Compile Include="Base\Code\IconExtractor.cs" />
     <Compile Include="Base\Code\IO\FileUtilities.cs" />
     <Compile Include="Base\Code\IO\StringHandler.cs" />
-    <Compile Include="Base\Code\KryptonMessageBoxBase.cs" />
     <Compile Include="Base\Code\Linq\LinqBridge-1.3.cs" />
     <Compile Include="Base\Code\ListViewColumnSorter.cs" />
     <Compile Include="Base\Code\Models\Typeface\PropertiesModel.cs" />
