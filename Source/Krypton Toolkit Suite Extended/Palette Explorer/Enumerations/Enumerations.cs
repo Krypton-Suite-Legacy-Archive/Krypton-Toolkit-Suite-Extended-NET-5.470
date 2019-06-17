@@ -18,4 +18,12 @@
         STANDARDCONTROLTEXTCOLOURSETTINGS = 6,
         TEXTCOLOURSETTINGS = 7
     }
+
+    public enum ColourChannelType
+    {
+        ALPHACHANNEL = 0,
+        REDCHANNEL = 1,
+        GREENCHANNEL = 2,
+        BLUECHANNEL = 3
+    }
 }

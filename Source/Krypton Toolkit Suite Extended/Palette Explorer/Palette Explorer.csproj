@@ -80,6 +80,9 @@
     <Compile Include="UX\Colour\ColourContrastTool.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UX\Colour\ColourEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UX\Colour\ColourMixerAdvanced.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +156,9 @@
     </Compile>
     <EmbeddedResource Include="UX\Colour\ColourContrastTool.resx">
       <DependentUpon>ColourContrastTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Colour\ColourEditor.resx">
+      <DependentUpon>ColourEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\Colour\ColourMixerAdvanced.resx">
       <DependentUpon>ColourMixerAdvanced.cs</DependentUpon>
