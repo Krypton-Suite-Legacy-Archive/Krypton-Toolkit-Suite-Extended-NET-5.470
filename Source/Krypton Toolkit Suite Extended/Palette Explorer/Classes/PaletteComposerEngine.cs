@@ -8,12 +8,15 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using Core.Classes;
 using ExtendedControls.ExtendedToolkit.Controls;
 using KryptonExtendedToolkit.Base.Code;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace PaletteExplorer.Classes
 {
@@ -23,7 +26,7 @@ namespace PaletteExplorer.Classes
         private Color baseColour, darkColour, middleColour, lightColour, lightestColour, borderColour, alternativeNormalTextColour, normalTextColour, disabledTextColour, focusedTextColour, pressedTextColour, disabledColour, linkNormalColour, linkFocusedColour, linkHoverColour, linkVisitedColour, customColourOne, customColourTwo, customColourThree, customColourFour, customColourFive, customTextColourOne, customTextColourTwo, customTextColourThree, customTextColourFour, customTextColourFive, menuTextColour, statusTextColour, ribbonTabTextColour;
         #endregion
 
-        #region Methods
+        #region Methods        
         /// <summary>
         /// Exports the palette theme.
         /// </summary>
@@ -34,31 +37,36 @@ namespace PaletteExplorer.Classes
         /// <param name="middleColour">The middle colour.</param>
         /// <param name="lightColour">The light colour.</param>
         /// <param name="lightestColour">The lightest colour.</param>
-        /// <param name="borderColour">The border colour .</param>
-        /// <param name="alternativeNormalTextColour">The alternative normal text colour .</param>
-        /// <param name="normalTextColour">The normal text colour .</param>
-        /// <param name="disabledTextColour">The disabled text colour .</param>
-        /// <param name="focusedTextColour">The focused text colour .</param>
-        /// <param name="pressedTextColour">The pressed text colour .</param>
-        /// <param name="disabledColour">The disabled colour .</param>
-        /// <param name="linkNormalColour">The link normal colour .</param>
-        /// <param name="linkHoverColour">The link hover colour .</param>
-        /// <param name="linkVisitedColour">The link visited colour .</param>
+        /// <param name="borderColour">The border colour.</param>
+        /// <param name="alternativeNormalTextColour">The alternative normal text colour.</param>
+        /// <param name="normalTextColour">The normal text colour.</param>
+        /// <param name="disabledTextColour">The disabled text colour.</param>
+        /// <param name="focusedTextColour">The focused text colour.</param>
+        /// <param name="pressedTextColour">The pressed text colour.</param>
+        /// <param name="disabledColour">The disabled colour.</param>
+        /// <param name="linkDiabledColour">The link diabled colour.</param>
+        /// <param name="linkNormalColour">The link normal colour.</param>
+        /// <param name="linkFocusedColour">The link focused colour.</param>
+        /// <param name="linkHoverColour">The link hover colour.</param>
+        /// <param name="linkVisitedColour">The link visited colour.</param>
         /// <param name="customColourOne">The custom colour one.</param>
         /// <param name="customColourTwo">The custom colour two.</param>
         /// <param name="customColourThree">The custom colour three.</param>
         /// <param name="customColourFour">The custom colour four.</param>
         /// <param name="customColourFive">The custom colour five.</param>
+        /// <param name="customColourSix">The custom colour six.</param>
         /// <param name="customTextColourOne">The custom text colour one.</param>
         /// <param name="customTextColourTwo">The custom text colour two.</param>
         /// <param name="customTextColourThree">The custom text colour three.</param>
         /// <param name="customTextColourFour">The custom text colour four.</param>
         /// <param name="customTextColourFive">The custom text colour five.</param>
+        /// <param name="customTextColourSix">The custom text colour six.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
         /// <param name="statusTextColour">The status text colour.</param>
+        /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
         /// <param name="statusState">State of the status.</param>
         /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
-        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColour, PictureBox alternativeNormalTextColour, PictureBox normalTextColour, PictureBox disabledTextColour, PictureBox focusedTextColour, PictureBox pressedTextColour, PictureBox disabledColour, PictureBox linkNormalColour, PictureBox linkFocusedColour, PictureBox linkHoverColour, PictureBox linkVisitedColour, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox menuTextColour, PictureBox statusTextColour, PictureBox ribbonTabTextColour, ToolStripLabel statusState, bool invertColours = false)
+        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, PictureBox baseColour, PictureBox darkColour, PictureBox middleColour, PictureBox lightColour, PictureBox lightestColour, PictureBox borderColour, PictureBox alternativeNormalTextColour, PictureBox normalTextColour, PictureBox disabledTextColour, PictureBox focusedTextColour, PictureBox pressedTextColour, PictureBox disabledColour, PictureBox linkDiabledColour, PictureBox linkNormalColour, PictureBox linkFocusedColour, PictureBox linkHoverColour, PictureBox linkVisitedColour, PictureBox customColourOne, PictureBox customColourTwo, PictureBox customColourThree, PictureBox customColourFour, PictureBox customColourFive, PictureBox customColourSix, PictureBox customTextColourOne, PictureBox customTextColourTwo, PictureBox customTextColourThree, PictureBox customTextColourFour, PictureBox customTextColourFive, PictureBox customTextColourSix, PictureBox menuTextColour, PictureBox statusTextColour, PictureBox ribbonTabTextColour, ToolStripLabel statusState, bool invertColours = false)
         {
             palette = new KryptonPalette();
 
@@ -358,9 +366,9 @@ namespace PaletteExplorer.Classes
 
                 palette.LabelStyles.LabelNormalControl.OverrideVisited.ShortText.Color1 = linkVisitedColour.BackColor;
 
-                palette.LabelStyles.LabelNormalControl.StateDisabled.LongText.Color1 = disabledTextColour.BackColor;
+                palette.LabelStyles.LabelNormalControl.StateDisabled.LongText.Color1 = linkDiabledColour.BackColor;
 
-                palette.LabelStyles.LabelNormalControl.StateDisabled.ShortText.Color1 = disabledTextColour.BackColor;
+                palette.LabelStyles.LabelNormalControl.StateDisabled.ShortText.Color1 = linkDiabledColour.BackColor;
 
                 palette.LabelStyles.LabelNormalControl.StateNormal.LongText.Color1 = normalTextColour.BackColor;
 
@@ -608,31 +616,36 @@ namespace PaletteExplorer.Classes
         /// <param name="middleColour">The middle colour.</param>
         /// <param name="lightColour">The light colour.</param>
         /// <param name="lightestColour">The lightest colour.</param>
-        /// <param name="borderColour">The border colour .</param>
-        /// <param name="alternativeNormalTextColour">The alternative normal text colour .</param>
-        /// <param name="normalTextColour">The normal text colour .</param>
-        /// <param name="disabledTextColour">The disabled text colour .</param>
-        /// <param name="focusedTextColour">The focused text colour .</param>
-        /// <param name="pressedTextColour">The pressed text colour .</param>
-        /// <param name="disabledColour">The disabled colour .</param>
-        /// <param name="linkNormalColour">The link normal colour .</param>
-        /// <param name="linkHoverColour">The link hover colour .</param>
-        /// <param name="linkVisitedColour">The link visited colour .</param>
+        /// <param name="borderColour">The border colour.</param>
+        /// <param name="alternativeNormalTextColour">The alternative normal text colour.</param>
+        /// <param name="normalTextColour">The normal text colour.</param>
+        /// <param name="disabledTextColour">The disabled text colour.</param>
+        /// <param name="focusedTextColour">The focused text colour.</param>
+        /// <param name="pressedTextColour">The pressed text colour.</param>
+        /// <param name="disabledColour">The disabled colour.</param>
+        /// <param name="linkDiabledColour">The link diabled colour.</param>
+        /// <param name="linkNormalColour">The link normal colour.</param>
+        /// <param name="linkFocusedColour">The link focused colour.</param>
+        /// <param name="linkHoverColour">The link hover colour.</param>
+        /// <param name="linkVisitedColour">The link visited colour.</param>
         /// <param name="customColourOne">The custom colour one.</param>
         /// <param name="customColourTwo">The custom colour two.</param>
         /// <param name="customColourThree">The custom colour three.</param>
         /// <param name="customColourFour">The custom colour four.</param>
         /// <param name="customColourFive">The custom colour five.</param>
+        /// <param name="customColourSix">The custom colour six.</param>
         /// <param name="customTextColourOne">The custom text colour one.</param>
         /// <param name="customTextColourTwo">The custom text colour two.</param>
         /// <param name="customTextColourThree">The custom text colour three.</param>
         /// <param name="customTextColourFour">The custom text colour four.</param>
         /// <param name="customTextColourFive">The custom text colour five.</param>
+        /// <param name="customTextColourSix">The custom text colour six.</param>
         /// <param name="menuTextColour">The menu text colour.</param>
         /// <param name="statusTextColour">The status text colour.</param>
+        /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
         /// <param name="statusState">State of the status.</param>
         /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
-        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour, ToolStripLabel statusState, bool invertColours = false)
+        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledColour, Color linkDiabledColour, Color linkNormalColour, Color linkFocusedColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customColourSix, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color customTextColourSix, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour, ToolStripLabel statusState, bool invertColours = false)
         {
             try
             {
@@ -1085,8 +1098,46 @@ namespace PaletteExplorer.Classes
             }
         }
 
-
-        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, CircularPictureBox baseColour, CircularPictureBox darkColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, CircularPictureBox borderColour, CircularPictureBox alternativeNormalTextColour, CircularPictureBox normalTextColour, CircularPictureBox disabledTextColour, CircularPictureBox focusedTextColour, CircularPictureBox pressedTextColour, CircularPictureBox disabledColour, CircularPictureBox linkNormalColour, CircularPictureBox linkFocusedColour, CircularPictureBox linkHoverColour, CircularPictureBox linkVisitedColour, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColour, CircularPictureBox statusTextColour, CircularPictureBox ribbonTabTextColour, ToolStripLabel statusState, bool invertColours = false)
+        /// <summary>
+        /// Exports the palette theme.
+        /// </summary>
+        /// <param name="palette">The palette.</param>
+        /// <param name="paletteMode">The palette mode.</param>
+        /// <param name="baseColour">The base colour.</param>
+        /// <param name="darkColour">The dark colour.</param>
+        /// <param name="middleColour">The middle colour.</param>
+        /// <param name="lightColour">The light colour.</param>
+        /// <param name="lightestColour">The lightest colour.</param>
+        /// <param name="borderColour">The border colour.</param>
+        /// <param name="alternativeNormalTextColour">The alternative normal text colour.</param>
+        /// <param name="normalTextColour">The normal text colour.</param>
+        /// <param name="disabledTextColour">The disabled text colour.</param>
+        /// <param name="focusedTextColour">The focused text colour.</param>
+        /// <param name="pressedTextColour">The pressed text colour.</param>
+        /// <param name="disabledColour">The disabled colour.</param>
+        /// <param name="linkDiabledColour">The link diabled colour.</param>
+        /// <param name="linkNormalColour">The link normal colour.</param>
+        /// <param name="linkFocusedColour">The link focused colour.</param>
+        /// <param name="linkHoverColour">The link hover colour.</param>
+        /// <param name="linkVisitedColour">The link visited colour.</param>
+        /// <param name="customColourOne">The custom colour one.</param>
+        /// <param name="customColourTwo">The custom colour two.</param>
+        /// <param name="customColourThree">The custom colour three.</param>
+        /// <param name="customColourFour">The custom colour four.</param>
+        /// <param name="customColourFive">The custom colour five.</param>
+        /// <param name="customColourSix">The custom colour six.</param>
+        /// <param name="customTextColourOne">The custom text colour one.</param>
+        /// <param name="customTextColourTwo">The custom text colour two.</param>
+        /// <param name="customTextColourThree">The custom text colour three.</param>
+        /// <param name="customTextColourFour">The custom text colour four.</param>
+        /// <param name="customTextColourFive">The custom text colour five.</param>
+        /// <param name="customTextColourSix">The custom text colour six.</param>
+        /// <param name="menuTextColour">The menu text colour.</param>
+        /// <param name="statusTextColour">The status text colour.</param>
+        /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
+        /// <param name="statusState">State of the status.</param>
+        /// <param name="invertColours">if set to <c>true</c> [invert colours].</param>
+        public static void ExportPaletteTheme(KryptonPalette palette, PaletteMode paletteMode, CircularPictureBox baseColour, CircularPictureBox darkColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, CircularPictureBox borderColour, CircularPictureBox alternativeNormalTextColour, CircularPictureBox normalTextColour, CircularPictureBox disabledTextColour, CircularPictureBox focusedTextColour, CircularPictureBox pressedTextColour, CircularPictureBox disabledColour, CircularPictureBox linkDiabledColour, CircularPictureBox linkNormalColour, CircularPictureBox linkFocusedColour, CircularPictureBox linkHoverColour, CircularPictureBox linkVisitedColour, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customColourSix, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox customTextColourSix, CircularPictureBox menuTextColour, CircularPictureBox statusTextColour, CircularPictureBox ribbonTabTextColour, ToolStripLabel statusState, bool invertColours = false)
         {
             palette = new KryptonPalette();
 
@@ -1510,7 +1561,7 @@ namespace PaletteExplorer.Classes
 
                 palette.Ribbon.RibbonTab.StateCommon.BackColor5 = lightColour.BackColor;
 
-                palette.Ribbon.RibbonTab.StateCommon.TextColor = normalTextColour.BackColor;
+                palette.Ribbon.RibbonTab.StateCommon.TextColor = ribbonTabTextColour.BackColor;
 
                 palette.Ribbon.RibbonTab.StateContextCheckedTracking.BackColor2 = middleColour.BackColor;
 
@@ -1578,7 +1629,7 @@ namespace PaletteExplorer.Classes
 
                 palette.ToolMenuStatus.MenuStrip.MenuStripGradientEnd = darkColour.BackColor;
 
-                palette.ToolMenuStatus.MenuStrip.MenuStripText = normalTextColour.BackColor;
+                palette.ToolMenuStatus.MenuStrip.MenuStripText = menuTextColour.BackColor;
 
                 palette.ToolMenuStatus.Rafting.RaftingContainerGradientBegin = middleColour.BackColor;
 
@@ -1626,12 +1677,101 @@ namespace PaletteExplorer.Classes
             //}
         }
 
-
-        public static void PopulateColours(CircularPictureBox baseColour, CircularPictureBox darkColour, CircularPictureBox middleColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, CircularPictureBox borderColour, CircularPictureBox alternativeNormalTextColour, CircularPictureBox normalTextColour, CircularPictureBox disabledTextColour, CircularPictureBox focusedTextColour, CircularPictureBox pressedTextColour, CircularPictureBox disabledColour, CircularPictureBox linkNormalColour, CircularPictureBox linkFocusedColour, CircularPictureBox linkHoverColour, CircularPictureBox linkVisitedColour, CircularPictureBox customColourOne, CircularPictureBox customColourTwo, CircularPictureBox customColourThree, CircularPictureBox customColourFour, CircularPictureBox customColourFive, CircularPictureBox customTextColourOne, CircularPictureBox customTextColourTwo, CircularPictureBox customTextColourThree, CircularPictureBox customTextColourFour, CircularPictureBox customTextColourFive, CircularPictureBox menuTextColour, CircularPictureBox statusTextColour, CircularPictureBox ribbonTabTextColour)
+        /// <summary>
+        /// Populates the colours.
+        /// </summary>
+        /// <param name="paletteInput">The palette input.</param>
+        /// <param name="paletteOutput">The palette output.</param>
+        /// <param name="createConfigurationFile">if set to <c>true</c> [create configuration file].</param>
+        public static void PopulateColours(KryptonPalette paletteInput, KryptonPalette paletteOutput, bool createConfigurationFile = false)
         {
+            #region Variables
+            AllMergedColourSettingsManager allMergedColourSettings = new AllMergedColourSettingsManager();
+            #endregion
+
             try
             {
+                paletteInput = new KryptonPalette();
 
+                paletteInput.Import();
+
+                #region Do Work
+                allMergedColourSettings.SetBaseColour(paletteInput.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color1);
+
+                allMergedColourSettings.SetDarkColour(paletteInput.ButtonStyles.ButtonCluster.StatePressed.Back.Color1);
+
+                allMergedColourSettings.SetMediumColour(paletteInput.ButtonStyles.ButtonCluster.StateNormal.Back.Color1);
+
+                allMergedColourSettings.SetLightColour(paletteInput.ButtonStyles.ButtonCommon.StateCheckedNormal.Back.Color2);
+
+                allMergedColourSettings.SetLightestColour(paletteInput.ButtonStyles.ButtonCommon.StateCheckedNormal.Back.Color1);
+
+                allMergedColourSettings.SetAlternativeNormalTextColour(paletteInput.ButtonStyles.ButtonCommon.OverrideDefault.Content.LongText.Color1);
+
+                allMergedColourSettings.SetBorderColour(paletteInput.SeparatorStyles.SeparatorCommon.StateCommon.Border.Color1);
+
+                allMergedColourSettings.SetNormalTextColour(paletteInput.ButtonStyles.ButtonCommon.StateCheckedNormal.Content.LongText.Color1);
+
+                allMergedColourSettings.SetDisabledTextColour(paletteInput.ButtonStyles.ButtonCommon.StateDisabled.Content.LongText.Color1);
+
+                allMergedColourSettings.SetFocusedTextColour(paletteInput.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Color1);
+
+                allMergedColourSettings.SetPressedTextColour(paletteInput.ButtonStyles.ButtonCommon.StatePressed.Content.ShortText.Color1);
+
+                allMergedColourSettings.SetDisabledControlColour(paletteInput.ButtonStyles.ButtonCommon.StateDisabled.Back.Color1);
+
+                allMergedColourSettings.SetLinkDisabledColour(paletteInput.LabelStyles.LabelNormalControl.StateDisabled.ShortText.Color1);
+
+                allMergedColourSettings.SetLinkFocusedColour(paletteInput.LabelStyles.LabelNormalControl.OverrideFocus.ShortText.Color1);
+
+                allMergedColourSettings.SetLinkHoverColour(paletteInput.LabelStyles.LabelNormalControl.OverrideFocus.ShortText.Color1);
+
+                allMergedColourSettings.SetLinkNormalColour(paletteInput.LabelStyles.LabelNormalControl.OverrideNotVisited.ShortText.Color1);
+
+                allMergedColourSettings.SetLinkVisitedColour(paletteInput.LabelStyles.LabelNormalControl.OverrideVisited.ShortText.Color1);
+
+                allMergedColourSettings.SetCustomColourTwo(paletteInput.Ribbon.RibbonGroupArea.StateCheckedNormal.BackColor2);
+
+                allMergedColourSettings.SetCustomColourThree(paletteInput.Ribbon.RibbonAppButton.StateCommon.BackColor3);
+
+                allMergedColourSettings.SetCustomColourFive(paletteInput.Ribbon.RibbonAppButton.StateTracking.BackColor5);
+
+                allMergedColourSettings.SetCustomTextColourTwo(paletteInput.Ribbon.RibbonGroupButtonText.StateCommon.TextColor);
+
+                allMergedColourSettings.SetCustomTextColourFive(paletteInput.Ribbon.RibbonGroupNormalTitle.StateCommon.TextColor);
+
+                allMergedColourSettings.SetMenuTextColour(paletteInput.ToolMenuStatus.Menu.MenuItemText);
+
+                allMergedColourSettings.SetStatusStripTextColour(paletteInput.ToolMenuStatus.StatusStrip.StatusStripText);
+
+                allMergedColourSettings.SetRibbonTabTextColour(paletteInput.Ribbon.RibbonTab.StateCommon.TextColor);
+                #endregion
+
+                allMergedColourSettings.SaveAllMergedColourSettings();
+
+                paletteOutput = paletteInput;
+
+                if (createConfigurationFile)
+                {
+                    CommonSaveFileDialog csfd = new CommonSaveFileDialog();
+
+                    csfd.Title = "Save Colours To:";
+
+                    csfd.Filters.Add(new CommonFileDialogFilter("Colour Configuration File", ".ccf"));
+
+                    csfd.Filters.Add(new CommonFileDialogFilter("Normal Text File", ".txt"));
+
+                    csfd.DefaultFileName = $"All Colour Configuration File - { TranslationMethods.ReturnSafeFileNameDateTimeString() }";
+
+                    csfd.AlwaysAppendDefaultExtension = true;
+
+                    csfd.DefaultExtension = "ccf";
+
+                    if (csfd.ShowDialog() == CommonFileDialogResult.Ok)
+                    {
+                        AllMergedColourSettingsManager.WriteARGBColoursToFile(Path.GetFullPath(csfd.FileName));
+                    }
+                }
             }
             catch (Exception exc)
             {

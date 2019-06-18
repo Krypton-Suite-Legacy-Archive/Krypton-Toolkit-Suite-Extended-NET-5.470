@@ -10,6 +10,7 @@
 using ComponentFactory.Krypton.Docking;
 using ComponentFactory.Krypton.Navigator;
 using ComponentFactory.Krypton.Toolkit;
+using PaletteExplorer.Classes;
 using PaletteExplorer.Controls;
 using PaletteExplorer.UX.Colour;
 using PaletteExplorer.UX.Debugging;
@@ -134,7 +135,7 @@ namespace PaletteExplorer.UX.New
         private KryptonDockableNavigator kdnContentDisplay;
         private KryptonPage kryptonPage1;
         private KryptonPage kryptonPage2;
-        private StandardPictureBoxControl standardPictureBoxControl1;
+        private StandardPictureBoxControl spbcStandard;
         private ContextMenuStrip ctxViewTypes;
         private ToolStripMenuItem standardDisplayToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem1;
@@ -154,6 +155,7 @@ namespace PaletteExplorer.UX.New
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbColourContrastTool;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator17;
         private CircularPictureBoxControl cpbcPreview;
+        private ToolStripStatusLabel tsslCurrentStatus;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbCheckForUpdates;
 
         private void InitializeComponent()
@@ -279,13 +281,14 @@ namespace PaletteExplorer.UX.New
             this.kMan = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.kpnlStatusStrip = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.ss = new System.Windows.Forms.StatusStrip();
+            this.tsslCurrentStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnClose = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblColourOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kdnContentDisplay = new ComponentFactory.Krypton.Docking.KryptonDockableNavigator();
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.standardPictureBoxControl1 = new PaletteExplorer.Controls.StandardPictureBoxControl();
+            this.spbcStandard = new PaletteExplorer.Controls.StandardPictureBoxControl();
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.cpbcPreview = new PaletteExplorer.Controls.CircularPictureBoxControl();
             this.kdm = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
@@ -295,6 +298,7 @@ namespace PaletteExplorer.UX.New
             this.ctxViewTypes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlStatusStrip)).BeginInit();
             this.kpnlStatusStrip.SuspendLayout();
+            this.ss.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
@@ -332,7 +336,7 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
             this.krControls.SelectedContext = null;
-            this.krControls.SelectedTab = this.kryptonRibbonTab3;
+            this.krControls.SelectedTab = this.kryptonRibbonTab1;
             this.krControls.Size = new System.Drawing.Size(1662, 115);
             this.krControls.TabIndex = 2;
             // 
@@ -398,6 +402,7 @@ namespace PaletteExplorer.UX.New
             this.krgbNewPalette.ImageSmall = ((System.Drawing.Image)(resources.GetObject("krgbNewPalette.ImageSmall")));
             this.krgbNewPalette.TextLine1 = "New";
             this.krgbNewPalette.TextLine2 = "Palette";
+            this.krgbNewPalette.Click += new System.EventHandler(this.KrgbNewPalette_Click);
             // 
             // kryptonRibbonGroupTriple2
             // 
@@ -410,6 +415,7 @@ namespace PaletteExplorer.UX.New
             this.krgbOpenPalette.ImageSmall = ((System.Drawing.Image)(resources.GetObject("krgbOpenPalette.ImageSmall")));
             this.krgbOpenPalette.TextLine1 = "Open";
             this.krgbOpenPalette.TextLine2 = " Palette";
+            this.krgbOpenPalette.Click += new System.EventHandler(this.KrgbOpenPalette_Click);
             // 
             // kryptonRibbonGroupTriple3
             // 
@@ -423,6 +429,7 @@ namespace PaletteExplorer.UX.New
             this.krgbSavePalette.ImageSmall = ((System.Drawing.Image)(resources.GetObject("krgbSavePalette.ImageSmall")));
             this.krgbSavePalette.TextLine1 = "Save";
             this.krgbSavePalette.TextLine2 = "Palette";
+            this.krgbSavePalette.Click += new System.EventHandler(this.KrgbSavePalette_Click);
             // 
             // krgbExportPalette
             // 
@@ -974,12 +981,20 @@ namespace PaletteExplorer.UX.New
             // ss
             // 
             this.ss.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ss.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsslCurrentStatus});
             this.ss.Location = new System.Drawing.Point(0, 0);
             this.ss.Name = "ss";
             this.ss.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
             this.ss.Size = new System.Drawing.Size(1662, 22);
             this.ss.TabIndex = 46;
             this.ss.Text = "statusStrip1";
+            // 
+            // tsslCurrentStatus
+            // 
+            this.tsslCurrentStatus.Name = "tsslCurrentStatus";
+            this.tsslCurrentStatus.Size = new System.Drawing.Size(39, 17);
+            this.tsslCurrentStatus.Text = "Ready";
             // 
             // kryptonPanel2
             // 
@@ -1030,7 +1045,7 @@ namespace PaletteExplorer.UX.New
             this.kdnContentDisplay.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
             this.kryptonPage2});
-            this.kdnContentDisplay.SelectedIndex = 0;
+            this.kdnContentDisplay.SelectedIndex = 1;
             this.kdnContentDisplay.Size = new System.Drawing.Size(1662, 717);
             this.kdnContentDisplay.TabIndex = 0;
             this.kdnContentDisplay.Text = "kryptonDockableNavigator1";
@@ -1040,7 +1055,7 @@ namespace PaletteExplorer.UX.New
             // kryptonPage1
             // 
             this.kryptonPage1.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
-            this.kryptonPage1.Controls.Add(this.standardPictureBoxControl1);
+            this.kryptonPage1.Controls.Add(this.spbcStandard);
             this.kryptonPage1.Flags = 65534;
             this.kryptonPage1.LastVisibleSet = true;
             this.kryptonPage1.MinimumSize = new System.Drawing.Size(50, 50);
@@ -1050,14 +1065,14 @@ namespace PaletteExplorer.UX.New
             this.kryptonPage1.ToolTipTitle = "Page ToolTip";
             this.kryptonPage1.UniqueName = "49be86230e1f4924a833e71209f61a78";
             // 
-            // standardPictureBoxControl1
+            // spbcStandard
             // 
-            this.standardPictureBoxControl1.BackColor = System.Drawing.Color.Transparent;
-            this.standardPictureBoxControl1.ColourDetailsLabel = this.lblColourOutput;
-            this.standardPictureBoxControl1.Location = new System.Drawing.Point(20, 16);
-            this.standardPictureBoxControl1.Name = "standardPictureBoxControl1";
-            this.standardPictureBoxControl1.Size = new System.Drawing.Size(1625, 660);
-            this.standardPictureBoxControl1.TabIndex = 0;
+            this.spbcStandard.BackColor = System.Drawing.Color.Transparent;
+            this.spbcStandard.ColourDetailsLabel = this.lblColourOutput;
+            this.spbcStandard.Location = new System.Drawing.Point(20, 16);
+            this.spbcStandard.Name = "spbcStandard";
+            this.spbcStandard.Size = new System.Drawing.Size(1625, 660);
+            this.spbcStandard.TabIndex = 0;
             // 
             // kryptonPage2
             // 
@@ -1108,6 +1123,8 @@ namespace PaletteExplorer.UX.New
             ((System.ComponentModel.ISupportInitialize)(this.kpnlStatusStrip)).EndInit();
             this.kpnlStatusStrip.ResumeLayout(false);
             this.kpnlStatusStrip.PerformLayout();
+            this.ss.ResumeLayout(false);
+            this.ss.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
@@ -1131,7 +1148,8 @@ namespace PaletteExplorer.UX.New
         Timer _uiUpdateTimer, _colourUpdateTimer;
         KryptonPage _page;
         PalettePropertyGrid _palettePropertyGrid;
-        KryptonPalette _palette = new KryptonPalette();
+        PaletteMode _paletteMode;
+        KryptonPalette _palette = new KryptonPalette(), _temporaryPalette = new KryptonPalette();
         Version _currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
         #endregion
 
@@ -1140,6 +1158,22 @@ namespace PaletteExplorer.UX.New
         /// Gets and sets the custom palette implementation.
         /// </summary>
         public KryptonPalette Palette { get => _palette; set => _palette = value; }
+
+        /// <summary>
+        /// Gets or sets the temporary palette.
+        /// </summary>
+        /// <value>
+        /// The temporary palette.
+        /// </value>
+        public KryptonPalette TemporaryPalette { get => _temporaryPalette; set => _temporaryPalette = value; }
+
+        /// <summary>
+        /// Gets or sets the mode.
+        /// </summary>
+        /// <value>
+        /// The mode.
+        /// </value>
+        public PaletteMode Mode { get => _paletteMode; set => _paletteMode = value; }
         #endregion
 
         #region Constructor
@@ -1164,9 +1198,7 @@ namespace PaletteExplorer.UX.New
         #region Event Handlers
         private void RibbonWindow_Load(object sender, EventArgs e)
         {
-            circularDisplayToolStripMenuItem.Checked = _generalPaletteExplorerSettingsManager.GetShowCircularDisplay();
-
-            standardDisplayToolStripMenuItem.Checked = _generalPaletteExplorerSettingsManager.GetShowStandardDisplay();
+            InitialiseWindow();
         }
 
         private void krgbExpertMode_Click(object sender, EventArgs e)
@@ -1297,6 +1329,22 @@ namespace PaletteExplorer.UX.New
                 cpbcPreview.InspireMe();
             }
         }
+
+        private void InitialiseWindow()
+        {
+            circularDisplayToolStripMenuItem.Checked = _generalPaletteExplorerSettingsManager.GetShowCircularDisplay();
+
+            standardDisplayToolStripMenuItem.Checked = _generalPaletteExplorerSettingsManager.GetShowStandardDisplay();
+
+            foreach (PaletteMode mode in Enum.GetValues(typeof(PaletteMode)))
+            {
+                string value = mode.ToString();
+
+                krgcbBasePaletteMode.Items.Add(value);
+            }
+
+            krgcbBasePaletteMode.SelectedIndex = 7;
+        }
         #endregion
 
         private void KrgbOptions_Click(object sender, EventArgs e)
@@ -1364,6 +1412,28 @@ namespace PaletteExplorer.UX.New
             PaletteColourExporter exporter = new PaletteColourExporter();
 
             exporter.Show();
+        }
+
+        private void KrgbOpenPalette_Click(object sender, EventArgs e)
+        {
+            PaletteComposerEngine.PopulateColours(TemporaryPalette, Palette, true);
+        }
+
+        private void KrgbNewPalette_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KrgbSavePalette_Click(object sender, EventArgs e)
+        {
+            if (kdnContentDisplay.SelectedIndex == 0)
+            {
+                PaletteComposerEngine.ExportPaletteTheme(Palette, Mode, spbcStandard.GetBaseColourPreview(), spbcStandard.GetDarkColourPreview(), spbcStandard.GetMiddleColourPreview(), spbcStandard.GetLightColourPreview(), spbcStandard.GetLightestColourPreview(), spbcStandard.GetBorderColourPreview(), spbcStandard.GetAlternativeNormalTextColourPreview(), spbcStandard.GetNormalColourPreview(), spbcStandard.GetDisabledTextColourPreview(), spbcStandard.GetFocusedTextColourPreview(), spbcStandard.GetPressedTextColourPreview(), spbcStandard.GetDisabledControlColourPreview(), spbcStandard.GetLinkDisabledColourPreview(), spbcStandard.GetLinkNormalColourPreview(), spbcStandard.GetLinkFocusedColourPreview(), spbcStandard.GetLinkHoverColourPreview(), spbcStandard.GetLinkVisitedColourPreview(), spbcStandard.GetCustomColourOneColourPreview(), spbcStandard.GetCustomColourTwoColourPreview(), spbcStandard.GetCustomColourThreeColourPreview(), spbcStandard.GetCustomColourFourColourPreview(), spbcStandard.GetCustomColourFiveColourPreview(), spbcStandard.GetCustomColourSixColourPreview(), spbcStandard.GetCustomTextColourOneColourPreview(), spbcStandard.GetCustomTextColourTwoColourPreview(), spbcStandard.GetCustomTextColourThreeColourPreview(), spbcStandard.GetCustomTextColourFourColourPreview(), spbcStandard.GetCustomTextColourFiveColourPreview(), spbcStandard.GetCustomTextColourSixColourPreview(), spbcStandard.GetMenuTextColourPreview(), spbcStandard.GetStatusTextColourPreview(), spbcStandard.GetRibbonTabTextColourPreview(), tsslCurrentStatus);
+            }
+            else if (kdnContentDisplay.SelectedIndex == 1)
+            {
+                PaletteComposerEngine.ExportPaletteTheme(Palette, Mode, cpbcPreview.GetBaseColourPreview(), cpbcPreview.GetDarkColourPreview(), cpbcPreview.GetMiddleColourPreview(), cpbcPreview.GetLightColourPreview(), cpbcPreview.GetLightestColourPreview(), cpbcPreview.GetBorderColourPreview(), cpbcPreview.GetAlternativeNormalTextColourPreview(), cpbcPreview.GetNormalTextColourPreview(), cpbcPreview.GetDisabledTextColourPreview(), cpbcPreview.GetFocusedTextColourPreview(), cpbcPreview.GetPressedTextColourPreview(), cpbcPreview.GetDisabledControlColourPreview(), cpbcPreview.GetLinkDisabledColourPreview(), cpbcPreview.GetLinkNormalColourPreview(), cpbcPreview.GetLinkFocusedColourPreview(), cpbcPreview.GetLinkHoverColourPreview(), cpbcPreview.GetLinkVisitedColourPreview(), cpbcPreview.GetCustomColourOneColourPreview(), cpbcPreview.GetCustomColourTwoColourPreview(), cpbcPreview.GetCustomColourThreeColourPreview(), cpbcPreview.GetCustomColourFourColourPreview(), cpbcPreview.GetCustomColourFiveColourPreview(), cpbcPreview.GetCustomColourSixColourPreview(), cpbcPreview.GetCustomTextColourOneColourPreview(), cpbcPreview.GetCustomTextColourTwoColourPreview(), cpbcPreview.GetCustomTextColourThreeColourPreview(), cpbcPreview.GetCustomTextColourFourColourPreview(), cpbcPreview.GetCustomTextColourFiveColourPreview(), cpbcPreview.GetCustomTextColourSixColourPreview(), cpbcPreview.GetMenuTextColourPreview(), cpbcPreview.GetStatusTextColourPreview(), cpbcPreview.GetRibbonTabTextColourPreview(), tsslCurrentStatus);
+            }
         }
 
         private void KrgbColourContrastTool_Click(object sender, EventArgs e)

@@ -1357,7 +1357,7 @@ namespace PaletteExplorer.Controls
         /// <value>
         /// The link disabed colour preview.
         /// </value>
-        public CircularPictureBox LinkDisabedColourPreview { get => linkDisabledColourPreview; set => linkDisabledColourPreview = value; }
+        public CircularPictureBox LinkDisabledColourPreview { get => linkDisabledColourPreview; set => linkDisabledColourPreview = value; }
 
         /// <summary>
         /// Gets or sets the link normal colour preview.
@@ -1802,7 +1802,7 @@ namespace PaletteExplorer.Controls
 
             SetDisabledControlColourPreview(cbxDisabledControlColourPreview);
 
-            SetLinkDisabedColourPreview(cbxLinkDisabledColourPreview);
+            SetLinkDisabledColourPreview(cbxLinkDisabledColourPreview);
 
             SetLinkNormalColourPreview(cbxLinkNormalColourPreview);
 
@@ -1934,7 +1934,7 @@ namespace PaletteExplorer.Controls
 
             AssignContextMenuToControl(GetDisabledControlColourPreview(), GetDisabledControlColourMenu());
 
-            AssignContextMenuToControl(GetLinkDisabedColourPreview(), GetLinkDisabedColourMenu());
+            AssignContextMenuToControl(GetLinkDisabledColourPreview(), GetLinkDisabedColourMenu());
 
             AssignContextMenuToControl(GetLinkNormalColourPreview(), GetLinkNormalColourMenu());
 
@@ -2000,7 +2000,7 @@ namespace PaletteExplorer.Controls
 
             AddToBoxListCollection(GetDisabledControlColourPreview());
 
-            AddToBoxListCollection(GetLinkDisabedColourPreview());
+            AddToBoxListCollection(GetLinkDisabledColourPreview());
 
             AddToBoxListCollection(GetLinkNormalColourPreview());
 
@@ -2108,7 +2108,7 @@ namespace PaletteExplorer.Controls
 
         private void CbxLinkDisabledColourPreview_MouseEnter(object sender, EventArgs e)
         {
-            UserInterfaceManager.DisplayToolTipInformation(GetLinkDisabedColourPreview(), GetLinkDisabedColourPreview().BackColor, "Link Disabled", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
+            UserInterfaceManager.DisplayToolTipInformation(GetLinkDisabledColourPreview(), GetLinkDisabledColourPreview().BackColor, "Link Disabled", _paletteExplorerBooleanSettingsManager.GetShowAdvancedColourToolTips());
         }
 
         private void CbxLinkNormalColourPreview_MouseEnter(object sender, EventArgs e)
@@ -2584,23 +2584,23 @@ namespace PaletteExplorer.Controls
         {
             return DisabledControlColourPreview;
         }
-
+               
         /// <summary>
-        /// Sets the value of LinkDisabedColourPreview to value.
+        /// Sets the value of LinkDisabledColourPreview to value.
         /// </summary>
-        /// <param name="value">The value of LinkDisabedColourPreview.</param>
-        public void SetLinkDisabedColourPreview(CircularPictureBox value)
+        /// <param name="value">The value of LinkDisabledColourPreview.</param>
+        public void SetLinkDisabledColourPreview(CircularPictureBox value)
         {
-            LinkDisabedColourPreview = value;
+            LinkDisabledColourPreview = value;
         }
 
         /// <summary>
-        /// Returns the value of LinkDisabedColourPreview.
+        /// Returns the value of LinkDisabledColourPreview.
         /// </summary>
-        /// <returns>The value of LinkDisabedColourPreview.</returns>
-        public CircularPictureBox GetLinkDisabedColourPreview()
+        /// <returns>The value of LinkDisabledColourPreview.</returns>
+        public CircularPictureBox GetLinkDisabledColourPreview()
         {
-            return LinkDisabedColourPreview;
+            return LinkDisabledColourPreview;
         }
 
         /// <summary>
@@ -3563,7 +3563,7 @@ namespace PaletteExplorer.Controls
 
             control.GetDisabledControlColourPreview().BackColor = defaultColour;
 
-            control.GetLinkDisabedColourPreview().BackColor = defaultColour;
+            control.GetLinkDisabledColourPreview().BackColor = defaultColour;
 
             control.GetLinkNormalColourPreview().BackColor = defaultColour;
 
@@ -3632,7 +3632,7 @@ namespace PaletteExplorer.Controls
 
             control.GetDisabledControlColourPreview().BackColor = transparent;
 
-            control.GetLinkDisabedColourPreview().BackColor = transparent;
+            control.GetLinkDisabledColourPreview().BackColor = transparent;
 
             control.GetLinkNormalColourPreview().BackColor = transparent;
 
@@ -3769,7 +3769,7 @@ namespace PaletteExplorer.Controls
         /// <returns></returns>
         public bool AreAllColoursEmpty()
         {
-            if (GetBaseColourPreview().BackColor == Color.Empty && GetDarkColourPreview().BackColor == Color.Empty && GetMiddleColourPreview().BackColor == Color.Empty && GetLightColourPreview().BackColor == Color.Empty && GetLightestColourPreview().BackColor == Color.Empty && GetBorderColourPreview().BackColor == Color.Empty && GetAlternativeNormalTextColourPreview().BackColor == Color.Empty && GetNormalTextColourPreview().BackColor == Color.Empty && GetDisabledTextColourPreview().BackColor == Color.Empty && GetFocusedTextColourPreview().BackColor == Color.Empty && GetPressedTextColourPreview().BackColor == Color.Empty && GetDisabledControlColourPreview().BackColor == Color.Empty && GetLinkDisabedColourPreview().BackColor == Color.Empty && GetLinkFocusedColourPreview().BackColor == Color.Empty && GetLinkHoverColourPreview().BackColor == Color.Empty && GetLinkNormalColourPreview().BackColor == Color.Empty && GetLinkVisitedColourPreview().BackColor == Color.Empty && GetCustomColourOneColourPreview().BackColor == Color.Empty && GetCustomColourTwoColourPreview().BackColor == Color.Empty && GetCustomColourThreeColourPreview().BackColor == Color.Empty && GetCustomColourFourColourPreview().BackColor == Color.Empty && GetCustomColourFiveColourPreview().BackColor == Color.Empty && GetCustomColourSixColourPreview().BackColor == Color.Empty && GetCustomTextColourOneColourPreview().BackColor == Color.Empty && GetCustomTextColourTwoColourPreview().BackColor == Color.Empty && GetCustomTextColourThreeColourPreview().BackColor == Color.Empty && GetCustomTextColourFourColourPreview().BackColor == Color.Empty && GetCustomTextColourFiveColourPreview().BackColor == Color.Empty && GetCustomTextColourSixColourPreview().BackColor == Color.Empty && GetMenuTextColourPreview().BackColor == Color.Empty && GetStatusTextColourPreview().BackColor == Color.Empty && GetRibbonTabTextColourPreview().BackColor == Color.Empty)
+            if (GetBaseColourPreview().BackColor == Color.Empty && GetDarkColourPreview().BackColor == Color.Empty && GetMiddleColourPreview().BackColor == Color.Empty && GetLightColourPreview().BackColor == Color.Empty && GetLightestColourPreview().BackColor == Color.Empty && GetBorderColourPreview().BackColor == Color.Empty && GetAlternativeNormalTextColourPreview().BackColor == Color.Empty && GetNormalTextColourPreview().BackColor == Color.Empty && GetDisabledTextColourPreview().BackColor == Color.Empty && GetFocusedTextColourPreview().BackColor == Color.Empty && GetPressedTextColourPreview().BackColor == Color.Empty && GetDisabledControlColourPreview().BackColor == Color.Empty && GetLinkDisabledColourPreview().BackColor == Color.Empty && GetLinkFocusedColourPreview().BackColor == Color.Empty && GetLinkHoverColourPreview().BackColor == Color.Empty && GetLinkNormalColourPreview().BackColor == Color.Empty && GetLinkVisitedColourPreview().BackColor == Color.Empty && GetCustomColourOneColourPreview().BackColor == Color.Empty && GetCustomColourTwoColourPreview().BackColor == Color.Empty && GetCustomColourThreeColourPreview().BackColor == Color.Empty && GetCustomColourFourColourPreview().BackColor == Color.Empty && GetCustomColourFiveColourPreview().BackColor == Color.Empty && GetCustomColourSixColourPreview().BackColor == Color.Empty && GetCustomTextColourOneColourPreview().BackColor == Color.Empty && GetCustomTextColourTwoColourPreview().BackColor == Color.Empty && GetCustomTextColourThreeColourPreview().BackColor == Color.Empty && GetCustomTextColourFourColourPreview().BackColor == Color.Empty && GetCustomTextColourFiveColourPreview().BackColor == Color.Empty && GetCustomTextColourSixColourPreview().BackColor == Color.Empty && GetMenuTextColourPreview().BackColor == Color.Empty && GetStatusTextColourPreview().BackColor == Color.Empty && GetRibbonTabTextColourPreview().BackColor == Color.Empty)
             {
                 return true;
             }
@@ -3891,7 +3891,7 @@ namespace PaletteExplorer.Controls
             #endregion
 
             #region Link Text Colours
-            GetLinkDisabedColourPreview().BackColor = linkTextColourSettingsManager.GetLinkDisabledColour();
+            GetLinkDisabledColourPreview().BackColor = linkTextColourSettingsManager.GetLinkDisabledColour();
 
             GetLinkFocusedColourPreview().BackColor = linkTextColourSettingsManager.GetLinkFocusedColour();
 
