@@ -64,6 +64,15 @@ namespace PaletteExplorer.UX
             InitializeComponent();
 
             ppgPaletteProperties.PalettePropertyGridControl.SelectedObject = palette;
+
+            if (palette.GetCustomisedKryptonPaletteFilePath() != string.Empty)
+            {
+                UpdateTitle(palette.GetCustomisedKryptonPaletteFilePath());
+            }
+            else
+            {
+                Text = "Palette Properties";
+            }
         }
         #endregion
 

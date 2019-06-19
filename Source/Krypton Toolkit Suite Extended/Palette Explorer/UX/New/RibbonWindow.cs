@@ -11,6 +11,7 @@ using ComponentFactory.Krypton.Docking;
 using ComponentFactory.Krypton.Navigator;
 using ComponentFactory.Krypton.Toolkit;
 using PaletteExplorer.Classes;
+using PaletteExplorer.Classes.Controllers;
 using PaletteExplorer.Controls;
 using PaletteExplorer.UX.Colour;
 using PaletteExplorer.UX.Debugging;
@@ -80,12 +81,12 @@ namespace PaletteExplorer.UX.New
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator6;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple5;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbGenerateContrastColours;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator7;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator krgsManageColours;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple9;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbGetColourInformation;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator8;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple10;
-        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbImport;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple krgtManageColours;
+        private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbManageColours;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple11;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbInvert;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator3;
@@ -156,6 +157,29 @@ namespace PaletteExplorer.UX.New
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator kryptonRibbonGroupSeparator17;
         private CircularPictureBoxControl cpbcPreview;
         private ToolStripStatusLabel tsslCurrentStatus;
+        private ToolStripMenuItem customColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem3;
+        private ToolStripMenuItem customTextColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem4;
+        private ToolStripMenuItem noCustomColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem5;
+        private ToolStripMenuItem normalToolStripMenuItem;
+        private ToolStripMenuItem customColourToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem6;
+        private ToolStripMenuItem customTextColourToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem7;
+        private ToolStripMenuItem noCustomColoursToolStripMenuItem1;
+        private ToolStripSeparator toolStripMenuItem8;
+        private ToolStripMenuItem normalToolStripMenuItem1;
+        private ToolStripSeparator toolStripMenuItem9;
+        private ToolStripMenuItem resetStandardViewToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem10;
+        private ToolStripMenuItem resetCircularViewToolStripMenuItem;
+        private ContextMenuStrip ctxManageColours;
+        private ToolStripMenuItem mergeAllColoursToolStripMenuItem;
+        private ToolStripMenuItem exportAllColoursConfigurationToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem11;
+        private ToolStripMenuItem splitColoursToolStripMenuItem;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbCheckForUpdates;
 
         private void InitializeComponent()
@@ -223,9 +247,14 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonGroupSeparator6 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple5 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbGenerateContrastColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.kryptonRibbonGroupSeparator7 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
-            this.kryptonRibbonGroupTriple10 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.krgbImport = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.krgsManageColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
+            this.krgtManageColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.krgbManageColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.ctxManageColours = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mergeAllColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportAllColoursConfigurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripSeparator();
+            this.splitColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonRibbonGroupSeparator8 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple11 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbInvert = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -253,8 +282,26 @@ namespace PaletteExplorer.UX.New
             this.krgbViewType = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.ctxViewTypes = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.standardDisplayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.customTextColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
+            this.noCustomColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
+            this.normalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripSeparator();
+            this.resetStandardViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.circularDisplayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customColourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
+            this.customTextColourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripSeparator();
+            this.noCustomColoursToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
+            this.normalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripSeparator();
+            this.resetCircularViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonRibbonGroupSeparator11 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
             this.kryptonRibbonGroupTriple17 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.krgbExperimental = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -294,6 +341,7 @@ namespace PaletteExplorer.UX.New
             this.kdm = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
             this.ilImages = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.krControls)).BeginInit();
+            this.ctxManageColours.SuspendLayout();
             this.ctxReset.SuspendLayout();
             this.ctxViewTypes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlStatusStrip)).BeginInit();
@@ -335,8 +383,7 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
-            this.krControls.SelectedContext = null;
-            this.krControls.SelectedTab = this.kryptonRibbonTab1;
+            this.krControls.SelectedTab = this.kryptonRibbonTab2;
             this.krControls.Size = new System.Drawing.Size(1662, 115);
             this.krControls.TabIndex = 2;
             // 
@@ -541,8 +588,8 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonGroupTriple4,
             this.kryptonRibbonGroupSeparator6,
             this.kryptonRibbonGroupTriple5,
-            this.kryptonRibbonGroupSeparator7,
-            this.kryptonRibbonGroupTriple10,
+            this.krgsManageColours,
+            this.krgtManageColours,
             this.kryptonRibbonGroupSeparator8,
             this.kryptonRibbonGroupTriple11,
             this.kryptonRibbonGroupSeparator3,
@@ -642,20 +689,52 @@ namespace PaletteExplorer.UX.New
             this.krgbGenerateContrastColours.TextLine1 = "Generate";
             this.krgbGenerateContrastColours.TextLine2 = "Contrast Colours";
             // 
-            // kryptonRibbonGroupSeparator7
+            // krgtManageColours
             // 
-            this.kryptonRibbonGroupSeparator7.Visible = false;
+            this.krgtManageColours.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.krgbManageColours});
             // 
-            // kryptonRibbonGroupTriple10
+            // krgbManageColours
             // 
-            this.kryptonRibbonGroupTriple10.Items.AddRange(new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.krgbImport});
+            this.krgbManageColours.ButtonType = ComponentFactory.Krypton.Ribbon.GroupButtonType.DropDown;
+            this.krgbManageColours.ContextMenuStrip = this.ctxManageColours;
+            this.krgbManageColours.TextLine1 = "Manage";
+            this.krgbManageColours.TextLine2 = "Colours";
             // 
-            // krgbImport
+            // ctxManageColours
             // 
-            this.krgbImport.TextLine1 = "Import Colour";
-            this.krgbImport.TextLine2 = "Scheme";
-            this.krgbImport.Visible = false;
+            this.ctxManageColours.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxManageColours.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mergeAllColoursToolStripMenuItem,
+            this.toolStripMenuItem11,
+            this.splitColoursToolStripMenuItem});
+            this.ctxManageColours.Name = "ctxManageColours";
+            this.ctxManageColours.Size = new System.Drawing.Size(170, 54);
+            // 
+            // mergeAllColoursToolStripMenuItem
+            // 
+            this.mergeAllColoursToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportAllColoursConfigurationToolStripMenuItem});
+            this.mergeAllColoursToolStripMenuItem.Name = "mergeAllColoursToolStripMenuItem";
+            this.mergeAllColoursToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.mergeAllColoursToolStripMenuItem.Text = "Merge &All Colours";
+            // 
+            // exportAllColoursConfigurationToolStripMenuItem
+            // 
+            this.exportAllColoursConfigurationToolStripMenuItem.Name = "exportAllColoursConfigurationToolStripMenuItem";
+            this.exportAllColoursConfigurationToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.exportAllColoursConfigurationToolStripMenuItem.Text = "Export A&ll Colours Configuration";
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(166, 6);
+            // 
+            // splitColoursToolStripMenuItem
+            // 
+            this.splitColoursToolStripMenuItem.Name = "splitColoursToolStripMenuItem";
+            this.splitColoursToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.splitColoursToolStripMenuItem.Text = "&Split Colours";
             // 
             // kryptonRibbonGroupTriple11
             // 
@@ -821,10 +900,77 @@ namespace PaletteExplorer.UX.New
             // standardDisplayToolStripMenuItem
             // 
             this.standardDisplayToolStripMenuItem.CheckOnClick = true;
+            this.standardDisplayToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customColoursToolStripMenuItem,
+            this.toolStripMenuItem3,
+            this.customTextColoursToolStripMenuItem,
+            this.toolStripMenuItem4,
+            this.noCustomColoursToolStripMenuItem,
+            this.toolStripMenuItem5,
+            this.normalToolStripMenuItem,
+            this.toolStripMenuItem9,
+            this.resetStandardViewToolStripMenuItem});
             this.standardDisplayToolStripMenuItem.Name = "standardDisplayToolStripMenuItem";
             this.standardDisplayToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.standardDisplayToolStripMenuItem.Text = "&Standard Display";
             this.standardDisplayToolStripMenuItem.Click += new System.EventHandler(this.StandardDisplayToolStripMenuItem_Click);
+            // 
+            // customColoursToolStripMenuItem
+            // 
+            this.customColoursToolStripMenuItem.CheckOnClick = true;
+            this.customColoursToolStripMenuItem.Name = "customColoursToolStripMenuItem";
+            this.customColoursToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.customColoursToolStripMenuItem.Text = "&Custom Colours";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(181, 6);
+            // 
+            // customTextColoursToolStripMenuItem
+            // 
+            this.customTextColoursToolStripMenuItem.CheckOnClick = true;
+            this.customTextColoursToolStripMenuItem.Name = "customTextColoursToolStripMenuItem";
+            this.customTextColoursToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.customTextColoursToolStripMenuItem.Text = "Custom &Text Colours";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(181, 6);
+            // 
+            // noCustomColoursToolStripMenuItem
+            // 
+            this.noCustomColoursToolStripMenuItem.CheckOnClick = true;
+            this.noCustomColoursToolStripMenuItem.Name = "noCustomColoursToolStripMenuItem";
+            this.noCustomColoursToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.noCustomColoursToolStripMenuItem.Text = "N&o Custom Colours";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(181, 6);
+            // 
+            // normalToolStripMenuItem
+            // 
+            this.normalToolStripMenuItem.Checked = true;
+            this.normalToolStripMenuItem.CheckOnClick = true;
+            this.normalToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
+            this.normalToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.normalToolStripMenuItem.Text = "&Normal";
+            // 
+            // toolStripMenuItem9
+            // 
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(181, 6);
+            // 
+            // resetStandardViewToolStripMenuItem
+            // 
+            this.resetStandardViewToolStripMenuItem.Enabled = false;
+            this.resetStandardViewToolStripMenuItem.Name = "resetStandardViewToolStripMenuItem";
+            this.resetStandardViewToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.resetStandardViewToolStripMenuItem.Text = "Reset &Standard View";
             // 
             // toolStripMenuItem1
             // 
@@ -834,10 +980,81 @@ namespace PaletteExplorer.UX.New
             // circularDisplayToolStripMenuItem
             // 
             this.circularDisplayToolStripMenuItem.CheckOnClick = true;
+            this.circularDisplayToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customColourToolStripMenuItem,
+            this.toolStripMenuItem6,
+            this.customTextColourToolStripMenuItem,
+            this.toolStripMenuItem7,
+            this.noCustomColoursToolStripMenuItem1,
+            this.toolStripMenuItem8,
+            this.normalToolStripMenuItem1,
+            this.toolStripMenuItem10,
+            this.resetCircularViewToolStripMenuItem});
             this.circularDisplayToolStripMenuItem.Name = "circularDisplayToolStripMenuItem";
             this.circularDisplayToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.circularDisplayToolStripMenuItem.Text = "C&ircular Display";
             this.circularDisplayToolStripMenuItem.Click += new System.EventHandler(this.CircularDisplayToolStripMenuItem_Click);
+            // 
+            // customColourToolStripMenuItem
+            // 
+            this.customColourToolStripMenuItem.CheckOnClick = true;
+            this.customColourToolStripMenuItem.Name = "customColourToolStripMenuItem";
+            this.customColourToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.customColourToolStripMenuItem.Text = "&Custom Colours";
+            this.customColourToolStripMenuItem.Click += new System.EventHandler(this.CustomColourToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(181, 6);
+            // 
+            // customTextColourToolStripMenuItem
+            // 
+            this.customTextColourToolStripMenuItem.CheckOnClick = true;
+            this.customTextColourToolStripMenuItem.Name = "customTextColourToolStripMenuItem";
+            this.customTextColourToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.customTextColourToolStripMenuItem.Text = "Custom &Text Colours";
+            this.customTextColourToolStripMenuItem.Click += new System.EventHandler(this.CustomTextColourToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(181, 6);
+            // 
+            // noCustomColoursToolStripMenuItem1
+            // 
+            this.noCustomColoursToolStripMenuItem1.CheckOnClick = true;
+            this.noCustomColoursToolStripMenuItem1.Name = "noCustomColoursToolStripMenuItem1";
+            this.noCustomColoursToolStripMenuItem1.Size = new System.Drawing.Size(184, 22);
+            this.noCustomColoursToolStripMenuItem1.Text = "N&o Custom Colours";
+            this.noCustomColoursToolStripMenuItem1.Click += new System.EventHandler(this.NoCustomColoursToolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(181, 6);
+            // 
+            // normalToolStripMenuItem1
+            // 
+            this.normalToolStripMenuItem1.Checked = true;
+            this.normalToolStripMenuItem1.CheckOnClick = true;
+            this.normalToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.normalToolStripMenuItem1.Name = "normalToolStripMenuItem1";
+            this.normalToolStripMenuItem1.Size = new System.Drawing.Size(184, 22);
+            this.normalToolStripMenuItem1.Text = "&Normal";
+            this.normalToolStripMenuItem1.Click += new System.EventHandler(this.NormalToolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(181, 6);
+            // 
+            // resetCircularViewToolStripMenuItem
+            // 
+            this.resetCircularViewToolStripMenuItem.Enabled = false;
+            this.resetCircularViewToolStripMenuItem.Name = "resetCircularViewToolStripMenuItem";
+            this.resetCircularViewToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.resetCircularViewToolStripMenuItem.Text = "Reset &Circular View";
             // 
             // kryptonRibbonGroupTriple17
             // 
@@ -1090,6 +1307,7 @@ namespace PaletteExplorer.UX.New
             // cpbcPreview
             // 
             this.cpbcPreview.BackColor = System.Drawing.Color.Transparent;
+            this.cpbcPreview.LayoutType = PaletteExplorer.Enumerations.ViewLayoutType.CUSTOMCOLOURVIEW;
             this.cpbcPreview.Location = new System.Drawing.Point(11, 16);
             this.cpbcPreview.Name = "cpbcPreview";
             this.cpbcPreview.Size = new System.Drawing.Size(1625, 660);
@@ -1118,6 +1336,7 @@ namespace PaletteExplorer.UX.New
             this.Load += new System.EventHandler(this.RibbonWindow_Load);
             this.Shown += new System.EventHandler(this.RibbonWindow_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.krControls)).EndInit();
+            this.ctxManageColours.ResumeLayout(false);
             this.ctxReset.ResumeLayout(false);
             this.ctxViewTypes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kpnlStatusStrip)).EndInit();
@@ -1422,6 +1641,31 @@ namespace PaletteExplorer.UX.New
         private void KrgbNewPalette_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CpbcPreview_ChangeViewLayoutType(object sender, Enumerations.ViewLayoutType layoutType)
+        {
+            cpbcPreview.ChangeViewLayout(layoutType);
+        }
+
+        private void CustomColourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UIController.ControlCircularPictureBoxControlView(cpbcPreview, customColourToolStripMenuItem, customTextColourToolStripMenuItem, noCustomColoursToolStripMenuItem1, normalToolStripMenuItem1);
+        }
+
+        private void CustomTextColourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UIController.ControlCircularPictureBoxControlView(cpbcPreview, customColourToolStripMenuItem, customTextColourToolStripMenuItem, noCustomColoursToolStripMenuItem1, normalToolStripMenuItem1);
+        }
+
+        private void NoCustomColoursToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            UIController.ControlCircularPictureBoxControlView(cpbcPreview, customColourToolStripMenuItem, customTextColourToolStripMenuItem, noCustomColoursToolStripMenuItem1, normalToolStripMenuItem1);
+        }
+
+        private void NormalToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            UIController.ControlCircularPictureBoxControlView(cpbcPreview, customColourToolStripMenuItem, customTextColourToolStripMenuItem, noCustomColoursToolStripMenuItem1, normalToolStripMenuItem1);
         }
 
         private void KrgbSavePalette_Click(object sender, EventArgs e)

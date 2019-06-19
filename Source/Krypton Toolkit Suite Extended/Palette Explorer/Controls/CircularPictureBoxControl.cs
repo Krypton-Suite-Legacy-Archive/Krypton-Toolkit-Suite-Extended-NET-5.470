@@ -1778,11 +1778,11 @@ namespace PaletteExplorer.Controls
         #endregion
 
         #region Delegates
-        public delegate void OnChangeViewLayout(object sender, ViewLayoutType layoutType);
+        public delegate void ChangeViewLayoutHandler(object sender, ViewLayoutType layoutType);
         #endregion
 
         #region Event
-        public event OnChangeViewLayout ChangeViewLayoutType;
+        public event ChangeViewLayoutHandler ChangeViewLayoutType;
         #endregion
 
         #region Constructor
@@ -3891,6 +3891,8 @@ namespace PaletteExplorer.Controls
                     CircularPictureBoxControlController.NoCustomColoursLayout(this);
                     break;
             }
+
+            OnChangeViewLayoutType();
         }
         #endregion
 
@@ -3993,6 +3995,16 @@ namespace PaletteExplorer.Controls
 
             GetPressedTextColourPreview().BackColor = textColourSettingsManager.GetPressedTextColour();
             #endregion
+        }
+        #endregion
+
+        #region Protected
+        protected virtual void OnChangeViewLayoutType()
+        {
+            if (ChangeViewLayoutType != null)
+            {
+                ChangeViewLayoutType(this, LayoutType);
+            }
         }
         #endregion
     }
