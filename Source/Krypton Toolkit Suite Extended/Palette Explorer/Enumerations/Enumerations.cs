@@ -26,4 +26,12 @@
         GREENCHANNEL = 2,
         BLUECHANNEL = 3
     }
+
+    public enum ViewLayoutType
+    {
+        CUSTOMCOLOURVIEW = 0,
+        CUSTOMTEXTCOLOURVIEW = 1,
+        NORMALVIEW = 2,
+        NOCUSTOMCOLOURS = 3
+    }
 }

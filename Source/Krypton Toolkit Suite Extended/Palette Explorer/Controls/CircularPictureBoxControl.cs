@@ -2,6 +2,8 @@
 using ExtendedControls.ExtendedToolkit.Controls;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using PaletteExplorer.Classes;
+using PaletteExplorer.Classes.Controllers;
+using PaletteExplorer.Enumerations;
 using System;
 using System.Collections;
 using System.Drawing;
@@ -1250,6 +1252,8 @@ namespace PaletteExplorer.Controls
         private CircularPictureBox[] _circularPictureBoxCollection;
 
         private PaletteExplorerBooleanSettingsManager _paletteExplorerBooleanSettingsManager = new PaletteExplorerBooleanSettingsManager();
+
+        private ViewLayoutType _layoutType;
         #endregion
 
         #region Properties
@@ -1770,6 +1774,15 @@ namespace PaletteExplorer.Controls
         public ContextMenuStrip RibbonTabTextColourMenu { get => ribbonTabTextColourMenu; set => ribbonTabTextColourMenu = value; }
         #endregion
 
+        public ViewLayoutType LayoutType { get => _layoutType; set { _layoutType = value; Invalidate(); } }
+        #endregion
+
+        #region Delegates
+        public delegate void OnChangeViewLayout(object sender, ViewLayoutType layoutType);
+        #endregion
+
+        #region Event
+        public event OnChangeViewLayout ChangeViewLayoutType;
         #endregion
 
         #region Constructor
@@ -2584,7 +2597,7 @@ namespace PaletteExplorer.Controls
         {
             return DisabledControlColourPreview;
         }
-               
+
         /// <summary>
         /// Sets the value of LinkDisabledColourPreview to value.
         /// </summary>
@@ -3537,6 +3550,11 @@ namespace PaletteExplorer.Controls
             control.ContextMenuStrip = contextMenu;
         }
 
+        /// <summary>
+        /// Sets the default colour.
+        /// </summary>
+        /// <param name="defaultColour">The default colour.</param>
+        /// <param name="control">The control.</param>
         public static void SetDefaultColour(Color defaultColour, CircularPictureBoxControl control)
         {
             control.GetBaseColourPreview().BackColor = defaultColour;
@@ -3604,6 +3622,10 @@ namespace PaletteExplorer.Controls
             control.GetRibbonTabTextColourPreview().BackColor = defaultColour;
         }
 
+        /// <summary>
+        /// Resets the colours.
+        /// </summary>
+        /// <param name="control">The control.</param>
         public static void ResetColours(CircularPictureBoxControl control)
         {
             Color transparent = Color.Transparent;
@@ -3673,6 +3695,9 @@ namespace PaletteExplorer.Controls
             control.GetRibbonTabTextColourPreview().BackColor = transparent;
         }
 
+        /// <summary>
+        /// Resets the colours.
+        /// </summary>
         public static void ResetColours()
         {
             CircularPictureBoxControl control = new CircularPictureBoxControl();
@@ -3689,11 +3714,14 @@ namespace PaletteExplorer.Controls
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
         }
 
+        /// <summary>
+        /// Resets the colours.
+        /// </summary>
+        /// <param name="defaultColour">The default colour.</param>
         public static void ResetColours(Color defaultColour)
         {
             CircularPictureBoxControl control = new CircularPictureBoxControl();
@@ -3707,11 +3735,13 @@ namespace PaletteExplorer.Controls
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
         }
 
+        /// <summary>
+        /// Resets the palette colours.
+        /// </summary>
         public void ResetPaletteColours()
         {
             try
@@ -3726,11 +3756,14 @@ namespace PaletteExplorer.Controls
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
         }
 
+        /// <summary>
+        /// Resets the palette colours.
+        /// </summary>
+        /// <param name="defaultColour">The default colour.</param>
         public void ResetPaletteColours(Color defaultColour)
         {
             try
@@ -3742,8 +3775,7 @@ namespace PaletteExplorer.Controls
             }
             catch (Exception exc)
             {
-
-                throw;
+                ExceptionHandler.CaptureException(exc);
             }
         }
 
@@ -3764,7 +3796,7 @@ namespace PaletteExplorer.Controls
         }
 
         /// <summary>
-        /// 
+        /// Are all colours empty.
         /// </summary>
         /// <returns></returns>
         public bool AreAllColoursEmpty()
@@ -3779,6 +3811,10 @@ namespace PaletteExplorer.Controls
             }
         }
 
+        /// <summary>
+        /// Randomises the colour.
+        /// </summary>
+        /// <returns>A randomly generated colour.</returns>
         private static new Color RandomiseColour()
         {
             Random rnd = new Random();
@@ -3786,6 +3822,10 @@ namespace PaletteExplorer.Controls
             return Color.FromArgb(rnd.Next(255), rnd.Next(255), rnd.Next(255));
         }
 
+        /// <summary>
+        /// Inspires me.
+        /// </summary>
+        /// <param name="usePrompt">if set to <c>true</c> [use prompt].</param>
         public void InspireMe(bool usePrompt = false)
         {
             if (usePrompt)
@@ -3812,6 +3852,9 @@ namespace PaletteExplorer.Controls
             }
         }
 
+        /// <summary>
+        /// Generates all colours.
+        /// </summary>
         private void GenerateAllColours()
         {
             #region Basic Colours
@@ -3825,6 +3868,29 @@ namespace PaletteExplorer.Controls
 
             GetLightestColourPreview().BackColor = RandomisePaletteColours.ReturnLightestColour();
             #endregion
+        }
+
+        /// <summary>
+        /// Changes the view layout.
+        /// </summary>
+        /// <param name="layoutType">Type of the layout.</param>
+        public void ChangeViewLayout(ViewLayoutType layoutType)
+        {
+            switch (layoutType)
+            {
+                case ViewLayoutType.CUSTOMCOLOURVIEW:
+                    CircularPictureBoxControlController.CustomColourLayout(this);
+                    break;
+                case ViewLayoutType.CUSTOMTEXTCOLOURVIEW:
+                    CircularPictureBoxControlController.CustomTextColourLayout(this);
+                    break;
+                case ViewLayoutType.NORMALVIEW:
+                    CircularPictureBoxControlController.NormalLayout(this);
+                    break;
+                case ViewLayoutType.NOCUSTOMCOLOURS:
+                    CircularPictureBoxControlController.NoCustomColoursLayout(this);
+                    break;
+            }
         }
         #endregion
 

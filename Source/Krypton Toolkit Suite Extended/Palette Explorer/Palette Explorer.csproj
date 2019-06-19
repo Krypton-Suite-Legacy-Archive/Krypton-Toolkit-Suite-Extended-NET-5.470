@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Classes\ColourConfigurationFileManager.cs" />
     <Compile Include="Classes\ColourHelpers.cs" />
+    <Compile Include="Classes\Controllers\CircularPictureBoxControlController.cs" />
     <Compile Include="Classes\InternalColourSettingsManager.cs" />
     <Compile Include="Classes\GlobalMethods.cs" />
     <Compile Include="Classes\Models\ColourContextMenuModel.cs" />
