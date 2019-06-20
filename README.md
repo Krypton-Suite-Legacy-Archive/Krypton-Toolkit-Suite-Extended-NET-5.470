@@ -40,6 +40,7 @@ You can check out the pre-built demo application from downloading it [here](http
 ## 2019-07-01 Build 11xx - July Update
 * Implement [TaskDialog](https://github.com/kpreisser/TaskDialog) by [Konstantin Preißer](https://github.com/kpreisser)
 * Floating Menu & Tool strips - Bought back one of the pre Office 2007 features (**IMPORTANT:** Always set the `GripStyle` to **visible** on `FloatingMenuStrip`!)
+* Fixed issue [#72](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/72), Pressing Yes on the Password Generator exit messageBox does not thing!
 -->
 
 ======

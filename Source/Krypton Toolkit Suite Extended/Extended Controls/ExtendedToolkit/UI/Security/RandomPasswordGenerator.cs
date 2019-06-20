@@ -250,7 +250,17 @@ namespace ExtendedControls.ExtendedToolkit.UI.Security
 
         private void RandomPasswordGenerator_FormClosing(object sender, FormClosingEventArgs e)
         {
-            HideWindow();
+            //HideWindow();
+
+            if (ktxtOutput.Text != null)
+            {
+                DialogResult result = ExtendedKryptonMessageBox.Show($"There is a password of: '{ ktxtOutput.Text }' still in the field. Do you want to exit?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Information, messageboxTypeface: new Font("Segoe UI", 12));
+
+                if (result == DialogResult.Yes)
+                {
+                    Hide();
+                }
+            }
         }
 
         private void HideWindow()
