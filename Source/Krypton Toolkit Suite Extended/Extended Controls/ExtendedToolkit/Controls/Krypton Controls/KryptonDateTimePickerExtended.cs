@@ -147,6 +147,8 @@ namespace KryptonExtendedToolkit.ExtendedToolkit.Controls
 
             ktxtDateTime.Enter += new EventHandler(ktxtDateTime_Enter);
 
+            MaxDate = new DateTime(9999, 12, 31, 23, 59, 59, 59);
+
             //
             // errorMessage
             //
