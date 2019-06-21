@@ -341,6 +341,12 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonTreeViewExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonTreeViewExtended.Designer.cs">
+      <DependentUpon>KryptonTreeViewExtended.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\PasswordStrengthControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -591,9 +597,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonTreeView.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonTreeViewExt.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonUACShieldButton.cs" />
@@ -1196,8 +1199,14 @@
     <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonToastNotification.resx">
       <DependentUpon>KryptonToastNotification.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonTreeViewExtended.resx">
+      <DependentUpon>KryptonTreeViewExtended.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\PasswordStrengthControl.resx">
       <DependentUpon>PasswordStrengthControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Navigator\Controls\FlatTabControl.resx">
+      <DependentUpon>FlatTabControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Crash Report Tool\UX\CrashReportToolMainWindow.resx">
       <DependentUpon>CrashReportToolMainWindow.cs</DependentUpon>

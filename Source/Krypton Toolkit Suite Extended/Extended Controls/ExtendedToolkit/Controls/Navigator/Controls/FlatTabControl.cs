@@ -24,13 +24,13 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls
     [ToolboxBitmap(typeof(TabControl)), ToolboxItem(false)] //,
     public class FlatTabControl : TabControl
     {
+        private IContainer components;
 
         /// <summary> 
         /// Required designer variable.
         /// </summary>
         /// 
         #region ... Declarations ...
-        private System.ComponentModel.Container components = null;
         private SubClass scUpDown = null;
         private bool bUpDown; // true when the button UpDown is required
         private ImageList leftRightImages = null;
@@ -231,6 +231,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls
         }
 
         private int _cornerSymmetry = 0;
+
         [Browsable(true), Category("Appearance-Extended")]
         public CornSymmetry CornerSymmetry
         {
@@ -1158,7 +1159,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            this.ResumeLayout(false);
+
         }
 
 

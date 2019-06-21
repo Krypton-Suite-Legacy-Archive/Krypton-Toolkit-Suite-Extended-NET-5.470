@@ -177,9 +177,38 @@ namespace PaletteExplorer.UX.New
         private ToolStripMenuItem resetCircularViewToolStripMenuItem;
         private ContextMenuStrip ctxManageColours;
         private ToolStripMenuItem mergeAllColoursToolStripMenuItem;
-        private ToolStripMenuItem exportAllColoursConfigurationToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem11;
         private ToolStripMenuItem splitColoursToolStripMenuItem;
+        private ToolStripMenuItem basicColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripMenuItem customColoursToolStripMenuItem1;
+        private ToolStripSeparator toolStripMenuItem12;
+        private ToolStripMenuItem customTextColoursToolStripMenuItem1;
+        private ToolStripSeparator toolStripMenuItem13;
+        private ToolStripMenuItem linkTextColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem14;
+        private ToolStripMenuItem miscellaneousColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem15;
+        private ToolStripMenuItem standardControlTextColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem16;
+        private ToolStripMenuItem textColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem17;
+        private ToolStripMenuItem exportColourConfigurationsToolStripMenuItem;
+        private ToolStripMenuItem exportAllColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem18;
+        private ToolStripMenuItem exportBasicColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem19;
+        private ToolStripMenuItem exportCustomColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem20;
+        private ToolStripMenuItem exportCustomTextColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem21;
+        private ToolStripMenuItem exportLinkTextColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem22;
+        private ToolStripMenuItem exportMiscellaneousColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem23;
+        private ToolStripMenuItem exportStandardControlTextColoursToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem25;
+        private ToolStripMenuItem exportTextColoursToolStripMenuItem;
         private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton krgbCheckForUpdates;
 
         private void InitializeComponent()
@@ -252,7 +281,6 @@ namespace PaletteExplorer.UX.New
             this.krgbManageColours = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.ctxManageColours = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mergeAllColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportAllColoursConfigurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripSeparator();
             this.splitColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonRibbonGroupSeparator8 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupSeparator();
@@ -340,6 +368,36 @@ namespace PaletteExplorer.UX.New
             this.cpbcPreview = new PaletteExplorer.Controls.CircularPictureBoxControl();
             this.kdm = new ComponentFactory.Krypton.Docking.KryptonDockingManager();
             this.ilImages = new System.Windows.Forms.ImageList(this.components);
+            this.basicColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.customColoursToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripSeparator();
+            this.customTextColoursToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripSeparator();
+            this.linkTextColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripSeparator();
+            this.miscellaneousColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripSeparator();
+            this.standardControlTextColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripSeparator();
+            this.textColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportColourConfigurationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportAllColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem18 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportBasicColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem19 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportCustomColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem20 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportCustomTextColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem21 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportLinkTextColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem22 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportMiscellaneousColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem23 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportStandardControlTextColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem25 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportTextColoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.krControls)).BeginInit();
             this.ctxManageColours.SuspendLayout();
             this.ctxReset.SuspendLayout();
@@ -383,6 +441,7 @@ namespace PaletteExplorer.UX.New
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
+            this.krControls.SelectedContext = null;
             this.krControls.SelectedTab = this.kryptonRibbonTab2;
             this.krControls.Size = new System.Drawing.Size(1662, 115);
             this.krControls.TabIndex = 2;
@@ -707,33 +766,41 @@ namespace PaletteExplorer.UX.New
             this.ctxManageColours.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mergeAllColoursToolStripMenuItem,
             this.toolStripMenuItem11,
-            this.splitColoursToolStripMenuItem});
+            this.splitColoursToolStripMenuItem,
+            this.toolStripMenuItem17,
+            this.exportColourConfigurationsToolStripMenuItem});
             this.ctxManageColours.Name = "ctxManageColours";
-            this.ctxManageColours.Size = new System.Drawing.Size(170, 54);
+            this.ctxManageColours.Size = new System.Drawing.Size(230, 104);
             // 
             // mergeAllColoursToolStripMenuItem
             // 
-            this.mergeAllColoursToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportAllColoursConfigurationToolStripMenuItem});
             this.mergeAllColoursToolStripMenuItem.Name = "mergeAllColoursToolStripMenuItem";
-            this.mergeAllColoursToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.mergeAllColoursToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.mergeAllColoursToolStripMenuItem.Text = "Merge &All Colours";
-            // 
-            // exportAllColoursConfigurationToolStripMenuItem
-            // 
-            this.exportAllColoursConfigurationToolStripMenuItem.Name = "exportAllColoursConfigurationToolStripMenuItem";
-            this.exportAllColoursConfigurationToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
-            this.exportAllColoursConfigurationToolStripMenuItem.Text = "Export A&ll Colours Configuration";
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(166, 6);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(226, 6);
             // 
             // splitColoursToolStripMenuItem
             // 
+            this.splitColoursToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.basicColoursToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.customColoursToolStripMenuItem1,
+            this.toolStripMenuItem12,
+            this.customTextColoursToolStripMenuItem1,
+            this.toolStripMenuItem13,
+            this.linkTextColoursToolStripMenuItem,
+            this.toolStripMenuItem14,
+            this.miscellaneousColoursToolStripMenuItem,
+            this.toolStripMenuItem15,
+            this.standardControlTextColoursToolStripMenuItem,
+            this.toolStripMenuItem16,
+            this.textColoursToolStripMenuItem});
             this.splitColoursToolStripMenuItem.Name = "splitColoursToolStripMenuItem";
-            this.splitColoursToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.splitColoursToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.splitColoursToolStripMenuItem.Text = "&Split Colours";
             // 
             // kryptonRibbonGroupTriple11
@@ -1318,6 +1385,188 @@ namespace PaletteExplorer.UX.New
             this.ilImages.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.ilImages.ImageSize = new System.Drawing.Size(16, 16);
             this.ilImages.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // basicColoursToolStripMenuItem
+            // 
+            this.basicColoursToolStripMenuItem.Name = "basicColoursToolStripMenuItem";
+            this.basicColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.basicColoursToolStripMenuItem.Text = "&Basic Colours";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(229, 6);
+            // 
+            // customColoursToolStripMenuItem1
+            // 
+            this.customColoursToolStripMenuItem1.Name = "customColoursToolStripMenuItem1";
+            this.customColoursToolStripMenuItem1.Size = new System.Drawing.Size(232, 22);
+            this.customColoursToolStripMenuItem1.Text = "&Custom Colours";
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(229, 6);
+            // 
+            // customTextColoursToolStripMenuItem1
+            // 
+            this.customTextColoursToolStripMenuItem1.Name = "customTextColoursToolStripMenuItem1";
+            this.customTextColoursToolStripMenuItem1.Size = new System.Drawing.Size(232, 22);
+            this.customTextColoursToolStripMenuItem1.Text = "Custom &Text Colours";
+            // 
+            // toolStripMenuItem13
+            // 
+            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(229, 6);
+            // 
+            // linkTextColoursToolStripMenuItem
+            // 
+            this.linkTextColoursToolStripMenuItem.Name = "linkTextColoursToolStripMenuItem";
+            this.linkTextColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.linkTextColoursToolStripMenuItem.Text = "&Link Text Colours";
+            // 
+            // toolStripMenuItem14
+            // 
+            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(229, 6);
+            // 
+            // miscellaneousColoursToolStripMenuItem
+            // 
+            this.miscellaneousColoursToolStripMenuItem.Name = "miscellaneousColoursToolStripMenuItem";
+            this.miscellaneousColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.miscellaneousColoursToolStripMenuItem.Text = "&Miscellaneous Colours";
+            // 
+            // toolStripMenuItem15
+            // 
+            this.toolStripMenuItem15.Name = "toolStripMenuItem15";
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(229, 6);
+            // 
+            // standardControlTextColoursToolStripMenuItem
+            // 
+            this.standardControlTextColoursToolStripMenuItem.Name = "standardControlTextColoursToolStripMenuItem";
+            this.standardControlTextColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.standardControlTextColoursToolStripMenuItem.Text = "&Standard Control Text Colours";
+            // 
+            // toolStripMenuItem16
+            // 
+            this.toolStripMenuItem16.Name = "toolStripMenuItem16";
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(229, 6);
+            // 
+            // textColoursToolStripMenuItem
+            // 
+            this.textColoursToolStripMenuItem.Name = "textColoursToolStripMenuItem";
+            this.textColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.textColoursToolStripMenuItem.Text = "T&ext Colours";
+            // 
+            // toolStripMenuItem17
+            // 
+            this.toolStripMenuItem17.Name = "toolStripMenuItem17";
+            this.toolStripMenuItem17.Size = new System.Drawing.Size(226, 6);
+            // 
+            // exportColourConfigurationsToolStripMenuItem
+            // 
+            this.exportColourConfigurationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportAllColoursToolStripMenuItem,
+            this.toolStripMenuItem18,
+            this.exportBasicColoursToolStripMenuItem,
+            this.toolStripMenuItem19,
+            this.exportCustomColoursToolStripMenuItem,
+            this.toolStripMenuItem20,
+            this.exportCustomTextColoursToolStripMenuItem,
+            this.toolStripMenuItem21,
+            this.exportLinkTextColoursToolStripMenuItem,
+            this.toolStripMenuItem22,
+            this.exportMiscellaneousColoursToolStripMenuItem,
+            this.toolStripMenuItem23,
+            this.exportStandardControlTextColoursToolStripMenuItem,
+            this.toolStripMenuItem25,
+            this.exportTextColoursToolStripMenuItem});
+            this.exportColourConfigurationsToolStripMenuItem.Name = "exportColourConfigurationsToolStripMenuItem";
+            this.exportColourConfigurationsToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.exportColourConfigurationsToolStripMenuItem.Text = "&Export Colour Configurations";
+            // 
+            // exportAllColoursToolStripMenuItem
+            // 
+            this.exportAllColoursToolStripMenuItem.Name = "exportAllColoursToolStripMenuItem";
+            this.exportAllColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.exportAllColoursToolStripMenuItem.Text = "&All Colours";
+            // 
+            // toolStripMenuItem18
+            // 
+            this.toolStripMenuItem18.Name = "toolStripMenuItem18";
+            this.toolStripMenuItem18.Size = new System.Drawing.Size(229, 6);
+            // 
+            // exportBasicColoursToolStripMenuItem
+            // 
+            this.exportBasicColoursToolStripMenuItem.Name = "exportBasicColoursToolStripMenuItem";
+            this.exportBasicColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.exportBasicColoursToolStripMenuItem.Text = "B&asic Colours";
+            // 
+            // toolStripMenuItem19
+            // 
+            this.toolStripMenuItem19.Name = "toolStripMenuItem19";
+            this.toolStripMenuItem19.Size = new System.Drawing.Size(229, 6);
+            // 
+            // exportCustomColoursToolStripMenuItem
+            // 
+            this.exportCustomColoursToolStripMenuItem.Name = "exportCustomColoursToolStripMenuItem";
+            this.exportCustomColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.exportCustomColoursToolStripMenuItem.Text = "&Custom Colours";
+            // 
+            // toolStripMenuItem20
+            // 
+            this.toolStripMenuItem20.Name = "toolStripMenuItem20";
+            this.toolStripMenuItem20.Size = new System.Drawing.Size(229, 6);
+            // 
+            // exportCustomTextColoursToolStripMenuItem
+            // 
+            this.exportCustomTextColoursToolStripMenuItem.Name = "exportCustomTextColoursToolStripMenuItem";
+            this.exportCustomTextColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.exportCustomTextColoursToolStripMenuItem.Text = "Custom &Text Colours";
+            // 
+            // toolStripMenuItem21
+            // 
+            this.toolStripMenuItem21.Name = "toolStripMenuItem21";
+            this.toolStripMenuItem21.Size = new System.Drawing.Size(229, 6);
+            // 
+            // exportLinkTextColoursToolStripMenuItem
+            // 
+            this.exportLinkTextColoursToolStripMenuItem.Name = "exportLinkTextColoursToolStripMenuItem";
+            this.exportLinkTextColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.exportLinkTextColoursToolStripMenuItem.Text = "&Link Text Colours";
+            // 
+            // toolStripMenuItem22
+            // 
+            this.toolStripMenuItem22.Name = "toolStripMenuItem22";
+            this.toolStripMenuItem22.Size = new System.Drawing.Size(229, 6);
+            // 
+            // exportMiscellaneousColoursToolStripMenuItem
+            // 
+            this.exportMiscellaneousColoursToolStripMenuItem.Name = "exportMiscellaneousColoursToolStripMenuItem";
+            this.exportMiscellaneousColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.exportMiscellaneousColoursToolStripMenuItem.Text = "&Miscellaneous Colours";
+            // 
+            // toolStripMenuItem23
+            // 
+            this.toolStripMenuItem23.Name = "toolStripMenuItem23";
+            this.toolStripMenuItem23.Size = new System.Drawing.Size(229, 6);
+            // 
+            // exportStandardControlTextColoursToolStripMenuItem
+            // 
+            this.exportStandardControlTextColoursToolStripMenuItem.Name = "exportStandardControlTextColoursToolStripMenuItem";
+            this.exportStandardControlTextColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.exportStandardControlTextColoursToolStripMenuItem.Text = "&Standard Control Text Colours";
+            // 
+            // toolStripMenuItem25
+            // 
+            this.toolStripMenuItem25.Name = "toolStripMenuItem25";
+            this.toolStripMenuItem25.Size = new System.Drawing.Size(229, 6);
+            // 
+            // exportTextColoursToolStripMenuItem
+            // 
+            this.exportTextColoursToolStripMenuItem.Name = "exportTextColoursToolStripMenuItem";
+            this.exportTextColoursToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.exportTextColoursToolStripMenuItem.Text = "T&ext Colours";
             // 
             // RibbonWindow
             // 
