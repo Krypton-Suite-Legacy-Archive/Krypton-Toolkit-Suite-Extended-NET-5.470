@@ -73,6 +73,7 @@
     <Compile Include="Classes\Colours\SettingsManager.cs" />
     <Compile Include="Classes\Colours\WIN32.cs" />
     <Compile Include="Classes\ExceptionHandler.cs" />
+    <Compile Include="Classes\IO\Helpers.cs" />
     <Compile Include="Classes\IO\Path.cs" />
     <Compile Include="Classes\MessageBoxes\ExtendedKryptonMessageBox.cs" />
     <Compile Include="Classes\Options\Theming\ThemingLogic.cs" />

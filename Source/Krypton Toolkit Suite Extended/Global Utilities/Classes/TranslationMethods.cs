@@ -206,7 +206,7 @@ namespace Core.Classes
         /// <returns></returns>
         public static string ColourARGBToString(Color colour)
         {
-            return colour.ToArgb().ToString();
+            return $"{ colour.A },{ colour.R },{ colour.G },{ colour.B }";
         }
 
         /// <summary>

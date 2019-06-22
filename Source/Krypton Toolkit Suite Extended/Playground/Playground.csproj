@@ -156,6 +156,9 @@
     <Compile Include="TimeSpanExample.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TreeViewExamples.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UACAdvancedExample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TimeSpanExample.resx">
       <DependentUpon>TimeSpanExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeViewExamples.resx">
+      <DependentUpon>TreeViewExamples.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UACAdvancedExample.resx">
       <DependentUpon>UACAdvancedExample.cs</DependentUpon>

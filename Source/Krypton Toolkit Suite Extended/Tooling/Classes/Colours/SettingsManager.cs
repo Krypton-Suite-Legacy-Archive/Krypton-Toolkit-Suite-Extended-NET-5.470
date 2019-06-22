@@ -8,6 +8,7 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using Core.Classes.IO;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -201,7 +202,7 @@ namespace Core.Classes.Colours
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc, "Exception Caught", MessageBoxButtons.OK, MessageBoxIcon.Error, "SettingsManager", "MergeAllColourSetings(bool usePrompt = false)");
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
 
@@ -395,7 +396,7 @@ namespace Core.Classes.Colours
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc, "Exception Caught", MessageBoxButtons.OK, MessageBoxIcon.Error, "SettingsManager", "MergeAllColours(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, \nColor focusedTextColour, Color pressedTextColour, Color disabledControlColour, Color linkDisabledColour, Color linkFocusedColour, Color linkNormalColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, \nColor customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour, bool usePrompt = false)");
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
         #endregion

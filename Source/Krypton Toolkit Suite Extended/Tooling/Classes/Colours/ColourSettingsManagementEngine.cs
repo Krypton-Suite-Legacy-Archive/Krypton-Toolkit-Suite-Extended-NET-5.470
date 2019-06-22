@@ -9,6 +9,7 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using Core;
+using Core.Classes.IO;
 using Core.Enumerations;
 using System;
 using System.Drawing;
@@ -443,7 +444,7 @@ namespace Classes.Colours
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc);
+                ExceptionHandler.CaptureException(exc, methodSignature: Helpers.GetCurrentMethod());
             }
         }
         #endregion

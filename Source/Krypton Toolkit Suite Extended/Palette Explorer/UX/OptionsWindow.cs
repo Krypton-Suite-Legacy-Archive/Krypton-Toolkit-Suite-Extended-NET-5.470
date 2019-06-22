@@ -9,10 +9,12 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using Core;
+using Core.Classes.IO;
 using Core.Classes.Other;
 using PaletteExplorer.Classes;
 using System;
 using System.Drawing;
+using System.Windows.Forms;
 using ToolkitSettings.Classes.PaletteExplorer;
 
 namespace PaletteExplorer.UX
@@ -606,7 +608,7 @@ namespace PaletteExplorer.UX
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
 

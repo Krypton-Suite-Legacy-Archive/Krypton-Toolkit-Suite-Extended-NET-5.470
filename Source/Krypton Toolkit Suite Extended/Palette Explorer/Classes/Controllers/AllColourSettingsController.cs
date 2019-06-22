@@ -1,5 +1,7 @@
 ﻿using Core;
+using Core.Classes.IO;
 using System;
+using System.Windows.Forms;
 using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace PaletteExplorer.Classes.Controllers
@@ -101,7 +103,7 @@ namespace PaletteExplorer.Classes.Controllers
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
         #endregion

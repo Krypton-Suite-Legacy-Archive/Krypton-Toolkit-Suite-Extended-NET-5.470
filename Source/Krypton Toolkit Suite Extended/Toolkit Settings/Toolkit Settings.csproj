@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackEnd\ExceptionHandler.cs" />
     <Compile Include="BackEnd\KryptonMessageBoxExtended.cs" />
     <Compile Include="BackEnd\PI.cs" />
     <Compile Include="Classes\Application Updater\InternalApplicationUpdaterSettingsManager.cs" />

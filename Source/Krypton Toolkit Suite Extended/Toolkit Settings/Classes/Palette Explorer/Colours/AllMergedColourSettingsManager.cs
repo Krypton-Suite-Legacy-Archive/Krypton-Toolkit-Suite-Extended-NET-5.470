@@ -8,6 +8,7 @@
 #endregion
 
 using Core.Classes;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Drawing;
 using System.IO;
@@ -860,6 +861,11 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
 
             try
             {
+                if (!File.Exists(colourConfigurationFilePath))
+                {
+                    File.Create(colourConfigurationFilePath);
+                }
+
                 StreamWriter writer = new StreamWriter(colourConfigurationFilePath);
 
                 writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetAlternativeNormalTextColour()));
@@ -931,12 +937,12 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
                 writer.Close();
 
                 writer.Dispose();
-            }
+        }
             catch (Exception exc)
             {
-                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: '{ exc.Message }'", "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: MethodHelpers.GetCurrentMethod());
             }
-        }
+}
 
         public static void WriteRGBColoursToFile(string colourConfigurationFilePath)
         {
@@ -944,6 +950,11 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
 
             try
             {
+                if (!File.Exists(colourConfigurationFilePath))
+                {
+                    File.Create(colourConfigurationFilePath);
+                }
+
                 StreamWriter writer = new StreamWriter(colourConfigurationFilePath);
 
                 writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetAlternativeNormalTextColour()));
@@ -1018,7 +1029,71 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
             }
             catch (Exception exc)
             {
-                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: '{ exc.Message }'", "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: MethodHelpers.GetCurrentMethod());
+            }
+        }
+
+        /// <summary>
+        /// Creates a ARGB colour configuration file.
+        /// </summary>
+        public static void CreateARGBConfigurationFile()
+        {
+            try
+            {
+                CommonSaveFileDialog csfd = new CommonSaveFileDialog();
+
+                csfd.Title = "Save Colours To:";
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Colour Configuration File", ".ccf"));
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Normal Text File", ".txt"));
+
+                csfd.DefaultFileName = $"All Colour Configuration File - { TranslationMethods.ReturnSafeFileNameDateTimeString() }";
+
+                csfd.AlwaysAppendDefaultExtension = true;
+
+                csfd.DefaultExtension = "ccf";
+
+                if (csfd.ShowDialog() == CommonFileDialogResult.Ok)
+                {
+                    WriteARGBColoursToFile(csfd.FileName);
+                }
+            }
+            catch (Exception exc)
+            {
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: MethodHelpers.GetCurrentMethod());
+            }
+        }
+
+        /// <summary>
+        /// Creates a RGB colour configuration file.
+        /// </summary>
+        public static void CreateRGBConfigurationFile()
+        {
+            try
+            {
+                CommonSaveFileDialog csfd = new CommonSaveFileDialog();
+
+                csfd.Title = "Save Colours To:";
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Colour Configuration File", ".ccf"));
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Normal Text File", ".txt"));
+
+                csfd.DefaultFileName = $"All Colour Configuration File - { TranslationMethods.ReturnSafeFileNameDateTimeString() }";
+
+                csfd.AlwaysAppendDefaultExtension = true;
+
+                csfd.DefaultExtension = "ccf";
+
+                if (csfd.ShowDialog() == CommonFileDialogResult.Ok)
+                {
+                    WriteRGBColoursToFile(csfd.FileName);
+                }
+            }
+            catch (Exception exc)
+            {
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: MethodHelpers.GetCurrentMethod());
             }
         }
         #endregion

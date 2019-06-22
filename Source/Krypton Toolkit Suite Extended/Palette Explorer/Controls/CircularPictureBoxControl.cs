@@ -1,4 +1,5 @@
 ﻿using Core;
+using Core.Classes.IO;
 using ExtendedControls.ExtendedToolkit.Controls;
 using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using PaletteExplorer.Classes;
@@ -3714,7 +3715,7 @@ namespace PaletteExplorer.Controls
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
 
@@ -3735,7 +3736,7 @@ namespace PaletteExplorer.Controls
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
 
@@ -3756,7 +3757,7 @@ namespace PaletteExplorer.Controls
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
 
@@ -3775,7 +3776,7 @@ namespace PaletteExplorer.Controls
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
 
@@ -3789,9 +3790,9 @@ namespace PaletteExplorer.Controls
             {
                 _boxListCollection.Add(box);
             }
-            catch (Exception e)
+            catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(e);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
 

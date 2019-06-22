@@ -9,6 +9,7 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using Core;
+using Core.Classes.IO;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -273,9 +274,9 @@ namespace Classes.Colours
                     DialogResult result = KryptonMessageBox.Show("One or more colours are not defined, use white & black?", "Non-Defined Colours", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 }
             }
-            catch (Exception error)
+            catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(error, "Exception Caught", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
 

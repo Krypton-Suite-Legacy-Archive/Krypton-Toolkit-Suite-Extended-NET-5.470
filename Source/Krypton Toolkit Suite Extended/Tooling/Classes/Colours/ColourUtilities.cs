@@ -10,6 +10,7 @@
 using ComponentFactory.Krypton.Ribbon;
 using ComponentFactory.Krypton.Toolkit;
 using Core;
+using Core.Classes.IO;
 using Core.Enumerations;
 using ExtendedControls.ExtendedToolkit.Controls;
 using System;
@@ -250,7 +251,7 @@ namespace Classes.Colours
             }
             catch (Exception ex)
             {
-                ExceptionHandler.CaptureException(ex, "Exception Caught", MessageBoxButtons.OK, MessageBoxIcon.Error, "ColourUtilities", "GenerateColourShades(CircularPictureBox darkestColour, CircularPictureBox mediumColour, CircularPictureBox lightColour, CircularPictureBox lightestColour, float darkColourValue, float mediumColourValue, float lightColourValue, float lightestColourValue, Color baseColour)");
+                ExceptionHandler.CaptureException(ex, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
 
