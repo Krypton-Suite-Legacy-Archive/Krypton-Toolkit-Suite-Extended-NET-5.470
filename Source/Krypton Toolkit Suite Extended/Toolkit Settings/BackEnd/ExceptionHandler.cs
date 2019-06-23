@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace ToolkitSettings.BackEnd
 {
-    public class ExceptionHandler
+    internal class ExceptionHandler
     {
         #region Constructors
         /// <summary>
@@ -150,7 +150,7 @@ namespace ToolkitSettings.BackEnd
         #endregion
     }
 
-    public class MethodHelpers
+    internal class MethodHelpers
     {
         #region Methods
         [MethodImpl(MethodImplOptions.NoInlining)]

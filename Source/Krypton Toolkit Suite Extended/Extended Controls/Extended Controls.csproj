@@ -370,11 +370,14 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\DirectoryNode.cs" />
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\FakeChildNode.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\File System\Classes\ShellIcon.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\File System\Components\NewFileSystemTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\FileNode.cs" />
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\FileSystemTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\Krypton\KryptonFileSystemTreeView.cs" />
     <Compile Include="ExtendedToolkit\Controls\Time Span\KryptonTimeSpanPicker.cs" />
     <Compile Include="ExtendedToolkit\Crash Report Tool\Classes\DrDump\AnonymousData.cs" />
     <Compile Include="ExtendedToolkit\Crash Report Tool\Classes\DrDump\DrDumpService.cs" />
