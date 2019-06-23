@@ -368,6 +368,13 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonToggleSwitchToolbarControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\DirectoryNode.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\FakeChildNode.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\FileNode.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\FileSystemTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\Krypton\KryptonFileSystemTreeView.cs" />
     <Compile Include="ExtendedToolkit\Controls\Time Span\KryptonTimeSpanPicker.cs" />
     <Compile Include="ExtendedToolkit\Crash Report Tool\Classes\DrDump\AnonymousData.cs" />
     <Compile Include="ExtendedToolkit\Crash Report Tool\Classes\DrDump\DrDumpService.cs" />
@@ -728,9 +735,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\ListView\ListViewSort.cs" />
-    <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\FileSystemTreeView.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\ShellIcon.cs" />
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\TreeViewPrintHelper.cs" />
     <Compile Include="ExtendedToolkit\Controls\TreeGridView\TreeGridCell.cs" />
@@ -1008,6 +1012,7 @@
     </Compile>
     <Content Include="ExtendedToolkit\Wizard\Images\Wizard.bmp" />
     <Content Include="ExtendedToolkit\Wizard\Images\wizBigOnlineFolder.gif" />
+    <Content Include="Icons\Folder_16_x_16.ico" />
     <Content Include="Notes\IMPORTANT.txt" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -1207,6 +1212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Navigator\Controls\FlatTabControl.resx">
       <DependentUpon>FlatTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Standard Controls\TreeView\FileSystemTreeView.resx">
+      <DependentUpon>FileSystemTreeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Crash Report Tool\UX\CrashReportToolMainWindow.resx">
       <DependentUpon>CrashReportToolMainWindow.cs</DependentUpon>

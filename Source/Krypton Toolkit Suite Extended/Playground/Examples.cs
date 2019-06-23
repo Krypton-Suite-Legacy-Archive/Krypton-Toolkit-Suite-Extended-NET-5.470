@@ -75,12 +75,14 @@ namespace Playground
         private KryptonButton kbtnUAC;
         private KryptonButton kbtnFloatingToolStrip;
         private KryptonButton kbtnFloatingMenuStrip;
+        private KryptonButton kbtnTreeViews;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Examples));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnFloatingMenuStrip = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnFloatingToolStrip = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnUAC = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnFileInformation = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -121,13 +123,14 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnFloatingMenuStrip = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnTreeViews = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnTreeViews);
             this.kryptonPanel1.Controls.Add(this.kbtnFloatingMenuStrip);
             this.kryptonPanel1.Controls.Add(this.kbtnFloatingToolStrip);
             this.kryptonPanel1.Controls.Add(this.kbtnUAC);
@@ -174,6 +177,16 @@ namespace Playground
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(971, 597);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kbtnFloatingMenuStrip
+            // 
+            this.kbtnFloatingMenuStrip.Location = new System.Drawing.Point(12, 408);
+            this.kbtnFloatingMenuStrip.Name = "kbtnFloatingMenuStrip";
+            this.kbtnFloatingMenuStrip.Size = new System.Drawing.Size(218, 25);
+            this.kbtnFloatingMenuStrip.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnFloatingMenuStrip.TabIndex = 93;
+            this.kbtnFloatingMenuStrip.Values.Text = "Floating Menu Strip";
+            this.kbtnFloatingMenuStrip.Click += new System.EventHandler(this.KbtnFloatingMenuStrip_Click);
             // 
             // kbtnFloatingToolStrip
             // 
@@ -546,15 +559,15 @@ namespace Playground
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
-            // kbtnFloatingMenuStrip
+            // kbtnTreeViews
             // 
-            this.kbtnFloatingMenuStrip.Location = new System.Drawing.Point(12, 408);
-            this.kbtnFloatingMenuStrip.Name = "kbtnFloatingMenuStrip";
-            this.kbtnFloatingMenuStrip.Size = new System.Drawing.Size(218, 25);
-            this.kbtnFloatingMenuStrip.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnFloatingMenuStrip.TabIndex = 93;
-            this.kbtnFloatingMenuStrip.Values.Text = "Floating Menu Strip";
-            this.kbtnFloatingMenuStrip.Click += new System.EventHandler(this.KbtnFloatingMenuStrip_Click);
+            this.kbtnTreeViews.Location = new System.Drawing.Point(255, 408);
+            this.kbtnTreeViews.Name = "kbtnTreeViews";
+            this.kbtnTreeViews.Size = new System.Drawing.Size(218, 25);
+            this.kbtnTreeViews.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnTreeViews.TabIndex = 94;
+            this.kbtnTreeViews.Values.Text = "Tree Views";
+            this.kbtnTreeViews.Click += new System.EventHandler(this.KbtnTreeViews_Click);
             // 
             // Examples
             // 
@@ -917,6 +930,13 @@ namespace Playground
             FloatingMenuStripExample floatingMenuStripExample = new FloatingMenuStripExample();
 
             floatingMenuStripExample.Show();
+        }
+
+        private void KbtnTreeViews_Click(object sender, EventArgs e)
+        {
+            TreeViewExamples tve = new TreeViewExamples();
+
+            tve.Show();
         }
     }
 }

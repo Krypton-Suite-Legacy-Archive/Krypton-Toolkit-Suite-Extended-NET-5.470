@@ -1201,5 +1201,8 @@
   <ItemGroup>
     <None Include="Resources\restore.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_16_x_16.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

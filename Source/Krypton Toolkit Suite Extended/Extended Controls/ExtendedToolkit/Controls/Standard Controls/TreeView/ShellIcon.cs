@@ -11,7 +11,7 @@ using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 
-namespace ExtendedControls.ExtendedToolkit.Controls.StandardControls.TreeView
+namespace ExtendedControls.ExtendedToolkit.Controls.StandardControls.CustomTreeView
 {
     /// <summary>
 	/// Summary description for ShellIcon.

@@ -14,7 +14,7 @@ using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace ExtendedControls.ExtendedToolkit.Controls.StandardControls.TreeView
+namespace ExtendedControls.ExtendedToolkit.Controls.StandardControls.CustomTreeView
 {
     public class TreeViewPrintHelper
     {

@@ -1,9 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace Playground
 {
@@ -11,10 +9,14 @@ namespace Playground
     {
         private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonTreeViewExtended kryptonTreeViewExtended1;
         private KryptonPanel kryptonPanel1;
+        private ExtendedControls.ExtendedToolkit.Controls.StandardControls.CustomTreeView.FileSystemTreeView fileSystemTreeView1;
+        private System.ComponentModel.IContainer components;
+        private KryptonButton kbtnLoad;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonTreeView kryptonTreeView1;
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node4");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node5");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node6");
@@ -38,7 +40,10 @@ namespace Playground
             this.kryptonTreeView1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonTreeView();
             this.kryptonTreeViewExtended1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonTreeViewExtended();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.fileSystemTreeView1 = new ExtendedControls.ExtendedToolkit.Controls.StandardControls.CustomTreeView.FileSystemTreeView();
+            this.kbtnLoad = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
+            this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonTreeView1
@@ -115,11 +120,33 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnLoad);
+            this.kryptonPanel1.Controls.Add(this.fileSystemTreeView1);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1188, 704);
             this.kryptonPanel1.TabIndex = 2;
+            // 
+            // fileSystemTreeView1
+            // 
+            this.fileSystemTreeView1.ImageIndex = 0;
+            this.fileSystemTreeView1.Location = new System.Drawing.Point(603, 12);
+            this.fileSystemTreeView1.Name = "fileSystemTreeView1";
+            this.fileSystemTreeView1.SelectedImageIndex = 0;
+            this.fileSystemTreeView1.ShowFiles = true;
+            this.fileSystemTreeView1.Size = new System.Drawing.Size(368, 440);
+            this.fileSystemTreeView1.TabIndex = 3;
+            // 
+            // kbtnLoad
+            // 
+            this.kbtnLoad.Location = new System.Drawing.Point(977, 12);
+            this.kbtnLoad.Name = "kbtnLoad";
+            this.kbtnLoad.Size = new System.Drawing.Size(199, 25);
+            this.kbtnLoad.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnLoad.TabIndex = 93;
+            this.kbtnLoad.Values.Text = "Open Directory";
+            this.kbtnLoad.Click += new System.EventHandler(this.KbtnLoad_Click);
             // 
             // TreeViewExamples
             // 
@@ -129,8 +156,26 @@ namespace Playground
             this.Controls.Add(this.kryptonPanel1);
             this.Name = "TreeViewExamples";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
+            this.kryptonPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
+        }
+
+        public TreeViewExamples()
+        {
+            InitializeComponent();
+        }
+
+        private void KbtnLoad_Click(object sender, EventArgs e)
+        {
+            CommonOpenFileDialog cofd = new CommonOpenFileDialog();
+
+            cofd.IsFolderPicker = true;
+
+            if (cofd.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                fileSystemTreeView1.Load(Path.GetFullPath(cofd.FileName));
+            }
         }
     }
 }
