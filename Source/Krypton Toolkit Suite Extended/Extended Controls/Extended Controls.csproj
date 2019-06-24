@@ -370,10 +370,13 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\DirectoryNode.cs" />
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\FakeChildNode.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\File System\Classes\DirectoryNode.cs" />
+    <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\File System\Classes\FakeChildNode.cs" />
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\File System\Classes\ShellIcon.cs" />
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\File System\Components\NewFileSystemTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\File System\Classes\FileNode.cs" />
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\FileNode.cs" />
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\TreeView\FileSystemTreeView.cs">
       <SubType>Component</SubType>
