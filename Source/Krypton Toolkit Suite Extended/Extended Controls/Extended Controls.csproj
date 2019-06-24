@@ -987,6 +987,7 @@
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\Common\ScrollingLabel.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Content Include="ExtendedToolkit\Controls\Standard Controls\CustomTreeView\Icons\Folder_16_x_16.ico" />
     <Content Include="ExtendedToolkit\Controls\Standard Controls\Images\ActiveBell.ico" />
     <Content Include="ExtendedToolkit\Controls\Standard Controls\Images\AnalogClock.bmp" />
     <Content Include="ExtendedToolkit\Controls\Standard Controls\Images\Down.ico" />
