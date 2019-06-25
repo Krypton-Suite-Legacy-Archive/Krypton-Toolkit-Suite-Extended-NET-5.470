@@ -314,6 +314,9 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\CircularProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\FileSystemTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonFlashingLabel.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonLineNumberedRichTextBox.cs">
       <SubType>Component</SubType>
@@ -356,6 +359,7 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\RoundedTextbox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\ShellIcon.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\ToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -367,9 +371,6 @@
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\Toolbar Items\KryptonToggleSwitchToolbarControl.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ExtendedToolkit\Controls\Standard Controls\CustomTreeView\FileSystemTreeView.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtendedToolkit\Controls\Standard Controls\CustomTreeView\ShellIcon.cs" />
     <Compile Include="ExtendedToolkit\Controls\Time Span\KryptonTimeSpanPicker.cs" />
@@ -1009,7 +1010,7 @@
     </Compile>
     <Content Include="ExtendedToolkit\Wizard\Images\Wizard.bmp" />
     <Content Include="ExtendedToolkit\Wizard\Images\wizBigOnlineFolder.gif" />
-    <Content Include="Icons\Folder_16_x_16.ico" />
+    <Content Include="Icons\Folder.ico" />
     <Content Include="Notes\IMPORTANT.txt" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

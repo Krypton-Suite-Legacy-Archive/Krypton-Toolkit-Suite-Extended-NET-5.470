@@ -9,9 +9,9 @@ namespace Playground
     {
         private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonTreeViewExtended kryptonTreeViewExtended1;
         private KryptonPanel kryptonPanel1;
-        private ExtendedControls.ExtendedToolkit.Controls.StandardControls.CustomTreeView.FileSystemTreeView fileSystemTreeView1;
         private System.ComponentModel.IContainer components;
         private KryptonButton kbtnLoad;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.FileSystemTreeView fileSystemTreeView1;
         private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonTreeView kryptonTreeView1;
 
         private void InitializeComponent()
@@ -37,11 +37,12 @@ namespace Playground
             System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node1");
             System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node2");
             System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node3");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TreeViewExamples));
             this.kryptonTreeView1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonTreeView();
             this.kryptonTreeViewExtended1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonTreeViewExtended();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.fileSystemTreeView1 = new ExtendedControls.ExtendedToolkit.Controls.StandardControls.CustomTreeView.FileSystemTreeView();
             this.kbtnLoad = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.fileSystemTreeView1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.FileSystemTreeView();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -120,23 +121,13 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.kbtnLoad);
             this.kryptonPanel1.Controls.Add(this.fileSystemTreeView1);
+            this.kryptonPanel1.Controls.Add(this.kbtnLoad);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1188, 704);
             this.kryptonPanel1.TabIndex = 2;
-            // 
-            // fileSystemTreeView1
-            // 
-            this.fileSystemTreeView1.ImageIndex = 0;
-            this.fileSystemTreeView1.Location = new System.Drawing.Point(603, 12);
-            this.fileSystemTreeView1.Name = "fileSystemTreeView1";
-            this.fileSystemTreeView1.SelectedImageIndex = 0;
-            this.fileSystemTreeView1.ShowFiles = true;
-            this.fileSystemTreeView1.Size = new System.Drawing.Size(368, 440);
-            this.fileSystemTreeView1.TabIndex = 3;
             // 
             // kbtnLoad
             // 
@@ -147,6 +138,17 @@ namespace Playground
             this.kbtnLoad.TabIndex = 93;
             this.kbtnLoad.Values.Text = "Open Directory";
             this.kbtnLoad.Click += new System.EventHandler(this.KbtnLoad_Click);
+            // 
+            // fileSystemTreeView1
+            // 
+            this.fileSystemTreeView1.FolderIcon = ((System.Drawing.Icon)(resources.GetObject("fileSystemTreeView1.FolderIcon")));
+            this.fileSystemTreeView1.ImageIndex = 0;
+            this.fileSystemTreeView1.Location = new System.Drawing.Point(603, 12);
+            this.fileSystemTreeView1.Name = "fileSystemTreeView1";
+            this.fileSystemTreeView1.SelectedImageIndex = 0;
+            this.fileSystemTreeView1.ShowFiles = true;
+            this.fileSystemTreeView1.Size = new System.Drawing.Size(368, 440);
+            this.fileSystemTreeView1.TabIndex = 3;
             // 
             // TreeViewExamples
             // 
