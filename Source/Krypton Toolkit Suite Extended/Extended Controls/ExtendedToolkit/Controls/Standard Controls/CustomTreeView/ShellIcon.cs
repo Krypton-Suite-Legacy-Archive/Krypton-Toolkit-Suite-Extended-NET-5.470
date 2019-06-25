@@ -41,9 +41,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.StandardControls.CustomTreeV
 
         public ShellIcon()
         {
-            //
-            // TODO: Add constructor logic here
-            //
+
         }
 
 

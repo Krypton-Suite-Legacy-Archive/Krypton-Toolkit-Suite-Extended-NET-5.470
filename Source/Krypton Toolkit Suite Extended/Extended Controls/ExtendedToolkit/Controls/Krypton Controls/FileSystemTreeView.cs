@@ -33,9 +33,18 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             // Extracts the icon 
             try
             {
+                string iconPath = "Icons\\Folder.ico";
+
                 Icon appIcon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
-                FolderIcon = appIcon;
+                if (File.Exists(iconPath))
+                {
+                    FolderIcon = new Icon(iconPath);
+                }
+                else
+                {
+                    FolderIcon = appIcon;
+                }
             }
             catch (Exception exc)
             {
