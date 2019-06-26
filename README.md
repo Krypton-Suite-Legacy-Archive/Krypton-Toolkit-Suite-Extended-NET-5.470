@@ -43,6 +43,7 @@ You can check out the pre-built demo application from downloading it [here](http
 * Fixed issue [#72](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/72), Pressing Yes on the Password Generator exit messageBox does not thing!
 * Fixed issue [#67](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/67), The Following resource does not seem to exist in FlatTabControl 
 * Fixed issue [#68](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/68), The Following resources do not seem to exist in the TreeViewExt
+* Replaced `FileSystemTreeView` with `KryptonFileSystemTreeView` using `KryptonTreeView`. Need help for setting the default `FolderIcon` as it currently uses the Visual Studio icon for directories.
 -->
 
 ======

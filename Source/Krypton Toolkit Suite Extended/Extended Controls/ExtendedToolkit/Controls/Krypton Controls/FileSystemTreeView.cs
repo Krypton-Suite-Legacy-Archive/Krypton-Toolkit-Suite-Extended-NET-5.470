@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -10,7 +11,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
     /// Summary description for DirectoryTreeView.
     /// </summary> 
     ///    
-
+    [ToolboxItem(false)]
     public class FileSystemTreeView : TreeView
     {
         private bool _showFiles = true;
