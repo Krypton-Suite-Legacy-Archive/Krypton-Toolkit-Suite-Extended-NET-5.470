@@ -40,6 +40,7 @@ You can check out the pre-built demo application from downloading it [here](http
 ## 2019-07-01 Build 11xx - July Update
 * Implement [TaskDialog](https://github.com/kpreisser/TaskDialog) by [Konstantin Preißer](https://github.com/kpreisser)
 * Floating Menu & Tool strips - Bought back one of the pre Office 2007 features (**IMPORTANT:** Always set the `GripStyle` to **visible** on `FloatingMenuStrip`!)
+* Fixed issue [#79](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/79), How many MessageBoxes are being exported!?! and which work?
 * Fixed issue [#72](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/72), Pressing Yes on the Password Generator exit messageBox does not thing!
 * Fixed issue [#67](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/67), The Following resource does not seem to exist in FlatTabControl 
 * Fixed issue [#68](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/68), The Following resources do not seem to exist in the TreeViewExt
