@@ -37,7 +37,16 @@ Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Exte
 You can check out the pre-built demo application from downloading it [here](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Demos/Demos.zip)
 
 <!--======
-## 2019-07-01 Build 11xx - July Update
+
+## 2019-08-10 Build 12xx - August Update
+* Added `ExtendedKryptonColourButton` control with a kryptonised custom colour UI
+* Added a better file system tree view control
+* More item and project templates (floating MenuStrips & ToolStrip templates)
+
+-->
+
+<!--======
+## 2019-07-01 Build 1180 - July Update
 * Implement [TaskDialog](https://github.com/kpreisser/TaskDialog) by [Konstantin Preißer](https://github.com/kpreisser)
 * Floating Menu & Tool strips - Bought back one of the pre Office 2007 features (**IMPORTANT:** Always set the `GripStyle` to **visible** on `FloatingMenuStrip`!)
 * Fixed issue [#79](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/79), How many MessageBoxes are being exported!?! and which work?
