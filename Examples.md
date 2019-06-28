@@ -54,7 +54,7 @@
 
 ## Floatable ToolStrip
 
-![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/FlotableToolStrip.png)
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/FloatableToolStrip.png)
 
 ## Floatable MenuStrip
 
