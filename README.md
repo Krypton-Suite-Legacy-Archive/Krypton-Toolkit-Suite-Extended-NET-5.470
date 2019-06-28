@@ -44,6 +44,7 @@ You can check out the pre-built demo application from downloading it [here](http
 * Fixed issue [#67](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/67), The Following resource does not seem to exist in FlatTabControl 
 * Fixed issue [#68](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/68), The Following resources do not seem to exist in the TreeViewExt
 * Replaced `FileSystemTreeView` with `KryptonFileSystemTreeView` using `KryptonTreeView`. Need help for setting the default `FolderIcon` as it currently uses the Visual Studio icon for directories.
+* Added Visual Studio item and project templates, issue [#56](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/56). Downloadable from [here](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/tree/master/Visual%20Studio%20Templates)
 -->
 
 ======
