@@ -160,6 +160,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task Dialogs", "Task Dialog
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolkit Resources", "Toolkit Resources\Toolkit Resources.csproj", "{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Floating Toolbars", "Floating Toolbars\Floating Toolbars.csproj", "{1893C8B4-3215-4F77-9AFF-24659EC475BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -426,6 +428,18 @@ Global
 		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Release|x86.ActiveCfg = Release|Any CPU
 		{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}.Release|x86.Build.0 = Release|Any CPU
+		{1893C8B4-3215-4F77-9AFF-24659EC475BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1893C8B4-3215-4F77-9AFF-24659EC475BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1893C8B4-3215-4F77-9AFF-24659EC475BE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1893C8B4-3215-4F77-9AFF-24659EC475BE}.Debug|x86.Build.0 = Debug|Any CPU
+		{1893C8B4-3215-4F77-9AFF-24659EC475BE}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{1893C8B4-3215-4F77-9AFF-24659EC475BE}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{1893C8B4-3215-4F77-9AFF-24659EC475BE}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{1893C8B4-3215-4F77-9AFF-24659EC475BE}.Installer Only|x86.Build.0 = Release|Any CPU
+		{1893C8B4-3215-4F77-9AFF-24659EC475BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1893C8B4-3215-4F77-9AFF-24659EC475BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1893C8B4-3215-4F77-9AFF-24659EC475BE}.Release|x86.ActiveCfg = Release|Any CPU
+		{1893C8B4-3215-4F77-9AFF-24659EC475BE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

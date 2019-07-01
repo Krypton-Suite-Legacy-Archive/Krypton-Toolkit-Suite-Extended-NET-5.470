@@ -43,6 +43,7 @@ You can check out the pre-built demo application from downloading it [here](http
 * Added a better file system tree view control
 * More item and project templates (floating MenuStrips & ToolStrip templates)
 * Floating menu and toolstrips and associated components are now in a separate binary for easier toolbox navigation - **Floating Toolbars.dll**
+* The `GripStyle` visibility is now set to **true** and `DockStyle` is set to **None** by default on the `FloatingMenuStrip`
 -->
 
 ======
