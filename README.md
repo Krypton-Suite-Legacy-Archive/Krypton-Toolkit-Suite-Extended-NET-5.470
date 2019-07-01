@@ -42,10 +42,10 @@ You can check out the pre-built demo application from downloading it [here](http
 * Added `ExtendedKryptonColourButton` control with a kryptonised custom colour UI
 * Added a better file system tree view control
 * More item and project templates (floating MenuStrips & ToolStrip templates)
-
+* Floating menu and toolstrips and associated components are now in a separate binary for easier toolbox navigation - **Floating Toolbars.dll**
 -->
 
-<!--======
+======
 ## 2019-07-01 Build 1180 - July Update
 * Implement [TaskDialog](https://github.com/kpreisser/TaskDialog) by [Konstantin Preißer](https://github.com/kpreisser)
 * Floating Menu & Tool strips - Bought back one of the pre Office 2007 features (**IMPORTANT:** Always set the `GripStyle` to **visible** on `FloatingMenuStrip`!)
@@ -55,7 +55,8 @@ You can check out the pre-built demo application from downloading it [here](http
 * Fixed issue [#68](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/68), The Following resources do not seem to exist in the TreeViewExt
 * Replaced `FileSystemTreeView` with `KryptonFileSystemTreeView` using `KryptonTreeView`. Need help for setting the default `FolderIcon` as it currently uses the Visual Studio icon for directories.
 * Added Visual Studio item and project templates, issue [#56](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/56). Downloadable from [here](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/tree/master/Visual%20Studio%20Templates)
--->
+* Upgraded to Krypton Toolkit Suite - version: **5.470.1222**
+* Build 1180 (build date Monday 1st, July 2019) is now available on NuGet
 
 ======
 ## 2019-06-01 Build 1030 - June Update
