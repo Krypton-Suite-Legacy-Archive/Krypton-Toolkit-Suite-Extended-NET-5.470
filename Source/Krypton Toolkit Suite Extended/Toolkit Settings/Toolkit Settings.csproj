@@ -76,6 +76,11 @@
     <Compile Include="Classes\Palette Explorer\PaletteTypefaceSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\Properties\ColourPropertyWindowSettingsManager.cs" />
     <Compile Include="Classes\Palette Explorer\WindowLocationSettingsManager.cs" />
+    <Compile Include="Containers\WindowsIconResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WindowsIconResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -339,6 +344,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Containers\WindowsIconResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WindowsIconResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -357,6 +366,15 @@
     <None Include="Resources\Warning_32_x_32.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Desktop.png" />
+    <None Include="Resources\Floppy Drive.png" />
+    <None Include="Resources\Folder Up.png" />
+    <None Include="Resources\Folder.png" />
+    <None Include="Resources\Hard Drive.png" />
+    <None Include="Resources\Network Drive.png" />
+    <None Include="Resources\Optical Drive.png" />
+    <None Include="Resources\OS Drive.png" />
+    <None Include="Resources\This PC.png" />
     <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
   </ItemGroup>
   <ItemGroup>

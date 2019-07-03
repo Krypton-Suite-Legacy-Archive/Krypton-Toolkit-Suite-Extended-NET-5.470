@@ -320,6 +320,9 @@
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonFileSystemTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonFileSystemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonFlashingLabel.cs" />
     <Compile Include="ExtendedToolkit\Controls\Krypton Controls\KryptonLineNumberedRichTextBox.cs">
       <SubType>Component</SubType>
@@ -1192,6 +1195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Colours\Controls\ColourComparer.resx">
       <DependentUpon>ColourComparer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonFileSystemView.resx">
+      <DependentUpon>KryptonFileSystemView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\Controls\Krypton Controls\KryptonListView.resx">
       <DependentUpon>KryptonListView.cs</DependentUpon>

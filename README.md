@@ -47,6 +47,7 @@ You can check out the pre-built demo application from downloading it [here](http
 -->
 
 ======
+
 ## 2019-07-01 Build 1180 - July Update
 * Implement [TaskDialog](https://github.com/kpreisser/TaskDialog) by [Konstantin Preißer](https://github.com/kpreisser)
 * Floating Menu & Tool strips - Bought back one of the pre Office 2007 features (**IMPORTANT:** Always set the `GripStyle` to **visible** on `FloatingMenuStrip`!)
@@ -60,6 +61,7 @@ You can check out the pre-built demo application from downloading it [here](http
 * Build 1180 (build date Monday 1st, July 2019) is now available on NuGet
 
 ======
+
 ## 2019-06-01 Build 1030 - June Update
 * New `issue` templates
 * Implemented repository tags for better GitHub SEO

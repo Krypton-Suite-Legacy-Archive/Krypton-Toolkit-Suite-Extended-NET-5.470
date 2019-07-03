@@ -39,12 +39,13 @@
 #endregion
 
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Controls
 {
-    [Serializable]
+    [Browsable(false), Serializable]
     public class ToolStripPanelExtened : ToolStripPanel
     {
         #region Variables

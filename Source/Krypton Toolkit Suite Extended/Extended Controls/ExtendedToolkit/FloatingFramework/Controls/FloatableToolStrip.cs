@@ -59,7 +59,7 @@ namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Controls
     /// 
     /// </summary>
     /// <seealso cref="System.Windows.Forms.ToolStrip" />
-    [ToolboxBitmap(typeof(FloatableToolStrip), "ToolboxBitmaps.FloatableToolStrip.bmp")]
+    [Browsable(false), ToolboxBitmap(typeof(FloatableToolStrip), "ToolboxBitmaps.FloatableToolStrip.bmp")]
     public class FloatableToolStrip : ToolStrip
     {
         #region Variables

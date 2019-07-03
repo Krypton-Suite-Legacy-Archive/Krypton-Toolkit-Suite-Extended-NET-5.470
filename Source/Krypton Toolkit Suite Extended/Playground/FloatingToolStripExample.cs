@@ -9,7 +9,7 @@ namespace Playground
 {
     public class FloatingToolStripExample : KryptonForm
     {
-        private ExtendedControls.ExtendedToolkit.FloatingFramework.Controls.FloatableToolStrip floatableToolStrip1;
+        private FloatingToolbars.Components.FloatableToolStrip floatableToolStrip1;
         private System.Windows.Forms.ToolStripButton newToolStripButton;
         private System.Windows.Forms.ToolStripButton openToolStripButton;
         private System.Windows.Forms.ToolStripButton saveToolStripButton;
@@ -20,13 +20,13 @@ namespace Playground
         private System.Windows.Forms.ToolStripButton pasteToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
-        private ExtendedControls.ExtendedToolkit.FloatingFramework.Controls.ToolStripPanelExtened toolStripPanelExtened1;
+        private FloatingToolbars.Components.ToolStripPanelExtened toolStripPanelExtened1;
 
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FloatingToolStripExample));
-            this.toolStripPanelExtened1 = new ExtendedControls.ExtendedToolkit.FloatingFramework.Controls.ToolStripPanelExtened();
-            this.floatableToolStrip1 = new ExtendedControls.ExtendedToolkit.FloatingFramework.Controls.FloatableToolStrip();
+            this.toolStripPanelExtened1 = new FloatingToolbars.Components.ToolStripPanelExtened();
+            this.floatableToolStrip1 = new FloatingToolbars.Components.FloatableToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -54,6 +54,7 @@ namespace Playground
             // floatableToolStrip1
             // 
             this.floatableToolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.floatableToolStrip1.FloatingToolBarWindowText = "Tool Bar";
             this.floatableToolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.floatableToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripButton,

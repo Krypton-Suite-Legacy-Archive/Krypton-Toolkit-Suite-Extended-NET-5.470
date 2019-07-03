@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.FloatingFramework.Controls
 {
-    [ToolboxBitmap(typeof(FloatableMenuStrip), "ToolboxBitmaps.FloatableToolStrip.bmp")]
+    [Browsable(false), ToolboxBitmap(typeof(FloatableMenuStrip), "ToolboxBitmaps.FloatableToolStrip.bmp")]
     public class FloatableMenuStrip : MenuStrip
     {
         #region Variables

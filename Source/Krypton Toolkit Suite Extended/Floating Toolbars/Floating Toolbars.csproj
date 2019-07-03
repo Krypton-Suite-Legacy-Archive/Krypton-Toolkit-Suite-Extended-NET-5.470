@@ -44,8 +44,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\MenuStripPanelCollectionEditor.cs" />
+    <Compile Include="Classes\ToolStripPanelCollectionEditor.cs" />
+    <Compile Include="Components\FloatableMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FloatableToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\MenuStripPanelExtened.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ToolStripPanelExtened.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UX\ExistingComponentChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\ExtendedWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\MenuStripContainerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\MenuStripExistingComponentChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\ToolStripContainerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -58,6 +84,21 @@
     <EmbeddedResource Include="UX\ExistingComponentChooser.resx">
       <DependentUpon>ExistingComponentChooser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UX\ExtendedWindow.resx">
+      <DependentUpon>ExtendedWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\MenuStripContainerWindow.resx">
+      <DependentUpon>MenuStripContainerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\MenuStripExistingComponentChooser.resx">
+      <DependentUpon>MenuStripExistingComponentChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\ToolStripContainerWindow.resx">
+      <DependentUpon>ToolStripContainerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ToolboxBitmaps\FloatableToolStrip.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
