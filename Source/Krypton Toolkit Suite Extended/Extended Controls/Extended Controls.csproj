@@ -105,6 +105,7 @@
     <Compile Include="Base\Code\Colours\HSLColour.cs" />
     <Compile Include="Base\Code\Colours\RGBColour.cs" />
     <Compile Include="Base\Code\ControlHelper.cs" />
+    <Compile Include="Base\Code\Controls\ColourButtonValues.cs" />
     <Compile Include="Base\Code\Development\DevelopmentInformation.cs" />
     <Compile Include="Base\Code\Drawing\ColourChangedEventArgs.cs" />
     <Compile Include="Base\Code\Drawing\ColourHandler.cs" />
@@ -385,6 +386,8 @@
     <Compile Include="ExtendedToolkit\Crash Report Tool\UX\CrashReportToolMainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\Designers\KryptonColourButtonExtendedActionList.cs" />
+    <Compile Include="ExtendedToolkit\Designers\KryptonColourButtonExtendedDesigner.cs" />
     <Compile Include="ExtendedToolkit\Error Reporting\Classes\DrDump\AnonymousData.cs" />
     <Compile Include="ExtendedToolkit\Error Reporting\Classes\DrDump\DrDumpService.cs" />
     <Compile Include="ExtendedToolkit\Error Reporting\Classes\DrDump\SendRequestCompletedEventArgs.cs" />
@@ -1069,6 +1072,7 @@
     <Content Include="ToolboxBitmaps\DataChart.bmp" />
     <Content Include="ToolboxBitmaps\FloatableToolStrip.bmp" />
     <Content Include="ToolboxBitmaps\KR 48 x 48 Orange.ico" />
+    <Content Include="ToolboxBitmaps\KryptonColourButtonExtended.bmp" />
     <Content Include="ToolboxBitmaps\LabelRotate.bmp" />
     <Content Include="ToolboxBitmaps\ListBoxEx.bmp" />
     <Content Include="ToolboxBitmaps\ListViewEx.bmp" />
