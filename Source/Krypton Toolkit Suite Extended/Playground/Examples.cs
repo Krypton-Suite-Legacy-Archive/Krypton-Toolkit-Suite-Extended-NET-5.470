@@ -76,12 +76,15 @@ namespace Playground
         private KryptonButton kbtnFloatingToolStrip;
         private KryptonButton kbtnFloatingMenuStrip;
         private KryptonButton kbtnTreeViews;
+        private KryptonButton kbtnKryptonColourButtonExtended;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Examples));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnKryptonColourButtonExtended = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnTreeViews = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnFloatingMenuStrip = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnFloatingToolStrip = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnUAC = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -123,13 +126,13 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnTreeViews = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnKryptonColourButtonExtended);
             this.kryptonPanel1.Controls.Add(this.kbtnTreeViews);
             this.kryptonPanel1.Controls.Add(this.kbtnFloatingMenuStrip);
             this.kryptonPanel1.Controls.Add(this.kbtnFloatingToolStrip);
@@ -177,6 +180,26 @@ namespace Playground
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(971, 597);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kbtnKryptonColourButtonExtended
+            // 
+            this.kbtnKryptonColourButtonExtended.Location = new System.Drawing.Point(737, 408);
+            this.kbtnKryptonColourButtonExtended.Name = "kbtnKryptonColourButtonExtended";
+            this.kbtnKryptonColourButtonExtended.Size = new System.Drawing.Size(218, 25);
+            this.kbtnKryptonColourButtonExtended.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnKryptonColourButtonExtended.TabIndex = 95;
+            this.kbtnKryptonColourButtonExtended.Values.Text = "Krypton Colour Button Extended";
+            this.kbtnKryptonColourButtonExtended.Click += new System.EventHandler(this.KbtnKryptonColourButtonExtended_Click);
+            // 
+            // kbtnTreeViews
+            // 
+            this.kbtnTreeViews.Location = new System.Drawing.Point(255, 408);
+            this.kbtnTreeViews.Name = "kbtnTreeViews";
+            this.kbtnTreeViews.Size = new System.Drawing.Size(218, 25);
+            this.kbtnTreeViews.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnTreeViews.TabIndex = 94;
+            this.kbtnTreeViews.Values.Text = "Tree Views";
+            this.kbtnTreeViews.Click += new System.EventHandler(this.KbtnTreeViews_Click);
             // 
             // kbtnFloatingMenuStrip
             // 
@@ -559,16 +582,6 @@ namespace Playground
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
-            // kbtnTreeViews
-            // 
-            this.kbtnTreeViews.Location = new System.Drawing.Point(255, 408);
-            this.kbtnTreeViews.Name = "kbtnTreeViews";
-            this.kbtnTreeViews.Size = new System.Drawing.Size(218, 25);
-            this.kbtnTreeViews.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnTreeViews.TabIndex = 94;
-            this.kbtnTreeViews.Values.Text = "Tree Views";
-            this.kbtnTreeViews.Click += new System.EventHandler(this.KbtnTreeViews_Click);
-            // 
             // Examples
             // 
             this.ClientSize = new System.Drawing.Size(971, 597);
@@ -937,6 +950,13 @@ namespace Playground
             TreeViewExamples tve = new TreeViewExamples();
 
             tve.Show();
+        }
+
+        private void KbtnKryptonColourButtonExtended_Click(object sender, EventArgs e)
+        {
+            KryptonColourButtonExtendedTest test = new KryptonColourButtonExtendedTest();
+
+            test.Show();
         }
     }
 }

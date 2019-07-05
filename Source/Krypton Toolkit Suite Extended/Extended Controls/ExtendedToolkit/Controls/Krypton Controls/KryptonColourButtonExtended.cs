@@ -8,7 +8,11 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Base.Code.Controls;
 using ExtendedControls.ExtendedToolkit.Designers;
+using ExtendedControls.ExtendedToolkit.UI.Colours;
+using ExtendedControls.Properties;
+using KryptonExtendedToolkit.Base.Code;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +27,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
     public partial class KryptonColourButtonExtended : VisualSimpleBase, IButtonControl, IContentValues
     {
         #region Fields
-        private readonly ViewDrawButton _drawButton;
+        private readonly ViewDrawButtonExtended _drawButton;
         private ButtonStyle _style;
         private readonly ButtonController _buttonController;
         private readonly PaletteRedirectDropDownButton _paletteDropDownButtonImages;
@@ -40,6 +44,8 @@ namespace ExtendedControls.ExtendedToolkit.Controls
         private bool _wasEnabled;
         private bool _isDefault;
         private bool _useMnemonic;
+
+        //private ViewDrawButtonExtended vdbe = new ViewDrawButtonExtended(null, null, null, null, null, null, VisualOrientation.Top, true);
 
         // Context menu items
         private readonly KryptonContextMenu _kryptonContextMenu;
@@ -135,7 +141,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
             _headingRecent = new KryptonContextMenuHeading("Recent Colours");
             _coloursRecent = new KryptonContextMenuColorColumns(ColorScheme.None);
             _separatorNoColour = new KryptonContextMenuSeparator();
-            _itemNoColour = new KryptonContextMenuItem("&No Colour", Properties.Resources.ButtonNoColor, OnClickNoColor);
+            _itemNoColour = new KryptonContextMenuItem("&No Colour", Resources.ButtonNoColor, OnClickNoColor);
             _itemsNoColour = new KryptonContextMenuItems();
             _itemsNoColour.Items.Add(_itemNoColour);
             _separatorMoreColours = new KryptonContextMenuSeparator();
@@ -173,7 +179,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
             _overridePressed = new PaletteTripleOverride(OverrideFocus, StatePressed, PaletteState.FocusOverride);
 
             // Create the view color button instance
-            _drawButton = new ViewDrawButton(StateDisabled,
+            _drawButton = new ViewDrawButtonExtended(StateDisabled,
                                              _overrideNormal,
                                              _overrideTracking,
                                              _overridePressed,
@@ -343,9 +349,9 @@ namespace ExtendedControls.ExtendedToolkit.Controls
                 if (value != _selectedColour)
                 {
                     _selectedColour = value;
-                    Values.SelectedColor = value;
+                    Values.SelectedColour = value;
                     UpdateRecentColors(_selectedColour);
-                    OnSelectedColorChanged(_selectedColour);
+                    OnSelectedColourChanged(_selectedColour);
                     PerformNeedPaint(true);
                 }
             }
@@ -540,7 +546,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
         [Category("Visuals")]
         [Description("Color button values")]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
-        public ColorButtonValues Values { get; }
+        public ColourButtonValues Values { get; }
 
         private bool ShouldSerializeValues()
         {
@@ -713,7 +719,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
         /// <param name="value">true if the control should behave as a default color button; otherwise false.</param>
         public void NotifyDefault(bool value)
         {
-            if (!ViewDrawButton.IsFixed && (_isDefault != value))
+            if (!ViewDrawButtonExtended.IsFixed && (_isDefault != value))
             {
                 // Remember new default status
                 _isDefault = value;
@@ -722,7 +728,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
                 _overrideNormal.Apply = value;
 
                 // Change in deault state requires a layout and repaint
-                PerformNeedPaint(true);
+                base.PerformNeedPaint(true);
             }
         }
 
@@ -847,12 +853,527 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
         protected override void OnGotFocus(EventArgs e)
         {
-            if (!ViewDrawButton.IsFixed)
+            //ViewDrawButton viewDrawButton = new ViewDrawButton();
+            if (!ViewDrawButtonExtended.IsFixed)
             {
+                // Apply the focus overrides
+                _overrideFocus.Apply = true;
+                _overrideTracking.Apply = true;
+                _overridePressed.Apply = true;
 
+                // Change in focus requires a repaint
+                base.PerformNeedPaint(false);
             }
 
             base.OnGotFocus(e);
+        }
+
+        protected override void OnLostFocus(EventArgs e)
+        {
+            if (!ViewDrawButtonExtended.IsFixed)
+            {
+                // Apply the focus overrides
+                _overrideFocus.Apply = false;
+                _overrideTracking.Apply = false;
+                _overridePressed.Apply = false;
+
+                // Change in focus requires a repaint
+                PerformNeedPaint(false);
+            }
+
+            base.OnLostFocus(e);
+        }
+
+        protected override void OnClick(EventArgs e)
+        {
+            // Find the form this color button is on
+            Form owner = FindForm();
+
+            // If we find a valid owner
+            if (owner != null)
+            {
+                // Update owner with our dialog result setting
+                owner.DialogResult = DialogResult;
+            }
+
+            // Let base class fire standard event
+            base.OnClick(e);
+
+            // If we have an attached command then execute it
+            KryptonCommand?.PerformExecute();
+        }
+
+        protected override bool ProcessMnemonic(char charCode)
+        {
+            // Are we allowed to process mnemonics?
+            if (UseMnemonic && CanProcessMnemonic())
+            {
+                // Does the color button primary text contain the mnemonic?
+                if (IsMnemonic(charCode, Values.Text))
+                {
+                    if (!Splitter)
+                    {
+                        PerformDropDown();
+                    }
+                    else
+                    {
+                        PerformClick();
+                    }
+
+                    return true;
+                }
+            }
+
+            // No match found, let base class do standard processing
+            return base.ProcessMnemonic(charCode);
+        }
+
+        protected override void ContextMenuClosed()
+        {
+            _buttonController.RemoveFixed();
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg != PI.WM_CONTEXTMENU)
+            {
+                base.WndProc(ref m);
+            }
+        }
+        #endregion
+
+        #region Protected Virtual
+        protected virtual void OnDropDown(ContextPositionMenuArgs e) => DropDown?.Invoke(this, e);
+
+        /// <summary>
+        /// Raises the SelectedColorChanged event.
+        /// </summary>
+        /// <param name="selectedColour">New selected color.</param>
+        protected virtual void OnSelectedColourChanged(Color selectedColour) => SelectedColourChanged?.Invoke(this, new ColorEventArgs(selectedColour));
+
+        /// <summary>
+        /// Raises the TrackingColor event.
+        /// </summary>
+        /// <param name="e">An ColorEventArgs that contains the event data.</param>
+        protected virtual void OnTrackingColour(ColorEventArgs e) => TrackingColour?.Invoke(this, e);
+
+        /// <summary>
+        /// Raises the MoreColors event.
+        /// </summary>
+        /// <param name="e">An CancelEventArgs that contains the event data.</param>
+        protected virtual void OnMoreColours(CancelEventArgs e) => MoreColours?.Invoke(this, e);
+
+        /// <summary>
+        /// Raises the KryptonCommandChanged event.
+        /// </summary>
+        /// <param name="e">An EventArgs containing the event data.</param>
+        protected virtual void OnKryptonCommandChanged(EventArgs e)
+        {
+            KryptonCommandChanged?.Invoke(this, e);
+
+            // Use the values from the new command
+            if (KryptonCommand != null)
+            {
+                Enabled = KryptonCommand.Enabled;
+                Values.Image = KryptonCommand.ImageSmall;
+            }
+
+            // Redraw to update the text/extratext/image properties
+            PerformNeedPaint(true);
+        }
+
+        /// <summary>
+        /// Handles a change in the property of an attached command.
+        /// </summary>
+        /// <param name="sender">Source of the event.</param>
+        /// <param name="e">A PropertyChangedEventArgs that contains the event data.</param>
+        protected virtual void OnCommandPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            switch (e.PropertyName)
+            {
+                case "Enabled":
+                    Enabled = KryptonCommand.Enabled;
+                    break;
+                case "ImageSmall":
+                    Values.Image = KryptonCommand.ImageSmall;
+                    PerformNeedPaint(true);
+                    break;
+                case "Text":
+                case "ExtraText":
+                case "ImageTransparentColor":
+                    PerformNeedPaint(true);
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Update the state objects to reflect the new color button style.
+        /// </summary>
+        /// <param name="buttonStyle">New color button style.</param>
+        protected virtual void SetStyles(ButtonStyle buttonStyle)
+        {
+            StateCommon.SetStyles(buttonStyle);
+            OverrideDefault.SetStyles(buttonStyle);
+            OverrideFocus.SetStyles(buttonStyle);
+        }
+
+        /// <summary>
+        /// Creates a values storage object appropriate for control.
+        /// </summary>
+        /// <returns>Set of color button values.</returns>
+        /// <param name="needPaint">Delegate for notifying paint requests.</param>
+        protected virtual ColourButtonValues CreateButtonValues(NeedPaintHandler needPaint) => new ColourButtonValues(needPaint);
+
+        /// <summary>
+        /// Gets access to the view element for the color button.
+        /// </summary>
+        protected virtual ViewDrawButtonExtended ViewDrawButtonExtended => _drawButton;
+        #endregion
+
+        #region Implementation
+        private void OnButtonTextChanged(object sender, EventArgs e) => OnTextChanged(EventArgs.Empty);
+
+        private void OnButtonClick(object sender, MouseEventArgs e)
+        {
+            bool showingContextMenu = false;
+
+            // Do we need to show a drop down menu?
+            if (!Splitter || (Splitter && _drawButton.SplitRectangle.Contains(e.Location)))
+            {
+                showingContextMenu = ShowDropDown();
+            }
+            else
+            {
+                // Raise the standard click event
+                OnClick(EventArgs.Empty);
+
+                // Raise event to indicate it was a mouse activated click
+                OnMouseClick(e);
+            }
+
+            // If not showing a context menu then perform cleanup straight away
+            if (!showingContextMenu)
+            {
+                ContextMenuClosed();
+            }
+        }
+
+        private bool ShowDropDown()
+        {
+            bool showingContextMenu = false;
+
+            // Update the context menu state
+            UpdateContextMenu();
+
+            // Update the krypton menu with this controls palette state
+            if (_kryptonContextMenu != null)
+            {
+                if (PaletteMode != PaletteMode.Custom)
+                {
+                    _kryptonContextMenu.PaletteMode = PaletteMode;
+                }
+                else
+                {
+                    _kryptonContextMenu.Palette = Palette;
+                }
+            }
+
+            // Package up the context menu and positioning values we will use later
+            ContextPositionMenuArgs cpma = new ContextPositionMenuArgs(null,
+                                                                       _kryptonContextMenu,
+                                                                       GetPositionH(),
+                                                                       GetPositionV());
+            // Let use examine and later values
+            OnDropDown(cpma);
+
+            // If we still want to show a context menu
+            if (!cpma.Cancel)
+            {
+                if (cpma.KryptonContextMenu != null)
+                {
+                    // Convert the client rect to screen coords
+                    Rectangle screenRect = RectangleToScreen(ClientRectangle);
+                    if (CommonHelper.ValidKryptonContextMenu(cpma.KryptonContextMenu))
+                    {
+                        // Modify the screen rect so that we have a pixel gap between color button and menu
+                        switch (cpma.PositionV)
+                        {
+                            case KryptonContextMenuPositionV.Above:
+                                screenRect.Y -= 1;
+                                break;
+                            case KryptonContextMenuPositionV.Below:
+                                screenRect.Height += 1;
+                                break;
+                        }
+
+                        switch (cpma.PositionH)
+                        {
+                            case KryptonContextMenuPositionH.Before:
+                                screenRect.X -= 1;
+                                break;
+                            case KryptonContextMenuPositionH.After:
+                                screenRect.Width += 1;
+                                break;
+                        }
+
+                        // We are showing a drop down
+                        showingContextMenu = true;
+
+                        // Decide which separators are needed
+                        DecideOnVisible(_separatorTheme, _coloursTheme);
+                        DecideOnVisible(_separatorStandard, _coloursStandard);
+                        DecideOnVisible(_separatorRecent, _coloursRecent);
+                        DecideOnVisible(_separatorNoColour, _itemsNoColour);
+                        DecideOnVisible(_separatorMoreColours, _itemsMoreColours);
+
+                        // Monitor relevant events inside the context menu
+                        HookContextMenuEvents(_kryptonContextMenu.Items, true);
+
+                        // Show relative to the screen rectangle
+                        cpma.KryptonContextMenu.Closed += OnKryptonContextMenuClosed;
+                        cpma.KryptonContextMenu.Show(this, screenRect, cpma.PositionH, cpma.PositionV);
+                    }
+                }
+            }
+
+            return showingContextMenu;
+        }
+
+        private KryptonContextMenuPositionH GetPositionH()
+        {
+            switch (DropDownOrientation)
+            {
+                default:
+                case VisualOrientation.Bottom:
+                case VisualOrientation.Top:
+                    return KryptonContextMenuPositionH.Left;
+                case VisualOrientation.Left:
+                    return KryptonContextMenuPositionH.Before;
+                case VisualOrientation.Right:
+                    return KryptonContextMenuPositionH.After;
+            }
+        }
+
+        private KryptonContextMenuPositionV GetPositionV()
+        {
+            switch (DropDownOrientation)
+            {
+                default:
+                case VisualOrientation.Bottom:
+                    return KryptonContextMenuPositionV.Below;
+                case VisualOrientation.Top:
+                    return KryptonContextMenuPositionV.Above;
+                case VisualOrientation.Left:
+                case VisualOrientation.Right:
+                    return KryptonContextMenuPositionV.Top;
+            }
+        }
+
+        private void OnContextMenuClosed(object sender, EventArgs e) => ContextMenuClosed();
+
+        private void OnKryptonContextMenuClosed(object sender, EventArgs e)
+        {
+            KryptonContextMenu kcm = (KryptonContextMenu)sender;
+            kcm.Closed -= OnKryptonContextMenuClosed;
+            ContextMenuClosed();
+
+            // Unhook from item events
+            HookContextMenuEvents(_kryptonContextMenu.Items, false);
+        }
+
+        void OnButtonSelect(object sender, MouseEventArgs e)
+        {
+            // Take the focus if allowed
+            if (CanFocus)
+            {
+                Focus();
+            }
+        }
+
+        private void HookContextMenuEvents(KryptonContextMenuCollection collection, bool hook)
+        {
+            // Search for items of interest
+            foreach (KryptonContextMenuItemBase item in collection)
+            {
+                // Hook into color events
+                if (item is KryptonContextMenuColorColumns columns)
+                {
+                    columns.SelectedColor = _selectedColour;
+
+                    if (hook)
+                    {
+                        columns.TrackingColor += OnColumnsTrackingColor;
+                        columns.SelectedColorChanged += OnColumnsSelectedColorChanged;
+                    }
+                    else
+                    {
+                        columns.TrackingColor -= OnColumnsTrackingColor;
+                        columns.SelectedColorChanged -= OnColumnsSelectedColorChanged;
+                    }
+                }
+            }
+        }
+
+        private void UpdateRecentColors(Color color)
+        {
+            // Do we need to update the recent colors collection?
+            if (AutoRecentColours)
+            {
+                // We do not add to recent colors if it is inside another color columns 
+                foreach (KryptonContextMenuItemBase item in _kryptonContextMenu.Items)
+                {
+                    // Only interested in the non-recent colors color columns
+                    if ((item != _coloursRecent) && (item is KryptonContextMenuColorColumns colors))
+                    {
+                        // Cast to correct type
+
+                        // We do not change the theme or standard entries if they are not to be used
+                        if (((item == _coloursTheme) && !VisibleThemes) ||
+                            ((item == _coloursStandard) && !VisibleStandard))
+                        {
+                            continue;
+                        }
+
+                        // If matching color found, do not add to recent colors
+                        if (colors.ContainsColor(color))
+                        {
+                            return;
+                        }
+                    }
+                }
+
+                // If this color valid and so possible to become a recent color
+                if ((color != null) && !color.Equals(Color.Empty))
+                {
+                    bool found = false;
+                    foreach (Color recentColor in _recentColours)
+                    {
+                        if (recentColor.Equals(color))
+                        {
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    // If the color is not already part of the recent colors
+                    if (!found)
+                    {
+                        // Add to start of the list
+                        _recentColours.Insert(0, color);
+
+                        // Enforce the maximum number of recent colors
+                        if (_recentColours.Count > MaxRecentColours)
+                        {
+                            _recentColours.RemoveRange(MaxRecentColours, _recentColours.Count - MaxRecentColours);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void UpdateContextMenu()
+        {
+            // Update visible state based of properties
+            _separatorTheme.Visible = _headingTheme.Visible = _coloursTheme.Visible = VisibleThemes;
+            _separatorStandard.Visible = _headingStandard.Visible = _coloursStandard.Visible = VisibleStandard;
+            _separatorRecent.Visible = _headingRecent.Visible = _coloursRecent.Visible = (VisibleRecent && (_recentColours.Count > 0));
+            _itemsNoColour.Visible = VisibleNoColour;
+            _itemsMoreColours.Visible = VisibleMoreColours;
+
+            // Define the display strings
+            _headingTheme.Text = Strings.ThemeColors;
+            _headingStandard.Text = Strings.StandardColors;
+            _headingRecent.Text = Strings.RecentColors;
+            _itemNoColour.Text = Strings.NoColor;
+            _itemMoreColours.Text = Strings.MoreColors;
+
+            // Define the colors used in the first two color schemes
+            _coloursTheme.ColorScheme = SchemeThemes;
+            _coloursStandard.ColorScheme = SchemeStandard;
+
+            // Define the recent colors
+            if (_recentColours.Count == 0)
+            {
+                _coloursRecent.SetCustomColors(null);
+            }
+            else
+            {
+                // Create an array of color arrays
+                Color[][] colors = new Color[_recentColours.Count][];
+
+                // Each column is just a single color
+                for (int i = 0; i < _recentColours.Count; i++)
+                {
+                    colors[i] = new Color[] { _recentColours[i] };
+                }
+
+                _coloursRecent.SetCustomColors(colors);
+            }
+
+            // Should the no color entry be checked?
+            _itemNoColour.Checked = _selectedColour.Equals(Color.Empty);
+        }
+
+        private void DecideOnVisible(KryptonContextMenuItemBase visible, KryptonContextMenuItemBase target)
+        {
+            bool previous = false;
+
+            // Only search if the target itself is visible
+            if (target.Visible)
+            {
+                // Check all items before the target
+                foreach (KryptonContextMenuItemBase item in _kryptonContextMenu.Items)
+                {
+                    // Finish when we reach the target
+                    if (item == target)
+                    {
+                        break;
+                    }
+
+                    // We do not consider existing separators
+                    if (!((item is KryptonContextMenuSeparator) ||
+                          (item is KryptonContextMenuHeading)))
+                    {
+                        // If the previous item is visible, then make the parameter visible
+                        if (item.Visible)
+                        {
+                            previous = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            visible.Visible = previous;
+        }
+
+        private void OnColumnsTrackingColor(object sender, ColorEventArgs e) => OnTrackingColour(new ColorEventArgs(e.Color));
+
+        private void OnColumnsSelectedColorChanged(object sender, ColorEventArgs e) => SelectedColour = e.Color;
+
+        private void OnClickNoColor(object sender, EventArgs e) => SelectedColour = Color.Empty;
+
+        private void OnClickMoreColors(object sender, EventArgs e)
+        {
+            // Give user a chance to cancel showing the standard more colors dialog
+            CancelEventArgs cea = new CancelEventArgs();
+            OnMoreColours(cea);
+
+            // If not instructed to cancel then...
+            if (!cea.Cancel)
+            {
+                // Use a standard color dialog for the selection of custom colors
+                KryptonColourButtonCustomColourDialog cwd = new KryptonColourButtonCustomColourDialog
+                {
+                    Colour = SelectedColour
+                };
+
+                // Only if user selected a value do we want to use it
+                if (cwd.ShowDialog() == DialogResult.OK)
+                {
+                    SelectedColour = cwd.Colour;
+                }
+            }
         }
         #endregion
     }

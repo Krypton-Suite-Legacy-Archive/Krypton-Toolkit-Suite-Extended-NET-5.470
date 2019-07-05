@@ -106,6 +106,7 @@
     <Compile Include="Base\Code\Colours\RGBColour.cs" />
     <Compile Include="Base\Code\ControlHelper.cs" />
     <Compile Include="Base\Code\Controls\ColourButtonValues.cs" />
+    <Compile Include="Base\Code\Controls\ViewDrawButtonExtended.cs" />
     <Compile Include="Base\Code\Development\DevelopmentInformation.cs" />
     <Compile Include="Base\Code\Drawing\ColourChangedEventArgs.cs" />
     <Compile Include="Base\Code\Drawing\ColourHandler.cs" />
@@ -855,6 +856,9 @@
     <Compile Include="ExtendedToolkit\UI\Colours\ColourPickerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedToolkit\UI\Colours\KryptonColourButtonCustomColourDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ExtendedToolkit\UI\Dialogues\KryptonCredentialDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1057,6 +1061,8 @@
     <None Include="Resources\maximize.png" />
     <None Include="Resources\minimize.png" />
     <None Include="Resources\restore.png" />
+    <None Include="Resources\ButtonColorImageSmall.png" />
+    <None Include="Resources\ButtonNoColor.png" />
     <Content Include="ToolboxBitmaps\CheckGroupBox.bmp" />
     <Content Include="ToolboxBitmaps\CircularProgressBar.bmp" />
     <Content Include="ToolboxBitmaps\CollapsibleGroupBox.bmp" />
@@ -1292,6 +1298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Colours\ColourPickerDialog.resx">
       <DependentUpon>ColourPickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedToolkit\UI\Colours\KryptonColourButtonCustomColourDialog.resx">
+      <DependentUpon>KryptonColourButtonCustomColourDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExtendedToolkit\UI\Dialogues\KryptonCredentialDialog.resx">
       <DependentUpon>KryptonCredentialDialog.cs</DependentUpon>

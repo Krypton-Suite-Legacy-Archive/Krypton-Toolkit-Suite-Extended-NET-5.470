@@ -17,9 +17,12 @@ namespace ExtendedControls.ExtendedToolkit.Designers
         {
             get
             {
-                DesignerActionItemCollection actionList = new DesignerActionItemCollection { new KryptonColourButtonExtendedActionList(this) };
+                DesignerActionListCollection listCollection = new DesignerActionListCollection
+                {
+                    new KryptonColourButtonExtendedActionList(this)
+                };
 
-                return actionList;
+                return listCollection;
             }
         }
         #endregion

@@ -1,14 +1,5 @@
-﻿#region BSD License
-/*
- * Use of this source code is governed by a BSD-style
- * license that can be found in the LICENSE.md file or at
- * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
- *
- */
-#endregion
-
-using ComponentFactory.Krypton.Toolkit;
-using ExtendedControls.ExtendedToolkit.Controls.Drawing.Classes;
+﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedControls.Base.Code.Drawing;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -16,36 +7,10 @@ using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.UI.Colours
 {
-    public partial class ColourWheelColourPickerDialog : KryptonForm
+    public class KryptonColourButtonCustomColourDialog : KryptonForm
     {
-        #region Variables
-        private bool _isUpdating = false;
-
-        private Color _selectedColour;
-
-        private Timer _updateColour = new Timer(), _updateHexadecimalColourValues = new Timer(), _updateHSBColourValues = new Timer(), _updateARGBColourValues = new Timer(), _updateRGBColourValue = new Timer(), _updateSelectedColour = new Timer();
-        #endregion
-
-        #region Properties
-        [Category("Appearance")]
-        //[DefaultValue(Color.Transparent)]
-        public Color SelectedColour { get { return _selectedColour; } set { _selectedColour = value; } }
-
-        public Color Colour { get; set; }
-
-        public bool IsUpdating { get { return _isUpdating; } set { _isUpdating = value; } }
-        #endregion
-
         #region Designer Code
         private KryptonPanel kryptonPanel1;
-        private KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonCueTextBox kryptonCueTextBox1;
-        private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cbSelectedColour;
-        private ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox kptxtHexColour;
-        private KryptonLabel klblSaturation;
-        private KryptonLabel klblHue;
-        private KryptonLabel kryptonLabel2;
-        private KryptonLabel kryptonLabel1;
-        private KryptonButton kbtnCancel;
         private KryptonNumericUpDown knumAlpha;
         private KryptonNumericUpDown knumRed;
         private KryptonNumericUpDown knumGreen;
@@ -58,17 +23,22 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
         private KryptonLabel kryptonLabel7;
         private KryptonLabel kryptonLabel6;
         private KryptonLabel klblBrightness;
-
-
-        private KryptonButton kbtnOk;
-        private Panel panel1;
+        private KryptonLabel klblSaturation;
+        private KryptonLabel klblHue;
+        private KryptonLabel kryptonLabel2;
+        private KryptonLabel kryptonLabel1;
+        private Controls.CircularPictureBox cbSelectedColour;
+        private System.Windows.Forms.Panel panel1;
         private KryptonPanel kryptonPanel2;
-        private ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.ColourWheel cwColourSelector;
+        private KryptonButton kbtnOk;
+        private KryptonButton kbtnCancel;
+        private KryptonTextBox ktxtHexValue;
+        private Controls.Colours.Controls.ColourWheel cwColourSelector;
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColourWheelColourPickerDialog));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.ktxtHexValue = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.knumAlpha = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.knumRed = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.knumGreen = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
@@ -85,14 +55,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.klblHue = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kptxtHexColour = new ExtendedControls.ExtendedToolkit.Controls.KryptonPromptTextBox();
-            this.kryptonCueTextBox1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.KryptonCueTextBox();
             this.cbSelectedColour = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.cwColourSelector = new ExtendedControls.ExtendedToolkit.Controls.Colours.Controls.ColourWheel();
-            this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbSelectedColour)).BeginInit();
@@ -102,6 +70,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.ktxtHexValue);
             this.kryptonPanel1.Controls.Add(this.knumAlpha);
             this.kryptonPanel1.Controls.Add(this.knumRed);
             this.kryptonPanel1.Controls.Add(this.knumGreen);
@@ -118,18 +87,29 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.kryptonPanel1.Controls.Add(this.klblHue);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel2);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel1);
-            this.kryptonPanel1.Controls.Add(this.kptxtHexColour);
-            this.kryptonPanel1.Controls.Add(this.kryptonCueTextBox1);
             this.kryptonPanel1.Controls.Add(this.cbSelectedColour);
             this.kryptonPanel1.Controls.Add(this.cwColourSelector);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(525, 357);
-            this.kryptonPanel1.TabIndex = 1;
+            this.kryptonPanel1.Size = new System.Drawing.Size(529, 357);
+            this.kryptonPanel1.TabIndex = 2;
+            // 
+            // ktxtHexValue
+            // 
+            this.ktxtHexValue.Hint = "000000";
+            this.ktxtHexValue.Location = new System.Drawing.Point(403, 104);
+            this.ktxtHexValue.MaxLength = 6;
+            this.ktxtHexValue.Name = "ktxtHexValue";
+            this.ktxtHexValue.Size = new System.Drawing.Size(114, 29);
+            this.ktxtHexValue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktxtHexValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
+            this.ktxtHexValue.TabIndex = 23;
+            this.ktxtHexValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // knumAlpha
             // 
+            this.knumAlpha.DecimalPlaces = 99;
             this.knumAlpha.Location = new System.Drawing.Point(436, 171);
             this.knumAlpha.Maximum = new decimal(new int[] {
             255,
@@ -139,8 +119,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.knumAlpha.Name = "knumAlpha";
             this.knumAlpha.Size = new System.Drawing.Size(74, 28);
             this.knumAlpha.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumAlpha.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knumAlpha.TabIndex = 22;
-            this.knumAlpha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.knumAlpha.Value = new decimal(new int[] {
             255,
             0,
@@ -149,6 +129,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             // 
             // knumRed
             // 
+            this.knumRed.DecimalPlaces = 99;
             this.knumRed.Location = new System.Drawing.Point(436, 228);
             this.knumRed.Maximum = new decimal(new int[] {
             255,
@@ -160,11 +141,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.knumRed.StateCommon.Back.Color1 = System.Drawing.Color.Red;
             this.knumRed.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.knumRed.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumRed.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knumRed.TabIndex = 21;
-            this.knumRed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // knumGreen
             // 
+            this.knumGreen.DecimalPlaces = 99;
             this.knumGreen.Location = new System.Drawing.Point(436, 274);
             this.knumGreen.Maximum = new decimal(new int[] {
             255,
@@ -176,11 +158,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.knumGreen.StateCommon.Back.Color1 = System.Drawing.Color.Green;
             this.knumGreen.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.knumGreen.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumGreen.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knumGreen.TabIndex = 20;
-            this.knumGreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // knumBlue
             // 
+            this.knumBlue.DecimalPlaces = 99;
             this.knumBlue.Location = new System.Drawing.Point(436, 322);
             this.knumBlue.Maximum = new decimal(new int[] {
             255,
@@ -192,11 +175,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.knumBlue.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
             this.knumBlue.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.knumBlue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumBlue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knumBlue.TabIndex = 19;
-            this.knumBlue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // knumBrightness
             // 
+            this.knumBrightness.DecimalPlaces = 99;
             this.knumBrightness.Location = new System.Drawing.Point(284, 322);
             this.knumBrightness.Maximum = new decimal(new int[] {
             255,
@@ -206,11 +190,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.knumBrightness.Name = "knumBrightness";
             this.knumBrightness.Size = new System.Drawing.Size(74, 28);
             this.knumBrightness.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumBrightness.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knumBrightness.TabIndex = 18;
-            this.knumBrightness.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // knumSaturation
             // 
+            this.knumSaturation.DecimalPlaces = 99;
             this.knumSaturation.Location = new System.Drawing.Point(284, 274);
             this.knumSaturation.Maximum = new decimal(new int[] {
             255,
@@ -220,11 +205,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.knumSaturation.Name = "knumSaturation";
             this.knumSaturation.Size = new System.Drawing.Size(74, 28);
             this.knumSaturation.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumSaturation.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knumSaturation.TabIndex = 17;
-            this.knumSaturation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // knumHue
             // 
+            this.knumHue.DecimalPlaces = 99;
             this.knumHue.Location = new System.Drawing.Point(284, 228);
             this.knumHue.Maximum = new decimal(new int[] {
             255,
@@ -234,8 +220,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.knumHue.Name = "knumHue";
             this.knumHue.Size = new System.Drawing.Size(74, 28);
             this.knumHue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knumHue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.knumHue.TabIndex = 16;
-            this.knumHue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // kryptonLabel9
             // 
@@ -318,32 +304,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.kryptonLabel1.TabIndex = 7;
             this.kryptonLabel1.Values.Text = "Selected Colour:";
             // 
-            // kptxtHexColour
-            // 
-            this.kptxtHexColour.DrawPrompt = true;
-            this.kptxtHexColour.FocusSelect = true;
-            this.kptxtHexColour.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kptxtHexColour.Location = new System.Drawing.Point(402, 101);
-            this.kptxtHexColour.MaxLength = 7;
-            this.kptxtHexColour.Name = "kptxtHexColour";
-            this.kptxtHexColour.PromptForeColour = System.Drawing.SystemColors.GrayText;
-            this.kptxtHexColour.PromptText = "#000000";
-            this.kptxtHexColour.PromptTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kptxtHexColour.Size = new System.Drawing.Size(108, 29);
-            this.kptxtHexColour.TabIndex = 5;
-            this.kptxtHexColour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // kryptonCueTextBox1
-            // 
-            this.kryptonCueTextBox1.CueText = "000000";
-            this.kryptonCueTextBox1.Location = new System.Drawing.Point(410, 101);
-            this.kryptonCueTextBox1.MaxLength = 6;
-            this.kryptonCueTextBox1.Name = "kryptonCueTextBox1";
-            this.kryptonCueTextBox1.Size = new System.Drawing.Size(100, 29);
-            this.kryptonCueTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonCueTextBox1.TabIndex = 2;
-            this.kryptonCueTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // cbSelectedColour
             // 
             this.cbSelectedColour.BackColor = System.Drawing.Color.White;
@@ -352,7 +312,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.cbSelectedColour.Size = new System.Drawing.Size(64, 64);
             this.cbSelectedColour.TabIndex = 1;
             this.cbSelectedColour.TabStop = false;
-            this.cbSelectedColour.BackColorChanged += new System.EventHandler(this.cbSelectedColour_BackColorChanged);
             // 
             // cwColourSelector
             // 
@@ -362,6 +321,25 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.cwColourSelector.Size = new System.Drawing.Size(202, 195);
             this.cwColourSelector.TabIndex = 0;
             this.cwColourSelector.ColourChanged += new System.EventHandler(this.cwColourSelector_ColourChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 357);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(529, 2);
+            this.panel1.TabIndex = 4;
+            // 
+            // kryptonPanel2
+            // 
+            this.kryptonPanel2.Controls.Add(this.kbtnOk);
+            this.kryptonPanel2.Controls.Add(this.kbtnCancel);
+            this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanel2.Location = new System.Drawing.Point(0, 359);
+            this.kryptonPanel2.Name = "kryptonPanel2";
+            this.kryptonPanel2.Size = new System.Drawing.Size(529, 58);
+            this.kryptonPanel2.TabIndex = 5;
             // 
             // kbtnOk
             // 
@@ -387,45 +365,21 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCancel.TabIndex = 6;
             this.kbtnCancel.Values.Text = "C&ancel";
-            this.kbtnCancel.Click += new System.EventHandler(this.kbtnCancel_Click);
             // 
-            // panel1
+            // KryptonColourButtonCustomColourDialog
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 357);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(525, 2);
-            this.panel1.TabIndex = 3;
-            // 
-            // kryptonPanel2
-            // 
-            this.kryptonPanel2.Controls.Add(this.kbtnOk);
-            this.kryptonPanel2.Controls.Add(this.kbtnCancel);
-            this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel2.Location = new System.Drawing.Point(0, 359);
-            this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(525, 54);
-            this.kryptonPanel2.TabIndex = 4;
-            // 
-            // ColourWheelColourPickerDialog
-            // 
-            this.AcceptButton = this.kbtnOk;
-            this.CancelButton = this.kbtnCancel;
-            this.ClientSize = new System.Drawing.Size(525, 413);
+            this.ClientSize = new System.Drawing.Size(529, 417);
             this.Controls.Add(this.kryptonPanel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ColourWheelColourPickerDialog";
+            this.Name = "KryptonColourButtonCustomColourDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Select {0}";
-            this.Load += new System.EventHandler(this.ColourWheelColourPickerDialog_Load);
+            this.Text = "Select Custom Colour";
+            this.Load += new System.EventHandler(this.KryptonColourButtonCustomColourDialog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
@@ -438,11 +392,28 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
         }
         #endregion
 
-        public ColourWheelColourPickerDialog(bool showHSBUIComponents = false)
+        #region Variables
+        private bool _isUpdating = false;
+
+        private Color _selectedColour, _colour;
+
+        private Timer _updateColour = new Timer(), _updateHexadecimalColourValues = new Timer(), _updateHSBColourValues = new Timer(), _updateARGBColourValues = new Timer(), _updateRGBColourValue = new Timer(), _updateSelectedColour = new Timer();
+        #endregion
+
+        #region Properties
+        [Category("Appearance")]
+        //[DefaultValue(Color.Transparent)]
+        public Color SelectedColour { get { return _selectedColour; } set { _selectedColour = value; } }
+
+        public Color Colour { get => _colour; set => _colour = value; }
+
+        public bool IsUpdating { get { return _isUpdating; } set { _isUpdating = value; } }
+        #endregion
+
+        #region Constructors
+        public KryptonColourButtonCustomColourDialog()
         {
             InitializeComponent();
-
-            ShowHSBUIComponents(showHSBUIComponents);
 
             #region Timers
 
@@ -486,120 +457,17 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
 
             #endregion
         }
+        #endregion
 
-        private void ColourWheelColourPickerDialog_Load(object sender, EventArgs e)
+        #region Event Handlers
+        private void KryptonColourButtonCustomColourDialog_Load(object sender, EventArgs e)
         {
             // Turn on double-buffering, so the form looks better. 
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             this.SetStyle(ControlStyles.UserPaint, true);
             this.SetStyle(ControlStyles.DoubleBuffer, true);
-
-            #region Regional Settings
-            //if (CultureInfo.CurrentCulture == CultureInfo.CurrentCulture.)
-            //{
-
-            //}
-            #endregion
         }
 
-        #region Static Methods
-        //public static DialogResult Show()
-        //{
-        //    // Temporary code
-        //    return DialogResult.OK;
-        //}
-        #endregion
-
-        #region Methods
-        public bool IsSelectedColourNull()
-        {
-            //if (GetSelectedColour() != null)
-            //{
-            //    return true;
-            //}
-            //else
-            //{
-            //    return false;
-            //}
-
-            return GetSelectedColour() != null;
-        }
-        private void RefreshValue(KryptonNumericUpDown target, int value)
-        {
-            if (target.Value != value)
-            {
-                target.Value = value;
-
-                target.Refresh();
-            }
-        }
-
-        private void SetARGB(ColourHandler.ARGB argb)
-        {
-            SetIsUpdating(true);
-
-            RefreshValue(knumAlpha, argb.alpha);
-
-            RefreshValue(knumRed, argb.red);
-
-            RefreshValue(knumGreen, argb.green);
-
-            RefreshValue(knumBlue, argb.blue);
-
-            SetIsUpdating(false);
-
-            kptxtHexColour.Text = ColorTranslator.ToHtml(Color.FromArgb(argb.alpha, argb.red, argb.green, argb.blue)).ToString();
-        }
-
-        private void SetRGB(ColourHandler.RGB rgb)
-        {
-            SetIsUpdating(true);
-
-            RefreshValue(knumRed, rgb.Red);
-
-            RefreshValue(knumGreen, rgb.Green);
-
-            RefreshValue(knumBlue, rgb.Blue);
-
-            SetIsUpdating(false);
-
-            kptxtHexColour.Text = ColorTranslator.ToHtml(Color.FromArgb(rgb.Red, rgb.Green, rgb.Blue)).ToString();
-        }
-
-        private void SetHSV(ColourHandler.HSV hsv)
-        {
-            SetIsUpdating(true);
-
-            RefreshValue(knumHue, hsv.Hue);
-
-            RefreshValue(knumSaturation, hsv.Saturation);
-
-            RefreshValue(knumBrightness, hsv.value);
-
-            SetIsUpdating(false);
-        }
-
-        /// <summary>
-        /// Shows the hsbui components.
-        /// </summary>
-        /// <param name="enabled">if set to <c>true</c> [enabled].</param>
-        private void ShowHSBUIComponents(bool enabled)
-        {
-            klblHue.Visible = enabled;
-
-            knumHue.Visible = enabled;
-
-            klblSaturation.Visible = enabled;
-
-            knumSaturation.Visible = enabled;
-
-            klblBrightness.Visible = enabled;
-
-            knumBrightness.Visible = enabled;
-        }
-        #endregion
-
-        #region Event Handlers
         private void UpdateColour_Tick(object sender, EventArgs e)
         {
             cbSelectedColour.BackColor = cwColourSelector.Colour;
@@ -612,9 +480,11 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
 
             RefreshValue(knumBlue, cbSelectedColour.BackColor.B);
 
-            kptxtHexColour.Text = ColorTranslator.ToHtml(cbSelectedColour.BackColor);
+            ktxtHexValue.Text = ColorTranslator.ToHtml(cbSelectedColour.BackColor);
 
             _updateColour.Enabled = false;
+
+            Colour = cbSelectedColour.BackColor;
         }
 
         private void UpdateHexadecimalColourValues_Tick(object sender, EventArgs e)
@@ -669,6 +539,95 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
         private void cwColourSelector_ColourChanged(object sender, EventArgs e)
         {
             _updateColour.Enabled = true;
+        }
+        #endregion
+
+        #region Methods
+        public bool IsSelectedColourNull()
+        {
+            //if (GetSelectedColour() != null)
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+
+            return GetSelectedColour() != null;
+        }
+        private void RefreshValue(KryptonNumericUpDown target, int value)
+        {
+            if (target.Value != value)
+            {
+                target.Value = value;
+
+                target.Refresh();
+            }
+        }
+
+        private void SetARGB(ColourHandler.ARGB argb)
+        {
+            SetIsUpdating(true);
+
+            RefreshValue(knumAlpha, argb.alpha);
+
+            RefreshValue(knumRed, argb.red);
+
+            RefreshValue(knumGreen, argb.green);
+
+            RefreshValue(knumBlue, argb.blue);
+
+            SetIsUpdating(false);
+
+            ktxtHexValue.Text = ColorTranslator.ToHtml(Color.FromArgb(argb.alpha, argb.red, argb.green, argb.blue)).ToString();
+        }
+
+        private void SetRGB(ColourHandler.RGB rgb)
+        {
+            SetIsUpdating(true);
+
+            RefreshValue(knumRed, rgb.Red);
+
+            RefreshValue(knumGreen, rgb.Green);
+
+            RefreshValue(knumBlue, rgb.Blue);
+
+            SetIsUpdating(false);
+
+            ktxtHexValue.Text = ColorTranslator.ToHtml(Color.FromArgb(rgb.Red, rgb.Green, rgb.Blue)).ToString();
+        }
+
+        private void SetHSV(ColourHandler.HSV hsv)
+        {
+            SetIsUpdating(true);
+
+            RefreshValue(knumHue, hsv.Hue);
+
+            RefreshValue(knumSaturation, hsv.Saturation);
+
+            RefreshValue(knumBrightness, hsv.value);
+
+            SetIsUpdating(false);
+        }
+
+        /// <summary>
+        /// Shows the hsbui components.
+        /// </summary>
+        /// <param name="enabled">if set to <c>true</c> [enabled].</param>
+        private void ShowHSBUIComponents(bool enabled)
+        {
+            klblHue.Visible = enabled;
+
+            knumHue.Visible = enabled;
+
+            klblSaturation.Visible = enabled;
+
+            knumSaturation.Visible = enabled;
+
+            klblBrightness.Visible = enabled;
+
+            knumBrightness.Visible = enabled;
         }
         #endregion
 
