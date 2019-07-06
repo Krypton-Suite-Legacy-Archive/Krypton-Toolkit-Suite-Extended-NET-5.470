@@ -46,9 +46,18 @@
     <Compile Include="Controls\ColourWheel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\Numeric Boxes\AlphaValueNumericBox.cs" />
+    <Compile Include="Controls\Numeric Boxes\BlueValueNumericBox.cs" />
+    <Compile Include="Controls\Numeric Boxes\GreenValueNumericBox.cs" />
+    <Compile Include="Controls\Numeric Boxes\RedValueNumericBox.cs" />
     <Compile Include="Interfaces\IColourEditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structures\HSLColour.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5470">
+      <Version>5.470.1222</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
