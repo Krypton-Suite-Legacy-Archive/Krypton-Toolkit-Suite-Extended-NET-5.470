@@ -141,11 +141,11 @@ namespace ExtendedControls.ExtendedToolkit.Controls
             _headingRecent = new KryptonContextMenuHeading("Recent Colours");
             _coloursRecent = new KryptonContextMenuColorColumns(ColorScheme.None);
             _separatorNoColour = new KryptonContextMenuSeparator();
-            _itemNoColour = new KryptonContextMenuItem("&No Colour", Resources.ButtonNoColor, OnClickNoColor);
+            _itemNoColour = new KryptonContextMenuItem("&No Colour", Resources.ButtonNoColor, OnClickNoColour);
             _itemsNoColour = new KryptonContextMenuItems();
             _itemsNoColour.Items.Add(_itemNoColour);
             _separatorMoreColours = new KryptonContextMenuSeparator();
-            _itemMoreColours = new KryptonContextMenuItem("&More Colours...", OnClickMoreColors);
+            _itemMoreColours = new KryptonContextMenuItem("&More Colours...", OnClickMoreColours);
             _itemsMoreColours = new KryptonContextMenuItems();
             _itemsMoreColours.Items.Add(_itemMoreColours);
             _kryptonContextMenu.Items.AddRange(new KryptonContextMenuItemBase[] { _separatorTheme, _headingTheme, _coloursTheme,
@@ -350,7 +350,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls
                 {
                     _selectedColour = value;
                     Values.SelectedColour = value;
-                    UpdateRecentColors(_selectedColour);
+                    UpdateRecentColours(_selectedColour);
                     OnSelectedColourChanged(_selectedColour);
                     PerformNeedPaint(true);
                 }
@@ -1203,18 +1203,18 @@ namespace ExtendedControls.ExtendedToolkit.Controls
                     if (hook)
                     {
                         columns.TrackingColor += OnColumnsTrackingColor;
-                        columns.SelectedColorChanged += OnColumnsSelectedColorChanged;
+                        columns.SelectedColorChanged += OnColumnsSelectedColourChanged;
                     }
                     else
                     {
                         columns.TrackingColor -= OnColumnsTrackingColor;
-                        columns.SelectedColorChanged -= OnColumnsSelectedColorChanged;
+                        columns.SelectedColorChanged -= OnColumnsSelectedColourChanged;
                     }
                 }
             }
         }
 
-        private void UpdateRecentColors(Color color)
+        private void UpdateRecentColours(Color color)
         {
             // Do we need to update the recent colors collection?
             if (AutoRecentColours)
@@ -1349,11 +1349,11 @@ namespace ExtendedControls.ExtendedToolkit.Controls
 
         private void OnColumnsTrackingColor(object sender, ColorEventArgs e) => OnTrackingColour(new ColorEventArgs(e.Color));
 
-        private void OnColumnsSelectedColorChanged(object sender, ColorEventArgs e) => SelectedColour = e.Color;
+        private void OnColumnsSelectedColourChanged(object sender, ColorEventArgs e) => SelectedColour = e.Color;
 
-        private void OnClickNoColor(object sender, EventArgs e) => SelectedColour = Color.Empty;
+        private void OnClickNoColour(object sender, EventArgs e) => SelectedColour = Color.Empty;
 
-        private void OnClickMoreColors(object sender, EventArgs e)
+        private void OnClickMoreColours(object sender, EventArgs e)
         {
             // Give user a chance to cancel showing the standard more colors dialog
             CancelEventArgs cea = new CancelEventArgs();
