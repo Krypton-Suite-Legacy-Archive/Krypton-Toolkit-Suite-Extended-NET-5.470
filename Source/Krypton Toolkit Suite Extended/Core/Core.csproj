@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Break Out\KryptonFormShell.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Classes\KryptonMessageBoxExtended.cs" />
     <Compile Include="Classes\PI.cs" />
     <Compile Include="Components\CircularPictureBox.cs">
@@ -54,6 +57,7 @@
     <Compile Include="Components\KryptonMessageBoxExtendedComoponent.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Break Out\KryptonTreeViewShell.cs" />
     <Compile Include="Designers\KryptonCommandLinkButtonActionList.cs" />
     <Compile Include="Designers\KryptonCommandLinkButtonDesigner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,7 +7,7 @@
     <ProjectGuid>{C6C970D3-A65B-4C1A-9043-81A1E90B8C8A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Extended_Menu_and_Toolbar_Items</RootNamespace>
+    <RootNamespace>ExtendedMenuToolbarItems</RootNamespace>
     <AssemblyName>Extended Menu and Toolbar Items</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
