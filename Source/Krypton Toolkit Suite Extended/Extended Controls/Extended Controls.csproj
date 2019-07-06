@@ -101,6 +101,7 @@
     <Compile Include="Base\Code\Colours\ColourTypeEditorDialog.cs" />
     <Compile Include="Base\Code\Colours\ColourTypeEditorDropDown.cs" />
     <Compile Include="Base\Code\Colours\ExtensionColourMethods.cs" />
+    <Compile Include="Base\Code\Colours\HexadecimalHelper.cs" />
     <Compile Include="Base\Code\Colours\HSBColour.cs" />
     <Compile Include="Base\Code\Colours\HSLColour.cs" />
     <Compile Include="Base\Code\Colours\RGBColour.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Base\Code\Development\DevelopmentInformation.cs" />
     <Compile Include="Base\Code\Drawing\ColourChangedEventArgs.cs" />
     <Compile Include="Base\Code\Drawing\ColourHandler.cs" />
+    <Compile Include="Base\Code\Colours\ColourMethods.cs" />
     <Compile Include="Base\Code\Drawing\ColourWheel.cs" />
     <Compile Include="Base\Code\Drawing\DrawingMethods.cs" />
     <Compile Include="Base\Code\Drawing\RoundedRectangleF.cs" />
@@ -1063,6 +1065,7 @@
     <None Include="Resources\restore.png" />
     <None Include="Resources\ButtonColorImageSmall.png" />
     <None Include="Resources\ButtonNoColor.png" />
+    <None Include="Resources\ColourButton.png" />
     <Content Include="ToolboxBitmaps\CheckGroupBox.bmp" />
     <Content Include="ToolboxBitmaps\CircularProgressBar.bmp" />
     <Content Include="ToolboxBitmaps\CollapsibleGroupBox.bmp" />

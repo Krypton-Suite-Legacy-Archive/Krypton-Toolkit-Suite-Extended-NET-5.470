@@ -203,6 +203,16 @@ namespace ExtendedControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ColourButton {
+            get {
+                object obj = ResourceManager.GetObject("ColourButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ColumnHeader_Filtered {
             get {
                 object obj = ResourceManager.GetObject("ColumnHeader_Filtered", resourceCulture);

@@ -24,7 +24,7 @@ namespace ExtendedControls.Base.Code.Controls
 
         private static readonly string _defaultExtraText = string.Empty;
 
-        private static readonly Image _defaultImage = Resources.ButtonColorImageSmall;
+        private static readonly Image _defaultImage = Resources.ColourButton;
         #endregion
 
         #region Events        

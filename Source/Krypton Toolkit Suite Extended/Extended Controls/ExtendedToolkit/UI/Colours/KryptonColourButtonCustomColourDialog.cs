@@ -1,8 +1,10 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code.Drawing;
+using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ExtendedControls.ExtendedToolkit.UI.Colours
@@ -106,6 +108,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             this.ktxtHexValue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
             this.ktxtHexValue.TabIndex = 23;
             this.ktxtHexValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ktxtHexValue.TextChanged += new System.EventHandler(this.KtxtHexValue_TextChanged);
+            this.ktxtHexValue.Validating += new System.ComponentModel.CancelEventHandler(this.KtxtHexValue_Validating);
             // 
             // knumAlpha
             // 
@@ -397,7 +401,15 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
 
         private Color _selectedColour, _colour;
 
+        private ColourHandler.ARGB _argb;
+
+        private ColourHandler.HSV _hsv;
+
+        private ColourHandler.RGB _rgb;
+
         private Timer _updateColour = new Timer(), _updateHexadecimalColourValues = new Timer(), _updateHSBColourValues = new Timer(), _updateARGBColourValues = new Timer(), _updateRGBColourValue = new Timer(), _updateSelectedColour = new Timer();
+
+        private string[] _allowedCharacters = new string[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "A", "B", "C", "D", "E", "F" };
         #endregion
 
         #region Properties
@@ -407,7 +419,15 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
 
         public Color Colour { get => _colour; set => _colour = value; }
 
+        public ColourHandler.ARGB ARGB { get => _argb; set => _argb = value; }
+
+        public ColourHandler.HSV HSV { get => _hsv; set => _hsv = value; }
+
+        public ColourHandler.RGB RGB { get => _rgb; set => _rgb = value; }
+
         public bool IsUpdating { get { return _isUpdating; } set { _isUpdating = value; } }
+
+        public string[] AllowedCharacters { get => _allowedCharacters; }
         #endregion
 
         #region Constructors
@@ -480,7 +500,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
 
             RefreshValue(knumBlue, cbSelectedColour.BackColor.B);
 
-            ktxtHexValue.Text = ColorTranslator.ToHtml(cbSelectedColour.BackColor);
+            ktxtHexValue.Text = ColourToHexadecimal(cbSelectedColour.BackColor);
 
             _updateColour.Enabled = false;
 
@@ -489,12 +509,16 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
 
         private void UpdateHexadecimalColourValues_Tick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            cbSelectedColour.BackColor = ColourFromHexadecimal(ktxtHexValue.Text);
         }
 
         private void UpdateHSBColourValues_Tick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            int h = (int)cbSelectedColour.BackColor.GetHue(), s = (int)cbSelectedColour.BackColor.GetSaturation(), b = (int)cbSelectedColour.BackColor.GetBrightness();
+
+            HSV = new ColourHandler.HSV { Hue = h, Saturation = s, value = b };
+
+            SetHSV(HSV);
         }
 
         private void UpdateARGBColourValues_Tick(object sender, EventArgs e)
@@ -540,6 +564,26 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
         {
             _updateColour.Enabled = true;
         }
+
+        private void KtxtHexValue_TextChanged(object sender, EventArgs e)
+        {
+            ktxtHexValue.Text.ToUpper();
+
+            _updateHexadecimalColourValues.Start();
+
+            if (string.IsNullOrEmpty(ktxtHexValue.Text))
+            {
+                ktxtHexValue.Text = "000000";
+            }
+
+            //foreach (string character in AllowedCharacters)
+            //{
+            //    if (!ktxtHexValue.Text.Contains(character))
+            //    {
+            //        ktxtHexValue.Text = "000000";
+            //    }
+            //}
+        }
         #endregion
 
         #region Methods
@@ -556,6 +600,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
 
             return GetSelectedColour() != null;
         }
+
         private void RefreshValue(KryptonNumericUpDown target, int value)
         {
             if (target.Value != value)
@@ -629,6 +674,21 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
 
             knumBrightness.Visible = enabled;
         }
+
+        private void KtxtHexValue_Validating(object sender, CancelEventArgs e)
+        {
+            char[] allowedCharacters = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F' };
+
+            foreach (char character in ktxtHexValue.Text.ToUpper().ToArray())
+            {
+                if (!allowedCharacters.Contains(character))
+                {
+                    ExtendedKryptonMessageBox.Show($"'{ character }' is not a valid hexadecimal character!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Information, messageboxTypeface: new Font("Segoe UI", 11f));
+
+                    e.Cancel = true;
+                }
+            }
+        }
         #endregion
 
         #region Setters and Getters
@@ -639,6 +699,22 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
         public void SetSelectedColour(Color colour) => SelectedColour = colour;
 
         public Color GetSelectedColour() => SelectedColour;
+        #endregion
+
+        #region Static Methods
+        /// <summary>
+        /// Colours to hexadecimal.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
+        private string ColourToHexadecimal(Color colour) => $"{colour.R:X2}{colour.G:X2}{colour.B:X2}";
+
+        /// <summary>
+        /// Colours from hexadecimal.
+        /// </summary>
+        /// <param name="hexadecimalCode">The hexadecimal code.</param>
+        /// <returns></returns>
+        private Color ColourFromHexadecimal(string hexadecimalCode) => ColorTranslator.FromHtml($"#{ hexadecimalCode }");
         #endregion
     }
 }
