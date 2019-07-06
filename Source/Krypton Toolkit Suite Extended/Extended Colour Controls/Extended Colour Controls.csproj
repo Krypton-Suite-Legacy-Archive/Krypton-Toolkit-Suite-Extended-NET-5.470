@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\ARGBUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\ColourWheel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -58,6 +61,11 @@
     <PackageReference Include="KryptonToolkitSuite5470">
       <Version>5.470.1222</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ARGBUserControl.resx">
+      <DependentUpon>ARGBUserControl.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
