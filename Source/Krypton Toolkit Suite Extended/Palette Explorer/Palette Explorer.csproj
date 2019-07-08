@@ -350,7 +350,7 @@
       <Version>3.6.3</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.1222</Version>
+      <Version>5.470.1231</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>

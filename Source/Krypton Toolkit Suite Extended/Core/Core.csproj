@@ -54,10 +54,19 @@
     </Compile>
     <Compile Include="Components\KryptonCommandLinkVersion1.cs" />
     <Compile Include="Components\KryptonCommandLinkVersion2.cs" />
+    <Compile Include="Components\KryptonKnobControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Components\KryptonMessageBoxExtendedComoponent.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Break Out\KryptonTreeViewShell.cs" />
+    <Compile Include="Components\Scroll Bars\Custom Scroll Bar\KryptonScrollBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Scroll Bars\Skins\HScrollSkin.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Designers\KryptonCommandLinkButtonActionList.cs" />
     <Compile Include="Designers\KryptonCommandLinkButtonDesigner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,7 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.1222</Version>
+      <Version>5.470.1231</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />
