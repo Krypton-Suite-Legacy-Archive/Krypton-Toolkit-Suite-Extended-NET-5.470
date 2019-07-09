@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace KryptonToolkitSuiteExtendedCore
+namespace KryptonToolkitSuiteExtendedCore.Classes.Other
 {
     public class WIN32
     {
@@ -17,7 +17,7 @@ namespace KryptonToolkitSuiteExtendedCore
         public const int GW_OWNER = 4;
         public const int GW_CHILD = 5;
 
-        public const int WM_NCCALCSIZE = 0x83;
+        public const int WM_NCCALCSIZESB = 0x83;
         public const int WM_WINDOWPOSCHANGING = 0x46;
         public const int WM_PAINT = 0xF;
         public const int WM_CREATE = 0x1;
@@ -29,7 +29,7 @@ namespace KryptonToolkitSuiteExtendedCore
         public const int WM_SHARED_MENU = 0x1E2;
         public const int WH_CALLWNDPROC = 4;
         public const int WM_PARENTNOTIFY = 0x210;
-        public const int WM_HSCROLL = 0x114;
+        public const int WM_HSCROLLSB = 0x114;
         public const int WM_NCHITTEST = 0x84;
         public const int WM_ERASEBKGND = 0x0014; // WM_ERASEBKGND message
 

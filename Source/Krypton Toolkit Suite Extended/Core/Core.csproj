@@ -49,7 +49,14 @@
     </Compile>
     <Compile Include="Classes\KryptonMessageBoxExtended.cs" />
     <Compile Include="Classes\PI.cs" />
+    <Compile Include="Classes\ScrollBars\ScrollBarExtendedRenderer.cs" />
+    <Compile Include="Classes\ScrollBars\ScrollBarKryptonRenderer.cs" />
+    <Compile Include="Classes\ScrollBars\WIN32.cs" />
+    <Compile Include="Classes\WIN32.cs" />
     <Compile Include="Components\CircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ExtendedProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Components\KryptonCommandLinkVersion1.cs" />
@@ -67,8 +74,13 @@
     <Compile Include="Components\Scroll Bars\Skins\HScrollSkin.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\Scroll Bars\Skins\VScrollSkin.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Designers\KryptonCommandLinkButtonActionList.cs" />
     <Compile Include="Designers\KryptonCommandLinkButtonDesigner.cs" />
+    <Compile Include="Designers\ScrollBarControlDesigner.cs" />
+    <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
