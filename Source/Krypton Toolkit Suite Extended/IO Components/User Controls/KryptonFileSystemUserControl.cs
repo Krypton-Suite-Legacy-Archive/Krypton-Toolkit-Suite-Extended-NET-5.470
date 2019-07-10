@@ -26,6 +26,7 @@ namespace IOComponents
         private KryptonButton kbtnAdd;
         private KryptonButton kbtnBack;
         private Button btnGo;
+        private FlowLayoutPanel flowLayoutPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonTreeView ktvFileSystem;
 
         private void InitializeComponent()
@@ -53,13 +54,14 @@ namespace IOComponents
             this.kbtnAdd = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnBack = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnGo = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.cmsShortcuts.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ktvFileSystem
             // 
-            this.ktvFileSystem.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ktvFileSystem.Location = new System.Drawing.Point(0, 71);
+            this.ktvFileSystem.Location = new System.Drawing.Point(3, 3);
             this.ktvFileSystem.Name = "ktvFileSystem";
             this.ktvFileSystem.Size = new System.Drawing.Size(519, 477);
             this.ktvFileSystem.TabIndex = 0;
@@ -114,7 +116,7 @@ namespace IOComponents
             // 
             // ktxtPath
             // 
-            this.ktxtPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.ktxtPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ktxtPath.Hint = "Type a path here... (e.g. C:\\Windows)";
             this.ktxtPath.Location = new System.Drawing.Point(3, 35);
@@ -214,6 +216,9 @@ namespace IOComponents
             this.kbtnInfo.Name = "kbtnInfo";
             this.kbtnInfo.Size = new System.Drawing.Size(33, 26);
             this.kbtnInfo.TabIndex = 79;
+            this.kbtnInfo.ToolTipValues.Description = "Information";
+            this.kbtnInfo.ToolTipValues.Heading = "Information";
+            this.kbtnInfo.ToolTipValues.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.SuperTip;
             this.kbtnInfo.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnInfo.Values.Image")));
             this.kbtnInfo.Values.Text = "";
             // 
@@ -223,6 +228,9 @@ namespace IOComponents
             this.kbtnNext.Name = "kbtnNext";
             this.kbtnNext.Size = new System.Drawing.Size(33, 26);
             this.kbtnNext.TabIndex = 80;
+            this.kbtnNext.ToolTipValues.Description = "Go forward";
+            this.kbtnNext.ToolTipValues.Heading = "Forward";
+            this.kbtnNext.ToolTipValues.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.SuperTip;
             this.kbtnNext.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnNext.Values.Image")));
             this.kbtnNext.Values.Text = "";
             // 
@@ -232,6 +240,9 @@ namespace IOComponents
             this.kbtnUp.Name = "kbtnUp";
             this.kbtnUp.Size = new System.Drawing.Size(33, 26);
             this.kbtnUp.TabIndex = 81;
+            this.kbtnUp.ToolTipValues.Description = "Go up";
+            this.kbtnUp.ToolTipValues.Heading = "Parent Directory";
+            this.kbtnUp.ToolTipValues.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.SuperTip;
             this.kbtnUp.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnUp.Values.Image")));
             this.kbtnUp.Values.Text = "";
             // 
@@ -241,6 +252,9 @@ namespace IOComponents
             this.kbtnRefresh.Name = "kbtnRefresh";
             this.kbtnRefresh.Size = new System.Drawing.Size(33, 26);
             this.kbtnRefresh.TabIndex = 82;
+            this.kbtnRefresh.ToolTipValues.Description = "Refresh explorer tree";
+            this.kbtnRefresh.ToolTipValues.Heading = "Refresh";
+            this.kbtnRefresh.ToolTipValues.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.SuperTip;
             this.kbtnRefresh.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnRefresh.Values.Image")));
             this.kbtnRefresh.Values.Text = "";
             // 
@@ -250,6 +264,9 @@ namespace IOComponents
             this.kbtnHome.Name = "kbtnHome";
             this.kbtnHome.Size = new System.Drawing.Size(33, 26);
             this.kbtnHome.TabIndex = 83;
+            this.kbtnHome.ToolTipValues.Description = "Home directory";
+            this.kbtnHome.ToolTipValues.Heading = "Home";
+            this.kbtnHome.ToolTipValues.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.SuperTip;
             this.kbtnHome.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnHome.Values.Image")));
             this.kbtnHome.Values.Text = "";
             // 
@@ -260,6 +277,9 @@ namespace IOComponents
             this.kbtnGo.Name = "kbtnGo";
             this.kbtnGo.Size = new System.Drawing.Size(33, 29);
             this.kbtnGo.TabIndex = 84;
+            this.kbtnGo.ToolTipValues.Description = "Go to the directory";
+            this.kbtnGo.ToolTipValues.Heading = "Go";
+            this.kbtnGo.ToolTipValues.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.SuperTip;
             this.kbtnGo.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnGo.Values.Image")));
             this.kbtnGo.Values.Text = "";
             // 
@@ -271,6 +291,7 @@ namespace IOComponents
             this.kbtnAdd.TabIndex = 85;
             this.kbtnAdd.ToolTipValues.Description = "Add shortcut to frequently used folders";
             this.kbtnAdd.ToolTipValues.Heading = "Add Shortcut";
+            this.kbtnAdd.ToolTipValues.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.SuperTip;
             this.kbtnAdd.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnAdd.Values.Image")));
             this.kbtnAdd.Values.Text = "";
             // 
@@ -280,6 +301,9 @@ namespace IOComponents
             this.kbtnBack.Name = "kbtnBack";
             this.kbtnBack.Size = new System.Drawing.Size(33, 26);
             this.kbtnBack.TabIndex = 86;
+            this.kbtnBack.ToolTipValues.Description = "Go backwards";
+            this.kbtnBack.ToolTipValues.Heading = "Backward";
+            this.kbtnBack.ToolTipValues.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.SuperTip;
             this.kbtnBack.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnBack.Values.Image")));
             this.kbtnBack.Values.Text = "";
             // 
@@ -295,9 +319,19 @@ namespace IOComponents
             this.btnGo.Size = new System.Drawing.Size(33, 26);
             this.btnGo.TabIndex = 87;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.ktvFileSystem);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 70);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(519, 478);
+            this.flowLayoutPanel1.TabIndex = 88;
+            // 
             // KryptonFileSystemUserControl
             // 
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.kbtnBack);
             this.Controls.Add(this.kbtnAdd);
             this.Controls.Add(this.kbtnGo);
@@ -314,11 +348,11 @@ namespace IOComponents
             this.Controls.Add(this.btnUp);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.ktxtPath);
-            this.Controls.Add(this.ktvFileSystem);
             this.Controls.Add(this.btnGo);
             this.Name = "KryptonFileSystemUserControl";
             this.Size = new System.Drawing.Size(519, 548);
             this.cmsShortcuts.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
