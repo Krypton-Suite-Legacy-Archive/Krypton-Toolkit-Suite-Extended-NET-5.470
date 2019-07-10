@@ -48,6 +48,7 @@
     <Compile Include="Break Out\KryptonFormShell.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Classes\ColourHandler.cs" />
     <Compile Include="Classes\Drawing\DrawingMethods.cs" />
     <Compile Include="Classes\KryptonMessageBoxExtended.cs" />
     <Compile Include="Classes\PI.cs" />
@@ -64,6 +65,9 @@
     </Compile>
     <Compile Include="Components\KryptonCommandLinkVersion1.cs" />
     <Compile Include="Components\KryptonCommandLinkVersion2.cs" />
+    <Compile Include="Components\KryptonGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Components\KryptonKnobControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
