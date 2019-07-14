@@ -51,6 +51,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\Dev\KryptonFileSystemUserControlDev.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="User Controls\KryptonFileSystemUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -74,6 +77,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Dev\KryptonFileSystemUserControlDev.resx">
+      <DependentUpon>KryptonFileSystemUserControlDev.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\KryptonFileSystemUserControl.resx">
       <DependentUpon>KryptonFileSystemUserControl.cs</DependentUpon>
