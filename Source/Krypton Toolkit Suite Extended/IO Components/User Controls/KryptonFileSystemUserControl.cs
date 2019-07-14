@@ -1,9 +1,11 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using KryptonToolkitSuiteExtendedCore;
 using System;
+using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 using System.IO;
-using System.Runtime.Versioning;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace IOComponents
@@ -71,8 +73,9 @@ namespace IOComponents
             // removeShortcutToolStripMenuItem
             // 
             this.removeShortcutToolStripMenuItem.Name = "removeShortcutToolStripMenuItem";
-            this.removeShortcutToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.removeShortcutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.removeShortcutToolStripMenuItem.Text = "&Remove Shortcut";
+            this.removeShortcutToolStripMenuItem.Click += new System.EventHandler(this.RemoveShortcutToolStripMenuItem_Click);
             // 
             // ilSystemIcons
             // 
@@ -119,6 +122,9 @@ namespace IOComponents
             this.ktxtPath.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ktxtPath.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
             this.ktxtPath.TabIndex = 1;
+            this.ktxtPath.TextChanged += new System.EventHandler(this.KtxtPath_TextChanged);
+            this.ktxtPath.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KtxtPath_KeyPress);
+            this.ktxtPath.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KtxtPath_KeyUp);
             // 
             // kbtnInfo
             // 
@@ -130,6 +136,7 @@ namespace IOComponents
             this.kbtnInfo.ToolTipValues.Heading = "Information";
             this.kbtnInfo.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnInfo.Values.Image")));
             this.kbtnInfo.Values.Text = "";
+            this.kbtnInfo.Click += new System.EventHandler(this.KbtnInfo_Click);
             // 
             // kbtnNext
             // 
@@ -141,6 +148,7 @@ namespace IOComponents
             this.kbtnNext.ToolTipValues.Heading = "Forward";
             this.kbtnNext.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnNext.Values.Image")));
             this.kbtnNext.Values.Text = "";
+            this.kbtnNext.Click += new System.EventHandler(this.KbtnNext_Click);
             // 
             // kbtnUp
             // 
@@ -152,6 +160,7 @@ namespace IOComponents
             this.kbtnUp.ToolTipValues.Heading = "Parent Directory";
             this.kbtnUp.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnUp.Values.Image")));
             this.kbtnUp.Values.Text = "";
+            this.kbtnUp.Click += new System.EventHandler(this.KbtnUp_Click);
             // 
             // kbtnRefresh
             // 
@@ -163,6 +172,7 @@ namespace IOComponents
             this.kbtnRefresh.ToolTipValues.Heading = "Refresh";
             this.kbtnRefresh.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnRefresh.Values.Image")));
             this.kbtnRefresh.Values.Text = "";
+            this.kbtnRefresh.Click += new System.EventHandler(this.KbtnRefresh_Click);
             // 
             // kbtnHome
             // 
@@ -174,6 +184,7 @@ namespace IOComponents
             this.kbtnHome.ToolTipValues.Heading = "Home";
             this.kbtnHome.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnHome.Values.Image")));
             this.kbtnHome.Values.Text = "";
+            this.kbtnHome.Click += new System.EventHandler(this.KbtnHome_Click);
             // 
             // kbtnGo
             // 
@@ -198,6 +209,7 @@ namespace IOComponents
             this.kbtnAdd.ToolTipValues.Heading = "Add Shortcut";
             this.kbtnAdd.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnAdd.Values.Image")));
             this.kbtnAdd.Values.Text = "";
+            this.kbtnAdd.Click += new System.EventHandler(this.KbtnAdd_Click);
             // 
             // kbtnBack
             // 
@@ -209,6 +221,7 @@ namespace IOComponents
             this.kbtnBack.ToolTipValues.Heading = "Backward";
             this.kbtnBack.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnBack.Values.Image")));
             this.kbtnBack.Values.Text = "";
+            this.kbtnBack.Click += new System.EventHandler(this.KbtnBack_Click);
             // 
             // listView1
             // 
@@ -230,13 +243,17 @@ namespace IOComponents
             // ktvFileSystem
             // 
             this.ktvFileSystem.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ktvFileSystem.ImageIndex = 0;
+            this.ktvFileSystem.ImageList = this.ilSystemIcons;
             this.ktvFileSystem.Location = new System.Drawing.Point(0, 88);
             this.ktvFileSystem.Name = "ktvFileSystem";
+            this.ktvFileSystem.SelectedImageIndex = 0;
             this.ktvFileSystem.Size = new System.Drawing.Size(519, 460);
             this.ktvFileSystem.TabIndex = 90;
             this.ktvFileSystem.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.KtvFileSystem_AfterExpand);
             this.ktvFileSystem.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.KtvFileSystem_AfterSelect);
             this.ktvFileSystem.DoubleClick += new System.EventHandler(this.KtvFileSystem_DoubleClick);
+            this.ktvFileSystem.MouseUp += new System.Windows.Forms.MouseEventHandler(this.KtvFileSystem_MouseUp);
             // 
             // pnlTop
             // 
@@ -709,7 +726,222 @@ namespace IOComponents
 
         private void ExploreThisPC()
         {
-            // TODO: Fill in code!!!
+            string[] drives = Environment.GetLogicalDrives();
+            string dir2 = "";
+
+            Cursor.Current = Cursors.WaitCursor;
+            KryptonTreeNode nodeDrive;
+
+            if (thisComputerNode.GetNodeCount(true) < 2)
+            {
+                thisComputerNode.FirstNode.Remove();
+
+                foreach (string drive in drives)
+                {
+                    nodeDrive = new KryptonTreeNode();
+                    nodeDrive.Tag = drive;
+
+                    nodeDrive.Text = drive;
+
+                    switch (Win32.GetDriveType(drive))
+                    {
+                        case 2:
+                            nodeDrive.ImageIndex = 17;
+                            nodeDrive.SelectedImageIndex = 17;
+                            break;
+                        case 3:
+                            nodeDrive.ImageIndex = 0;
+                            nodeDrive.SelectedImageIndex = 0;
+                            break;
+                        case 4:
+                            nodeDrive.ImageIndex = 8;
+                            nodeDrive.SelectedImageIndex = 8;
+                            break;
+                        case 5:
+                            nodeDrive.ImageIndex = 7;
+                            nodeDrive.SelectedImageIndex = 7;
+                            break;
+                        default:
+                            nodeDrive.ImageIndex = 0;
+                            nodeDrive.SelectedImageIndex = 0;
+                            break;
+                    }
+
+                    thisComputerNode.Nodes.Add(nodeDrive);
+                    try
+                    {
+                        //add dirs under drive
+                        if (Directory.Exists(drive))
+                        {
+                            foreach (string dir in Directory.GetDirectories(drive))
+                            {
+                                dir2 = dir;
+                                node = new KryptonTreeNode();
+                                node.Tag = dir;
+                                node.Text = dir.Substring(dir.LastIndexOf(@"\") + 1);
+                                node.ImageIndex = 1;
+                                nodeDrive.Nodes.Add(node);
+                            }
+                        }
+
+
+                    }
+                    catch (Exception ex)    //error just add blank dir
+                    {
+                        KryptonMessageBoxExtended.Show("Error while Filling the Explorer:" + ex.Message);
+                    }
+                }
+            }
+
+            thisComputerNode.Expand();
+        }
+
+        private void UpdateListAddCurrent()
+        {
+            int i = 0;
+            int j = 0;
+
+            int icount = 0;
+            icount = listView1.Items.Count + 1;
+
+            for (i = 0; i < listView1.Items.Count - 1; i++)
+            {
+                if (String.Compare(listView1.Items[i].SubItems[1].Text, "Selected") == 0)
+                {
+                    for (j = listView1.Items.Count - 1; j > i + 1; j--)
+                        listView1.Items[j].Remove();
+                    break;
+                }
+
+            }
+        }
+        private void UpdateListGoBack()
+        {
+            if ((listView1.Items.Count > 0) && (String.Compare(listView1.Items[0].SubItems[1].Text, "Selected") == 0))
+                return;
+            int i = 0;
+            for (i = 0; i < listView1.Items.Count; i++)
+            {
+                if (String.Compare(listView1.Items[i].SubItems[1].Text, "Selected") == 0)
+                {
+                    if (i != 0)
+                    {
+                        listView1.Items[i - 1].SubItems[1].Text = "Selected";
+                        ktxtPath.Text = listView1.Items[i - 1].Text;
+                    }
+                }
+                if (i != 0)
+                {
+                    listView1.Items[i].SubItems[1].Text = " -/- ";
+                }
+            }
+        }
+        private void UpdateListGoForward()
+        {
+            if ((listView1.Items.Count > 0) && (String.Compare(listView1.Items[listView1.Items.Count - 1].SubItems[1].Text, "Selected") == 0))
+                return;
+            int i = 0;
+            for (i = listView1.Items.Count - 1; i >= 0; i--)
+            {
+                if (String.Compare(listView1.Items[i].SubItems[1].Text, "Selected") == 0)
+                {
+                    if (i != listView1.Items.Count)
+                    {
+                        listView1.Items[i + 1].SubItems[1].Text = "Selected";
+                        ktxtPath.Text = listView1.Items[i + 1].Text;
+                    }
+                }
+
+                if (i != listView1.Items.Count - 1) listView1.Items[i].SubItems[1].Text = " -/- ";
+            }
+        }
+        private void UpdateList(string f)
+        {
+            int i = 0;
+            ListViewItem listviewitem;      // Used for creating listview items.
+
+            int icount = 0;
+            UpdateListAddCurrent();
+            icount = listView1.Items.Count + 1;
+            try
+            {
+                if (listView1.Items.Count > 0)
+                {
+                    if (String.Compare(listView1.Items[listView1.Items.Count - 1].Text, f) == 0)
+                    {
+                        return;
+                    }
+                }
+
+                for (i = 0; i < listView1.Items.Count; i++)
+                {
+                    listView1.Items[i].SubItems[1].Text = " -/- ";
+                }
+                listviewitem = new ListViewItem(f);
+                listviewitem.SubItems.Add("Selected");
+                listviewitem.Tag = f;
+                this.listView1.Items.Add(listviewitem);
+            }
+            catch (Exception e)
+            {
+                KryptonMessageBoxExtended.Show(e.Message);
+            }
+        }
+
+        private void AddFolderNode(string name, string path)
+        {
+
+            try
+            {
+                KryptonTreeNode nodemyC = new KryptonTreeNode();
+
+                nodemyC.Tag = path;
+                nodemyC.Text = name;
+
+                nodemyC.ImageIndex = 18;
+                nodemyC.SelectedImageIndex = 18;
+
+                rootNode.Nodes.Add(nodemyC);
+
+                try
+                {
+                    //add dirs under drive
+                    if (Directory.Exists(path))
+                    {
+                        foreach (string dir in Directory.GetDirectories(path))
+                        {
+                            KryptonTreeNode node = new KryptonTreeNode();
+                            node.Tag = dir;
+                            node.Text = dir.Substring(dir.LastIndexOf(@"\") + 1);
+                            node.ImageIndex = 1;
+                            nodemyC.Nodes.Add(node);
+                        }
+                    }
+                }
+                catch (Exception ex)    //error just add blank dir
+                {
+                    KryptonMessageBoxExtended.Show("Error while Filling the Explorer:" + ex.Message);
+                }
+            }
+            catch (Exception e)
+            {
+                KryptonMessageBoxExtended.Show(e.Message);
+            }
+        }
+
+        public void AboutExplorerTree()
+        {
+            //frmOptions form = new frmOptions(showMyDocuments, showMyFavorites, showMyNetwork, showAddressbar, showToolbar);
+            //if (form.ShowDialog() == DialogResult.OK)
+            //{
+            //    showMyDocuments = form.myDocument;
+            //    showMyNetwork = form.myNetwork;
+            //    ShowMyFavorites = form.myFavorite;
+            //    ShowAddressbar = form.myAddressbar;
+            //    ShowToolbar = form.myToolbar;
+
+            //    btnRefresh_Click(this, null);
+            //}
         }
 
         #region UI Elements
@@ -816,6 +1048,7 @@ namespace IOComponents
             #endregion
         }
         #endregion
+
         #endregion
 
         /// <summary>
@@ -931,7 +1164,7 @@ namespace IOComponents
                             }
                             catch (Exception)   //error just add blank dir
                             {
-                                // MessageBox.Show ("Error while Filling the Explorer:" + ex.Message );
+                                // KryptonMessageBoxExtended.Show ("Error while Filling the Explorer:" + ex.Message );
                                 //					node = new TreeNode();
                                 //					node.Tag = dir2;
                                 //					node.Text = dir2.Substring(dir2.LastIndexOf(@"\") + 1);
@@ -1057,7 +1290,102 @@ namespace IOComponents
             Cursor.Current = Cursors.Default;
         }
 
+        private void KtvFileSystem_MouseUp(object sender, MouseEventArgs e)
+        {
+            UpdateList(ktxtPath.Text);
 
+            if (ktvFileSystem.SelectedNode != null)
+            {
+
+                if ((ktvFileSystem.SelectedNode.ImageIndex == 18) && (e.Button == MouseButtons.Right))
+                {
+                    cmsShortcuts.Show(ktvFileSystem, new Point(e.X, e.Y));
+                }
+            }
+        }
+
+        private void KbtnUp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DirectoryInfo MYINFO = new DirectoryInfo(ktxtPath.Text);
+
+                if (MYINFO.Parent.Exists)
+                {
+                    ktxtPath.Text = MYINFO.Parent.FullName;
+                }
+
+                UpdateList(ktxtPath.Text);
+                KbtnGo_Click(sender, e);
+            }
+            catch (Exception)
+            {
+                //KryptonMessageBoxExtended.Show ("Parent directory does not exists","Directory Not Found",KryptonMessageBoxExtendedButtons.OK,KryptonMessageBoxExtendedIcon.Information ); 
+            }
+        }
+
+        private void KbtnAdd_Click(object sender, EventArgs e)
+        {
+            string myname = "";
+            string mypath = "";
+
+
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.Description = "Add Folder in Explorer Tree";
+            dialog.ShowNewFolderButton = true;
+            dialog.SelectedPath = ktxtPath.Text;
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                mypath = dialog.SelectedPath;
+                myname = mypath.Substring(mypath.LastIndexOf("\\") + 1);
+
+                AddFolderNode(myname, mypath);
+
+            }
+        }
+
+        private void RemoveShortcutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ktvFileSystem.SelectedNode.ImageIndex == 18)
+            {
+                ktvFileSystem.SelectedNode.Remove();
+            }
+        }
+
+        private void KtxtPath_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Directory.Exists(ktxtPath.Text))
+                {
+                    SelectedPath = ktxtPath.Text;
+                    PathChangedEvent(this, EventArgs.Empty);
+                }
+            }
+            catch (Exception)
+            { }
+        }
+
+        private void KtxtPath_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void KtxtPath_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)
+            {
+                KbtnGo_Click(sender, e);
+
+                ktxtPath.Focus();
+            }
+        }
+
+        private void KbtnInfo_Click(object sender, EventArgs e)
+        {
+            AboutExplorerTree();
+        }
 
         private void KtvFileSystem_AfterSelect(object sender, TreeViewEventArgs e)
         {
@@ -1096,9 +1424,419 @@ namespace IOComponents
             }
         }
 
+        private void KbtnRefresh_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+
+            RefreshView();
+
+            try
+            {
+                RefreshFolders();
+            }
+            catch (Exception exc)
+            {
+                KryptonMessageBoxExtended.Show($"Error: { exc.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                SetCurrentPath("Home");
+
+                Cursor.Current = Cursors.Default;
+
+                ExploreThisPC();
+            }
+        }
+
         private void KbtnGo_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                ExploreThisPC();
+                string myString = "";
+                int h = 1;
+                myString = ktxtPath.Text.ToLower();
+                //if (String.Compare(myString.Substring(myString.Length-1,1),@"\")==0)
+                //{
+                //	myString = myString.Substring(0,myString.Length-1);
+                //	txtPath.Text = myString	;
+
+                //}
+                KryptonTreeNode tn = thisComputerNode;
+
+            StartAgain:
+
+                do
+                {
+                    //Strom = (tvwMain.GetNodeCount(true)).ToString() ;	
+
+                    foreach (KryptonTreeNode t in tn.Nodes)
+                    {
+                        string mypath = t.Tag.ToString();
+                        //mypath =  mypath.Replace("Desktop\\","") ;
+                        //mypath =  mypath.Replace("My Computer\\","") ;
+                        //mypath =  mypath.Replace(@"\\",@"\") ;
+
+                        //mypath =  mypath.Replace("My Documents\\",Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\") ;
+                        mypath = mypath.ToLower();
+                        string mypathf = mypath;
+                        if (!mypath.EndsWith(@"\"))
+                        {
+                            if (myString.Length > mypathf.Length) mypathf = mypath + @"\";
+                        }
+
+                        if (myString.StartsWith(mypathf))
+                        {
+                            t.TreeView.Focus();
+                            t.TreeView.SelectedNode = t;
+                            t.EnsureVisible();
+                            t.Expand();
+                            if (t.Nodes.Count >= 1)
+                            {
+                                t.Expand();
+                                tn = t;
+                            }
+                            else
+                            {
+                                if (String.Compare(myString, mypath) == 0)
+                                {
+                                    h = -1;
+                                    break;
+                                }
+                                else
+                                {
+                                    continue;
+                                }
+                            }
+
+                            if (mypathf.StartsWith(myString))
+                            {
+                                h = -1;
+                                break;
+                            }
+                            else
+                            {
+                                goto StartAgain;
+                                //return;
+                            }
+                        }
+                    }
+
+                    try
+                    {
+                        tn = (KryptonTreeNode)tn.NextNode;
+                    }
+                    catch (Exception)
+                    { }
+
+                } while (h >= 0);
+
+            }
+            catch (Exception e1)
+            {
+                KryptonMessageBoxExtended.Show("Error: " + e1.Message);
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        private void KbtnHome_Click(object sender, EventArgs e)
+        {
+            SetCurrentPath("home");
+
+            ExploreThisPC();
+
+            KbtnGo_Click(sender, e);
+        }
+
+        private void KbtnNext_Click(object sender, EventArgs e)
+        {
+            GoFlag = true;
+            string cpath = ktxtPath.Text;
+            UpdateListGoForward();
+
+            if (String.Compare(cpath, ktxtPath.Text) == 0)
+            { }
+            else
+            {
+                KbtnGo_Click(sender, e);
+            }
+            GoFlag = false;
+        }
+
+        private void KbtnBack_Click(object sender, EventArgs e)
+        {
+            GoFlag = true;
+            string cpath = ktxtPath.Text;
+            UpdateListGoBack();
+
+            if (String.Compare(cpath, ktxtPath.Text) == 0)
+            { }
+            else
+            {
+                KbtnGo_Click(sender, e);
+            }
+            GoFlag = false;
+        }
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    public struct SHQUERYRBINFO
+    {
+        public uint cbSize;
+        public ulong i64Size;
+        public ulong i64NumItems;
+    };
+
+    //Shell functions
+    public class Win32
+    {
+        public const uint SHGFI_ICON = 0x100;
+        //public const uint SHGFI_LARGEICON = 0x0;    // 'Large icon
+        public const uint SHGFI_SMALLICON = 0x1;    // 'Small icon
+
+        [DllImport("shell32.dll")]
+        public static extern IntPtr SHGetFileInfo(
+            string pszPath,
+            uint dwFileAttributes,
+            ref SHFILEINFO psfi,
+            uint cbSizeFileInfo,
+            uint uFlags);
+
+        [DllImport("kernel32")]
+        public static extern uint GetDriveType(
+            string lpRootPathName);
+
+        [DllImport("shell32.dll")]
+        public static extern bool SHGetDiskFreeSpaceEx(
+            string pszVolume,
+            ref ulong pqwFreeCaller,
+            ref ulong pqwTot,
+            ref ulong pqwFree);
+
+        [DllImport("shell32.Dll")]
+        public static extern int SHQueryRecycleBin(
+            string pszRootPath,
+            ref SHQUERYRBINFO pSHQueryRBInfo);
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct SHFILEINFO
+        {
+            public IntPtr hIcon;
+            public IntPtr iIcon;
+            public uint dwAttributes;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 260)]
+            public string szDisplayName;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 80)]
+            public string szTypeName;
+        };
+
+
+
+        [StructLayout(LayoutKind.Sequential)]
+        public class BITMAPINFO
+        {
+            public Int32 biSize;
+            public Int32 biWidth;
+            public Int32 biHeight;
+            public Int16 biPlanes;
+            public Int16 biBitCount;
+            public Int32 biCompression;
+            public Int32 biSizeImage;
+            public Int32 biXPelsPerMeter;
+            public Int32 biYPelsPerMeter;
+            public Int32 biClrUsed;
+            public Int32 biClrImportant;
+            public Int32 colors;
+        };
+        [DllImport("comctl32.dll")]
+        public static extern bool ImageList_Add(IntPtr hImageList, IntPtr hBitmap, IntPtr hMask);
+        [DllImport("kernel32.dll")]
+        private static extern bool RtlMoveMemory(IntPtr dest, IntPtr source, int dwcount);
+        [DllImport("shell32.dll")]
+        public static extern IntPtr DestroyIcon(IntPtr hIcon);
+        [DllImport("gdi32.dll")]
+        public static extern IntPtr CreateDIBSection(IntPtr hdc, [In, MarshalAs(UnmanagedType.LPStruct)]BITMAPINFO pbmi, uint iUsage, out IntPtr ppvBits, IntPtr hSection, uint dwOffset);
+
+
+    }
+
+    public enum ResourceScope
+    {
+        RESOURCE_CONNECTED = 1,
+        RESOURCE_GLOBALNET,
+        RESOURCE_REMEMBERED,
+        RESOURCE_RECENT,
+        RESOURCE_CONTEXT
+    };
+
+    public enum ResourceType
+    {
+        RESOURCETYPE_ANY,
+        RESOURCETYPE_DISK,
+        RESOURCETYPE_PRINT,
+        RESOURCETYPE_RESERVED
+    };
+
+    public enum ResourceUsage
+    {
+        RESOURCEUSAGE_CONNECTABLE = 0x00000001,
+        RESOURCEUSAGE_CONTAINER = 0x00000002,
+        RESOURCEUSAGE_NOLOCALDEVICE = 0x00000004,
+        RESOURCEUSAGE_SIBLING = 0x00000008,
+        RESOURCEUSAGE_ATTACHED = 0x00000010,
+        RESOURCEUSAGE_ALL = (RESOURCEUSAGE_CONNECTABLE | RESOURCEUSAGE_CONTAINER | RESOURCEUSAGE_ATTACHED),
+    };
+
+    public enum ResourceDisplayType
+    {
+        RESOURCEDISPLAYTYPE_GENERIC,
+        RESOURCEDISPLAYTYPE_DOMAIN,
+        RESOURCEDISPLAYTYPE_SERVER,
+        RESOURCEDISPLAYTYPE_SHARE,
+        RESOURCEDISPLAYTYPE_FILE,
+        RESOURCEDISPLAYTYPE_GROUP,
+        RESOURCEDISPLAYTYPE_NETWORK,
+        RESOURCEDISPLAYTYPE_ROOT,
+        RESOURCEDISPLAYTYPE_SHAREADMIN,
+        RESOURCEDISPLAYTYPE_DIRECTORY,
+        RESOURCEDISPLAYTYPE_TREE,
+        RESOURCEDISPLAYTYPE_NDSCONTAINER
+    };
+
+    public class ServerEnum : IEnumerable
+    {
+        enum ErrorCodes
+        {
+            NO_ERROR = 0,
+            ERROR_NO_MORE_ITEMS = 259
+        };
+
+        [StructLayout(LayoutKind.Sequential)]
+        private class NETRESOURCE
+        {
+            public ResourceScope dwScope = 0;
+            public ResourceType dwType = 0;
+            public ResourceDisplayType dwDisplayType = 0;
+            public ResourceUsage dwUsage = 0;
+            public string lpLocalName = null;
+            public string lpRemoteName = null;
+            public string lpComment = null;
+            public string lpProvider = null;
+        };
+
+
+        private ArrayList aData = new ArrayList();
+
+
+        public int Count
+        {
+            get { return aData.Count; }
+        }
+
+        [DllImport("Mpr.dll", EntryPoint = "WNetOpenEnumA", CallingConvention = CallingConvention.Winapi)]
+        private static extern ErrorCodes WNetOpenEnum(ResourceScope dwScope, ResourceType dwType, ResourceUsage dwUsage, NETRESOURCE p, out IntPtr lphEnum);
+
+        [DllImport("Mpr.dll", EntryPoint = "WNetCloseEnum", CallingConvention = CallingConvention.Winapi)]
+        private static extern ErrorCodes WNetCloseEnum(IntPtr hEnum);
+
+        [DllImport("Mpr.dll", EntryPoint = "WNetEnumResourceA", CallingConvention = CallingConvention.Winapi)]
+        private static extern ErrorCodes WNetEnumResource(IntPtr hEnum, ref uint lpcCount, IntPtr buffer, ref uint lpBufferSize);
+
+
+        private void EnumerateServers(NETRESOURCE pRsrc, ResourceScope scope, ResourceType type, ResourceUsage usage, ResourceDisplayType displayType, string kPath)
+        {
+            uint bufferSize = 16384;
+            IntPtr buffer = Marshal.AllocHGlobal((int)bufferSize);
+            IntPtr handle = IntPtr.Zero;
+            ErrorCodes result;
+            uint cEntries = 1;
+            bool serverenum = false;
+
+            result = WNetOpenEnum(scope, type, usage, pRsrc, out handle);
+
+            if (result == ErrorCodes.NO_ERROR)
+            {
+                do
+                {
+                    result = WNetEnumResource(handle, ref cEntries, buffer, ref bufferSize);
+
+                    if ((result == ErrorCodes.NO_ERROR))
+                    {
+                        Marshal.PtrToStructure(buffer, pRsrc);
+
+                        if (String.Compare(kPath, "") == 0)
+                        {
+                            if ((pRsrc.dwDisplayType == displayType) || (pRsrc.dwDisplayType == ResourceDisplayType.RESOURCEDISPLAYTYPE_DOMAIN))
+                                aData.Add(pRsrc.lpRemoteName + "|" + pRsrc.dwDisplayType);
+
+                            if ((pRsrc.dwUsage & ResourceUsage.RESOURCEUSAGE_CONTAINER) == ResourceUsage.RESOURCEUSAGE_CONTAINER)
+                            {
+                                if ((pRsrc.dwDisplayType == displayType))
+                                {
+                                    EnumerateServers(pRsrc, scope, type, usage, displayType, kPath);
+
+                                }
+
+                            }
+                        }
+                        else
+                        {
+                            if (pRsrc.dwDisplayType == displayType)
+                            {
+                                aData.Add(pRsrc.lpRemoteName);
+                                EnumerateServers(pRsrc, scope, type, usage, displayType, kPath);
+                                //return;
+                                serverenum = true;
+                            }
+                            if (!serverenum)
+                            {
+                                if (pRsrc.dwDisplayType == ResourceDisplayType.RESOURCEDISPLAYTYPE_SHARE)
+                                {
+                                    aData.Add(pRsrc.lpRemoteName + "-share");
+                                }
+                            }
+                            else
+                            {
+                                serverenum = false;
+                            }
+                            if ((kPath.IndexOf(pRsrc.lpRemoteName) >= 0) || (String.Compare(pRsrc.lpRemoteName, "Microsoft Windows Network") == 0))
+                            {
+                                EnumerateServers(pRsrc, scope, type, usage, displayType, kPath);
+                                //return;
+
+                            }
+                            //}
+                        }
+
+                    }
+                    else if (result != ErrorCodes.ERROR_NO_MORE_ITEMS)
+                        break;
+                } while (result != ErrorCodes.ERROR_NO_MORE_ITEMS);
+
+                WNetCloseEnum(handle);
+            }
+
+            Marshal.FreeHGlobal((IntPtr)buffer);
+        }
+
+        public ServerEnum(ResourceScope scope, ResourceType type, ResourceUsage usage, ResourceDisplayType displayType, string kPath)
+        {
+
+            NETRESOURCE netRoot = new NETRESOURCE();
+            EnumerateServers(netRoot, scope, type, usage, displayType, kPath);
 
         }
+        #region IEnumerable Members
+
+        public IEnumerator GetEnumerator()
+        {
+            return aData.GetEnumerator();
+        }
+
+        #endregion
     }
 }
