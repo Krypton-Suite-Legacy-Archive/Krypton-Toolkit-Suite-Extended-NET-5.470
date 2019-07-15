@@ -46,6 +46,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Global Utilities\bin\Debug\Global Utilities.dll</HintPath>
     </Reference>
+    <Reference Include="IO Components">
+      <HintPath>..\IO Components\obj\Debug\IO Components.dll</HintPath>
+    </Reference>
     <Reference Include="Krypton Toolkit Suite Extended Core">
       <HintPath>..\Core\obj\Debug\Krypton Toolkit Suite Extended Core.dll</HintPath>
     </Reference>
@@ -89,6 +92,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileSystemExamples.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FlashingLabelTest.cs">
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSystemExamples.resx">
+      <DependentUpon>FileSystemExamples.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FlashingLabelTest.resx">
       <DependentUpon>FlashingLabelTest.cs</DependentUpon>

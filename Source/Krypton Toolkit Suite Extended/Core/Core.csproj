@@ -93,6 +93,9 @@
     <Compile Include="Components\Scroll Bars\Skins\VScrollSkin.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\Toolbar Items\KryptonToolstripProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Designers\KryptonCommandLinkButtonActionList.cs" />
     <Compile Include="Designers\KryptonCommandLinkButtonDesigner.cs" />
     <Compile Include="Designers\ScrollBarControlDesigner.cs" />
