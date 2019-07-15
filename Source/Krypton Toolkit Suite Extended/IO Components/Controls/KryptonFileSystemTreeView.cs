@@ -92,7 +92,7 @@ namespace System.Windows.Forms
         #endregion
 
         #region Property
-        public KryptonFileSystemTreeView TreeView { get => (KryptonFileSystemTreeView)base.TreeView; }
+        //public KryptonFileSystemTreeView TreeView { get => (KryptonFileSystemTreeView)base.TreeView; }
         #endregion
     }
     #endregion

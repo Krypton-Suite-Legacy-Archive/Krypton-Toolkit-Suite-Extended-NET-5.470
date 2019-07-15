@@ -49,6 +49,9 @@
     <Compile Include="Controls\ColourWheel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\Labels\KryptonAlphaValueLabel.cs" />
+    <Compile Include="Controls\Labels\KryptonGreenValueLabel.cs" />
+    <Compile Include="Controls\Labels\KryptonRedValueLabel.cs" />
     <Compile Include="Controls\Numeric Boxes\AlphaValueNumericBox.cs" />
     <Compile Include="Controls\Numeric Boxes\BlueValueNumericBox.cs" />
     <Compile Include="Controls\Numeric Boxes\GreenValueNumericBox.cs" />
