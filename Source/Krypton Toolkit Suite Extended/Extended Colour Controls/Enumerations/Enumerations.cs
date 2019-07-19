@@ -43,6 +43,27 @@
     }
 
     /// <summary>
+    /// Specifies the style of a color bar
+    /// </summary>
+    public enum ColourBarStyle
+    {
+        /// <summary>
+        /// A gradient from one color to another.
+        /// </summary>
+        TwoColour,
+
+        /// <summary>
+        /// A gradient between three colors.
+        /// </summary>
+        ThreeColour,
+
+        /// <summary>
+        /// A gadient between a user defined number of colors.
+        /// </summary>
+        Custom
+    }
+
+    /// <summary>
     /// Specifies the edit mode of a <see cref="ColorGrid" />.
     /// </summary>
     public enum ColourEditingMode
@@ -79,7 +100,7 @@
 
         Standard256
     }
-    
+
     /// <summary>
     /// Determines how the selected cell in a <see cref="KryptonColourGrid" /> control is rendered.
     /// </summary>
@@ -99,5 +120,55 @@
         /// The selected cell is displayed larger than other cells
         /// </summary>
         Zoomed
+    }
+
+    public enum ColourSource
+    {
+        None,
+
+        Standard,
+
+        Custom
+    }
+
+    /// <summary>
+    /// Specifies the origin of a navigation operation
+    /// </summary>
+    public enum NavigationOrigin
+    {
+        /// <summary>
+        /// Specifies the beginning
+        /// </summary>
+        Begin,
+
+        /// <summary>
+        /// Specifies the current position
+        /// </summary>
+        Current,
+
+        /// <summary>
+        /// Specifies the end
+        /// </summary>
+        End
+    }
+
+    public enum ColourSliderNubStyle
+    {
+        None,
+
+        TopLeft,
+
+        BottomRight
+    }
+
+    public enum RGBAChannel
+    {
+        Red,
+
+        Green,
+
+        Blue,
+
+        Alpha
     }
 }
