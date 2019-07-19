@@ -43,20 +43,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ColourComparer.cs" />
+    <Compile Include="Classes\ColourCollectionEventArgs.cs" />
+    <Compile Include="Classes\ColourCollection.cs" />
+    <Compile Include="Classes\ColourPalettes.cs" />
+    <Compile Include="Classes\PaletteSerializer.cs" />
     <Compile Include="Controls\ARGBUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\ColourWheel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\KryptonColourGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\Labels\KryptonAlphaValueLabel.cs" />
+    <Compile Include="Controls\Labels\KryptonBlueValueLabel.cs" />
     <Compile Include="Controls\Labels\KryptonGreenValueLabel.cs" />
     <Compile Include="Controls\Labels\KryptonRedValueLabel.cs" />
     <Compile Include="Controls\Numeric Boxes\AlphaValueNumericBox.cs" />
     <Compile Include="Controls\Numeric Boxes\BlueValueNumericBox.cs" />
     <Compile Include="Controls\Numeric Boxes\GreenValueNumericBox.cs" />
     <Compile Include="Controls\Numeric Boxes\RedValueNumericBox.cs" />
+    <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="Interfaces\IColourEditor.cs" />
+    <Compile Include="Interfaces\IPaletteSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structures\HSLColour.cs" />
   </ItemGroup>
@@ -70,5 +81,6 @@
       <DependentUpon>ARGBUserControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

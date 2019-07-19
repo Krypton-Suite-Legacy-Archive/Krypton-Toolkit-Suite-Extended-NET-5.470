@@ -2,18 +2,18 @@
 <HelpTOC>
 
   <HelpTOCNode Title="Welcome to the Krypton Toolkit Suite Extended for .NET 4.7" Url="html/24f107ac-c9f4-4182-9de1-4e118e0aec96.htm" />
-  <HelpTOCNode Id="7f72a4be-d559-4ae9-8d8f-1c003849e8d7" Title="Version History" Url="html/bd0a73ed-c7fe-4ae1-a7b2-a357ff83bda4.htm">
+  <HelpTOCNode Id="01e25148-3d24-4bac-979d-a84d1fbe28f8" Title="Version History" Url="html/bd0a73ed-c7fe-4ae1-a7b2-a357ff83bda4.htm">
     <HelpTOCNode Title="Version 1.0.0.0" Url="html/a9d091be-90de-4366-9f48-7847685ff6b7.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="1b380895-dc39-4aad-a39d-7a389ccdb97e" Title="Core.Classes" Url="html/b08f17f6-488a-d503-b848-26e93764259e.htm">
-    <HelpTOCNode Id="9b684a9b-15d7-44ac-bf6a-326a82581212" Title="FileUtilityMethods Class" Url="html/d90aa2fe-2bec-7590-55ce-ec9633d7fd92.htm">
+  <HelpTOCNode Id="5a5d9c8f-d55a-466d-bd0f-deb4356101f2" Title="Core.Classes" Url="html/b08f17f6-488a-d503-b848-26e93764259e.htm">
+    <HelpTOCNode Id="26420d15-0b02-49c0-bb6d-5031e6bb88fc" Title="FileUtilityMethods Class" Url="html/d90aa2fe-2bec-7590-55ce-ec9633d7fd92.htm">
       <HelpTOCNode Title="FileUtilityMethods Constructor " Url="html/3191c242-5264-8283-2eec-a53e07287aa0.htm" />
-      <HelpTOCNode Id="7b803429-0024-4ce1-8833-925e6bd49f26" Title="FileUtilityMethods Methods" Url="html/8008ac83-4788-6642-6b6f-8243256886d2.htm">
+      <HelpTOCNode Id="3999b465-6324-41c1-895b-01bc6a6e4025" Title="FileUtilityMethods Methods" Url="html/8008ac83-4788-6642-6b6f-8243256886d2.htm">
         <HelpTOCNode Title="Finalize Method " Url="html/6ceceb69-41f4-03db-9b3a-3dbcf3646fa8.htm" />
         <HelpTOCNode Title="FormatFileLength Method " Url="html/6e5f0a4c-499b-ef78-577a-6353ae5d1796.htm" />
         <HelpTOCNode Title="IsFileLocked Method " Url="html/6fc3be37-cd26-9c25-159f-f8f50e60c160.htm" />
         <HelpTOCNode Title="LoadFromFile Method " Url="html/6942ccae-0996-b257-af84-0aea81816911.htm" />
-        <HelpTOCNode Id="deb51e50-6e15-4584-852a-c8fdfffa8e9d" Title="ParseReadableFileSize Method " Url="html/f6d7bcce-8188-2f5f-6e14-2c22be0d60fc.htm">
+        <HelpTOCNode Id="50efdf91-0b1c-4be7-bb57-f7da42eac331" Title="ParseReadableFileSize Method " Url="html/f6d7bcce-8188-2f5f-6e14-2c22be0d60fc.htm">
           <HelpTOCNode Title="ParseReadableFileSize Method (Int32)" Url="html/fe028cbf-c005-7c68-d716-e747f569e401.htm" />
           <HelpTOCNode Title="ParseReadableFileSize Method (Int64)" Url="html/cf71b852-92ac-8e1c-6911-828cb10c7890.htm" />
         </HelpTOCNode>
@@ -28,12 +28,12 @@
         <HelpTOCNode Title="ReturnOnlineFileSize Method " Url="html/70b7cc89-7862-ff25-6100-563484624906.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="f53d762c-28cf-4cc4-a5c2-e96f24aa4612" Title="GlobalNativeMethods Class" Url="html/100a0f6d-8d8e-8aa3-9993-6a7e6175a887.htm">
-      <HelpTOCNode Id="a58a1499-28dc-4763-b0c3-0e778ef0d4bf" Title="GlobalNativeMethods Methods" Url="html/a71c1d75-43ba-df80-1898-df266603a3d5.htm">
+    <HelpTOCNode Id="c0799dbb-3fbd-4a58-9947-3c772bb8c5e4" Title="GlobalNativeMethods Class" Url="html/100a0f6d-8d8e-8aa3-9993-6a7e6175a887.htm">
+      <HelpTOCNode Id="5194c319-12ab-4ff8-8ded-073c9e1c8b34" Title="GlobalNativeMethods Methods" Url="html/a71c1d75-43ba-df80-1898-df266603a3d5.htm">
         <HelpTOCNode Title="DwmIsCompositionEnabled Method " Url="html/143e5a3a-ed92-a863-732c-c4eaa8a053ed.htm" />
         <HelpTOCNode Title="LoadCursor Method " Url="html/d6e05042-8d86-adc9-5ddc-09cf5dc615b1.htm" />
         <HelpTOCNode Title="LoadImage Method " Url="html/067a9551-59c4-bb7c-d6ec-49bb6d2a2afa.htm" />
-        <HelpTOCNode Id="633cfbda-33b9-46f9-b225-60338653244a" Title="SendMessage Method " Url="html/40d67fa6-2ad3-94c2-b309-c7b74a321191.htm">
+        <HelpTOCNode Id="28e0435a-5691-43a3-b6b6-9634ad2edcf0" Title="SendMessage Method " Url="html/40d67fa6-2ad3-94c2-b309-c7b74a321191.htm">
           <HelpTOCNode Title="SendMessage Method (IntPtr, UInt32, IntPtr, IntPtr)" Url="html/9758203a-0127-88d0-ed7f-5c80340056bd.htm" />
           <HelpTOCNode Title="SendMessage Method (IntPtr, UInt32, IntPtr, String)" Url="html/3179b164-261c-b51c-f132-cc0b0c0ef1d9.htm" />
         </HelpTOCNode>
@@ -44,15 +44,15 @@
         <HelpTOCNode Title="SetWindowTheme Method " Url="html/9690dbf5-e932-e941-d7c7-f7b789cebcf6.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9d87dcb5-ad34-400c-9de8-6d7150884d42" Title="IconExtractor Class" Url="html/0664c3e4-ecda-7a1f-d39b-9aafaee519df.htm">
-      <HelpTOCNode Id="8fd8dec2-0de9-4996-8854-cc4d56e3a5b8" Title="IconExtractor Methods" Url="html/259e808d-96fb-45da-054f-de3550a4351f.htm">
+    <HelpTOCNode Id="302ed86c-a472-49f7-bdc7-c5f6e6c3f144" Title="IconExtractor Class" Url="html/0664c3e4-ecda-7a1f-d39b-9aafaee519df.htm">
+      <HelpTOCNode Id="b40f8706-602a-4b8e-b186-4a75ac64e9ca" Title="IconExtractor Methods" Url="html/259e808d-96fb-45da-054f-de3550a4351f.htm">
         <HelpTOCNode Title="LoadIcon Method " Url="html/5731fba9-3a49-71e0-0b43-28db4cfd8d4a.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="IconExtractor.IconType Enumeration" Url="html/3ce0e0b0-e035-42c8-8f0c-dc2d6336159b.htm" />
-    <HelpTOCNode Id="ca45cd3c-b3ca-41c1-aeb9-ea83205b5183" Title="TranslationMethods Class" Url="html/11495247-cfbe-8daa-3ae9-c44a71e06f4a.htm">
+    <HelpTOCNode Id="c54cf8fb-fe1b-45ed-acba-6df440472582" Title="TranslationMethods Class" Url="html/11495247-cfbe-8daa-3ae9-c44a71e06f4a.htm">
       <HelpTOCNode Title="TranslationMethods Constructor " Url="html/b50884eb-6365-504d-7380-6ca598ce0081.htm" />
-      <HelpTOCNode Id="b3dc385a-0b59-40f3-87b9-eb0848613733" Title="TranslationMethods Methods" Url="html/78e27518-bb90-aad5-0d88-28b087e599e0.htm">
+      <HelpTOCNode Id="2ac9bf42-8f2b-497f-8a64-8d9cddbbeb8e" Title="TranslationMethods Methods" Url="html/78e27518-bb90-aad5-0d88-28b087e599e0.htm">
         <HelpTOCNode Title="ColourARGBToString Method " Url="html/9cbc04fe-aa9b-324a-4b7f-7c13e64a5f87.htm" />
         <HelpTOCNode Title="ColourStringToARGB Method " Url="html/a81169f1-13c8-49f0-ae2b-bef5d0a3380d.htm" />
         <HelpTOCNode Title="GetColourBrightness Method " Url="html/a16b2da9-76fc-72e7-84ea-d36aeeec639d.htm" />
@@ -75,19 +75,19 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="897b4896-a1e0-4054-8787-96932d97092e" Title="Core.Classes.SpecialEffects" Url="html/b374ff89-17ca-d1b9-003b-5d0254b433ff.htm">
-    <HelpTOCNode Id="e2ed26b8-2b1b-463d-9fb3-7ad54a70f37d" Title="FadeEffects Class" Url="html/07fd0997-03f3-1249-a73a-4797023e0b61.htm">
+  <HelpTOCNode Id="bf3c6363-54a8-4129-af6d-c6f00d3af90e" Title="Core.Classes.SpecialEffects" Url="html/b374ff89-17ca-d1b9-003b-5d0254b433ff.htm">
+    <HelpTOCNode Id="2f90bd78-6aa3-4186-9fff-8cc25cec692c" Title="FadeEffects Class" Url="html/07fd0997-03f3-1249-a73a-4797023e0b61.htm">
       <HelpTOCNode Title="FadeEffects Constructor " Url="html/cba84764-9cee-decc-9775-1cfd95376e8c.htm" />
-      <HelpTOCNode Id="68c50d21-6c25-4994-96c2-f8f90ded80f6" Title="FadeEffects Methods" Url="html/8343a48c-aace-b22d-a1f8-0d9a1b6b5cfb.htm">
+      <HelpTOCNode Id="c7a7ddb6-6f43-40a4-a80c-c5ca78a8c4ed" Title="FadeEffects Methods" Url="html/8343a48c-aace-b22d-a1f8-0d9a1b6b5cfb.htm">
         <HelpTOCNode Title="FadeInWindow Method " Url="html/5aa66cc8-89cf-aee4-7a19-0185de83b253.htm" />
         <HelpTOCNode Title="FadeOutWindow Method " Url="html/0ebab077-a735-4c72-2b87-5de2aa51437a.htm" />
         <HelpTOCNode Title="Finalize Method " Url="html/0acbc525-2a16-3230-4a02-74268abfbccc.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="a7712698-cc96-4f7c-ac3c-ff066d217a99" Title="Core.Interfaces" Url="html/9094b2c6-d8e7-e4fb-4030-03470a81dfa6.htm">
-    <HelpTOCNode Id="2960a148-19d1-43f1-90e6-babc72f25a3a" Title="IAbout Interface" Url="html/0da55104-5b40-1678-a5f7-4690a287bebf.htm">
-      <HelpTOCNode Id="527d23d3-5b6f-420b-b91d-39ad1112ce88" Title="IAbout Properties" Url="html/ecd1a421-e02c-98b8-56e8-5378c99de8a8.htm">
+  <HelpTOCNode Id="8696a7bf-5fb2-4d75-acc9-7802028374ca" Title="Core.Interfaces" Url="html/9094b2c6-d8e7-e4fb-4030-03470a81dfa6.htm">
+    <HelpTOCNode Id="9a3672db-35ce-4290-a4e7-9275029635ac" Title="IAbout Interface" Url="html/0da55104-5b40-1678-a5f7-4690a287bebf.htm">
+      <HelpTOCNode Id="f516ca44-3a05-4bdd-bdc5-22e752ea5eed" Title="IAbout Properties" Url="html/ecd1a421-e02c-98b8-56e8-5378c99de8a8.htm">
         <HelpTOCNode Title="ApplicationIcon Property " Url="html/049b6027-b83f-d043-f20c-d652737bfed3.htm" />
         <HelpTOCNode Title="ApplicationIconImage Property " Url="html/0c09fc7e-9762-1f3d-4d13-32eb5ccd657b.htm" />
         <HelpTOCNode Title="ApplicationName Property " Url="html/7b9aee7b-530c-afc3-4782-a03251d8d530.htm" />
@@ -101,10 +101,10 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="0fcd6787-6ef0-4afb-86bf-eec99219e6e9" Title="Core.UI.Elements" Url="html/13061521-6e81-7011-4d45-bc4a6695c0ff.htm">
-    <HelpTOCNode Id="5874dda8-305b-4efe-b123-ab19d710dc2c" Title="AboutBox Class" Url="html/f5270730-1539-b0b5-dfcc-ecbcab587f6a.htm">
+  <HelpTOCNode Id="8238bcd8-dc4a-4a35-ba04-5a81c0f9d08e" Title="Core.UI.Elements" Url="html/13061521-6e81-7011-4d45-bc4a6695c0ff.htm">
+    <HelpTOCNode Id="faedbf89-ff8f-449b-bc40-7e3e1b2e98df" Title="AboutBox Class" Url="html/f5270730-1539-b0b5-dfcc-ecbcab587f6a.htm">
       <HelpTOCNode Title="AboutBox Constructor " Url="html/5f64ce82-52ff-20d1-f64c-7ef02e95bc6a.htm" />
-      <HelpTOCNode Id="22784ee6-7bbb-41d3-893b-40f1e987ace8" Title="AboutBox Properties" Url="html/9ea8deef-1af4-1f6c-1d39-d6cee5b17a13.htm">
+      <HelpTOCNode Id="836f409c-b1c0-4906-8d07-4053264a13ca" Title="AboutBox Properties" Url="html/9ea8deef-1af4-1f6c-1d39-d6cee5b17a13.htm">
         <HelpTOCNode Title="ApplicationIcon Property " Url="html/aa9297a9-aedd-01fd-89f9-0bd356f11b99.htm" />
         <HelpTOCNode Title="ApplicationIconImage Property " Url="html/aa602b62-10ad-b71e-8e61-88e4b9ccd6b7.htm" />
         <HelpTOCNode Title="ApplicationName Property " Url="html/975cf181-75ee-f0ee-eac0-18375cbc2b60.htm" />
@@ -116,28 +116,28 @@
         <HelpTOCNode Title="ShowSystemInformationButton Property " Url="html/a063ddc6-06e9-ae36-c447-81cacff53303.htm" />
         <HelpTOCNode Title="UseIcon Property " Url="html/d4712b82-944c-dd8a-d174-351330ddca07.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="017651db-3254-4342-89fa-0aacd7c1ba96" Title="AboutBox Methods" Url="html/a8a4c5fc-34a3-88be-acf9-5ffef0dade2d.htm">
-        <HelpTOCNode Id="a418ce73-23a5-4941-bf21-063d50f34fcb" Title="Dispose Method " Url="html/98e6818e-ea48-f275-8520-f3ae90ec3a28.htm">
+      <HelpTOCNode Id="69226dca-9046-4419-a1ad-496373e12980" Title="AboutBox Methods" Url="html/a8a4c5fc-34a3-88be-acf9-5ffef0dade2d.htm">
+        <HelpTOCNode Id="d563c863-fc5b-4745-8534-87afc0cedd27" Title="Dispose Method " Url="html/98e6818e-ea48-f275-8520-f3ae90ec3a28.htm">
           <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/866c6cab-cc64-94b7-e406-efe7d8d11b31.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="AboutBox Events" Url="html/de594a06-3edf-d12d-67cb-df81a6b739c8.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="f862a1c7-840b-4f4e-852e-7ca31138768e" Title="SystemInformation Class" Url="html/388f60d9-56f4-c784-a90c-5417011561f0.htm">
+    <HelpTOCNode Id="3fe628c0-20e3-4f60-8285-d290f4b7b2c1" Title="SystemInformation Class" Url="html/388f60d9-56f4-c784-a90c-5417011561f0.htm">
       <HelpTOCNode Title="SystemInformation Constructor " Url="html/81ebf90c-e2ad-3485-9fcb-866db0ada9cb.htm" />
       <HelpTOCNode Title="SystemInformation Properties" Url="html/6d2dc002-164f-1f9d-c0bb-2ee84fca8ed4.htm" />
-      <HelpTOCNode Id="3b562695-519e-41af-902a-c2f589c99972" Title="SystemInformation Methods" Url="html/22595b93-b203-7042-8244-dfe856279c89.htm">
-        <HelpTOCNode Id="a66992de-90ff-4fcb-b82b-c4ca9b81ca46" Title="Dispose Method " Url="html/827706d1-ffe6-30d6-6ef5-21d9d428c6c0.htm">
+      <HelpTOCNode Id="07fd66d3-c6ea-457e-8bab-65cb2c496955" Title="SystemInformation Methods" Url="html/22595b93-b203-7042-8244-dfe856279c89.htm">
+        <HelpTOCNode Id="2e6d327a-a2c9-42c7-a8d5-4c849952b6c7" Title="Dispose Method " Url="html/827706d1-ffe6-30d6-6ef5-21d9d428c6c0.htm">
           <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/56886bfc-7c74-bd3d-14ee-36472ac0a360.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="SystemInformation Events" Url="html/51ab7303-eeb0-757d-5657-7b3980263164.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="04ff64b2-9271-40c4-bf7d-26cfdee9f8d7" Title="GlobalUtilities.Classes" Url="html/ca24daa6-7a4a-169c-427c-3dbb812541d7.htm">
-    <HelpTOCNode Id="5d7bf97f-16a9-4910-8c2a-5decf89222e2" Title="GlobalMethods Class" Url="html/683c8fb7-1e63-54dd-ebdf-5723a1e9e64c.htm">
+  <HelpTOCNode Id="e1118c33-af90-42b6-8295-22c76b2bfe32" Title="GlobalUtilities.Classes" Url="html/ca24daa6-7a4a-169c-427c-3dbb812541d7.htm">
+    <HelpTOCNode Id="d7c0f7ac-dd49-43bb-9940-0b47fe6cd287" Title="GlobalMethods Class" Url="html/683c8fb7-1e63-54dd-ebdf-5723a1e9e64c.htm">
       <HelpTOCNode Title="GlobalMethods Constructor " Url="html/85bad685-60f1-7140-99ef-e0be0d6a30de.htm" />
-      <HelpTOCNode Id="ee131e21-0d9f-43d7-b6f0-3c81ddf2f89c" Title="GlobalMethods Methods" Url="html/3e5b78ad-3e28-bc22-8a63-3bb82386a38a.htm">
+      <HelpTOCNode Id="bc6b35c4-dd5f-4040-be67-c0c7380796d2" Title="GlobalMethods Methods" Url="html/3e5b78ad-3e28-bc22-8a63-3bb82386a38a.htm">
         <HelpTOCNode Title="AreAssemblies64BIT Method " Url="html/63450e10-a8cd-e39a-d604-ed22e7fd7a1f.htm" />
         <HelpTOCNode Title="CheckIfTargetPlatformIsSupported Method " Url="html/50a0f97b-e59c-b120-099a-ca6a26d758cf.htm" />
         <HelpTOCNode Title="ElevateProcessWithAdministrativeRights Method " Url="html/23ea6389-99e2-4d6c-5da5-42f1e3cefd9f.htm" />
@@ -155,8 +155,8 @@
         <HelpTOCNode Title="SetIsTargetPlatformSupported Method " Url="html/65a1a959-8c72-ba84-0e44-eeca6bed0a4b.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9983ec62-34b2-4db2-b7e3-703f97dca856" Title="GlobalMethodsStatic Class" Url="html/b35e4d8b-79d0-1417-6304-2a622f4efd56.htm">
-      <HelpTOCNode Id="492d9962-0304-409f-bc01-2ee4b5e2623c" Title="GlobalMethodsStatic Methods" Url="html/7aaa7fd1-3354-64c1-db9a-57aa7d6d8326.htm">
+    <HelpTOCNode Id="d212bb20-be6a-41c1-8207-98e2faf48b8c" Title="GlobalMethodsStatic Class" Url="html/b35e4d8b-79d0-1417-6304-2a622f4efd56.htm">
+      <HelpTOCNode Id="fa8796a1-11b1-40ae-99cb-251792e6f67e" Title="GlobalMethodsStatic Methods" Url="html/7aaa7fd1-3354-64c1-db9a-57aa7d6d8326.htm">
         <HelpTOCNode Title="AreAssemblies64BIT Method " Url="html/3b7e1cfa-fc12-5eda-759e-707d173ae5aa.htm" />
         <HelpTOCNode Title="CheckIfTargetPlatformIsSupported Method " Url="html/1decddad-ffbd-70a8-7538-9df6404feb0c.htm" />
         <HelpTOCNode Title="ElevateProcessWithAdministrativeRights Method " Url="html/2934be92-73b0-57e7-6811-38656da0ff3b.htm" />
@@ -171,46 +171,46 @@
         <HelpTOCNode Title="SetIsTargetPlatform64BIT Method " Url="html/688cc79d-79f4-fc80-87f7-0abf57e8ebf2.htm" />
         <HelpTOCNode Title="SetIsTargetPlatformSupported Method " Url="html/24196764-675b-aab5-71da-c5a39d56bec7.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="94185c22-21a2-4b46-9c2a-ced7cfdfbda5" Title="GlobalMethodsStatic Fields" Url="html/09becca9-e87d-49c2-9266-9ab33fcb8f42.htm">
+      <HelpTOCNode Id="b8bb4da4-7d1a-4315-8dc8-49c16ffab38b" Title="GlobalMethodsStatic Fields" Url="html/09becca9-e87d-49c2-9266-9ab33fcb8f42.htm">
         <HelpTOCNode Title="_internetConnectionState Field" Url="html/09d0f5f0-ee3b-de8d-ee9d-08fa0fc3dc31.htm" />
         <HelpTOCNode Title="_isAssemblies64BIT Field" Url="html/153eb5ed-2137-d413-d0ad-79162fc7e962.htm" />
         <HelpTOCNode Title="_isTargetPlatform64BIT Field" Url="html/402bd19e-f7af-deb4-2168-33b9c685ad35.htm" />
         <HelpTOCNode Title="_isTargetPlatformSupported Field" Url="html/d4aa4ab6-6f7e-52ce-52ab-2db7994d4e7e.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="32e8a408-750b-46a6-98cd-bc048c4e858e" Title="NetworkUtilities Class" Url="html/aa343e1f-6e40-813a-608e-21ab8d1ca2da.htm">
+    <HelpTOCNode Id="099b328a-02b5-4a3a-bcca-b68c372eb4e7" Title="NetworkUtilities Class" Url="html/aa343e1f-6e40-813a-608e-21ab8d1ca2da.htm">
       <HelpTOCNode Title="NetworkUtilities Constructor " Url="html/1bc4f492-fa78-619a-0167-7d88516f82ad.htm" />
-      <HelpTOCNode Id="4e18e9dc-e0b1-43b7-a4c3-fcd41d1364a5" Title="NetworkUtilities Methods" Url="html/a5ab6332-144b-349a-0d21-b0587ef43327.htm">
+      <HelpTOCNode Id="1c2cd2db-557a-4c83-b605-bc678339ae54" Title="NetworkUtilities Methods" Url="html/a5ab6332-144b-349a-0d21-b0587ef43327.htm">
         <HelpTOCNode Title="CheckInternetConnectionState Method " Url="html/19e3740c-c40c-b10a-f38e-c0ae4b963aaa.htm" />
         <HelpTOCNode Title="ExistsOnServer Method " Url="html/166e2ac8-4b42-80b3-aee8-853877691d0a.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="c0ff4f88-8128-4f66-a3aa-6505557ff78a" Title="KryptonOutlookGrid.Classes" Url="html/e6c6c122-90b7-16f3-43d4-f5019aad3fa5.htm">
-    <HelpTOCNode Id="9c002f38-3beb-4e21-a99d-3dd2f0dc4225" Title="CollapsedEventArgs Class" Url="html/85ddf01f-7882-46e0-8055-81eabbfa35ce.htm">
+  <HelpTOCNode Id="cbac06b0-8271-4c1f-b68c-d80462eda25d" Title="KryptonOutlookGrid.Classes" Url="html/e6c6c122-90b7-16f3-43d4-f5019aad3fa5.htm">
+    <HelpTOCNode Id="f6899dc7-5120-46e5-afda-990d1e4b025d" Title="CollapsedEventArgs Class" Url="html/85ddf01f-7882-46e0-8055-81eabbfa35ce.htm">
       <HelpTOCNode Title="CollapsedEventArgs Constructor " Url="html/dc61c985-4db8-d0f2-4d2d-9ae7b2e0950b.htm" />
       <HelpTOCNode Title="CollapsedEventArgs Properties" Url="html/3fd42672-d662-de2c-2ea0-74b78880e30e.htm" />
       <HelpTOCNode Title="CollapsedEventArgs Methods" Url="html/8b04ba73-8e5b-7a16-f601-b2219a8627c2.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="70209166-5cc5-46d1-99dd-8c1128841ec1" Title="CollapsingEventArgs Class" Url="html/16a94a3c-593c-df81-d498-be2a6f13770f.htm">
+    <HelpTOCNode Id="25a5016d-733e-4e0f-ba75-936662243b1c" Title="CollapsingEventArgs Class" Url="html/16a94a3c-593c-df81-d498-be2a6f13770f.htm">
       <HelpTOCNode Title="CollapsingEventArgs Constructor " Url="html/89afb024-333b-6f7a-428a-83dd338560a6.htm" />
       <HelpTOCNode Title="CollapsingEventArgs Properties" Url="html/61e880d9-11b9-dc54-093c-f1e8c9137313.htm" />
       <HelpTOCNode Title="CollapsingEventArgs Methods" Url="html/da401d96-07ce-af67-aa41-e53f70d33891.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="0d9f60ec-b40e-4b7b-b336-6cb4b6a3decf" Title="ExpandedEventArgs Class" Url="html/4037b3e2-2b35-96ea-bf6e-ab387eede78b.htm">
+    <HelpTOCNode Id="baa6119b-36ec-410b-89af-8e9af0d499fe" Title="ExpandedEventArgs Class" Url="html/4037b3e2-2b35-96ea-bf6e-ab387eede78b.htm">
       <HelpTOCNode Title="ExpandedEventArgs Constructor " Url="html/58f21ffa-846a-07fa-4a99-db88345510ea.htm" />
       <HelpTOCNode Title="ExpandedEventArgs Properties" Url="html/baaac879-4c34-a8e2-964a-f8b603a75522.htm" />
       <HelpTOCNode Title="ExpandedEventArgs Methods" Url="html/c398da91-3a9c-562c-b094-aafbf3e6492f.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="e78b4ff4-c1c3-4dde-b8e6-91a87e3d40ff" Title="ExpandingEventArgs Class" Url="html/b39d5313-8a3f-71d2-9366-694014882cc2.htm">
+    <HelpTOCNode Id="44eae4a3-5a32-40e8-ab4f-5402dd16ed0a" Title="ExpandingEventArgs Class" Url="html/b39d5313-8a3f-71d2-9366-694014882cc2.htm">
       <HelpTOCNode Title="ExpandingEventArgs Constructor " Url="html/af559066-d8da-8712-abbf-902e229087d4.htm" />
       <HelpTOCNode Title="ExpandingEventArgs Properties" Url="html/3f36adae-be42-c2df-2b5b-8b8dd5715ba7.htm" />
       <HelpTOCNode Title="ExpandingEventArgs Methods" Url="html/cba44d20-1646-bdf2-9798-5ff29ee9cb59.htm" />
     </HelpTOCNode>
     <HelpTOCNode Title="FillMode Enumeration" Url="html/fed9f55d-46bd-ef51-7824-ca2c7db190ae.htm" />
-    <HelpTOCNode Id="3d6d83bd-c730-4a9d-b54b-5dabfaca37e1" Title="KryptonOutlookGrid Class" Url="html/93bdec49-c878-ebf7-b1ec-abfa26900ff5.htm">
+    <HelpTOCNode Id="fb8f9355-4a3a-4c86-9d42-2dbaf9c4b40f" Title="KryptonOutlookGrid Class" Url="html/93bdec49-c878-ebf7-b1ec-abfa26900ff5.htm">
       <HelpTOCNode Title="KryptonOutlookGrid Constructor " Url="html/645a4dcd-058a-09b9-0dc8-8644c7f54472.htm" />
-      <HelpTOCNode Id="515f9efe-c783-408f-81e0-be0416084fc2" Title="KryptonOutlookGrid Properties" Url="html/2319d148-9cb6-50ba-00d0-a712b3b7828d.htm">
+      <HelpTOCNode Id="89050d6c-bd99-426b-b2be-9ef305501a8c" Title="KryptonOutlookGrid Properties" Url="html/2319d148-9cb6-50ba-00d0-a712b3b7828d.htm">
         <HelpTOCNode Title="ConditionalFormatting Property " Url="html/1d749ad1-432c-2ac1-18bd-df7b5abcc806.htm" />
         <HelpTOCNode Title="CreateParams Property " Url="html/54c857e0-8fc1-965e-ce47-c4ca284b4821.htm" />
         <HelpTOCNode Title="FillMode Property " Url="html/24625fe0-32d8-3e8e-8505-9890228f0d26.htm" />
@@ -224,13 +224,13 @@
         <HelpTOCNode Title="RowTemplate Property " Url="html/301809ad-80e5-f1e6-ed87-3af36c6134cb.htm" />
         <HelpTOCNode Title="ShowLines Property " Url="html/6fe7c7d9-6afa-bf2f-d260-3a7856c3a2c6.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="47d9a21e-971e-49b6-af99-543c44b60c3d" Title="KryptonOutlookGrid Methods" Url="html/eec53d55-f6bc-f3b7-1def-cda429cbdceb.htm">
-        <HelpTOCNode Id="d5dc5bd6-8fd0-4c80-aa6b-a23b5e43bfaf" Title="AddInternalColumn Method " Url="html/db0360d7-0dc5-0cea-3b93-ea362ed21ff5.htm">
+      <HelpTOCNode Id="8393103d-e375-428a-a04b-f558fa3232a4" Title="KryptonOutlookGrid Methods" Url="html/eec53d55-f6bc-f3b7-1def-cda429cbdceb.htm">
+        <HelpTOCNode Id="a6c27411-fef2-4098-88ec-7d264c290ef4" Title="AddInternalColumn Method " Url="html/db0360d7-0dc5-0cea-3b93-ea362ed21ff5.htm">
           <HelpTOCNode Title="AddInternalColumn Method (OutlookGridColumn)" Url="html/47cda836-89e7-87d3-95be-a1d416407344.htm" />
           <HelpTOCNode Title="AddInternalColumn Method (DataGridViewColumn, IOutlookGridGroup, SortOrder, Int32, Int32)" Url="html/a28b2c3e-a745-9485-c1c6-d37a1a7a1401.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="AddRangeInternalColumns Method " Url="html/7e4fca09-22ad-17e8-2ed2-46371e675f72.htm" />
-        <HelpTOCNode Id="d4a81633-716d-4162-94e2-b24b6289e095" Title="AssignRows Method " Url="html/d02a1133-be71-d337-b1f9-68b062593f7e.htm">
+        <HelpTOCNode Id="a7ad36f7-8fa7-44db-9e1e-6aad06cd802e" Title="AssignRows Method " Url="html/d02a1133-be71-d337-b1f9-68b062593f7e.htm">
           <HelpTOCNode Title="AssignRows Method (DataGridViewRowCollection)" Url="html/01da1628-213d-cf4a-89ad-b36873692c15.htm" />
           <HelpTOCNode Title="AssignRows Method (List(OutlookGridRow))" Url="html/e787728b-7a54-e0de-644f-cc1003958ccd.htm" />
         </HelpTOCNode>
@@ -238,7 +238,7 @@
         <HelpTOCNode Title="ClearGroups Method " Url="html/d34a79c5-a849-315c-e928-86edccb13f91.htm" />
         <HelpTOCNode Title="ClearGroupsWithoutFilling Method " Url="html/647b6e73-108e-556a-8cc3-5ab238b8e386.htm" />
         <HelpTOCNode Title="ClearInternalRows Method " Url="html/916f5637-ec16-33cb-65fa-eb8d43c67c91.htm" />
-        <HelpTOCNode Id="eb8ecab4-9c03-44b5-812d-5f6c8a86ba1e" Title="Collapse Method " Url="html/6dafb83e-6b12-3a20-28c5-616cf4b0e717.htm">
+        <HelpTOCNode Id="bda75d2a-0650-47c0-be2f-a21466d70141" Title="Collapse Method " Url="html/6dafb83e-6b12-3a20-28c5-616cf4b0e717.htm">
           <HelpTOCNode Title="Collapse Method (Int32)" Url="html/c3072eb2-17c7-9387-3c1f-24781ff1b306.htm" />
           <HelpTOCNode Title="Collapse Method (String)" Url="html/7005ffc4-4b97-b5d7-4035-e9ac424d5f91.htm" />
         </HelpTOCNode>
@@ -246,11 +246,11 @@
         <HelpTOCNode Title="CollapseAllNodes Method " Url="html/7232ee40-b513-2cb0-8dcc-ba7a335bcb14.htm" />
         <HelpTOCNode Title="CollapseNode Method " Url="html/930204ff-6f25-c5c6-447b-7875efdf3242.htm" />
         <HelpTOCNode Title="CollapseNodeAndSubNodes Method " Url="html/6ee8944a-3271-71e6-1dc7-0d06311e2c8b.htm" />
-        <HelpTOCNode Id="c95cbc2f-ed56-4b58-a7d3-3eca12532ebf" Title="Dispose Method " Url="html/fc8710b8-eb7c-e7c8-2e78-1a73756874cb.htm">
+        <HelpTOCNode Id="6da7cf90-30a5-4e49-8d40-bab6d2f955a0" Title="Dispose Method " Url="html/fc8710b8-eb7c-e7c8-2e78-1a73756874cb.htm">
           <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/54ad03c5-0d05-583d-be8f-c8ca486fba06.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="EnsureVisibleNode Method " Url="html/4a9cdf84-598e-3ef7-3d01-3d3011fb2c32.htm" />
-        <HelpTOCNode Id="410857ff-7d1c-483a-b02b-5e594423f488" Title="Expand Method " Url="html/80701af8-5b95-87e9-c74b-c26d71366ead.htm">
+        <HelpTOCNode Id="16e4e6f9-0d09-4b1b-92da-bfb3213fdf94" Title="Expand Method " Url="html/80701af8-5b95-87e9-c74b-c26d71366ead.htm">
           <HelpTOCNode Title="Expand Method (Int32)" Url="html/375c79a0-bf09-4b98-6f60-f6e69b9a2d14.htm" />
           <HelpTOCNode Title="Expand Method (String)" Url="html/6eca1382-2e54-7266-4c0e-a9bb86c25aff.htm" />
         </HelpTOCNode>
@@ -263,7 +263,7 @@
         <HelpTOCNode Title="FindFromColumnName Method " Url="html/c3fbef75-eac3-0eb3-206f-43e5c52afa22.htm" />
         <HelpTOCNode Title="ForceRefreshGroupBox Method " Url="html/f9641d92-fdde-f348-1814-b993d05326ba.htm" />
         <HelpTOCNode Title="GetSubRows Method " Url="html/24fe82ec-45ff-bd4a-b6bb-50d1286eced5.htm" />
-        <HelpTOCNode Id="82e2f80f-6cf5-45f2-891f-81738106db77" Title="GroupColumn Method " Url="html/f52a7e66-4e81-8f20-5483-2a873a665365.htm">
+        <HelpTOCNode Id="ee989cb6-f132-421b-ae4e-2af72ae4491a" Title="GroupColumn Method " Url="html/f52a7e66-4e81-8f20-5483-2a873a665365.htm">
           <HelpTOCNode Title="GroupColumn Method (String, SortOrder, IOutlookGridGroup)" Url="html/8f3591c2-6025-eb90-2648-88ac89f06ead.htm" />
           <HelpTOCNode Title="GroupColumn Method (OutlookGridColumn, SortOrder, IOutlookGridGroup)" Url="html/d80f107f-d8c5-3c3c-8bb5-a5afe024cca8.htm" />
         </HelpTOCNode>
@@ -290,13 +290,13 @@
         <HelpTOCNode Title="RegisterGroupBoxEvents Method " Url="html/a5410f2b-d90b-9d14-790e-ddc06b2e666b.htm" />
         <HelpTOCNode Title="ResetAllSortingColumns Method " Url="html/c1133948-c69f-2b52-291d-e74d324122dd.htm" />
         <HelpTOCNode Title="SortColumn Method " Url="html/49cd1efc-afdd-b955-d222-00f2a073a815.htm" />
-        <HelpTOCNode Id="7b6cd04b-3b02-42f4-9b2f-8f9dd9b7d424" Title="UnGroupColumn Method " Url="html/6ebd6c4d-0424-4b64-4491-39cd64a0600d.htm">
+        <HelpTOCNode Id="2d00711a-cd11-4d1b-97de-172aae633112" Title="UnGroupColumn Method " Url="html/6ebd6c4d-0424-4b64-4491-39cd64a0600d.htm">
           <HelpTOCNode Title="UnGroupColumn Method (String)" Url="html/daeda374-12e7-fb66-b704-7eae51ca105d.htm" />
           <HelpTOCNode Title="UnGroupColumn Method (OutlookGridColumn)" Url="html/a0c1ef57-64b9-acc3-7ea7-1e3810f281f2.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="UnSortColum Method " Url="html/8c28c302-686a-8879-c41d-e01fec8a92d4.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="4da2d0a6-6325-47a1-8770-1fc74b873865" Title="KryptonOutlookGrid Events" Url="html/666af21c-97b4-e7bd-9949-e1e5bbdcbf7d.htm">
+      <HelpTOCNode Id="c17aec6b-1263-476e-94d8-52c34d7d5026" Title="KryptonOutlookGrid Events" Url="html/666af21c-97b4-e7bd-9949-e1e5bbdcbf7d.htm">
         <HelpTOCNode Title="GroupImageClick Event" Url="html/48505125-d021-a40a-d19c-d1d27e9981af.htm" />
         <HelpTOCNode Title="NodeCollapsed Event" Url="html/52a0ff34-3bf1-c8ea-7b67-556f7dd2e200.htm" />
         <HelpTOCNode Title="NodeCollapsing Event" Url="html/79b388cc-45d9-453b-70bd-970bccc9b3cd.htm" />
@@ -304,27 +304,27 @@
         <HelpTOCNode Title="NodeExpanding Event" Url="html/f759da79-f52c-e416-6251-37c2dc633937.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="3a2cc2fd-f594-4192-b8d5-b322bf381f3e" Title="OutlookGridAlphabeticGroup Class" Url="html/14731753-5d98-3304-0bb7-12985c6841e8.htm">
-      <HelpTOCNode Id="4949e145-a752-4582-bfed-1b03af146089" Title="OutlookGridAlphabeticGroup Constructor " Url="html/cce52d98-bea2-9c94-2fe2-c0ed9fce02b1.htm">
+    <HelpTOCNode Id="166063fb-1f5b-419c-810d-8d863d86c3c0" Title="OutlookGridAlphabeticGroup Class" Url="html/14731753-5d98-3304-0bb7-12985c6841e8.htm">
+      <HelpTOCNode Id="b1764964-b1ae-4993-baad-5c256ae8807b" Title="OutlookGridAlphabeticGroup Constructor " Url="html/cce52d98-bea2-9c94-2fe2-c0ed9fce02b1.htm">
         <HelpTOCNode Title="OutlookGridAlphabeticGroup Constructor " Url="html/9f8ad625-51c5-fd31-b2d2-6780b79c8bd5.htm" />
         <HelpTOCNode Title="OutlookGridAlphabeticGroup Constructor (IOutlookGridGroup)" Url="html/54e4b6b1-1363-344c-33a5-7a8025ea516a.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="5d9dcd52-c266-4fba-bb7e-7dafd13e4219" Title="OutlookGridAlphabeticGroup Properties" Url="html/50aeb25f-381a-af84-ecd7-04c294cb0492.htm">
+      <HelpTOCNode Id="30a7da18-3e0d-46f0-a3a8-3f6c590b350e" Title="OutlookGridAlphabeticGroup Properties" Url="html/50aeb25f-381a-af84-ecd7-04c294cb0492.htm">
         <HelpTOCNode Title="Text Property " Url="html/a5ec0a2b-cb89-08c8-cb7b-aff1b7279560.htm" />
         <HelpTOCNode Title="Value Property " Url="html/b105f32f-6d9d-590c-0a1d-f4700fdea789.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="3471087a-c95d-4b6d-b51d-11762c4f4244" Title="OutlookGridAlphabeticGroup Methods" Url="html/d1db5b79-5d88-bd0e-49b3-4abb487e7a46.htm">
+      <HelpTOCNode Id="65c087d0-74df-40d5-aac5-a5216c07e3a6" Title="OutlookGridAlphabeticGroup Methods" Url="html/d1db5b79-5d88-bd0e-49b3-4abb487e7a46.htm">
         <HelpTOCNode Title="Clone Method " Url="html/6f81b230-cce7-2cc7-b2cd-0ff03b143652.htm" />
         <HelpTOCNode Title="CompareTo Method " Url="html/746aaf76-5cb2-e5b8-1e70-016a5cb42e4c.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="OutlookGridAlphabeticGroup Fields" Url="html/14b2548c-9de1-0747-ef7d-753f6e37b5b1.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="2a819d3b-2221-406f-a7b5-2e38ba2ea8ba" Title="OutlookGridColumn Class" Url="html/8ab2549a-0659-f46d-263d-d8cfc42e3078.htm">
-      <HelpTOCNode Id="47eb2d56-a0a2-4eb5-9de9-77a897d9bfa4" Title="OutlookGridColumn Constructor " Url="html/e20a7202-58f8-4a6d-1e27-b4c48c393a9a.htm">
+    <HelpTOCNode Id="291a4b75-2d2b-4fc6-a28d-c699a12ff45b" Title="OutlookGridColumn Class" Url="html/8ab2549a-0659-f46d-263d-d8cfc42e3078.htm">
+      <HelpTOCNode Id="2fad963a-cba0-4e04-adaf-4d5992f4728b" Title="OutlookGridColumn Constructor " Url="html/e20a7202-58f8-4a6d-1e27-b4c48c393a9a.htm">
         <HelpTOCNode Title="OutlookGridColumn Constructor (DataGridViewColumn, IOutlookGridGroup, SortOrder, Int32, Int32)" Url="html/a96ab8b1-0cd2-3dcb-52d2-230db42cd7df.htm" />
         <HelpTOCNode Title="OutlookGridColumn Constructor (String, DataGridViewColumn, IOutlookGridGroup, SortOrder, Int32, Int32)" Url="html/9eb28c36-078f-b753-eba2-f981e67674b3.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="b5450270-a4ab-4f14-b6af-ad81aecd6de8" Title="OutlookGridColumn Properties" Url="html/51467cf7-dc49-23e5-cd6d-02e7841bb9b5.htm">
+      <HelpTOCNode Id="de72e780-bb07-4ab3-b932-3e4b5ae8d425" Title="OutlookGridColumn Properties" Url="html/51467cf7-dc49-23e5-cd6d-02e7841bb9b5.htm">
         <HelpTOCNode Title="DataGridViewColumn Property " Url="html/4cb3fc38-34f4-b289-14eb-e0c6c24e01cd.htm" />
         <HelpTOCNode Title="GroupIndex Property " Url="html/c3bf4e5d-fcdc-c0a4-d88c-3f312f47c1fd.htm" />
         <HelpTOCNode Title="GroupingType Property " Url="html/56ef3689-d86e-159a-c773-1defb7ec6419.htm" />
@@ -333,22 +333,22 @@
         <HelpTOCNode Title="SortDirection Property " Url="html/9f5d394c-b5c4-f226-09eb-95530892829c.htm" />
         <HelpTOCNode Title="SortIndex Property " Url="html/84ba7cde-cacd-26f5-a697-ccdbdb2a0ad9.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="3e0e2bfb-b016-4619-a473-7cba06783334" Title="OutlookGridColumn Methods" Url="html/0de72c85-b481-077a-36ce-2e5d75f1418f.htm">
-        <HelpTOCNode Id="4f111870-4592-431d-b05b-30d108a4ced7" Title="Equals Method " Url="html/bb0e33b3-6d2c-cdbb-1ec7-3d110614da9e.htm">
+      <HelpTOCNode Id="7cca2ace-330d-4003-b76d-17c6c1912489" Title="OutlookGridColumn Methods" Url="html/0de72c85-b481-077a-36ce-2e5d75f1418f.htm">
+        <HelpTOCNode Id="67713111-1471-4639-ab64-c77320c3fb10" Title="Equals Method " Url="html/bb0e33b3-6d2c-cdbb-1ec7-3d110614da9e.htm">
           <HelpTOCNode Title="Equals Method (OutlookGridColumn)" Url="html/7aba65f2-fc68-389a-a6de-4cf2856f58e2.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="c001c807-d065-478e-af45-cae6a33865fc" Title="OutlookGridColumnCollection Class" Url="html/5b86e031-5b63-28ca-2a1a-79e88d3c957e.htm">
+    <HelpTOCNode Id="cce221e7-b7ee-4cca-8b1e-eb9580841486" Title="OutlookGridColumnCollection Class" Url="html/5b86e031-5b63-28ca-2a1a-79e88d3c957e.htm">
       <HelpTOCNode Title="OutlookGridColumnCollection Constructor " Url="html/327d0137-6cc5-19ca-7e9a-2d0f34e0787b.htm" />
-      <HelpTOCNode Id="f6dd248d-05d6-44ad-88ae-d5a52b4e8be0" Title="OutlookGridColumnCollection Properties" Url="html/5e26902e-0d25-f8d7-1cb7-5351b1952188.htm">
-        <HelpTOCNode Id="827d5c55-5631-40e2-9263-e55167a44f1e" Title="Item Property " Url="html/efeae7fc-9e18-8242-c0df-ba3eff21833e.htm">
+      <HelpTOCNode Id="d730d51e-d710-4302-a244-82715ef60f91" Title="OutlookGridColumnCollection Properties" Url="html/5e26902e-0d25-f8d7-1cb7-5351b1952188.htm">
+        <HelpTOCNode Id="c3e30989-0e37-4b95-9fa0-90f5f13c1ab2" Title="Item Property " Url="html/efeae7fc-9e18-8242-c0df-ba3eff21833e.htm">
           <HelpTOCNode Title="Item Property (String)" Url="html/07a705f6-a99a-84c7-1f22-5eae60d723b1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="MaxGroupIndex Property " Url="html/4c5c64a9-3d20-3598-7637-ab1143cc71f0.htm" />
         <HelpTOCNode Title="MaxSortIndex Property " Url="html/5fa09e01-1ea0-f852-aa37-f45c0968ee61.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="eebb0e33-8daa-4311-a06a-a76d1a38fa30" Title="OutlookGridColumnCollection Methods" Url="html/13e1f51d-bfb8-1c54-bbb2-a0ed9f601937.htm">
+      <HelpTOCNode Id="3c0b18a9-cb27-4586-bf3f-5e89c8a4d570" Title="OutlookGridColumnCollection Methods" Url="html/13e1f51d-bfb8-1c54-bbb2-a0ed9f601937.htm">
         <HelpTOCNode Title="Add Method " Url="html/0ea46552-cf6e-a658-99ba-f8e21f01dea9.htm" />
         <HelpTOCNode Title="CountGrouped Method " Url="html/da2d5c7b-49cd-6e2a-7bea-7344c4b92936.htm" />
         <HelpTOCNode Title="DebugOutput Method " Url="html/cb8630e1-1bce-7f47-bd81-47985325f89f.htm" />
@@ -359,36 +359,36 @@
         <HelpTOCNode Title="GetIndexAndSortSortedOnlyColumns Method " Url="html/3ade8dec-4164-ba6f-601f-2b351292b4f1.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b4a57b02-601e-4ce4-b4f4-b5312128b754" Title="OutlookGridColumnEventArgs Class" Url="html/deca7b48-0a7a-7eab-2631-acb960d46f91.htm">
+    <HelpTOCNode Id="e7942e7b-e0c4-4690-8d18-61333ce8af49" Title="OutlookGridColumnEventArgs Class" Url="html/deca7b48-0a7a-7eab-2631-acb960d46f91.htm">
       <HelpTOCNode Title="OutlookGridColumnEventArgs Constructor " Url="html/8ef5eca8-e881-2e85-fcb1-3bb3b284201a.htm" />
-      <HelpTOCNode Id="a6cf0023-4282-402f-bb88-1d8e6ec105d8" Title="OutlookGridColumnEventArgs Properties" Url="html/7f1d2b8b-1aa7-8448-8561-fb7d416f5f03.htm">
+      <HelpTOCNode Id="58ebce40-cf34-40d6-b987-6d1d24636225" Title="OutlookGridColumnEventArgs Properties" Url="html/7f1d2b8b-1aa7-8448-8561-fb7d416f5f03.htm">
         <HelpTOCNode Title="Column Property " Url="html/111f1fc1-3a14-92be-80a1-e0cb74f5a837.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="OutlookGridColumnEventArgs Methods" Url="html/ce9b570f-47c3-db0f-cea0-0f1e642db744.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="4d8774a6-a794-49ca-97b3-606959e595ed" Title="OutlookGridDateTimeGroup Class" Url="html/cdee55af-c44b-f130-abdc-191b816cdbec.htm">
-      <HelpTOCNode Id="9e3a1ba3-348e-41cb-9cd5-6dd69960a9df" Title="OutlookGridDateTimeGroup Constructor " Url="html/82b3f3fa-461b-20ed-324b-9be394281b44.htm">
+    <HelpTOCNode Id="92519367-a476-4200-bd81-ede7a59e213e" Title="OutlookGridDateTimeGroup Class" Url="html/cdee55af-c44b-f130-abdc-191b816cdbec.htm">
+      <HelpTOCNode Id="29175a8d-cd5f-48ad-9a63-78a999451b52" Title="OutlookGridDateTimeGroup Constructor " Url="html/82b3f3fa-461b-20ed-324b-9be394281b44.htm">
         <HelpTOCNode Title="OutlookGridDateTimeGroup Constructor " Url="html/4d38a1fe-1f65-1e6b-1de8-3fe79954f1ee.htm" />
         <HelpTOCNode Title="OutlookGridDateTimeGroup Constructor (IOutlookGridGroup)" Url="html/5bf2f125-a3a2-5622-ff49-ade850b8a25c.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="60a012ca-93c7-4761-8f59-3ebe10f491e7" Title="OutlookGridDateTimeGroup Properties" Url="html/11ab6e74-af12-294a-77a4-4af1d2ba9cb0.htm">
+      <HelpTOCNode Id="ad655ce8-a1a7-4aaa-be79-a926acf8eff9" Title="OutlookGridDateTimeGroup Properties" Url="html/11ab6e74-af12-294a-77a4-4af1d2ba9cb0.htm">
         <HelpTOCNode Title="Interval Property " Url="html/c3d9df39-ecff-f1c2-5678-ed682313c6b4.htm" />
         <HelpTOCNode Title="Text Property " Url="html/ac1d6cbe-40f7-87a7-9b30-d60b9b6adc78.htm" />
         <HelpTOCNode Title="Value Property " Url="html/9387f3e5-4fff-0cc6-a1de-e581f6a5ab01.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="faebc1d7-9677-45bf-98c8-90e94c4c347f" Title="OutlookGridDateTimeGroup Methods" Url="html/90f02845-1ac7-2f9a-1ab5-5a801420b027.htm">
+      <HelpTOCNode Id="75c8c924-568c-43d3-9fed-2c305be12697" Title="OutlookGridDateTimeGroup Methods" Url="html/90f02845-1ac7-2f9a-1ab5-5a801420b027.htm">
         <HelpTOCNode Title="Clone Method " Url="html/e93832fc-7402-6a5a-824b-2e8a188a5f31.htm" />
         <HelpTOCNode Title="CompareTo Method " Url="html/7329ff23-0fe4-db48-cc08-cc2a1c247f3c.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="OutlookGridDateTimeGroup Fields" Url="html/ba0f31ed-533a-4472-fb7b-bac15e904c59.htm" />
     </HelpTOCNode>
     <HelpTOCNode Title="OutlookGridDateTimeGroup.DateInterval Enumeration" Url="html/363bd1d0-19f7-e037-5fb0-fc5f65453d32.htm" />
-    <HelpTOCNode Id="f32ebe1a-2365-4cbb-9386-4925632d3dc8" Title="OutlookGridDefaultGroup Class" Url="html/2d0bd8ee-180b-5d6e-38c2-6230962cee7f.htm">
-      <HelpTOCNode Id="4cbd45fc-8633-48d7-a8b1-2a68bc9eb7fa" Title="OutlookGridDefaultGroup Constructor " Url="html/292a60eb-2d30-e6bb-c140-464068ceb190.htm">
+    <HelpTOCNode Id="d74b453b-0cfc-42e2-a0e1-3df1ab5cfc2d" Title="OutlookGridDefaultGroup Class" Url="html/2d0bd8ee-180b-5d6e-38c2-6230962cee7f.htm">
+      <HelpTOCNode Id="9db5f7b4-b4b7-4ce1-bfcd-b3321aa949a1" Title="OutlookGridDefaultGroup Constructor " Url="html/292a60eb-2d30-e6bb-c140-464068ceb190.htm">
         <HelpTOCNode Title="OutlookGridDefaultGroup Constructor " Url="html/850461d9-22cb-b3a0-9578-348b42fcc898.htm" />
         <HelpTOCNode Title="OutlookGridDefaultGroup Constructor (IOutlookGridGroup)" Url="html/43848572-badf-2e2e-1bc6-309bf9eaebdb.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="bf346d08-0a08-48d0-bf89-c60c18ab48d8" Title="OutlookGridDefaultGroup Properties" Url="html/182361f5-76ad-f422-b195-28e22b4db6b2.htm">
+      <HelpTOCNode Id="4d8f840f-0c05-4276-ac61-60e86094baf6" Title="OutlookGridDefaultGroup Properties" Url="html/182361f5-76ad-f422-b195-28e22b4db6b2.htm">
         <HelpTOCNode Title="AllowHiddenWhenGrouped Property " Url="html/4fb7f780-12be-c73d-ec28-026061eed9fe.htm" />
         <HelpTOCNode Title="Children Property " Url="html/2cdf746b-3ed0-8c3c-4345-f127098ae8f7.htm" />
         <HelpTOCNode Title="Collapsed Property " Url="html/84f99240-0688-d57d-0051-d3d645c772c9.htm" />
@@ -407,11 +407,11 @@
         <HelpTOCNode Title="Value Property " Url="html/cbc722c4-a649-6f49-b849-68a889cab988.htm" />
         <HelpTOCNode Title="XXXItemsText Property " Url="html/20eb8826-3fff-c618-f26d-c65e559a9b77.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="ed1a2dc8-31b9-406c-987f-0e14efbf4370" Title="OutlookGridDefaultGroup Methods" Url="html/650d264f-4e65-6e96-2870-6638cab240b3.htm">
+      <HelpTOCNode Id="5532c18e-ca64-4217-a3bd-9d9d35616e3c" Title="OutlookGridDefaultGroup Methods" Url="html/650d264f-4e65-6e96-2870-6638cab240b3.htm">
         <HelpTOCNode Title="Clone Method " Url="html/3f987b33-0052-bb3e-9f3b-3decf1ca6330.htm" />
         <HelpTOCNode Title="CompareTo Method " Url="html/4b654492-22fa-f2c2-4052-0619c24d87e5.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="ced3a2f9-4f85-41ef-bd9e-2f6ed0ff0e5f" Title="OutlookGridDefaultGroup Fields" Url="html/8bac74ff-84b5-131a-25b7-15fe8b11098b.htm">
+      <HelpTOCNode Id="0d9c1da7-298f-4188-ad39-f93a92f578b2" Title="OutlookGridDefaultGroup Fields" Url="html/8bac74ff-84b5-131a-25b7-15fe8b11098b.htm">
         <HelpTOCNode Title="allowHiddenWhenGrouped Field" Url="html/fe1c51d0-fdc9-c122-cb32-5e6189fdd561.htm" />
         <HelpTOCNode Title="children Field" Url="html/ffd37617-b2b4-23fd-4006-b5a3959cfee8.htm" />
         <HelpTOCNode Title="collapsed Field" Url="html/2c0d8bac-6715-4550-30fa-57c812b45f03.htm" />
@@ -430,9 +430,9 @@
         <HelpTOCNode Title="xXXItemsText Field" Url="html/f4bed190-c5bf-9e8c-a298-4211abbfc8ab.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="fc977268-6588-4b76-8948-9c823685b15f" Title="OutlookGridGroupBoxColumn Class" Url="html/0f06970c-8c25-b316-370f-7124a52a6b92.htm">
+    <HelpTOCNode Id="9443cf6b-999b-468e-892e-7508e88eb82d" Title="OutlookGridGroupBoxColumn Class" Url="html/0f06970c-8c25-b316-370f-7124a52a6b92.htm">
       <HelpTOCNode Title="OutlookGridGroupBoxColumn Constructor " Url="html/4876e015-db92-3504-38a1-50f24ae8fcea.htm" />
-      <HelpTOCNode Id="ee270bcc-f9a8-4e87-86aa-d54522171b21" Title="OutlookGridGroupBoxColumn Properties" Url="html/37750f32-530c-f4b9-6d52-6420256a5017.htm">
+      <HelpTOCNode Id="b3157111-bf61-4534-ae68-c971e27a948f" Title="OutlookGridGroupBoxColumn Properties" Url="html/37750f32-530c-f4b9-6d52-6420256a5017.htm">
         <HelpTOCNode Title="ColumnName Property " Url="html/45141c33-6f54-bad4-b12d-29c45a75cfd9.htm" />
         <HelpTOCNode Title="GroupingType Property " Url="html/9d969883-9b50-8d54-5791-dfa2bf3ebf1e.htm" />
         <HelpTOCNode Title="GroupInterval Property " Url="html/489246eb-d56a-19bd-8f14-387e8c76c320.htm" />
@@ -444,43 +444,43 @@
         <HelpTOCNode Title="SortDirection Property " Url="html/277860a6-308e-6024-3c4f-e01bc393827f.htm" />
         <HelpTOCNode Title="Text Property " Url="html/9ecde8a9-4191-b654-5a4f-19264fc7f930.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9c3e7ca4-0583-409c-a377-1fa4c8fb53a7" Title="OutlookGridGroupBoxColumn Methods" Url="html/843654f3-95f2-0cbf-5ca2-0235200af121.htm">
-        <HelpTOCNode Id="ebd94d7f-8a86-430f-8e1b-397e643f26bd" Title="Equals Method " Url="html/61e1fc80-b613-c0ea-a0e9-b295adebe3e5.htm">
+      <HelpTOCNode Id="2791e670-02a7-4160-8326-c4288f5d202e" Title="OutlookGridGroupBoxColumn Methods" Url="html/843654f3-95f2-0cbf-5ca2-0235200af121.htm">
+        <HelpTOCNode Id="97d134cf-7592-48c4-8c17-1013a0c00ac7" Title="Equals Method " Url="html/61e1fc80-b613-c0ea-a0e9-b295adebe3e5.htm">
           <HelpTOCNode Title="Equals Method (OutlookGridGroupBoxColumn)" Url="html/e8f5be69-863d-5286-a338-24b84204938c.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="6a1b7b9f-8472-416e-9443-c523c880c614" Title="OutlookGridGroupCollection Class" Url="html/4a6fc383-e87f-77bc-cd61-c84f4e9a4e7d.htm">
-      <HelpTOCNode Id="fbbfdcdd-0cc5-49f1-81e5-01084e377bea" Title="OutlookGridGroupCollection Constructor " Url="html/ed57f56d-3683-0668-d943-3203b2c6c3b6.htm">
+    <HelpTOCNode Id="debd8fb5-ada1-46ab-8264-7e8819debfca" Title="OutlookGridGroupCollection Class" Url="html/4a6fc383-e87f-77bc-cd61-c84f4e9a4e7d.htm">
+      <HelpTOCNode Id="4d8a940a-9edc-48c2-b9d7-7d1506f858eb" Title="OutlookGridGroupCollection Constructor " Url="html/ed57f56d-3683-0668-d943-3203b2c6c3b6.htm">
         <HelpTOCNode Title="OutlookGridGroupCollection Constructor " Url="html/12d7a10c-6417-87f1-914b-ec4741fcc232.htm" />
         <HelpTOCNode Title="OutlookGridGroupCollection Constructor (IOutlookGridGroup)" Url="html/b2b59416-4e2a-6453-50e3-b3c21834f521.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="be84fe46-b3d4-4a34-be34-67f855cabef9" Title="OutlookGridGroupCollection Properties" Url="html/b8e01001-bd70-ec15-265d-0a675d1ff9c9.htm">
+      <HelpTOCNode Id="a0358aa1-9149-4829-9c34-6f97c3f65a0c" Title="OutlookGridGroupCollection Properties" Url="html/b8e01001-bd70-ec15-265d-0a675d1ff9c9.htm">
         <HelpTOCNode Title="Count Property " Url="html/7d91e9e9-e503-508a-6d28-23ba148a0455.htm" />
         <HelpTOCNode Title="Item Property " Url="html/db65b674-8c67-516b-1492-1c1ca75e8bec.htm" />
         <HelpTOCNode Title="List Property " Url="html/6aff9711-43a8-0268-50d8-5acdaba0462a.htm" />
         <HelpTOCNode Title="ParentGroup Property " Url="html/fba6eb08-9ca9-2671-e7c7-faffecfb3c12.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="e9787a0c-2703-4c5c-bc09-7b7af06beb72" Title="OutlookGridGroupCollection Methods" Url="html/765e2ab4-618c-f534-d993-61af4074668d.htm">
+      <HelpTOCNode Id="3eb328fe-9940-49fd-a817-a6c79324792b" Title="OutlookGridGroupCollection Methods" Url="html/765e2ab4-618c-f534-d993-61af4074668d.htm">
         <HelpTOCNode Title="Add Method " Url="html/8561848c-53f5-1ad3-5b07-ac8967328eae.htm" />
         <HelpTOCNode Title="FindGroup Method " Url="html/a01edab6-ae82-3082-b63e-2ab169ad98aa.htm" />
         <HelpTOCNode Title="Sort Method " Url="html/a085e210-7971-3176-c7a5-b89166379783.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="6611ef6a-72b5-42da-948f-1d791aa32294" Title="OutlookGridGroupImageEventArgs Class" Url="html/bb941174-4ab7-85b6-2ef6-9d1b04cd792d.htm">
+    <HelpTOCNode Id="dd7591aa-42cd-4f92-997f-6500f772dcdc" Title="OutlookGridGroupImageEventArgs Class" Url="html/bb941174-4ab7-85b6-2ef6-9d1b04cd792d.htm">
       <HelpTOCNode Title="OutlookGridGroupImageEventArgs Constructor " Url="html/d5df0ea0-ee4e-b6bb-dbf1-aa8b4457f738.htm" />
-      <HelpTOCNode Id="4a5f73d9-3ef5-4d9e-bd64-1db6d8f7e75b" Title="OutlookGridGroupImageEventArgs Properties" Url="html/533f2a3e-bff6-0db7-867a-094ffb1cb21b.htm">
+      <HelpTOCNode Id="9f954892-bba2-4060-b81e-41bc9d276a73" Title="OutlookGridGroupImageEventArgs Properties" Url="html/533f2a3e-bff6-0db7-867a-094ffb1cb21b.htm">
         <HelpTOCNode Title="Row Property " Url="html/c3d25636-2d09-fb54-be38-a48b22cb6d67.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="OutlookGridGroupImageEventArgs Methods" Url="html/133c90e2-7125-0d3d-be93-917735b3edb7.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="56e2c327-a19d-473f-90f2-1797822c2168" Title="OutlookGridRow Class" Url="html/f236d12f-39fd-f22c-9945-8648e1539a78.htm">
-      <HelpTOCNode Id="57cbfbd3-4804-4c9f-a4b2-a8d9d9552cab" Title="OutlookGridRow Constructor " Url="html/e7a32b60-53a2-5837-cfb3-1c473a67b1f1.htm">
+    <HelpTOCNode Id="7f5ad479-c8c4-4ec4-93f4-b065a317d86c" Title="OutlookGridRow Class" Url="html/f236d12f-39fd-f22c-9945-8648e1539a78.htm">
+      <HelpTOCNode Id="f33d2610-d75b-4724-9797-aaf92cc5bc63" Title="OutlookGridRow Constructor " Url="html/e7a32b60-53a2-5837-cfb3-1c473a67b1f1.htm">
         <HelpTOCNode Title="OutlookGridRow Constructor " Url="html/dd6c4d11-4682-8282-9f92-7f3a3763cb57.htm" />
         <HelpTOCNode Title="OutlookGridRow Constructor (IOutlookGridGroup)" Url="html/6fae8e77-c8ab-c882-98f9-bb844b7ebf62.htm" />
         <HelpTOCNode Title="OutlookGridRow Constructor (IOutlookGridGroup, Boolean)" Url="html/5f16e931-e7aa-5902-f9fe-92724581f4c0.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="41a4877a-a303-483d-ba62-5035633d62db" Title="OutlookGridRow Properties" Url="html/b7c0932b-2b0c-2cab-5d60-4d701fc5819d.htm">
+      <HelpTOCNode Id="48ea6d6c-422a-4bee-84c9-c57f32740beb" Title="OutlookGridRow Properties" Url="html/b7c0932b-2b0c-2cab-5d60-4d701fc5819d.htm">
         <HelpTOCNode Title="Collapsed Property " Url="html/42d3ac76-39ea-4b5d-3549-0b14a6b71101.htm" />
         <HelpTOCNode Title="Group Property " Url="html/a7e40afe-ea79-03f1-a99e-7f161ef25cc1.htm" />
         <HelpTOCNode Title="HasChildren Property " Url="html/ee0c0897-3cd0-fd67-5bcc-3e2f6dc2bf72.htm" />
@@ -492,7 +492,7 @@
         <HelpTOCNode Title="Nodes Property " Url="html/8642ec17-af36-2ef9-5901-d7d69452c82c.htm" />
         <HelpTOCNode Title="ParentNode Property " Url="html/f21830aa-30f3-602c-cb66-9fab7df57bec.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="90417a4a-fbc3-4fe8-9bd7-a9eb1d6db7e7" Title="OutlookGridRow Methods" Url="html/1a547d39-9e99-1003-6b54-471244d8cd75.htm">
+      <HelpTOCNode Id="55b4c163-b888-486c-9e31-8feba9860be9" Title="OutlookGridRow Methods" Url="html/1a547d39-9e99-1003-6b54-471244d8cd75.htm">
         <HelpTOCNode Title="Collapse Method " Url="html/ba09ea0f-fde7-b61a-928e-7b1253f6d822.htm" />
         <HelpTOCNode Title="CollapseGroup Method " Url="html/24ba8f2d-a9d4-7cf8-8a9c-c01c35c40278.htm" />
         <HelpTOCNode Title="Expand Method " Url="html/d7f1a353-f71e-bc7e-295d-e776df3da8eb.htm" />
@@ -505,36 +505,36 @@
         <HelpTOCNode Title="ToString Method " Url="html/6f2c28ff-f725-3a14-76cf-0e2aaf73df2a.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="ee1cc291-1e19-498e-928a-4eb2960503ed" Title="OutlookGridRowNodeCancelEventBase Class" Url="html/feedbf57-065c-d40c-c609-a8d302efd954.htm">
+    <HelpTOCNode Id="639a9aaf-555e-4f71-880a-1b96f0224789" Title="OutlookGridRowNodeCancelEventBase Class" Url="html/feedbf57-065c-d40c-c609-a8d302efd954.htm">
       <HelpTOCNode Title="OutlookGridRowNodeCancelEventBase Constructor " Url="html/ad5affbe-80a2-099e-d5d4-5b344f83b758.htm" />
-      <HelpTOCNode Id="874dceb7-d92e-4ea9-bbcb-574791504edf" Title="OutlookGridRowNodeCancelEventBase Properties" Url="html/dc61757a-c76a-daa7-77aa-8fa05654dc98.htm">
+      <HelpTOCNode Id="47f8b79e-0a20-4c3a-a03b-21647f49ab75" Title="OutlookGridRowNodeCancelEventBase Properties" Url="html/dc61757a-c76a-daa7-77aa-8fa05654dc98.htm">
         <HelpTOCNode Title="Node Property " Url="html/8e48b82d-ab90-b46c-36a8-3f9680f24bbe.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="OutlookGridRowNodeCancelEventBase Methods" Url="html/7a04c416-5edf-7044-4cfe-7204269372f5.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="368feb6b-9fa9-40b0-8c45-ea3518d66599" Title="OutlookGridRowNodeCollection Class" Url="html/a6d205f3-f021-6eb7-1534-af1c6f5a7c26.htm">
+    <HelpTOCNode Id="070c0c0a-7118-49c0-91fb-a0d32114ddde" Title="OutlookGridRowNodeCollection Class" Url="html/a6d205f3-f021-6eb7-1534-af1c6f5a7c26.htm">
       <HelpTOCNode Title="OutlookGridRowNodeCollection Constructor " Url="html/fa462f65-e590-0911-03e8-f166fe0f36ef.htm" />
-      <HelpTOCNode Id="00c00523-cc9f-471f-b2b4-d600d3e38cb7" Title="OutlookGridRowNodeCollection Properties" Url="html/74dc3afc-6db3-04a1-482f-8a08fdef58b0.htm">
+      <HelpTOCNode Id="e3e1a9ba-c329-4dde-9624-25f694995726" Title="OutlookGridRowNodeCollection Properties" Url="html/74dc3afc-6db3-04a1-482f-8a08fdef58b0.htm">
         <HelpTOCNode Title="Count Property " Url="html/200b1bc7-2019-54df-0d06-1f0b11e25938.htm" />
         <HelpTOCNode Title="Item Property " Url="html/891bea61-19cd-af20-f034-6b54db196f25.htm" />
         <HelpTOCNode Title="Nodes Property " Url="html/34aee00d-8da5-f2c3-d3b2-b498031f2735.htm" />
         <HelpTOCNode Title="ParentNode Property " Url="html/c444954e-ce85-2e4e-7572-d8f1220bf32f.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9a51751c-d93a-41e8-b738-af23977a1e64" Title="OutlookGridRowNodeCollection Methods" Url="html/1ba42d06-1183-fac5-47ff-02ccafa21d1c.htm">
+      <HelpTOCNode Id="0342abfd-9766-46ef-a7f8-93aff29f39bf" Title="OutlookGridRowNodeCollection Methods" Url="html/1ba42d06-1183-fac5-47ff-02ccafa21d1c.htm">
         <HelpTOCNode Title="Add Method " Url="html/9a8cfeb3-dc12-a288-1659-fba01910cb26.htm" />
         <HelpTOCNode Title="IndexOf Method " Url="html/ca13059e-5ad6-b77d-3164-a7930d9c893b.htm" />
         <HelpTOCNode Title="Sort Method " Url="html/5a6203ee-7465-6af6-9a66-bc82a9a13c57.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0aadeeec-d364-4ad9-8765-7a491b6f75e6" Title="OutlookGridRowNodeEventBase Class" Url="html/d0afa36d-59dc-6235-0c20-48f9f8813fa1.htm">
+    <HelpTOCNode Id="1ae783d0-9467-400d-8101-eb59a02f2879" Title="OutlookGridRowNodeEventBase Class" Url="html/d0afa36d-59dc-6235-0c20-48f9f8813fa1.htm">
       <HelpTOCNode Title="OutlookGridRowNodeEventBase Constructor " Url="html/ec3d46be-daa5-8cba-42c7-c3636d425edd.htm" />
-      <HelpTOCNode Id="c13c0554-7acc-4779-8b64-3ef7616a4967" Title="OutlookGridRowNodeEventBase Properties" Url="html/74c83f8c-a89b-90da-5674-98269ba62ce3.htm">
+      <HelpTOCNode Id="d0d8448a-6d5e-4c87-bf7c-0758f9a3d204" Title="OutlookGridRowNodeEventBase Properties" Url="html/74c83f8c-a89b-90da-5674-98269ba62ce3.htm">
         <HelpTOCNode Title="Node Property " Url="html/8780f8e5-9397-98d8-9dcc-88e57d382e0a.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="OutlookGridRowNodeEventBase Methods" Url="html/3162d9b3-b400-7330-df55-918fb1b7604d.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="a84d0666-7fa0-46bd-93ac-cc383f4dedac" Title="StaticValues Class" Url="html/a43edae3-8077-3692-0609-d71e50889432.htm">
-      <HelpTOCNode Id="71895a14-7e52-42e0-be40-f990211d41e8" Title="StaticValues Fields" Url="html/e926e9dc-20a5-4b56-911f-af16fe10d313.htm">
+    <HelpTOCNode Id="2b38ac96-f210-4caa-92b2-833fdb3fd6d9" Title="StaticValues Class" Url="html/a43edae3-8077-3692-0609-d71e50889432.htm">
+      <HelpTOCNode Id="80e798a6-b1a7-4c47-aaaa-e7f6f6708bb7" Title="StaticValues Fields" Url="html/e926e9dc-20a5-4b56-911f-af16fe10d313.htm">
         <HelpTOCNode Title="_2013GroupRowHeight Field" Url="html/6421449d-e35e-4888-2eb1-8c43cbd4416a.htm" />
         <HelpTOCNode Title="_2013OffsetHeight Field" Url="html/1d2d513e-71fd-4ea2-dcf7-68d46ca89cbf.htm" />
         <HelpTOCNode Title="_defaultGroupRowHeight Field" Url="html/88695553-41f5-d341-6d65-e168cab63cf8.htm" />
@@ -545,18 +545,18 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="d3cee42e-6439-4e33-8492-5765feddadad" Title="KryptonOutlookGrid.Controls" Url="html/0043cba7-5ae5-2e8c-fef8-82f559af1a4b.htm">
-    <HelpTOCNode Id="3a6726f6-3942-43c4-abac-5290f2e4a93b" Title="KryptonOutlookGridGroupBox Class" Url="html/65b27e57-ea55-273d-5a2e-816c43facc9e.htm">
+  <HelpTOCNode Id="c88e79d1-00ef-486a-bf8c-b42865fb2003" Title="KryptonOutlookGrid.Controls" Url="html/0043cba7-5ae5-2e8c-fef8-82f559af1a4b.htm">
+    <HelpTOCNode Id="65820000-024a-4ca7-a68a-5d630a66f967" Title="KryptonOutlookGridGroupBox Class" Url="html/65b27e57-ea55-273d-5a2e-816c43facc9e.htm">
       <HelpTOCNode Title="KryptonOutlookGridGroupBox Constructor " Url="html/f6a5e655-64e6-4083-eb70-a2d43b25d33f.htm" />
-      <HelpTOCNode Id="e88e281b-8138-48ca-94e4-1da03cd9a1d6" Title="KryptonOutlookGridGroupBox Properties" Url="html/0a41ee18-4e7a-9ff3-c250-55b389789f3e.htm">
+      <HelpTOCNode Id="5de6ef48-cb03-409c-889f-235e68308086" Title="KryptonOutlookGridGroupBox Properties" Url="html/0a41ee18-4e7a-9ff3-c250-55b389789f3e.htm">
         <HelpTOCNode Title="Border Property " Url="html/c342fd64-0b68-c580-208b-9c9693fa05ac.htm" />
         <HelpTOCNode Title="DragColumnToGroupText Property " Url="html/d4620f23-2233-e128-5a30-63c8fddfba95.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="f4c18f44-d3a0-4852-afec-8f246c368ef2" Title="KryptonOutlookGridGroupBox Methods" Url="html/e15de41e-059e-2f79-24fe-251a3bd29d40.htm">
-        <HelpTOCNode Id="a7db04f4-0e77-4458-ab21-2788272ccc13" Title="Contains Method " Url="html/b6e6621b-fb9e-bc85-d68e-95c738634b31.htm">
+      <HelpTOCNode Id="9d3b3e8e-a89c-4cfb-a1cd-61e19cf2c5cb" Title="KryptonOutlookGridGroupBox Methods" Url="html/e15de41e-059e-2f79-24fe-251a3bd29d40.htm">
+        <HelpTOCNode Id="7b33b857-bac5-48d1-918d-7a6d967afae1" Title="Contains Method " Url="html/b6e6621b-fb9e-bc85-d68e-95c738634b31.htm">
           <HelpTOCNode Title="Contains Method (String)" Url="html/56142188-caeb-0036-ef02-d7863cdaea21.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="24edb0b8-3fee-44af-8453-f3e10ff640b3" Title="Dispose Method " Url="html/fea0adac-1da3-a4cb-afbf-544e39aa826e.htm">
+        <HelpTOCNode Id="a7f7adb5-423c-424b-a5eb-75ef9f0cad02" Title="Dispose Method " Url="html/fea0adac-1da3-a4cb-afbf-544e39aa826e.htm">
           <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/012089de-54c6-1918-bd61-bf89772bf827.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="OnClearGrouping Method " Url="html/e8db63c0-fe15-514e-e199-625f8c84ab4c.htm" />
@@ -575,7 +575,7 @@
         <HelpTOCNode Title="OnPaint Method " Url="html/c45caf96-75a7-f72a-6cf1-a1460db2b854.htm" />
         <HelpTOCNode Title="UpdateGroupingColumns Method " Url="html/52705934-2d3d-9c9b-c247-e7f5215980cb.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="8e062113-2b3e-410e-b66b-a847f30e78ce" Title="KryptonOutlookGridGroupBox Events" Url="html/5609c74f-aee9-1c4e-a7e0-3a43cd499921.htm">
+      <HelpTOCNode Id="ea293c21-0e38-4e97-a8db-2dd511564f61" Title="KryptonOutlookGridGroupBox Events" Url="html/5609c74f-aee9-1c4e-a7e0-3a43cd499921.htm">
         <HelpTOCNode Title="ClearGrouping Event" Url="html/e7aaa289-465e-646f-a980-428eaf1aa1c2.htm" />
         <HelpTOCNode Title="ColumnGroupAdded Event" Url="html/37e80d30-e7ec-fb2c-3ce7-ae291a2d803b.htm" />
         <HelpTOCNode Title="ColumnGroupOrderChanged Event" Url="html/50af0a19-2cbc-0aea-391a-e36475d0c781.htm" />
@@ -590,92 +590,92 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="1bcd7609-13ff-45fe-a00e-2084c72909fc" Title="KryptonOutlookGrid.CustomColumns" Url="html/ebc95ad3-dbe0-a8ac-a86d-4a3d4ce49583.htm">
-    <HelpTOCNode Id="872d5969-3afb-48c8-8b04-2936e5cf1fee" Title="FormattingCell Class" Url="html/1e1fdea2-21b0-1c9b-23e2-542b10040397.htm">
+  <HelpTOCNode Id="ab664f73-fffb-49dd-ab4f-1fd68fd84d32" Title="KryptonOutlookGrid.CustomColumns" Url="html/ebc95ad3-dbe0-a8ac-a86d-4a3d4ce49583.htm">
+    <HelpTOCNode Id="caacdcb5-7ec2-49a7-819b-b76d05e10f4b" Title="FormattingCell Class" Url="html/1e1fdea2-21b0-1c9b-23e2-542b10040397.htm">
       <HelpTOCNode Title="FormattingCell Constructor " Url="html/c121cee8-b8a7-3d95-82bc-0b9481ed5bef.htm" />
-      <HelpTOCNode Id="fe80bc8c-bef9-4469-8ea2-03d25ecb91e4" Title="FormattingCell Properties" Url="html/981e4263-4534-4b17-e73c-5e6b3c980bcf.htm">
+      <HelpTOCNode Id="0ab3f28c-dc42-4b59-9ff8-b3347dfc7480" Title="FormattingCell Properties" Url="html/981e4263-4534-4b17-e73c-5e6b3c980bcf.htm">
         <HelpTOCNode Title="FormatParams Property " Url="html/3ef9950a-fb09-0fad-a279-f6872b1cbf1b.htm" />
         <HelpTOCNode Title="FormatType Property " Url="html/d6622c0b-09b8-65ec-56ef-d21b15d82b55.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="0f3164de-d7e4-4f38-80a0-5e6d5cf2a110" Title="FormattingCell Methods" Url="html/e3b2b32b-fe44-bfbc-675a-7d3447f0d017.htm">
+      <HelpTOCNode Id="6dfaea0a-8e1b-45d4-9ce6-d2f91f94a6da" Title="FormattingCell Methods" Url="html/e3b2b32b-fe44-bfbc-675a-7d3447f0d017.htm">
         <HelpTOCNode Title="Paint Method " Url="html/73c203e7-4bbf-beae-7de5-bb86c36f22ff.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="8930a755-f659-4a65-950e-29b5c294a880" Title="KryptonDataGridViewFormattingColumn Class" Url="html/721e163a-b7d4-09fa-f26c-c0b9e8d5cd98.htm">
+    <HelpTOCNode Id="9132f47f-3e07-4ea2-9049-587f5400ca10" Title="KryptonDataGridViewFormattingColumn Class" Url="html/721e163a-b7d4-09fa-f26c-c0b9e8d5cd98.htm">
       <HelpTOCNode Title="KryptonDataGridViewFormattingColumn Constructor " Url="html/d8bbcbdf-b766-55d4-db7c-ffb7434a5ad2.htm" />
-      <HelpTOCNode Id="a40f1afd-15cb-4d37-aa37-5e249347d7bb" Title="KryptonDataGridViewFormattingColumn Properties" Url="html/91ab8fc3-0e52-2c1e-3aa6-f731ae9692dc.htm">
+      <HelpTOCNode Id="0246b46f-9cf9-4ade-b6d9-32523cb54d17" Title="KryptonDataGridViewFormattingColumn Properties" Url="html/91ab8fc3-0e52-2c1e-3aa6-f731ae9692dc.htm">
         <HelpTOCNode Title="ContrastTextColour Property " Url="html/63a620e9-c44c-846f-6f94-b5fbaeb63443.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="KryptonDataGridViewFormattingColumn Methods" Url="html/8cd919f3-91ac-1c69-5255-7214485293fe.htm" />
       <HelpTOCNode Title="KryptonDataGridViewFormattingColumn Events" Url="html/a4e5451f-6ef1-deca-d9d9-41616bc68485.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="302380c1-0e4a-487e-acd8-fa925bd4cba4" Title="KryptonDataGridViewPercentageColumn Class" Url="html/caa2d535-c0d3-fb17-213b-5ed29005fc2d.htm">
+    <HelpTOCNode Id="6a47d2fb-5a50-4790-9f9d-a2e9d690e11c" Title="KryptonDataGridViewPercentageColumn Class" Url="html/caa2d535-c0d3-fb17-213b-5ed29005fc2d.htm">
       <HelpTOCNode Title="KryptonDataGridViewPercentageColumn Constructor " Url="html/da041d6e-8c64-9fe7-018b-441b9ca1462a.htm" />
-      <HelpTOCNode Id="d459462d-e1a0-4585-9af3-aed070e0b9ed" Title="KryptonDataGridViewPercentageColumn Properties" Url="html/acad441b-2862-1024-75c8-0b7156d32a20.htm">
+      <HelpTOCNode Id="f0ae58fb-7070-4807-95c8-b8bf69c39ce2" Title="KryptonDataGridViewPercentageColumn Properties" Url="html/acad441b-2862-1024-75c8-0b7156d32a20.htm">
         <HelpTOCNode Title="CellTemplate Property " Url="html/f27bbb0e-e51f-990c-7c30-f4034139c43a.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="85c1706c-152c-4406-a03d-70c07a56d616" Title="KryptonDataGridViewPercentageColumn Methods" Url="html/9d6c9c34-62bb-68e9-c0d4-14e84d2acf1b.htm">
+      <HelpTOCNode Id="89eb4403-e98a-42f2-860f-784eb2b40d9a" Title="KryptonDataGridViewPercentageColumn Methods" Url="html/9d6c9c34-62bb-68e9-c0d4-14e84d2acf1b.htm">
         <HelpTOCNode Title="ToString Method " Url="html/4e853454-cfa3-7084-a55e-7fd3df273794.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="KryptonDataGridViewPercentageColumn Events" Url="html/5f49bf7b-08ca-c7e3-6244-9af772583b7e.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="ec2113d1-8a31-43c6-b645-09685f8a69e3" Title="KryptonDataGridViewRatingColumn Class" Url="html/05bce6cd-af6b-56db-a524-67820d8041c8.htm">
+    <HelpTOCNode Id="1382a288-eb08-452e-99f9-64fc1bc02aef" Title="KryptonDataGridViewRatingColumn Class" Url="html/05bce6cd-af6b-56db-a524-67820d8041c8.htm">
       <HelpTOCNode Title="KryptonDataGridViewRatingColumn Constructor " Url="html/ea66e037-7467-f2b5-0afb-9d60965a20b4.htm" />
       <HelpTOCNode Title="KryptonDataGridViewRatingColumn Properties" Url="html/c3cd2aa1-6223-ef36-53f1-76a5749ad0ea.htm" />
       <HelpTOCNode Title="KryptonDataGridViewRatingColumn Methods" Url="html/4f8341a0-0ed1-34b8-e761-6821775af39e.htm" />
       <HelpTOCNode Title="KryptonDataGridViewRatingColumn Events" Url="html/e9367046-508b-5f3c-f3d8-cd5b56a31ab8.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="2fe7b857-3a15-4b88-9564-71569376ecdd" Title="KryptonDataGridViewTextAndImageCell Class" Url="html/9639a43f-7d9b-95eb-f4d5-b3eb2e583fc3.htm">
+    <HelpTOCNode Id="e1d1aa18-ca54-4433-a7f6-ba5410d1179d" Title="KryptonDataGridViewTextAndImageCell Class" Url="html/9639a43f-7d9b-95eb-f4d5-b3eb2e583fc3.htm">
       <HelpTOCNode Title="KryptonDataGridViewTextAndImageCell Constructor " Url="html/1ed90274-4853-f889-bcb8-10abf63980bd.htm" />
-      <HelpTOCNode Id="fd5d5487-386a-40e2-bd7d-8d4471bdfc22" Title="KryptonDataGridViewTextAndImageCell Properties" Url="html/23c884f1-dd1c-3982-f230-17ad9b66aae7.htm">
+      <HelpTOCNode Id="e415458f-5721-450d-82ac-db9db1e44380" Title="KryptonDataGridViewTextAndImageCell Properties" Url="html/23c884f1-dd1c-3982-f230-17ad9b66aae7.htm">
         <HelpTOCNode Title="Image Property " Url="html/db33f64f-bae0-84e9-cad4-b415026b8661.htm" />
         <HelpTOCNode Title="ValueType Property " Url="html/69adec40-f884-6582-f7f7-34562c8ffd1d.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="d60a5bef-2d8f-47d4-b18a-bf47bc52cd19" Title="KryptonDataGridViewTextAndImageCell Methods" Url="html/52ba5b88-ab94-de8d-2a8d-d8473e461b3e.htm">
+      <HelpTOCNode Id="389c9228-a74c-4dec-85fc-d3687a1c8bed" Title="KryptonDataGridViewTextAndImageCell Methods" Url="html/52ba5b88-ab94-de8d-2a8d-d8473e461b3e.htm">
         <HelpTOCNode Title="Clone Method " Url="html/1c36fd27-0b6e-ba9b-f525-9b7ae67ec051.htm" />
         <HelpTOCNode Title="Paint Method " Url="html/2c991398-4faf-0523-4516-3689931c370c.htm" />
         <HelpTOCNode Title="SetValue Method " Url="html/96f18026-6fb9-c6bb-796b-f6225a9906d0.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="cb4c4152-b773-43d0-a1ae-f27c453751a0" Title="KryptonDataGridViewTextAndImageColumn Class" Url="html/0eab038a-83dc-c807-cf3c-912ba1da7075.htm">
+    <HelpTOCNode Id="600194a5-a191-48da-89bb-7b42d8d54e92" Title="KryptonDataGridViewTextAndImageColumn Class" Url="html/0eab038a-83dc-c807-cf3c-912ba1da7075.htm">
       <HelpTOCNode Title="KryptonDataGridViewTextAndImageColumn Constructor " Url="html/f1c466ca-5c66-4870-de67-4ff7348809e2.htm" />
-      <HelpTOCNode Id="11fc04f2-ca28-49d2-8e10-382d165b5c33" Title="KryptonDataGridViewTextAndImageColumn Properties" Url="html/8c5d2c7a-b6e0-1733-c52f-e706e146e0af.htm">
+      <HelpTOCNode Id="e8092cf3-33bb-4381-ba53-82d1fe8cbeb6" Title="KryptonDataGridViewTextAndImageColumn Properties" Url="html/8c5d2c7a-b6e0-1733-c52f-e706e146e0af.htm">
         <HelpTOCNode Title="ButtonSpecs Property " Url="html/a73c5eea-63bb-4247-9d5f-0ea3817c073a.htm" />
         <HelpTOCNode Title="CellTemplate Property " Url="html/9118c710-b250-62c5-0454-f1c9cdec86bc.htm" />
         <HelpTOCNode Title="MaxInputLength Property " Url="html/73cd4c82-fae1-f69b-7402-4c6b8bcccbbd.htm" />
         <HelpTOCNode Title="SortMode Property " Url="html/33688ce2-b983-ecd6-51b4-8846ee377661.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="bc952a80-3258-483c-8654-8839a54542f0" Title="KryptonDataGridViewTextAndImageColumn Methods" Url="html/f484f599-d371-3ef1-0ce6-3d069a82d4af.htm">
+      <HelpTOCNode Id="06dfd827-95eb-4086-9364-1946186827ea" Title="KryptonDataGridViewTextAndImageColumn Methods" Url="html/f484f599-d371-3ef1-0ce6-3d069a82d4af.htm">
         <HelpTOCNode Title="Clone Method " Url="html/d5c713c0-1e6d-93a3-7143-a3fc95344377.htm" />
-        <HelpTOCNode Id="097e142a-9df0-417e-93c2-c82bc004fdfa" Title="Dispose Method " Url="html/bfe6e878-51c5-7892-a1c6-8497e3be9137.htm">
+        <HelpTOCNode Id="b79d1305-47af-475e-85ca-249096503ca6" Title="Dispose Method " Url="html/bfe6e878-51c5-7892-a1c6-8497e3be9137.htm">
           <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/7273cf53-eb8a-baad-0c0d-5ea8e37b59dc.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="ToString Method " Url="html/51877b49-f81f-3e9f-1009-db6db7d5d450.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="98dca201-c035-4171-b640-c42011f1dc36" Title="KryptonDataGridViewTextAndImageColumn Events" Url="html/67689ec1-5980-77ae-a0fa-d813bd996f22.htm">
+      <HelpTOCNode Id="527bb877-f405-4bbb-a017-287e1c45c0c1" Title="KryptonDataGridViewTextAndImageColumn Events" Url="html/67689ec1-5980-77ae-a0fa-d813bd996f22.htm">
         <HelpTOCNode Title="ButtonSpecClick Event" Url="html/1230ca97-16c3-a6f6-df64-71254732ff8d.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="ba0511a6-689f-4d58-98a5-77d7a786bf04" Title="KryptonDataGridViewTokenColumn Class" Url="html/580820bd-d0d6-3c51-d85a-cae1e735f28a.htm">
+    <HelpTOCNode Id="632e2762-1205-44a5-9548-ad98a0373b9b" Title="KryptonDataGridViewTokenColumn Class" Url="html/580820bd-d0d6-3c51-d85a-cae1e735f28a.htm">
       <HelpTOCNode Title="KryptonDataGridViewTokenColumn Constructor " Url="html/23c09265-a7d6-c17a-b2cd-ebbcd92f0c5e.htm" />
       <HelpTOCNode Title="KryptonDataGridViewTokenColumn Properties" Url="html/9cc7972b-f669-160f-a192-2b5397aad36f.htm" />
       <HelpTOCNode Title="KryptonDataGridViewTokenColumn Methods" Url="html/ee9d3fde-0cf2-1554-2643-297614fe4a2b.htm" />
       <HelpTOCNode Title="KryptonDataGridViewTokenColumn Events" Url="html/0705d90e-e4ec-b7ce-cf0a-40f3284b73fa.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="c36082b2-5dbe-49a7-bac6-0e1c457c77e3" Title="KryptonDataGridViewTokenListColumn Class" Url="html/c2031b33-860a-c7ea-75ed-5493eaeb47e5.htm">
+    <HelpTOCNode Id="fc64e0cb-1122-4898-ba02-31fa5b60b0e2" Title="KryptonDataGridViewTokenListColumn Class" Url="html/c2031b33-860a-c7ea-75ed-5493eaeb47e5.htm">
       <HelpTOCNode Title="KryptonDataGridViewTokenListColumn Constructor " Url="html/f71913f1-fe12-c487-b113-989099f84221.htm" />
       <HelpTOCNode Title="KryptonDataGridViewTokenListColumn Properties" Url="html/e89eaad6-4a75-bf18-12b9-625daf0c8842.htm" />
       <HelpTOCNode Title="KryptonDataGridViewTokenListColumn Methods" Url="html/9bb5ab12-a929-4c85-567b-c3d9187d7558.htm" />
       <HelpTOCNode Title="KryptonDataGridViewTokenListColumn Events" Url="html/141a9804-f308-f5d3-54c6-d18b132fdc35.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="b2c82636-b3c8-46ec-85dd-d79dc4d1758f" Title="KryptonDataGridViewTreeTextCell Class" Url="html/5a486214-fc9c-60c7-6456-0f3c70f67ab3.htm">
+    <HelpTOCNode Id="fc4b285a-cf67-414b-84e6-a4d6579090cd" Title="KryptonDataGridViewTreeTextCell Class" Url="html/5a486214-fc9c-60c7-6456-0f3c70f67ab3.htm">
       <HelpTOCNode Title="KryptonDataGridViewTreeTextCell Constructor " Url="html/d5cc9d30-c86a-1d5c-67dd-6ab518fb11dc.htm" />
-      <HelpTOCNode Id="b9df1d0e-1d84-4127-975f-46f906666ee8" Title="KryptonDataGridViewTreeTextCell Properties" Url="html/9ace1504-00a7-b737-ad1a-176edc75524a.htm">
+      <HelpTOCNode Id="d79fa1a1-4f74-4352-8037-e1a641e6e27f" Title="KryptonDataGridViewTreeTextCell Properties" Url="html/9ace1504-00a7-b737-ad1a-176edc75524a.htm">
         <HelpTOCNode Title="GlyphMargin Property " Url="html/c31d3432-70fd-cffe-6d8c-705c24a0a013.htm" />
         <HelpTOCNode Title="Level Property " Url="html/c9350936-02ac-1319-cf57-1abd8557e1f4.htm" />
         <HelpTOCNode Title="OwningNode Property " Url="html/258777ba-77ce-59bd-1e68-c287ba2ef18e.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="be77b383-33b4-488f-ac09-1d1fde4e3262" Title="KryptonDataGridViewTreeTextCell Methods" Url="html/ddb88c6d-9339-492f-ed55-4d6763102a04.htm">
+      <HelpTOCNode Id="92aa8758-ba10-4f66-924b-236847a24343" Title="KryptonDataGridViewTreeTextCell Methods" Url="html/ddb88c6d-9339-492f-ed55-4d6763102a04.htm">
         <HelpTOCNode Title="Clone Method " Url="html/088985c8-722b-0ce2-a372-b9777e283bcc.htm" />
         <HelpTOCNode Title="OnMouseDown Method " Url="html/653ef5cc-be4e-9ad4-6264-0fc4b5a807cc.htm" />
         <HelpTOCNode Title="OnMouseUp Method " Url="html/94527944-6a21-8315-b260-a21b93c13d2b.htm" />
@@ -683,18 +683,18 @@
         <HelpTOCNode Title="UpdateStyle Method " Url="html/507a5b37-6fea-d03f-08d6-1e3f9b586c39.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="7fcf88ad-514f-4777-b1c6-3f13f30c1e21" Title="KryptonDataGridViewTreeTextColumn Class" Url="html/f3e2a618-e10b-c6a6-9034-9f6278812a8b.htm">
+    <HelpTOCNode Id="3a46b81c-e599-487e-80fa-666f8ebfdeb4" Title="KryptonDataGridViewTreeTextColumn Class" Url="html/f3e2a618-e10b-c6a6-9034-9f6278812a8b.htm">
       <HelpTOCNode Title="KryptonDataGridViewTreeTextColumn Constructor " Url="html/bf3a368e-c8c7-c454-4288-93d67026c8a7.htm" />
       <HelpTOCNode Title="KryptonDataGridViewTreeTextColumn Properties" Url="html/9be5abcc-164b-3a12-4fb5-ef55cb29bd4e.htm" />
       <HelpTOCNode Title="KryptonDataGridViewTreeTextColumn Methods" Url="html/18816e5a-28f6-99c0-928c-18028b8f8841.htm" />
       <HelpTOCNode Title="KryptonDataGridViewTreeTextColumn Events" Url="html/58eeee4b-8687-4596-d71e-ec7a1b001aeb.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="daaabc52-44b0-454d-814c-7d18c1906adc" Title="RatingCell Class" Url="html/91258840-7609-f029-fb69-aa311f74aabb.htm">
+    <HelpTOCNode Id="918e2ae8-6d5a-4a8e-a59e-32f00a43356d" Title="RatingCell Class" Url="html/91258840-7609-f029-fb69-aa311f74aabb.htm">
       <HelpTOCNode Title="RatingCell Constructor " Url="html/191595f3-d1a2-f398-d37f-f87b9889acb4.htm" />
-      <HelpTOCNode Id="53d7d95f-2f61-4b3c-b486-d98fc4f60fe5" Title="RatingCell Properties" Url="html/6e962eb8-2362-912c-9d3e-2fa35881281b.htm">
+      <HelpTOCNode Id="1629b290-9a17-4253-8419-d71535ca50b8" Title="RatingCell Properties" Url="html/6e962eb8-2362-912c-9d3e-2fa35881281b.htm">
         <HelpTOCNode Title="DefaultNewRowValue Property " Url="html/bb48baec-5370-1c07-dd95-c06a95241e00.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="0acab2f2-7d91-4818-935b-d504edbc8325" Title="RatingCell Methods" Url="html/9ec04b3e-9a95-ed2b-312a-789f7ca78d30.htm">
+      <HelpTOCNode Id="ca1f4a4a-6eb4-4248-a114-8b55a8540ba0" Title="RatingCell Methods" Url="html/9ec04b3e-9a95-ed2b-312a-789f7ca78d30.htm">
         <HelpTOCNode Title="GetFormattedValue Method " Url="html/5e9de1ca-ab42-1a97-27c6-d8a8241a471b.htm" />
         <HelpTOCNode Title="OnContentClick Method " Url="html/34e1cc53-5bb3-32ef-843b-daa79be6df25.htm" />
         <HelpTOCNode Title="OnMouseLeave Method " Url="html/ed476e9d-d1a4-241e-15a6-651d7a66f31b.htm" />
@@ -702,43 +702,43 @@
         <HelpTOCNode Title="Paint Method " Url="html/ad0e3330-3823-9292-3641-5c16b38dfb2f.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d0624c37-13f1-4d18-aa1d-826a5081f574" Title="TextAndImage Class" Url="html/0e52e669-df36-fa89-c9a7-bd50bf700e3a.htm">
-      <HelpTOCNode Id="3f282311-abe4-4b03-ae48-bdbdba310591" Title="TextAndImage Constructor " Url="html/443c86b4-501d-92a2-dce2-98eac7e2cf79.htm">
+    <HelpTOCNode Id="eb01f062-5df4-4191-9ff2-f361e9031d5b" Title="TextAndImage Class" Url="html/0e52e669-df36-fa89-c9a7-bd50bf700e3a.htm">
+      <HelpTOCNode Id="7430b182-232a-4cb7-8af1-9ed252b72933" Title="TextAndImage Constructor " Url="html/443c86b4-501d-92a2-dce2-98eac7e2cf79.htm">
         <HelpTOCNode Title="TextAndImage Constructor " Url="html/0e7e0c85-a9f0-aa49-9387-d26009d30aa5.htm" />
         <HelpTOCNode Title="TextAndImage Constructor (String, Image)" Url="html/d798960a-cf2c-a8f1-c1d2-ae2e17c98c5a.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="dea62334-6ef9-4f5a-9054-fad9680950cb" Title="TextAndImage Methods" Url="html/04bbfd86-b6ad-3b9b-a958-0e8a4e11c947.htm">
+      <HelpTOCNode Id="4eff8e4c-f73d-41b6-80d4-43c05c03c923" Title="TextAndImage Methods" Url="html/04bbfd86-b6ad-3b9b-a958-0e8a4e11c947.htm">
         <HelpTOCNode Title="CompareTo Method " Url="html/28372c6d-8292-5f1d-d7fa-189c86f7ec92.htm" />
         <HelpTOCNode Title="Equals Method " Url="html/5479d99c-8495-b8d5-ff9a-927c616cddac.htm" />
         <HelpTOCNode Title="GetHashCode Method " Url="html/444ba0cb-4aa8-44d0-d588-2861f9b405cb.htm" />
         <HelpTOCNode Title="ToString Method " Url="html/ce6d0ca8-6167-a11c-b893-c1989b61a124.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="aee6f087-1131-4021-a2c6-569ff2ff2876" Title="TextAndImage Fields" Url="html/c29fa8b7-10ed-ccea-afa4-b100849b6740.htm">
+      <HelpTOCNode Id="1e60186f-557d-4dda-9931-0921b20d1e55" Title="TextAndImage Fields" Url="html/c29fa8b7-10ed-ccea-afa4-b100849b6740.htm">
         <HelpTOCNode Title="Image Field" Url="html/97a33476-bc93-f3fb-d21b-cc494913c82b.htm" />
         <HelpTOCNode Title="Text Field" Url="html/e6a8908c-dc26-d7cf-8f2b-d67512896266.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="615b22ce-9359-44b8-86b6-49fba3405352" Title="Token Class" Url="html/c7cb9746-56d4-3656-046d-c1098de7e139.htm">
-      <HelpTOCNode Id="cb055a33-90a0-466b-87f2-d7c949571ada" Title="Token Constructor " Url="html/4fa5b9f9-6f28-67c5-d370-fbc9eaa2fc74.htm">
+    <HelpTOCNode Id="1713b9b0-41c3-43a6-b42c-afb26235e612" Title="Token Class" Url="html/c7cb9746-56d4-3656-046d-c1098de7e139.htm">
+      <HelpTOCNode Id="f6a7c1d3-87df-4684-83b6-e66f28c98193" Title="Token Constructor " Url="html/4fa5b9f9-6f28-67c5-d370-fbc9eaa2fc74.htm">
         <HelpTOCNode Title="Token Constructor " Url="html/0ee4f3cc-b204-3a1c-a260-2296355d8de7.htm" />
         <HelpTOCNode Title="Token Constructor (String, Color, Color)" Url="html/6b674d73-fa01-905a-b4f3-502a80c7a4aa.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="52b63ab2-48bd-448c-a27a-7d7544e87936" Title="Token Properties" Url="html/8bdfef8f-3abd-1bef-b4bd-9674fa1a1237.htm">
+      <HelpTOCNode Id="b9fb705a-d982-41f9-a7b5-17e154f05eae" Title="Token Properties" Url="html/8bdfef8f-3abd-1bef-b4bd-9674fa1a1237.htm">
         <HelpTOCNode Title="BackColor Property " Url="html/03c5a51f-0143-322c-7797-c3bf1e4f7902.htm" />
         <HelpTOCNode Title="ForeColor Property " Url="html/82620428-beb3-7a1d-2254-92f19c6911d9.htm" />
         <HelpTOCNode Title="Text Property " Url="html/8a68a742-e092-626f-7418-628d83850ff2.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="30b29096-c491-4f45-a53a-98e5f8c635a3" Title="Token Methods" Url="html/736e3aab-56ac-80a1-2b96-2bc3826a78c5.htm">
+      <HelpTOCNode Id="e779310c-3333-4b52-a89b-e09f9d548a4b" Title="Token Methods" Url="html/736e3aab-56ac-80a1-2b96-2bc3826a78c5.htm">
         <HelpTOCNode Title="CompareTo Method " Url="html/356360e9-39e6-d3a3-6cc8-a99a61e369d6.htm" />
         <HelpTOCNode Title="Equals Method " Url="html/06e664ef-c209-cd71-5eed-07d12932c99e.htm" />
         <HelpTOCNode Title="GetHashCode Method " Url="html/fc68fd5e-4f8c-0db6-18c3-c2914da91d0e.htm" />
         <HelpTOCNode Title="ToString Method " Url="html/6f821dbc-4f5d-813c-0937-cb4b698e1737.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="5f1ab093-2770-48c1-ade2-886dedd4bdf3" Title="TokenCell Class" Url="html/6726a296-d2fe-359c-9c6a-cd78c06ca1fc.htm">
+    <HelpTOCNode Id="61ef62a9-765d-4726-a956-ff794b13d53d" Title="TokenCell Class" Url="html/6726a296-d2fe-359c-9c6a-cd78c06ca1fc.htm">
       <HelpTOCNode Title="TokenCell Constructor " Url="html/861733f7-eba1-8ef2-05e2-eb6d6fc471d2.htm" />
       <HelpTOCNode Title="TokenCell Properties" Url="html/46e7a969-e085-9fcb-0c1b-b2f9db9968a3.htm" />
-      <HelpTOCNode Id="c72a6ae9-2325-4977-96f1-a84cfd6adc0d" Title="TokenCell Methods" Url="html/9819b10f-ceea-5777-5fdd-a342d91f4498.htm">
+      <HelpTOCNode Id="9ae56770-300d-4ded-b9fe-038081b432a6" Title="TokenCell Methods" Url="html/9819b10f-ceea-5777-5fdd-a342d91f4498.htm">
         <HelpTOCNode Title="GetPreferredSize Method " Url="html/751058c2-442d-1030-929e-b5435818c7b0.htm" />
         <HelpTOCNode Title="OnContentClick Method " Url="html/68ebd7b2-0952-5ac3-5d1a-2cc77d7b24a0.htm" />
         <HelpTOCNode Title="OnMouseLeave Method " Url="html/a453a5e2-c5dc-21d1-b43a-2dd8036b53fd.htm" />
@@ -747,10 +747,10 @@
         <HelpTOCNode Title="ToString Method " Url="html/05722288-e81e-948a-2c01-ef68ab55537c.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="bd9b5e25-3aad-4783-a0dc-2c4a164a09a4" Title="TokenListCell Class" Url="html/56d19a86-103a-0f68-fcf2-0016ea741451.htm">
+    <HelpTOCNode Id="415b6186-51f3-4170-aaf5-46408be536b6" Title="TokenListCell Class" Url="html/56d19a86-103a-0f68-fcf2-0016ea741451.htm">
       <HelpTOCNode Title="TokenListCell Constructor " Url="html/3f5e0e2c-180f-ffe1-88b9-a764786e2c0f.htm" />
       <HelpTOCNode Title="TokenListCell Properties" Url="html/1d66b095-c63d-6539-b342-552d42f79357.htm" />
-      <HelpTOCNode Id="d06b3862-8895-4fd6-aa4e-c8d95b40d772" Title="TokenListCell Methods" Url="html/edda953f-9d80-e269-948e-f5055e5f4cf5.htm">
+      <HelpTOCNode Id="d29f78b3-9831-4136-81ca-07ef4faf59bc" Title="TokenListCell Methods" Url="html/edda953f-9d80-e269-948e-f5055e5f4cf5.htm">
         <HelpTOCNode Title="GetPreferredSize Method " Url="html/ec1180f7-1b10-f1a8-3df7-4a2e17024023.htm" />
         <HelpTOCNode Title="OnContentClick Method " Url="html/6c6c987b-687e-d38a-7fea-8adf50f8e92b.htm" />
         <HelpTOCNode Title="OnMouseLeave Method " Url="html/decc7fa3-fde3-9d22-e930-a0047322168c.htm" />
@@ -759,21 +759,21 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="cd6a51e9-aebb-48a5-aec0-f2e6d1d77029" Title="KryptonOutlookGrid.Formatting" Url="html/67b03dcd-5e12-1f9b-5ac6-202c9fb92dbe.htm">
-    <HelpTOCNode Id="171b8351-94bd-44bf-94b3-0e2ef6cfa5ee" Title="ColourFormatting Class" Url="html/e729b914-b501-6b9c-d11d-01efdc516667.htm">
-      <HelpTOCNode Id="ffd32566-f060-44f1-9c94-497f50facc74" Title="ColourFormatting Methods" Url="html/fbbbfea0-aa17-ed45-544a-f0bf93a866f3.htm">
+  <HelpTOCNode Id="eaa14b2b-13be-44ea-81a8-c61516522fa1" Title="KryptonOutlookGrid.Formatting" Url="html/67b03dcd-5e12-1f9b-5ac6-202c9fb92dbe.htm">
+    <HelpTOCNode Id="657892df-c518-435d-8a05-c512869b8a14" Title="ColourFormatting Class" Url="html/e729b914-b501-6b9c-d11d-01efdc516667.htm">
+      <HelpTOCNode Id="b112c9c4-fee2-4e53-affb-0682e1df4de6" Title="ColourFormatting Methods" Url="html/fbbbfea0-aa17-ed45-544a-f0bf93a866f3.htm">
         <HelpTOCNode Title="ConvertBar Method " Url="html/d3ec74c1-5623-a866-3f03-238c69c73b9d.htm" />
         <HelpTOCNode Title="ConvertThreeRange Method " Url="html/f123cd6e-d52a-c3ae-6aa3-b4b91ddd6dd8.htm" />
         <HelpTOCNode Title="ConvertTwoRange Method " Url="html/ac429c5a-8cc6-9872-ccda-965200b27e37.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="1bc9e911-5225-4c4a-a58a-23c73e29a64f" Title="ConditionalFormatting Class" Url="html/2feaa188-d24d-e5d1-7e46-98a6c0a6b6a0.htm">
-      <HelpTOCNode Id="408ff1b2-b6e8-4512-ae18-4d311672f1e1" Title="ConditionalFormatting Constructor " Url="html/f02ca393-a703-188a-a47a-d1df33fdc8ff.htm">
+    <HelpTOCNode Id="d528b5cb-48b1-4486-81e7-ef6a295b1220" Title="ConditionalFormatting Class" Url="html/2feaa188-d24d-e5d1-7e46-98a6c0a6b6a0.htm">
+      <HelpTOCNode Id="c3ccca1e-015d-45a4-b7a3-9129bfca19b6" Title="ConditionalFormatting Constructor " Url="html/f02ca393-a703-188a-a47a-d1df33fdc8ff.htm">
         <HelpTOCNode Title="ConditionalFormatting Constructor " Url="html/16543860-f0b3-1d18-de57-9204428cab71.htm" />
         <HelpTOCNode Title="ConditionalFormatting Constructor (EnumConditionalFormatType, IFormatParams)" Url="html/60f11116-af97-bf55-71ed-0664ee141af7.htm" />
         <HelpTOCNode Title="ConditionalFormatting Constructor (String, EnumConditionalFormatType, IFormatParams)" Url="html/ec472424-b637-0969-66f4-3f57569be5ad.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9b1fe773-3635-4007-b69e-4afc92778dc5" Title="ConditionalFormatting Properties" Url="html/78f690cf-0d3e-c5ce-b75e-45195ceadaf2.htm">
+      <HelpTOCNode Id="6811340c-571e-4d0f-8edd-82efc154a3ec" Title="ConditionalFormatting Properties" Url="html/78f690cf-0d3e-c5ce-b75e-45195ceadaf2.htm">
         <HelpTOCNode Title="ColumnName Property " Url="html/60677827-ab29-36ea-090d-389bf080faf0.htm" />
         <HelpTOCNode Title="FormatParams Property " Url="html/f6d63d28-bb36-4a1c-5433-2f8d15720ba8.htm" />
         <HelpTOCNode Title="FormatType Property " Url="html/7b6840fb-8c03-cba8-b5c0-dacf29d88715.htm" />
@@ -782,16 +782,16 @@
       </HelpTOCNode>
       <HelpTOCNode Title="ConditionalFormatting Methods" Url="html/ab740c5a-11e3-4469-152e-dd7f8c32fc21.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="d81c83a6-c76f-4d4b-8b31-ee09239299ec" Title="CustomFormatRule Class" Url="html/43d14906-9a80-4e72-7cd2-7bf439f4cf64.htm">
+    <HelpTOCNode Id="ca2649b2-6c31-40a0-8482-5d635473f632" Title="CustomFormatRule Class" Url="html/43d14906-9a80-4e72-7cd2-7bf439f4cf64.htm">
       <HelpTOCNode Title="CustomFormatRule Constructor " Url="html/bae1b8ad-89a6-ca36-12e7-389b61c8b9b1.htm" />
       <HelpTOCNode Title="CustomFormatRule Properties" Url="html/13981238-b963-0f14-8c27-13de5e1d428e.htm" />
-      <HelpTOCNode Id="04f5044f-a14c-43f0-b511-7f9761f786d3" Title="CustomFormatRule Methods" Url="html/a4f051d2-7d45-98d1-ce2b-15cc88e22fd5.htm">
-        <HelpTOCNode Id="0d46d0d2-8d4d-48bf-9ac5-0f3e94add58e" Title="Dispose Method " Url="html/a3e10719-b5ac-2faf-21ab-ba2c22d0a660.htm">
+      <HelpTOCNode Id="4f487372-78de-4209-81b6-536c5e8d4bf2" Title="CustomFormatRule Methods" Url="html/a4f051d2-7d45-98d1-ce2b-15cc88e22fd5.htm">
+        <HelpTOCNode Id="3945aca3-6f1a-429c-bee2-87c9883acf74" Title="Dispose Method " Url="html/a3e10719-b5ac-2faf-21ab-ba2c22d0a660.htm">
           <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/45cd7a8c-618b-038f-c469-2742ef030a3d.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="CustomFormatRule Events" Url="html/d95a0301-746b-85b0-08ef-d05df240fcc3.htm" />
-      <HelpTOCNode Id="e50d49e3-ac9e-4d42-a6bb-f60e8a3ba98b" Title="CustomFormatRule Fields" Url="html/fa01ebcf-b7e7-a7d0-cd6d-96387ca9e91d.htm">
+      <HelpTOCNode Id="fc51d847-c8ed-40c6-acf9-71c16be7ffca" Title="CustomFormatRule Fields" Url="html/fa01ebcf-b7e7-a7d0-cd6d-96387ca9e91d.htm">
         <HelpTOCNode Title="colMax Field" Url="html/cd458d21-2a7c-3852-7fef-284f0553ca9d.htm" />
         <HelpTOCNode Title="colMedium Field" Url="html/69907da1-346a-6414-6b88-0cc87708549a.htm" />
         <HelpTOCNode Title="colMin Field" Url="html/c8a24bc0-5080-6507-09b1-cd3f163de8e2.htm" />
@@ -800,56 +800,56 @@
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="EnumConditionalFormatType Enumeration" Url="html/d80d3a5c-0089-c93f-e624-d725c1d4b849.htm" />
-    <HelpTOCNode Id="974ecc3d-5e31-46f2-9266-a83876fdb0c5" Title="IFormatParams Interface" Url="html/6beddbfa-5594-191f-fe96-7e6639416a63.htm">
-      <HelpTOCNode Id="4d79b854-2882-4e49-830f-ee7c21395b97" Title="IFormatParams Methods" Url="html/858e1923-9077-332a-b7b4-74e55f884d04.htm">
+    <HelpTOCNode Id="3968c0a5-5b13-4d41-9f51-bb88f01a7fee" Title="IFormatParams Interface" Url="html/6beddbfa-5594-191f-fe96-7e6639416a63.htm">
+      <HelpTOCNode Id="64f8424d-38d7-4f68-a454-7cecddca66d3" Title="IFormatParams Methods" Url="html/858e1923-9077-332a-b7b4-74e55f884d04.htm">
         <HelpTOCNode Title="Persist Method " Url="html/4879cc11-77ad-c889-001c-886b16d7c87d.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="cd04daed-db7b-4331-867d-2c95c6fe2f4c" Title="KryptonOutlookGrid.Formatting.Params" Url="html/8eee1398-385d-46dd-6467-ad94e776ac31.htm">
-    <HelpTOCNode Id="4d718bed-3de2-4404-9dd2-c56d6fe4919a" Title="BarParams Class" Url="html/2ac0b1c7-14ce-6491-4da1-17e7568c839c.htm">
+  <HelpTOCNode Id="651befb1-c651-47f9-985d-1c26b5df4139" Title="KryptonOutlookGrid.Formatting.Params" Url="html/8eee1398-385d-46dd-6467-ad94e776ac31.htm">
+    <HelpTOCNode Id="b788ee45-e092-47c3-aaa2-a9007e28ef39" Title="BarParams Class" Url="html/2ac0b1c7-14ce-6491-4da1-17e7568c839c.htm">
       <HelpTOCNode Title="BarParams Constructor " Url="html/6f2370f3-8c8c-38fe-84c1-cd025faeca74.htm" />
-      <HelpTOCNode Id="05b2dc77-4444-417c-8aa4-0bee57d263d9" Title="BarParams Methods" Url="html/d4262dab-3aa9-bf3f-4cba-4b3d6e4d59a1.htm">
+      <HelpTOCNode Id="b5ccfb29-6e3e-425f-baf6-3b3e7209748c" Title="BarParams Methods" Url="html/d4262dab-3aa9-bf3f-4cba-4b3d6e4d59a1.htm">
         <HelpTOCNode Title="Clone Method " Url="html/02f71e31-a5c3-0215-d77a-9b2ac7b14502.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="8ce93041-d94a-4421-a819-40d0e17038b9" Title="BarParams Fields" Url="html/b3b3fbbe-091e-3cab-2f8a-b799fcaf6533.htm">
+      <HelpTOCNode Id="5350278f-5aa6-4286-b3c1-83e607456909" Title="BarParams Fields" Url="html/b3b3fbbe-091e-3cab-2f8a-b799fcaf6533.htm">
         <HelpTOCNode Title="BarColour Field" Url="html/58564aa2-5f9d-f0b9-a8f5-748c61783972.htm" />
         <HelpTOCNode Title="GradientFill Field" Url="html/0d62e597-b5c2-d2f8-8b8a-8ce2d4144b77.htm" />
         <HelpTOCNode Title="ProportionValue Field" Url="html/62e129dc-6459-de52-ba1d-8ae9e8d8b757.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="f90ed6a9-ec45-4126-9ede-ca1af8015cc0" Title="ThreeColoursParams Class" Url="html/286c7e46-8efc-c71f-2b44-1a9ec375ae41.htm">
+    <HelpTOCNode Id="50959914-f75b-47ca-a79f-8af269dd0bcc" Title="ThreeColoursParams Class" Url="html/286c7e46-8efc-c71f-2b44-1a9ec375ae41.htm">
       <HelpTOCNode Title="ThreeColoursParams Constructor " Url="html/46d39cfa-19dd-0b39-6ab9-c6a60d2741cc.htm" />
-      <HelpTOCNode Id="c30e3241-b803-4cb1-a184-27dc162a5764" Title="ThreeColoursParams Methods" Url="html/e4bb1dd1-77e1-3166-735e-e5b629cf1034.htm">
+      <HelpTOCNode Id="1ae39d91-fe49-4af2-853a-0acac88fccf3" Title="ThreeColoursParams Methods" Url="html/e4bb1dd1-77e1-3166-735e-e5b629cf1034.htm">
         <HelpTOCNode Title="Clone Method " Url="html/2a7bc732-d996-8124-d311-ec18db1b0d81.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="bb3f18d8-08b4-439a-be29-1d07453c7e7b" Title="ThreeColoursParams Fields" Url="html/9b7b83f1-d533-705a-0e1e-d407310e232d.htm">
+      <HelpTOCNode Id="c97020e0-a4dd-4fd8-8d4a-f5a1f20c1c65" Title="ThreeColoursParams Fields" Url="html/9b7b83f1-d533-705a-0e1e-d407310e232d.htm">
         <HelpTOCNode Title="MaximumColour Field" Url="html/8f178e3c-1d43-9db8-c244-7aa507292635.htm" />
         <HelpTOCNode Title="MediumColour Field" Url="html/e7de4a11-8014-f91b-747d-5516920e78d8.htm" />
         <HelpTOCNode Title="MinimumColour Field" Url="html/19f9706c-f062-d8ac-74fe-4246d051b2e0.htm" />
         <HelpTOCNode Title="ValueColour Field" Url="html/50d8edd9-2999-3988-0038-82466eb03442.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="fe71d4fc-5974-473a-9225-281f56c18ed6" Title="TwoColoursParams Class" Url="html/faa73ada-b7e7-8bd8-3361-5fc6d9c35698.htm">
+    <HelpTOCNode Id="95829df8-5ebd-4aff-8e5c-f3051a52aa0e" Title="TwoColoursParams Class" Url="html/faa73ada-b7e7-8bd8-3361-5fc6d9c35698.htm">
       <HelpTOCNode Title="TwoColoursParams Constructor " Url="html/a2815a13-8705-957e-2f68-8335b7bcb366.htm" />
-      <HelpTOCNode Id="a545e77e-7d98-465a-99b3-ba196d39dfd8" Title="TwoColoursParams Methods" Url="html/a246e111-090f-2ee2-8a30-9a4c30f416c1.htm">
+      <HelpTOCNode Id="d4ff9d8c-3311-4d4d-a8dd-3287c37d5b66" Title="TwoColoursParams Methods" Url="html/a246e111-090f-2ee2-8a30-9a4c30f416c1.htm">
         <HelpTOCNode Title="Clone Method " Url="html/eaa0d95b-f5f9-4736-f999-b5c43f0d76c6.htm" />
         <HelpTOCNode Title="Persist Method " Url="html/08442c66-2e40-2c97-d740-c41fb4dbaeca.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="0bd8a710-f698-4e62-b8bd-3180ac0f9dd5" Title="TwoColoursParams Fields" Url="html/473c073e-953a-91f5-f9b3-d458eb4dd06c.htm">
+      <HelpTOCNode Id="f6e0040d-4416-4b51-b473-792f4928e381" Title="TwoColoursParams Fields" Url="html/473c073e-953a-91f5-f9b3-d458eb4dd06c.htm">
         <HelpTOCNode Title="MaximumColour Field" Url="html/b32d80ef-b988-5b2f-5818-c9fd96c892e0.htm" />
         <HelpTOCNode Title="MinimumColour Field" Url="html/a3bc63d3-bc2d-fc66-63d7-4a2733e2c7c3.htm" />
         <HelpTOCNode Title="ValueColour Field" Url="html/b6df68fb-131b-f38f-aa8a-0b0065e2ecaa.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="38dea149-8311-4320-bc8e-a12ed98fe777" Title="KryptonOutlookGrid.Helpers" Url="html/c91519aa-ac95-5e4e-fd8d-98cd53f63a8c.htm">
-    <HelpTOCNode Id="89309cde-9721-4914-887d-acf18a97418e" Title="OutlookGridGroupHelpers Class" Url="html/4dd56fa8-d00f-6d5f-53aa-1db0a955f6cf.htm">
+  <HelpTOCNode Id="1d592096-69fa-43f5-9459-ba127f6e4e14" Title="KryptonOutlookGrid.Helpers" Url="html/c91519aa-ac95-5e4e-fd8d-98cd53f63a8c.htm">
+    <HelpTOCNode Id="fac4d3be-b243-4cf6-b756-2816845492cd" Title="OutlookGridGroupHelpers Class" Url="html/4dd56fa8-d00f-6d5f-53aa-1db0a955f6cf.htm">
       <HelpTOCNode Title="OutlookGridGroupHelpers Constructor " Url="html/c78119d7-a995-f8a5-d65e-9cb5c0a0f2de.htm" />
-      <HelpTOCNode Id="5ba766cb-b8fa-446d-b203-30dfe696f3ee" Title="OutlookGridGroupHelpers Methods" Url="html/26ef1333-08ad-d7ff-1f67-f0e9d4264b63.htm">
+      <HelpTOCNode Id="05dc3149-580e-40a1-937f-c2c14f4dec9e" Title="OutlookGridGroupHelpers Methods" Url="html/26ef1333-08ad-d7ff-1f67-f0e9d4264b63.htm">
         <HelpTOCNode Title="GetDateCode Method " Url="html/1f957388-9181-8ec1-77a8-8a215dfce5bc.htm" />
         <HelpTOCNode Title="GetDayText Method " Url="html/63556c93-4981-0b91-27d5-bdfcc52371e0.htm" />
-        <HelpTOCNode Id="15228b86-adb9-444c-a320-82d9cff09f50" Title="GetFirstDayOfWeek Method " Url="html/36ab511f-825d-5b39-3e8a-9c51831e1b9e.htm">
+        <HelpTOCNode Id="ab2fd9bb-4193-457b-8e7b-d689824f6db3" Title="GetFirstDayOfWeek Method " Url="html/36ab511f-825d-5b39-3e8a-9c51831e1b9e.htm">
           <HelpTOCNode Title="GetFirstDayOfWeek Method (DateTime)" Url="html/882cf8b3-8134-3c33-30f1-3986de8cf597.htm" />
           <HelpTOCNode Title="GetFirstDayOfWeek Method (DateTime, CultureInfo)" Url="html/78feb350-b96a-27b9-d093-c74ce049f4a9.htm" />
         </HelpTOCNode>
@@ -860,9 +860,9 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="c4667ebf-3c4f-49c5-a603-ccb115361b3d" Title="KryptonOutlookGrid.Interfaces" Url="html/d4ac36f3-5635-a69d-4207-b3c5978bd673.htm">
-    <HelpTOCNode Id="ac5742e9-fe80-4b8e-9750-f5a46ee09848" Title="IOutlookGridGroup Interface" Url="html/e8240994-50ae-352a-4e07-5b85b511db96.htm">
-      <HelpTOCNode Id="ed188685-75ed-4368-8bbe-07af94d5a807" Title="IOutlookGridGroup Properties" Url="html/96ebea69-3192-00b9-f017-8c1316ecd624.htm">
+  <HelpTOCNode Id="15434ec2-3cb6-433b-94f0-17c4a4f73811" Title="KryptonOutlookGrid.Interfaces" Url="html/d4ac36f3-5635-a69d-4207-b3c5978bd673.htm">
+    <HelpTOCNode Id="8144b76d-6251-4a53-af69-28f0eb3c5f30" Title="IOutlookGridGroup Interface" Url="html/e8240994-50ae-352a-4e07-5b85b511db96.htm">
+      <HelpTOCNode Id="7d5e130b-1473-49f0-a443-a6b084fc4e81" Title="IOutlookGridGroup Properties" Url="html/96ebea69-3192-00b9-f017-8c1316ecd624.htm">
         <HelpTOCNode Title="AllowHiddenWhenGrouped Property " Url="html/170780ad-2bcf-e830-930d-402030d6c4fe.htm" />
         <HelpTOCNode Title="Children Property " Url="html/471f1e82-5c96-7fbc-481c-c96cc4426cad.htm" />
         <HelpTOCNode Title="Collapsed Property " Url="html/ba901a7f-5539-16ce-0cf9-70e369ff6988.htm" />
@@ -884,17 +884,17 @@
       <HelpTOCNode Title="IOutlookGridGroup Methods" Url="html/c0d502e3-aa7d-6f73-e168-d1c6e8b9ec37.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="84b167dc-3b0e-4de3-bffc-9f3cb76c7e86" Title="KryptonOutlookGrid.Utilities.Language" Url="html/62c4c20b-8d2b-9a54-35b2-ec6cddd33390.htm">
-    <HelpTOCNode Id="b07e8a3e-175f-4981-967b-a6fe89c124dc" Title="LanguageManager Class" Url="html/ed9fa6b7-e1ac-ac6a-2454-eb0e2ca976e0.htm">
-      <HelpTOCNode Id="ab0b1bf2-05b9-4bf6-b0ce-53f7fe741b2a" Title="LanguageManager Properties" Url="html/7b5e1e25-0123-8384-6a63-96ea56c9de7b.htm">
+  <HelpTOCNode Id="bece78d9-5cb4-4719-ba51-e5604d544cc2" Title="KryptonOutlookGrid.Utilities.Language" Url="html/62c4c20b-8d2b-9a54-35b2-ec6cddd33390.htm">
+    <HelpTOCNode Id="58bb1cb6-ae82-4993-a42a-a9230bb50bd9" Title="LanguageManager Class" Url="html/ed9fa6b7-e1ac-ac6a-2454-eb0e2ca976e0.htm">
+      <HelpTOCNode Id="21b57851-b9be-4db6-9d91-5223dfb5b79d" Title="LanguageManager Properties" Url="html/7b5e1e25-0123-8384-6a63-96ea56c9de7b.htm">
         <HelpTOCNode Title="Instance Property " Url="html/dc7d687f-067e-6da7-616d-93cf342ea1ef.htm" />
         <HelpTOCNode Title="PLocker Property " Url="html/1a005a11-06b9-0780-a7fa-29e4166f1981.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="be9359e2-d589-4268-8d62-3b8c65cd0259" Title="LanguageManager Methods" Url="html/07fa2567-9954-67cb-cbb3-2dc16cfd0f7d.htm">
+      <HelpTOCNode Id="3ad15a7c-e28c-4a18-a11c-5c657091e4dc" Title="LanguageManager Methods" Url="html/07fa2567-9954-67cb-cbb3-2dc16cfd0f7d.htm">
         <HelpTOCNode Title="GetStringGB Method " Url="html/a6a3fc04-601a-aaa7-7896-33e9084b3d63.htm" />
         <HelpTOCNode Title="GetStringUS Method " Url="html/35e8e062-4985-29ef-672f-c1beb82ed176.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="ba92e3bc-162b-48e3-9ecd-efaadee9b65f" Title="LanguageManager Fields" Url="html/6273f751-3986-6d6d-b90c-bb23663a2522.htm">
+      <HelpTOCNode Id="603a2d09-5ca3-419c-9b4a-0d978ce82121" Title="LanguageManager Fields" Url="html/6273f751-3986-6d6d-b90c-bb23663a2522.htm">
         <HelpTOCNode Title="languageManager Field" Url="html/6255bdc6-15df-aa9f-7ee9-6ccb61879b75.htm" />
         <HelpTOCNode Title="myLock Field" Url="html/5889607d-2167-c1f5-98cc-e9a8f2a19fce.htm" />
         <HelpTOCNode Title="resourceManagerGB Field" Url="html/a91ea7b8-506c-15fe-77ad-3254a5169346.htm" />
@@ -902,14 +902,14 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="e34261e4-4e8d-40a9-b7bc-0a8990b36105" Title="ToolkitSettings.Classes.ApplicationUpdater" Url="html/04126003-d53e-4dd6-29f4-c622c397c7aa.htm">
-    <HelpTOCNode Id="59732c9d-f9f1-41d1-ac71-e5027cf7ec59" Title="InternalApplicationUpdaterSettingsManager Class" Url="html/847cf200-ecba-2508-843f-7aaacff3da04.htm">
+  <HelpTOCNode Id="ac357e5f-1064-4baf-9c3f-42390ef724c5" Title="ToolkitSettings.Classes.ApplicationUpdater" Url="html/04126003-d53e-4dd6-29f4-c622c397c7aa.htm">
+    <HelpTOCNode Id="6eb65be5-285d-4591-b216-e5757daea577" Title="InternalApplicationUpdaterSettingsManager Class" Url="html/847cf200-ecba-2508-843f-7aaacff3da04.htm">
       <HelpTOCNode Title="InternalApplicationUpdaterSettingsManager Constructor " Url="html/69058e1e-e805-ef0b-7201-4d4db7ef1da7.htm" />
-      <HelpTOCNode Id="69520c79-712e-430f-acb5-5e76db07d675" Title="InternalApplicationUpdaterSettingsManager Properties" Url="html/5e130451-efad-42f4-0ec3-0a7e4ade2553.htm">
+      <HelpTOCNode Id="ce95eec1-e851-44a7-9845-21c4bd3ae357" Title="InternalApplicationUpdaterSettingsManager Properties" Url="html/5e130451-efad-42f4-0ec3-0a7e4ade2553.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/6014c6ba-57d8-6254-422f-676f253c6c1c.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/86316bf5-afc1-ea5d-983c-47ff5a1f10d5.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="7faf606f-9cd1-48da-90bb-ffd90d05fe93" Title="InternalApplicationUpdaterSettingsManager Methods" Url="html/77d3e809-0d50-bebf-0e25-564d52fd56d2.htm">
+      <HelpTOCNode Id="e6ba08b9-a423-4c9d-a1f2-0c905dbcb106" Title="InternalApplicationUpdaterSettingsManager Methods" Url="html/77d3e809-0d50-bebf-0e25-564d52fd56d2.htm">
         <HelpTOCNode Title="GetAlwaysUsePrompt Method " Url="html/bbacf482-28cd-d9e3-8c96-e8522d8ae3bb.htm" />
         <HelpTOCNode Title="GetAlwaysUseUACElevation Method " Url="html/c992f6fa-d3e9-2a59-9f8a-c8e97c52d05e.htm" />
         <HelpTOCNode Title="GetApplicationIdentification Method " Url="html/bf5dc920-83ba-ba06-c8cc-d3518ec17760.htm" />
@@ -940,13 +940,13 @@
         <HelpTOCNode Title="SetVersionXMLFileURL Method " Url="html/cb681416-e3d3-c68c-b160-e5e4dcd9d11c.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="1a697a4b-8804-4598-8d94-dd6618159649" Title="ThemeSettingsManager Class" Url="html/3d631193-5ae3-4865-f272-328ff7b76f40.htm">
+    <HelpTOCNode Id="0fb0222f-81cc-4a2d-8048-a9757955c48b" Title="ThemeSettingsManager Class" Url="html/3d631193-5ae3-4865-f272-328ff7b76f40.htm">
       <HelpTOCNode Title="ThemeSettingsManager Constructor " Url="html/4b10ea77-812a-51a6-cc39-db271f4612a0.htm" />
-      <HelpTOCNode Id="89b5a3da-3c7a-476c-a80f-aad1852eb333" Title="ThemeSettingsManager Properties" Url="html/ef116d75-2513-5e10-b88f-a6032a7dd2f9.htm">
+      <HelpTOCNode Id="55939884-6982-4c6e-a307-914d0d6a9553" Title="ThemeSettingsManager Properties" Url="html/ef116d75-2513-5e10-b88f-a6032a7dd2f9.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/2b6207ee-1c06-2c3a-6aaf-641437d52a73.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/7d611456-a167-d332-6a2d-a91a3f522e34.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="e3342fee-d956-4310-adfe-21fae2e084fc" Title="ThemeSettingsManager Methods" Url="html/c7116b00-fa2f-01f7-0b10-3b783dd7b9d5.htm">
+      <HelpTOCNode Id="7635b4a1-8688-48e3-b206-6441941dc0ca" Title="ThemeSettingsManager Methods" Url="html/c7116b00-fa2f-01f7-0b10-3b783dd7b9d5.htm">
         <HelpTOCNode Title="GetAlwaysUsePrompt Method " Url="html/2b2b34ea-9d95-8cf2-960d-6987f8b73e22.htm" />
         <HelpTOCNode Title="GetCurrentApplicationTheme Method " Url="html/f8590f10-dbd4-f79d-a6d6-48252ca34866.htm" />
         <HelpTOCNode Title="GetCustomThemePath Method " Url="html/897e9a76-c38b-7e0a-958e-2f4831c22868.htm" />
@@ -959,13 +959,13 @@
         <HelpTOCNode Title="SetSettingsModified Method " Url="html/87044bec-d70d-86b4-56ef-fc841f3f7505.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="376f2b2f-3cfa-47dc-8ec2-67015a1a900f" Title="XMLFileApplicationUpdaterSettingsManager Class" Url="html/d525cab0-017e-dc72-2633-9dcc9dad4c95.htm">
+    <HelpTOCNode Id="7019097c-bef7-45e2-bbc3-f4f34e80d06e" Title="XMLFileApplicationUpdaterSettingsManager Class" Url="html/d525cab0-017e-dc72-2633-9dcc9dad4c95.htm">
       <HelpTOCNode Title="XMLFileApplicationUpdaterSettingsManager Constructor " Url="html/4c48c3fa-9901-19ae-53d9-f09f311f5b34.htm" />
-      <HelpTOCNode Id="bae678bf-acb8-489e-b24c-d24096d0ed87" Title="XMLFileApplicationUpdaterSettingsManager Properties" Url="html/7e5333d9-62ab-d14c-50bd-a010b9fe04c1.htm">
+      <HelpTOCNode Id="b97827ba-e810-4c3a-9d55-7b4cdedce1d5" Title="XMLFileApplicationUpdaterSettingsManager Properties" Url="html/7e5333d9-62ab-d14c-50bd-a010b9fe04c1.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/3cc71707-d7fc-6760-10a9-add2e3da475b.htm" />
         <HelpTOCNode Title="SettingsModifed Property " Url="html/f08167e1-28cc-b80c-fb63-2dec9bdd1001.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="81e6054d-5d40-4861-a414-0076c17a84d4" Title="XMLFileApplicationUpdaterSettingsManager Methods" Url="html/62ff8459-ac3a-8164-0c80-d9ad5b263799.htm">
+      <HelpTOCNode Id="baac0a21-b1ba-4339-8086-107d2b4a2cad" Title="XMLFileApplicationUpdaterSettingsManager Methods" Url="html/62ff8459-ac3a-8164-0c80-d9ad5b263799.htm">
         <HelpTOCNode Title="GetAlwaysUsePrompt Method " Url="html/48dc6608-553b-5590-d9c2-f348791ea7cd.htm" />
         <HelpTOCNode Title="GetApplicationIdentifier Method " Url="html/36b82f51-3d0f-03d3-8a0a-d52f1c480179.htm" />
         <HelpTOCNode Title="GetBetaFlag Method " Url="html/f323a1ea-1753-3c17-d3de-24853e94c2b4.htm" />
@@ -1029,10 +1029,10 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="82ceaf7c-a26c-43de-8219-fbf9caf5ce92" Title="ToolkitSettings.Classes.Core" Url="html/b72b8e32-9ba0-b111-71ce-09f021ede5a2.htm">
-    <HelpTOCNode Id="ac37adfd-b292-4ddc-a0c9-371abc4d9467" Title="ColourIntegerSettingsManager Class" Url="html/9ab4ca00-175a-13d5-bd3e-a8f8dfe5d087.htm">
+  <HelpTOCNode Id="1e445991-fe71-49bd-87c4-fcc2a1138444" Title="ToolkitSettings.Classes.Core" Url="html/b72b8e32-9ba0-b111-71ce-09f021ede5a2.htm">
+    <HelpTOCNode Id="1a25adeb-696b-43a4-a3c8-5b25e5bfc594" Title="ColourIntegerSettingsManager Class" Url="html/9ab4ca00-175a-13d5-bd3e-a8f8dfe5d087.htm">
       <HelpTOCNode Title="ColourIntegerSettingsManager Constructor " Url="html/38f41707-0397-116b-c09f-9ac926028552.htm" />
-      <HelpTOCNode Id="dc58a0ac-58f3-44e8-a206-46e65b8316a2" Title="ColourIntegerSettingsManager Methods" Url="html/6029dde9-c4de-106a-5bda-9f4d6acdb641.htm">
+      <HelpTOCNode Id="2f9e41ff-fa90-4da0-bf9d-894dd4347d02" Title="ColourIntegerSettingsManager Methods" Url="html/6029dde9-c4de-106a-5bda-9f4d6acdb641.htm">
         <HelpTOCNode Title="GetAlphaChannelValue Method " Url="html/fcf6d5f1-9ca1-0902-92f7-d6f7b6d9f3ab.htm" />
         <HelpTOCNode Title="GetBlueChannelValue Method " Url="html/20d7f484-8082-796f-7f3c-c88da5ad9539.htm" />
         <HelpTOCNode Title="GetGreenChannelValue Method " Url="html/869d274b-5bc0-dad1-863f-18677f2c3168.htm" />
@@ -1045,9 +1045,9 @@
         <HelpTOCNode Title="SetRedChannelValue Method " Url="html/16125c1a-6c09-f22c-646c-fb447b1203df.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9c14e794-f847-4a87-b2bd-c71a63d71c97" Title="ColourStringSettingsManager Class" Url="html/c9ce0e29-4060-08d5-b153-3a10aa358240.htm">
+    <HelpTOCNode Id="1fcfd5ba-5738-461c-a543-7e057dd8d4c2" Title="ColourStringSettingsManager Class" Url="html/c9ce0e29-4060-08d5-b153-3a10aa358240.htm">
       <HelpTOCNode Title="ColourStringSettingsManager Constructor " Url="html/007a20b9-7398-b001-2604-eca1984cbcd3.htm" />
-      <HelpTOCNode Id="2c85d516-5c7c-4813-8451-0517719aed33" Title="ColourStringSettingsManager Methods" Url="html/62ad070f-d30e-3cc0-eb9d-c7d471d97e9a.htm">
+      <HelpTOCNode Id="ab5606e2-f35b-4d8f-910c-2d86a4034be8" Title="ColourStringSettingsManager Methods" Url="html/62ad070f-d30e-3cc0-eb9d-c7d471d97e9a.htm">
         <HelpTOCNode Title="GetAlternativeNormalTextColour Method " Url="html/010acf66-d011-4626-6a90-8f569708e160.htm" />
         <HelpTOCNode Title="GetBaseColour Method " Url="html/03664cc2-6cf7-d3c7-afcd-bb7447b68243.htm" />
         <HelpTOCNode Title="GetBorderColour Method " Url="html/e7d17399-589a-93a5-7dec-30ffd1c226f6.htm" />
@@ -1115,14 +1115,14 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="f4e91d63-e239-4a68-a226-49218fee7560" Title="ToolkitSettings.Classes.ExtendedControls" Url="html/6662089b-0e97-5212-e0d7-54f1de228648.htm">
-    <HelpTOCNode Id="a51dd06f-7974-45fb-8437-659c2228e19b" Title="BooleanSettingsManager Class" Url="html/3746778d-2a34-af6a-57aa-1a2d044d13e4.htm">
+  <HelpTOCNode Id="e8ae6831-7f61-4a2c-a55f-d576e786d0a2" Title="ToolkitSettings.Classes.ExtendedControls" Url="html/6662089b-0e97-5212-e0d7-54f1de228648.htm">
+    <HelpTOCNode Id="ca787560-e3ce-46d4-966f-232f0d8edff4" Title="BooleanSettingsManager Class" Url="html/3746778d-2a34-af6a-57aa-1a2d044d13e4.htm">
       <HelpTOCNode Title="BooleanSettingsManager Constructor " Url="html/4f03c3f7-2141-ea64-19a0-c1ce0172e4f6.htm" />
-      <HelpTOCNode Id="9419ee1e-e929-4b29-a3c1-5914c84ba17c" Title="BooleanSettingsManager Properties" Url="html/1f4a9e1c-9bed-1c21-b6a0-384aeae023e4.htm">
+      <HelpTOCNode Id="69dbd2d3-6a97-4b07-9b78-d41d8e4d05a4" Title="BooleanSettingsManager Properties" Url="html/1f4a9e1c-9bed-1c21-b6a0-384aeae023e4.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/b04e74e6-8be2-b13f-5930-405e7c4fce1e.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/bdbaf3c4-60e8-f4b0-2486-f2b2b93b7730.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="5c76ddd9-de7f-4ba3-aa4d-be466c936b07" Title="BooleanSettingsManager Methods" Url="html/9238e6a0-eaa9-532e-2f1c-368518a65c29.htm">
+      <HelpTOCNode Id="50799106-41ca-4aca-b6f4-17ffdfe48914" Title="BooleanSettingsManager Methods" Url="html/9238e6a0-eaa9-532e-2f1c-368518a65c29.htm">
         <HelpTOCNode Title="GetAlwaysUsePrompt Method " Url="html/9a92ffd0-4394-8180-0f73-39a148d7bfc3.htm" />
         <HelpTOCNode Title="GetSettingsModified Method " Url="html/14bf35e1-d51f-a9ac-8012-b811fc618e64.htm" />
         <HelpTOCNode Title="GetUseVirusTotalUseTLS Method " Url="html/a4a8f344-0d3e-d2bf-0ba3-3ce0f19a3a8b.htm" />
@@ -1133,13 +1133,13 @@
         <HelpTOCNode Title="SetUseVirusTotalUseTLS Method " Url="html/2b0aeece-8a50-46b0-e3ca-9509551962a7.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="6f410122-0abe-4abe-a733-d8c1efa16389" Title="StringSettingsManager Class" Url="html/351061b8-f7d0-6ba6-e398-6371b6095026.htm">
+    <HelpTOCNode Id="db4a9796-8ec4-42c9-9a46-326c6549709d" Title="StringSettingsManager Class" Url="html/351061b8-f7d0-6ba6-e398-6371b6095026.htm">
       <HelpTOCNode Title="StringSettingsManager Constructor " Url="html/148538c7-9c35-3f53-c232-653024f40053.htm" />
-      <HelpTOCNode Id="fcadec4b-920d-4ab0-9077-1457178db761" Title="StringSettingsManager Properties" Url="html/2cc3a0b7-3662-d341-7072-f05163debe69.htm">
+      <HelpTOCNode Id="65029e11-92f5-48f5-b112-a9f239cd9b2c" Title="StringSettingsManager Properties" Url="html/2cc3a0b7-3662-d341-7072-f05163debe69.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/de33c64f-3374-5b6b-7aaa-4f8c95cefb4d.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/5d828954-979b-06b4-9e3e-693459a7e0c6.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="de6778a9-cb9b-433d-a996-48a8fb7c6658" Title="StringSettingsManager Methods" Url="html/7bf6c3c6-03c2-a555-0130-dd3452d2ff23.htm">
+      <HelpTOCNode Id="613fb984-d33d-4e58-9a35-3ccdf2ebffff" Title="StringSettingsManager Methods" Url="html/7bf6c3c6-03c2-a555-0130-dd3452d2ff23.htm">
         <HelpTOCNode Title="GetAlwaysUsePrompt Method " Url="html/c8560504-06c5-431a-7bbc-e17afacb1159.htm" />
         <HelpTOCNode Title="GetPaletteExplorerLocation Method " Url="html/1a6d5cbf-ccb9-e1be-4531-b2b8f8cfcc5c.htm" />
         <HelpTOCNode Title="GetSettingsModified Method " Url="html/dac5cc3a-d43b-fec2-2561-0080a24d372b.htm" />
@@ -1152,13 +1152,13 @@
         <HelpTOCNode Title="SetVirusTotalAPIKey Method " Url="html/faaed558-d9fb-33f8-6a40-58ac8eedd504.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="45c2e6db-97ed-499e-b821-54c22d1c4727" Title="ThemeSettingsManager Class" Url="html/55bc4b75-50ac-e010-da12-a84dda724fba.htm">
+    <HelpTOCNode Id="03046f6d-ec23-4782-9f2c-77f080d06f10" Title="ThemeSettingsManager Class" Url="html/55bc4b75-50ac-e010-da12-a84dda724fba.htm">
       <HelpTOCNode Title="ThemeSettingsManager Constructor " Url="html/f2673831-5825-2927-8344-dfaa49b26329.htm" />
-      <HelpTOCNode Id="8f865a80-3e44-4ccd-8f7d-94094546f7d8" Title="ThemeSettingsManager Properties" Url="html/f57c8d01-e596-7b08-00ce-ff164e50c806.htm">
+      <HelpTOCNode Id="433c00e1-c9cf-4659-af7f-960e19707257" Title="ThemeSettingsManager Properties" Url="html/f57c8d01-e596-7b08-00ce-ff164e50c806.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/70688473-1cef-1016-f2b2-c39a32dd0a81.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/1889f3e2-d52a-8b57-1a13-f1c8bbe24246.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="e2a4eca7-0b7f-4801-a0e1-9c81a3bedfc3" Title="ThemeSettingsManager Methods" Url="html/6af1f1c9-e646-ce3d-26ad-03d243f88ccc.htm">
+      <HelpTOCNode Id="bad4a568-0023-4104-90ba-c629c277e40b" Title="ThemeSettingsManager Methods" Url="html/6af1f1c9-e646-ce3d-26ad-03d243f88ccc.htm">
         <HelpTOCNode Title="GetAlwaysUsePrompt Method " Url="html/39181b95-b1ed-c744-d447-c5660a8fae4c.htm" />
         <HelpTOCNode Title="GetDefaultTheme Method " Url="html/dd24952b-6e07-2b1b-6f8f-5440dce3caed.htm" />
         <HelpTOCNode Title="GetGlobalManager Method " Url="html/55268f56-6c02-b62e-e0ec-40d465046971.htm" />
@@ -1171,13 +1171,13 @@
         <HelpTOCNode Title="SetSettingsModified Method " Url="html/6ec6b548-c6d0-cbf0-4328-d9898d2c5217.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b28137bc-85f2-429b-9881-fe3261e5a0e3" Title="WindowLocationSettingsManager Class" Url="html/02b7ef5a-748d-8c40-b980-24fc692c5ddc.htm">
+    <HelpTOCNode Id="778cdc86-fa19-4512-b7ef-99d0376c3e2f" Title="WindowLocationSettingsManager Class" Url="html/02b7ef5a-748d-8c40-b980-24fc692c5ddc.htm">
       <HelpTOCNode Title="WindowLocationSettingsManager Constructor " Url="html/283fa7ce-9725-199a-2d90-5d6ed76ac578.htm" />
-      <HelpTOCNode Id="58c708af-1ada-45b4-b9e4-00f95b49678b" Title="WindowLocationSettingsManager Properties" Url="html/ffe92525-9c96-1130-a52d-ff4f74924830.htm">
+      <HelpTOCNode Id="7974615d-beb5-49f6-929e-d1e29bc73d05" Title="WindowLocationSettingsManager Properties" Url="html/ffe92525-9c96-1130-a52d-ff4f74924830.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/477db52d-c3b0-0592-0e59-aad56fcd3afe.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/1f4b5ab8-cd9f-6bd6-7993-503c0529e3f8.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="fe4c1fb9-737f-4c56-9e24-f8d09f0dd5e1" Title="WindowLocationSettingsManager Methods" Url="html/e56cf750-1c2d-a7bc-cbd3-01bb3f721248.htm">
+      <HelpTOCNode Id="43069629-3058-4bb8-98bb-76180d28063e" Title="WindowLocationSettingsManager Methods" Url="html/e56cf750-1c2d-a7bc-cbd3-01bb3f721248.htm">
         <HelpTOCNode Title="GetAlwaysUsePrompt Method " Url="html/15007233-44ef-f3bd-8bf1-387ddc482bb4.htm" />
         <HelpTOCNode Title="GetDefaultWindowPosition Method " Url="html/69a534dc-3c9f-0bde-dbff-1e6d3e6a446b.htm" />
         <HelpTOCNode Title="GetSettingsModified Method " Url="html/7556468f-5ad6-df52-d47e-904d1906c6a3.htm" />
@@ -1189,14 +1189,14 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="94360f96-0d93-4ed3-944a-08a33f7880f0" Title="ToolkitSettings.Classes.Global" Url="html/0b715289-03db-de28-9ec5-2073e364ebc8.htm">
-    <HelpTOCNode Id="da1a4333-2a6d-43ee-b2f5-695078b37188" Title="GlobalBooleanSettingsManager Class" Url="html/a0d44c65-804e-fe41-5dc6-a2d81ed27ca5.htm">
+  <HelpTOCNode Id="d934b960-6f74-4652-b85f-f30744f8cf33" Title="ToolkitSettings.Classes.Global" Url="html/0b715289-03db-de28-9ec5-2073e364ebc8.htm">
+    <HelpTOCNode Id="65112e73-118c-4c78-9422-350ba9c316b9" Title="GlobalBooleanSettingsManager Class" Url="html/a0d44c65-804e-fe41-5dc6-a2d81ed27ca5.htm">
       <HelpTOCNode Title="GlobalBooleanSettingsManager Constructor " Url="html/f4b5a067-831a-de39-44cd-3a68e0a52c2e.htm" />
-      <HelpTOCNode Id="f89a4a02-4f24-45c5-91da-9c8522462318" Title="GlobalBooleanSettingsManager Properties" Url="html/1cdc070e-7a71-e748-0740-3c50806cfd13.htm">
+      <HelpTOCNode Id="07d223b0-a883-40cf-aadf-02db957ae23f" Title="GlobalBooleanSettingsManager Properties" Url="html/1cdc070e-7a71-e748-0740-3c50806cfd13.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/266589e9-4355-33e7-a26c-fa71422bf08f.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/371f0c22-54c2-7ee4-31d0-472028d05b45.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="78adaee2-3277-414e-94c9-cc3a6721c6ab" Title="GlobalBooleanSettingsManager Methods" Url="html/9a8d48f6-2e94-4de4-8809-284fe8bef81b.htm">
+      <HelpTOCNode Id="a1102f0c-7e1a-40ed-b1da-172528501106" Title="GlobalBooleanSettingsManager Methods" Url="html/9a8d48f6-2e94-4de4-8809-284fe8bef81b.htm">
         <HelpTOCNode Title="GetAlwaysUsePrompt Method " Url="html/48948773-acb4-c7c0-ebdc-db35ade7c856.htm" />
         <HelpTOCNode Title="GetAutomaticallyUpdateColours Method " Url="html/ae1e4a21-35ea-65f5-f64e-4d099f6b2040.htm" />
         <HelpTOCNode Title="GetDisableListItem Method " Url="html/28fd1b17-4591-bc06-3b0f-a9176969e367.htm" />
@@ -1223,9 +1223,9 @@
         <HelpTOCNode Title="SetUsePromptFeedback Method " Url="html/6b4034f9-429b-0b7d-a26c-0f9df352c2ee.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="62a7b78f-6b03-42cc-8bd8-94cea97675ed" Title="GlobalStringSettingsManager Class" Url="html/fedbc4ba-18dc-2555-bae5-2b6b8fea2574.htm">
+    <HelpTOCNode Id="06b1c83a-af5e-4c05-a84a-6f3213d48c03" Title="GlobalStringSettingsManager Class" Url="html/fedbc4ba-18dc-2555-bae5-2b6b8fea2574.htm">
       <HelpTOCNode Title="GlobalStringSettingsManager Constructor " Url="html/3a157ce4-13c4-4693-8b53-4c85cf919424.htm" />
-      <HelpTOCNode Id="f3561372-556c-45b2-9604-b51090b91282" Title="GlobalStringSettingsManager Methods" Url="html/0fb3ace8-45dc-8a1a-f848-78d863c62ad3.htm">
+      <HelpTOCNode Id="43926db3-a1e4-4395-9c37-fedf4d16b019" Title="GlobalStringSettingsManager Methods" Url="html/0fb3ace8-45dc-8a1a-f848-78d863c62ad3.htm">
         <HelpTOCNode Title="GetBasePaletteMode Method " Url="html/44389274-002c-948e-b3a1-5b8df1efc89c.htm" />
         <HelpTOCNode Title="GetFeedbackText Method " Url="html/815234c4-f515-5fa9-85de-5a4e51e5626d.htm" />
         <HelpTOCNode Title="GetHashFileTypeExtensionList Method " Url="html/846874fa-7aea-6cd6-2e31-ae41be3c02c5.htm" />
@@ -1239,16 +1239,16 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="1114f849-0e61-419c-8b54-d128a9bf3834" Title="ToolkitSettings.Classes.Helpers" Url="html/ba76297f-7752-a245-7e3f-8539e4aaa94a.htm">
-    <HelpTOCNode Id="d36ea0b4-2feb-434a-8a2c-95d84d7133e9" Title="ColourMerger Class" Url="html/54b8ed05-dd59-dc29-54b7-6396bb398d69.htm">
+  <HelpTOCNode Id="adad447b-fbf6-4f35-9ae9-6b47a0a2bfe0" Title="ToolkitSettings.Classes.Helpers" Url="html/ba76297f-7752-a245-7e3f-8539e4aaa94a.htm">
+    <HelpTOCNode Id="1bd563f6-e941-4100-bcad-1fe93fd34021" Title="ColourMerger Class" Url="html/54b8ed05-dd59-dc29-54b7-6396bb398d69.htm">
       <HelpTOCNode Title="ColourMerger Constructor " Url="html/93a7bc7e-f090-56d0-e68c-2ae2bb700c67.htm" />
-      <HelpTOCNode Id="9a45d8ac-dc81-4fdb-bcc7-c6fc24d168de" Title="ColourMerger Methods" Url="html/91058055-adbb-8cc6-8602-7a3e4de32a2a.htm">
+      <HelpTOCNode Id="9ee4f467-7ab4-4190-a46d-85fa6d52e34d" Title="ColourMerger Methods" Url="html/91058055-adbb-8cc6-8602-7a3e4de32a2a.htm">
         <HelpTOCNode Title="MergeColours Method " Url="html/e413e02e-d573-ef93-ed53-82fad7fb285d.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b082f962-17c2-4b1a-8316-ee230b4ef1e2" Title="SettingsVarifier Class" Url="html/0c783ea2-9b5b-81b2-22f8-3f7db6a4955d.htm">
+    <HelpTOCNode Id="cda63701-2d3c-49a5-8a1d-a6c9258dba3d" Title="SettingsVarifier Class" Url="html/0c783ea2-9b5b-81b2-22f8-3f7db6a4955d.htm">
       <HelpTOCNode Title="SettingsVarifier Constructor " Url="html/5fcc5045-c02c-6775-889c-1649a81c4e78.htm" />
-      <HelpTOCNode Id="81a8ff45-bd50-44db-bb59-867539ff8dc1" Title="SettingsVarifier Methods" Url="html/347f4853-37b5-3b21-7116-b7e91f48ecf1.htm">
+      <HelpTOCNode Id="7f206219-a81f-49ba-aa5f-947c586432d2" Title="SettingsVarifier Methods" Url="html/347f4853-37b5-3b21-7116-b7e91f48ecf1.htm">
         <HelpTOCNode Title="AreAllMergedColourSettingsDefault Method " Url="html/d4a220e0-3309-53af-cdd9-30089442cf8c.htm" />
         <HelpTOCNode Title="AreApplicationUpdaterThemeSettingsDefault Method " Url="html/ae54f069-beae-3f4f-cb60-ccaf7efb429c.htm" />
         <HelpTOCNode Title="AreExtendedControlsBooleanSettingsDefault Method " Url="html/8ca1575e-9ca6-3629-984b-04d5f31aef4e.htm" />
@@ -1261,17 +1261,17 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="680755ff-cf1d-4e90-b499-4ad0111f1feb" Title="ToolkitSettings.Classes.PaletteExplorer" Url="html/8a9e9ccb-d52e-23b4-0eaf-25774ed89efc.htm">
-    <HelpTOCNode Id="4d4b2e7d-d173-49f9-b3c7-3eaee429b47d" Title="ColourCollectionStringSettingsManager Class" Url="html/e1a97c6c-d8cf-d5cb-958c-bc878ddb9885.htm">
+  <HelpTOCNode Id="5bcefc3f-ddb2-4ed8-bc9c-b12c5861693a" Title="ToolkitSettings.Classes.PaletteExplorer" Url="html/8a9e9ccb-d52e-23b4-0eaf-25774ed89efc.htm">
+    <HelpTOCNode Id="c9b68e0a-602c-47ef-876f-648f2e3286f9" Title="ColourCollectionStringSettingsManager Class" Url="html/e1a97c6c-d8cf-d5cb-958c-bc878ddb9885.htm">
       <HelpTOCNode Title="ColourCollectionStringSettingsManager Constructor " Url="html/63f7dc14-d764-d296-a1c3-63853ac6cd98.htm" />
-      <HelpTOCNode Id="eb93b730-6b75-46ab-bf03-d46669325817" Title="ColourCollectionStringSettingsManager Methods" Url="html/5c4bd0e9-8952-53fd-0f40-0d01db2cb0ff.htm">
+      <HelpTOCNode Id="9807f565-8158-427c-8474-7410b1b759c6" Title="ColourCollectionStringSettingsManager Methods" Url="html/5c4bd0e9-8952-53fd-0f40-0d01db2cb0ff.htm">
         <HelpTOCNode Title="GetColourStringCollectionValues Method " Url="html/c23f4a6e-eafe-ce36-ecf8-c99dae082082.htm" />
         <HelpTOCNode Title="SetColourStringCollectionValues Method " Url="html/5d3d6a24-4ffd-43bb-bf68-61e3e22845d5.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="c2a1eda7-fc9c-44eb-9799-9ad4e0757fc3" Title="ColourIntensitySettingsManager Class" Url="html/2b2043d0-93b7-a34e-e16a-083ccbecdef5.htm">
+    <HelpTOCNode Id="9e74921b-44d3-429a-b7f5-5bd942ab145e" Title="ColourIntensitySettingsManager Class" Url="html/2b2043d0-93b7-a34e-e16a-083ccbecdef5.htm">
       <HelpTOCNode Title="ColourIntensitySettingsManager Constructor " Url="html/582b8d47-c5e6-9f08-8135-ac67ad14e168.htm" />
-      <HelpTOCNode Id="1ac935a6-8ec4-45da-afdb-e66c5396317e" Title="ColourIntensitySettingsManager Methods" Url="html/4ecf463d-ae13-4009-5483-67c0ab6b0400.htm">
+      <HelpTOCNode Id="1f14f3ba-a5bf-49ab-bf2c-f420e4101e2b" Title="ColourIntensitySettingsManager Methods" Url="html/4ecf463d-ae13-4009-5483-67c0ab6b0400.htm">
         <HelpTOCNode Title="GetDarkestColourIntensity Method " Url="html/576d296e-cf78-e80c-a8ac-92c5c2a455f6.htm" />
         <HelpTOCNode Title="GetLightColourIntensity Method " Url="html/24462f9e-f93c-46eb-fe94-34f033989ff8.htm" />
         <HelpTOCNode Title="GetLightestColourIntensity Method " Url="html/669d5fd3-1ba4-b05e-b741-1204bd8f4bf9.htm" />
@@ -1284,13 +1284,13 @@
         <HelpTOCNode Title="SetMediumColourIntensity Method " Url="html/366493c8-51cd-60ed-b427-9fb46dd1bfc6.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="ab430147-67a4-4ffc-ba22-a9bf5ce76d85" Title="GeneralPaletteExplorerSettingsManager Class" Url="html/0459465b-1aba-a691-ddd1-2ea53d7dd65a.htm">
+    <HelpTOCNode Id="8f165056-13ef-4f6d-9e89-f14b4c4bcbbe" Title="GeneralPaletteExplorerSettingsManager Class" Url="html/0459465b-1aba-a691-ddd1-2ea53d7dd65a.htm">
       <HelpTOCNode Title="GeneralPaletteExplorerSettingsManager Constructor " Url="html/0e6cbb92-d4ca-c4f2-993d-34e1e42d1b3f.htm" />
-      <HelpTOCNode Id="118e61d2-9e18-45b7-a719-a06a058a5e05" Title="GeneralPaletteExplorerSettingsManager Properties" Url="html/a76b9ddf-9aea-dbeb-6489-327d2680cdf2.htm">
+      <HelpTOCNode Id="ab5fb4a4-43ab-421b-8050-e2b25ee06d34" Title="GeneralPaletteExplorerSettingsManager Properties" Url="html/a76b9ddf-9aea-dbeb-6489-327d2680cdf2.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/f328f761-fbe5-ff5d-8a41-e1b03a07fd5e.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/cc2c3124-af4a-e85b-1893-92d792287443.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="60fd8878-46de-486e-b1b1-09b2de327ccd" Title="GeneralPaletteExplorerSettingsManager Methods" Url="html/64f4c273-0030-611f-da6c-27203b8830a2.htm">
+      <HelpTOCNode Id="26bb3844-2806-4664-a1e9-9fcab6d6b127" Title="GeneralPaletteExplorerSettingsManager Methods" Url="html/64f4c273-0030-611f-da6c-27203b8830a2.htm">
         <HelpTOCNode Title="GetAlwaysUsePrompt Method " Url="html/8922a82e-e7c7-3589-8fd8-4482a796ca81.htm" />
         <HelpTOCNode Title="GetDefaultColour Method " Url="html/5d83c0b5-5b16-6f5a-ba96-36040941835d.htm" />
         <HelpTOCNode Title="GetDisplayIndex Method " Url="html/cd4bd659-1ed4-0898-c176-d0f54cae39f9.htm" />
@@ -1313,13 +1313,13 @@
         <HelpTOCNode Title="SetShowStandardDisplay Method " Url="html/f78ef644-e758-3f84-e509-62ce682abf47.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b8eeff41-f511-4827-b6fd-1f66b9923d22" Title="PaletteExplorerBooleanSettingsManager Class" Url="html/aff91135-5a97-f895-470f-17a4faa00304.htm">
+    <HelpTOCNode Id="5b93f094-7b0c-45e0-bb62-c24c2317231a" Title="PaletteExplorerBooleanSettingsManager Class" Url="html/aff91135-5a97-f895-470f-17a4faa00304.htm">
       <HelpTOCNode Title="PaletteExplorerBooleanSettingsManager Constructor " Url="html/e2a9bac4-3960-280f-7eae-1c1a169ba362.htm" />
-      <HelpTOCNode Id="f156e7de-b97a-4aaa-939e-a60ddf953af4" Title="PaletteExplorerBooleanSettingsManager Properties" Url="html/b6cf4dbd-e2c1-5e70-b00d-038fc83ea7c3.htm">
+      <HelpTOCNode Id="0b6f3d2c-f61b-4799-bb77-c097e2b817b6" Title="PaletteExplorerBooleanSettingsManager Properties" Url="html/b6cf4dbd-e2c1-5e70-b00d-038fc83ea7c3.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/2c71921f-92b0-c7a5-55d7-3f965ba7f7a5.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/463a3bc9-ae19-341a-d2a9-e33977b4ee9a.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="51a6802f-3666-41ff-9fd8-cbab042b827d" Title="PaletteExplorerBooleanSettingsManager Methods" Url="html/07cd030b-d324-651d-e9c5-a310ebf17145.htm">
+      <HelpTOCNode Id="d50b1da7-65a0-40b8-a11c-a43e5cd8cbf7" Title="PaletteExplorerBooleanSettingsManager Methods" Url="html/07cd030b-d324-651d-e9c5-a310ebf17145.htm">
         <HelpTOCNode Title="GetAlwaysUsePrompt Method " Url="html/382bb437-b66e-6606-c1c9-48241b90be96.htm" />
         <HelpTOCNode Title="GetSettingsModified Method " Url="html/de75f2c7-36fe-2dbe-fb39-68c36656dc40.htm" />
         <HelpTOCNode Title="GetShowAdvancedColourToolTips Method " Url="html/0960c1da-a934-a7e2-9148-8edc3539cd30.htm" />
@@ -1330,9 +1330,9 @@
         <HelpTOCNode Title="SetShowAdvancedColourToolTips Method " Url="html/f2e1b3db-54f3-ab66-20c7-2ed16fd64673.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="61730f8e-a434-4032-96ef-84bb6dcac419" Title="PaletteThemeSettingsManager Class" Url="html/9c5ca5b1-ac98-a0bf-e758-8baa514e7203.htm">
+    <HelpTOCNode Id="4c6cd73c-1aaa-4f8b-b0c2-1fd9da3b17bd" Title="PaletteThemeSettingsManager Class" Url="html/9c5ca5b1-ac98-a0bf-e758-8baa514e7203.htm">
       <HelpTOCNode Title="PaletteThemeSettingsManager Constructor " Url="html/3eebcd7f-326e-4363-dd31-8b1ae11f566c.htm" />
-      <HelpTOCNode Id="efba81b2-d48c-46ed-a4d0-80682b86af1c" Title="PaletteThemeSettingsManager Methods" Url="html/2db9536f-7978-37dd-ea1b-a5f3fc37573c.htm">
+      <HelpTOCNode Id="0ce67581-cc42-479f-a1ce-eefa46fa65a9" Title="PaletteThemeSettingsManager Methods" Url="html/2db9536f-7978-37dd-ea1b-a5f3fc37573c.htm">
         <HelpTOCNode Title="GetCustomThemeFilePath Method " Url="html/3d106db7-8d25-a3ad-b1ec-876ebff03236.htm" />
         <HelpTOCNode Title="GetTheme Method " Url="html/b7ca7425-1409-c07a-7cac-1284440a580d.htm" />
         <HelpTOCNode Title="ResetPaletteThemeSettings Method " Url="html/f12bf46e-e8b1-00de-0601-c7f3db7ec0f1.htm" />
@@ -1341,22 +1341,22 @@
         <HelpTOCNode Title="SetTheme Method " Url="html/a358c7b9-02cd-16a7-ea0e-0d0d108ec99d.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="150bcf69-50b9-42e0-8fbf-2e9519e3fb6e" Title="PaletteTypefaceSettingsManager Class" Url="html/e9558632-ed30-aa4b-20c6-2fdee336150d.htm">
+    <HelpTOCNode Id="64d4dc10-19b1-4399-be4a-bccec8318610" Title="PaletteTypefaceSettingsManager Class" Url="html/e9558632-ed30-aa4b-20c6-2fdee336150d.htm">
       <HelpTOCNode Title="PaletteTypefaceSettingsManager Constructor " Url="html/05fd5cc5-0ce7-0166-7c8f-ebfdb676896c.htm" />
-      <HelpTOCNode Id="69979aba-72d6-456e-9685-f50058aefcbb" Title="PaletteTypefaceSettingsManager Methods" Url="html/af366e74-50d1-acae-4f72-42d09fb1a611.htm">
+      <HelpTOCNode Id="fe60d284-736d-49c9-abb4-d6175aa04a76" Title="PaletteTypefaceSettingsManager Methods" Url="html/af366e74-50d1-acae-4f72-42d09fb1a611.htm">
         <HelpTOCNode Title="GetGlobalPaletteTypeface Method " Url="html/b9de4d4f-27fc-8716-dda3-bf455996ab6a.htm" />
         <HelpTOCNode Title="ResetPaletteTypefaceSettings Method " Url="html/fa71446c-312a-cfdd-aa53-b2afac896a7f.htm" />
         <HelpTOCNode Title="SavePaletteTypefaceSettings Method " Url="html/38ae9655-08a1-89ea-d28f-be70d41e18d2.htm" />
         <HelpTOCNode Title="SetGlobalPaletteTypeface Method " Url="html/4b4a4d5f-f0e7-0d9d-bd2b-d22658fe0afe.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="38c4d3ee-8d82-4bb0-b6b8-7ab7b471e71b" Title="WindowLocationSettingsManager Class" Url="html/dbeb139e-c353-8475-4407-2c763be00a6c.htm">
+    <HelpTOCNode Id="a932eb1d-7667-44a3-ac12-c3d184857650" Title="WindowLocationSettingsManager Class" Url="html/dbeb139e-c353-8475-4407-2c763be00a6c.htm">
       <HelpTOCNode Title="WindowLocationSettingsManager Constructor " Url="html/bed24564-3561-670e-bf6d-1545152c0aac.htm" />
-      <HelpTOCNode Id="bd022bad-a9ff-45c8-8732-08fab62845be" Title="WindowLocationSettingsManager Properties" Url="html/aa72597a-eaa9-ff95-5255-90efe856bc35.htm">
+      <HelpTOCNode Id="e5868662-a351-4937-b1d8-15f7d401de92" Title="WindowLocationSettingsManager Properties" Url="html/aa72597a-eaa9-ff95-5255-90efe856bc35.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/ebab8288-7f34-18d6-b5fa-494c423ee084.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/9f11929f-f086-8b38-2d53-427a291d8fab.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="464bbfc4-10b8-48de-9e64-f93e4a33d262" Title="WindowLocationSettingsManager Methods" Url="html/de67f697-54a7-7c50-24be-d2d50ec081bc.htm">
+      <HelpTOCNode Id="3b96a164-1726-4dd2-8a1c-850c566e74af" Title="WindowLocationSettingsManager Methods" Url="html/de67f697-54a7-7c50-24be-d2d50ec081bc.htm">
         <HelpTOCNode Title="GetAlwaysUsePrompt Method " Url="html/a695ae5f-f05e-4e49-0bb2-8ac9003deeda.htm" />
         <HelpTOCNode Title="GetColourPropertiesWindowLocation Method " Url="html/0392d917-d31f-ddca-0078-fd6946a5aef0.htm" />
         <HelpTOCNode Title="GetMainWindowLocation Method " Url="html/c81bd297-213f-c3c5-c99b-a74fe031a523.htm" />
@@ -1372,14 +1372,14 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="e3042a13-81ba-4019-ac89-2048ab0b5baa" Title="ToolkitSettings.Classes.PaletteExplorer.Colours" Url="html/ac625ec8-9aa1-12fa-77af-124bb9ec3125.htm">
-    <HelpTOCNode Id="95fc23ca-3ef1-4f8e-8b0d-ccc031d4685a" Title="AllMergedColourSettingsManager Class" Url="html/1a40ed1e-5fda-4963-0030-b77fa53566ce.htm">
+  <HelpTOCNode Id="895dde8e-7966-4962-b027-502b003cbf7c" Title="ToolkitSettings.Classes.PaletteExplorer.Colours" Url="html/ac625ec8-9aa1-12fa-77af-124bb9ec3125.htm">
+    <HelpTOCNode Id="6f3120c2-cd9c-48f0-bc9c-b7cfc0a3f87e" Title="AllMergedColourSettingsManager Class" Url="html/1a40ed1e-5fda-4963-0030-b77fa53566ce.htm">
       <HelpTOCNode Title="AllMergedColourSettingsManager Constructor " Url="html/077d2559-c2e8-6a70-875d-60105b62cd8d.htm" />
-      <HelpTOCNode Id="0c4d6227-e790-4e35-9124-9c9c8ffe26a0" Title="AllMergedColourSettingsManager Properties" Url="html/7d3ae59d-d004-0d75-b866-131ca8a8844f.htm">
+      <HelpTOCNode Id="9939a7fd-c770-4910-92a7-e408177c43c9" Title="AllMergedColourSettingsManager Properties" Url="html/7d3ae59d-d004-0d75-b866-131ca8a8844f.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/8ba3048f-e8e0-97bd-7c25-521659c2c568.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/6ccdd9e5-0812-878f-50e2-be2dc831c483.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="a4be26d8-4880-45be-b371-9ae01814c964" Title="AllMergedColourSettingsManager Methods" Url="html/e56b19c0-6fa6-1600-9f46-08d796c18f0d.htm">
+      <HelpTOCNode Id="4216e60b-b183-4d8d-8d30-334a14c9c975" Title="AllMergedColourSettingsManager Methods" Url="html/e56b19c0-6fa6-1600-9f46-08d796c18f0d.htm">
         <HelpTOCNode Title="CreateARGBConfigurationFile Method " Url="html/f54b845e-9db9-2d7b-5afc-146a867ee73c.htm" />
         <HelpTOCNode Title="CreateRGBConfigurationFile Method " Url="html/94973ef8-a843-3d6c-9d7d-06cb23d98ba1.htm" />
         <HelpTOCNode Title="GetAlternativeNormalTextColour Method " Url="html/bdea2c70-1fef-abff-d8b8-382c7cecb77f.htm" />
@@ -1456,13 +1456,13 @@
         <HelpTOCNode Title="WriteRGBColoursToFile Method " Url="html/157e6eff-12b4-5019-3eb3-66d347b93a32.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="edce3f2d-a3bc-458a-90ff-4f9c424fb400" Title="BasicColourSettingsManager Class" Url="html/be315857-d10f-4eba-ecde-8120ca64c05d.htm">
+    <HelpTOCNode Id="9063a42b-0f85-4d81-be36-f97bf5c3103c" Title="BasicColourSettingsManager Class" Url="html/be315857-d10f-4eba-ecde-8120ca64c05d.htm">
       <HelpTOCNode Title="BasicColourSettingsManager Constructor " Url="html/fc50272f-7ae5-bd5b-95e5-f107164c57fd.htm" />
-      <HelpTOCNode Id="7eeeba0a-7629-4eea-b59a-e1a03e71a3da" Title="BasicColourSettingsManager Properties" Url="html/db0eaa57-2546-c896-906c-18270b2d7c2c.htm">
+      <HelpTOCNode Id="81ded128-2bd2-4169-941a-4ec9573abd97" Title="BasicColourSettingsManager Properties" Url="html/db0eaa57-2546-c896-906c-18270b2d7c2c.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/e797ae91-c8cc-b9a3-c04b-082c62e48fd1.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/dbe4ba77-a5ab-3188-bafe-d310bac532d0.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="920c1969-e6ea-4368-a74f-653069f5677f" Title="BasicColourSettingsManager Methods" Url="html/e640a373-db83-d57c-6dc2-2891c74a5d14.htm">
+      <HelpTOCNode Id="84e6916a-f39c-4a15-8677-186a948ee9e5" Title="BasicColourSettingsManager Methods" Url="html/e640a373-db83-d57c-6dc2-2891c74a5d14.htm">
         <HelpTOCNode Title="AreBasicPaletteColoursEmpty Method " Url="html/3a4e7542-2c79-27a8-c292-66dd85320609.htm" />
         <HelpTOCNode Title="CreateARGBConfigurationFile Method " Url="html/f6657212-9da3-7d75-9c07-3fe198f999ca.htm" />
         <HelpTOCNode Title="CreateRGBConfigurationFile Method " Url="html/c71122f8-f108-7f74-9361-f1164eab5bfd.htm" />
@@ -1486,13 +1486,13 @@
         <HelpTOCNode Title="WriteRGBColoursToFile Method " Url="html/269b9be4-627c-ba50-3174-209fef87340f.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="160333fc-6ca8-4867-9a0f-88723cc8eca9" Title="CustomColourSettingsManager Class" Url="html/12549728-2b89-029a-6b64-b7b1d366ccb7.htm">
+    <HelpTOCNode Id="c061e843-6afc-4a4d-808c-d54d462a3e8b" Title="CustomColourSettingsManager Class" Url="html/12549728-2b89-029a-6b64-b7b1d366ccb7.htm">
       <HelpTOCNode Title="CustomColourSettingsManager Constructor " Url="html/f5ca7029-4278-defc-50a1-049dc239c166.htm" />
-      <HelpTOCNode Id="a7dda958-dd7f-48c5-b8f4-2837b29e9730" Title="CustomColourSettingsManager Properties" Url="html/4b89505a-a219-0d32-e85e-648923f5a7e8.htm">
+      <HelpTOCNode Id="a1abd0a5-9264-44e3-8859-e748e8499c5a" Title="CustomColourSettingsManager Properties" Url="html/4b89505a-a219-0d32-e85e-648923f5a7e8.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/60707c32-af91-ed29-367b-f63c13cd1073.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/5c81f405-3223-67d4-395e-292daf25ba0d.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="db215ddc-20f8-43d3-9a77-4832f9c1dc21" Title="CustomColourSettingsManager Methods" Url="html/0b8180c7-0494-5d94-af20-afe591dcbee0.htm">
+      <HelpTOCNode Id="16464236-556c-482c-b777-929b6bf16e48" Title="CustomColourSettingsManager Methods" Url="html/0b8180c7-0494-5d94-af20-afe591dcbee0.htm">
         <HelpTOCNode Title="AreCustomPaletteColoursEmpty Method " Url="html/3d7d4b7c-2c56-5f5b-5d0e-9ba10925dae8.htm" />
         <HelpTOCNode Title="CreateARGBConfigurationFile Method " Url="html/c5b80521-6d8b-92c9-9390-54d47dc1d054.htm" />
         <HelpTOCNode Title="CreateRGBConfigurationFile Method " Url="html/6e6826ee-619d-d13c-0b4c-bb7e216ffd99.htm" />
@@ -1518,13 +1518,13 @@
         <HelpTOCNode Title="WriteRGBColoursToFile Method " Url="html/44b349c1-934c-ebc0-292f-948dd26cfbf2.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="c2193100-2a4c-4eea-9f4a-bdf6261b9028" Title="CustomTextColourSettingsManager Class" Url="html/11552519-1c6c-577a-1c35-ee94bd8dbf52.htm">
+    <HelpTOCNode Id="011c5e2b-810d-4211-9d01-e578becdc532" Title="CustomTextColourSettingsManager Class" Url="html/11552519-1c6c-577a-1c35-ee94bd8dbf52.htm">
       <HelpTOCNode Title="CustomTextColourSettingsManager Constructor " Url="html/b05cad09-319e-1a0e-3e05-2f1dd548bbb9.htm" />
-      <HelpTOCNode Id="9530b892-8dd6-4727-aea6-245ef3b3b6e2" Title="CustomTextColourSettingsManager Properties" Url="html/91d68617-4558-f180-08af-ed963e9f708d.htm">
+      <HelpTOCNode Id="e8816914-0eb2-4248-8962-daa3c65dd834" Title="CustomTextColourSettingsManager Properties" Url="html/91d68617-4558-f180-08af-ed963e9f708d.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/e2837c58-24c4-ec75-a4cc-5162de408dda.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/a783beaf-2015-44cc-f18d-9e8b71d6209d.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="f7a67195-decb-4673-927e-930d8961d09a" Title="CustomTextColourSettingsManager Methods" Url="html/64fb6de0-82d0-5afa-a892-2ac23e0f6c26.htm">
+      <HelpTOCNode Id="2fa43ce6-8a2a-4cf4-a1ac-08d17f568546" Title="CustomTextColourSettingsManager Methods" Url="html/64fb6de0-82d0-5afa-a892-2ac23e0f6c26.htm">
         <HelpTOCNode Title="AreCustomPaletteTextColoursEmpty Method " Url="html/bd268edd-cb64-0ae5-9daa-54d8da40f006.htm" />
         <HelpTOCNode Title="CreateARGBConfigurationFile Method " Url="html/b0666e2e-229e-b1f4-8cdc-05e5c2b5ff5c.htm" />
         <HelpTOCNode Title="CreateRGBConfigurationFile Method " Url="html/10201966-721e-4e8e-355a-37b9df77039c.htm" />
@@ -1550,13 +1550,13 @@
         <HelpTOCNode Title="WriteRGBColoursToFile Method " Url="html/db41f3f7-4231-c67f-2e36-cc01e3e4fac5.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="697e55d1-8876-46a6-9d54-9a5f58ba7430" Title="LinkTextColourSettingsManager Class" Url="html/944b3b83-27a0-ec78-a5d0-485a1480a0b9.htm">
+    <HelpTOCNode Id="c2979a90-8b6e-4ae3-a885-a725a8c1ad67" Title="LinkTextColourSettingsManager Class" Url="html/944b3b83-27a0-ec78-a5d0-485a1480a0b9.htm">
       <HelpTOCNode Title="LinkTextColourSettingsManager Constructor " Url="html/149a9518-687b-0d92-58b2-d87493119055.htm" />
-      <HelpTOCNode Id="f6b25837-36d1-4f74-ac7c-71d3cd51a31a" Title="LinkTextColourSettingsManager Properties" Url="html/05c7f2c4-9f1a-ef8a-4752-f29dd5cc8c33.htm">
+      <HelpTOCNode Id="e6cd569f-313d-4d6d-a0ce-1cbbea7009d6" Title="LinkTextColourSettingsManager Properties" Url="html/05c7f2c4-9f1a-ef8a-4752-f29dd5cc8c33.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/b2a619f2-be1d-94ec-2283-27bd670e5371.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/a88c3a4c-baee-bfaf-d717-b0edbdaee697.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="c83f193a-5ae8-4175-a956-654b72b39bb3" Title="LinkTextColourSettingsManager Methods" Url="html/83c2246b-69ff-d6c8-6df4-8a914ac17a22.htm">
+      <HelpTOCNode Id="574aba87-8d6b-4a77-b64c-119482f2bfff" Title="LinkTextColourSettingsManager Methods" Url="html/83c2246b-69ff-d6c8-6df4-8a914ac17a22.htm">
         <HelpTOCNode Title="AreLinkTextPaletteColoursEmpty Method " Url="html/99c35633-88cd-c446-b2e6-44f13661c1e5.htm" />
         <HelpTOCNode Title="CreateARGBConfigurationFile Method " Url="html/7ae60cbe-6831-8c0a-31c6-283a734a12da.htm" />
         <HelpTOCNode Title="CreateRGBConfigurationFile Method " Url="html/0123c6e0-e403-ef12-a8f7-5eb6178dd8a2.htm" />
@@ -1580,13 +1580,13 @@
         <HelpTOCNode Title="WriteRGBColoursToFile Method " Url="html/b70e4e76-1bd3-4851-91d8-fe63bd27cadc.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="122c2e1d-ec9d-4d97-a2b6-db0e7b765eab" Title="MiscellaneousColourSettingsManager Class" Url="html/496801c9-f1d9-100c-62b8-cd8ed3f1eb96.htm">
+    <HelpTOCNode Id="41a2a331-1245-4234-a30a-b3c10e336e9a" Title="MiscellaneousColourSettingsManager Class" Url="html/496801c9-f1d9-100c-62b8-cd8ed3f1eb96.htm">
       <HelpTOCNode Title="MiscellaneousColourSettingsManager Constructor " Url="html/179deeb2-6069-1e8a-4153-88cadf56c39d.htm" />
-      <HelpTOCNode Id="ae20a44c-ac82-40db-be24-fef79e11a2b3" Title="MiscellaneousColourSettingsManager Properties" Url="html/8c21ddd4-e042-fe22-a362-5f0ce869bc8b.htm">
+      <HelpTOCNode Id="d6949e42-e383-4144-9d84-bdc9b14d5950" Title="MiscellaneousColourSettingsManager Properties" Url="html/8c21ddd4-e042-fe22-a362-5f0ce869bc8b.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/94a7b461-3d23-fdcd-8b65-c04cc6598e70.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/e4f12434-926c-e558-0021-891a9cd447c4.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="d9b2c71a-16ab-44e4-9385-c076db328aca" Title="MiscellaneousColourSettingsManager Methods" Url="html/eaeac62b-03c8-0d60-98c9-5129957a5c24.htm">
+      <HelpTOCNode Id="4f5114ea-8a33-49e4-b79d-6632d3ef1fb7" Title="MiscellaneousColourSettingsManager Methods" Url="html/eaeac62b-03c8-0d60-98c9-5129957a5c24.htm">
         <HelpTOCNode Title="AreMiscellaneousPaletteColoursEmpty Method " Url="html/f910e19a-b3e3-00ee-5769-8874a446572e.htm" />
         <HelpTOCNode Title="CreateARGBConfigurationFile Method " Url="html/01d34578-89b3-49ee-45cc-f4d26a88fe19.htm" />
         <HelpTOCNode Title="CreateRGBConfigurationFile Method " Url="html/4dc3ea8b-228b-2d52-51d8-a8ce2fadb1c7.htm" />
@@ -1604,13 +1604,13 @@
         <HelpTOCNode Title="WriteRGBColoursToFile Method " Url="html/00906594-4d3b-9fa5-a39e-b35c28814f5b.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="c0f15a9a-d671-4294-85f2-c6fa7e96f950" Title="StandardControlTextColourSettingsManager Class" Url="html/9185c383-ff91-1085-251b-a2ea9997617b.htm">
+    <HelpTOCNode Id="ffa0c64a-3200-4110-b0a3-d15659aa8f31" Title="StandardControlTextColourSettingsManager Class" Url="html/9185c383-ff91-1085-251b-a2ea9997617b.htm">
       <HelpTOCNode Title="StandardControlTextColourSettingsManager Constructor " Url="html/b90c5fd5-451b-064b-1fe9-c99433f2f0fb.htm" />
-      <HelpTOCNode Id="40918dce-c481-44a7-8b33-7622a34812fa" Title="StandardControlTextColourSettingsManager Properties" Url="html/9c618978-0c1b-f5f1-eba4-6bc61a499488.htm">
+      <HelpTOCNode Id="735622dc-c37e-42e3-a508-f9807c274c98" Title="StandardControlTextColourSettingsManager Properties" Url="html/9c618978-0c1b-f5f1-eba4-6bc61a499488.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/eed796d4-2e34-d345-3e19-0e316a54cec2.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/a6c947d0-47d2-2dec-8872-eea0f3cbfd05.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="c25d7806-284c-4012-9024-760c60456d64" Title="StandardControlTextColourSettingsManager Methods" Url="html/4fe1b664-4446-6ce2-40a1-bb3c34c863cd.htm">
+      <HelpTOCNode Id="48cbbed5-401b-4b08-9318-8583b10c3b6e" Title="StandardControlTextColourSettingsManager Methods" Url="html/4fe1b664-4446-6ce2-40a1-bb3c34c863cd.htm">
         <HelpTOCNode Title="AreStandardControlTextColoursEmpty Method " Url="html/f2012017-de96-ee6e-0d42-f333da9b093f.htm" />
         <HelpTOCNode Title="CreateARGBConfigurationFile Method " Url="html/26b4c165-d34c-24e3-d4f1-e5dcea14355b.htm" />
         <HelpTOCNode Title="CreateRGBConfigurationFile Method " Url="html/c8ec0d68-ea68-fa07-8515-784999bf6385.htm" />
@@ -1630,13 +1630,13 @@
         <HelpTOCNode Title="WriteRGBColoursToFile Method " Url="html/e15f662b-b0df-fced-f52e-d1a8e6c287d2.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="e8e232a8-4276-42f2-b8d7-f71ac04a095e" Title="TextColourSettingsManager Class" Url="html/8efb00b0-5fdd-a9cf-104f-8cb1818ce22c.htm">
+    <HelpTOCNode Id="4e1f3ad6-7c20-496f-83ea-31bd9b538e1f" Title="TextColourSettingsManager Class" Url="html/8efb00b0-5fdd-a9cf-104f-8cb1818ce22c.htm">
       <HelpTOCNode Title="TextColourSettingsManager Constructor " Url="html/6863d60d-041d-6d2e-7e9a-808594a793a1.htm" />
-      <HelpTOCNode Id="fd85cdc6-e7bb-4984-a4fe-0f8fcf91c1b7" Title="TextColourSettingsManager Properties" Url="html/b3cc87ee-fab2-256b-a070-0ec0e593cf67.htm">
+      <HelpTOCNode Id="0d00b9bc-5f09-4df7-9a0b-5ea38f0fb44c" Title="TextColourSettingsManager Properties" Url="html/b3cc87ee-fab2-256b-a070-0ec0e593cf67.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/043feadc-9985-212d-87bc-b87e7ebaad85.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/6d56ff52-7881-7a45-13c7-c57c75c436c0.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="a3f37a43-08a5-452c-a099-c819265ce121" Title="TextColourSettingsManager Methods" Url="html/7721590d-978a-816e-7184-88e5ae782497.htm">
+      <HelpTOCNode Id="68372d47-25fd-4669-93ea-3b832f67a771" Title="TextColourSettingsManager Methods" Url="html/7721590d-978a-816e-7184-88e5ae782497.htm">
         <HelpTOCNode Title="AreTextPaletteColoursEmpty Method " Url="html/0bdd5b74-bf74-4a60-2f97-634acbdea5ed.htm" />
         <HelpTOCNode Title="CreateARGBConfigurationFile Method " Url="html/1c7b7093-14cf-f53d-0675-0381dadd1993.htm" />
         <HelpTOCNode Title="CreateRGBConfigurationFile Method " Url="html/e3fb243b-5806-bd83-821b-37cc70c6e9a1.htm" />
@@ -1661,14 +1661,14 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="298027b0-877f-4710-8294-feb97d5751df" Title="ToolkitSettings.Classes.PaletteExplorer.Properties" Url="html/dceedd2c-4566-d775-8f82-6983456efa16.htm">
-    <HelpTOCNode Id="66c8d36f-0488-40d0-a229-5885c48af7ee" Title="ColourPropertyWindowSettingsManager Class" Url="html/72e7e45a-358d-3f39-7caa-26cb0ffa7388.htm">
+  <HelpTOCNode Id="61daf5b4-4331-4029-a6a2-2ebeefaedf53" Title="ToolkitSettings.Classes.PaletteExplorer.Properties" Url="html/dceedd2c-4566-d775-8f82-6983456efa16.htm">
+    <HelpTOCNode Id="72e5c87e-2351-4d46-b831-c283e9f4a4bc" Title="ColourPropertyWindowSettingsManager Class" Url="html/72e7e45a-358d-3f39-7caa-26cb0ffa7388.htm">
       <HelpTOCNode Title="ColourPropertyWindowSettingsManager Constructor " Url="html/407c8730-ae27-55b1-9986-0e2450186043.htm" />
-      <HelpTOCNode Id="4ed6f14b-89e4-4716-ada7-7db2aa42f3e1" Title="ColourPropertyWindowSettingsManager Properties" Url="html/b5636d2c-2f76-985f-8ce1-7e92b02962fe.htm">
+      <HelpTOCNode Id="63d86e8c-04b0-4595-85b1-de2c57cdd226" Title="ColourPropertyWindowSettingsManager Properties" Url="html/b5636d2c-2f76-985f-8ce1-7e92b02962fe.htm">
         <HelpTOCNode Title="AlwaysUsePrompt Property " Url="html/4fe4d833-e6c6-9457-13fa-1f03f487fa57.htm" />
         <HelpTOCNode Title="SettingsModified Property " Url="html/1ce403fa-3bce-a3df-5608-f0fe556720cc.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9b1e5ffa-e4ac-4fde-8929-710ebb980269" Title="ColourPropertyWindowSettingsManager Methods" Url="html/23177d3e-4aa2-3c91-ef19-587e8a7c07c7.htm">
+      <HelpTOCNode Id="8686c3cb-9ce9-49a3-b8b9-2a2beab7d304" Title="ColourPropertyWindowSettingsManager Methods" Url="html/23177d3e-4aa2-3c91-ef19-587e8a7c07c7.htm">
         <HelpTOCNode Title="GetAlwaysUsePrompt Method " Url="html/a1a4f9bf-5bca-86ae-f8e7-07a17210fe7d.htm" />
         <HelpTOCNode Title="GetColourControlText Method " Url="html/030750de-fb96-b522-4a55-55b7d30ad71b.htm" />
         <HelpTOCNode Title="GetHotColourControl Method " Url="html/cab1fc4c-dc4f-b5d9-56c9-58af6942b736.htm" />

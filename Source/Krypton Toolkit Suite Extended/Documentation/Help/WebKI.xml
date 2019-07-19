@@ -792,10 +792,10 @@
     <HelpKINode Title="StandardControlTextColourSettingsManager.GetAlwaysUsePrompt Method " Url="html/e9aa0a09-e516-9a02-ec26-7058c916934e.htm" />
     <HelpKINode Title="StringSettingsManager.GetAlwaysUsePrompt Method " Url="html/c8560504-06c5-431a-7bbc-e17afacb1159.htm" />
     <HelpKINode Title="TextColourSettingsManager.GetAlwaysUsePrompt Method " Url="html/245b3372-6fe0-974e-79c3-5e414a8233fc.htm" />
-    <HelpKINode Title="ThemeSettingsManager.GetAlwaysUsePrompt Method " Url="html/39181b95-b1ed-c744-d447-c5660a8fae4c.htm" />
     <HelpKINode Title="ThemeSettingsManager.GetAlwaysUsePrompt Method " Url="html/2b2b34ea-9d95-8cf2-960d-6987f8b73e22.htm" />
-    <HelpKINode Title="WindowLocationSettingsManager.GetAlwaysUsePrompt Method " Url="html/a695ae5f-f05e-4e49-0bb2-8ac9003deeda.htm" />
+    <HelpKINode Title="ThemeSettingsManager.GetAlwaysUsePrompt Method " Url="html/39181b95-b1ed-c744-d447-c5660a8fae4c.htm" />
     <HelpKINode Title="WindowLocationSettingsManager.GetAlwaysUsePrompt Method " Url="html/15007233-44ef-f3bd-8bf1-387ddc482bb4.htm" />
+    <HelpKINode Title="WindowLocationSettingsManager.GetAlwaysUsePrompt Method " Url="html/a695ae5f-f05e-4e49-0bb2-8ac9003deeda.htm" />
     <HelpKINode Title="XMLFileApplicationUpdaterSettingsManager.GetAlwaysUsePrompt Method " Url="html/48dc6608-553b-5590-d9c2-f348791ea7cd.htm" />
   </HelpKINode>
   <HelpKINode Title="GetAlwaysUseUACElevation method" Url="html/c992f6fa-d3e9-2a59-9f8a-c8e97c52d05e.htm" />
@@ -2478,8 +2478,8 @@
     <HelpKINode Title="StandardControlTextColourSettingsManager.SetSettingsModified Method " Url="html/1782974e-9939-f8e0-9717-ff3bd1c0e252.htm" />
     <HelpKINode Title="StringSettingsManager.SetSettingsModified Method " Url="html/46ce7287-8526-41a3-9285-c66bce104b6a.htm" />
     <HelpKINode Title="TextColourSettingsManager.SetSettingsModified Method " Url="html/178bcbc4-17bd-fb45-ff2e-98ec6bb1e32e.htm" />
-    <HelpKINode Title="ThemeSettingsManager.SetSettingsModified Method " Url="html/87044bec-d70d-86b4-56ef-fc841f3f7505.htm" />
     <HelpKINode Title="ThemeSettingsManager.SetSettingsModified Method " Url="html/6ec6b548-c6d0-cbf0-4328-d9898d2c5217.htm" />
+    <HelpKINode Title="ThemeSettingsManager.SetSettingsModified Method " Url="html/87044bec-d70d-86b4-56ef-fc841f3f7505.htm" />
     <HelpKINode Title="WindowLocationSettingsManager.SetSettingsModified Method " Url="html/08370b51-13b1-0515-f9e0-1adf4bfc6593.htm" />
     <HelpKINode Title="WindowLocationSettingsManager.SetSettingsModified Method " Url="html/c4c2aec9-18b4-e296-c347-b30a6985342e.htm" />
     <HelpKINode Title="XMLFileApplicationUpdaterSettingsManager.SetSettingsModified Method " Url="html/af31ad5b-4fce-e07d-c91c-b1ce70111017.htm" />
@@ -2520,10 +2520,10 @@
     <HelpKINode Title="StandardControlTextColourSettingsManager.SettingsModified Property " Url="html/a6c947d0-47d2-2dec-8872-eea0f3cbfd05.htm" />
     <HelpKINode Title="StringSettingsManager.SettingsModified Property " Url="html/5d828954-979b-06b4-9e3e-693459a7e0c6.htm" />
     <HelpKINode Title="TextColourSettingsManager.SettingsModified Property " Url="html/6d56ff52-7881-7a45-13c7-c57c75c436c0.htm" />
-    <HelpKINode Title="ThemeSettingsManager.SettingsModified Property " Url="html/1889f3e2-d52a-8b57-1a13-f1c8bbe24246.htm" />
     <HelpKINode Title="ThemeSettingsManager.SettingsModified Property " Url="html/7d611456-a167-d332-6a2d-a91a3f522e34.htm" />
-    <HelpKINode Title="WindowLocationSettingsManager.SettingsModified Property " Url="html/1f4b5ab8-cd9f-6bd6-7993-503c0529e3f8.htm" />
+    <HelpKINode Title="ThemeSettingsManager.SettingsModified Property " Url="html/1889f3e2-d52a-8b57-1a13-f1c8bbe24246.htm" />
     <HelpKINode Title="WindowLocationSettingsManager.SettingsModified Property " Url="html/9f11929f-f086-8b38-2d53-427a291d8fab.htm" />
+    <HelpKINode Title="WindowLocationSettingsManager.SettingsModified Property " Url="html/1f4b5ab8-cd9f-6bd6-7993-503c0529e3f8.htm" />
   </HelpKINode>
   <HelpKINode Title="SettingsVarifier class">
     <HelpKINode Title="SettingsVarifier Class" Url="html/0c783ea2-9b5b-81b2-22f8-3f7db6a4955d.htm" />
@@ -2704,12 +2704,12 @@
   <HelpKINode Title="TextColourSettingsManager.WriteARGBColoursToFile method" Url="html/a7be08f4-d0fd-2ebe-e336-8bf163851b3b.htm" />
   <HelpKINode Title="TextColourSettingsManager.WriteRGBColoursToFile method" Url="html/50b998f8-9e01-6d3c-ed52-33d0882eb24c.htm" />
   <HelpKINode Title="ThemeSettingsManager class">
-    <HelpKINode Title="ThemeSettingsManager Class" Url="html/55bc4b75-50ac-e010-da12-a84dda724fba.htm" />
     <HelpKINode Title="ThemeSettingsManager Class" Url="html/3d631193-5ae3-4865-f272-328ff7b76f40.htm" />
+    <HelpKINode Title="ThemeSettingsManager Class" Url="html/55bc4b75-50ac-e010-da12-a84dda724fba.htm" />
     <HelpKINode Title="constructor" Url="html/4b10ea77-812a-51a6-cc39-db271f4612a0.htm" />
     <HelpKINode Title="constructor" Url="html/f2673831-5825-2927-8344-dfaa49b26329.htm" />
-    <HelpKINode Title="methods" Url="html/c7116b00-fa2f-01f7-0b10-3b783dd7b9d5.htm" />
     <HelpKINode Title="methods" Url="html/6af1f1c9-e646-ce3d-26ad-03d243f88ccc.htm" />
+    <HelpKINode Title="methods" Url="html/c7116b00-fa2f-01f7-0b10-3b783dd7b9d5.htm" />
     <HelpKINode Title="properties" Url="html/f57c8d01-e596-7b08-00ce-ff164e50c806.htm" />
     <HelpKINode Title="properties" Url="html/ef116d75-2513-5e10-b88f-a6032a7dd2f9.htm" />
   </HelpKINode>
@@ -2718,16 +2718,16 @@
     <HelpKINode Title="ThemeSettingsManager.AlwaysUsePrompt Property " Url="html/70688473-1cef-1016-f2b2-c39a32dd0a81.htm" />
   </HelpKINode>
   <HelpKINode Title="ThemeSettingsManager.GetAlwaysUsePrompt method">
-    <HelpKINode Title="ThemeSettingsManager.GetAlwaysUsePrompt Method " Url="html/39181b95-b1ed-c744-d447-c5660a8fae4c.htm" />
     <HelpKINode Title="ThemeSettingsManager.GetAlwaysUsePrompt Method " Url="html/2b2b34ea-9d95-8cf2-960d-6987f8b73e22.htm" />
+    <HelpKINode Title="ThemeSettingsManager.GetAlwaysUsePrompt Method " Url="html/39181b95-b1ed-c744-d447-c5660a8fae4c.htm" />
   </HelpKINode>
   <HelpKINode Title="ThemeSettingsManager.GetCurrentApplicationTheme method" Url="html/f8590f10-dbd4-f79d-a6d6-48252ca34866.htm" />
   <HelpKINode Title="ThemeSettingsManager.GetCustomThemePath method" Url="html/897e9a76-c38b-7e0a-958e-2f4831c22868.htm" />
   <HelpKINode Title="ThemeSettingsManager.GetDefaultTheme method" Url="html/dd24952b-6e07-2b1b-6f8f-5440dce3caed.htm" />
   <HelpKINode Title="ThemeSettingsManager.GetGlobalManager method" Url="html/55268f56-6c02-b62e-e0ec-40d465046971.htm" />
   <HelpKINode Title="ThemeSettingsManager.GetSettingsModified method">
-    <HelpKINode Title="ThemeSettingsManager.GetSettingsModified Method " Url="html/66fdeb33-89cb-10e8-e415-4a98342bafac.htm" />
     <HelpKINode Title="ThemeSettingsManager.GetSettingsModified Method " Url="html/50769fc2-086d-2fce-6076-f2e0bba439e7.htm" />
+    <HelpKINode Title="ThemeSettingsManager.GetSettingsModified Method " Url="html/66fdeb33-89cb-10e8-e415-4a98342bafac.htm" />
   </HelpKINode>
   <HelpKINode Title="ThemeSettingsManager.ResetToDefaults method">
     <HelpKINode Title="ThemeSettingsManager.ResetToDefaults Method " Url="html/25ff9b19-6c16-f1a7-dacf-abf524a727b4.htm" />
@@ -2738,8 +2738,8 @@
     <HelpKINode Title="ThemeSettingsManager.SaveThemeSettings Method " Url="html/d2d23456-fe78-f176-1cc1-fbf8e33768c9.htm" />
   </HelpKINode>
   <HelpKINode Title="ThemeSettingsManager.SetAlwaysUsePrompt method">
-    <HelpKINode Title="ThemeSettingsManager.SetAlwaysUsePrompt Method " Url="html/83ea71c7-763f-a7a7-6e7d-7652a257dfc8.htm" />
     <HelpKINode Title="ThemeSettingsManager.SetAlwaysUsePrompt Method " Url="html/275bbcdf-faa7-500b-7923-78faef137f27.htm" />
+    <HelpKINode Title="ThemeSettingsManager.SetAlwaysUsePrompt Method " Url="html/83ea71c7-763f-a7a7-6e7d-7652a257dfc8.htm" />
   </HelpKINode>
   <HelpKINode Title="ThemeSettingsManager.SetCurrentApplicationTheme method" Url="html/3b25e46b-b0db-11e1-64d9-13869b9bdc0d.htm" />
   <HelpKINode Title="ThemeSettingsManager.SetCustomThemePath method" Url="html/30d28e7f-2aee-07e3-7c34-0680af7a6b01.htm" />
@@ -2750,8 +2750,8 @@
     <HelpKINode Title="ThemeSettingsManager.SetSettingsModified Method " Url="html/87044bec-d70d-86b4-56ef-fc841f3f7505.htm" />
   </HelpKINode>
   <HelpKINode Title="ThemeSettingsManager.SettingsModified property">
-    <HelpKINode Title="ThemeSettingsManager.SettingsModified Property " Url="html/7d611456-a167-d332-6a2d-a91a3f522e34.htm" />
     <HelpKINode Title="ThemeSettingsManager.SettingsModified Property " Url="html/1889f3e2-d52a-8b57-1a13-f1c8bbe24246.htm" />
+    <HelpKINode Title="ThemeSettingsManager.SettingsModified Property " Url="html/7d611456-a167-d332-6a2d-a91a3f522e34.htm" />
   </HelpKINode>
   <HelpKINode Title="ThemeSettingsManager.ThemeSettingsManager constructor">
     <HelpKINode Title="ThemeSettingsManager Constructor " Url="html/4b10ea77-812a-51a6-cc39-db271f4612a0.htm" />
@@ -2922,22 +2922,22 @@
   <HelpKINode Title="WARNING enumeration member" Url="html/3ce0e0b0-e035-42c8-8f0c-dc2d6336159b.htm" />
   <HelpKINode Title="Welcome" Url="html/24f107ac-c9f4-4182-9de1-4e118e0aec96.htm" />
   <HelpKINode Title="WindowLocationSettingsManager class">
-    <HelpKINode Title="WindowLocationSettingsManager Class" Url="html/dbeb139e-c353-8475-4407-2c763be00a6c.htm" />
     <HelpKINode Title="WindowLocationSettingsManager Class" Url="html/02b7ef5a-748d-8c40-b980-24fc692c5ddc.htm" />
+    <HelpKINode Title="WindowLocationSettingsManager Class" Url="html/dbeb139e-c353-8475-4407-2c763be00a6c.htm" />
     <HelpKINode Title="constructor" Url="html/283fa7ce-9725-199a-2d90-5d6ed76ac578.htm" />
     <HelpKINode Title="constructor" Url="html/bed24564-3561-670e-bf6d-1545152c0aac.htm" />
     <HelpKINode Title="methods" Url="html/e56cf750-1c2d-a7bc-cbd3-01bb3f721248.htm" />
     <HelpKINode Title="methods" Url="html/de67f697-54a7-7c50-24be-d2d50ec081bc.htm" />
-    <HelpKINode Title="properties" Url="html/ffe92525-9c96-1130-a52d-ff4f74924830.htm" />
     <HelpKINode Title="properties" Url="html/aa72597a-eaa9-ff95-5255-90efe856bc35.htm" />
+    <HelpKINode Title="properties" Url="html/ffe92525-9c96-1130-a52d-ff4f74924830.htm" />
   </HelpKINode>
   <HelpKINode Title="WindowLocationSettingsManager.AlwaysUsePrompt property">
     <HelpKINode Title="WindowLocationSettingsManager.AlwaysUsePrompt Property " Url="html/477db52d-c3b0-0592-0e59-aad56fcd3afe.htm" />
     <HelpKINode Title="WindowLocationSettingsManager.AlwaysUsePrompt Property " Url="html/ebab8288-7f34-18d6-b5fa-494c423ee084.htm" />
   </HelpKINode>
   <HelpKINode Title="WindowLocationSettingsManager.GetAlwaysUsePrompt method">
-    <HelpKINode Title="WindowLocationSettingsManager.GetAlwaysUsePrompt Method " Url="html/a695ae5f-f05e-4e49-0bb2-8ac9003deeda.htm" />
     <HelpKINode Title="WindowLocationSettingsManager.GetAlwaysUsePrompt Method " Url="html/15007233-44ef-f3bd-8bf1-387ddc482bb4.htm" />
+    <HelpKINode Title="WindowLocationSettingsManager.GetAlwaysUsePrompt Method " Url="html/a695ae5f-f05e-4e49-0bb2-8ac9003deeda.htm" />
   </HelpKINode>
   <HelpKINode Title="WindowLocationSettingsManager.GetColourPropertiesWindowLocation method" Url="html/0392d917-d31f-ddca-0078-fd6946a5aef0.htm" />
   <HelpKINode Title="WindowLocationSettingsManager.GetDefaultWindowPosition method" Url="html/69a534dc-3c9f-0bde-dbff-1e6d3e6a446b.htm" />
@@ -2948,12 +2948,12 @@
     <HelpKINode Title="WindowLocationSettingsManager.GetSettingsModified Method " Url="html/744d9c13-bd18-1366-6232-6e35450db758.htm" />
   </HelpKINode>
   <HelpKINode Title="WindowLocationSettingsManager.ResetToDefaults method">
-    <HelpKINode Title="WindowLocationSettingsManager.ResetToDefaults Method " Url="html/f05568e2-2011-0b0c-f86b-08dfef2110e0.htm" />
     <HelpKINode Title="WindowLocationSettingsManager.ResetToDefaults Method " Url="html/b9be336d-5702-bc8b-50a8-6c2b7398e9e2.htm" />
+    <HelpKINode Title="WindowLocationSettingsManager.ResetToDefaults Method " Url="html/f05568e2-2011-0b0c-f86b-08dfef2110e0.htm" />
   </HelpKINode>
   <HelpKINode Title="WindowLocationSettingsManager.SaveWindowLocationSettings method">
-    <HelpKINode Title="WindowLocationSettingsManager.SaveWindowLocationSettings Method " Url="html/98b94c73-4610-c053-1d89-58d8c5943cd6.htm" />
     <HelpKINode Title="WindowLocationSettingsManager.SaveWindowLocationSettings Method " Url="html/f9a0c032-5567-a474-8db4-d103e109be9d.htm" />
+    <HelpKINode Title="WindowLocationSettingsManager.SaveWindowLocationSettings Method " Url="html/98b94c73-4610-c053-1d89-58d8c5943cd6.htm" />
   </HelpKINode>
   <HelpKINode Title="WindowLocationSettingsManager.SetAlwaysUsePrompt method">
     <HelpKINode Title="WindowLocationSettingsManager.SetAlwaysUsePrompt Method " Url="html/dd4b1ed5-47ac-3565-3218-bebfc7ce066c.htm" />

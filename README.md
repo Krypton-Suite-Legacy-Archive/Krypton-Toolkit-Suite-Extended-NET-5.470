@@ -36,14 +36,21 @@ Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Exte
 
 You can check out the pre-built demo application from downloading it [here](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Demos/Demos.zip)
 
-<!--======
+<!--
+======
+
+## 2019-09-01 Build 13xx - September Update
+* Added a better file system tree view control
+
+======
 
 ## 2019-08-10 Build 12xx - August Update
 * Added `ExtendedKryptonColourButton` control with a kryptonised custom colour UI
-* Added a better file system tree view control
+* Started componentising toolkit
 * More item and project templates (floating MenuStrips & ToolStrip templates)
 * Floating menu and toolstrips and associated components are now in a separate binary for easier toolbox navigation - **Floating Toolbars.dll**
 * The `GripStyle` visibility is now set to **true** and `DockStyle` is set to **None** by default on the `FloatingMenuStrip`
+* Add documentation via sandcastle
 -->
 
 ======
