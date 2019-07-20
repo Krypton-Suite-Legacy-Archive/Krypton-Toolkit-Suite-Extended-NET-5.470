@@ -84,6 +84,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Components\List View\ListViewSort.cs" />
+    <Compile Include="Components\Property Grid\KryptonPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Components\Scroll Bars\Custom Scroll Bar\KryptonScrollBar.cs">
       <SubType>Component</SubType>
     </Compile>

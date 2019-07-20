@@ -42,6 +42,8 @@
       <DocumentationSource sourceFile="..\Extended Controls\bin\Debug\Krypton Outlook Grid.dll" xmlns="" />
       <DocumentationSource sourceFile="..\Extended Controls\bin\Debug\Toolkit Settings.xml" xmlns="" />
       <DocumentationSource sourceFile="..\Extended Controls\bin\Debug\Toolkit Settings.dll" xmlns="" />
+      <DocumentationSource sourceFile="..\Extended Controls\bin\Debug\Krypton Extended Toolkit.xml" />
+      <DocumentationSource sourceFile="..\Extended Controls\bin\Debug\Krypton Extended Toolkit.dll" />
     </DocumentationSources>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
