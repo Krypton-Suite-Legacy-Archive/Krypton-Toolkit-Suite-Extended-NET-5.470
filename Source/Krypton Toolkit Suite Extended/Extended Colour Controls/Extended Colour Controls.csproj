@@ -31,8 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Core">
+      <HintPath>..\Tooling\obj\Debug\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Toolkit Suite Extended Core">
+      <HintPath>..\Core\obj\Debug\Krypton Toolkit Suite Extended Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -60,6 +68,9 @@
     <Compile Include="Controls\ARGBUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\ColourGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\ColourSlider.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -67,9 +78,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\HueColourSlider.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Controls\KryptonColourGrid.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\Labels\KryptonAlphaValueLabel.cs" />
@@ -107,6 +115,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Cyotek.Windows.Forms.ColorPicker">
+      <Version>1.7.2</Version>
+    </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
       <Version>5.470.1231</Version>
     </PackageReference>

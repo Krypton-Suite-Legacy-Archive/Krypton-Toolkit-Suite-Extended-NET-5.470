@@ -64,7 +64,7 @@
     }
 
     /// <summary>
-    /// Specifies the edit mode of a <see cref="ColorGrid" />.
+    /// Specifies the edit mode of a <see cref="ColourGrid" />.
     /// </summary>
     public enum ColourEditingMode
     {

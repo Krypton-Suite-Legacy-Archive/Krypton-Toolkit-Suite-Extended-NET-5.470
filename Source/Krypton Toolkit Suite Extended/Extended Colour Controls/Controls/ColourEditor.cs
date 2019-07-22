@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace ExtendedColourControls
 {
+    [DefaultProperty("Color"), DefaultEvent("ColorChanged")]
     public class ColourEditor : UserControl, IColourEditor
     {
         #region Designer Code
@@ -63,8 +64,8 @@ namespace ExtendedColourControls
             this.gColourBar = new ExtendedColourControls.RGBAColourSlider();
             this.bColourBar = new ExtendedColourControls.RGBAColourSlider();
             this.hColourBar = new ExtendedColourControls.HueColourSlider();
-            this.lColourBar = new ExtendedColourControls.LightnessColourSlider();
             this.sColourBar = new ExtendedColourControls.SaturationColourSlider();
+            this.lColourBar = new ExtendedColourControls.LightnessColourSlider();
             this.aColourBar = new ExtendedColourControls.RGBAColourSlider();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbHex)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +74,9 @@ namespace ExtendedColourControls
             // 
             this.klblRGB.Location = new System.Drawing.Point(0, 0);
             this.klblRGB.Name = "klblRGB";
-            this.klblRGB.Size = new System.Drawing.Size(36, 20);
+            this.klblRGB.Size = new System.Drawing.Size(49, 26);
+            this.klblRGB.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblRGB.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblRGB.TabIndex = 0;
             this.klblRGB.Values.Text = "RGB:";
             // 
@@ -81,63 +84,79 @@ namespace ExtendedColourControls
             // 
             this.klblRed.Location = new System.Drawing.Point(5, 26);
             this.klblRed.Name = "klblRed";
-            this.klblRed.Size = new System.Drawing.Size(21, 20);
+            this.klblRed.Size = new System.Drawing.Size(27, 26);
+            this.klblRed.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblRed.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblRed.TabIndex = 1;
             this.klblRed.Values.Text = "R:";
             // 
             // klblGreen
             // 
-            this.klblGreen.Location = new System.Drawing.Point(3, 52);
+            this.klblGreen.Location = new System.Drawing.Point(3, 56);
             this.klblGreen.Name = "klblGreen";
-            this.klblGreen.Size = new System.Drawing.Size(22, 20);
+            this.klblGreen.Size = new System.Drawing.Size(28, 26);
+            this.klblGreen.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblGreen.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblGreen.TabIndex = 2;
             this.klblGreen.Values.Text = "G:";
             // 
             // klblBlue
             // 
-            this.klblBlue.Location = new System.Drawing.Point(5, 78);
+            this.klblBlue.Location = new System.Drawing.Point(5, 88);
             this.klblBlue.Name = "klblBlue";
-            this.klblBlue.Size = new System.Drawing.Size(20, 20);
+            this.klblBlue.Size = new System.Drawing.Size(27, 26);
+            this.klblBlue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblBlue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblBlue.TabIndex = 3;
             this.klblBlue.Values.Text = "B:";
             // 
             // klblHex
             // 
-            this.klblHex.Location = new System.Drawing.Point(3, 116);
+            this.klblHex.Location = new System.Drawing.Point(3, 123);
             this.klblHex.Name = "klblHex";
-            this.klblHex.Size = new System.Drawing.Size(34, 20);
+            this.klblHex.Size = new System.Drawing.Size(47, 26);
+            this.klblHex.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHex.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblHex.TabIndex = 4;
             this.klblHex.Values.Text = "Hex:";
             // 
             // klblAlpha
             // 
-            this.klblAlpha.Location = new System.Drawing.Point(3, 275);
+            this.klblAlpha.Location = new System.Drawing.Point(5, 289);
             this.klblAlpha.Name = "klblAlpha";
-            this.klblAlpha.Size = new System.Drawing.Size(45, 20);
+            this.klblAlpha.Size = new System.Drawing.Size(62, 26);
+            this.klblAlpha.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblAlpha.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblAlpha.TabIndex = 9;
             this.klblAlpha.Values.Text = "Alpha:";
             // 
             // klblLuminosity
             // 
-            this.klblLuminosity.Location = new System.Drawing.Point(3, 237);
+            this.klblLuminosity.Location = new System.Drawing.Point(3, 251);
             this.klblLuminosity.Name = "klblLuminosity";
-            this.klblLuminosity.Size = new System.Drawing.Size(19, 20);
+            this.klblLuminosity.Size = new System.Drawing.Size(25, 26);
+            this.klblLuminosity.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblLuminosity.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblLuminosity.TabIndex = 8;
             this.klblLuminosity.Values.Text = "L:";
             // 
             // klblSaturation
             // 
-            this.klblSaturation.Location = new System.Drawing.Point(3, 211);
+            this.klblSaturation.Location = new System.Drawing.Point(3, 217);
             this.klblSaturation.Name = "klblSaturation";
-            this.klblSaturation.Size = new System.Drawing.Size(20, 20);
+            this.klblSaturation.Size = new System.Drawing.Size(26, 26);
+            this.klblSaturation.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblSaturation.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblSaturation.TabIndex = 7;
             this.klblSaturation.Values.Text = "S:";
             // 
             // klblHue
             // 
-            this.klblHue.Location = new System.Drawing.Point(3, 185);
+            this.klblHue.Location = new System.Drawing.Point(5, 183);
             this.klblHue.Name = "klblHue";
-            this.klblHue.Size = new System.Drawing.Size(22, 20);
+            this.klblHue.Size = new System.Drawing.Size(29, 26);
+            this.klblHue.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblHue.TabIndex = 6;
             this.klblHue.Values.Text = "H:";
             // 
@@ -145,85 +164,93 @@ namespace ExtendedColourControls
             // 
             this.klblHSL.Location = new System.Drawing.Point(0, 159);
             this.klblHSL.Name = "klblHSL";
-            this.klblHSL.Size = new System.Drawing.Size(34, 20);
+            this.klblHSL.Size = new System.Drawing.Size(47, 26);
+            this.klblHSL.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHSL.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblHSL.TabIndex = 5;
             this.klblHSL.Values.Text = "HSL:";
             // 
             // knudRed
             // 
-            this.knudRed.Location = new System.Drawing.Point(132, 26);
+            this.knudRed.Location = new System.Drawing.Point(176, 20);
             this.knudRed.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.knudRed.Name = "knudRed";
-            this.knudRed.Size = new System.Drawing.Size(58, 22);
+            this.knudRed.Size = new System.Drawing.Size(58, 28);
+            this.knudRed.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knudRed.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
             this.knudRed.TabIndex = 10;
             // 
             // knudSaturation
             // 
-            this.knudSaturation.Location = new System.Drawing.Point(132, 211);
+            this.knudSaturation.Location = new System.Drawing.Point(176, 217);
             this.knudSaturation.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.knudSaturation.Name = "knudSaturation";
-            this.knudSaturation.Size = new System.Drawing.Size(58, 22);
+            this.knudSaturation.Size = new System.Drawing.Size(58, 28);
+            this.knudSaturation.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knudSaturation.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
             this.knudSaturation.TabIndex = 11;
             // 
             // knudLuminosity
             // 
-            this.knudLuminosity.Location = new System.Drawing.Point(132, 239);
+            this.knudLuminosity.Location = new System.Drawing.Point(176, 251);
             this.knudLuminosity.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.knudLuminosity.Name = "knudLuminosity";
-            this.knudLuminosity.Size = new System.Drawing.Size(58, 22);
+            this.knudLuminosity.Size = new System.Drawing.Size(58, 28);
+            this.knudLuminosity.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knudLuminosity.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
             this.knudLuminosity.TabIndex = 12;
             // 
             // knudHue
             // 
-            this.knudHue.Location = new System.Drawing.Point(132, 183);
+            this.knudHue.Location = new System.Drawing.Point(176, 183);
             this.knudHue.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.knudHue.Name = "knudHue";
-            this.knudHue.Size = new System.Drawing.Size(58, 22);
+            this.knudHue.Size = new System.Drawing.Size(58, 28);
+            this.knudHue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knudHue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
             this.knudHue.TabIndex = 13;
             // 
             // knudBlue
             // 
-            this.knudBlue.Location = new System.Drawing.Point(132, 82);
+            this.knudBlue.Location = new System.Drawing.Point(176, 88);
             this.knudBlue.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.knudBlue.Name = "knudBlue";
-            this.knudBlue.Size = new System.Drawing.Size(58, 22);
+            this.knudBlue.Size = new System.Drawing.Size(58, 28);
+            this.knudBlue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knudBlue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
             this.knudBlue.TabIndex = 14;
             // 
             // knudGreen
             // 
-            this.knudGreen.Location = new System.Drawing.Point(132, 54);
+            this.knudGreen.Location = new System.Drawing.Point(176, 54);
             this.knudGreen.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.knudGreen.Name = "knudGreen";
-            this.knudGreen.Size = new System.Drawing.Size(58, 22);
+            this.knudGreen.Size = new System.Drawing.Size(58, 28);
+            this.knudGreen.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knudGreen.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
             this.knudGreen.TabIndex = 15;
             // 
@@ -231,87 +258,92 @@ namespace ExtendedColourControls
             // 
             this.kcmbHex.DropDownWidth = 58;
             this.kcmbHex.IntegralHeight = false;
-            this.kcmbHex.Location = new System.Drawing.Point(132, 115);
+            this.kcmbHex.Location = new System.Drawing.Point(176, 122);
             this.kcmbHex.Name = "kcmbHex";
-            this.kcmbHex.Size = new System.Drawing.Size(58, 21);
+            this.kcmbHex.Size = new System.Drawing.Size(58, 27);
+            this.kcmbHex.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbHex.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.kcmbHex.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbHex.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbHex.TabIndex = 16;
             this.kcmbHex.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.kcmbHex_DrawItem);
             // 
             // knudAlpha
             // 
-            this.knudAlpha.Location = new System.Drawing.Point(132, 275);
+            this.knudAlpha.Location = new System.Drawing.Point(176, 287);
             this.knudAlpha.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.knudAlpha.Name = "knudAlpha";
-            this.knudAlpha.Size = new System.Drawing.Size(58, 22);
+            this.knudAlpha.Size = new System.Drawing.Size(58, 28);
+            this.knudAlpha.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knudAlpha.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
             this.knudAlpha.TabIndex = 17;
             // 
             // rColourBar
             // 
-            this.rColourBar.Location = new System.Drawing.Point(31, 28);
+            this.rColourBar.Location = new System.Drawing.Point(38, 28);
             this.rColourBar.Name = "rColourBar";
-            this.rColourBar.Size = new System.Drawing.Size(95, 20);
+            this.rColourBar.Size = new System.Drawing.Size(132, 20);
             this.rColourBar.TabIndex = 3;
             this.rColourBar.ValueChanged += new System.EventHandler(this.ValueChangedHandler);
             // 
             // gColourBar
             // 
             this.gColourBar.Channel = ExtendedColourControls.RGBAChannel.Green;
-            this.gColourBar.Location = new System.Drawing.Point(31, 54);
+            this.gColourBar.Location = new System.Drawing.Point(38, 59);
             this.gColourBar.Name = "gColourBar";
-            this.gColourBar.Size = new System.Drawing.Size(95, 20);
+            this.gColourBar.Size = new System.Drawing.Size(132, 20);
             this.gColourBar.TabIndex = 6;
             this.gColourBar.ValueChanged += new System.EventHandler(this.ValueChangedHandler);
             // 
             // bColourBar
             // 
             this.bColourBar.Channel = ExtendedColourControls.RGBAChannel.Blue;
-            this.bColourBar.Location = new System.Drawing.Point(31, 80);
+            this.bColourBar.Location = new System.Drawing.Point(38, 92);
             this.bColourBar.Name = "bColourBar";
-            this.bColourBar.Size = new System.Drawing.Size(95, 20);
+            this.bColourBar.Size = new System.Drawing.Size(132, 20);
             this.bColourBar.TabIndex = 9;
             this.bColourBar.ValueChanged += new System.EventHandler(this.ValueChangedHandler);
             // 
             // hColourBar
             // 
-            this.hColourBar.Location = new System.Drawing.Point(31, 185);
+            this.hColourBar.Location = new System.Drawing.Point(38, 187);
             this.hColourBar.Name = "hColourBar";
-            this.hColourBar.Size = new System.Drawing.Size(95, 20);
+            this.hColourBar.Size = new System.Drawing.Size(132, 20);
             this.hColourBar.TabIndex = 15;
             this.hColourBar.ValueChanged += new System.EventHandler(this.ValueChangedHandler);
             // 
-            // lColourBar
-            // 
-            this.lColourBar.Location = new System.Drawing.Point(31, 237);
-            this.lColourBar.Name = "lColourBar";
-            this.lColourBar.Size = new System.Drawing.Size(95, 20);
-            this.lColourBar.TabIndex = 21;
-            this.lColourBar.ValueChanged += new System.EventHandler(this.ValueChangedHandler);
-            // 
             // sColourBar
             // 
-            this.sColourBar.Location = new System.Drawing.Point(31, 211);
+            this.sColourBar.Location = new System.Drawing.Point(38, 220);
             this.sColourBar.Name = "sColourBar";
-            this.sColourBar.Size = new System.Drawing.Size(95, 20);
+            this.sColourBar.Size = new System.Drawing.Size(132, 20);
             this.sColourBar.TabIndex = 18;
             this.sColourBar.ValueChanged += new System.EventHandler(this.ValueChangedHandler);
+            // 
+            // lColourBar
+            // 
+            this.lColourBar.Location = new System.Drawing.Point(38, 251);
+            this.lColourBar.Name = "lColourBar";
+            this.lColourBar.Size = new System.Drawing.Size(132, 20);
+            this.lColourBar.TabIndex = 21;
+            this.lColourBar.ValueChanged += new System.EventHandler(this.ValueChangedHandler);
             // 
             // aColourBar
             // 
             this.aColourBar.Channel = ExtendedColourControls.RGBAChannel.Alpha;
-            this.aColourBar.Location = new System.Drawing.Point(54, 275);
+            this.aColourBar.Location = new System.Drawing.Point(73, 293);
             this.aColourBar.Name = "aColourBar";
-            this.aColourBar.Size = new System.Drawing.Size(72, 20);
+            this.aColourBar.Size = new System.Drawing.Size(97, 20);
             this.aColourBar.TabIndex = 24;
             this.aColourBar.ValueChanged += new System.EventHandler(this.ValueChangedHandler);
             // 
             // ColourEditor
             // 
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.knudAlpha);
             this.Controls.Add(this.kcmbHex);
             this.Controls.Add(this.knudGreen);
@@ -338,7 +370,7 @@ namespace ExtendedColourControls
             this.Controls.Add(this.lColourBar);
             this.Controls.Add(this.aColourBar);
             this.Name = "ColourEditor";
-            this.Size = new System.Drawing.Size(269, 310);
+            this.Size = new System.Drawing.Size(243, 323);
             ((System.ComponentModel.ISupportInitialize)(this.kcmbHex)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -381,7 +413,9 @@ namespace ExtendedColourControls
         /// </summary>
         public ColourEditor()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+
+            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw | ControlStyles.SupportsTransparentBackColor, true);
 
             _colour = Color.Black;
             _orientation = Orientation.Vertical;
@@ -389,7 +423,6 @@ namespace ExtendedColourControls
             _showAlphaChannel = true;
             _showColourSpaceLabels = true;
         }
-
         #endregion
 
         #region Events
@@ -421,6 +454,11 @@ namespace ExtendedColourControls
         #endregion
 
         #region Properties
+
+        //public Color Colour
+        //{
+
+        //}
 
         /// <summary>
         /// Gets or sets the component colour as a HSL structure.
@@ -1106,9 +1144,47 @@ namespace ExtendedColourControls
         #endregion
 
         #region IColourEditor Implementation
-        public Color Colour { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        [Category("Appearance"), DefaultValue(typeof(Color), "0, 0, 0")]
+        public Color Colour
+        {
+            get => _colour;
 
-        public event EventHandler ColourChanged;
+            set
+            {
+                if (value.A != 255 && !_showAlphaChannel)
+                {
+                    value = Color.FromArgb(255, value);
+                }
+
+                if (_colour != value)
+                {
+                    _colour = value;
+
+                    if (!LockUpdates)
+                    {
+                        LockUpdates = true;
+
+                        HslColour = new HSLColour(value);
+
+                        LockUpdates = false;
+
+                        UpdateFields(false);
+                    }
+                    else
+                    {
+                        OnColourChanged(EventArgs.Empty);
+                    }
+                }
+            }
+        }
+
+        [Category("Property Changed")]
+        public event EventHandler ColourChanged
+        {
+            add => this.Events.AddHandler(_eventColourChanged, value);
+
+            remove => Events.RemoveHandler(_eventColourChanged, value);
+        }
 
         #endregion
     }

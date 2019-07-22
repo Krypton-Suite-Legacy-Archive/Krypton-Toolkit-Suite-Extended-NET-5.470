@@ -1,13 +1,4 @@
-﻿#region BSD License
-/*
- * Use of this source code is governed by a BSD-style
- * license that can be found in the LICENSE.md file or at
- * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
- *
- */
-#endregion
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -15,30 +6,27 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
-using Core.Classes.Colours;
-using Core.Enumerations;
-using Core.Interfaces;
-using Core.STRUCTS;
 
-namespace Core.Controls.Colours
+namespace ExtendedColourControls
 {
     /// <summary>
     /// Represents a grid control, which displays a collection of colors using different styles.
     /// </summary>
-    [DefaultProperty("Colour"), DefaultEvent("ColourChanged"), ToolboxItem(false)]
+    [DefaultProperty("Color")]
+    [DefaultEvent("ColorChanged")]
     public class ColourGrid : Control, IColourEditor
     {
         #region Constants
 
         public const int InvalidIndex = -1;
 
-        private readonly IDictionary<int, Rectangle> _colourRegions;
+        private readonly IDictionary<int, Rectangle> _colorRegions;
 
-        private static readonly object _eventAutoAddColoursChanged = new object();
+        private static readonly object _eventAutoAddColorsChanged = new object();
 
         private static readonly object _eventAutoFitChanged = new object();
 
-        private static readonly object _eventCellBorderColourChanged = new object();
+        private static readonly object _eventCellBorderColorChanged = new object();
 
         private static readonly object _eventCellBorderStyleChanged = new object();
 
@@ -46,17 +34,17 @@ namespace Core.Controls.Colours
 
         private static readonly object _eventCellSizeChanged = new object();
 
-        private static readonly object _eventColourChanged = new object();
+        private static readonly object _eventColorChanged = new object();
 
-        private static readonly object _eventColourIndexChanged = new object();
+        private static readonly object _eventColorIndexChanged = new object();
 
         private static readonly object _eventColorsChanged = new object();
 
         private static readonly object _eventColumnsChanged = new object();
 
-        private static readonly object _eventCustomColoursChanged = new object();
+        private static readonly object _eventCustomColorsChanged = new object();
 
-        private static readonly object _eventEditingColour = new object();
+        private static readonly object _eventEditingColor = new object();
 
         private static readonly object _eventEditModeChanged = new object();
 
@@ -66,7 +54,7 @@ namespace Core.Controls.Colours
 
         private static readonly object _eventSelectedCellStyleChanged = new object();
 
-        private static readonly object _eventShowCustomColoursChanged = new object();
+        private static readonly object _eventShowCustomColorsChanged = new object();
 
         private static readonly object _eventShowToolTipsChanged = new object();
 
@@ -82,7 +70,7 @@ namespace Core.Controls.Colours
 
         private Brush _cellBackgroundBrush;
 
-        private Color _cellBorderColour;
+        private Color _cellBorderColor;
 
         private ColourCellBorderStyle _cellBorderStyle;
 
@@ -90,15 +78,15 @@ namespace Core.Controls.Colours
 
         private Size _cellSize;
 
-        private Color _colour;
+        private Color _color;
 
         private int _colorIndex;
 
-        private ColourCollection _colours;
+        private ColourCollection _colors;
 
         private int _columns;
 
-        private ColourCollection _customColours;
+        private ColourCollection _customColors;
 
         private ColourEditingMode _editMode;
 
@@ -106,13 +94,13 @@ namespace Core.Controls.Colours
 
         private ColourPalette _palette;
 
-        private int _previousColourIndex;
+        private int _previousColorIndex;
 
         private int _previousHotIndex;
 
         private ColourGridSelectedCellStyle _selectedCellStyle;
 
-        private bool _showCustomColours;
+        private bool _showCustomColors;
 
         private bool _showToolTips;
 
@@ -130,31 +118,31 @@ namespace Core.Controls.Colours
         {
             this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.Selectable | ControlStyles.StandardClick | ControlStyles.StandardDoubleClick | ControlStyles.SupportsTransparentBackColor, true);
             _previousHotIndex = InvalidIndex;
-            _previousColourIndex = InvalidIndex;
+            _previousColorIndex = InvalidIndex;
             _hotIndex = InvalidIndex;
 
-            _colourRegions = new Dictionary<int, Rectangle>();
-            _colours = ColourPalettes.NamedColours;
-            _customColours = new ColourCollection(Enumerable.Repeat(Color.White, 16));
-            _showCustomColours = true;
+            _colorRegions = new Dictionary<int, Rectangle>();
+            _colors = ColourPalettes.NamedColours;
+            _customColors = new ColourCollection(Enumerable.Repeat(Color.White, 16));
+            _showCustomColors = true;
             _cellSize = new Size(12, 12);
             _spacing = new Size(3, 3);
             _columns = 16;
             base.AutoSize = true;
             this.Padding = new Padding(5);
             _autoAddColors = true;
-            _cellBorderColour = SystemColors.ButtonShadow;
+            _cellBorderColor = SystemColors.ButtonShadow;
             _showToolTips = true;
             _toolTip = new ToolTip();
             this.SeparatorHeight = 8;
-            _editMode = ColourEditingMode.CUSTOMONLY;
-            _colour = Color.Black;
-            _cellBorderStyle = ColourCellBorderStyle.FIXEDSINGLE;
-            _selectedCellStyle = ColourGridSelectedCellStyle.ZOOMED;
-            _palette = ColourPalette.NAMED;
+            _editMode = ColourEditingMode.CustomOnly;
+            _color = Color.Black;
+            _cellBorderStyle = ColourCellBorderStyle.FixedSingle;
+            _selectedCellStyle = ColourGridSelectedCellStyle.Zoomed;
+            _palette = ColourPalette.Named;
 
             this.SetScaledCellSize();
-            this.RefreshColours();
+            this.RefreshColors();
         }
 
         #endregion
@@ -162,10 +150,10 @@ namespace Core.Controls.Colours
         #region Events
 
         [Category("Property Changed")]
-        public event EventHandler AutoAddColoursChanged
+        public event EventHandler AutoAddColorsChanged
         {
-            add { this.Events.AddHandler(_eventAutoAddColoursChanged, value); }
-            remove { this.Events.RemoveHandler(_eventAutoAddColoursChanged, value); }
+            add { this.Events.AddHandler(_eventAutoAddColorsChanged, value); }
+            remove { this.Events.RemoveHandler(_eventAutoAddColorsChanged, value); }
         }
 
         [Category("Property Changed")]
@@ -176,10 +164,10 @@ namespace Core.Controls.Colours
         }
 
         [Category("Property Changed")]
-        public event EventHandler CellBorderColourChanged
+        public event EventHandler CellBorderColorChanged
         {
-            add { this.Events.AddHandler(_eventCellBorderColourChanged, value); }
-            remove { this.Events.RemoveHandler(_eventCellBorderColourChanged, value); }
+            add { this.Events.AddHandler(_eventCellBorderColorChanged, value); }
+            remove { this.Events.RemoveHandler(_eventCellBorderColorChanged, value); }
         }
 
         [Category("Property Changed")]
@@ -207,14 +195,14 @@ namespace Core.Controls.Colours
         }
 
         [Category("Property Changed")]
-        public event EventHandler ColourIndexChanged
+        public event EventHandler ColorIndexChanged
         {
-            add { this.Events.AddHandler(_eventColourIndexChanged, value); }
-            remove { this.Events.RemoveHandler(_eventColourIndexChanged, value); }
+            add { this.Events.AddHandler(_eventColorIndexChanged, value); }
+            remove { this.Events.RemoveHandler(_eventColorIndexChanged, value); }
         }
 
         [Category("Property Changed")]
-        public event EventHandler ColoursChanged
+        public event EventHandler ColorsChanged
         {
             add { this.Events.AddHandler(_eventColorsChanged, value); }
             remove { this.Events.RemoveHandler(_eventColorsChanged, value); }
@@ -228,17 +216,17 @@ namespace Core.Controls.Colours
         }
 
         [Category("Property Changed")]
-        public event EventHandler CustomColoursChanged
+        public event EventHandler CustomColorsChanged
         {
-            add { this.Events.AddHandler(_eventCustomColoursChanged, value); }
-            remove { this.Events.RemoveHandler(_eventCustomColoursChanged, value); }
+            add { this.Events.AddHandler(_eventCustomColorsChanged, value); }
+            remove { this.Events.RemoveHandler(_eventCustomColorsChanged, value); }
         }
 
         [Category("Action")]
-        public event EventHandler<EditColourCancelEventArgs> EditingColour
+        public event EventHandler<EditColourCancelEventArgs> EditingColor
         {
-            add { this.Events.AddHandler(_eventEditingColour, value); }
-            remove { this.Events.RemoveHandler(_eventEditingColour, value); }
+            add { this.Events.AddHandler(_eventEditingColor, value); }
+            remove { this.Events.RemoveHandler(_eventEditingColor, value); }
         }
 
         [Category("Property Changed")]
@@ -270,10 +258,10 @@ namespace Core.Controls.Colours
         }
 
         [Category("Property Changed")]
-        public event EventHandler ShowCustomColoursChanged
+        public event EventHandler ShowCustomColorsChanged
         {
-            add { this.Events.AddHandler(_eventShowCustomColoursChanged, value); }
-            remove { this.Events.RemoveHandler(_eventShowCustomColoursChanged, value); }
+            add { this.Events.AddHandler(_eventShowCustomColorsChanged, value); }
+            remove { this.Events.RemoveHandler(_eventShowCustomColorsChanged, value); }
         }
 
         [Category("Property Changed")]
@@ -300,12 +288,12 @@ namespace Core.Controls.Colours
 
         [Category("Behavior")]
         [DefaultValue(true)]
-        public virtual bool AutoAddColours
+        public virtual bool AutoAddColors
         {
             get { return _autoAddColors; }
             set
             {
-                if (this.AutoAddColours != value)
+                if (this.AutoAddColors != value)
                 {
                     _autoAddColors = value;
 
@@ -341,14 +329,14 @@ namespace Core.Controls.Colours
 
         [Category("Appearance")]
         [DefaultValue(typeof(Color), "ButtonShadow")]
-        public virtual Color CellBorderColour
+        public virtual Color CellBorderColor
         {
-            get { return _cellBorderColour; }
+            get { return _cellBorderColor; }
             set
             {
-                if (this.CellBorderColour != value)
+                if (this.CellBorderColor != value)
                 {
-                    _cellBorderColour = value;
+                    _cellBorderColor = value;
 
                     this.OnCellBorderColorChanged(EventArgs.Empty);
                 }
@@ -405,19 +393,19 @@ namespace Core.Controls.Colours
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public virtual int ColourIndex
+        public virtual int ColorIndex
         {
             get { return _colorIndex; }
             set
             {
-                if (this.ColourIndex != value)
+                if (this.ColorIndex != value)
                 {
-                    _previousColourIndex = _colorIndex;
+                    _previousColorIndex = _colorIndex;
                     _colorIndex = value;
 
                     if (value != InvalidIndex)
                     {
-                        this.Colour = this.GetColour(value);
+                        this.Colour = this.GetColor(value);
                     }
 
                     this.OnColorIndexChanged(EventArgs.Empty);
@@ -427,9 +415,9 @@ namespace Core.Controls.Colours
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public virtual ColourCollection Colours
+        public virtual ColourCollection Colors
         {
-            get { return _colours; }
+            get { return _colors; }
             set
             {
                 if (value == null)
@@ -437,11 +425,11 @@ namespace Core.Controls.Colours
                     throw new ArgumentNullException(nameof(value));
                 }
 
-                if (this.Colours != value)
+                if (this.Colors != value)
                 {
-                    this.RemoveEventHandlers(_colours);
+                    this.RemoveEventHandlers(_colors);
 
-                    _colours = value;
+                    _colors = value;
 
                     this.OnColorsChanged(EventArgs.Empty);
                 }
@@ -473,21 +461,21 @@ namespace Core.Controls.Colours
         [Browsable(false)]
         public Point CurrentCell
         {
-            get { return this.GetCell(this.ColourIndex); }
+            get { return this.GetCell(this.ColorIndex); }
         }
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public virtual ColourCollection CustomColours
+        public virtual ColourCollection CustomColors
         {
-            get { return _customColours; }
+            get { return _customColors; }
             set
             {
-                if (this.CustomColours != value)
+                if (this.CustomColors != value)
                 {
-                    this.RemoveEventHandlers(_customColours);
+                    this.RemoveEventHandlers(_customColors);
 
-                    _customColours = value;
+                    _customColors = value;
 
                     this.OnCustomColorsChanged(EventArgs.Empty);
                 }
@@ -586,14 +574,14 @@ namespace Core.Controls.Colours
         [DefaultValue(true)]
         public virtual bool ShowCustomColors
         {
-            get { return _showCustomColours; }
+            get { return _showCustomColors; }
             set
             {
                 if (this.ShowCustomColors != value)
                 {
-                    _showCustomColours = value;
+                    _showCustomColors = value;
 
-                    this.OnShowCustomColoursChanged(EventArgs.Empty);
+                    this.OnShowCustomColorsChanged(EventArgs.Empty);
                 }
             }
         }
@@ -651,7 +639,7 @@ namespace Core.Controls.Colours
 
         protected IDictionary<int, Rectangle> ColorRegions
         {
-            get { return _colourRegions; }
+            get { return _colorRegions; }
         }
 
         protected int CustomRows { get; set; }
@@ -670,30 +658,30 @@ namespace Core.Controls.Colours
         {
             int newIndex;
 
-            newIndex = this.GetColourIndex(value);
+            newIndex = this.GetColorIndex(value);
 
             if (newIndex == InvalidIndex)
             {
-                if (this.AutoAddColours)
+                if (this.AutoAddColors)
                 {
-                    this.CustomColours.Add(value);
+                    this.CustomColors.Add(value);
                 }
                 else
                 {
-                    if (this.CustomColours == null)
+                    if (this.CustomColors == null)
                     {
-                        this.CustomColours = new ColourCollection();
-                        this.CustomColours.Add(value);
+                        this.CustomColors = new ColourCollection();
+                        this.CustomColors.Add(value);
                     }
                     else
                     {
-                        this.CustomColours[0] = value;
+                        this.CustomColors[0] = value;
                     }
 
-                    newIndex = this.GetColourIndex(value);
+                    newIndex = this.GetColorIndex(value);
                 }
 
-                this.RefreshColours();
+                this.RefreshColors();
             }
 
             return newIndex;
@@ -734,22 +722,22 @@ namespace Core.Controls.Colours
         /// </returns>
         public Rectangle GetCellBounds(int index)
         {
-            if (index < 0 || index > this.Colours.Count + this.CustomColours.Count - 1)
+            if (index < 0 || index > this.Colors.Count + this.CustomColors.Count - 1)
             {
                 throw new ArgumentOutOfRangeException(nameof(index));
             }
 
-            return _colourRegions[index];
+            return _colorRegions[index];
         }
 
-        public Color GetColour(int index)
+        public Color GetColor(int index)
         {
             Color result;
             int colorCount;
             int customColorCount;
 
-            colorCount = this.Colours != null ? this.Colours.Count : 0;
-            customColorCount = this.CustomColours != null ? this.CustomColours.Count : 0;
+            colorCount = this.Colors != null ? this.Colors.Count : 0;
+            customColorCount = this.CustomColors != null ? this.CustomColors.Count : 0;
 
             if (index < 0 || index > colorCount + customColorCount)
             {
@@ -757,47 +745,47 @@ namespace Core.Controls.Colours
             }
             else
             {
-                result = index > colorCount - 1 ? this.CustomColours[index - colorCount] : this.Colours[index];
+                result = index > colorCount - 1 ? this.CustomColors[index - colorCount] : this.Colors[index];
             }
 
             return result;
         }
 
-        public ColourSource GetColourSource(int colourIndex)
+        public ColourSource GetColourSource(int colorIndex)
         {
             ColourSource result;
-            int colourCount;
-            int customColourCount;
+            int colorCount;
+            int customColorCount;
 
-            colourCount = this.Colours != null ? this.Colours.Count : 0;
-            customColourCount = this.CustomColours != null ? this.CustomColours.Count : 0;
+            colorCount = this.Colors != null ? this.Colors.Count : 0;
+            customColorCount = this.CustomColors != null ? this.CustomColors.Count : 0;
 
-            if (colourCount < 0 || colourIndex > colourCount + customColourCount)
+            if (colorCount < 0 || colorIndex > colorCount + customColorCount)
             {
-                result = ColourSource.NONE;
+                result = ColourSource.None;
             }
             else
             {
-                result = colourIndex > colourCount - 1 ? ColourSource.CUSTOM : ColourSource.STANDARD;
+                result = colorIndex > colorCount - 1 ? ColourSource.Custom : ColourSource.Standard;
             }
 
             return result;
         }
 
-        public ColourSource GetColourSource(Color colour)
+        public ColourSource GetColourSource(Color color)
         {
             int index;
             ColourSource result;
 
-            index = this.Colours.IndexOf(colour);
+            index = this.Colors.IndexOf(color);
             if (index != InvalidIndex)
             {
-                result = ColourSource.STANDARD;
+                result = ColourSource.Standard;
             }
             else
             {
-                index = this.CustomColours.IndexOf(colour);
-                result = index != InvalidIndex ? ColourSource.CUSTOM : ColourSource.NONE;
+                index = this.CustomColors.IndexOf(color);
+                result = index != InvalidIndex ? ColourSource.Custom : ColourSource.None;
             }
 
             return result;
@@ -811,26 +799,26 @@ namespace Core.Controls.Colours
         public ColourHitTestInfo HitTest(Point point)
         {
             ColourHitTestInfo result;
-            int colourIndex;
+            int colorIndex;
 
             result = new ColourHitTestInfo();
-            colourIndex = InvalidIndex;
+            colorIndex = InvalidIndex;
 
-            foreach (KeyValuePair<int, Rectangle> pair in _colourRegions.Where(pair => pair.Value.Contains(point)))
+            foreach (KeyValuePair<int, Rectangle> pair in _colorRegions.Where(pair => pair.Value.Contains(point)))
             {
-                colourIndex = pair.Key;
+                colorIndex = pair.Key;
                 break;
             }
 
-            result.Index = colourIndex;
-            if (colourIndex != InvalidIndex)
+            result.Index = colorIndex;
+            if (colorIndex != InvalidIndex)
             {
-                result.Colour = colourIndex < this.Colours.Count + this.CustomColours.Count ? this.GetColour(colourIndex) : Color.White;
-                result.Source = this.GetColourSource(colourIndex);
+                result.Colour = colorIndex < this.Colors.Count + this.CustomColors.Count ? this.GetColor(colorIndex) : Color.White;
+                result.Source = this.GetColourSource(colorIndex);
             }
             else
             {
-                result.Source = ColourSource.NONE;
+                result.Source = ColourSource.None;
             }
 
             return result;
@@ -842,9 +830,9 @@ namespace Core.Controls.Colours
             {
                 Rectangle bounds;
 
-                if (_colourRegions.TryGetValue(index, out bounds))
+                if (_colorRegions.TryGetValue(index, out bounds))
                 {
-                    if (this.SelectedCellStyle == ColourGridSelectedCellStyle.ZOOMED)
+                    if (this.SelectedCellStyle == ColourGridSelectedCellStyle.Zoomed)
                     {
                         bounds.Inflate(this.Padding.Left, this.Padding.Top);
                     }
@@ -856,7 +844,7 @@ namespace Core.Controls.Colours
 
         public void Navigate(int offsetX, int offsetY)
         {
-            this.Navigate(offsetX, offsetY, NavigationOrigin.CURRENT);
+            this.Navigate(offsetX, offsetY, NavigationOrigin.Current);
         }
 
         public virtual void Navigate(int offsetX, int offsetY, NavigationOrigin origin)
@@ -869,10 +857,10 @@ namespace Core.Controls.Colours
 
             switch (origin)
             {
-                case NavigationOrigin.BEGIN:
+                case NavigationOrigin.Begin:
                     cellLocation = Point.Empty;
                     break;
-                case NavigationOrigin.END:
+                case NavigationOrigin.End:
                     cellLocation = new Point(this.ActualColumns - 1, this.PrimaryRows + this.CustomRows - 1);
                     break;
                 default:
@@ -891,7 +879,7 @@ namespace Core.Controls.Colours
             index = this.GetCellIndex(column, row);
             if (index != InvalidIndex)
             {
-                this.ColourIndex = index;
+                this.ColorIndex = index;
             }
         }
 
@@ -920,13 +908,13 @@ namespace Core.Controls.Colours
                 this.ActualColumns = 1;
             }
 
-            primaryRows = this.GetRows(this.Colours != null ? this.Colours.Count : 0);
+            primaryRows = this.GetRows(this.Colors != null ? this.Colors.Count : 0);
             if (primaryRows == 0)
             {
                 primaryRows = 1;
             }
 
-            customRows = this.ShowCustomColors ? this.GetRows(this.CustomColours != null ? this.CustomColours.Count : 0) : 0;
+            customRows = this.ShowCustomColors ? this.GetRows(this.CustomColors != null ? this.CustomColors.Count : 0) : 0;
 
             this.PrimaryRows = primaryRows;
             this.CustomRows = customRows;
@@ -944,23 +932,23 @@ namespace Core.Controls.Colours
             }
         }
 
-        protected void DefineColourRegions(ColourCollection colours, int rangeStart, int offset)
+        protected void DefineColorRegions(ColourCollection colors, int rangeStart, int offset)
         {
-            if (colours != null)
+            if (colors != null)
             {
                 int rows;
                 int index;
 
-                rows = this.GetRows(colours.Count);
+                rows = this.GetRows(colors.Count);
                 index = 0;
 
                 for (int row = 0; row < rows; row++)
                 {
                     for (int column = 0; column < this.ActualColumns; column++)
                     {
-                        if (index < colours.Count)
+                        if (index < colors.Count)
                         {
-                            _colourRegions.Add(rangeStart + index, new Rectangle(this.Padding.Left + column * (_scaledCellSize.Width + this.Spacing.Width), offset + row * (_scaledCellSize.Height + this.Spacing.Height), _scaledCellSize.Width, _scaledCellSize.Height));
+                            _colorRegions.Add(rangeStart + index, new Rectangle(this.Padding.Left + column * (_scaledCellSize.Width + this.Spacing.Width), offset + row * (_scaledCellSize.Height + this.Spacing.Height), _scaledCellSize.Width, _scaledCellSize.Height));
                         }
 
                         index++;
@@ -973,8 +961,8 @@ namespace Core.Controls.Colours
         {
             if (disposing)
             {
-                this.RemoveEventHandlers(_colours);
-                this.RemoveEventHandlers(_customColours);
+                this.RemoveEventHandlers(_colors);
+                this.RemoveEventHandlers(_customColors);
 
                 _toolTip?.Dispose();
 
@@ -984,19 +972,19 @@ namespace Core.Controls.Colours
             base.Dispose(disposing);
         }
 
-        protected virtual void EditColour(int colourIndex)
+        protected virtual void EditColor(int colorIndex)
         {
-            //using (ColorPickerDialog dialog = new ColorPickerDialog())
-            //{
-            //    dialog.Colour = this.GetColour(colourIndex);
-            //    if (dialog.ShowDialog(this) == DialogResult.OK)
-            //    {
-            //        this.BeginUpdate();
-            //        this.SetColour(colourIndex, dialog.Colour);
-            //        this.Colour = dialog.Colour;
-            //        this.EndUpdate();
-            //    }
-            //}
+            using (ColourPickerDialog dialog = new ColourPickerDialog())
+            {
+                dialog.Colour = this.GetColor(colorIndex);
+                if (dialog.ShowDialog(this) == DialogResult.OK)
+                {
+                    this.BeginUpdate();
+                    this.SetColor(colorIndex, dialog.Colour);
+                    this.Colour = dialog.Colour;
+                    this.EndUpdate();
+                }
+            }
         }
 
         protected Size GetAutoSize()
@@ -1030,7 +1018,7 @@ namespace Core.Controls.Colours
             {
                 int lastStandardRowOffset;
 
-                lastStandardRowOffset = this.PrimaryRows * this.ActualColumns - this.Colours.Count;
+                lastStandardRowOffset = this.PrimaryRows * this.ActualColumns - this.Colors.Count;
                 result = row * this.ActualColumns + column;
                 if (row == this.PrimaryRows - 1 && column >= this.ActualColumns - lastStandardRowOffset)
                 {
@@ -1041,7 +1029,7 @@ namespace Core.Controls.Colours
                     result -= lastStandardRowOffset;
                 }
 
-                if (result > this.Colours.Count + this.CustomColours.Count - 1)
+                if (result > this.Colors.Count + this.CustomColors.Count - 1)
                 {
                     result = InvalidIndex;
                 }
@@ -1066,7 +1054,7 @@ namespace Core.Controls.Colours
             int lastStandardRowOffset;
             int lastStandardRowLastColumn;
 
-            lastStandardRowOffset = this.PrimaryRows * this.ActualColumns - this.Colours.Count;
+            lastStandardRowOffset = this.PrimaryRows * this.ActualColumns - this.Colors.Count;
             lastStandardRowLastColumn = this.ActualColumns - lastStandardRowOffset;
             column = cell.X + columnOffset;
             row = cell.Y + rowOffset;
@@ -1098,17 +1086,17 @@ namespace Core.Controls.Colours
             return new Point(column, row);
         }
 
-        protected virtual int GetColourIndex(Color value)
+        protected virtual int GetColorIndex(Color value)
         {
             int index;
 
-            index = this.Colours != null ? this.Colours.IndexOf(value) : InvalidIndex;
-            if (index == InvalidIndex && this.ShowCustomColors && this.CustomColours != null)
+            index = this.Colors != null ? this.Colors.IndexOf(value) : InvalidIndex;
+            if (index == InvalidIndex && this.ShowCustomColors && this.CustomColors != null)
             {
-                index = this.CustomColours.IndexOf(value);
+                index = this.CustomColors.IndexOf(value);
                 if (index != InvalidIndex)
                 {
-                    index += this.Colours.Count;
+                    index += this.Colors.Count;
                 }
             }
 
@@ -1157,14 +1145,14 @@ namespace Core.Controls.Colours
         }
 
         /// <summary>
-        /// Raises the <see cref="AutoAddColoursChanged" /> event.
+        /// Raises the <see cref="AutoAddColorsChanged" /> event.
         /// </summary>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         protected virtual void OnAutoAddColorsChanged(EventArgs e)
         {
             EventHandler handler;
 
-            handler = (EventHandler)this.Events[_eventAutoAddColoursChanged];
+            handler = (EventHandler)this.Events[_eventAutoAddColorsChanged];
 
             handler?.Invoke(this, e);
         }
@@ -1182,7 +1170,7 @@ namespace Core.Controls.Colours
                 this.AutoSize = false;
             }
 
-            this.RefreshColours();
+            this.RefreshColors();
 
             handler = (EventHandler)this.Events[_eventAutoFitChanged];
 
@@ -1205,7 +1193,7 @@ namespace Core.Controls.Colours
         }
 
         /// <summary>
-        /// Raises the <see cref="CellBorderColourChanged" /> event.
+        /// Raises the <see cref="CellBorderColorChanged" /> event.
         /// </summary>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         protected virtual void OnCellBorderColorChanged(EventArgs e)
@@ -1217,7 +1205,7 @@ namespace Core.Controls.Colours
                 this.Invalidate();
             }
 
-            handler = (EventHandler)this.Events[_eventCellBorderColourChanged];
+            handler = (EventHandler)this.Events[_eventCellBorderColorChanged];
 
             handler?.Invoke(this, e);
         }
@@ -1270,7 +1258,7 @@ namespace Core.Controls.Colours
 
             if (this.AllowPainting)
             {
-                this.RefreshColours();
+                this.RefreshColors();
                 this.Invalidate();
             }
 
@@ -1302,20 +1290,20 @@ namespace Core.Controls.Colours
         }
 
         /// <summary>
-        /// Raises the <see cref="ColourChanged" /> event.
+        /// Raises the <see cref="ColorChanged" /> event.
         /// </summary>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         protected virtual void OnColorChanged(EventArgs e)
         {
             EventHandler handler;
 
-            handler = (EventHandler)this.Events[_eventColourChanged];
+            handler = (EventHandler)this.Events[_eventColorChanged];
 
             handler?.Invoke(this, e);
         }
 
         /// <summary>
-        /// Raises the <see cref="ColourIndexChanged" /> event.
+        /// Raises the <see cref="ColorIndexChanged" /> event.
         /// </summary>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         protected virtual void OnColorIndexChanged(EventArgs e)
@@ -1324,26 +1312,26 @@ namespace Core.Controls.Colours
 
             if (this.AllowPainting)
             {
-                this.Invalidate(_previousColourIndex);
-                this.Invalidate(this.ColourIndex);
+                this.Invalidate(_previousColorIndex);
+                this.Invalidate(this.ColorIndex);
             }
 
-            handler = (EventHandler)this.Events[_eventColourIndexChanged];
+            handler = (EventHandler)this.Events[_eventColorIndexChanged];
 
             handler?.Invoke(this, e);
         }
 
         /// <summary>
-        /// Raises the <see cref="ColoursChanged" /> event.
+        /// Raises the <see cref="ColorsChanged" /> event.
         /// </summary>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         protected virtual void OnColorsChanged(EventArgs e)
         {
             EventHandler handler;
 
-            this.AddEventHandlers(this.Colours);
+            this.AddEventHandlers(this.Colors);
 
-            this.RefreshColours();
+            this.RefreshColors();
 
             handler = (EventHandler)this.Events[_eventColorsChanged];
 
@@ -1358,7 +1346,7 @@ namespace Core.Controls.Colours
         {
             EventHandler handler;
 
-            this.RefreshColours();
+            this.RefreshColors();
 
             handler = (EventHandler)this.Events[_eventColumnsChanged];
 
@@ -1366,30 +1354,30 @@ namespace Core.Controls.Colours
         }
 
         /// <summary>
-        /// Raises the <see cref="CustomColoursChanged" /> event.
+        /// Raises the <see cref="CustomColorsChanged" /> event.
         /// </summary>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         protected virtual void OnCustomColorsChanged(EventArgs e)
         {
             EventHandler handler;
 
-            this.AddEventHandlers(this.CustomColours);
-            this.RefreshColours();
+            this.AddEventHandlers(this.CustomColors);
+            this.RefreshColors();
 
-            handler = (EventHandler)this.Events[_eventCustomColoursChanged];
+            handler = (EventHandler)this.Events[_eventCustomColorsChanged];
 
             handler?.Invoke(this, e);
         }
 
         /// <summary>
-        /// Raises the <see cref="EditingColour" /> event.
+        /// Raises the <see cref="EditingColor" /> event.
         /// </summary>
         /// <param name="e">The <see cref="EditColourCancelEventArgs" /> instance containing the event data.</param>
-        protected virtual void OnEditingColour(EditColourCancelEventArgs e)
+        protected virtual void OnEditingColor(EditColourCancelEventArgs e)
         {
             EventHandler<EditColourCancelEventArgs> handler;
 
-            handler = (EventHandler<EditColourCancelEventArgs>)this.Events[_eventEditingColour];
+            handler = (EventHandler<EditColourCancelEventArgs>)this.Events[_eventEditingColor];
 
             handler?.Invoke(this, e);
         }
@@ -1413,7 +1401,7 @@ namespace Core.Controls.Colours
 
             if (this.AllowPainting)
             {
-                this.Invalidate(this.ColourIndex);
+                this.Invalidate(this.ColorIndex);
             }
         }
 
@@ -1461,11 +1449,11 @@ namespace Core.Controls.Colours
                     e.Handled = true;
                     break;
                 case Keys.Home:
-                    this.Navigate(0, 0, NavigationOrigin.BEGIN);
+                    this.Navigate(0, 0, NavigationOrigin.Begin);
                     e.Handled = true;
                     break;
                 case Keys.End:
-                    this.Navigate(0, 0, NavigationOrigin.END);
+                    this.Navigate(0, 0, NavigationOrigin.End);
                     e.Handled = true;
                     break;
             }
@@ -1475,20 +1463,20 @@ namespace Core.Controls.Colours
 
         protected override void OnKeyUp(KeyEventArgs e)
         {
-            if (this.WasKeyPressed && this.ColourIndex != InvalidIndex)
+            if (this.WasKeyPressed && this.ColorIndex != InvalidIndex)
             {
                 switch (e.KeyData)
                 {
                     case Keys.Enter:
                         ColourSource source;
 
-                        source = this.GetColourSource(this.ColourIndex);
+                        source = this.GetColourSource(this.ColorIndex);
 
-                        if (source == ColourSource.CUSTOM && this.EditMode != ColourEditingMode.NONE || source == ColourSource.STANDARD && this.EditMode == ColourEditingMode.BOTH)
+                        if (source == ColourSource.Custom && this.EditMode != ColourEditingMode.None || source == ColourSource.Standard && this.EditMode == ColourEditingMode.Both)
                         {
                             e.Handled = true;
 
-                            this.StartColorEdit(this.ColourIndex);
+                            this.StartColorEdit(this.ColorIndex);
                         }
                         break;
                     case Keys.Apps:
@@ -1497,7 +1485,7 @@ namespace Core.Controls.Colours
                         int y;
                         Point location;
 
-                        location = _colourRegions[_colorIndex].Location;
+                        location = _colorRegions[_colorIndex].Location;
                         x = location.X;
                         y = location.Y + _cellSize.Height;
 
@@ -1519,7 +1507,7 @@ namespace Core.Controls.Colours
 
             if (this.AllowPainting)
             {
-                this.Invalidate(this.ColourIndex);
+                this.Invalidate(this.ColorIndex);
             }
         }
 
@@ -1531,7 +1519,7 @@ namespace Core.Controls.Colours
 
             hitTest = this.HitTest(e.Location);
 
-            if (e.Button == MouseButtons.Left && (hitTest.Source == ColourSource.CUSTOM && this.EditMode != ColourEditingMode.NONE || hitTest.Source == ColourSource.STANDARD && this.EditMode == ColourEditingMode.BOTH))
+            if (e.Button == MouseButtons.Left && (hitTest.Source == ColourSource.Custom && this.EditMode != ColourEditingMode.None || hitTest.Source == ColourSource.Standard && this.EditMode == ColourEditingMode.Both))
             {
                 this.StartColorEdit(hitTest.Index);
             }
@@ -1578,7 +1566,7 @@ namespace Core.Controls.Colours
                 if (index != InvalidIndex)
                 {
                     this.Focus();
-                    this.ColourIndex = index;
+                    this.ColorIndex = index;
 
                     this.ShowContextMenu(e.Location);
                 }
@@ -1591,7 +1579,7 @@ namespace Core.Controls.Colours
 
             if (this.AllowPainting)
             {
-                this.RefreshColours();
+                this.RefreshColors();
                 this.Invalidate();
             }
         }
@@ -1604,7 +1592,7 @@ namespace Core.Controls.Colours
             {
                 int colorCount;
 
-                colorCount = this.Colours.Count;
+                colorCount = this.Colors.Count;
 
                 Debug.Print(e.ClipRectangle.Size == this.ClientSize ? "Performing full paint!" : "Performing partial paint!");
 
@@ -1627,38 +1615,38 @@ namespace Core.Controls.Colours
                 {
                     Rectangle bounds;
 
-                    bounds = _colourRegions[i];
+                    bounds = _colorRegions[i];
                     if (e.ClipRectangle.IntersectsWith(bounds))
                     {
-                        this.PaintCell(e, i, i, this.Colours[i], bounds);
+                        this.PaintCell(e, i, i, this.Colors[i], bounds);
                     }
                 }
 
-                if (this.CustomColours.Count != 0 && this.ShowCustomColors)
+                if (this.CustomColors.Count != 0 && this.ShowCustomColors)
                 {
                     // draw a separator
                     this.PaintSeparator(e);
 
                     // and the custom colors
-                    for (int i = 0; i < this.CustomColours.Count; i++)
+                    for (int i = 0; i < this.CustomColors.Count; i++)
                     {
                         Rectangle bounds;
 
-                        if (_colourRegions.TryGetValue(colorCount + i, out bounds) && e.ClipRectangle.IntersectsWith(bounds))
+                        if (_colorRegions.TryGetValue(colorCount + i, out bounds) && e.ClipRectangle.IntersectsWith(bounds))
                         {
-                            this.PaintCell(e, i, colorCount + i, this.CustomColours[i], bounds);
+                            this.PaintCell(e, i, colorCount + i, this.CustomColors[i], bounds);
                         }
                     }
                 }
 
                 // draw the selected color
-                if (this.SelectedCellStyle != ColourGridSelectedCellStyle.NONE && this.ColourIndex >= 0)
+                if (this.SelectedCellStyle != ColourGridSelectedCellStyle.None && this.ColorIndex >= 0)
                 {
                     Rectangle bounds;
 
-                    if (_colourRegions.TryGetValue(this.ColourIndex, out bounds) && e.ClipRectangle.IntersectsWith(bounds))
+                    if (_colorRegions.TryGetValue(this.ColorIndex, out bounds) && e.ClipRectangle.IntersectsWith(bounds))
                     {
-                        this.PaintSelectedCell(e, this.ColourIndex, this.Colour, bounds);
+                        this.PaintSelectedCell(e, this.ColorIndex, this.Colour, bounds);
                     }
                 }
             }
@@ -1672,7 +1660,7 @@ namespace Core.Controls.Colours
         {
             EventHandler handler;
 
-            this.Colours = this.GetPredefinedPalette();
+            this.Colors = this.GetPredefinedPalette();
 
             handler = (EventHandler)this.Events[_eventPaletteChanged];
 
@@ -1681,7 +1669,7 @@ namespace Core.Controls.Colours
 
         protected override void OnResize(EventArgs e)
         {
-            this.RefreshColours();
+            this.RefreshColors();
 
             base.OnResize(e);
         }
@@ -1705,16 +1693,16 @@ namespace Core.Controls.Colours
         }
 
         /// <summary>
-        /// Raises the <see cref="ShowCustomColoursChanged" /> event.
+        /// Raises the <see cref="ShowCustomColorsChanged" /> event.
         /// </summary>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
-        protected virtual void OnShowCustomColoursChanged(EventArgs e)
+        protected virtual void OnShowCustomColorsChanged(EventArgs e)
         {
             EventHandler handler;
 
-            this.RefreshColours();
+            this.RefreshColors();
 
-            handler = (EventHandler)this.Events[_eventShowCustomColoursChanged];
+            handler = (EventHandler)this.Events[_eventShowCustomColorsChanged];
 
             handler?.Invoke(this, e);
         }
@@ -1757,7 +1745,7 @@ namespace Core.Controls.Colours
 
             if (this.AllowPainting)
             {
-                this.RefreshColours();
+                this.RefreshColors();
                 this.Invalidate();
             }
 
@@ -1766,37 +1754,37 @@ namespace Core.Controls.Colours
             handler?.Invoke(this, e);
         }
 
-        protected virtual void PaintCell(PaintEventArgs e, int colourIndex, int cellIndex, Color colour, Rectangle bounds)
+        protected virtual void PaintCell(PaintEventArgs e, int colorIndex, int cellIndex, Color color, Rectangle bounds)
         {
-            if (colour.A != 255)
+            if (color.A != 255)
             {
                 this.PaintTransparentCell(e, bounds);
             }
 
-            using (Brush brush = new SolidBrush(colour))
+            using (Brush brush = new SolidBrush(color))
             {
                 e.Graphics.FillRectangle(brush, bounds);
             }
 
             switch (this.CellBorderStyle)
             {
-                case ColourCellBorderStyle.FIXEDSINGLE:
-                    using (Pen pen = new Pen(this.CellBorderColour))
+                case ColourCellBorderStyle.FixedSingle:
+                    using (Pen pen = new Pen(this.CellBorderColor))
                     {
                         e.Graphics.DrawRectangle(pen, bounds.Left, bounds.Top, bounds.Width - 1, bounds.Height - 1);
                     }
                     break;
-                case ColourCellBorderStyle.DOUBLESOFT:
+                case ColourCellBorderStyle.DoubleSoft:
                     HSLColour shadedOuter;
                     HSLColour shadedInner;
 
-                    shadedOuter = new HSLColour(colour);
+                    shadedOuter = new HSLColour(color);
                     shadedOuter.L -= 0.50;
 
-                    shadedInner = new HSLColour(colour);
+                    shadedInner = new HSLColour(color);
                     shadedInner.L -= 0.20;
 
-                    using (Pen pen = new Pen(this.CellBorderColour))
+                    using (Pen pen = new Pen(this.CellBorderColor))
                     {
                         e.Graphics.DrawRectangle(pen, bounds.Left, bounds.Top, bounds.Width - 1, bounds.Height - 1);
                     }
@@ -1823,7 +1811,7 @@ namespace Core.Controls.Colours
         {
             switch (this.SelectedCellStyle)
             {
-                case ColourGridSelectedCellStyle.STANDARD:
+                case ColourGridSelectedCellStyle.Standard:
                     if (this.Focused)
                     {
                         ControlPaint.DrawFocusRectangle(e.Graphics, bounds);
@@ -1833,16 +1821,16 @@ namespace Core.Controls.Colours
                         e.Graphics.DrawRectangle(Pens.Black, bounds.Left, bounds.Top, bounds.Width - 1, bounds.Height - 1);
                     }
                     break;
-                case ColourGridSelectedCellStyle.ZOOMED:
+                case ColourGridSelectedCellStyle.Zoomed:
                     // make the cell larger according to the padding
-                    if (this.SelectedCellStyle == ColourGridSelectedCellStyle.ZOOMED)
+                    if (this.SelectedCellStyle == ColourGridSelectedCellStyle.Zoomed)
                     {
                         bounds.Inflate(this.Padding.Left, this.Padding.Top);
                     }
 
                     // fill the inner
                     e.Graphics.FillRectangle(Brushes.White, bounds);
-                    if (this.SelectedCellStyle == ColourGridSelectedCellStyle.ZOOMED)
+                    if (this.SelectedCellStyle == ColourGridSelectedCellStyle.Zoomed)
                     {
                         bounds.Inflate(-3, -3);
                     }
@@ -1866,7 +1854,7 @@ namespace Core.Controls.Colours
                     {
                         bounds = new Rectangle(bounds.Left - 2, bounds.Top - 2, bounds.Width + 3, bounds.Height + 3);
 
-                        using (Pen pen = new Pen(this.CellBorderColour))
+                        using (Pen pen = new Pen(this.CellBorderColor))
                         {
                             e.Graphics.DrawRectangle(pen, bounds);
                         }
@@ -1887,7 +1875,7 @@ namespace Core.Controls.Colours
             y1 = this.SeparatorHeight / 2 + this.Padding.Top + this.PrimaryRows * (_scaledCellSize.Height + this.Spacing.Height) + 1 - this.Spacing.Height;
             y2 = y1;
 
-            using (Pen pen = new Pen(this.CellBorderColour))
+            using (Pen pen = new Pen(this.CellBorderColor))
             {
                 e.Graphics.DrawLine(pen, x1, y1, x2, y2);
             }
@@ -1911,15 +1899,15 @@ namespace Core.Controls.Colours
 
                 hitTest = this.HitTest(e.Location);
 
-                if (hitTest.Source != ColourSource.NONE)
+                if (hitTest.Source != ColourSource.None)
                 {
                     this.Colour = hitTest.Colour;
-                    this.ColourIndex = hitTest.Index;
+                    this.ColorIndex = hitTest.Index;
                 }
             }
         }
 
-        protected virtual void RefreshColours()
+        protected virtual void RefreshColors()
         {
             if (this.AllowPainting)
             {
@@ -1935,19 +1923,19 @@ namespace Core.Controls.Colours
                     this.SizeToFit();
                 }
 
-                _colourRegions.Clear();
+                _colorRegions.Clear();
 
-                if (this.Colours != null)
+                if (this.Colors != null)
                 {
-                    this.DefineColourRegions(this.Colours, 0, this.Padding.Top);
+                    this.DefineColorRegions(this.Colors, 0, this.Padding.Top);
                     if (this.ShowCustomColors)
                     {
-                        this.DefineColourRegions(this.CustomColours, this.Colours.Count, this.Padding.Top + this.SeparatorHeight + (_scaledCellSize.Height + this.Spacing.Height) * this.PrimaryRows);
+                        this.DefineColorRegions(this.CustomColors, this.Colors.Count, this.Padding.Top + this.SeparatorHeight + (_scaledCellSize.Height + this.Spacing.Height) * this.PrimaryRows);
                     }
 
-                    this.ColourIndex = this.GetColourIndex(this.Colour);
+                    this.ColorIndex = this.GetColorIndex(this.Colour);
 
-                    if (!this.Colour.IsEmpty && this.ColourIndex == InvalidIndex && this.AutoAddColours && this.ShowCustomColors)
+                    if (!this.Colour.IsEmpty && this.ColorIndex == InvalidIndex && this.AutoAddColors && this.ShowCustomColors)
                     {
                         this.AddCustomColor(this.Colour);
                     }
@@ -1957,24 +1945,24 @@ namespace Core.Controls.Colours
             }
         }
 
-        protected virtual void SetColour(int colourIndex, Color colour)
+        protected virtual void SetColor(int colorIndex, Color color)
         {
-            int colourCount;
+            int colorCount;
 
-            colourCount = this.Colours.Count;
+            colorCount = this.Colors.Count;
 
-            if (colourIndex < 0 || colourIndex > colourCount + this.CustomColours.Count)
+            if (colorIndex < 0 || colorIndex > colorCount + this.CustomColors.Count)
             {
-                throw new ArgumentOutOfRangeException(nameof(colourIndex));
+                throw new ArgumentOutOfRangeException(nameof(colorIndex));
             }
 
-            if (colourIndex > colourCount - 1)
+            if (colorIndex > colorCount - 1)
             {
-                this.CustomColours[colourIndex - colourCount] = colour;
+                this.CustomColors[colorIndex - colorCount] = color;
             }
             else
             {
-                this.Colours[colourIndex] = colour;
+                this.Colors[colorIndex] = color;
             }
         }
 
@@ -1982,37 +1970,37 @@ namespace Core.Controls.Colours
         {
             if (value != null)
             {
-                value.ItemInserted += this.ColoursCollectionChangedHandler;
-                value.ItemRemoved += this.ColoursCollectionChangedHandler;
-                value.ItemsCleared += this.ColoursCollectionChangedHandler;
-                value.ItemReplaced += this.ColoursCollectionItemReplacedHandler;
+                value.ItemInserted += this.ColorsCollectionChangedHandler;
+                value.ItemRemoved += this.ColorsCollectionChangedHandler;
+                value.ItemsCleared += this.ColorsCollectionChangedHandler;
+                value.ItemReplaced += this.ColorsCollectionItemReplacedHandler;
             }
         }
 
-        private void ColoursCollectionChangedHandler(object sender, ColourCollectionEventArgs e)
+        private void ColorsCollectionChangedHandler(object sender, ColourCollectionEventArgs e)
         {
-            this.RefreshColours();
+            this.RefreshColors();
         }
 
-        private void ColoursCollectionItemReplacedHandler(object sender, ColourCollectionEventArgs e)
+        private void ColorsCollectionItemReplacedHandler(object sender, ColourCollectionEventArgs e)
         {
             ColourCollection collection;
             int index;
 
             collection = (ColourCollection)sender;
             index = _colorIndex;
-            if (index != InvalidIndex && ReferenceEquals(collection, this.CustomColours))
+            if (index != InvalidIndex && ReferenceEquals(collection, this.CustomColors))
             {
-                index -= this.Colours.Count;
+                index -= this.Colors.Count;
             }
 
             if (index >= 0 && index < collection.Count && collection[index] != this.Colour)
             {
                 Debug.Print("Replacing index {0} with {1}", index, collection[index]);
 
-                _previousColourIndex = index;
+                _previousColorIndex = index;
                 _colorIndex = -1;
-                this.ColourIndex = index;
+                this.ColorIndex = index;
             }
 
             this.Invalidate(e.Index);
@@ -2028,10 +2016,10 @@ namespace Core.Controls.Colours
                 row = -1;
                 column = -1;
             }
-            else if (index >= this.Colours.Count)
+            else if (index >= this.Colors.Count)
             {
                 // custom color
-                index -= this.Colours.Count;
+                index -= this.Colors.Count;
                 row = index / this.ActualColumns;
                 column = index - row * this.ActualColumns;
                 row += this.PrimaryRows;
@@ -2050,10 +2038,10 @@ namespace Core.Controls.Colours
         {
             if (value != null)
             {
-                value.ItemInserted -= this.ColoursCollectionChangedHandler;
-                value.ItemRemoved -= this.ColoursCollectionChangedHandler;
-                value.ItemsCleared -= this.ColoursCollectionChangedHandler;
-                value.ItemReplaced -= this.ColoursCollectionItemReplacedHandler;
+                value.ItemInserted -= this.ColorsCollectionChangedHandler;
+                value.ItemRemoved -= this.ColorsCollectionChangedHandler;
+                value.ItemsCleared -= this.ColorsCollectionChangedHandler;
+                value.ItemReplaced -= this.ColorsCollectionItemReplacedHandler;
             }
         }
 
@@ -2082,7 +2070,7 @@ namespace Core.Controls.Colours
 
         _toolTip.SetToolTip(this, name);
 #else
-                    _toolTip.SetToolTip(this, this.HotIndex != InvalidIndex ? this.GetColour(this.HotIndex).Name : null);
+                    _toolTip.SetToolTip(this, this.HotIndex != InvalidIndex ? this.GetColor(this.HotIndex).Name : null);
 #endif
                 }
             }
@@ -2102,12 +2090,12 @@ namespace Core.Controls.Colours
         {
             EditColourCancelEventArgs e;
 
-            e = new EditColourCancelEventArgs(this.GetColour(index), index);
-            this.OnEditingColour(e);
+            e = new EditColourCancelEventArgs(this.GetColor(index), index);
+            this.OnEditingColor(e);
 
             if (!e.Cancel)
             {
-                this.EditColour(index);
+                this.EditColor(index);
             }
         }
 
@@ -2118,27 +2106,27 @@ namespace Core.Controls.Colours
         [Category("Property Changed")]
         public event EventHandler ColourChanged
         {
-            add { this.Events.AddHandler(_eventColourChanged, value); }
-            remove { this.Events.RemoveHandler(_eventColourChanged, value); }
+            add { this.Events.AddHandler(_eventColorChanged, value); }
+            remove { this.Events.RemoveHandler(_eventColorChanged, value); }
         }
 
         [Category("Appearance")]
         [DefaultValue(typeof(Color), "Black")]
         public virtual Color Colour
         {
-            get { return _colour; }
+            get { return _color; }
             set
             {
                 int newIndex;
 
-                _colour = value;
+                _color = value;
 
                 if (!value.IsEmpty)
                 {
                     // the new color matches the color at the current index, so don't change the index
                     // this stops the selection hopping about if you have duplicate colors in a palette
                     // otherwise, if the colors don't match, then find the index that does
-                    newIndex = this.GetColour(this.ColourIndex) == value ? this.ColourIndex : this.GetColourIndex(value);
+                    newIndex = this.GetColor(this.ColorIndex) == value ? this.ColorIndex : this.GetColorIndex(value);
 
                     if (newIndex == InvalidIndex)
                     {
@@ -2150,7 +2138,7 @@ namespace Core.Controls.Colours
                     newIndex = InvalidIndex;
                 }
 
-                this.ColourIndex = newIndex;
+                this.ColorIndex = newIndex;
 
                 this.OnColorChanged(EventArgs.Empty);
             }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
-using ExtendedColourControls.Controls;
+using Cyotek.Windows.Forms;
 
 namespace ExtendedColourControls
 {
@@ -9,7 +9,7 @@ namespace ExtendedColourControls
     /// Represents a control that binds multiple editors together as a single composite unit.
     /// </summary>
     [DefaultEvent("ColourChanged")]
-    public class ColourEditorManager : Component, IColourEditor
+    public class ColourEditorManager : Component, IColourEditor, IColorEditor
     {
         #region Constants
 
@@ -33,7 +33,9 @@ namespace ExtendedColourControls
 
         private ColourEditor _colourEditor;
 
-        private KryptonColourGrid _grid;
+        //private ColourGrid _grid;
+
+        private ColorGrid _grid;
 
         private HSLColour _hslColour;
 
@@ -42,6 +44,8 @@ namespace ExtendedColourControls
         private ScreenColourPicker _screenColourPicker;
 
         private ColourWheel _wheel;
+
+        public event EventHandler ColorChanged;
 
         #endregion
 
@@ -108,18 +112,34 @@ namespace ExtendedColourControls
         /// <summary>
         /// Gets or sets the linked <see cref="ColourGrid"/>.
         /// </summary>
-        [Category("Behavior")]
-        [DefaultValue(typeof(KryptonColourGrid), null)]
-        public virtual KryptonColourGrid ColourGrid
+        //[Category("Behavior")]
+        //[DefaultValue(typeof(ColourGrid), null)]
+        //public virtual ColourGrid ColourGrid
+        //{
+        //    get { return _grid; }
+        //    set
+        //    {
+        //        if (this.ColourGrid != value)
+        //        {
+        //            _grid = value;
+
+        //            this.OnColourGridChanged(EventArgs.Empty);
+        //        }
+        //    }
+        //}
+
+        [Category("Behavior"), DefaultValue(typeof(ColorGrid), null)]
+        public virtual ColorGrid ColourGrid
         {
-            get { return _grid; }
+            get => _grid;
+
             set
             {
-                if (this.ColourGrid != value)
+                if (ColourGrid != value)
                 {
                     _grid = value;
 
-                    this.OnColourGridChanged(EventArgs.Empty);
+                    OnColourGridChanged(EventArgs.Empty);
                 }
             }
         }
@@ -221,6 +241,8 @@ namespace ExtendedColourControls
             control.ColourChanged += this.ColourChangedHandler;
         }
 
+        protected virtual void BindEvents(IColorEditor control) => control.ColorChanged += ColourChangedHandler;
+
         /// <summary>
         /// Raises the <see cref="ColourChanged" /> event.
         /// </summary>
@@ -230,6 +252,8 @@ namespace ExtendedColourControls
             EventHandler handler;
 
             this.Synchronize(this);
+
+            Synchronise(this);
 
             handler = (EventHandler)this.Events[_eventColourChanged];
 
@@ -339,6 +363,14 @@ namespace ExtendedColourControls
             }
         }
 
+        protected virtual void SetColour(IColorEditor control, IColorEditor sender)
+        {
+            if (control != null && control != sender)
+            {
+                control.Color = sender.Color;
+            }
+        }
+
         /// <summary>
         /// Synchronizes linked components with the specified <see cref="IColourEditor"/>.
         /// </summary>
@@ -350,7 +382,7 @@ namespace ExtendedColourControls
                 try
                 {
                     this.LockUpdates = true;
-                    this.SetColour(this.ColourGrid, sender);
+
                     this.SetColour(this.ColourWheel, sender);
                     this.SetColour(this.ScreenColourPicker, sender);
                     this.SetColour(this.ColourEditor, sender);
@@ -359,6 +391,23 @@ namespace ExtendedColourControls
                 finally
                 {
                     this.LockUpdates = false;
+                }
+            }
+        }
+
+        protected virtual void Synchronise(IColorEditor sender)
+        {
+            if (!LockUpdates)
+            {
+                try
+                {
+                    LockUpdates = true;
+
+                    this.SetColour(this.ColourGrid, sender);
+                }
+                finally
+                {
+                    LockUpdates = false;
                 }
             }
         }
@@ -374,12 +423,18 @@ namespace ExtendedColourControls
             {
                 IColourEditor source;
 
+                IColorEditor editor;
+
                 source = (IColourEditor)sender;
+
+                editor = (IColorEditor)sender;
 
                 this.LockUpdates = true;
                 this.Colour = source.Colour;
                 this.LockUpdates = false;
                 this.Synchronize(source);
+
+                Synchronise(editor);
             }
         }
 
@@ -411,6 +466,22 @@ namespace ExtendedColourControls
                     _hslColour = new HSLColour(value);
 
                     this.OnColourChanged(EventArgs.Empty);
+                }
+            }
+        }
+
+        public Color Color
+        {
+            get => _colour;
+            set
+            {
+                if (_colour != value)
+                {
+                    _colour = value;
+
+                    _hslColour = new HSLColour(value);
+
+                    OnColourChanged(EventArgs.Empty);
                 }
             }
         }

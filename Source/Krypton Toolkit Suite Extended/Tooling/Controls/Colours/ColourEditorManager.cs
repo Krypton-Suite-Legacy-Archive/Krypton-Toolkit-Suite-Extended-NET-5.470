@@ -7,19 +7,19 @@
  */
 #endregion
 
-using Core.Interfaces;
-using Core.STRUCTS;
-using Core.UserControls.Colours;
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using Core.Interfaces;
+using Core.STRUCTS;
+using Core.UserControls.Colours;
 
 namespace Core.Controls.Colours
 {
     /// <summary>
     /// Represents a control that binds multiple editors together as a single composite unit.
     /// </summary>
-    [DefaultEvent("ColourChanged")]
+    [DefaultEvent("ColourChanged"), ToolboxItem(false)]
     public class ColourEditorManager : Component, IColourEditor
     {
         #region Constants
