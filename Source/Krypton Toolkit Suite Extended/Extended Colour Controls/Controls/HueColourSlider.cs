@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace ExtendedColourControls
 {
+    [ToolboxItem(true)]
     public class HueColourSlider : ColourSlider
     {
         #region Constructors
@@ -13,6 +14,7 @@ namespace ExtendedColourControls
             this.BarStyle = ColourBarStyle.Custom;
             this.Maximum = 359;
             this.CustomColours = new ColourCollection(Enumerable.Range(0, 359).Select(h => new HSLColour(h, 1, 0.5).ToRgbColour()));
+            BackColor = Color.Transparent;
         }
 
         #endregion

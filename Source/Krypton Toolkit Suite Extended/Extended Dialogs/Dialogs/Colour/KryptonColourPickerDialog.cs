@@ -7,9 +7,10 @@ using System.Linq;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using Cyotek.Windows.Forms;
+using ExtendedColourControls;
 using KryptonToolkitSuiteExtendedCore;
 
-namespace ExtendedColourControls
+namespace ExtendedDialogs
 {
     [DefaultEvent("PreviewColorChanged"), DefaultProperty("Color")]
     public class ColourPickerDialog : KryptonForm
@@ -34,15 +35,15 @@ namespace ExtendedColourControls
             this.kpnlMain = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnSaveColourPalette = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnLoadColourPalette = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.scpPicker = new ExtendedColourControls.ScreenColourPicker();
-            this.ceColour = new ExtendedColourControls.ColourEditor();
+            this.scpPicker = new ScreenColourPicker();
+            this.ceColour = new ColourEditor();
             this.ceEditor = new Cyotek.Windows.Forms.ColorEditor();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.cbColourPreview = new KryptonToolkitSuiteExtendedCore.CircularPictureBox();
-            this.cwColourPicker = new ExtendedColourControls.ColourWheel();
+            this.cwColourPicker = new ColourWheel();
             this.cgColourPalette = new Cyotek.Windows.Forms.ColorGrid();
-            this.cem = new ExtendedColourControls.ColourEditorManager();
+            this.cem = new ColourEditorManager();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlMain)).BeginInit();
             this.kpnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbColourPreview)).BeginInit();
@@ -72,7 +73,7 @@ namespace ExtendedColourControls
             this.kbtnSaveColourPalette.Name = "kbtnSaveColourPalette";
             this.kbtnSaveColourPalette.Size = new System.Drawing.Size(23, 23);
             this.kbtnSaveColourPalette.TabIndex = 5;
-            this.kbtnSaveColourPalette.Values.Image = global::ExtendedColourControls.Properties.Resources.palette_save;
+            this.kbtnSaveColourPalette.Values.Image = global::ExtendedDialogs.Properties.Resources.palette_save;
             this.kbtnSaveColourPalette.Values.Text = "";
             this.kbtnSaveColourPalette.Click += new System.EventHandler(this.KbtnSaveColourPalette_Click);
             // 
@@ -82,14 +83,14 @@ namespace ExtendedColourControls
             this.kbtnLoadColourPalette.Name = "kbtnLoadColourPalette";
             this.kbtnLoadColourPalette.Size = new System.Drawing.Size(23, 23);
             this.kbtnLoadColourPalette.TabIndex = 1;
-            this.kbtnLoadColourPalette.Values.Image = global::ExtendedColourControls.Properties.Resources.palette_load;
+            this.kbtnLoadColourPalette.Values.Image = global::ExtendedDialogs.Properties.Resources.palette_load;
             this.kbtnLoadColourPalette.Values.Text = "";
             this.kbtnLoadColourPalette.Click += new System.EventHandler(this.KbtnLoadColourPalette_Click);
             // 
             // scpPicker
             // 
             this.scpPicker.Colour = System.Drawing.Color.Empty;
-            this.scpPicker.Image = global::ExtendedColourControls.Properties.Resources.eyedropper1;
+            this.scpPicker.Image = global::ExtendedDialogs.Properties.Resources.eyedropper;
             this.scpPicker.Location = new System.Drawing.Point(501, 164);
             this.scpPicker.Name = "scpPicker";
             this.scpPicker.Size = new System.Drawing.Size(130, 129);
@@ -340,7 +341,7 @@ namespace ExtendedColourControls
 
         private void KbtnLoadColourPalette_Click(object sender, EventArgs e)
         {
-            using (FileDialog fd = new OpenFileDialog { Filter = PaletteSerializer.DefaultOpenFilter, DefaultExt = "pal", Title = "Open a custom palette file:" })
+            using (FileDialog fd = new OpenFileDialog { Filter = Cyotek.Windows.Forms.PaletteSerializer.DefaultOpenFilter, DefaultExt = "pal", Title = "Open a custom palette file:" })
             {
                 if (fd.ShowDialog(this) == DialogResult.OK)
                 {
@@ -425,7 +426,7 @@ namespace ExtendedColourControls
 
         private void KbtnSaveColourPalette_Click(object sender, EventArgs e)
         {
-            using (FileDialog fd = new SaveFileDialog { Filter = PaletteSerializer.DefaultSaveFilter, DefaultExt = "pal", Title = "Save custom palette as:" })
+            using (FileDialog fd = new SaveFileDialog { Filter = Cyotek.Windows.Forms.PaletteSerializer.DefaultSaveFilter, DefaultExt = "pal", Title = "Save custom palette as:" })
             {
                 if (fd.ShowDialog(this) == DialogResult.OK)
                 {

@@ -35,6 +35,7 @@ namespace ExtendedColourControls
             base.Maximum = 255;
             this.Colour = Color.Black;
             this.CreateScale();
+            BackColor = Color.Transparent;
         }
 
         #endregion

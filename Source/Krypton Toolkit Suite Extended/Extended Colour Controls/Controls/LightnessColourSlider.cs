@@ -4,6 +4,7 @@ using System.Drawing;
 
 namespace ExtendedColourControls
 {
+    [ToolboxItem(true)]
     public class LightnessColourSlider : ColourSlider, IColourEditor
     {
         #region Constants
@@ -24,6 +25,7 @@ namespace ExtendedColourControls
         {
             this.BarStyle = ColourBarStyle.TwoColour;
             this.Colour = Color.Black;
+            BackColor = Color.Transparent;
         }
 
         #endregion

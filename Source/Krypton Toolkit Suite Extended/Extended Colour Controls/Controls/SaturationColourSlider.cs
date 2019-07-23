@@ -7,6 +7,7 @@ namespace ExtendedColourControls
     /// <summary>
     /// Represents a control for selecting the saturation of a color
     /// </summary>
+    [ToolboxItem(true)]
     public class SaturationColourSlider : ColourSlider
     {
         #region Constants
@@ -27,6 +28,7 @@ namespace ExtendedColourControls
         {
             this.BarStyle = ColourBarStyle.TwoColour;
             this.Colour = Color.Black;
+            BackColor = Color.Transparent;
         }
 
         #endregion

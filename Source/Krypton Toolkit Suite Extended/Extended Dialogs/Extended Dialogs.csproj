@@ -51,10 +51,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\Colour\KryptonColourPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialogs\Colour\KryptonBasicColourDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\Colour\KryptonColourButtonCustomColourDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Colour\KryptonContrastColourGeneratorDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\Toast\KryptonToastNotificationDialog.cs">
@@ -68,16 +74,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Cyotek.Windows.Forms.ColorPicker">
+      <Version>1.7.2</Version>
+    </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470CoreModule">
       <Version>5.470.1231</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialogs\Colour\KryptonColourPickerDialog.resx">
+      <DependentUpon>KryptonColourPickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Colour\KryptonBasicColourDialog.resx">
       <DependentUpon>KryptonBasicColourDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Colour\KryptonColourButtonCustomColourDialog.resx">
       <DependentUpon>KryptonColourButtonCustomColourDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Colour\KryptonContrastColourGeneratorDialog.resx">
+      <DependentUpon>KryptonContrastColourGeneratorDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,6 +119,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Warning 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cellbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyedropper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette-load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette-save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
