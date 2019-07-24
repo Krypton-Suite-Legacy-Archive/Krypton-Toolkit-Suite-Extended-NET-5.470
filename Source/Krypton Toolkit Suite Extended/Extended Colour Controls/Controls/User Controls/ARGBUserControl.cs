@@ -10,10 +10,10 @@ namespace ExtendedColourControls.Controls
     public class ARGBUserControl : UserControl
     {
         #region Designer Code
-        private AlphaValueNumericBox avnbValue;
-        private BlueValueNumericBox bvnbValue;
-        private GreenValueNumericBox gvnbValue;
-        private RedValueNumericBox rvnbValue;
+        private KryptonAlphaValueNumericBox avnbValue;
+        private KryptonBlueValueNumericBox bvnbValue;
+        private KryptonGreenValueNumericBox gvnbValue;
+        private KryptonRedValueNumericBox rvnbValue;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
@@ -25,10 +25,10 @@ namespace ExtendedColourControls.Controls
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.rvnbValue = new ExtendedColourControls.RedValueNumericBox();
-            this.gvnbValue = new ExtendedColourControls.GreenValueNumericBox();
-            this.bvnbValue = new ExtendedColourControls.BlueValueNumericBox();
-            this.avnbValue = new ExtendedColourControls.AlphaValueNumericBox();
+            this.rvnbValue = new ExtendedColourControls.KryptonRedValueNumericBox();
+            this.gvnbValue = new ExtendedColourControls.KryptonGreenValueNumericBox();
+            this.bvnbValue = new ExtendedColourControls.KryptonBlueValueNumericBox();
+            this.avnbValue = new ExtendedColourControls.KryptonAlphaValueNumericBox();
             this.SuspendLayout();
             // 
             // kryptonLabel1

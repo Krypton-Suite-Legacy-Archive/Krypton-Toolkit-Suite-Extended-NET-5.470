@@ -55,10 +55,10 @@
     <Compile Include="Classes\ColourCollectionEventArgs.cs" />
     <Compile Include="Classes\ColourCollection.cs" />
     <Compile Include="Classes\ColourExtensions.cs" />
-    <Compile Include="Controls\ColourEditor.cs">
+    <Compile Include="Controls\User Controls\ColourEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ColourEditorManager.cs">
+    <Compile Include="Controls\Components\ColourEditorManager.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\ColourHitTestInfo.cs" />
@@ -66,44 +66,45 @@
     <Compile Include="Classes\EditColourCancelEventArgs.cs" />
     <Compile Include="Classes\NativeMethods.cs" />
     <Compile Include="Classes\PaletteSerializer.cs" />
-    <Compile Include="Controls\ARGBUserControl.cs">
+    <Compile Include="Controls\User Controls\ARGBUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ColourGrid.cs">
+    <Compile Include="Controls\Components\ColourGrid.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\ColourSlider.cs">
+    <Compile Include="Controls\Components\ColourSlider.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\ColourWheel.cs">
+    <Compile Include="Controls\Components\ColourWheel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\ContrastColourControl.cs">
+    <Compile Include="Controls\User Controls\ContrastColourControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\HueColourSlider.cs">
+    <Compile Include="Controls\Components\HueColourSlider.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\Labels\KryptonAlphaValueLabel.cs" />
     <Compile Include="Controls\Labels\KryptonBlueValueLabel.cs" />
     <Compile Include="Controls\Labels\KryptonGreenValueLabel.cs" />
     <Compile Include="Controls\Labels\KryptonRedValueLabel.cs" />
-    <Compile Include="Controls\LightnessColourSlider.cs">
+    <Compile Include="Controls\Components\LightnessColourSlider.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\Numeric Boxes\AlphaValueNumericBox.cs" />
-    <Compile Include="Controls\Numeric Boxes\BlueValueNumericBox.cs" />
-    <Compile Include="Controls\Numeric Boxes\GreenValueNumericBox.cs" />
-    <Compile Include="Controls\Numeric Boxes\RedValueNumericBox.cs" />
-    <Compile Include="Controls\RGBAColourSlider.cs">
+    <Compile Include="Controls\Numeric Boxes\KryptonAlphaValueNumericBox.cs" />
+    <Compile Include="Controls\Numeric Boxes\KryptonBlueValueNumericBox.cs" />
+    <Compile Include="Controls\Numeric Boxes\KryptonGreenValueNumericBox.cs" />
+    <Compile Include="Controls\Numeric Boxes\KryptonRedValueNumericBox.cs" />
+    <Compile Include="Controls\Components\RGBAColourSlider.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\SaturationColourSlider.cs">
+    <Compile Include="Controls\Components\SaturationColourSlider.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\ScreenColourPicker.cs">
+    <Compile Include="Controls\Components\ScreenColourPicker.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\Trackbars\KryptonAlphaTrackBar.cs" />
     <Compile Include="Controls\Trackbars\KryptonBlueTrackBar.cs" />
     <Compile Include="Controls\Trackbars\KryptonGreenTrackBar.cs" />
     <Compile Include="Controls\Trackbars\KryptonRedTrackBar.cs" />
@@ -130,13 +131,13 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Controls\ARGBUserControl.resx">
+    <EmbeddedResource Include="Controls\User Controls\ARGBUserControl.resx">
       <DependentUpon>ARGBUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ColourEditor.resx">
+    <EmbeddedResource Include="Controls\User Controls\ColourEditor.resx">
       <DependentUpon>ColourEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ContrastColourControl.resx">
+    <EmbeddedResource Include="Controls\User Controls\ContrastColourControl.resx">
       <DependentUpon>ContrastColourControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -162,5 +163,6 @@
   <ItemGroup>
     <None Include="Resources\palette-save.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

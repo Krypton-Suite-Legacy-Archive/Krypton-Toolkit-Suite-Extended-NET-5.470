@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace ExtendedColourControls
 {
-    public class AlphaValueNumericBox : KryptonNumericUpDown
+    public class KryptonAlphaValueNumericBox : KryptonNumericUpDown
     {
         #region Constants
         private const int DEFAULT_VALUE = 0, MINIMUM_DEFAULT_VALUE = 0, MAXIMUM_DEFAULT_VALUE = 255;
@@ -14,7 +14,7 @@ namespace ExtendedColourControls
         #endregion
 
         #region Constructor
-        public AlphaValueNumericBox()
+        public KryptonAlphaValueNumericBox()
         {
             Minimum = MINIMUM_DEFAULT_VALUE;
 

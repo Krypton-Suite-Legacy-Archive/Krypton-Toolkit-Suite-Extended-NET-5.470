@@ -14,7 +14,15 @@ namespace ExtendedDialogs
         private System.Windows.Forms.Panel panel1;
         private KryptonPanel kryptonPanel1;
         private KryptonToolkitSuiteExtendedCore.CircularPictureBox circularPictureBox1;
+        private ExtendedColourControls.KryptonAlphaValueNumericBox alphaValueNumericBox1;
+        private ExtendedColourControls.Controls.Labels.KryptonAlphaValueLabel kryptonAlphaValueLabel1;
+        private ExtendedColourControls.Controls.Labels.KryptonRedValueLabel kryptonRedValueLabel1;
+        private ExtendedColourControls.Controls.Labels.KryptonGreenValueLabel kryptonGreenValueLabel1;
+        private ExtendedColourControls.Controls.Labels.KryptonBlueValueLabel kryptonBlueValueLabel1;
+        private ExtendedColourControls.KryptonAlphaTrackBar kryptonAlphaTrackBar1;
         private ExtendedColourControls.KryptonRedTrackBar kryptonRedTrackBar1;
+        private ExtendedColourControls.KryptonGreenTrackBar kryptonGreenTrackBar1;
+        private ExtendedColourControls.KryptonBlueTrackBar kryptonBlueTrackBar1;
         private KryptonButton kbtnGenerate;
 
         private void InitializeComponent()
@@ -29,8 +37,16 @@ namespace ExtendedDialogs
             this.kbtnGenerate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.alphaValueNumericBox1 = new ExtendedColourControls.KryptonAlphaValueNumericBox();
+            this.kryptonAlphaValueLabel1 = new ExtendedColourControls.Controls.Labels.KryptonAlphaValueLabel();
             this.circularPictureBox1 = new KryptonToolkitSuiteExtendedCore.CircularPictureBox();
+            this.kryptonRedValueLabel1 = new ExtendedColourControls.Controls.Labels.KryptonRedValueLabel();
+            this.kryptonGreenValueLabel1 = new ExtendedColourControls.Controls.Labels.KryptonGreenValueLabel();
+            this.kryptonBlueValueLabel1 = new ExtendedColourControls.Controls.Labels.KryptonBlueValueLabel();
+            this.kryptonAlphaTrackBar1 = new ExtendedColourControls.KryptonAlphaTrackBar();
             this.kryptonRedTrackBar1 = new ExtendedColourControls.KryptonRedTrackBar();
+            this.kryptonGreenTrackBar1 = new ExtendedColourControls.KryptonGreenTrackBar();
+            this.kryptonBlueTrackBar1 = new ExtendedColourControls.KryptonBlueTrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -142,13 +158,49 @@ namespace ExtendedDialogs
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonAlphaTrackBar1);
             this.kryptonPanel1.Controls.Add(this.kryptonRedTrackBar1);
+            this.kryptonPanel1.Controls.Add(this.kryptonGreenTrackBar1);
+            this.kryptonPanel1.Controls.Add(this.kryptonBlueTrackBar1);
+            this.kryptonPanel1.Controls.Add(this.alphaValueNumericBox1);
+            this.kryptonPanel1.Controls.Add(this.kryptonAlphaValueLabel1);
             this.kryptonPanel1.Controls.Add(this.circularPictureBox1);
+            this.kryptonPanel1.Controls.Add(this.kryptonBlueValueLabel1);
+            this.kryptonPanel1.Controls.Add(this.kryptonGreenValueLabel1);
+            this.kryptonPanel1.Controls.Add(this.kryptonRedValueLabel1);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1208, 271);
             this.kryptonPanel1.TabIndex = 4;
+            // 
+            // alphaValueNumericBox1
+            // 
+            this.alphaValueNumericBox1.Location = new System.Drawing.Point(292, 12);
+            this.alphaValueNumericBox1.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.alphaValueNumericBox1.Name = "alphaValueNumericBox1";
+            this.alphaValueNumericBox1.Size = new System.Drawing.Size(79, 26);
+            this.alphaValueNumericBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.alphaValueNumericBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.alphaValueNumericBox1.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.alphaValueNumericBox1.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
+            this.alphaValueNumericBox1.TabIndex = 5;
+            // 
+            // kryptonAlphaValueLabel1
+            // 
+            this.kryptonAlphaValueLabel1.AlphaValue = 255;
+            this.kryptonAlphaValueLabel1.Location = new System.Drawing.Point(224, 12);
+            this.kryptonAlphaValueLabel1.Name = "kryptonAlphaValueLabel1";
+            this.kryptonAlphaValueLabel1.Size = new System.Drawing.Size(62, 26);
+            this.kryptonAlphaValueLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.kryptonAlphaValueLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.kryptonAlphaValueLabel1.TabIndex = 6;
+            this.kryptonAlphaValueLabel1.TextSize = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.kryptonAlphaValueLabel1.Values.Text = "Alpha:";
             // 
             // circularPictureBox1
             // 
@@ -159,20 +211,111 @@ namespace ExtendedDialogs
             this.circularPictureBox1.TabIndex = 5;
             this.circularPictureBox1.TabStop = false;
             // 
+            // kryptonRedValueLabel1
+            // 
+            this.kryptonRedValueLabel1.Location = new System.Drawing.Point(240, 44);
+            this.kryptonRedValueLabel1.Name = "kryptonRedValueLabel1";
+            this.kryptonRedValueLabel1.RedValue = 255;
+            this.kryptonRedValueLabel1.Size = new System.Drawing.Size(46, 26);
+            this.kryptonRedValueLabel1.StateCommon.LongText.Color1 = System.Drawing.Color.Red;
+            this.kryptonRedValueLabel1.StateCommon.LongText.Color2 = System.Drawing.Color.Red;
+            this.kryptonRedValueLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.kryptonRedValueLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
+            this.kryptonRedValueLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
+            this.kryptonRedValueLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.kryptonRedValueLabel1.TabIndex = 5;
+            this.kryptonRedValueLabel1.TextSize = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.kryptonRedValueLabel1.Values.Text = "Red:";
+            // 
+            // kryptonGreenValueLabel1
+            // 
+            this.kryptonGreenValueLabel1.Location = new System.Drawing.Point(224, 90);
+            this.kryptonGreenValueLabel1.Name = "kryptonGreenValueLabel1";
+            this.kryptonGreenValueLabel1.RedValue = 255;
+            this.kryptonGreenValueLabel1.Size = new System.Drawing.Size(213, 26);
+            this.kryptonGreenValueLabel1.StateCommon.LongText.Color1 = System.Drawing.Color.Green;
+            this.kryptonGreenValueLabel1.StateCommon.LongText.Color2 = System.Drawing.Color.Green;
+            this.kryptonGreenValueLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.kryptonGreenValueLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.Green;
+            this.kryptonGreenValueLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.Green;
+            this.kryptonGreenValueLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.kryptonGreenValueLabel1.TabIndex = 6;
+            this.kryptonGreenValueLabel1.TextSize = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.kryptonGreenValueLabel1.Values.Text = "kryptonGreenValueLabel1";
+            // 
+            // kryptonBlueValueLabel1
+            // 
+            this.kryptonBlueValueLabel1.Location = new System.Drawing.Point(224, 138);
+            this.kryptonBlueValueLabel1.Name = "kryptonBlueValueLabel1";
+            this.kryptonBlueValueLabel1.RedValue = 255;
+            this.kryptonBlueValueLabel1.Size = new System.Drawing.Size(201, 26);
+            this.kryptonBlueValueLabel1.StateCommon.LongText.Color1 = System.Drawing.Color.Blue;
+            this.kryptonBlueValueLabel1.StateCommon.LongText.Color2 = System.Drawing.Color.Blue;
+            this.kryptonBlueValueLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.kryptonBlueValueLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.Blue;
+            this.kryptonBlueValueLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.Blue;
+            this.kryptonBlueValueLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.kryptonBlueValueLabel1.TabIndex = 7;
+            this.kryptonBlueValueLabel1.TextSize = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.kryptonBlueValueLabel1.Values.Text = "kryptonBlueValueLabel1";
+            // 
+            // kryptonAlphaTrackBar1
+            // 
+            this.kryptonAlphaTrackBar1.DrawBackground = true;
+            this.kryptonAlphaTrackBar1.Location = new System.Drawing.Point(377, 17);
+            this.kryptonAlphaTrackBar1.Maximum = 255;
+            this.kryptonAlphaTrackBar1.Name = "kryptonAlphaTrackBar1";
+            this.kryptonAlphaTrackBar1.Size = new System.Drawing.Size(603, 21);
+            this.kryptonAlphaTrackBar1.TabIndex = 8;
+            this.kryptonAlphaTrackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
             // kryptonRedTrackBar1
             // 
             this.kryptonRedTrackBar1.DrawBackground = true;
-            this.kryptonRedTrackBar1.Location = new System.Drawing.Point(297, 62);
+            this.kryptonRedTrackBar1.Location = new System.Drawing.Point(431, 49);
             this.kryptonRedTrackBar1.Maximum = 255;
             this.kryptonRedTrackBar1.Name = "kryptonRedTrackBar1";
-            this.kryptonRedTrackBar1.Size = new System.Drawing.Size(182, 27);
+            this.kryptonRedTrackBar1.Size = new System.Drawing.Size(603, 21);
             this.kryptonRedTrackBar1.StateCommon.Tick.Color1 = System.Drawing.Color.Red;
             this.kryptonRedTrackBar1.StateCommon.Track.Color1 = System.Drawing.Color.Red;
             this.kryptonRedTrackBar1.StateCommon.Track.Color2 = System.Drawing.Color.Red;
             this.kryptonRedTrackBar1.StateCommon.Track.Color3 = System.Drawing.Color.Red;
             this.kryptonRedTrackBar1.StateCommon.Track.Color4 = System.Drawing.Color.Red;
             this.kryptonRedTrackBar1.StateCommon.Track.Color5 = System.Drawing.Color.Red;
-            this.kryptonRedTrackBar1.TabIndex = 5;
+            this.kryptonRedTrackBar1.TabIndex = 9;
+            this.kryptonRedTrackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
+            // kryptonGreenTrackBar1
+            // 
+            this.kryptonGreenTrackBar1.DrawBackground = true;
+            this.kryptonGreenTrackBar1.Location = new System.Drawing.Point(431, 95);
+            this.kryptonGreenTrackBar1.Maximum = 255;
+            this.kryptonGreenTrackBar1.Name = "kryptonGreenTrackBar1";
+            this.kryptonGreenTrackBar1.Size = new System.Drawing.Size(603, 21);
+            this.kryptonGreenTrackBar1.StateCommon.Tick.Color1 = System.Drawing.Color.Green;
+            this.kryptonGreenTrackBar1.StateCommon.Track.Color1 = System.Drawing.Color.Green;
+            this.kryptonGreenTrackBar1.StateCommon.Track.Color2 = System.Drawing.Color.Green;
+            this.kryptonGreenTrackBar1.StateCommon.Track.Color3 = System.Drawing.Color.Green;
+            this.kryptonGreenTrackBar1.StateCommon.Track.Color4 = System.Drawing.Color.Green;
+            this.kryptonGreenTrackBar1.StateCommon.Track.Color5 = System.Drawing.Color.Green;
+            this.kryptonGreenTrackBar1.TabIndex = 10;
+            this.kryptonGreenTrackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
+            // kryptonBlueTrackBar1
+            // 
+            this.kryptonBlueTrackBar1.DrawBackground = true;
+            this.kryptonBlueTrackBar1.Location = new System.Drawing.Point(431, 138);
+            this.kryptonBlueTrackBar1.Maximum = 255;
+            this.kryptonBlueTrackBar1.Name = "kryptonBlueTrackBar1";
+            this.kryptonBlueTrackBar1.Size = new System.Drawing.Size(603, 21);
+            this.kryptonBlueTrackBar1.StateCommon.Tick.Color1 = System.Drawing.Color.Blue;
+            this.kryptonBlueTrackBar1.StateCommon.Track.Color1 = System.Drawing.Color.Blue;
+            this.kryptonBlueTrackBar1.StateCommon.Track.Color2 = System.Drawing.Color.Blue;
+            this.kryptonBlueTrackBar1.StateCommon.Track.Color3 = System.Drawing.Color.Blue;
+            this.kryptonBlueTrackBar1.StateCommon.Track.Color4 = System.Drawing.Color.Blue;
+            this.kryptonBlueTrackBar1.StateCommon.Track.Color5 = System.Drawing.Color.Blue;
+            this.kryptonBlueTrackBar1.TabIndex = 11;
+            this.kryptonBlueTrackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
             // 
             // KryptonPaletteColourMixerBasic
             // 
