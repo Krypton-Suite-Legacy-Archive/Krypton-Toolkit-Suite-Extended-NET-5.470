@@ -54,6 +54,7 @@
     <Compile Include="Classes\ColourComparer.cs" />
     <Compile Include="Classes\ColourCollectionEventArgs.cs" />
     <Compile Include="Classes\ColourCollection.cs" />
+    <Compile Include="Classes\ColourExtensions.cs" />
     <Compile Include="Controls\ColourEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -76,6 +77,9 @@
     </Compile>
     <Compile Include="Controls\ColourWheel.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ContrastColourControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\HueColourSlider.cs">
       <SubType>Component</SubType>
@@ -100,6 +104,9 @@
     <Compile Include="Controls\ScreenColourPicker.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\Trackbars\KryptonBlueTrackBar.cs" />
+    <Compile Include="Controls\Trackbars\KryptonGreenTrackBar.cs" />
+    <Compile Include="Controls\Trackbars\KryptonRedTrackBar.cs" />
     <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="Interfaces\IColourEditor.cs" />
     <Compile Include="Interfaces\IPaletteSerializer.cs" />
@@ -128,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ColourEditor.resx">
       <DependentUpon>ColourEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ContrastColourControl.resx">
+      <DependentUpon>ContrastColourControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
