@@ -55,6 +55,7 @@
     <Compile Include="Classes\ColourCollectionEventArgs.cs" />
     <Compile Include="Classes\ColourCollection.cs" />
     <Compile Include="Classes\ColourExtensions.cs" />
+    <Compile Include="Controls\Components\KryptonColourButtonExtended.cs" />
     <Compile Include="Controls\User Controls\ColourEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,6 +109,8 @@
     <Compile Include="Controls\Trackbars\KryptonBlueTrackBar.cs" />
     <Compile Include="Controls\Trackbars\KryptonGreenTrackBar.cs" />
     <Compile Include="Controls\Trackbars\KryptonRedTrackBar.cs" />
+    <Compile Include="Designers\KryptonColourButtonExtendedActionList.cs" />
+    <Compile Include="Designers\KryptonColourButtonExtendedDesigner.cs" />
     <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="Interfaces\IColourEditor.cs" />
     <Compile Include="Interfaces\IPaletteSerializer.cs" />
@@ -121,6 +124,8 @@
     <Compile Include="UX\ColourPickerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Values\ColourButtonValues.cs" />
+    <Compile Include="Values\ViewDrawButtonExtended.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Cyotek.Windows.Forms.ColorPicker">
@@ -163,6 +168,20 @@
   <ItemGroup>
     <None Include="Resources\palette-save.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\ButtonNoColour.png" />
+    <None Include="Resources\ColourButton.png" />
+    <Content Include="ToolboxBitmaps\KryptonColourButtonExtended.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Extended Dialogs\Extended Dialogs.csproj">
+      <Project>{222c7d90-9d2a-4736-b58d-80af566ba167}</Project>
+      <Name>Extended Dialogs</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

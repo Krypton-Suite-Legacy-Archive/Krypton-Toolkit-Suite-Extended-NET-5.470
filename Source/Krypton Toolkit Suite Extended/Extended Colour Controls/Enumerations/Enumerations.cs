@@ -171,4 +171,65 @@
 
         Alpha
     }
+
+    /// <summary>
+    /// The basic palette colours.
+    /// </summary>
+    public enum BasicPaletteColours
+    {
+        /// <summary>
+        /// The base colour
+        /// </summary>
+        BASECOLOUR = 0,
+        /// <summary>
+        /// The darkest colour
+        /// </summary>
+        DARKESTCOLOUR = 1,
+        /// <summary>
+        /// The middle colour
+        /// </summary>
+        MIDDLECOLOUR = 2,
+        /// <summary>
+        /// The light colour
+        /// </summary>
+        LIGHTCOLOUR = 3,
+        /// <summary>
+        /// The lightest colour
+        /// </summary>
+        LIGHTESTCOLOUR = 4
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public enum AllCustomPaletteColours
+    {
+        ALTERNATIVENORMALTEXTCOLOUR = 0,
+        BORDERCOLOUR = 1,
+        CUSTOMCOLOURONE = 2,
+        CUSTOMCOLOURTWO = 3,
+        CUSTOMCOLOURTHREE = 4,
+        CUSTOMCOLOURFOUR = 5,
+        CUSTOMCOLOURFIVE = 6,
+        CUSTOMCOLOURSIX = 7,
+        CUSTOMTEXTCOLOURONE = 8,
+        CUSTOMTEXTCOLOURTWO = 9,
+        CUSTOMTEXTCOLOURTHREE = 10,
+        CUSTOMTEXTCOLOURFOUR = 11,
+        CUSTOMTEXTCOLOURFIVE = 12,
+        CUSTOMTEXTCOLOURSIX = 13,
+        DISABLEDCONTROLCOLOUR = 14,
+        DISABLEDTEXTCOLOUR = 15,
+        FOCUSEDTEXTCOLOUR = 16,
+        LINKDISABLEDTEXTCOLOUR = 17,
+        LINKFOCUSEDTEXTCOLOUR = 18,
+        LINKHOVERTEXTCOLOUR = 19,
+        LINKNORMALTEXTCOLOUR = 20,
+        LINKVISITEDTEXTCOLOUR = 21,
+        MENUTEXTCOLOUR = 22,
+        NORMALTEXTCOLOUR = 23,
+        PRESSEDTEXTCOLOUR = 24,
+        RIBBONTEXTCOLOUR = 25,
+        STATUSTEXTCOLOUR = 26
+    }
 }

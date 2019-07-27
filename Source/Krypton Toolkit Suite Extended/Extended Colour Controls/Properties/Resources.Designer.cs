@@ -63,9 +63,29 @@ namespace ExtendedColourControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ButtonNoColour {
+            get {
+                object obj = ResourceManager.GetObject("ButtonNoColour", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cellbackground {
             get {
                 object obj = ResourceManager.GetObject("cellbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ColourButton {
+            get {
+                object obj = ResourceManager.GetObject("ColourButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

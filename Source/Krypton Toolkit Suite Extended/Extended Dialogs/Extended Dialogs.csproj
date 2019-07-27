@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\Colour\KryptonColourDetailsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialogs\Colour\KryptonColourPickerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +64,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\Colour\KryptonContrastColourGeneratorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Colour\Palettes\CustomPaletteColours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Colour\Palettes\KryptonPaletteBaseColourMixer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\Colour\Palettes\KryptonPaletteColourMixerBasic.cs">
@@ -85,6 +94,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialogs\Colour\KryptonColourDetailsDialog.resx">
+      <DependentUpon>KryptonColourDetailsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Colour\KryptonColourPickerDialog.resx">
       <DependentUpon>KryptonColourPickerDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +108,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Colour\KryptonContrastColourGeneratorDialog.resx">
       <DependentUpon>KryptonContrastColourGeneratorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Colour\Palettes\CustomPaletteColours.resx">
+      <DependentUpon>CustomPaletteColours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Colour\Palettes\KryptonPaletteBaseColourMixer.resx">
+      <DependentUpon>KryptonPaletteBaseColourMixer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Colour\Palettes\KryptonPaletteColourMixerBasic.resx">
       <DependentUpon>KryptonPaletteColourMixerBasic.cs</DependentUpon>
