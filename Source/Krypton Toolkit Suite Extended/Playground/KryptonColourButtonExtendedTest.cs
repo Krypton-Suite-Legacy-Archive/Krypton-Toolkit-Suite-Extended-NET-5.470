@@ -11,6 +11,7 @@ namespace Playground
     {
         private ExtendedControls.ExtendedToolkit.Controls.KryptonColourButtonExtended kryptonColourButtonExtended1;
         private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cpbResult;
+        private ExtendedColourControls.KryptonColourButtonExtended kryptonColourButtonExtended2;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
@@ -18,6 +19,7 @@ namespace Playground
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.cpbResult = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.kryptonColourButtonExtended1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonColourButtonExtended();
+            this.kryptonColourButtonExtended2 = new ExtendedColourControls.KryptonColourButtonExtended();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cpbResult)).BeginInit();
@@ -25,6 +27,7 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonColourButtonExtended2);
             this.kryptonPanel1.Controls.Add(this.cpbResult);
             this.kryptonPanel1.Controls.Add(this.kryptonColourButtonExtended1);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -50,6 +53,14 @@ namespace Playground
             this.kryptonColourButtonExtended1.TabIndex = 1;
             this.kryptonColourButtonExtended1.Values.Text = "kryptonColourButtonExtended1";
             this.kryptonColourButtonExtended1.SelectedColourChanged += new System.EventHandler<ComponentFactory.Krypton.Toolkit.ColorEventArgs>(this.KryptonColourButtonExtended1_SelectedColourChanged);
+            // 
+            // kryptonColourButtonExtended2
+            // 
+            this.kryptonColourButtonExtended2.Location = new System.Drawing.Point(12, 78);
+            this.kryptonColourButtonExtended2.Name = "kryptonColourButtonExtended2";
+            this.kryptonColourButtonExtended2.Size = new System.Drawing.Size(275, 25);
+            this.kryptonColourButtonExtended2.TabIndex = 1;
+            this.kryptonColourButtonExtended2.Values.Text = "kryptonColourButtonExtended2";
             // 
             // KryptonColourButtonExtendedTest
             // 

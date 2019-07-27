@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ExtendedColourControls
+﻿namespace ExtendedColourControls
 {
-    class Helpers
+    public class Helpers
     {
+        #region Constructor
+        public Helpers()
+        {
+
+        }
+        #endregion
+
+        #region Methods
+        public static bool StringContainsValueText(string value) => value.Contains("Text");
+        #endregion
     }
 }
