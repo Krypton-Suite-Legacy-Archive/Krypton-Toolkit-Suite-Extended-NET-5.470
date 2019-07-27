@@ -200,11 +200,17 @@
     }
 
     /// <summary>
-    /// 
+    /// All custom palette colours.
     /// </summary>
     public enum AllCustomPaletteColours
     {
+        /// <summary>
+        /// The alternative normal text colour.
+        /// </summary>
         ALTERNATIVENORMALTEXTCOLOUR = 0,
+        /// <summary>
+        /// The border colour.
+        /// </summary>
         BORDERCOLOUR = 1,
         CUSTOMCOLOURONE = 2,
         CUSTOMCOLOURTWO = 3,

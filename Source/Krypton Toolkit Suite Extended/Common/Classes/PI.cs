@@ -1125,6 +1125,7 @@ namespace Common.Classes
 
         #region Other
 
+        /**
         #region Constants
         internal const uint WS_POPUP = 0x80000000;
         internal const uint WS_MINIMIZE = 0x20000000;
@@ -2241,6 +2242,7 @@ namespace Common.Classes
         }
 
         #endregion
+    **/
 
         #endregion
     }
