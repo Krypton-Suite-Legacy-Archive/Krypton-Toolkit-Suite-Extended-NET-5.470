@@ -8,8 +8,13 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using Core.Classes;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
+using ToolkitSettings.BackEnd;
 using ToolkitSettings.Settings.PaletteExplorer.Colours;
 
 namespace ToolkitSettings.Classes.PaletteExplorer.Colours
@@ -235,10 +240,10 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         }
 
         /// <summary>
-        /// Saves the XML file application updater settings.
+        /// Saves the basic colour settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveXMLFileApplicationUpdaterSettings(bool alwaysUsePrompt = false)
+        public void SaveBasicColourSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {
@@ -254,6 +259,140 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
                 _basicColourSettings.Save();
 
                 SetSettingsModified(false);
+            }
+        }
+
+        /// <summary>
+        /// Writes the ARGB colours to file.
+        /// </summary>
+        /// <param name="colourFileName">Name of the colour file.</param>
+        public static void WriteARGBColoursToFile(string colourFileName)
+        {
+            BasicColourSettingsManager manager = new BasicColourSettingsManager();
+
+            StreamWriter writer = new StreamWriter(colourFileName);
+
+            writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetBaseColour()));
+
+            writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetDarkColour()));
+
+            writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetMediumColour()));
+
+            writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLightColour()));
+
+            writer.WriteLine(TranslationMethods.ColourARGBToString(manager.GetLightestColour()));
+
+            writer.Flush();
+
+            writer.Close();
+
+            writer.Dispose();
+        }
+
+        public static void WriteRGBColoursToFile(string colourFilePath)
+        {
+            BasicColourSettingsManager manager = new BasicColourSettingsManager();
+
+            StreamWriter writer = new StreamWriter(colourFilePath);
+
+            writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetBaseColour()));
+
+            writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetDarkColour()));
+
+            writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetLightColour()));
+
+            writer.WriteLine(TranslationMethods.RGBColourToString(manager.GetLightestColour()));
+
+            writer.Flush();
+
+            writer.Close();
+
+            writer.Dispose();
+        }
+        #endregion
+
+        #region Detection        
+        /// <summary>
+        /// Are the basic palette colours empty.
+        /// </summary>
+        /// <returns></returns>
+        public static bool AreBasicPaletteColoursEmpty()
+        {
+            BasicColourSettingsManager basicPaletteColourManager = new BasicColourSettingsManager();
+
+            if (basicPaletteColourManager.GetBaseColour() == Color.Empty || basicPaletteColourManager.GetDarkColour() == Color.Empty || basicPaletteColourManager.GetMediumColour() == Color.Empty || basicPaletteColourManager.GetLightColour() == Color.Empty || basicPaletteColourManager.GetLightestColour() == Color.Empty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region IO Methods
+        /// <summary>
+        /// Creates a ARGB colour configuration file.
+        /// </summary>
+        public static void CreateARGBConfigurationFile()
+        {
+            try
+            {
+                CommonSaveFileDialog csfd = new CommonSaveFileDialog();
+
+                csfd.Title = "Save Colours To:";
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Colour Configuration File", ".ccf"));
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Normal Text File", ".txt"));
+
+                csfd.DefaultFileName = $"Basic Colour Configuration File - { TranslationMethods.ReturnSafeFileNameDateTimeString() }";
+
+                csfd.AlwaysAppendDefaultExtension = true;
+
+                csfd.DefaultExtension = "ccf";
+
+                if (csfd.ShowDialog() == CommonFileDialogResult.Ok)
+                {
+                    WriteARGBColoursToFile(csfd.FileName);
+                }
+            }
+            catch (Exception exc)
+            {
+                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: '{ exc.Message }'", "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Creates a RGB colour configuration file.
+        /// </summary>
+        public static void CreateRGBConfigurationFile()
+        {
+            try
+            {
+                CommonSaveFileDialog csfd = new CommonSaveFileDialog();
+
+                csfd.Title = "Save Colours To:";
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Colour Configuration File", ".ccf"));
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Normal Text File", ".txt"));
+
+                csfd.DefaultFileName = $"Basic Colour Configuration File - { TranslationMethods.ReturnSafeFileNameDateTimeString() }";
+
+                csfd.AlwaysAppendDefaultExtension = true;
+
+                csfd.DefaultExtension = "ccf";
+
+                if (csfd.ShowDialog() == CommonFileDialogResult.Ok)
+                {
+                    WriteRGBColoursToFile(csfd.FileName);
+                }
+            }
+            catch (Exception exc)
+            {
+                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: '{ exc.Message }'", "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion

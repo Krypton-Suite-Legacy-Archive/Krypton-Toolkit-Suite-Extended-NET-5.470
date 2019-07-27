@@ -11,10 +11,18 @@ using ComponentFactory.Krypton.Toolkit;
 using ExtendedControls.Base.Code.Exceptions;
 using ExtendedControls.Base.Code.IO;
 using ExtendedControls.Base.Code.Security;
+using ExtendedControls.Base.Code.Windows;
+using ExtendedControls.ExtendedToolkit.MessageBoxes.UI;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using Microsoft.WindowsAPICodePack.Taskbar;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
+using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms;
+using ToolkitSettings.Classes.Global;
 
 namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
 {
@@ -54,17 +62,49 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
         private KryptonComboBox kcmbValidatedHashType;
         private KryptonLabel kryptonLabel9;
         private KryptonButton kbtnCalculateFileHash;
-        private System.Windows.Forms.ProgressBar pbCalculateFileHash;
         private System.ComponentModel.BackgroundWorker bgwMD5;
         private System.ComponentModel.BackgroundWorker bgwSHA1;
         private System.ComponentModel.BackgroundWorker bgwSHA256;
         private System.ComponentModel.BackgroundWorker bgwSHA384;
         private System.ComponentModel.BackgroundWorker bgwSHA512;
         private System.ComponentModel.BackgroundWorker bgwRIPEMD160;
+        private ComponentFactory.Krypton.Navigator.KryptonPage kpFileAttributes;
+        private KryptonGroupBox kryptonGroupBox3;
+        private KryptonCheckBox kcbCompressed;
+        private KryptonCheckBox kcbDevice;
+        private KryptonCheckBox kcbDirectory;
+        private KryptonCheckBox kcbEncrypted;
+        private KryptonCheckBox kcbArchive;
+        private KryptonCheckBox kcbTemporary;
+        private KryptonCheckBox kcbSystem;
+        private KryptonCheckBox kcbSparseFile;
+        private KryptonCheckBox kcbReparsePoint;
+        private KryptonCheckBox kcbReadOnly;
+        private KryptonCheckBox kcbOffline;
+        private KryptonCheckBox kcbIntegrityStream;
+        private KryptonCheckBox kcbNormal;
+        private KryptonCheckBox kcbNoScrubData;
+        private KryptonCheckBox kcbNotContextIndexed;
+        private KryptonCheckBox kcbHidden;
+        private KryptonButton kbtnClearAllFileAttributes;
+        private KryptonButton kryptonButton1;
+        private ContextMenuStrip ctxHashMenu;
+        private System.ComponentModel.IContainer components;
+        private ToolStripMenuItem cutToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem1;
+        private ToolStripMenuItem copyToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem2;
+        private ToolStripMenuItem pasteToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem3;
+        private ToolStripMenuItem selectAllToolStripMenuItem;
+        private KryptonButton kbtnGetFileAttributes;
+        private KryptonButton kbtnImportHash;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KryptonFileInformationDialog));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -88,20 +128,49 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.kbtnValidate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.ktxtValidate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.ctxHashMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kcmbValidatedHashType = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.pbCalculateFileHash = new System.Windows.Forms.ProgressBar();
             this.kbtnCalculateFileHash = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.klblRealFileHash = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kcmbHashType1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.klblTotalFiles = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kpFileAttributes = new ComponentFactory.Krypton.Navigator.KryptonPage();
+            this.kbtnGetFileAttributes = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnClearAllFileAttributes = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonGroupBox3 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kcbTemporary = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbSystem = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbSparseFile = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbReparsePoint = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbReadOnly = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbOffline = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbIntegrityStream = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbNormal = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbNoScrubData = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbNotContextIndexed = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbHidden = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbCompressed = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbDevice = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbDirectory = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbEncrypted = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.kcbArchive = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.bgwMD5 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA1 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA256 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA384 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA512 = new System.ComponentModel.BackgroundWorker();
             this.bgwRIPEMD160 = new System.ComponentModel.BackgroundWorker();
+            this.kbtnImportHash = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -117,12 +186,19 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
             this.kryptonGroupBox2.Panel.SuspendLayout();
             this.kryptonGroupBox2.SuspendLayout();
+            this.ctxHashMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbValidatedHashType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
             this.kryptonGroupBox1.Panel.SuspendLayout();
             this.kryptonGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbHashType1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kpFileAttributes)).BeginInit();
+            this.kpFileAttributes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).BeginInit();
+            this.kryptonGroupBox3.Panel.SuspendLayout();
+            this.kryptonGroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -186,8 +262,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonNavigator1.Name = "kryptonNavigator1";
             this.kryptonNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage1,
-            this.kryptonPage2});
-            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonPage2,
+            this.kpFileAttributes});
+            this.kryptonNavigator1.SelectedIndex = 1;
             this.kryptonNavigator1.Size = new System.Drawing.Size(692, 675);
             this.kryptonNavigator1.StateCommon.Tab.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonNavigator1.StateCommon.Tab.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -352,6 +429,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             // 
             // kryptonGroupBox2.Panel
             // 
+            this.kryptonGroupBox2.Panel.Controls.Add(this.kbtnImportHash);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kbtnValidate);
             this.kryptonGroupBox2.Panel.Controls.Add(this.ktxtValidate);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kcmbValidatedHashType);
@@ -365,9 +443,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             // kbtnValidate
             // 
             this.kbtnValidate.Enabled = false;
-            this.kbtnValidate.Location = new System.Drawing.Point(473, 158);
+            this.kbtnValidate.Location = new System.Drawing.Point(473, 156);
             this.kbtnValidate.Name = "kbtnValidate";
-            this.kbtnValidate.Size = new System.Drawing.Size(156, 27);
+            this.kbtnValidate.Size = new System.Drawing.Size(156, 29);
             this.kbtnValidate.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnValidate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnValidate.TabIndex = 10;
@@ -376,19 +454,78 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             // 
             // ktxtValidate
             // 
+            this.ktxtValidate.ContextMenuStrip = this.ctxHashMenu;
             this.ktxtValidate.Location = new System.Drawing.Point(15, 81);
             this.ktxtValidate.Name = "ktxtValidate";
             this.ktxtValidate.Size = new System.Drawing.Size(614, 35);
             this.ktxtValidate.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ktxtValidate.TabIndex = 9;
             this.ktxtValidate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ktxtValidate.TextChanged += new System.EventHandler(this.KtxtValidate_TextChanged);
+            // 
+            // ctxHashMenu
+            // 
+            this.ctxHashMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxHashMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cutToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.copyToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.pasteToolStripMenuItem,
+            this.toolStripMenuItem3,
+            this.selectAllToolStripMenuItem});
+            this.ctxHashMenu.Name = "ctxHashMenu";
+            this.ctxHashMenu.Size = new System.Drawing.Size(123, 110);
+            // 
+            // cutToolStripMenuItem
+            // 
+            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.cutToolStripMenuItem.Text = "C&ut";
+            this.cutToolStripMenuItem.Click += new System.EventHandler(this.CutToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(119, 6);
+            // 
+            // copyToolStripMenuItem
+            // 
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.copyToolStripMenuItem.Text = "&Copy";
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.CopyToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(119, 6);
+            // 
+            // pasteToolStripMenuItem
+            // 
+            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.pasteToolStripMenuItem.Text = "&Paste";
+            this.pasteToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(119, 6);
+            // 
+            // selectAllToolStripMenuItem
+            // 
+            this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
+            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.selectAllToolStripMenuItem.Text = "&Select All";
+            this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.SelectAllToolStripMenuItem_Click);
             // 
             // kcmbValidatedHashType
             // 
             this.kcmbValidatedHashType.DropDownWidth = 220;
             this.kcmbValidatedHashType.Location = new System.Drawing.Point(109, 29);
             this.kcmbValidatedHashType.Name = "kcmbValidatedHashType";
-            this.kcmbValidatedHashType.Size = new System.Drawing.Size(220, 25);
+            this.kcmbValidatedHashType.Size = new System.Drawing.Size(132, 25);
             this.kcmbValidatedHashType.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbValidatedHashType.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbValidatedHashType.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -411,7 +548,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             // 
             // kryptonGroupBox1.Panel
             // 
-            this.kryptonGroupBox1.Panel.Controls.Add(this.pbCalculateFileHash);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kbtnCalculateFileHash);
             this.kryptonGroupBox1.Panel.Controls.Add(this.klblRealFileHash);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kcmbHashType1);
@@ -422,24 +558,17 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonGroupBox1.TabIndex = 0;
             this.kryptonGroupBox1.Values.Heading = "Calculate Checksum";
             // 
-            // pbCalculateFileHash
-            // 
-            this.pbCalculateFileHash.Location = new System.Drawing.Point(15, 154);
-            this.pbCalculateFileHash.Name = "pbCalculateFileHash";
-            this.pbCalculateFileHash.Size = new System.Drawing.Size(100, 23);
-            this.pbCalculateFileHash.TabIndex = 10;
-            this.pbCalculateFileHash.Visible = false;
-            // 
             // kbtnCalculateFileHash
             // 
             this.kbtnCalculateFileHash.Enabled = false;
             this.kbtnCalculateFileHash.Location = new System.Drawing.Point(473, 151);
             this.kbtnCalculateFileHash.Name = "kbtnCalculateFileHash";
-            this.kbtnCalculateFileHash.Size = new System.Drawing.Size(156, 27);
+            this.kbtnCalculateFileHash.Size = new System.Drawing.Size(156, 29);
             this.kbtnCalculateFileHash.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCalculateFileHash.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnCalculateFileHash.TabIndex = 9;
             this.kbtnCalculateFileHash.Values.Text = "Calculat&e";
+            this.kbtnCalculateFileHash.Click += new System.EventHandler(this.KbtnCalculateFileHash_Click);
             // 
             // klblRealFileHash
             // 
@@ -462,11 +591,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kcmbHashType1.DropDownWidth = 220;
             this.kcmbHashType1.Location = new System.Drawing.Point(109, 19);
             this.kcmbHashType1.Name = "kcmbHashType1";
-            this.kcmbHashType1.Size = new System.Drawing.Size(220, 25);
+            this.kcmbHashType1.Size = new System.Drawing.Size(132, 25);
             this.kcmbHashType1.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbHashType1.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbHashType1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbHashType1.TabIndex = 6;
+            this.kcmbHashType1.SelectedIndexChanged += new System.EventHandler(this.KcmbHashType1_SelectedIndexChanged);
             // 
             // klblTotalFiles
             // 
@@ -478,35 +608,322 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.klblTotalFiles.TabIndex = 5;
             this.klblTotalFiles.Values.Text = "Hash Type:";
             // 
+            // kpFileAttributes
+            // 
+            this.kpFileAttributes.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
+            this.kpFileAttributes.Controls.Add(this.kbtnGetFileAttributes);
+            this.kpFileAttributes.Controls.Add(this.kryptonButton1);
+            this.kpFileAttributes.Controls.Add(this.kbtnClearAllFileAttributes);
+            this.kpFileAttributes.Controls.Add(this.kryptonGroupBox3);
+            this.kpFileAttributes.Flags = 65534;
+            this.kpFileAttributes.LastVisibleSet = true;
+            this.kpFileAttributes.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kpFileAttributes.Name = "kpFileAttributes";
+            this.kpFileAttributes.Size = new System.Drawing.Size(690, 644);
+            this.kpFileAttributes.Text = "File Attributes";
+            this.kpFileAttributes.ToolTipTitle = "Page ToolTip";
+            this.kpFileAttributes.UniqueName = "50a26aabd19c4b24a5d601dc8c8dcced";
+            this.kpFileAttributes.Visible = false;
+            // 
+            // kbtnGetFileAttributes
+            // 
+            this.kbtnGetFileAttributes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kbtnGetFileAttributes.Location = new System.Drawing.Point(65, 274);
+            this.kbtnGetFileAttributes.Name = "kbtnGetFileAttributes";
+            this.kbtnGetFileAttributes.Size = new System.Drawing.Size(198, 29);
+            this.kbtnGetFileAttributes.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGetFileAttributes.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGetFileAttributes.TabIndex = 17;
+            this.kbtnGetFileAttributes.Values.Text = "G&et File Attributes";
+            this.kbtnGetFileAttributes.Click += new System.EventHandler(this.KbtnGetFileAttributes_Click);
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonButton1.Location = new System.Drawing.Point(269, 274);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(198, 29);
+            this.kryptonButton1.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.TabIndex = 16;
+            this.kryptonButton1.Values.Text = "&Set File Attributes";
+            // 
+            // kbtnClearAllFileAttributes
+            // 
+            this.kbtnClearAllFileAttributes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.kbtnClearAllFileAttributes.Location = new System.Drawing.Point(473, 274);
+            this.kbtnClearAllFileAttributes.Name = "kbtnClearAllFileAttributes";
+            this.kbtnClearAllFileAttributes.Size = new System.Drawing.Size(198, 29);
+            this.kbtnClearAllFileAttributes.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnClearAllFileAttributes.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnClearAllFileAttributes.TabIndex = 15;
+            this.kbtnClearAllFileAttributes.Values.Text = "Cle&ar All File Attributes";
+            this.kbtnClearAllFileAttributes.Click += new System.EventHandler(this.KbtnClearAllFileAttributes_Click);
+            // 
+            // kryptonGroupBox3
+            // 
+            this.kryptonGroupBox3.Location = new System.Drawing.Point(20, 14);
+            this.kryptonGroupBox3.Name = "kryptonGroupBox3";
+            // 
+            // kryptonGroupBox3.Panel
+            // 
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbTemporary);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbSystem);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbSparseFile);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbReparsePoint);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbReadOnly);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbOffline);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbIntegrityStream);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbNormal);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbNoScrubData);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbNotContextIndexed);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbHidden);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbCompressed);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbDevice);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbDirectory);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbEncrypted);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kcbArchive);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(651, 243);
+            this.kryptonGroupBox3.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonGroupBox3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonGroupBox3.TabIndex = 2;
+            this.kryptonGroupBox3.Values.Heading = "Validate Checksum";
+            // 
+            // kcbTemporary
+            // 
+            this.kcbTemporary.Location = new System.Drawing.Point(232, 161);
+            this.kcbTemporary.Name = "kcbTemporary";
+            this.kcbTemporary.Size = new System.Drawing.Size(103, 26);
+            this.kcbTemporary.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbTemporary.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbTemporary.TabIndex = 15;
+            this.kcbTemporary.ToolTipValues.Description = resources.GetString("resource.Description");
+            this.kcbTemporary.ToolTipValues.Heading = "Archived";
+            this.kcbTemporary.Values.Text = "Te&mporary";
+            // 
+            // kcbSystem
+            // 
+            this.kcbSystem.Location = new System.Drawing.Point(133, 161);
+            this.kcbSystem.Name = "kcbSystem";
+            this.kcbSystem.Size = new System.Drawing.Size(77, 26);
+            this.kcbSystem.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbSystem.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbSystem.TabIndex = 14;
+            this.kcbSystem.ToolTipValues.Description = resources.GetString("resource.Description1");
+            this.kcbSystem.ToolTipValues.Heading = "Archived";
+            this.kcbSystem.Values.Text = "S&ystem";
+            // 
+            // kcbSparseFile
+            // 
+            this.kcbSparseFile.Location = new System.Drawing.Point(15, 161);
+            this.kcbSparseFile.Name = "kcbSparseFile";
+            this.kcbSparseFile.Size = new System.Drawing.Size(102, 26);
+            this.kcbSparseFile.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbSparseFile.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbSparseFile.TabIndex = 13;
+            this.kcbSparseFile.ToolTipValues.Description = resources.GetString("resource.Description2");
+            this.kcbSparseFile.ToolTipValues.Heading = "Archived";
+            this.kcbSparseFile.Values.Text = "Spar&se File";
+            // 
+            // kcbReparsePoint
+            // 
+            this.kcbReparsePoint.Location = new System.Drawing.Point(476, 114);
+            this.kcbReparsePoint.Name = "kcbReparsePoint";
+            this.kcbReparsePoint.Size = new System.Drawing.Size(125, 26);
+            this.kcbReparsePoint.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbReparsePoint.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbReparsePoint.TabIndex = 12;
+            this.kcbReparsePoint.ToolTipValues.Description = resources.GetString("resource.Description3");
+            this.kcbReparsePoint.ToolTipValues.Heading = "Archived";
+            this.kcbReparsePoint.Values.Text = "Re&parse Point";
+            // 
+            // kcbReadOnly
+            // 
+            this.kcbReadOnly.Location = new System.Drawing.Point(348, 114);
+            this.kcbReadOnly.Name = "kcbReadOnly";
+            this.kcbReadOnly.Size = new System.Drawing.Size(100, 26);
+            this.kcbReadOnly.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbReadOnly.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbReadOnly.TabIndex = 11;
+            this.kcbReadOnly.ToolTipValues.Description = resources.GetString("resource.Description4");
+            this.kcbReadOnly.ToolTipValues.Heading = "Archived";
+            this.kcbReadOnly.Values.Text = "&Read Only";
+            // 
+            // kcbOffline
+            // 
+            this.kcbOffline.Location = new System.Drawing.Point(232, 114);
+            this.kcbOffline.Name = "kcbOffline";
+            this.kcbOffline.Size = new System.Drawing.Size(73, 26);
+            this.kcbOffline.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbOffline.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbOffline.TabIndex = 10;
+            this.kcbOffline.ToolTipValues.Description = resources.GetString("resource.Description5");
+            this.kcbOffline.ToolTipValues.Heading = "Archived";
+            this.kcbOffline.Values.Text = "O&ffline";
+            // 
+            // kcbIntegrityStream
+            // 
+            this.kcbIntegrityStream.Location = new System.Drawing.Point(133, 67);
+            this.kcbIntegrityStream.Name = "kcbIntegrityStream";
+            this.kcbIntegrityStream.Size = new System.Drawing.Size(142, 26);
+            this.kcbIntegrityStream.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbIntegrityStream.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbIntegrityStream.TabIndex = 9;
+            this.kcbIntegrityStream.Values.Text = "I&ntegrity Stream";
+            // 
+            // kcbNormal
+            // 
+            this.kcbNormal.Location = new System.Drawing.Point(287, 67);
+            this.kcbNormal.Name = "kcbNormal";
+            this.kcbNormal.Size = new System.Drawing.Size(79, 26);
+            this.kcbNormal.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbNormal.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbNormal.TabIndex = 8;
+            this.kcbNormal.Values.Text = "No&rmal";
+            // 
+            // kcbNoScrubData
+            // 
+            this.kcbNoScrubData.Location = new System.Drawing.Point(399, 67);
+            this.kcbNoScrubData.Name = "kcbNoScrubData";
+            this.kcbNoScrubData.Size = new System.Drawing.Size(131, 26);
+            this.kcbNoScrubData.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbNoScrubData.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbNoScrubData.TabIndex = 7;
+            this.kcbNoScrubData.Values.Text = "No &Scrub Data";
+            // 
+            // kcbNotContextIndexed
+            // 
+            this.kcbNotContextIndexed.Location = new System.Drawing.Point(15, 114);
+            this.kcbNotContextIndexed.Name = "kcbNotContextIndexed";
+            this.kcbNotContextIndexed.Size = new System.Drawing.Size(176, 26);
+            this.kcbNotContextIndexed.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbNotContextIndexed.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbNotContextIndexed.TabIndex = 6;
+            this.kcbNotContextIndexed.Values.Text = "Not Co&ntext Indexed";
+            // 
+            // kcbHidden
+            // 
+            this.kcbHidden.Location = new System.Drawing.Point(15, 67);
+            this.kcbHidden.Name = "kcbHidden";
+            this.kcbHidden.Size = new System.Drawing.Size(78, 26);
+            this.kcbHidden.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbHidden.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbHidden.TabIndex = 5;
+            this.kcbHidden.ToolTipValues.Description = resources.GetString("resource.Description6");
+            this.kcbHidden.ToolTipValues.Heading = "Archived";
+            this.kcbHidden.Values.Text = "&Hidden";
+            // 
+            // kcbCompressed
+            // 
+            this.kcbCompressed.Location = new System.Drawing.Point(133, 19);
+            this.kcbCompressed.Name = "kcbCompressed";
+            this.kcbCompressed.Size = new System.Drawing.Size(115, 26);
+            this.kcbCompressed.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbCompressed.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbCompressed.TabIndex = 4;
+            this.kcbCompressed.Values.Text = "C&ompressed";
+            // 
+            // kcbDevice
+            // 
+            this.kcbDevice.Location = new System.Drawing.Point(287, 19);
+            this.kcbDevice.Name = "kcbDevice";
+            this.kcbDevice.Size = new System.Drawing.Size(73, 26);
+            this.kcbDevice.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbDevice.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbDevice.TabIndex = 3;
+            this.kcbDevice.Values.Text = "D&evice";
+            // 
+            // kcbDirectory
+            // 
+            this.kcbDirectory.Location = new System.Drawing.Point(399, 19);
+            this.kcbDirectory.Name = "kcbDirectory";
+            this.kcbDirectory.Size = new System.Drawing.Size(91, 26);
+            this.kcbDirectory.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbDirectory.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbDirectory.TabIndex = 2;
+            this.kcbDirectory.Values.Text = "D&irectory";
+            // 
+            // kcbEncrypted
+            // 
+            this.kcbEncrypted.Location = new System.Drawing.Point(529, 19);
+            this.kcbEncrypted.Name = "kcbEncrypted";
+            this.kcbEncrypted.Size = new System.Drawing.Size(97, 26);
+            this.kcbEncrypted.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbEncrypted.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbEncrypted.TabIndex = 1;
+            this.kcbEncrypted.Values.Text = "&Encrypted";
+            // 
+            // kcbArchive
+            // 
+            this.kcbArchive.Location = new System.Drawing.Point(15, 19);
+            this.kcbArchive.Name = "kcbArchive";
+            this.kcbArchive.Size = new System.Drawing.Size(79, 26);
+            this.kcbArchive.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbArchive.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbArchive.TabIndex = 0;
+            this.kcbArchive.ToolTipValues.Description = resources.GetString("resource.Description7");
+            this.kcbArchive.ToolTipValues.Heading = "Archived";
+            this.kcbArchive.Values.Text = "&Archive";
+            // 
             // bgwMD5
             // 
             this.bgwMD5.WorkerReportsProgress = true;
             this.bgwMD5.WorkerSupportsCancellation = true;
+            this.bgwMD5.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BgwMD5_DoWork);
+            this.bgwMD5.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BgwMD5_ProgressChanged);
+            this.bgwMD5.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BgwMD5_RunWorkerCompleted);
             // 
             // bgwSHA1
             // 
             this.bgwSHA1.WorkerReportsProgress = true;
             this.bgwSHA1.WorkerSupportsCancellation = true;
+            this.bgwSHA1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BgwSHA1_DoWork);
+            this.bgwSHA1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BgwSHA1_ProgressChanged);
+            this.bgwSHA1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BgwSHA1_RunWorkerCompleted);
             // 
             // bgwSHA256
             // 
             this.bgwSHA256.WorkerReportsProgress = true;
             this.bgwSHA256.WorkerSupportsCancellation = true;
+            this.bgwSHA256.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BgwSHA256_DoWork);
+            this.bgwSHA256.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BgwSHA256_ProgressChanged);
+            this.bgwSHA256.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BgwSHA256_RunWorkerCompleted);
             // 
             // bgwSHA384
             // 
             this.bgwSHA384.WorkerReportsProgress = true;
             this.bgwSHA384.WorkerSupportsCancellation = true;
+            this.bgwSHA384.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BgwSHA384_DoWork);
+            this.bgwSHA384.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BgwSHA384_ProgressChanged);
+            this.bgwSHA384.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BgwSHA384_RunWorkerCompleted);
             // 
             // bgwSHA512
             // 
             this.bgwSHA512.WorkerReportsProgress = true;
             this.bgwSHA512.WorkerSupportsCancellation = true;
+            this.bgwSHA512.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BgwSHA512_DoWork);
+            this.bgwSHA512.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BgwSHA512_ProgressChanged);
+            this.bgwSHA512.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BgwSHA512_RunWorkerCompleted);
             // 
             // bgwRIPEMD160
             // 
             this.bgwRIPEMD160.WorkerReportsProgress = true;
             this.bgwRIPEMD160.WorkerSupportsCancellation = true;
+            this.bgwRIPEMD160.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BgwRIPEMD160_DoWork);
+            this.bgwRIPEMD160.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BgwRIPEMD160_ProgressChanged);
+            this.bgwRIPEMD160.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BgwRIPEMD160_RunWorkerCompleted);
+            // 
+            // kbtnImportHash
+            // 
+            this.kbtnImportHash.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.kbtnImportHash.Location = new System.Drawing.Point(328, 156);
+            this.kbtnImportHash.Name = "kbtnImportHash";
+            this.kbtnImportHash.Size = new System.Drawing.Size(139, 29);
+            this.kbtnImportHash.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnImportHash.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnImportHash.TabIndex = 15;
+            this.kbtnImportHash.Values.Text = "&Import Hash";
+            this.kbtnImportHash.Click += new System.EventHandler(this.KbtnImportHash_Click);
             // 
             // KryptonFileInformationDialog
             // 
@@ -537,6 +954,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonGroupBox2.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
             this.kryptonGroupBox2.ResumeLayout(false);
+            this.ctxHashMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kcmbValidatedHashType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
             this.kryptonGroupBox1.Panel.ResumeLayout(false);
@@ -544,6 +962,13 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
             this.kryptonGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kcmbHashType1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kpFileAttributes)).EndInit();
+            this.kpFileAttributes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).EndInit();
+            this.kryptonGroupBox3.Panel.ResumeLayout(false);
+            this.kryptonGroupBox3.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).EndInit();
+            this.kryptonGroupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -551,6 +976,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
 
         #region Variables
         private string _filePath = null;
+        private Timer _fileAttributesTimer = new Timer();
+        private GlobalStringSettingsManager _globalStringSettingsManager = new GlobalStringSettingsManager();
         #endregion
 
         #region Properties        
@@ -572,6 +999,321 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             InitializeComponent();
 
             FilePath = filePath;
+
+            //_fileAttributesTimer.Enabled = true;
+
+            //_fileAttributesTimer.Interval = 500;
+
+            //_fileAttributesTimer.Tick += FileAttributesTimer_Tick;
+        }
+
+        #region Hashing Stuff
+        private void BgwMD5_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string filePath = e.Argument.ToString();
+
+            byte[] buffer;
+
+            int bytesRead;
+
+            long fileLength, totalBytesToRead = 0;
+
+            using (Stream fileStream = File.OpenRead(filePath))
+            {
+                fileLength = fileStream.Length;
+
+                using (HashAlgorithm md5 = MD5.Create())
+                {
+                    do
+                    {
+                        buffer = new byte[4096];
+
+                        bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+
+                        totalBytesToRead += bytesRead;
+
+                        md5.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                        bgwMD5.ReportProgress((int)((double)totalBytesToRead / fileLength * 100));
+                    } while (bytesRead != 0);
+
+                    md5.TransformFinalBlock(buffer, 0, 0);
+
+                    e.Result = HashingHelper.BuildFileHash(md5.Hash, 32);
+                }
+            }
+        }
+
+        private void BgwMD5_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
+        }
+
+        private void BgwMD5_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            klblRealFileHash.Text = e.Result.ToString();
+
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
+
+            bgwMD5.Dispose();
+        }
+
+        private void BgwSHA1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string filePath = e.Argument.ToString();
+
+            byte[] buffer;
+
+            int bytesRead;
+
+            long fileLength, totalBytesToRead = 0;
+
+            using (Stream fileStream = File.OpenRead(filePath))
+            {
+                fileLength = fileStream.Length;
+
+                using (HashAlgorithm sha1 = SHA1.Create())
+                {
+                    do
+                    {
+                        buffer = new byte[4096];
+
+                        bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+
+                        totalBytesToRead += bytesRead;
+
+                        sha1.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                        bgwSHA1.ReportProgress((int)((double)totalBytesToRead / fileLength * 100));
+                    } while (bytesRead != 0);
+
+                    sha1.TransformFinalBlock(buffer, 0, 0);
+
+                    e.Result = HashingHelper.BuildFileHash(sha1.Hash, 40);
+                }
+            }
+        }
+
+        private void BgwSHA1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
+        }
+
+        private void BgwSHA1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            klblRealFileHash.Text = e.Result.ToString();
+
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
+
+            bgwSHA1.Dispose();
+        }
+
+        private void BgwSHA256_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string filePath = e.Argument.ToString();
+
+            byte[] buffer;
+
+            int bytesRead;
+
+            long fileLength, totalBytesToRead = 0;
+
+            using (Stream fileStream = File.OpenRead(filePath))
+            {
+                fileLength = fileStream.Length;
+
+                using (HashAlgorithm sha256 = SHA256.Create())
+                {
+                    do
+                    {
+                        buffer = new byte[4096];
+
+                        bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+
+                        totalBytesToRead += bytesRead;
+
+                        sha256.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                        bgwSHA256.ReportProgress((int)((double)totalBytesToRead / fileLength * 100));
+                    } while (bytesRead != 0);
+
+                    sha256.TransformFinalBlock(buffer, 0, 0);
+
+                    e.Result = HashingHelper.BuildFileHash(sha256.Hash, 40);
+                }
+            }
+        }
+
+        private void BgwSHA256_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
+        }
+
+        private void BgwSHA256_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            klblRealFileHash.Text = e.Result.ToString();
+
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
+
+            bgwSHA256.Dispose();
+        }
+
+        private void BgwSHA384_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string filePath = e.Argument.ToString();
+
+            byte[] buffer;
+
+            int bytesRead;
+
+            long fileLength, totalBytesToRead = 0;
+
+            using (Stream fileStream = File.OpenRead(filePath))
+            {
+                fileLength = fileStream.Length;
+
+                using (HashAlgorithm sha384 = SHA384.Create())
+                {
+                    do
+                    {
+                        buffer = new byte[4096];
+
+                        bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+
+                        totalBytesToRead += bytesRead;
+
+                        sha384.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                        bgwSHA384.ReportProgress((int)((double)totalBytesToRead / fileLength * 100));
+                    } while (bytesRead != 0);
+
+                    sha384.TransformFinalBlock(buffer, 0, 0);
+
+                    e.Result = HashingHelper.BuildFileHash(sha384.Hash, 96);
+                }
+            }
+        }
+
+        private void BgwSHA384_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
+        }
+
+        private void BgwSHA384_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            klblRealFileHash.Text = e.Result.ToString();
+
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
+
+            bgwSHA384.Dispose();
+        }
+
+        private void BgwSHA512_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string filePath = e.Argument.ToString();
+
+            byte[] buffer;
+
+            int bytesRead;
+
+            long fileLength, totalBytesToRead = 0;
+
+            using (Stream fileStream = File.OpenRead(filePath))
+            {
+                fileLength = fileStream.Length;
+
+                using (HashAlgorithm sha512 = SHA512.Create())
+                {
+                    do
+                    {
+                        buffer = new byte[4096];
+
+                        bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+
+                        totalBytesToRead += bytesRead;
+
+                        sha512.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                        bgwSHA512.ReportProgress((int)((double)totalBytesToRead / fileLength * 100));
+                    } while (bytesRead != 0);
+
+                    sha512.TransformFinalBlock(buffer, 0, 0);
+
+                    e.Result = HashingHelper.BuildFileHash(sha512.Hash, 128);
+                }
+            }
+        }
+
+        private void BgwSHA512_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
+        }
+
+        private void BgwSHA512_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            klblRealFileHash.Text = e.Result.ToString();
+
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
+
+            bgwSHA512.Dispose();
+        }
+
+        private void BgwRIPEMD160_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string filePath = e.Argument.ToString();
+
+            byte[] buffer;
+
+            int bytesRead;
+
+            long fileLength, totalBytesToRead = 0;
+
+            using (Stream fileStream = File.OpenRead(filePath))
+            {
+                fileLength = fileStream.Length;
+
+                using (HashAlgorithm ripemd160 = RIPEMD160.Create())
+                {
+                    do
+                    {
+                        buffer = new byte[4096];
+
+                        bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+
+                        totalBytesToRead += bytesRead;
+
+                        ripemd160.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                        bgwRIPEMD160.ReportProgress((int)((double)totalBytesToRead / fileLength * 100));
+                    } while (bytesRead != 0);
+
+                    ripemd160.TransformFinalBlock(buffer, 0, 0);
+
+                    e.Result = HashingHelper.BuildFileHash(ripemd160.Hash, 40);
+                }
+            }
+        }
+
+        private void BgwRIPEMD160_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
+        }
+
+        private void BgwRIPEMD160_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            klblRealFileHash.Text = e.Result.ToString();
+
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
+
+            bgwRIPEMD160.Dispose();
+        }
+        #endregion
+
+        private void FileAttributesTimer_Tick(object sender, EventArgs e)
+        {
+            FileAttributeHandler.GetSelectedFileAttributes(ktbFileName.Text, kcbArchive, kcbCompressed, kcbDevice, kcbDirectory, kcbEncrypted, kcbHidden, kcbIntegrityStream, kcbNormal, kcbNoScrubData, kcbNotContextIndexed, kcbOffline, kcbReadOnly, kcbReparsePoint, kcbSparseFile, kcbSystem, kcbTemporary);
+
+            _fileAttributesTimer.Stop();
         }
 
         private void KryptonFileInformationDialog_Load(object sender, EventArgs e)
@@ -647,7 +1389,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
 
                 klblFileLocation.Text = $"Location: { Path.GetFullPath(filePath) }";
 
-                klblFileSize.Text = $"Size: { FileUtilities.GetReadableFileSize(fileInfo.Length) }";
+                klblFileSize.Text = $"Size: { FileUtilities.GetReadableFileSize(fileInfo.Length) } ({ fileInfo.Length.ToString() } bytes)";
+
+                klblSizeOnDisk.Text = $"Size on disk: { FileUtilities.GetReadableFileSize(FileUtilities.GetFileSizeOnDisk(filePath)) }";
 
                 klblCreated.Text = $"Created: { GetDateTimeAsString(fileInfo.CreationTime) }";
 
@@ -702,7 +1446,112 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
         /// <returns></returns>
         private static string GetDateTimeAsString(DateTime dateTime)
         {
-            return dateTime.ToLongDateString();
+            return $"{ dateTime.DayOfWeek.ToString() }, { dateTime.ToLongDateString() }, { dateTime.ToLongTimeString() }";
+        }
+
+        private void KbtnCalculateFileHash_Click(object sender, EventArgs e)
+        {
+            if (kcmbHashType1.Text == "MD5")
+            {
+                bgwMD5.RunWorkerAsync(ktbFileName.Text);
+            }
+            else if (kcmbHashType1.Text == "SHA-1")
+            {
+                bgwSHA1.RunWorkerAsync(ktbFileName.Text);
+            }
+            else if (kcmbHashType1.Text == "SHA-256")
+            {
+                bgwSHA256.RunWorkerAsync(ktbFileName.Text);
+            }
+            else if (kcmbHashType1.Text == "SHA-384")
+            {
+                bgwSHA384.RunWorkerAsync(ktbFileName.Text);
+            }
+            else if (kcmbHashType1.Text == "SHA-512")
+            {
+                bgwSHA512.RunWorkerAsync(ktbFileName.Text);
+            }
+            else if (kcmbHashType1.Text == "RIPEMD-160")
+            {
+                bgwRIPEMD160.RunWorkerAsync(ktbFileName.Text);
+            }
+
+            kbtnCalculateFileHash.Enabled = false;
+        }
+
+        private void KtxtValidate_TextChanged(object sender, EventArgs e)
+        {
+            HashingHelper.UpdateHashType(kcmbValidatedHashType, ktxtValidate.Text.Length);
+        }
+
+        private void KbtnClearAllFileAttributes_Click(object sender, EventArgs e)
+        {
+            DialogResult result = ExtendedKryptonMessageBox.Show($"Are you sure that you want to clear the attributes for file: '{ ktbFileName.Text }'?", "Clear File Attributes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                FileAttributeHandler.ClearAllAttributes(ktbFileName.Text);
+            }
+        }
+
+        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ktxtValidate.Cut();
+        }
+
+        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(ktxtValidate.Text);
+        }
+
+        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ktxtValidate.Paste();
+        }
+
+        private void SelectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ktxtValidate.SelectAll();
+        }
+
+        private void KbtnGetFileAttributes_Click(object sender, EventArgs e)
+        {
+            _fileAttributesTimer.Start();
+        }
+
+        private void KcmbHashType1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            kbtnCalculateFileHash.Enabled = true;
+        }
+
+        private void KbtnImportHash_Click(object sender, EventArgs e)
+        {
+            CommonOpenFileDialog cofd = new CommonOpenFileDialog();
+
+            cofd.Title = "Import a hash file:";
+
+            cofd.Filters.Add(new CommonFileDialogFilter("MD5 Files", ".md5"));
+
+            cofd.Filters.Add(new CommonFileDialogFilter("SHA-1 Files", ".sha1"));
+
+            cofd.Filters.Add(new CommonFileDialogFilter("SHA-256 Files", ".sha256"));
+
+            cofd.Filters.Add(new CommonFileDialogFilter("SHA-384 Files", ".sha384"));
+
+            cofd.Filters.Add(new CommonFileDialogFilter("SHA-512 Files", ".sha512"));
+
+            cofd.Filters.Add(CommonFileDialogStandardFilters.TextFiles);
+
+            cofd.Filters.Add(new CommonFileDialogFilter("All Files", ".*"));
+
+            if (cofd.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                string path = Path.GetFullPath(cofd.FileName);
+
+                StreamReader reader = new StreamReader(path);
+
+                ktxtValidate.Text = reader.ReadToEnd();
+            }
         }
     }
 }

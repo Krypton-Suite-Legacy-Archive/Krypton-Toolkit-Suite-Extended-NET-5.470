@@ -112,7 +112,25 @@ namespace ToolkitSettings.Classes.Global
         }
         #endregion
 
-        #region Setters and Getters
+        #region Setters & Getters
+        /// <summary>
+        /// Sets the AutomaticallyUpdateColours to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetAutomaticallyUpdateColours(bool value)
+        {
+            _globalBooleanSettings.AutomaticallyUpdateColours = value;
+        }
+
+        /// <summary>
+        /// Gets the AutomaticallyUpdateColours value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetAutomaticallyUpdateColours()
+        {
+            return _globalBooleanSettings.AutomaticallyUpdateColours;
+        }
+
         /// <summary>
         /// Sets the value of IsInDeveloperMode to value.
         /// </summary>
@@ -130,48 +148,204 @@ namespace ToolkitSettings.Classes.Global
         {
             return _globalBooleanSettings.IsInDeveloperMode;
         }
-        #endregion
 
-        #region Methods
         /// <summary>
-        /// Resets to defaults.
+        /// Sets the DisableListItem to the value of value.
         /// </summary>
-        public void ResetToDefaults()
+        /// <param name="value">The value of value.</param>
+        public void SetDisableListItem(bool value)
         {
-            if (KryptonMessageBox.Show("WARNING! You are about to reset these settings back to their original state. This action cannot be undone!\nDo you want to proceed?", "Reset Settings", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
-            {
-                SetIsInDeveloperMode(false);
-
-                SaveGlobalBooleanSettings(GetAlwaysUsePrompt());
-
-                if (KryptonMessageBox.Show($"Done! Do you want to restart the application now?", "Action Complete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    Application.Restart();
-                }
-            }
+            _globalBooleanSettings.DisableListItem = value;
         }
 
         /// <summary>
-        /// Saves the XML file application updater settings.
+        /// Gets the DisableListItem value.
         /// </summary>
-        /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveGlobalBooleanSettings(bool alwaysUsePrompt = false)
+        /// <returns>The value of value.</returns>
+        public bool GetDisableListItem()
         {
-            if (alwaysUsePrompt)
+            return _globalBooleanSettings.DisableListItem;
+        }
+
+        /// <summary>
+        /// Sets the UseCircularPictureBoxes to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetUseCircularPictureBoxes(bool value)
+        {
+            _globalBooleanSettings.UseCircularPictureBoxes = value;
+        }
+
+        /// <summary>
+        /// Gets the UseCircularPictureBoxes value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetUseCircularPictureBoxes()
+        {
+            return _globalBooleanSettings.UseCircularPictureBoxes;
+        }
+
+        /// <summary>
+        /// Sets the LoadColoursOnOpenPalette to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetLoadColoursOnOpenPalette(bool value)
+        {
+            _globalBooleanSettings.LoadColoursOnOpenPalette = value;
+        }
+
+        /// <summary>
+        /// Gets the LoadColoursOnOpenPalette value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetLoadColoursOnOpenPalette()
+        {
+            return _globalBooleanSettings.LoadColoursOnOpenPalette;
+        }
+
+        /// <summary>
+        /// Sets the IsInBetaMode to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetIsInBetaMode(bool value)
+        {
+            _globalBooleanSettings.IsInBetaMode = value;
+        }
+
+        /// <summary>
+        /// Gets the IsInBetaMode value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetIsInBetaMode()
+        {
+            return _globalBooleanSettings.IsInBetaMode;
+        }
+
+        /// <summary>
+        /// Sets the HidePropertiesPane to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetHidePropertiesPane(bool value)
+        {
+            _globalBooleanSettings.HidePropertiesPane = value;
+        }
+
+        /// <summary>
+        /// Gets the HidePropertiesPane value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetHidePropertiesPane()
+        {
+            return _globalBooleanSettings.HidePropertiesPane;
+        }
+
+        /// <summary>
+        /// Sets the UsePromptFeedback to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetUsePromptFeedback(bool value)
+        {
+            _globalBooleanSettings.UsePromptFeedback = value;
+        }
+
+        /// <summary>
+        /// Gets the UsePromptFeedback value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetUsePromptFeedback()
+        {
+            return _globalBooleanSettings.UsePromptFeedback;
+        }
+
+        /// <summary>
+        /// Sets the ShowBuildTag to the value of value.
+        /// </summary>
+        /// <param name="value">The value of value.</param>
+        public void SetShowBuildTag(bool value)
+        {
+            _globalBooleanSettings.ShowBuildTag = value;
+        }
+
+        /// <summary>
+        /// Gets the ShowBuildTag value.
+        /// </summary>
+        /// <returns>The value of value.</returns>
+        public bool GetShowBuildTag()
+        {
+            return _globalBooleanSettings.ShowBuildTag;
+        }
+        #endregion
+
+        #region Methods 
+        /// <summary>
+        /// Saves the boolean settings.
+        /// </summary>
+        /// <param name="usePrompt">if set to <c>true</c> [use prompt].</param>
+        public void SaveBooleanSettings(bool usePrompt = false)
+        {
+            if (usePrompt)
             {
-                if (KryptonMessageBox.Show("You have changed a setting value. Do you want to save these changes?", "Setting Values Changed", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                DialogResult result = KryptonMessageBox.Show("Do you want to save the current boolean settings?", "Save Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
                 {
                     _globalBooleanSettings.Save();
-
-                    SetSettingsModified(false);
+                }
+                else
+                {
+                    ResetSettings(usePrompt);
                 }
             }
             else
             {
                 _globalBooleanSettings.Save();
-
-                SetSettingsModified(false);
             }
+        }
+
+        /// <summary>
+        /// Resets the settings.
+        /// </summary>
+        /// <param name="usePrompt">if set to <c>true</c> [use prompt].</param>
+        public void ResetSettings(bool usePrompt = false)
+        {
+            if (usePrompt)
+            {
+                DialogResult result = KryptonMessageBox.Show("This action will reset the boolean values. Do you want to continue?", "Reset Boolean Values", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    ResetBooleanSettings();
+
+                    SaveBooleanSettings(usePrompt);
+                }
+                else
+                {
+                    ResetBooleanSettings();
+
+                    SaveBooleanSettings();
+                }
+            }
+        }
+
+        private void ResetBooleanSettings()
+        {
+            SetAutomaticallyUpdateColours(true);
+
+            SetIsInDeveloperMode(false);
+
+            SetDisableListItem(false);
+
+            SetUseCircularPictureBoxes(true);
+
+            SetLoadColoursOnOpenPalette(true);
+
+            SetIsInBetaMode(false);
+
+            SetHidePropertiesPane(false);
+
+            SetUsePromptFeedback(true);
+
+            SetShowBuildTag(false);
         }
         #endregion
     }

@@ -8,6 +8,7 @@
 #endregion
 
 using Core;
+using Core.Classes.IO;
 using Core.UX;
 using System;
 using System.Drawing;
@@ -57,7 +58,7 @@ namespace PaletteExplorer.Classes.Models
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
         #endregion
@@ -76,7 +77,7 @@ namespace PaletteExplorer.Classes.Models
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
         #endregion

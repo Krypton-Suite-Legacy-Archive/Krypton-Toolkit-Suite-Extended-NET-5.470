@@ -54,11 +54,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ColourConfigurationFileManager.cs" />
+    <Compile Include="Classes\ColourHelpers.cs" />
+    <Compile Include="Classes\Controllers\AllColourSettingsController.cs" />
+    <Compile Include="Classes\Controllers\CircularPictureBoxControlController.cs" />
+    <Compile Include="Classes\Controllers\UIController.cs" />
     <Compile Include="Classes\InternalColourSettingsManager.cs" />
     <Compile Include="Classes\GlobalMethods.cs" />
     <Compile Include="Classes\Models\ColourContextMenuModel.cs" />
     <Compile Include="Classes\PaletteComposerEngine.cs" />
     <Compile Include="Classes\PaletteUtilities.cs" />
+    <Compile Include="Classes\RandomisePaletteColours.cs" />
     <Compile Include="Classes\SettingsCopier.cs" />
     <Compile Include="Classes\UserInterfaceManager.cs" />
     <Compile Include="Controls\CircularPictureBoxControl.cs">
@@ -72,6 +78,25 @@
     </Compile>
     <Compile Include="Controls\StandardPictureBoxControl.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Enumerations\Enumerations.cs" />
+    <Compile Include="UX\Colour\ColourContrastTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\Colour\ColourEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\Colour\ColourMixerAdvanced.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\Colour\ColourMixerBasic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\Colour\ContrastColourSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\Debugging\ColourDebugConsole.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="UX\KryptonPalettePropertiesWindow.cs">
       <SubType>Form</SubType>
@@ -96,6 +121,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UX\OptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\PaletteColourExporter.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UX\PaletteFileEditor.cs">
@@ -129,6 +157,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UX\Colour\ColourContrastTool.resx">
+      <DependentUpon>ColourContrastTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Colour\ColourEditor.resx">
+      <DependentUpon>ColourEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Colour\ColourMixerAdvanced.resx">
+      <DependentUpon>ColourMixerAdvanced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Colour\ColourMixerBasic.resx">
+      <DependentUpon>ColourMixerBasic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Colour\ContrastColourSelector.resx">
+      <DependentUpon>ContrastColourSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Debugging\ColourDebugConsole.resx">
+      <DependentUpon>ColourDebugConsole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UX\KryptonColourPalettePropertiesWindow.resx">
       <DependentUpon>KryptonColourPalettePropertiesWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\OptionsWindow.resx">
       <DependentUpon>OptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\PaletteColourExporter.resx">
+      <DependentUpon>PaletteColourExporter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\PaletteFileEditor.resx">
       <DependentUpon>PaletteFileEditor.cs</DependentUpon>
@@ -301,7 +350,7 @@
       <Version>3.6.3</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.968</Version>
+      <Version>5.470.1231</Version>
     </PackageReference>
     <PackageReference Include="snt.ScintillaNet.FindReplaceDialog">
       <Version>1.4.0</Version>
@@ -362,6 +411,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Export_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb_48_x_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colour_Contrast_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colour_Contrast_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\debug_icon_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\debug_icon_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configration_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configration_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-software-update_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-software-update_16_x_16_V2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-software-update_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-software-update_32_x_32_V2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-software-update_128_x_128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

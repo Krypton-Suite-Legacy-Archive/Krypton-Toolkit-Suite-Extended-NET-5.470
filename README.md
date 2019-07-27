@@ -22,12 +22,56 @@
 
 ======
 
+# <img src="https://raw.githubusercontent.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/master/Assets/PNG/64%20x%2064/KR%2064%20%20x%2064%20Orange.png" /><a href="https://github.com/Wagnerp/Krypton-NET-Version-Dashboard"> Krypton Releases</a>
+
+======
+
 ## Control Examples
 
 Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Examples.md) to see what each control looks like.
 
-<!--======
-## 2019-06-01 Build 10xx - June Update
+=======
+
+## Demo Application
+
+You can check out the pre-built demo application from downloading it [here](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Demos/Demos.zip)
+
+<!--
+======
+
+## 2019-09-01 Build 13xx - September Update
+* Added a better file system tree view control
+
+======
+
+## 2019-08-10 Build 12xx - August Update
+* Added `ExtendedKryptonColourButton` control with a kryptonised custom colour UI
+* Started componentising toolkit
+* More item and project templates (floating MenuStrips & ToolStrip templates)
+* Floating menu and toolstrips and associated components are now in a separate binary for easier toolbox navigation - **Floating Toolbars.dll**
+* The `GripStyle` visibility is now set to **true** and `DockStyle` is set to **None** by default on the `FloatingMenuStrip`
+* Add documentation via sandcastle
+-->
+
+======
+
+## 2019-07-01 Build 1180 - July Update
+* Implement [TaskDialog](https://github.com/kpreisser/TaskDialog) by [Konstantin Preißer](https://github.com/kpreisser)
+* Floating Menu & Tool strips - Bought back one of the pre Office 2007 features (**IMPORTANT:** Always set the `GripStyle` to **visible** on `FloatingMenuStrip`!)
+* Fixed issue [#79](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/79), How many MessageBoxes are being exported!?! and which work?
+* Fixed issue [#72](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/72), Pressing Yes on the Password Generator exit messageBox does not thing!
+* Fixed issue [#67](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/67), The Following resource does not seem to exist in FlatTabControl 
+* Fixed issue [#68](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/68), The Following resources do not seem to exist in the TreeViewExt
+* Replaced `FileSystemTreeView` with `KryptonFileSystemTreeView` using `KryptonTreeView`. Need help for setting the default `FolderIcon` as it currently uses the Visual Studio icon for directories.
+* Added Visual Studio item and project templates, issue [#56](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/56). Downloadable from [here](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/tree/master/Visual%20Studio%20Templates)
+* Upgraded to Krypton Toolkit Suite - version: **5.470.1222**
+* Build 1180 (build date Monday 1st, July 2019) is now available on NuGet
+
+======
+
+## 2019-06-01 Build 1030 - June Update
+* New `issue` templates
+* Implemented repository tags for better GitHub SEO
 * Implement `WindowsAPICodePackModel.cs` class for dealing with **WindowsAPICodePack** features 
 * New `Palette Explorer` controls
 * Merged all settings into `Toolkit Settings.dll`
@@ -35,9 +79,9 @@ Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Exte
 * Implemented [NaviSuite](https://github.com/jacobmesu/Guifreaks-Navisuite) by [Jacobmesu](https://github.com/jacobmesu)
 * New file varifier app to work with May's file checksum calculator
 * New `KryptonFileInformationDialog` to replace the Windows default one with some extra features
-* Upgraded to Krypton Toolkit Suite - version: **5.470.xxx**
-* Build 10xx (build date Saturday 1st, June 2019) is now available on NuGet
--->
+* Upgraded to Krypton Toolkit Suite - version: **5.470.1204**
+* Demo app is available to download
+* Build 1030 (build date Saturday 1st, June 2019) is now available on NuGet
 
 ======
 

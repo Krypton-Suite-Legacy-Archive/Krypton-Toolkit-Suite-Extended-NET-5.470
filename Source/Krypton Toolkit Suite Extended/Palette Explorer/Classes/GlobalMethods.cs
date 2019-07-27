@@ -9,7 +9,9 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using Core;
+using Core.Classes.IO;
 using System;
+using System.Windows.Forms;
 
 namespace PaletteExplorer.Classes
 {
@@ -50,7 +52,7 @@ namespace PaletteExplorer.Classes
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
         #endregion

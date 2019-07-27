@@ -363,5 +363,16 @@ namespace ToolkitSettings.Settings.Palette_Explorer.Colours {
                 this["PressedTextColour"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color LinkDisabledColour {
+            get {
+                return ((global::System.Drawing.Color)(this["LinkDisabledColour"]));
+            }
+            set {
+                this["LinkDisabledColour"] = value;
+            }
+        }
     }
 }

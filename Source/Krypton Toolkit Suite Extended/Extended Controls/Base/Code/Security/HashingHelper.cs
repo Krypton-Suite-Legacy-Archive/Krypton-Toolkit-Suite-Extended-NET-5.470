@@ -12,6 +12,7 @@ using ExtendedControls.Base.Code.Exceptions;
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Text;
 
 namespace ExtendedControls.Base.Code.Security
 {
@@ -176,6 +177,65 @@ namespace ExtendedControls.Base.Code.Security
             catch (Exception exc)
             {
                 ExceptionHandler.CaptureException(exc);
+            }
+        }
+
+        /// <summary>
+        /// Builds the file hash.
+        /// </summary>
+        /// <param name="hashBytes">The hash bytes.</param>
+        /// <param name="size">The size.</param>
+        /// <param name="toUpperCase">if set to <c>true</c> [to upper case].</param>
+        /// <returns></returns>
+        public static string BuildFileHash(byte[] hashBytes, int size, bool toUpperCase = true)
+        {
+            StringBuilder builder = new StringBuilder(size);
+
+            foreach (byte b in hashBytes)
+            {
+                if (toUpperCase)
+                {
+                    builder.Append(b.ToString("X2").ToUpper());
+                }
+                else
+                {
+                    builder.Append(b.ToString("X2").ToLower());
+                }
+            }
+
+            return builder.ToString();
+        }
+
+        /// <summary>
+        /// Updates the type of the hash.
+        /// </summary>
+        /// <param name="box">The box.</param>
+        /// <param name="hashLength">Length of the hash.</param>
+        public static void UpdateHashType(KryptonComboBox box, int hashLength)
+        {
+            if (hashLength == 32)
+            {
+                box.Text = "MD5";
+            }
+            else if (hashLength == 40)
+            {
+                box.Text = "SHA-1";
+            }
+            else if (hashLength == 64)
+            {
+                box.Text = "SHA-256";
+            }
+            else if (hashLength == 96)
+            {
+                box.Text = "SHA-384";
+            }
+            else if (hashLength == 128)
+            {
+                box.Text = "SHA-512";
+            }
+            else
+            {
+                box.Text = "RIPEMD-160";
             }
         }
         #endregion

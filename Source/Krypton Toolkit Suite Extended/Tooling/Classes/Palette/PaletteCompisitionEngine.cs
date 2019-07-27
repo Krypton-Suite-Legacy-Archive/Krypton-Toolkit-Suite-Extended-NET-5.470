@@ -9,6 +9,7 @@
 
 using ComponentFactory.Krypton.Ribbon;
 using ComponentFactory.Krypton.Toolkit;
+using Core.Classes.IO;
 using System;
 using System.Collections;
 using System.Drawing;
@@ -651,7 +652,7 @@ namespace Core.Classes.Palette
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc, "Error Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error, "PaletteCompisitionEngine", "CreatePalette(KryptonPalette palette, PaletteMode paletteMode, Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColourPreview, Color alternativeNormalTextColourPreview, Color normalTextColourPreview, Color disabledTextColourPreview, Color focusedTextColourPreview, Color pressedTextColourPreview, Color disabledControlColourPreview, Color linkNormalColourPreview, Color linkHoverColourPreview, Color linkVisitedColourPreview, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour, ToolStripLabel statusState = null, bool invertColours = false)");
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
 

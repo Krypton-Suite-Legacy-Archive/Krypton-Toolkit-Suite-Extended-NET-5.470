@@ -12,13 +12,14 @@ using ComponentFactory.Krypton.Toolkit;
 using Core.Classes.Other;
 using Core.Classes.Palette;
 using Core.Interfaces;
-using Core.Settings.Classes;
 using Core.UX;
 using PaletteEditor.Classes;
 using System;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.Global;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace PaletteEditor.UX.New
 {
@@ -35,7 +36,7 @@ namespace PaletteEditor.UX.New
 
         private ConversionMethods _conversionMethods = new ConversionMethods();
 
-        private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
+        private AllMergedColourSettingsManager _colourSettingsManager = new AllMergedColourSettingsManager();
 
         private Classes.GlobalMethods _globalMethods = new Classes.GlobalMethods();
 
@@ -76,7 +77,7 @@ namespace PaletteEditor.UX.New
 
             _colourUpdateTimer.Tick += new EventHandler(ColourUpdateTimer_Tick);
 
-            DebugMode = _globalBooleanSettingsManager.GetDevelopmentMode();
+            DebugMode = _globalBooleanSettingsManager.GetIsInDeveloperMode();
 
             UseCircularPictureBoxes = _globalBooleanSettingsManager.GetUseCircularPictureBoxes();
         }
@@ -88,7 +89,7 @@ namespace PaletteEditor.UX.New
 
             PaletteCompisitionEngine.PropagateThemes(krgcbBasePaletteMode);
 
-            _colourSettingsManager.ResetSettings(DebugMode);
+            _colourSettingsManager.ResetToDefaults();
 
             if (UseCircularPictureBoxes)
             {

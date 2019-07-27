@@ -7,6 +7,7 @@
  */
 #endregion
 
+using System.Drawing;
 using System.Windows.Forms;
 using ToolkitSettings.BackEnd;
 using ToolkitSettings.Settings.Palette_Explorer;
@@ -108,6 +109,24 @@ namespace ToolkitSettings.Classes.PaletteExplorer
 
         #region Setters and Getters
         /// <summary>
+        /// Sets the value of ShowAdvancedDetails to value.
+        /// </summary>
+        /// <param name="value">The value of ShowAdvancedDetails.</param>
+        public void SetShowAdvancedDetails(bool value)
+        {
+            _generalPaletteExplorerSettings.ShowAdvancedDetails = value;
+        }
+
+        /// <summary>
+        /// Returns the value of ShowAdvancedDetails.
+        /// </summary>
+        /// <returns>The value of ShowAdvancedDetails.</returns>
+        public bool GetShowAdvancedDetails()
+        {
+            return _generalPaletteExplorerSettings.ShowAdvancedDetails;
+        }
+
+        /// <summary>
         /// Sets the value of ShowColourPropertiesPane to value.
         /// </summary>
         /// <param name="value">The value of ShowColourPropertiesPane.</param>
@@ -184,6 +203,24 @@ namespace ToolkitSettings.Classes.PaletteExplorer
         }
 
         /// <summary>
+        /// Sets the value of DefaultColour to colour.
+        /// </summary>
+        /// <param name="colour">The value of DefaultColour.</param>
+        public void SetDefaultColour(Color colour)
+        {
+            _generalPaletteExplorerSettings.DefaultColour = colour;
+        }
+
+        /// <summary>
+        /// Returns the value of DefaultColour.
+        /// </summary>
+        /// <returns>The value of DefaultColour.</returns>
+        public Color GetDefaultColour()
+        {
+            return _generalPaletteExplorerSettings.DefaultColour;
+        }
+
+        /// <summary>
         /// Sets the value of DisplayIndex to value.
         /// </summary>
         /// <param name="value">The value of DisplayIndex.</param>
@@ -210,6 +247,8 @@ namespace ToolkitSettings.Classes.PaletteExplorer
         {
             if (ExtendedKryptonMessageBox.Show("WARNING! You are about to reset these settings back to their original state. This action cannot be undone!\nDo you want to proceed?", "Reset Settings", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
+                SetShowAdvancedDetails(false);
+
                 SetShowColourPropertiesPane(false);
 
                 SetShowPalettePropertiesPane(false);
@@ -217,6 +256,8 @@ namespace ToolkitSettings.Classes.PaletteExplorer
                 SetShowCircularDisplay(false);
 
                 SetShowStandardDisplay(true);
+
+                SetDefaultColour(Color.Transparent);
 
                 SetDisplayIndex(0);
 

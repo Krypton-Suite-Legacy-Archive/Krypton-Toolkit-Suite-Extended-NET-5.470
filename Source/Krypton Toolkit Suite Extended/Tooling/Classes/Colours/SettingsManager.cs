@@ -8,11 +8,11 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
-using Core.Settings.Classes;
-using Core.Settings.Colours.Classes;
+using Core.Classes.IO;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace Core.Classes.Colours
 {
@@ -36,24 +36,26 @@ namespace Core.Classes.Colours
         public static void MergeAllColourSettings(bool usePrompt = false)
         {
             #region Variables
-            BasicPaletteColourManager basicPaletteColourManager = new BasicPaletteColourManager();
+            BasicColourSettingsManager basicPaletteColourManager = new BasicColourSettingsManager();
 
-            CustomPaletteColourManager customPaletteColourManager = new CustomPaletteColourManager();
+            CustomColourSettingsManager customPaletteColourManager = new CustomColourSettingsManager();
 
-            CustomPaletteTextColourManager customPaletteTextColourManager = new CustomPaletteTextColourManager();
+            CustomTextColourSettingsManager customPaletteTextColourManager = new CustomTextColourSettingsManager();
 
-            LinkTextPaletteColourManager linkTextPaletteColourManager = new LinkTextPaletteColourManager();
+            LinkTextColourSettingsManager linkTextPaletteColourManager = new LinkTextColourSettingsManager();
 
-            MiscellaneousPaletteColourManager miscellaneousPaletteColourManager = new MiscellaneousPaletteColourManager();
+            MiscellaneousColourSettingsManager miscellaneousPaletteColourManager = new MiscellaneousColourSettingsManager();
 
-            TextPaletteColourManager textPaletteColourManager = new TextPaletteColourManager();
+            StandardControlTextColourSettingsManager standardControlTextColourSettingsManager = new StandardControlTextColourSettingsManager();
 
-            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+            TextColourSettingsManager textPaletteColourManager = new TextColourSettingsManager();
+
+            AllMergedColourSettingsManager colourSettingsManager = new AllMergedColourSettingsManager();
             #endregion
 
             try
             {
-                if (BasicPaletteColourManager.AreBasicPaletteColoursEmpty() || CustomPaletteColourManager.AreCustomPaletteColoursEmpty() || CustomPaletteTextColourManager.AreCustomPaletteTextColoursEmpty() || LinkTextPaletteColourManager.AreLinkTextPaletteColoursEmpty() || MiscellaneousPaletteColourManager.AreMiscellaneousPaletteColoursEmpty() || TextPaletteColourManager.AreTextPaletteColoursEmpty())
+                if (BasicColourSettingsManager.AreBasicPaletteColoursEmpty() || CustomColourSettingsManager.AreCustomPaletteColoursEmpty() || CustomTextColourSettingsManager.AreCustomPaletteTextColoursEmpty() || LinkTextColourSettingsManager.AreLinkTextPaletteColoursEmpty() || MiscellaneousColourSettingsManager.AreMiscellaneousPaletteColoursEmpty() || StandardControlTextColourSettingsManager.AreStandardControlTextColoursEmpty() || TextColourSettingsManager.AreTextPaletteColoursEmpty())
                 {
                     KryptonMessageBox.Show("There are no colours to merge.", "Undefined Colours", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -81,6 +83,8 @@ namespace Core.Classes.Colours
 
                             colourSettingsManager.SetCustomColourFive(customPaletteColourManager.GetCustomColourFive());
 
+                            colourSettingsManager.SetCustomColourSix(customPaletteColourManager.GetCustomColourSix());
+
                             colourSettingsManager.SetCustomTextColourOne(customPaletteTextColourManager.GetCustomTextColourOne());
 
                             colourSettingsManager.SetCustomTextColourTwo(customPaletteTextColourManager.GetCustomTextColourTwo());
@@ -91,7 +95,9 @@ namespace Core.Classes.Colours
 
                             colourSettingsManager.SetCustomTextColourFive(customPaletteTextColourManager.GetCustomTextColourFive());
 
-                            colourSettingsManager.SetDarkestColour(basicPaletteColourManager.GetDarkestColour());
+                            colourSettingsManager.SetCustomTextColourSix(customPaletteTextColourManager.GetCustomTextColourSix());
+
+                            colourSettingsManager.SetDarkColour(basicPaletteColourManager.GetDarkColour());
 
                             colourSettingsManager.SetDisabledControlColour(miscellaneousPaletteColourManager.GetDisabledControlColour());
 
@@ -115,17 +121,17 @@ namespace Core.Classes.Colours
 
                             colourSettingsManager.SetMediumColour(basicPaletteColourManager.GetMediumColour());
 
-                            colourSettingsManager.SetMenuTextColour(textPaletteColourManager.GetMenuTextColour());
+                            colourSettingsManager.SetMenuTextColour(standardControlTextColourSettingsManager.GetMenuTextColour());
 
                             colourSettingsManager.SetNormalTextColour(textPaletteColourManager.GetNormalTextColour());
 
                             colourSettingsManager.SetPressedTextColour(textPaletteColourManager.GetPressedTextColour());
 
-                            colourSettingsManager.SetRibbonTabTextColour(textPaletteColourManager.GetRibbonTabTextColour());
+                            colourSettingsManager.SetRibbonTabTextColour(standardControlTextColourSettingsManager.GetRibbonTabTextColour());
 
-                            colourSettingsManager.SetStatusStripTextColour(textPaletteColourManager.GetStatusStripTextColour());
+                            colourSettingsManager.SetStatusStripTextColour(standardControlTextColourSettingsManager.GetStatusStripTextColour());
 
-                            colourSettingsManager.SaveColourSettings(usePrompt);
+                            colourSettingsManager.SaveAllMergedColourSettings(usePrompt);
                         }
                     }
                     else
@@ -156,7 +162,7 @@ namespace Core.Classes.Colours
 
                         colourSettingsManager.SetCustomTextColourFive(customPaletteTextColourManager.GetCustomTextColourFive());
 
-                        colourSettingsManager.SetDarkestColour(basicPaletteColourManager.GetDarkestColour());
+                        colourSettingsManager.SetDarkColour(basicPaletteColourManager.GetDarkColour());
 
                         colourSettingsManager.SetDisabledControlColour(miscellaneousPaletteColourManager.GetDisabledControlColour());
 
@@ -180,23 +186,23 @@ namespace Core.Classes.Colours
 
                         colourSettingsManager.SetMediumColour(basicPaletteColourManager.GetMediumColour());
 
-                        colourSettingsManager.SetMenuTextColour(textPaletteColourManager.GetMenuTextColour());
+                        colourSettingsManager.SetMenuTextColour(standardControlTextColourSettingsManager.GetMenuTextColour());
 
                         colourSettingsManager.SetNormalTextColour(textPaletteColourManager.GetNormalTextColour());
 
                         colourSettingsManager.SetPressedTextColour(textPaletteColourManager.GetPressedTextColour());
 
-                        colourSettingsManager.SetRibbonTabTextColour(textPaletteColourManager.GetRibbonTabTextColour());
+                        colourSettingsManager.SetRibbonTabTextColour(standardControlTextColourSettingsManager.GetRibbonTabTextColour());
 
-                        colourSettingsManager.SetStatusStripTextColour(textPaletteColourManager.GetStatusStripTextColour());
+                        colourSettingsManager.SetStatusStripTextColour(standardControlTextColourSettingsManager.GetStatusStripTextColour());
 
-                        colourSettingsManager.SaveColourSettings();
+                        colourSettingsManager.SaveAllMergedColourSettings();
                     }
                 }
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc, "Exception Caught", MessageBoxButtons.OK, MessageBoxIcon.Error, "SettingsManager", "MergeAllColourSetings(bool usePrompt = false)");
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
 
@@ -231,15 +237,15 @@ namespace Core.Classes.Colours
         /// <param name="statusTextColour">The status text colour.</param>
         /// <param name="ribbonTabTextColour">The ribbon tab text colour.</param>
         /// <param name="usePrompt">if set to <c>true</c> [use prompt].</param>
-        public static void MergeAllColours(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledControlColour, Color linkDisabledColour, Color linkFocusedColour, Color linkNormalColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour, bool usePrompt = false)
+        public static void MergeAllColours(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, Color focusedTextColour, Color pressedTextColour, Color disabledControlColour, Color linkDisabledColour, Color linkFocusedColour, Color linkNormalColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customColourSix, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color customTextColourSix, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour, bool usePrompt = false)
         {
             #region Variables
-            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+            AllMergedColourSettingsManager colourSettingsManager = new AllMergedColourSettingsManager();
             #endregion
 
             try
             {
-                if (BasicPaletteColourManager.AreBasicPaletteColoursEmpty() || CustomPaletteColourManager.AreCustomPaletteColoursEmpty() || CustomPaletteTextColourManager.AreCustomPaletteTextColoursEmpty() || LinkTextPaletteColourManager.AreLinkTextPaletteColoursEmpty() || MiscellaneousPaletteColourManager.AreMiscellaneousPaletteColoursEmpty() || TextPaletteColourManager.AreTextPaletteColoursEmpty())
+                if (BasicColourSettingsManager.AreBasicPaletteColoursEmpty() || CustomColourSettingsManager.AreCustomPaletteColoursEmpty() || CustomTextColourSettingsManager.AreCustomPaletteTextColoursEmpty() || LinkTextColourSettingsManager.AreLinkTextPaletteColoursEmpty() || MiscellaneousColourSettingsManager.AreMiscellaneousPaletteColoursEmpty() || StandardControlTextColourSettingsManager.AreStandardControlTextColoursEmpty() || TextColourSettingsManager.AreTextPaletteColoursEmpty())
                 {
                     KryptonMessageBox.Show("There are no colours to merge.", "Undefined Colours", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -267,6 +273,8 @@ namespace Core.Classes.Colours
 
                             colourSettingsManager.SetCustomColourFive(customColourFive);
 
+                            colourSettingsManager.SetCustomColourSix(customColourSix);
+
                             colourSettingsManager.SetCustomTextColourOne(customTextColourOne);
 
                             colourSettingsManager.SetCustomTextColourTwo(customTextColourTwo);
@@ -277,7 +285,9 @@ namespace Core.Classes.Colours
 
                             colourSettingsManager.SetCustomTextColourFive(customTextColourFive);
 
-                            colourSettingsManager.SetDarkestColour(darkColour);
+                            colourSettingsManager.SetCustomTextColourSix(customTextColourSix);
+
+                            colourSettingsManager.SetDarkColour(darkColour);
 
                             colourSettingsManager.SetDisabledControlColour(disabledControlColour);
 
@@ -311,7 +321,7 @@ namespace Core.Classes.Colours
 
                             colourSettingsManager.SetStatusStripTextColour(statusTextColour);
 
-                            colourSettingsManager.SaveColourSettings(usePrompt);
+                            colourSettingsManager.SaveAllMergedColourSettings(usePrompt);
                         }
                     }
                     else
@@ -332,6 +342,8 @@ namespace Core.Classes.Colours
 
                         colourSettingsManager.SetCustomColourFive(customColourFive);
 
+                        colourSettingsManager.SetCustomColourSix(customColourSix);
+
                         colourSettingsManager.SetCustomTextColourOne(customTextColourOne);
 
                         colourSettingsManager.SetCustomTextColourTwo(customTextColourTwo);
@@ -342,7 +354,9 @@ namespace Core.Classes.Colours
 
                         colourSettingsManager.SetCustomTextColourFive(customTextColourFive);
 
-                        colourSettingsManager.SetDarkestColour(darkColour);
+                        colourSettingsManager.SetCustomTextColourSix(customTextColourSix);
+
+                        colourSettingsManager.SetDarkColour(darkColour);
 
                         colourSettingsManager.SetDisabledControlColour(disabledControlColour);
 
@@ -376,13 +390,13 @@ namespace Core.Classes.Colours
 
                         colourSettingsManager.SetStatusStripTextColour(statusTextColour);
 
-                        colourSettingsManager.SaveColourSettings();
+                        colourSettingsManager.SaveAllMergedColourSettings();
                     }
                 }
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc, "Exception Caught", MessageBoxButtons.OK, MessageBoxIcon.Error, "SettingsManager", "MergeAllColours(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColour, Color alternativeNormalTextColour, Color normalTextColour, Color disabledTextColour, \nColor focusedTextColour, Color pressedTextColour, Color disabledControlColour, Color linkDisabledColour, Color linkFocusedColour, Color linkNormalColour, Color linkHoverColour, Color linkVisitedColour, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, \nColor customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour, Color ribbonTabTextColour, bool usePrompt = false)");
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
         #endregion

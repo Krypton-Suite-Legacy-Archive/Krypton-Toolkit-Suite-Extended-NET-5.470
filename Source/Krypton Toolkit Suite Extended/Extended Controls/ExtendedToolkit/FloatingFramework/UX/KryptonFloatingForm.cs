@@ -7,6 +7,7 @@
  */
 #endregion
 
+
 using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Windows.Forms;

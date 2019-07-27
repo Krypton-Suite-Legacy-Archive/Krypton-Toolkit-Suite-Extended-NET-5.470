@@ -67,31 +67,7 @@
             this.dockingHostToolStripPanel1.Name = "dockingHostToolStripPanel1";
             this.dockingHostToolStripPanel1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             this.dockingHostToolStripPanel1.RowMargin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.dockingHostToolStripPanel1.Size = new System.Drawing.Size(800, 25);
-            // 
-            // tearOffToolStrip1
-            // 
-            this.tearOffToolStrip1.BottomToolStripPanel = null;
-            this.tearOffToolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.tearOffToolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tearOffToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripButton,
-            this.openToolStripButton,
-            this.saveToolStripButton,
-            this.printToolStripButton,
-            this.toolStripSeparator,
-            this.cutToolStripButton,
-            this.copyToolStripButton,
-            this.pasteToolStripButton,
-            this.toolStripSeparator1,
-            this.helpToolStripButton});
-            this.tearOffToolStrip1.LeftToolStripPanel = null;
-            this.tearOffToolStrip1.Location = new System.Drawing.Point(3, 0);
-            this.tearOffToolStrip1.Name = "tearOffToolStrip1";
-            this.tearOffToolStrip1.RightToolStripPanel = null;
-            this.tearOffToolStrip1.Size = new System.Drawing.Size(208, 25);
-            this.tearOffToolStrip1.TabIndex = 0;
-            this.tearOffToolStrip1.TopToolStripPanel = null;
+            this.dockingHostToolStripPanel1.Size = new System.Drawing.Size(800, 25);           
             // 
             // newToolStripButton
             // 
@@ -173,33 +149,7 @@
             this.helpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.helpToolStripButton.Name = "helpToolStripButton";
             this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.helpToolStripButton.Text = "He&lp";
-            // 
-            // tearOffToolStrip2
-            // 
-            this.tearOffToolStrip2.BottomToolStripPanel = null;
-            this.tearOffToolStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.tearOffToolStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tearOffToolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripButton1,
-            this.openToolStripButton1,
-            this.saveToolStripButton1,
-            this.printToolStripButton1,
-            this.toolStripSeparator2,
-            this.cutToolStripButton1,
-            this.copyToolStripButton1,
-            this.pasteToolStripButton1,
-            this.toolStripSeparator3,
-            this.helpToolStripButton1,
-            this.kryptonViewBar1});
-            this.tearOffToolStrip2.LeftToolStripPanel = null;
-            this.tearOffToolStrip2.Location = new System.Drawing.Point(318, 177);
-            this.tearOffToolStrip2.Name = "tearOffToolStrip2";
-            this.tearOffToolStrip2.RightToolStripPanel = null;
-            this.tearOffToolStrip2.Size = new System.Drawing.Size(356, 26);
-            this.tearOffToolStrip2.TabIndex = 1;
-            this.tearOffToolStrip2.Text = "tearOffToolStrip2";
-            this.tearOffToolStrip2.TopToolStripPanel = null;
+            this.helpToolStripButton.Text = "He&lp";           
             // 
             // newToolStripButton1
             // 

@@ -66,10 +66,6 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
         private void InitializeComponent()
         {
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues1 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues2 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues3 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
-            ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues popupPositionValues4 = new ComponentFactory.Krypton.Toolkit.Values.PopupPositionValues();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.klblContent = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.klblHeader = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -99,25 +95,22 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             // klblContent
             // 
             this.klblContent.AutoSize = false;
-            this.klblContent.Location = new System.Drawing.Point(147, 77);
+            this.klblContent.Location = new System.Drawing.Point(146, 77);
             this.klblContent.Name = "klblContent";
-            this.klblContent.Size = new System.Drawing.Size(487, 153);
+            this.klblContent.Size = new System.Drawing.Size(488, 153);
             this.klblContent.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblContent.StateCommon.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.klblContent.StateCommon.LongText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.klblContent.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblContent.TabIndex = 3;
-            popupPositionValues1.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues1.PlacementTarget = null;
-            this.klblContent.ToolTipValues.ToolTipPosition = popupPositionValues1;
             this.klblContent.Values.Text = "kryptonLabel1";
             // 
             // klblHeader
             // 
             this.klblHeader.AutoSize = false;
-            this.klblHeader.Location = new System.Drawing.Point(147, 12);
+            this.klblHeader.Location = new System.Drawing.Point(146, 12);
             this.klblHeader.Name = "klblHeader";
-            this.klblHeader.Size = new System.Drawing.Size(487, 58);
+            this.klblHeader.Size = new System.Drawing.Size(488, 58);
             this.klblHeader.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblHeader.StateCommon.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.klblHeader.StateCommon.LongText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
@@ -125,9 +118,6 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             this.klblHeader.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.klblHeader.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.klblHeader.TabIndex = 2;
-            popupPositionValues2.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues2.PlacementTarget = null;
-            this.klblHeader.ToolTipValues.ToolTipPosition = popupPositionValues2;
             this.klblHeader.Values.Text = "kryptonLabel1";
             // 
             // pbxIcon
@@ -160,9 +150,6 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             this.kbtnAction.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnAction.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnAction.TabIndex = 1;
-            popupPositionValues3.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues3.PlacementTarget = null;
-            this.kbtnAction.ToolTipValues.ToolTipPosition = popupPositionValues3;
             this.kbtnAction.Values.Text = "{0}";
             this.kbtnAction.Visible = false;
             this.kbtnAction.Click += new System.EventHandler(this.kbtnAction_Click);
@@ -175,9 +162,6 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             this.kbtnDismiss.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnDismiss.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnDismiss.TabIndex = 0;
-            popupPositionValues4.PlacementRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
-            popupPositionValues4.PlacementTarget = null;
-            this.kbtnDismiss.ToolTipValues.ToolTipPosition = popupPositionValues4;
             this.kbtnDismiss.Values.Text = "Dismiss ({0})";
             this.kbtnDismiss.Click += new System.EventHandler(this.kbtnDismiss_Click);
             // 

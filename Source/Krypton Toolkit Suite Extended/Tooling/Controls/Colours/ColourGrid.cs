@@ -7,10 +7,6 @@
  */
 #endregion
 
-using Core.Classes.Colours;
-using Core.Enumerations;
-using Core.Interfaces;
-using Core.STRUCTS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,14 +15,17 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
+using Core.Classes.Colours;
+using Core.Enumerations;
+using Core.Interfaces;
+using Core.STRUCTS;
 
 namespace Core.Controls.Colours
 {
     /// <summary>
     /// Represents a grid control, which displays a collection of colors using different styles.
     /// </summary>
-    [DefaultProperty("Colour")]
-    [DefaultEvent("ColourChanged")]
+    [DefaultProperty("Colour"), DefaultEvent("ColourChanged"), ToolboxItem(false)]
     public class ColourGrid : Control, IColourEditor
     {
         #region Constants

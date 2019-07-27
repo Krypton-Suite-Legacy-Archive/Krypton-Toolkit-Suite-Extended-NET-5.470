@@ -31,6 +31,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
         //[DefaultValue(Color.Transparent)]
         public Color SelectedColour { get { return _selectedColour; } set { _selectedColour = value; } }
 
+        public Color Colour { get; set; }
+
         public bool IsUpdating { get { return _isUpdating; } set { _isUpdating = value; } }
         #endregion
 

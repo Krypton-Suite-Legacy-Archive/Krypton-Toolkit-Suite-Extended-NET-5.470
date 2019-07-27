@@ -7,17 +7,18 @@
  */
 #endregion
 
-using Core.Enumerations;
-using Core.STRUCTS;
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using Core.Enumerations;
+using Core.STRUCTS;
 
 namespace Core.Controls.Colours
 {
     /// <summary>
     /// Represents a control for selecting the saturation of a color
     /// </summary>
+    [ToolboxItem(false)]
     public class SaturationColourSlider : ColourSlider
     {
         #region Constants

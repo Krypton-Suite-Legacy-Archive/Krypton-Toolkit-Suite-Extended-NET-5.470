@@ -9,6 +9,7 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using Core.Classes.Colours;
+using Core.Classes.IO;
 using System;
 using System.Windows.Forms;
 
@@ -240,7 +241,7 @@ namespace Core.UX.Debugging
             }
             catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(exc, "Exception Thrown", MessageBoxButtons.OK, MessageBoxIcon.Error, "ColourSettingsViewer", "kbtnAllColoursAsHex_Click(object sender, EventArgs e)");
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
     }

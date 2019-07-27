@@ -1,0 +1,1208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFB34C40-6461-4EA1-A81C-5E207F2D7BFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ToolkitResources</RootNamespace>
+    <AssemblyName>Toolkit Resources</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Images\AllToolkitImageResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllToolkitImageResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strings\TimeSpanResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeSpanResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\AllToolkitImageResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AllToolkitImageResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\TimeSpanResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TimeSpanResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\149.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\151.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowControl.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowseFolders 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowseFolders 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowseFolders 256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowserBackward 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowserBackward 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowserBackward 256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowserForward 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowserForward 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowserForward 256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowserUp 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowserUp 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowserUp 256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Class_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colorbarIndicators.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_Filtered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_FilteredAndOrderedASC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_FilteredAndOrderedDESC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_OrderedASC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_OrderedDESC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_SavedFilters.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnHeader_UnFiltered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Critical 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Critical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Critical_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cube_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_Report_48_x_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_Report_128_x_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Event_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export To Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyedropper.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fail.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridErrorIcon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridRowIndicators.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridSortOrder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Symbol-Check_49258.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Symbol-Delete_49260.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Symbol-Error_49261.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Symbol-Exclamation_49262.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Symbol-Help_49263.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Symbol-Information_49264.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Symbol-Restricted_49266.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Symbol-Stop_49267.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inactive_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Interface_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_OrderASCbool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_OrderASCnum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_OrderASCtxt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_OrderDESCbool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_OrderDESCnum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_OrderDESCtxt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuStrip_ResizeGrip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Namespace_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NaviBar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NaviDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NaviGroup.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NaviUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open_File_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popupcontainerbuttons.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Property_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchToolBar_ButtonCaseSensitive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchToolBar_ButtonClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchToolBar_ButtonFromBegin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchToolBar_ButtonSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchToolBar_ButtonWholeWord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SparkleChecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SparkleContextMenuSub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SparkleDropDownButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SparkleDropDownOutlineButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SparkleDropUpButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SparkleGalleryDropButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SparkleGrayChecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SparkleGrayIndeterminate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SparkleIndeterminate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol-Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_italic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_lowercase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_strikethrough.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ttf-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ttf-2_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_Down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_Up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DropDown2003.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DropDown2007.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grip2003.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grip2007.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress_bar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KR 48 x 48 Orange.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentinfo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17871 - apply check clean clear correct ok ready valid yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18520 - agt stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18795 - critical messagebox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18850 - ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\93808 - calc cancel stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\94777 - stock stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapseIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapseIcon2010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color2scale_generic_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color3scale_generic_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\databar_generic_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_gradient_blue_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_gradient_green_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_gradient_pink_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_gradient_red_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_gradient_rose_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_gradient_violet_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_gradient_yellow_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_gradient2_blue_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_solid_blue_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_solid_green_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_solid_pink_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_solid_red_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_solid_rose_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_solid_violet_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Databar_solid_yellow_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\element.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\element_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\element_minus_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\element_plus_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\element_selection_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elements_minus_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elements_plus_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExpandIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExpandIcon2010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fit_to_size.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigate_minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigate_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paint_bucket_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort_az_ascending2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort_az_descending2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort_up_down_delete_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_yellow_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_yellow_half_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starhot0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starhot1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starhot2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starhot3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starhot4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starhot5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_conditional_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table2_selection_column.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreeColors_blue_white_red_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreeColors_green_white_red_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreeColors_green_yellow_red_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreeColors_red_white_blue_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreeColors_red_white_green_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreeColors_red_yellow_green_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoColors_blue_white_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoColors_green_white_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoColors_pink_white_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoColors_red_white_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoColors_violet_white_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoColors_white_blue_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoColors_white_green_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoColors_white_pink_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoColors_white_red_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoColors_white_violet_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoColors_white_yellow_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoColors_yellow_white_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PU Icon 48 x 48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PU Icon 64 x 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PU Icon 256 x 256.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PU Icon 512 x 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackBtnStrip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackBtnStrip2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GlassExtenderProvider.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Krypton.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StepWizardControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThemedImageButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThemedLabel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThemedTableLayoutPanel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WizardControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WizardHat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppMenuClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppMenuDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppMenuPrint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppMenuSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppMenuSaveAs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppMenuSendMessage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color%281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark Drive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\environment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\External Drive-Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_brazil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_iceland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_scotland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy Drive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome-mime-application-x-theme.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome-mime-application-x-theme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard Disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonBSActual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonCBActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonGActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonHActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonHGActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonLActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonNav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonPActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonRibbon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonSCActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonTMS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonTrackBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KTextBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette%281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theme.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theme256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopBS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopCB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopDT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopGrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopHG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopInputControls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopNavigate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopRB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopRibbon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopSC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopTMS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopTrackBar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About_Information_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About_Information_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colour_Wheel_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colour_Wheel_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generate_Colours_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generate_Colours_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generic_Colour_Icon_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generic_Colour_Icon_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard_Drive_v1_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard_Drive_v1_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard_Drive_v2_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard_Drive_v2_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Invert_Colours_v1_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Invert_Colours_v1_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_File_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_File_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open_File_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PE Icon 256 x 256.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PE Icon 512 x 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Property_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Property_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Software_Update_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Software_Update_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text_Colour_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text_Colour_v1_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text_Colour_v1_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colour_Contrast_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colour_Contrast_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb_48_x_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PE Icon 24 x 24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Property_New_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Property_New_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo 16 x 16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo 32 x 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo 16 x 16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo 32 x 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_16_x_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10-large-opt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10-large-opt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cellbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dropper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyedropper.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyedropper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_palette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette-load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System-Information-tool-icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System-Information-tool-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckGroupBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapsibleGroupBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapsiblePanel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapsiblePanelSplitter.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapsibleSplitter.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorListBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorPickerCtrl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorTable.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorWheelCtrl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboBoxEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FloatableToolStrip.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LabelRotate.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListBoxEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListViewEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MultiLabel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavigateBar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\None.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RadioGroupBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplitButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextBoxButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapsed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapsible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expended.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_16_x_16.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

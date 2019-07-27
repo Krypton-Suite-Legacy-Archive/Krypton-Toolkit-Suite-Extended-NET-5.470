@@ -9,10 +9,11 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using Core;
-using Core.Settings.Classes;
+using Core.Classes.IO;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace Classes.Colours
 {
@@ -21,7 +22,7 @@ namespace Classes.Colours
         #region Variables
         private Color _baseColour, _darkColour, _middleColour, _lightColour, _lightestColour, _borderColourPreview, _alternativeNormalTextColourPreview, _normalTextColourPreview, _disabledTextColourPreview, _focusedTextColourPreview, _pressedTextColourPreview, _disabledColourPreview, _linkNormalColourPreview, _linkHoverColourPreview, _linkVisitedColourPreview, _customColourOne, _customColourTwo, _customColourThree, _customColourFour, _customColourFive, _customTextColourOne, _customTextColourTwo, _customTextColourThree, _customTextColourFour, _customTextColourFive, _menuTextColour, _statusTextColour, _ribbonTabTextColour;
 
-        private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
+        private AllMergedColourSettingsManager _colourSettingsManager = new AllMergedColourSettingsManager();
         #endregion
 
         #region Properties
@@ -202,9 +203,9 @@ namespace Classes.Colours
         #region Methods
         public void SaveSettings(bool useConfirmDialog = false)
         {
-            _colourSettingsManager.ResetSettings(useConfirmDialog);
+            _colourSettingsManager.ResetToDefaults();
 
-            _colourSettingsManager.SaveColourSettings(useConfirmDialog);
+            _colourSettingsManager.SaveAllMergedColourSettings(useConfirmDialog);
 
             try
             {
@@ -212,7 +213,7 @@ namespace Classes.Colours
                 {
                     _colourSettingsManager.SetBaseColour(BaseColour);
 
-                    _colourSettingsManager.SetDarkestColour(DarkColour);
+                    _colourSettingsManager.SetDarkColour(DarkColour);
 
                     _colourSettingsManager.SetMediumColour(MiddleColour);
 
@@ -266,30 +267,30 @@ namespace Classes.Colours
 
                     _colourSettingsManager.SetRibbonTabTextColour(RibbonTabTextColour);
 
-                    _colourSettingsManager.SaveColourSettings(useConfirmDialog);
+                    _colourSettingsManager.SaveAllMergedColourSettings(useConfirmDialog);
                 }
                 else
                 {
                     DialogResult result = KryptonMessageBox.Show("One or more colours are not defined, use white & black?", "Non-Defined Colours", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 }
             }
-            catch (Exception error)
+            catch (Exception exc)
             {
-                ExceptionHandler.CaptureException(error, "Exception Caught", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ExceptionHandler.CaptureException(exc, icon: MessageBoxIcon.Error, methodSignature: Helpers.GetCurrentMethod());
             }
         }
 
         public static void KeepColoursBasic(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, bool saveSettings = true)
         {
             #region Assign variables
-            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+            AllMergedColourSettingsManager colourSettingsManager = new AllMergedColourSettingsManager();
             #endregion
 
             if (saveSettings)
             {
                 colourSettingsManager.SetBaseColour(baseColour);
 
-                colourSettingsManager.SetDarkestColour(darkColour);
+                colourSettingsManager.SetDarkColour(darkColour);
 
                 colourSettingsManager.SetMediumColour(middleColour);
 
@@ -297,7 +298,7 @@ namespace Classes.Colours
 
                 colourSettingsManager.SetLightestColour(lightestColour);
 
-                colourSettingsManager.SaveColourSettings();
+                colourSettingsManager.SaveAllMergedColourSettings();
             }
             else
             {
@@ -368,11 +369,11 @@ namespace Classes.Colours
         /// <param name="statusTextColour">The status text colour.</param>
         public static void CombineColourValues(Color baseColour, Color darkColour, Color middleColour, Color lightColour, Color lightestColour, Color borderColourPreview, Color alternativeNormalTextColourPreview, Color normalTextColourPreview, Color disabledTextColourPreview, Color focusedTextColourPreview, Color pressedTextColourPreview, Color disabledColourPreview, Color linkNormalColourPreview, Color linkHoverColourPreview, Color linkVisitedColourPreview, Color customColourOne, Color customColourTwo, Color customColourThree, Color customColourFour, Color customColourFive, Color customTextColourOne, Color customTextColourTwo, Color customTextColourThree, Color customTextColourFour, Color customTextColourFive, Color menuTextColour, Color statusTextColour)
         {
-            ColourSettingsManager colourSettingsManager = new ColourSettingsManager();
+            AllMergedColourSettingsManager colourSettingsManager = new AllMergedColourSettingsManager();
 
             colourSettingsManager.SetBaseColour(baseColour);
 
-            colourSettingsManager.SetDarkestColour(darkColour);
+            colourSettingsManager.SetDarkColour(darkColour);
 
             colourSettingsManager.SetMediumColour(middleColour);
 
@@ -424,7 +425,7 @@ namespace Classes.Colours
 
             colourSettingsManager.SetStatusStripTextColour(statusTextColour);
 
-            colourSettingsManager.SaveColourSettings();
+            colourSettingsManager.SaveAllMergedColourSettings();
         }
         #endregion
     }

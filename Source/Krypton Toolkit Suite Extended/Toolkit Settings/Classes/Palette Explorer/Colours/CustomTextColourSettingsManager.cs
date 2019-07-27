@@ -8,8 +8,12 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using Core.Classes;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ToolkitSettings.BackEnd;
 using ToolkitSettings.Settings.Palette_Explorer.Colours;
 
 namespace ToolkitSettings.Classes.PaletteExplorer.Colours
@@ -257,10 +261,10 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         }
 
         /// <summary>
-        /// Saves the XML file application updater settings.
+        /// Saves the custom text colour settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveXMLFileApplicationUpdaterSettings(bool alwaysUsePrompt = false)
+        public void SaveCustomTextColourSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {
@@ -276,6 +280,98 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
                 _customTextColourSettings.Save();
 
                 SetSettingsModified(false);
+            }
+        }
+
+        public static void WriteARGBColoursToFile(string colourConfigurationPath)
+        {
+
+        }
+
+        public static void WriteRGBColoursToFile(string colourConfigurationPath)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region Detection
+        public static bool AreCustomPaletteTextColoursEmpty()
+        {
+            CustomTextColourSettingsManager customPaletteTextColourManager = new CustomTextColourSettingsManager();
+
+            if (customPaletteTextColourManager.GetCustomTextColourOne() == Color.Empty || customPaletteTextColourManager.GetCustomTextColourTwo() == Color.Empty || customPaletteTextColourManager.GetCustomTextColourThree() == Color.Empty || customPaletteTextColourManager.GetCustomTextColourFour() == Color.Empty || customPaletteTextColourManager.GetCustomTextColourFive() == Color.Empty || customPaletteTextColourManager.GetCustomTextColourSix() == Color.Empty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region IO Methods
+        /// <summary>
+        /// Creates a ARGB colour configuration file.
+        /// </summary>
+        public static void CreateARGBConfigurationFile()
+        {
+            try
+            {
+                CommonSaveFileDialog csfd = new CommonSaveFileDialog();
+
+                csfd.Title = "Save Colours To:";
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Colour Configuration File", ".ccf"));
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Normal Text File", ".txt"));
+
+                csfd.DefaultFileName = $"Custom Colours Configuration File - { TranslationMethods.ReturnSafeFileNameDateTimeString() }";
+
+                csfd.AlwaysAppendDefaultExtension = true;
+
+                csfd.DefaultExtension = "ccf";
+
+                if (csfd.ShowDialog() == CommonFileDialogResult.Ok)
+                {
+                    WriteARGBColoursToFile(csfd.FileName);
+                }
+            }
+            catch (Exception exc)
+            {
+                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: '{ exc.Message }'", "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Creates a RGB colour configuration file.
+        /// </summary>
+        public static void CreateRGBConfigurationFile()
+        {
+            try
+            {
+                CommonSaveFileDialog csfd = new CommonSaveFileDialog();
+
+                csfd.Title = "Save Colours To:";
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Colour Configuration File", ".ccf"));
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Normal Text File", ".txt"));
+
+                csfd.DefaultFileName = $"Custom Colours Configuration File - { TranslationMethods.ReturnSafeFileNameDateTimeString() }";
+
+                csfd.AlwaysAppendDefaultExtension = true;
+
+                csfd.DefaultExtension = "ccf";
+
+                if (csfd.ShowDialog() == CommonFileDialogResult.Ok)
+                {
+                    WriteRGBColoursToFile(csfd.FileName);
+                }
+            }
+            catch (Exception exc)
+            {
+                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: '{ exc.Message }'", "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion

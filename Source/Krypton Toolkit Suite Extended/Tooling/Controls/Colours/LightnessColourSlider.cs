@@ -7,15 +7,16 @@
  */
 #endregion
 
-using Core.Enumerations;
-using Core.Interfaces;
-using Core.STRUCTS;
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using Core.Enumerations;
+using Core.Interfaces;
+using Core.STRUCTS;
 
 namespace Core.Controls.Colours
 {
+    [ToolboxItem(false)]
     public class LightnessColourSlider : ColourSlider, IColourEditor
     {
         #region Constants

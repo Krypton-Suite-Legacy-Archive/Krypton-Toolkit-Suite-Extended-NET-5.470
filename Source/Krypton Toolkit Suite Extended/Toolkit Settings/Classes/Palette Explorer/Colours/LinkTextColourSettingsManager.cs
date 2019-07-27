@@ -8,9 +8,13 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
+using Core.Classes;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using ToolkitSettings.Settings.PaletteExplorer.Colours;
+using ToolkitSettings.BackEnd;
+using ToolkitSettings.Settings.Palette_Explorer.Colours;
 
 namespace ToolkitSettings.Classes.PaletteExplorer.Colours
 {
@@ -109,6 +113,24 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
 
         #region Setters and Getters
         /// <summary>
+        /// Sets the value of LinkDisabledColour to value.
+        /// </summary>
+        /// <param name="value">The value of LinkDisabledColour.</param>
+        public void SetLinkDisabledColour(Color value)
+        {
+            _linkTextColourSettings.LinkDisabledColour = value;
+        }
+
+        /// <summary>
+        /// Returns the value of LinkDisabledColour.
+        /// </summary>
+        /// <returns>The value of LinkDisabledColour.</returns>
+        public Color GetLinkDisabledColour()
+        {
+            return _linkTextColourSettings.LinkDisabledColour;
+        }
+
+        /// <summary>
         /// Sets the value of LinkFocusedColour to colour.
         /// </summary>
         /// <param name="colour">The value of LinkFocusedColour.</param>
@@ -197,6 +219,8 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         {
             if (KryptonMessageBox.Show("WARNING! You are about to reset these settings back to their original state. This action cannot be undone!\nDo you want to proceed?", "Reset Settings", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
+                SetLinkDisabledColour(Color.Empty);
+
                 SetLinkFocusedColour(Color.Empty);
 
                 SetLinkHoverColour(Color.Empty);
@@ -213,10 +237,10 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
         }
 
         /// <summary>
-        /// Saves the XML file application updater settings.
+        /// Saves the link text colour settings.
         /// </summary>
         /// <param name="alwaysUsePrompt">if set to <c>true</c> [always use prompt].</param>
-        public void SaveXMLFileApplicationUpdaterSettings(bool alwaysUsePrompt = false)
+        public void SaveLinkTextColourSettings(bool alwaysUsePrompt = false)
         {
             if (alwaysUsePrompt)
             {
@@ -232,6 +256,98 @@ namespace ToolkitSettings.Classes.PaletteExplorer.Colours
                 _linkTextColourSettings.Save();
 
                 SetSettingsModified(false);
+            }
+        }
+
+        public static void WriteARGBColoursToFile(string colourConfigurationPath)
+        {
+
+        }
+
+        public static void WriteRGBColoursToFile(string colourConfigurationPath)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region Detection
+        public static bool AreLinkTextPaletteColoursEmpty()
+        {
+            LinkTextColourSettingsManager linkTextPaletteColourManager = new LinkTextColourSettingsManager();
+
+            if (linkTextPaletteColourManager.GetLinkNormalColour() == Color.Empty || linkTextPaletteColourManager.GetLinkFocusedColour() == Color.Empty || linkTextPaletteColourManager.GetLinkHoverColour() == Color.Empty || linkTextPaletteColourManager.GetLinkNormalColour() == Color.Empty || linkTextPaletteColourManager.GetLinkVisitedColour() == Color.Empty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region IO Methods
+        /// <summary>
+        /// Creates a ARGB colour configuration file.
+        /// </summary>
+        public static void CreateARGBConfigurationFile()
+        {
+            try
+            {
+                CommonSaveFileDialog csfd = new CommonSaveFileDialog();
+
+                csfd.Title = "Save Colours To:";
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Colour Configuration File", ".ccf"));
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Normal Text File", ".txt"));
+
+                csfd.DefaultFileName = $"Custom Colours Configuration File - { TranslationMethods.ReturnSafeFileNameDateTimeString() }";
+
+                csfd.AlwaysAppendDefaultExtension = true;
+
+                csfd.DefaultExtension = "ccf";
+
+                if (csfd.ShowDialog() == CommonFileDialogResult.Ok)
+                {
+                    WriteARGBColoursToFile(csfd.FileName);
+                }
+            }
+            catch (Exception exc)
+            {
+                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: '{ exc.Message }'", "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Creates a RGB colour configuration file.
+        /// </summary>
+        public static void CreateRGBConfigurationFile()
+        {
+            try
+            {
+                CommonSaveFileDialog csfd = new CommonSaveFileDialog();
+
+                csfd.Title = "Save Colours To:";
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Colour Configuration File", ".ccf"));
+
+                csfd.Filters.Add(new CommonFileDialogFilter("Normal Text File", ".txt"));
+
+                csfd.DefaultFileName = $"Custom Colours Configuration File - { TranslationMethods.ReturnSafeFileNameDateTimeString() }";
+
+                csfd.AlwaysAppendDefaultExtension = true;
+
+                csfd.DefaultExtension = "ccf";
+
+                if (csfd.ShowDialog() == CommonFileDialogResult.Ok)
+                {
+                    WriteRGBColoursToFile(csfd.FileName);
+                }
+            }
+            catch (Exception exc)
+            {
+                ExtendedKryptonMessageBox.Show($"An unexpected error has occurred: '{ exc.Message }'", "Unexpected Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion

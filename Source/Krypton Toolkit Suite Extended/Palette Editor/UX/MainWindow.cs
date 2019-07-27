@@ -11,7 +11,6 @@ using Classes.Colours;
 using ComponentFactory.Krypton.Toolkit;
 using Core.Classes.Other;
 using Core.Interfaces;
-using Core.Settings.Classes;
 using Core.UX;
 using KryptonExtendedToolkit.Base.Code;
 using System;
@@ -20,6 +19,8 @@ using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.Global;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace PaletteEditor.UX
 {
@@ -36,7 +37,7 @@ namespace PaletteEditor.UX
 
         private ConversionMethods _conversionMethods = new ConversionMethods();
 
-        private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
+        private AllMergedColourSettingsManager _colourSettingsManager = new AllMergedColourSettingsManager();
 
         private Classes.GlobalMethods _globalMethods = new Classes.GlobalMethods();
 
@@ -79,7 +80,7 @@ namespace PaletteEditor.UX
 
             _colourUpdateTimer.Tick += new EventHandler(ColourUpdateTimer_Tick);
 
-            DebugMode = _globalBooleanSettingsManager.GetDevelopmentMode();
+            DebugMode = _globalBooleanSettingsManager.GetIsInDeveloperMode();
 
             UseCircularPictureBoxes = _globalBooleanSettingsManager.GetUseCircularPictureBoxes();
 
@@ -331,7 +332,7 @@ namespace PaletteEditor.UX
 
             ColourUtilities.PropagateBasePaletteModes(kcmbBasePaletteMode);
 
-            _colourSettingsManager.ResetSettings(DebugMode);
+            _colourSettingsManager.ResetToDefaults();
 
             if (UseCircularPictureBoxes)
             {
@@ -1152,7 +1153,7 @@ namespace PaletteEditor.UX
 
         private void factoryResetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _colourSettingsManager.ResetSettings(DebugMode);
+            _colourSettingsManager.ResetToDefaults();
         }
 
         private void GrabPaletteColours(bool useCircularPictureBoxes)

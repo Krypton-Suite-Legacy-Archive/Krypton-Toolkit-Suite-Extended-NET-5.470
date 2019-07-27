@@ -9,10 +9,10 @@
 
 using ComponentFactory.Krypton.Toolkit;
 using Core.Interfaces.Theming;
-using Core.Settings.Classes;
 using System;
 using System.Collections;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.PaletteExplorer;
 
 namespace Core.Classes.Options.Theming
 {

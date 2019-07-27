@@ -7,15 +7,16 @@
  */
 #endregion
 
-using Core.Classes.Colours;
-using Core.Enumerations;
-using Core.STRUCTS;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using Core.Classes.Colours;
+using Core.Enumerations;
+using Core.STRUCTS;
 
 namespace Core.Controls.Colours
 {
+    [ToolboxItem(false)]
     public class HueColourSlider : ColourSlider
     {
         #region Constructors

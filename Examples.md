@@ -51,3 +51,15 @@
 ## Krypton View Bar
 
 ![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonViewBar.png)
+
+## Floatable ToolStrip
+
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/FloatableToolStrip.png)
+
+## Floatable MenuStrip
+
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/FlotableMenuStrip.png)
+
+## TreeViews
+
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/TreeViews.png)

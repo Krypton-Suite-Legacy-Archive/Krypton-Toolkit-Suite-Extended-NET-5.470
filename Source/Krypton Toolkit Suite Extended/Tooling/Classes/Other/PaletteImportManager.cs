@@ -10,10 +10,11 @@
 using Classes.Colours;
 using ComponentFactory.Krypton.Toolkit;
 using Core.Enumerations;
-using Core.Settings.Classes;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ToolkitSettings.Classes.Global;
+using ToolkitSettings.Classes.PaletteExplorer.Colours;
 
 namespace Core.Classes.Other
 {
@@ -22,7 +23,7 @@ namespace Core.Classes.Other
         #region Variables
         private KryptonPalette _palette;
 
-        private ColourSettingsManager _colourSettingsManager = new ColourSettingsManager();
+        private AllMergedColourSettingsManager _colourSettingsManager = new AllMergedColourSettingsManager();
 
         private GlobalStringSettingsManager _globalStringSettingsManager = new GlobalStringSettingsManager();
         #endregion
@@ -45,7 +46,7 @@ namespace Core.Classes.Other
 
                 _colourSettingsManager.SetBaseColour(palette.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color1);
 
-                _colourSettingsManager.SetDarkestColour(palette.ButtonStyles.ButtonCluster.StatePressed.Back.Color1);
+                _colourSettingsManager.SetDarkColour(palette.ButtonStyles.ButtonCluster.StatePressed.Back.Color1);
 
                 _colourSettingsManager.SetMediumColour(palette.ButtonStyles.ButtonCluster.StateNormal.Back.Color1);
 
@@ -79,7 +80,7 @@ namespace Core.Classes.Other
 
                 _colourSettingsManager.SetStatusStripTextColour(palette.ToolMenuStatus.StatusStrip.StatusStripText);
 
-                _colourSettingsManager.SaveColourSettings();
+                _colourSettingsManager.SaveAllMergedColourSettings();
 
                 _globalStringSettingsManager.SetBasePaletteMode(palette.BasePaletteMode.ToString());
 
@@ -107,7 +108,7 @@ namespace Core.Classes.Other
 
                 _colourSettingsManager.SetBaseColour(_palette.ButtonStyles.ButtonCommon.OverrideDefault.Back.Color1);
 
-                _colourSettingsManager.SetDarkestColour(_palette.ButtonStyles.ButtonCluster.StatePressed.Back.Color1);
+                _colourSettingsManager.SetDarkColour(_palette.ButtonStyles.ButtonCluster.StatePressed.Back.Color1);
 
                 _colourSettingsManager.SetMediumColour(_palette.ButtonStyles.ButtonCluster.StateNormal.Back.Color1);
 
@@ -137,7 +138,7 @@ namespace Core.Classes.Other
 
                 _colourSettingsManager.SetStatusStripTextColour(_palette.ToolMenuStatus.StatusStrip.StatusStripText);
 
-                _colourSettingsManager.SaveColourSettings();
+                _colourSettingsManager.SaveAllMergedColourSettings();
 
                 _globalStringSettingsManager.SetBasePaletteMode(_palette.BasePaletteMode.ToString());
 
@@ -147,7 +148,7 @@ namespace Core.Classes.Other
             }
             catch (Exception exc)
             {
-                KryptonMessageBox.Show($"Error: { exc.Message }", "_palette Import Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ExtendedKryptonMessageBox.Show($"Error: { exc.Message }", "_palette Import Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 _globalStringSettingsManager.SetFeedbackText("Failed to import colours!");
 
