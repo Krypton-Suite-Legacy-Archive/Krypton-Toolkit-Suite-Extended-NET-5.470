@@ -123,6 +123,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Structures\HSLColour.cs" />
+    <Compile Include="UX\ColourGridWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UX\ColourPickerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +156,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\ColourGridWindow.resx">
+      <DependentUpon>ColourGridWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX\ColourPickerDialog.resx">
       <DependentUpon>ColourPickerDialog.cs</DependentUpon>

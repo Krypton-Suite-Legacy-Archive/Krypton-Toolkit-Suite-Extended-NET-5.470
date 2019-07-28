@@ -296,6 +296,20 @@ namespace ExtendedColourControls
                     return Color.FromArgb(alpha, iMax, iMid, iMin);
             }
         }
+
+        /// <summary>
+        /// Colours from hexadecimal.
+        /// </summary>
+        /// <param name="hexValue">The hexadecimal value.</param>
+        /// <returns></returns>
+        public static Color ColourFromHexadecimal(string hexValue) => ColorTranslator.FromHtml(hexValue);
+
+        /// <summary>
+        /// Colours to hexadecimal.
+        /// </summary>
+        /// <param name="colour">The colour.</param>
+        /// <returns></returns>
+        public static string ColourToHexadecimal(Color colour) => ColorTranslator.ToHtml(colour);
         #endregion
     }
 }
