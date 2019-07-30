@@ -67,6 +67,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tooling\Core.csproj">
+      <Project>{EFB997FB-1E05-444B-BA02-16C004E1A111}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Toolkit Settings\Toolkit Settings.csproj">
       <Project>{EA6E7878-FCCB-416C-8FE1-E626D478A7A7}</Project>
       <Name>Toolkit Settings</Name>

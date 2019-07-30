@@ -9,7 +9,7 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace Common
 {
-    internal class ExceptionHandler
+    public class ExceptionHandler
     {
         #region Constructors
         /// <summary>

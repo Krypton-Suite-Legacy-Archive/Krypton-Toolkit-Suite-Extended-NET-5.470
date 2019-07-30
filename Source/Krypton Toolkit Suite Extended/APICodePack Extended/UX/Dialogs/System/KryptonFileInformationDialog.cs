@@ -1,7 +1,13 @@
 ﻿using System;
 using System.ComponentModel;
+using System.IO;
+using System.Security.Cryptography;
 using System.Windows.Forms;
+using APICodePackExtended;
+using Common;
+using Common.Classes;
 using ComponentFactory.Krypton.Toolkit;
+using Microsoft.WindowsAPICodePack.Taskbar;
 using ToolkitSettings.Classes.Global;
 
 namespace KryptonAPICodePackExtendedDialogs
@@ -1140,7 +1146,7 @@ namespace KryptonAPICodePackExtendedDialogs
         private GlobalStringSettingsManager _globalStringSettingsManager = new GlobalStringSettingsManager();
         #endregion
 
-        #region Properties        
+        #region Properties
         /// <summary>
         /// Gets or sets the file path.
         /// </summary>
@@ -1172,7 +1178,7 @@ namespace KryptonAPICodePackExtendedDialogs
         #region Event Handlers
         private void KryptonFileInformationDialog_Load(object sender, EventArgs e)
         {
-
+            InitialiseWindow(FilePath);
         }
 
         private void KcmbHashType1_SelectedIndexChanged(object sender, EventArgs e)
@@ -1222,12 +1228,16 @@ namespace KryptonAPICodePackExtendedDialogs
 
         private void KbtnOk_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.OK;
 
+            Hide();
         }
 
         private void KbtnCancel_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
 
+            Close();
         }
 
         private void CutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1252,92 +1262,372 @@ namespace KryptonAPICodePackExtendedDialogs
 
         private void BgwMD5_DoWork(object sender, DoWorkEventArgs e)
         {
+            string filePath = e.Argument.ToString();
 
+            byte[] buffer;
+
+            int bytesRead;
+
+            long fileLength, totalBytesToRead = 0;
+
+            using (Stream fileStream = File.OpenRead(filePath))
+            {
+                fileLength = fileStream.Length;
+
+                using (HashAlgorithm md5 = MD5.Create())
+                {
+                    do
+                    {
+                        buffer = new byte[4096];
+
+                        bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+
+                        totalBytesToRead += bytesRead;
+
+                        md5.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                        bgwMD5.ReportProgress((int)((double)totalBytesToRead / fileLength * 100));
+                    } while (bytesRead != 0);
+
+                    md5.TransformFinalBlock(buffer, 0, 0);
+
+                    e.Result = HashingHelper.BuildFileHash(md5.Hash, 32);
+                }
+            }
         }
 
-        private void BgwMD5_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-
-        }
+        private void BgwMD5_ProgressChanged(object sender, ProgressChangedEventArgs e) => WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
 
         private void BgwMD5_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            klblRealFileHash.Text = e.Result.ToString();
 
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
+
+            bgwMD5.Dispose();
         }
 
         private void BgwSHA1_DoWork(object sender, DoWorkEventArgs e)
         {
+            string filePath = e.Argument.ToString();
 
+            byte[] buffer;
+
+            int bytesRead;
+
+            long fileLength, totalBytesToRead = 0;
+
+            using (Stream fileStream = File.OpenRead(filePath))
+            {
+                fileLength = fileStream.Length;
+
+                using (HashAlgorithm sha1 = SHA1.Create())
+                {
+                    do
+                    {
+                        buffer = new byte[4096];
+
+                        bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+
+                        totalBytesToRead += bytesRead;
+
+                        sha1.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                        bgwSHA1.ReportProgress((int)((double)totalBytesToRead / fileLength * 100));
+                    } while (bytesRead != 0);
+
+                    sha1.TransformFinalBlock(buffer, 0, 0);
+
+                    e.Result = HashingHelper.BuildFileHash(sha1.Hash, 40);
+                }
+            }
         }
 
-        private void BgwSHA1_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-
-        }
+        private void BgwSHA1_ProgressChanged(object sender, ProgressChangedEventArgs e) => WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
 
         private void BgwSHA1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            klblRealFileHash.Text = e.Result.ToString();
 
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
+
+            bgwSHA1.Dispose();
         }
 
         private void BgwSHA256_DoWork(object sender, DoWorkEventArgs e)
         {
+            string filePath = e.Argument.ToString();
 
+            byte[] buffer;
+
+            int bytesRead;
+
+            long fileLength, totalBytesToRead = 0;
+
+            using (Stream fileStream = File.OpenRead(filePath))
+            {
+                fileLength = fileStream.Length;
+
+                using (HashAlgorithm sha256 = SHA256.Create())
+                {
+                    do
+                    {
+                        buffer = new byte[4096];
+
+                        bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+
+                        totalBytesToRead += bytesRead;
+
+                        sha256.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                        bgwSHA256.ReportProgress((int)((double)totalBytesToRead / fileLength * 100));
+                    } while (bytesRead != 0);
+
+                    sha256.TransformFinalBlock(buffer, 0, 0);
+
+                    e.Result = HashingHelper.BuildFileHash(sha256.Hash, 40);
+                }
+            }
         }
 
-        private void BgwSHA256_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-
-        }
+        private void BgwSHA256_ProgressChanged(object sender, ProgressChangedEventArgs e) => WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
 
         private void BgwSHA256_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            klblRealFileHash.Text = e.Result.ToString();
 
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
+
+            bgwSHA256.Dispose();
         }
 
         private void BgwSHA384_DoWork(object sender, DoWorkEventArgs e)
         {
+            string filePath = e.Argument.ToString();
 
+            byte[] buffer;
+
+            int bytesRead;
+
+            long fileLength, totalBytesToRead = 0;
+
+            using (Stream fileStream = File.OpenRead(filePath))
+            {
+                fileLength = fileStream.Length;
+
+                using (HashAlgorithm sha384 = SHA384.Create())
+                {
+                    do
+                    {
+                        buffer = new byte[4096];
+
+                        bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+
+                        totalBytesToRead += bytesRead;
+
+                        sha384.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                        bgwSHA384.ReportProgress((int)((double)totalBytesToRead / fileLength * 100));
+                    } while (bytesRead != 0);
+
+                    sha384.TransformFinalBlock(buffer, 0, 0);
+
+                    e.Result = HashingHelper.BuildFileHash(sha384.Hash, 96);
+                }
+            }
         }
 
-        private void BgwSHA384_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-
-        }
+        private void BgwSHA384_ProgressChanged(object sender, ProgressChangedEventArgs e) => WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
 
         private void BgwSHA384_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            klblRealFileHash.Text = e.Result.ToString();
 
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
+
+            bgwSHA384.Dispose();
         }
 
         private void BgwSHA512_DoWork(object sender, DoWorkEventArgs e)
         {
+            string filePath = e.Argument.ToString();
 
+            byte[] buffer;
+
+            int bytesRead;
+
+            long fileLength, totalBytesToRead = 0;
+
+            using (Stream fileStream = File.OpenRead(filePath))
+            {
+                fileLength = fileStream.Length;
+
+                using (HashAlgorithm sha512 = SHA512.Create())
+                {
+                    do
+                    {
+                        buffer = new byte[4096];
+
+                        bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+
+                        totalBytesToRead += bytesRead;
+
+                        sha512.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                        bgwSHA512.ReportProgress((int)((double)totalBytesToRead / fileLength * 100));
+                    } while (bytesRead != 0);
+
+                    sha512.TransformFinalBlock(buffer, 0, 0);
+
+                    e.Result = HashingHelper.BuildFileHash(sha512.Hash, 128);
+                }
+            }
         }
 
-        private void BgwSHA512_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-
-        }
+        private void BgwSHA512_ProgressChanged(object sender, ProgressChangedEventArgs e) => WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
 
         private void BgwSHA512_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            klblRealFileHash.Text = e.Result.ToString();
 
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
+
+            bgwSHA512.Dispose();
         }
 
         private void BgwRIPEMD160_DoWork(object sender, DoWorkEventArgs e)
         {
+            string filePath = e.Argument.ToString();
 
+            byte[] buffer;
+
+            int bytesRead;
+
+            long fileLength, totalBytesToRead = 0;
+
+            using (Stream fileStream = File.OpenRead(filePath))
+            {
+                fileLength = fileStream.Length;
+
+                using (HashAlgorithm ripemd160 = RIPEMD160.Create())
+                {
+                    do
+                    {
+                        buffer = new byte[4096];
+
+                        bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+
+                        totalBytesToRead += bytesRead;
+
+                        ripemd160.TransformBlock(buffer, 0, bytesRead, null, 0);
+
+                        bgwRIPEMD160.ReportProgress((int)((double)totalBytesToRead / fileLength * 100));
+                    } while (bytesRead != 0);
+
+                    ripemd160.TransformFinalBlock(buffer, 0, 0);
+
+                    e.Result = HashingHelper.BuildFileHash(ripemd160.Hash, 40);
+                }
+            }
         }
 
-        private void BgwRIPEMD160_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-
-        }
+        private void BgwRIPEMD160_ProgressChanged(object sender, ProgressChangedEventArgs e) => WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, e.ProgressPercentage);
 
         private void BgwRIPEMD160_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            klblRealFileHash.Text = e.Result.ToString();
 
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.NoProgress, 0);
+
+            bgwRIPEMD160.Dispose();
+        }
+        #endregion
+
+        #region Methods
+        private void InitialiseWindow(string filePath)
+        {
+            HashingHelper.PropagateHashInput(kcmbHashType1);
+
+            HashingHelper.PropagateHashInput(kcmbValidatedHashType);
+
+            UpdateWindowTitle(filePath);
+
+            ktbFileName.Text = Path.GetFileName(filePath);
+
+            GetFileInformation(filePath);
+
+            UpdateWindowIcon(filePath);
+        }
+
+        /// <summary>
+        /// Updates the window icon.
+        /// </summary>
+        /// <param name="filePath">The file path.</param>
+        private void UpdateWindowIcon(string filePath)
+        {
+            Icon = IconExtractor.ExtractIconFromFile(filePath);
+
+            pbxFileIcon.Image = IconExtractor.ExtractIcon(filePath);
+        }
+
+        /// <summary>
+        /// Gets the file information.
+        /// </summary>
+        /// <param name="filePath">The file path.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        private void GetFileInformation(string filePath)
+        {
+            try
+            {
+                if (filePath == string.Empty) throw new ArgumentNullException();
+
+                FileInfo fileInfo = new FileInfo(filePath);
+
+                klblFileType.Text = $"Type of file: *{ Path.GetExtension(filePath) }";
+
+                klblFileLocation.Text = $"Location: { Path.GetFullPath(filePath) }";
+
+                klblFileSize.Text = $"Size: { FileUtilities.GetReadableFileSize(fileInfo.Length) } ({ fileInfo.Length.ToString() } bytes)";
+
+                klblSizeOnDisk.Text = $"Size on disk: { FileUtilities.GetReadableFileSize(FileUtilities.GetFileSizeOnDisk(filePath)) }";
+
+                klblCreated.Text = $"Created: { GetDateTimeAsString(fileInfo.CreationTime) }";
+
+                klblAccessed.Text = $"Accessed: { GetDateTimeAsString(fileInfo.LastAccessTime) }";
+
+                klblModified.Text = $"Modified: { GetDateTimeAsString(fileInfo.LastWriteTime) }";
+            }
+            catch (Exception exc)
+            {
+                ExceptionHandler.CaptureException(exc);
+            }
+        }
+
+        /// <summary>
+        /// Updates the window title.
+        /// </summary>
+        /// <param name="filePath">The file path.</param>
+        /// <param name="showExtension">if set to <c>true</c> [show extension].</param>
+        private void UpdateWindowTitle(string filePath, bool showExtension = false)
+        {
+            if (showExtension)
+            {
+                Text = $"{ Path.GetFileName(filePath) } Properties";
+            }
+            else
+            {
+                Text = $"{ Path.GetFileNameWithoutExtension(filePath) } Properties";
+            }
+        }
+
+        /// <summary>
+        /// Gets the date time as string.
+        /// </summary>
+        /// <param name="dateTime">The date time.</param>
+        /// <returns></returns>
+        private static string GetDateTimeAsString(DateTime dateTime)
+        {
+            return $"{ dateTime.DayOfWeek.ToString() }, { dateTime.ToLongDateString() }, { dateTime.ToLongTimeString() }";
         }
         #endregion
     }

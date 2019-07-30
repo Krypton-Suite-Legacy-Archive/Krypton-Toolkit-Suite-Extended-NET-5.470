@@ -43,10 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Enumerations\Enumerations.cs" />
     <Compile Include="Classes\ExceptionHandler.cs" />
     <Compile Include="Classes\Helpers\HashingHelper.cs" />
     <Compile Include="Classes\IconExtractor.cs" />
     <Compile Include="Classes\Internal\InternalExtendedKryptonMessageBox.cs" />
+    <Compile Include="Classes\IO\FileUtilities.cs" />
     <Compile Include="Classes\PaletteColourDefinitions.cs" />
     <Compile Include="Classes\PI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,5 +77,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
