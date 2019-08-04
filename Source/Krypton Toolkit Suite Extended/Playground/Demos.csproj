@@ -349,6 +349,9 @@
     <None Include="Resources\KR 48 x 48 Orange.ico" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Cyotek.Windows.Forms.ColorPicker">
+      <Version>1.7.2</Version>
+    </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470">
       <Version>5.470.1231</Version>
     </PackageReference>

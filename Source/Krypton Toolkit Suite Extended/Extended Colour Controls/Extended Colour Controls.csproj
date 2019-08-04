@@ -55,6 +55,8 @@
     <Compile Include="Classes\ColourCollectionEventArgs.cs" />
     <Compile Include="Classes\ColourCollection.cs" />
     <Compile Include="Classes\ColourExtensions.cs" />
+    <Compile Include="Classes\Helpers.cs" />
+    <Compile Include="Classes\PI.cs" />
     <Compile Include="Controls\Components\KryptonColourButtonExtended.cs" />
     <Compile Include="Controls\User Controls\ColourEditor.cs">
       <SubType>UserControl</SubType>
@@ -121,7 +123,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Structures\HSLColour.cs" />
+    <Compile Include="UX\ColourGridWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UX\ColourPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\KryptonColourButtonCustomColourDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Values\ColourButtonValues.cs" />
@@ -149,8 +157,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UX\ColourGridWindow.resx">
+      <DependentUpon>ColourGridWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UX\ColourPickerDialog.resx">
       <DependentUpon>ColourPickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\KryptonColourButtonCustomColourDialog.resx">
+      <DependentUpon>KryptonColourButtonCustomColourDialog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -177,10 +191,6 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
       <Name>Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Extended Dialogs\Extended Dialogs.csproj">
-      <Project>{222c7d90-9d2a-4736-b58d-80af566ba167}</Project>
-      <Name>Extended Dialogs</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

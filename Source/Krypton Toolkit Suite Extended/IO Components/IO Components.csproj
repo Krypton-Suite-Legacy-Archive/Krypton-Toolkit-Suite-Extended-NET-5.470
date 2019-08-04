@@ -56,9 +56,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj">
+    <ProjectReference Include="..\Core\Extended Toolkit Core.csproj">
       <Project>{5f28100d-c9a0-4361-b780-7ac132a421df}</Project>
-      <Name>Core</Name>
+      <Name>Extended Toolkit Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

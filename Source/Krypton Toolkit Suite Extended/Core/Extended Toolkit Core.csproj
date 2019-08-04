@@ -50,6 +50,7 @@
     </Compile>
     <Compile Include="Classes\ColourHandler.cs" />
     <Compile Include="Classes\Drawing\DrawingMethods.cs" />
+    <Compile Include="Classes\Drawing\RoundedRectangleF.cs" />
     <Compile Include="Classes\KryptonMessageBoxExtended.cs" />
     <Compile Include="Classes\PI.cs" />
     <Compile Include="Classes\ScrollBars\ScrollBarExtendedRenderer.cs" />
@@ -78,6 +79,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Break Out\KryptonTreeViewShell.cs" />
+    <Compile Include="Components\KryptonToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Components\List View\ListViewColumnSorter.cs" />
     <Compile Include="Components\List View\ListViewItemComparer.cs" />
     <Compile Include="Components\List View\ListViewPrint.cs">

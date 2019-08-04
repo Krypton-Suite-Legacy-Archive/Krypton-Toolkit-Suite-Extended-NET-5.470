@@ -123,9 +123,9 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.klblFileType = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ktbFileName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.pbxFileIcon = new System.Windows.Forms.PictureBox();
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kbtnImportHash = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnValidate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.ktxtValidate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.ctxHashMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -170,7 +170,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.bgwSHA384 = new System.ComponentModel.BackgroundWorker();
             this.bgwSHA512 = new System.ComponentModel.BackgroundWorker();
             this.bgwRIPEMD160 = new System.ComponentModel.BackgroundWorker();
-            this.kbtnImportHash = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.pbxFileIcon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -179,7 +179,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
             this.kryptonPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxFileIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
             this.kryptonPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
@@ -199,6 +198,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).BeginInit();
             this.kryptonGroupBox3.Panel.SuspendLayout();
             this.kryptonGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFileIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -264,7 +264,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonPage1,
             this.kryptonPage2,
             this.kpFileAttributes});
-            this.kryptonNavigator1.SelectedIndex = 1;
+            this.kryptonNavigator1.SelectedIndex = 2;
             this.kryptonNavigator1.Size = new System.Drawing.Size(692, 675);
             this.kryptonNavigator1.StateCommon.Tab.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonNavigator1.StateCommon.Tab.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -396,17 +396,8 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.ktbFileName.Name = "ktbFileName";
             this.ktbFileName.Size = new System.Drawing.Size(580, 27);
             this.ktbFileName.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktbFileName.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
             this.ktbFileName.TabIndex = 1;
-            // 
-            // pbxFileIcon
-            // 
-            this.pbxFileIcon.BackColor = System.Drawing.Color.Transparent;
-            this.pbxFileIcon.Location = new System.Drawing.Point(20, 14);
-            this.pbxFileIcon.Name = "pbxFileIcon";
-            this.pbxFileIcon.Size = new System.Drawing.Size(64, 64);
-            this.pbxFileIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbxFileIcon.TabIndex = 0;
-            this.pbxFileIcon.TabStop = false;
             // 
             // kryptonPage2
             // 
@@ -440,6 +431,18 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonGroupBox2.TabIndex = 1;
             this.kryptonGroupBox2.Values.Heading = "Validate Checksum";
             // 
+            // kbtnImportHash
+            // 
+            this.kbtnImportHash.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.kbtnImportHash.Location = new System.Drawing.Point(328, 156);
+            this.kbtnImportHash.Name = "kbtnImportHash";
+            this.kbtnImportHash.Size = new System.Drawing.Size(139, 29);
+            this.kbtnImportHash.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnImportHash.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnImportHash.TabIndex = 15;
+            this.kbtnImportHash.Values.Text = "&Import Hash";
+            this.kbtnImportHash.Click += new System.EventHandler(this.KbtnImportHash_Click);
+            // 
             // kbtnValidate
             // 
             this.kbtnValidate.Enabled = false;
@@ -459,6 +462,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.ktxtValidate.Name = "ktxtValidate";
             this.ktxtValidate.Size = new System.Drawing.Size(614, 35);
             this.ktxtValidate.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktxtValidate.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
             this.ktxtValidate.TabIndex = 9;
             this.ktxtValidate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ktxtValidate.TextChanged += new System.EventHandler(this.KtxtValidate_TextChanged);
@@ -523,10 +527,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             // kcmbValidatedHashType
             // 
             this.kcmbValidatedHashType.DropDownWidth = 220;
+            this.kcmbValidatedHashType.IntegralHeight = false;
             this.kcmbValidatedHashType.Location = new System.Drawing.Point(109, 29);
             this.kcmbValidatedHashType.Name = "kcmbValidatedHashType";
             this.kcmbValidatedHashType.Size = new System.Drawing.Size(132, 25);
             this.kcmbValidatedHashType.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbValidatedHashType.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kcmbValidatedHashType.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbValidatedHashType.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbValidatedHashType.TabIndex = 8;
@@ -589,10 +595,12 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             // 
             this.kcmbHashType1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kcmbHashType1.DropDownWidth = 220;
+            this.kcmbHashType1.IntegralHeight = false;
             this.kcmbHashType1.Location = new System.Drawing.Point(109, 19);
             this.kcmbHashType1.Name = "kcmbHashType1";
             this.kcmbHashType1.Size = new System.Drawing.Size(132, 25);
             this.kcmbHashType1.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbHashType1.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kcmbHashType1.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbHashType1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbHashType1.TabIndex = 6;
@@ -913,17 +921,15 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.bgwRIPEMD160.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BgwRIPEMD160_ProgressChanged);
             this.bgwRIPEMD160.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BgwRIPEMD160_RunWorkerCompleted);
             // 
-            // kbtnImportHash
+            // pbxFileIcon
             // 
-            this.kbtnImportHash.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.kbtnImportHash.Location = new System.Drawing.Point(328, 156);
-            this.kbtnImportHash.Name = "kbtnImportHash";
-            this.kbtnImportHash.Size = new System.Drawing.Size(139, 29);
-            this.kbtnImportHash.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnImportHash.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnImportHash.TabIndex = 15;
-            this.kbtnImportHash.Values.Text = "&Import Hash";
-            this.kbtnImportHash.Click += new System.EventHandler(this.KbtnImportHash_Click);
+            this.pbxFileIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pbxFileIcon.Location = new System.Drawing.Point(20, 14);
+            this.pbxFileIcon.Name = "pbxFileIcon";
+            this.pbxFileIcon.Size = new System.Drawing.Size(64, 64);
+            this.pbxFileIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbxFileIcon.TabIndex = 0;
+            this.pbxFileIcon.TabStop = false;
             // 
             // KryptonFileInformationDialog
             // 
@@ -946,7 +952,6 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).EndInit();
             this.kryptonPage1.ResumeLayout(false);
             this.kryptonPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxFileIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
             this.kryptonPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
@@ -969,6 +974,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonGroupBox3.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).EndInit();
             this.kryptonGroupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFileIcon)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -11,11 +11,15 @@ namespace Playground
     {
         private ExtendedControls.ExtendedToolkit.Controls.KryptonColourButtonExtended kryptonColourButtonExtended1;
         private ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox cpbResult;
+        private ExtendedColourControls.KryptonColourButtonExtended kryptonColourButtonExtended2;
+        private Cyotek.Windows.Forms.ColorGrid colorGrid1;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
         {
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonColourButtonExtended2 = new ExtendedColourControls.KryptonColourButtonExtended();
+            this.colorGrid1 = new Cyotek.Windows.Forms.ColorGrid();
             this.cpbResult = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.kryptonColourButtonExtended1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonColourButtonExtended();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -25,13 +29,31 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.colorGrid1);
+            this.kryptonPanel1.Controls.Add(this.kryptonColourButtonExtended2);
             this.kryptonPanel1.Controls.Add(this.cpbResult);
             this.kryptonPanel1.Controls.Add(this.kryptonColourButtonExtended1);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(475, 164);
+            this.kryptonPanel1.Size = new System.Drawing.Size(475, 161);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kryptonColourButtonExtended2
+            // 
+            this.kryptonColourButtonExtended2.Location = new System.Drawing.Point(12, 78);
+            this.kryptonColourButtonExtended2.Name = "kryptonColourButtonExtended2";
+            this.kryptonColourButtonExtended2.Size = new System.Drawing.Size(275, 25);
+            this.kryptonColourButtonExtended2.TabIndex = 1;
+            this.kryptonColourButtonExtended2.Values.Text = "kryptonColourButtonExtended2";
+            // 
+            // colorGrid1
+            // 
+            this.colorGrid1.Location = new System.Drawing.Point(12, 118);
+            this.colorGrid1.Name = "colorGrid1";
+            this.colorGrid1.Size = new System.Drawing.Size(247, 165);
+            this.colorGrid1.TabIndex = 1;
+            this.colorGrid1.Visible = false;
             // 
             // cpbResult
             // 
@@ -53,11 +75,12 @@ namespace Playground
             // 
             // KryptonColourButtonExtendedTest
             // 
-            this.ClientSize = new System.Drawing.Size(475, 164);
+            this.ClientSize = new System.Drawing.Size(475, 161);
             this.Controls.Add(this.kryptonPanel1);
             this.Name = "KryptonColourButtonExtendedTest";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
+            this.kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cpbResult)).EndInit();
             this.ResumeLayout(false);
 

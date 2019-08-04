@@ -168,7 +168,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Application
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{A4766F6B-D724-49F3-9ED9-F24640D0F7CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{5F28100D-C9A0-4361-B780-7AC132A421DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extended Toolkit Core", "Core\Extended Toolkit Core.csproj", "{5F28100D-C9A0-4361-B780-7AC132A421DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm Animation Extended", "WinForm Animation Extended\WinForm Animation Extended.csproj", "{5FB8D2C2-A56F-43F7-9B83-6780872C38DB}"
 EndProject
