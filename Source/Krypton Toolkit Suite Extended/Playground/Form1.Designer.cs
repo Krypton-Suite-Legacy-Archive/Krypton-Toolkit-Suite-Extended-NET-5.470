@@ -124,8 +124,6 @@ namespace Playground
             this.flashingLabel1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.FlashingLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.kryptonTextBoxExtended1 = new KryptonToolkitSuiteExtendedCore.KryptonTextBoxExtended();
-            this.kryptonButtonExtended1 = new KryptonToolkitSuiteExtendedCore.KryptonButtonExtended();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -498,8 +496,6 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.kryptonButtonExtended1);
-            this.kryptonPanel1.Controls.Add(this.kryptonTextBoxExtended1);
             this.kryptonPanel1.Controls.Add(this.kryptonTextBox1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton21);
@@ -949,43 +945,6 @@ namespace Playground
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // kryptonTextBoxExtended1
-            // 
-            this.kryptonTextBoxExtended1.BackgroundColour = System.Drawing.Color.White;
-            this.kryptonTextBoxExtended1.Location = new System.Drawing.Point(23, 419);
-            this.kryptonTextBoxExtended1.Name = "kryptonTextBoxExtended1";
-            this.kryptonTextBoxExtended1.Size = new System.Drawing.Size(559, 37);
-            this.kryptonTextBoxExtended1.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBoxExtended1.StateCommon.Content.Color1 = System.Drawing.SystemColors.ControlText;
-            this.kryptonTextBoxExtended1.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBoxExtended1.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
-            this.kryptonTextBoxExtended1.TabIndex = 4;
-            this.kryptonTextBoxExtended1.Text = "hhhhhhhhh";
-            this.kryptonTextBoxExtended1.TextColour = System.Drawing.SystemColors.ControlText;
-            this.kryptonTextBoxExtended1.Typeface = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // kryptonButtonExtended1
-            // 
-            this.kryptonButtonExtended1.BackGroundColourOne = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.kryptonButtonExtended1.BackGroundColourTwo = System.Drawing.Color.Yellow;
-            this.kryptonButtonExtended1.Image = null;
-            this.kryptonButtonExtended1.Location = new System.Drawing.Point(599, 419);
-            this.kryptonButtonExtended1.Name = "kryptonButtonExtended1";
-            this.kryptonButtonExtended1.Size = new System.Drawing.Size(297, 37);
-            this.kryptonButtonExtended1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.kryptonButtonExtended1.StateCommon.Back.Color2 = System.Drawing.Color.Yellow;
-            this.kryptonButtonExtended1.StateCommon.Content.LongText.Color1 = System.Drawing.Color.Red;
-            this.kryptonButtonExtended1.StateCommon.Content.LongText.Color2 = System.Drawing.Color.Yellow;
-            this.kryptonButtonExtended1.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButtonExtended1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Red;
-            this.kryptonButtonExtended1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Yellow;
-            this.kryptonButtonExtended1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButtonExtended1.TabIndex = 4;
-            this.kryptonButtonExtended1.TextColourOne = System.Drawing.Color.Red;
-            this.kryptonButtonExtended1.TextColourTwo = System.Drawing.Color.Yellow;
-            this.kryptonButtonExtended1.Typeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButtonExtended1.Values.Text = "kryptonButtonExtended1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1120,8 +1079,6 @@ namespace Playground
         private ToolStripMenuItem aeroWizardToolStripMenuItem;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private KryptonToolkitSuiteExtendedCore.KryptonTextBoxExtended kryptonTextBoxExtended1;
-        private KryptonToolkitSuiteExtendedCore.KryptonButtonExtended kryptonButtonExtended1;
     }
 }
 

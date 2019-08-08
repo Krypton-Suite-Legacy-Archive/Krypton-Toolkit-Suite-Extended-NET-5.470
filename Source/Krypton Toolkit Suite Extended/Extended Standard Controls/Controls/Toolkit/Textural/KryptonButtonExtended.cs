@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using ExtendedStandardControls.Classes;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -46,13 +47,13 @@ namespace ExtendedStandardControls
 
             LongTextColourTwo = Color.Empty;
 
-            LongTextTypeface = new Font("Microsoft Sans Serif", 8.25F);
+            LongTextTypeface = Typeface.DefaultTypeface();
 
             ShortTextColourOne = Color.Empty;
 
             ShortTextColourTwo = Color.Empty;
 
-            ShortTextTypeface = new Font("Microsoft Sans Serif", 8.25F);
+            ShortTextTypeface = Typeface.DefaultTypeface();
 
             Image = null;
 

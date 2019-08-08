@@ -29,7 +29,7 @@ namespace ExtendedStandardControls
 
             TextColour = SystemColors.ControlText;
 
-            Typeface = new Font("Segoe UI", 12F);
+            Typeface = Classes.Typeface.DefaultTypeface();
 
             UpdateAppearance(BackgroundColour, TextColour, Typeface);
         }
