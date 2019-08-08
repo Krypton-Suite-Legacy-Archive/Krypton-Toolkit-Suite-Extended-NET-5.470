@@ -79,6 +79,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Break Out\KryptonTreeViewShell.cs" />
+    <Compile Include="Components\Standard Controls\KryptonButtonExtended.cs" />
+    <Compile Include="Components\Standard Controls\KryptonTextBoxExtended.cs" />
     <Compile Include="Components\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>

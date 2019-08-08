@@ -94,6 +94,9 @@
     <Compile Include="Editor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ExtendedStandardControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FileSystemExamples.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtendedStandardControls.resx">
+      <DependentUpon>ExtendedStandardControls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FileSystemExamples.resx">
       <DependentUpon>FileSystemExamples.cs</DependentUpon>
