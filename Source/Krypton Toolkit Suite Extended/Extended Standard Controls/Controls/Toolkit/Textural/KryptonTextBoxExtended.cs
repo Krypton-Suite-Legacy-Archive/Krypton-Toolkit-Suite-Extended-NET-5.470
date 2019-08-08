@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace KryptonToolkitSuiteExtendedCore
+namespace ExtendedStandardControls
 {
     [ToolboxBitmap(typeof(KryptonTextBox))]
     public class KryptonTextBoxExtended : KryptonTextBox
@@ -33,11 +33,6 @@ namespace KryptonToolkitSuiteExtendedCore
 
             UpdateAppearance(BackgroundColour, TextColour, Typeface);
         }
-
-        public KryptonTextBoxExtended(Color backgroundColour, Color textColour, Font typeface, Point location)
-        {
-            UpdateAppearance(backgroundColour, textColour, typeface, location);
-        }
         #endregion
 
         #region Methods
@@ -48,11 +43,6 @@ namespace KryptonToolkitSuiteExtendedCore
             StateCommon.Content.Color1 = textColour;
 
             StateCommon.Content.Font = typeface;
-        }
-
-        public void UpdateAppearance(Color backgroundColour, Color textColour, Font typeface, Point location)
-        {
-
         }
         #endregion
 

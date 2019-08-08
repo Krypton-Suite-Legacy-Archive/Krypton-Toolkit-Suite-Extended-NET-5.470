@@ -42,6 +42,9 @@
     <Reference Include="Extended Colour Controls">
       <HintPath>..\Extended Colour Controls\obj\Debug\Extended Colour Controls.dll</HintPath>
     </Reference>
+    <Reference Include="Extended Standard Controls">
+      <HintPath>..\Extended Standard Controls\obj\Debug\Extended Standard Controls.dll</HintPath>
+    </Reference>
     <Reference Include="Global Utilities, Version=5.470.507.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Global Utilities\bin\Debug\Global Utilities.dll</HintPath>

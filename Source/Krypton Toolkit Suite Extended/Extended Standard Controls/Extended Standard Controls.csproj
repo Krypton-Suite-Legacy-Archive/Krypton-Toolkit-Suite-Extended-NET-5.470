@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\Toolkit\Textural\KryptonButtonExtended.cs" />
+    <Compile Include="Controls\Toolkit\Textural\KryptonTextBoxExtended.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
