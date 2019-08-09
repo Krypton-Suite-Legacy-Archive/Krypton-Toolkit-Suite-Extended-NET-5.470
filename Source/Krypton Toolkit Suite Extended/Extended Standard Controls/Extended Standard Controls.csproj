@@ -46,6 +46,8 @@
     <Compile Include="Controls\Toolkit\Textural\KryptonButtonExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonCheckBoxExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonCheckButtonExtended.cs" />
+    <Compile Include="Controls\Toolkit\Textural\KryptonCheckedListBoxExtended.cs" />
+    <Compile Include="Controls\Toolkit\Textural\KryptonColourButtonExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonTextBoxExtended.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />

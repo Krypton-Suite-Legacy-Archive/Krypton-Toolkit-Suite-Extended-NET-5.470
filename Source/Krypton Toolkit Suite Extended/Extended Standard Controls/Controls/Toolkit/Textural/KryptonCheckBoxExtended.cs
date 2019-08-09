@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using ExtendedStandardControls.Classes;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -17,18 +18,25 @@ namespace ExtendedStandardControls
         #endregion
 
         #region Properties
+        [Category("Appearance"), Description("The first long text colour.")]
         public Color LongTextColourOne { get => _longTextColourOne; set { _longTextColourOne = value; Invalidate(); } }
 
+        [Category("Appearance"), Description("The second long text colour.")]
         public Color LongTextColourTwo { get => _longTextColourTwo; set { _longTextColourTwo = value; Invalidate(); } }
 
+        [Category("Appearance"), Description("The first short text colour.")]
         public Color ShortTextColourOne { get => _shortTextColourOne; set { _shortTextColourOne = value; Invalidate(); } }
 
+        [Category("Appearance"), Description("The second short text colour.")]
         public Color ShortTextColourTwo { get => _shortTextColourTwo; set { _shortTextColourTwo = value; Invalidate(); } }
 
+        [Category("Appearance"), Description("The 'Long Text' typeface.")]
         public Font LongTextTypeface { get => _longTextTypeface; set { _longTextTypeface = value; Invalidate(); } }
 
+        [Category("Appearance"), Description("The 'Short Text' typeface.")]
         public Font ShortTextTypeface { get => _shortTextTypeface; set { _shortTextTypeface = value; Invalidate(); } }
 
+        [Category("Appearance"), Description("The chosen image.")]
         public Image Image { get => _image; set { _image = value; Invalidate(); } }
         #endregion
 
