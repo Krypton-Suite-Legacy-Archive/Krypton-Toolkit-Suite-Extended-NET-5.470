@@ -263,7 +263,7 @@ namespace KryptonToolkitSuiteExtendedCore
 
             BorderColour = Color.LightGray;
 
-            UseGradientOnKnob = false;
+            UseGradientOnKnob = true;
 
             TextEnabledForeColour = Color.Gray;
 
