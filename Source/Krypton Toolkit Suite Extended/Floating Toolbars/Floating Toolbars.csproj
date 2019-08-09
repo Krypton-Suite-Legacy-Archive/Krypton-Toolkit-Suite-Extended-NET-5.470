@@ -71,6 +71,9 @@
     <Compile Include="UX\MenuStripExistingComponentChooser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UX\RibbonContainerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UX\ToolStripContainerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
