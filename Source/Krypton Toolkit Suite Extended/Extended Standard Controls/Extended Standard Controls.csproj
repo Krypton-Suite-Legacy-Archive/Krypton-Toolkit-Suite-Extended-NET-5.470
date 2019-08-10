@@ -49,6 +49,11 @@
     <Compile Include="Controls\Toolkit\Textural\KryptonCheckedListBoxExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonColourButtonExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonComboBoxExtended.cs" />
+    <Compile Include="Controls\Toolkit\Textural\KryptonDateTimePickerExtended.cs" />
+    <Compile Include="Controls\Toolkit\Textural\KryptonDomainUpDownExtended.cs" />
+    <Compile Include="Controls\Toolkit\Textural\KryptonDropButtonExtended.cs" />
+    <Compile Include="Controls\Toolkit\Textural\KryptonGroupBoxExtended.cs" />
+    <Compile Include="Controls\Toolkit\Textural\KryptonHeaderExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonTextBoxExtended.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
