@@ -1004,16 +1004,16 @@ namespace Playground
 
         private void KbtnFloatingToolStrip_Click(object sender, EventArgs e)
         {
-            FloatingToolStripExample floatingToolStripExample = new FloatingToolStripExample();
+            FloatingMenuStrip floatingToolStripExample = new FloatingMenuStrip();
 
             floatingToolStripExample.Show();
         }
 
         private void KbtnFloatingMenuStrip_Click(object sender, EventArgs e)
         {
-            FloatingMenuStripExample floatingMenuStripExample = new FloatingMenuStripExample();
+            //FloatingMenuStripExample floatingMenuStripExample = new FloatingMenuStripExample();
 
-            floatingMenuStripExample.Show();
+            //floatingMenuStripExample.Show();
         }
 
         private void KbtnTreeViews_Click(object sender, EventArgs e)
