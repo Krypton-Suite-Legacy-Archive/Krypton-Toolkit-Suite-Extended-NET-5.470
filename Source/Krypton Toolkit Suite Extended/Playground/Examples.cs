@@ -1004,7 +1004,7 @@ namespace Playground
 
         private void KbtnFloatingToolStrip_Click(object sender, EventArgs e)
         {
-            FloatingMenuStrip floatingToolStripExample = new FloatingMenuStrip();
+            FloatingMenuStripExample floatingToolStripExample = new FloatingMenuStripExample();
 
             floatingToolStripExample.Show();
         }

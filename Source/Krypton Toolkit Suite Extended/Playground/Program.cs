@@ -13,7 +13,7 @@ namespace Playground
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FloatingMenuStrip());
+            Application.Run(new Examples());
         }
     }
 }

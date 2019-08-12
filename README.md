@@ -41,17 +41,28 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ## 2019-09-01 Build 13xx - September Update
 * Added a better file system tree view control
+* More item and project templates (floating MenuStrips & ToolStrip templates)
 
 ======
+-->
 
-## 2019-08-10 Build 12xx - August Update
+## 2019-08-12 Build 1216 - August Update
 * Added `ExtendedKryptonColourButton` control with a kryptonised custom colour UI
 * Started componentising toolkit
-* More item and project templates (floating MenuStrips & ToolStrip templates)
+* Modularisation of the toolkit. These modules are:
+    * `KryptonExtendedToolkit5470CoreModule` - Contains the core components
+    * `KryptonExtendedToolkit5470ExtendedColourControlsModule` - Enhanced colour controls
+    * `KryptonExtendedToolkit5470ExtendedDialogsModule` - Enhanced dialogs
+    * `KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule` - MRU & other toolbar features
+    * `KryptonExtendedToolkit5470FloatingMenuAndToolbarsModule` - Floatable menu & toolbars
+    * `KryptonExtendedToolkit5470IOComponentsModule` - Specific filesystem controls
+    * `KryptonExtendedToolkit5470KryptonOutlookGridModule` - Krypton Outlook Grid control
+    * `KryptonExtendedToolkit5470NaviSuiteModule` - NaviSuite controls
+    * `KryptonExtendedToolkit5470TaskDialogsModule` - Task dialogs
 * Floating menu and toolstrips and associated components are now in a separate binary for easier toolbox navigation - **Floating Toolbars.dll**
 * The `GripStyle` visibility is now set to **true** and `DockStyle` is set to **None** by default on the `FloatingMenuStrip`
 * Add documentation via sandcastle
--->
+* Dashboard will be updated in due course
 
 ======
 

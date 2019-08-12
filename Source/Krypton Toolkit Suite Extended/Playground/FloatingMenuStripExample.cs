@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Playground
 {
-    public class FloatingMenuStrip : KryptonForm
+    public class FloatingMenuStripExample : KryptonForm
     {
         private FloatingToolbars.Components.FloatableMenuStrip floatableMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -44,7 +44,7 @@ namespace Playground
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FloatingMenuStrip));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FloatingMenuStripExample));
             this.mspeTest = new FloatingToolbars.Components.MenuStripPanelExtened();
             this.floatableMenuStrip1 = new FloatingToolbars.Components.FloatableMenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -361,7 +361,7 @@ namespace Playground
 
         }
 
-        public FloatingMenuStrip()
+        public FloatingMenuStripExample()
         {
             InitializeComponent();
         }
