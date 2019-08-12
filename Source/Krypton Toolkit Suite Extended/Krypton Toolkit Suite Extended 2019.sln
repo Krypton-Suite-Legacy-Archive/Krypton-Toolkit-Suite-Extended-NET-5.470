@@ -201,6 +201,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template Installer", "Templ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extended Docking", "Extended Docking\Extended Docking.csproj", "{8E3D0185-FCA5-4BF4-ABF9-A04AB6A0CF90}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet Files", "NuGet Files", "{8A22EBC9-33CB-49B2-B943-493475778C30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{24BCE9A0-E437-430F-97CC-09B10AD1114F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470CoreModule.nupkg = ..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470CoreModule.nupkg
+		..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470ExtendedColourControlsModule.nupkg = ..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470ExtendedColourControlsModule.nupkg
+		..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470ExtendedDialogsModule.nupkg = ..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470ExtendedDialogsModule.nupkg
+		..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule.nupkg = ..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule.nupkg
+		..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470FloatingMenuAndToolbarsModule.nupkg = ..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470FloatingMenuAndToolbarsModule.nupkg
+		..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470IOComponentsModule.nupkg = ..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470IOComponentsModule.nupkg
+		..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470KryptonOutlookGridModule.nupkg = ..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470KryptonOutlookGridModule.nupkg
+		..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470NaviSuiteModule.nupkg = ..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470NaviSuiteModule.nupkg
+		..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470TaskDialogsModule.nupkg = ..\..\Setup\NuGet\Modules\KryptonExtendedToolkit5470TaskDialogsModule.nupkg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -641,6 +656,7 @@ Global
 		{5D27E81D-9BE2-48BF-B471-E92E995B27BD} = {C53DA960-EBF5-408D-9364-6C3A1B43D91A}
 		{6E90370E-BE34-4342-AA73-F6A5935E88AA} = {5D27E81D-9BE2-48BF-B471-E92E995B27BD}
 		{8E3D0185-FCA5-4BF4-ABF9-A04AB6A0CF90} = {00BD5065-7D99-43D4-BF83-5AB7B3474EF1}
+		{24BCE9A0-E437-430F-97CC-09B10AD1114F} = {8A22EBC9-33CB-49B2-B943-493475778C30}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4D1018D-143A-451D-8FC0-F63E4923F552}
