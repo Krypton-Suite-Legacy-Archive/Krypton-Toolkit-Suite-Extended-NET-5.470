@@ -44,13 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ToolStripControlHostFixed.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\ClearClipboard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\KryptonColourButtonToolStripMenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\KryptonNumericUpDownToolStripItem.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\KryptonToolStripTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\KryptonTrackBarToolStripMenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\MRUMenuItem.cs">
