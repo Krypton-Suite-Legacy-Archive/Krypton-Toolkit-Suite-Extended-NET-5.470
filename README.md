@@ -12,9 +12,11 @@
 
 =======
 
+<!--
 ## NOTE: 20/06/2018 Background menu colours will be implemented in the coming weeks. Stay tuned for updates!
 
 ======
+-->
 
 # Building this repository from code
 
