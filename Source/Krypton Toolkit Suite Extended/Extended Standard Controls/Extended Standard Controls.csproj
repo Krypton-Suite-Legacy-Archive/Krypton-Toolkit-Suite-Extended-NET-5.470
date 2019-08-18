@@ -55,6 +55,9 @@
     <Compile Include="Controls\Toolkit\Textural\KryptonDropButtonExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonGroupBoxExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonHeaderExtended.cs" />
+    <Compile Include="Controls\Toolkit\Textural\KryptonLabelExtended.cs" />
+    <Compile Include="Controls\Toolkit\Textural\KryptonLinkLabelExtended.cs" />
+    <Compile Include="Controls\Toolkit\Textural\KryptonListBoxExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonTextBoxExtended.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
