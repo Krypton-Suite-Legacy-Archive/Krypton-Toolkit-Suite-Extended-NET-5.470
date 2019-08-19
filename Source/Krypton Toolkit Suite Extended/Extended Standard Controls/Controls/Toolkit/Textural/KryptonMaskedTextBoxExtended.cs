@@ -5,8 +5,8 @@ using System.Windows.Forms;
 
 namespace ExtendedStandardControls
 {
-    [ToolboxBitmap(typeof(KryptonTextBox))]
-    public class KryptonTextBoxExtended : KryptonTextBox
+    [ToolboxBitmap(typeof(KryptonMaskedTextBox))]
+    public class KryptonMaskedTextBoxExtended : KryptonMaskedTextBox
     {
         #region Variables
         private Color _backgroundColour, _textColour;
@@ -25,8 +25,8 @@ namespace ExtendedStandardControls
         public Font Typeface { get => _typeface; set { _typeface = value; Invalidate(); } }
         #endregion
 
-        #region Constructors
-        public KryptonTextBoxExtended()
+        #region Constructor
+        public KryptonMaskedTextBoxExtended()
         {
             BackgroundColour = Color.White;
 
@@ -49,7 +49,7 @@ namespace ExtendedStandardControls
         }
         #endregion
 
-        #region Overrides
+        #region Override
         protected override void OnPaint(PaintEventArgs e)
         {
             UpdateAppearanceValues(BackgroundColour, TextColour, Typeface);
