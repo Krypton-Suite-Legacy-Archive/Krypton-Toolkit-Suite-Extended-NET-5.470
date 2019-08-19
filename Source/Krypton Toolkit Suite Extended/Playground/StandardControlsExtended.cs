@@ -7,33 +7,16 @@ namespace Playground
     {
         private ExtendedStandardControls.KryptonLabelExtended kryptonLabelExtended1;
         private ExtendedStandardControls.KryptonLinkLabelExtended kryptonLinkLabelExtended1;
-        private ExtendedStandardControls.KryptonMaskedTextBoxExtended kryptonMaskedTextBoxExtended1;
-        private KryptonMonthCalendar kryptonMonthCalendar1;
-        private ExtendedStandardControls.KryptonTextBoxExtended kryptonTextBoxExtended1;
+        private ExtendedStandardControls.KryptonMonthCalendarExtended kryptonMonthCalendarExtended1;
+        private KryptonNumericUpDown kryptonNumericUpDown1;
 
         private void InitializeComponent()
         {
-            this.kryptonTextBoxExtended1 = new ExtendedStandardControls.KryptonTextBoxExtended();
             this.kryptonLinkLabelExtended1 = new ExtendedStandardControls.KryptonLinkLabelExtended();
             this.kryptonLabelExtended1 = new ExtendedStandardControls.KryptonLabelExtended();
-            this.kryptonMaskedTextBoxExtended1 = new ExtendedStandardControls.KryptonMaskedTextBoxExtended();
-            this.kryptonMonthCalendar1 = new ComponentFactory.Krypton.Toolkit.KryptonMonthCalendar();
+            this.kryptonMonthCalendarExtended1 = new ExtendedStandardControls.KryptonMonthCalendarExtended();
+            this.kryptonNumericUpDown1 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.SuspendLayout();
-            // 
-            // kryptonTextBoxExtended1
-            // 
-            this.kryptonTextBoxExtended1.BackgroundColour = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.kryptonTextBoxExtended1.Location = new System.Drawing.Point(376, 44);
-            this.kryptonTextBoxExtended1.Name = "kryptonTextBoxExtended1";
-            this.kryptonTextBoxExtended1.Size = new System.Drawing.Size(401, 29);
-            this.kryptonTextBoxExtended1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.kryptonTextBoxExtended1.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBoxExtended1.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBoxExtended1.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
-            this.kryptonTextBoxExtended1.TabIndex = 5;
-            this.kryptonTextBoxExtended1.Text = "kryptonTextBoxExtended1";
-            this.kryptonTextBoxExtended1.TextColour = System.Drawing.Color.White;
-            this.kryptonTextBoxExtended1.Typeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // kryptonLinkLabelExtended1
             // 
@@ -99,34 +82,52 @@ namespace Playground
             this.kryptonLabelExtended1.Typeface = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabelExtended1.Values.Text = "kryptonLabelExtended1";
             // 
-            // kryptonMaskedTextBoxExtended1
+            // kryptonMonthCalendarExtended1
             // 
-            this.kryptonMaskedTextBoxExtended1.BackgroundColour = System.Drawing.Color.White;
-            this.kryptonMaskedTextBoxExtended1.Location = new System.Drawing.Point(801, 44);
-            this.kryptonMaskedTextBoxExtended1.Name = "kryptonMaskedTextBoxExtended1";
-            this.kryptonMaskedTextBoxExtended1.Size = new System.Drawing.Size(100, 20);
-            this.kryptonMaskedTextBoxExtended1.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonMaskedTextBoxExtended1.StateCommon.Content.Color1 = System.Drawing.SystemColors.ControlText;
-            this.kryptonMaskedTextBoxExtended1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kryptonMaskedTextBoxExtended1.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
-            this.kryptonMaskedTextBoxExtended1.TabIndex = 6;
-            this.kryptonMaskedTextBoxExtended1.Text = "kryptonMaskedTextBoxExtended1";
-            this.kryptonMaskedTextBoxExtended1.TextColour = System.Drawing.SystemColors.ControlText;
-            this.kryptonMaskedTextBoxExtended1.Typeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kryptonMonthCalendarExtended1.CommonBackgroundColourOne = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.CommonBackgroundColourTwo = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.DayBackgroundColourOne = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.kryptonMonthCalendarExtended1.DayBackgroundColourTwo = System.Drawing.Color.White;
+            this.kryptonMonthCalendarExtended1.DayLongTextColourOne = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.DayLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.DayOfWeekBackgroundColourOne = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.DayOfWeekBackgroundColourTwo = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.DayOfWeekLongTextColourOne = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.DayOfWeekLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.DayOfWeekShortTextColourOne = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.DayOfWeekShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.DayShortTextColourOne = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.kryptonMonthCalendarExtended1.DayShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.HeaderBackgroundColourOne = System.Drawing.Color.Red;
+            this.kryptonMonthCalendarExtended1.HeaderBackgroundColourTwo = System.Drawing.Color.Lime;
+            this.kryptonMonthCalendarExtended1.HeaderLongTextColourOne = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.HeaderLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.HeaderShortTextColourOne = System.Drawing.Color.White;
+            this.kryptonMonthCalendarExtended1.HeaderShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonMonthCalendarExtended1.Location = new System.Drawing.Point(28, 29);
+            this.kryptonMonthCalendarExtended1.Name = "kryptonMonthCalendarExtended1";
+            this.kryptonMonthCalendarExtended1.Size = new System.Drawing.Size(230, 184);
+            this.kryptonMonthCalendarExtended1.StateCommon.Day.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.kryptonMonthCalendarExtended1.StateCommon.Day.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonMonthCalendarExtended1.StateCommon.Day.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.kryptonMonthCalendarExtended1.StateCommon.Header.Back.Color1 = System.Drawing.Color.Red;
+            this.kryptonMonthCalendarExtended1.StateCommon.Header.Back.Color2 = System.Drawing.Color.Lime;
+            this.kryptonMonthCalendarExtended1.StateCommon.Header.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonMonthCalendarExtended1.TabIndex = 7;
+            this.kryptonMonthCalendarExtended1.Typeface = null;
             // 
-            // kryptonMonthCalendar1
+            // kryptonNumericUpDown1
             // 
-            this.kryptonMonthCalendar1.Location = new System.Drawing.Point(279, 224);
-            this.kryptonMonthCalendar1.Name = "kryptonMonthCalendar1";
-            this.kryptonMonthCalendar1.Size = new System.Drawing.Size(230, 184);
-            this.kryptonMonthCalendar1.TabIndex = 7;
+            this.kryptonNumericUpDown1.Location = new System.Drawing.Point(376, 193);
+            this.kryptonNumericUpDown1.Name = "kryptonNumericUpDown1";
+            this.kryptonNumericUpDown1.Size = new System.Drawing.Size(120, 22);
+            this.kryptonNumericUpDown1.TabIndex = 8;
             // 
             // StandardControlsExtended
             // 
             this.ClientSize = new System.Drawing.Size(1369, 636);
-            this.Controls.Add(this.kryptonMonthCalendar1);
-            this.Controls.Add(this.kryptonMaskedTextBoxExtended1);
-            this.Controls.Add(this.kryptonTextBoxExtended1);
+            this.Controls.Add(this.kryptonNumericUpDown1);
+            this.Controls.Add(this.kryptonMonthCalendarExtended1);
             this.Controls.Add(this.kryptonLinkLabelExtended1);
             this.Controls.Add(this.kryptonLabelExtended1);
             this.Name = "StandardControlsExtended";
