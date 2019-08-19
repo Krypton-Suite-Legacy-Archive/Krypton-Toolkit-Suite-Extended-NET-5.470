@@ -8,7 +8,7 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
     public class KryptonListBoxExtended : KryptonListBox
     {
         #region Variables
-        private Color _commonBackgroundColourOne, _commonBackgroundColourTwo, _itemBackgroundColourOne, _itemBackgroundColourTwo, _longTextBackgroundColourOne, _longTextBackgroundColourTwo, _shortTextBackgroundColourOne, _shortTextBackgroundColourTwo;
+        private Color _commonBackgroundColourOne, _commonBackgroundColourTwo, _itemBackgroundColourOne, _itemBackgroundColourTwo, _longTextBackgroundColourOne, _longTextBackgroundColourTwo, _shortTextBackgroundColourOne, _shortTextBackgroundColourTwo, _longTextColourOne, _longTextColourTwo, _shortTextColourOne, _shortTextColourTwo;
 
         private Font _typeface;
         #endregion
@@ -22,13 +22,13 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
 
         public Color ItemBackgroundColourTwo { get => _itemBackgroundColourTwo; set { _itemBackgroundColourTwo = value; Invalidate(); } }
 
-        public Color LongTextBackgroundColourOne { get => _longTextBackgroundColourOne; set { _longTextBackgroundColourOne = value; Invalidate(); } }
+        public Color LongTextColourOne { get => _longTextColourOne; set { _longTextColourOne = value; Invalidate(); } }
 
-        public Color LongTextBackgroundColourTwo { get => _longTextBackgroundColourTwo; set { _longTextBackgroundColourTwo = value; Invalidate(); } }
+        public Color LongTextColourTwo { get => _longTextColourTwo; set { _longTextColourTwo = value; Invalidate(); } }
 
-        public Color ShortTextBackgroundColourOne { get => _shortTextBackgroundColourOne; set { _shortTextBackgroundColourOne = value; Invalidate(); } }
+        public Color ShortTextColourOne { get => _shortTextColourOne; set { _shortTextColourOne = value; Invalidate(); } }
 
-        public Color ShortTextBackgroundColourTwo { get => _shortTextBackgroundColourTwo; set { _shortTextBackgroundColourTwo = value; Invalidate(); } }
+        public Color ShortTextColourTwo { get => _shortTextColourTwo; set { _shortTextColourTwo = value; Invalidate(); } }
 
         public Font Typeface { get => _typeface; set { _typeface = value; Invalidate(); } }
         #endregion
@@ -44,22 +44,22 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
 
             ItemBackgroundColourTwo = Color.Empty;
 
-            LongTextBackgroundColourOne = Color.Empty;
+            LongTextColourOne = Color.Empty;
 
-            LongTextBackgroundColourTwo = Color.Empty;
+            LongTextColourTwo = Color.Empty;
 
-            ShortTextBackgroundColourOne = Color.Empty;
+            ShortTextColourOne = Color.Empty;
 
-            ShortTextBackgroundColourTwo = Color.Empty;
+            ShortTextColourTwo = Color.Empty;
 
             Typeface = null;
 
-            UpdateAppearanceValues(CommonBackgroundColourOne, CommonBackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextBackgroundColourOne, LongTextBackgroundColourTwo, ShortTextBackgroundColourOne, ShortTextBackgroundColourTwo, Typeface);
+            UpdateAppearanceValues(CommonBackgroundColourOne, CommonBackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, Typeface);
         }
         #endregion
 
         #region Method
-        private void UpdateAppearanceValues(Color commonBackgroundColourOne, Color commonBackgroundColourTwo, Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextBackgroundColourOne, Color longTextBackgroundColourTwo, Color shortTextBackgroundColourOne, Color shortTextBackgroundColourTwo, Font typeface)
+        private void UpdateAppearanceValues(Color commonBackgroundColourOne, Color commonBackgroundColourTwo, Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font typeface)
         {
             StateCommon.Back.Color1 = commonBackgroundColourOne;
 
@@ -69,15 +69,15 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
 
             StateCommon.Item.Back.Color2 = itemBackgroundColourTwo;
 
-            StateCommon.Item.Content.LongText.Color1 = longTextBackgroundColourOne;
+            StateCommon.Item.Content.LongText.Color1 = longTextColourOne;
 
-            StateCommon.Item.Content.LongText.Color2 = longTextBackgroundColourTwo;
+            StateCommon.Item.Content.LongText.Color2 = longTextColourTwo;
 
             StateCommon.Item.Content.LongText.Font = typeface;
 
-            StateCommon.Item.Content.ShortText.Color1 = shortTextBackgroundColourOne;
+            StateCommon.Item.Content.ShortText.Color1 = shortTextColourOne;
 
-            StateCommon.Item.Content.ShortText.Color2 = shortTextBackgroundColourTwo;
+            StateCommon.Item.Content.ShortText.Color2 = shortTextColourTwo;
 
             StateCommon.Item.Content.ShortText.Font = typeface;
         }
@@ -86,7 +86,7 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
         #region Overrides
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateAppearanceValues(CommonBackgroundColourOne, CommonBackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextBackgroundColourOne, LongTextBackgroundColourTwo, ShortTextBackgroundColourOne, ShortTextBackgroundColourTwo, Typeface);
+            UpdateAppearanceValues(CommonBackgroundColourOne, CommonBackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, Typeface);
 
             base.OnPaint(e);
         }
