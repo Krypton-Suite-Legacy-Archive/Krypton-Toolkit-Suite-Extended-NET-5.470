@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,7 +11,7 @@ namespace ExtendedStandardControls
         #region Variables
         private Color _commonBackgroundColourOne, _commonBackgroundColourTwo, _dayBackgroundColourOne, _dayBackgroundColourTwo, _dayLongTextColourOne, _dayLongTextColourTwo, _dayShortTextColourOne, _dayShortTextColourTwo, _dayOfWeekBackgroundColourOne, _dayOfWeekBackgroundColourTwo, _dayOfWeekLongTextColourOne, _dayOfWeekLongTextColourTwo, _dayOfWeekShortTextColourOne, _dayOfWeekShortTextColourTwo, _headerBackgroundColourOne, _headerBackgroundColourTwo, _headerLongTextColourOne, _headerLongTextColourTwo, _headerShortTextColourOne, _headerShortTextColourTwo;
 
-        private Font _typeface;
+        private Font _longTextTypeface, _shortTextTypeface;
         #endregion
 
         #region Properties
@@ -54,7 +55,11 @@ namespace ExtendedStandardControls
 
         public Color HeaderShortTextColourTwo { get => _headerShortTextColourTwo; set { _headerShortTextColourTwo = value; Invalidate(); } }
 
-        public Font Typeface { get => _typeface; set { _typeface = value; Invalidate(); } }
+        [Category("Appearance"), Description("The 'Long Text' typeface.")]
+        public Font LongTextTypeface { get => _longTextTypeface; set { _longTextTypeface = value; Invalidate(); } }
+
+        [Category("Appearance"), Description("The 'Short Text' typeface.")]
+        public Font ShortTextTypeface { get => _shortTextTypeface; set { _shortTextTypeface = value; Invalidate(); } }
         #endregion
 
         #region Constructor
@@ -100,9 +105,11 @@ namespace ExtendedStandardControls
 
             HeaderShortTextColourTwo = Color.Empty;
 
-            Typeface = null;
+            LongTextTypeface = null;
 
-            UpdateAppearanceValues(CommonBackgroundColourOne, CommonBackgroundColourTwo, DayBackgroundColourOne, DayBackgroundColourTwo, DayLongTextColourOne, DayLongTextColourTwo, DayShortTextColourOne, DayShortTextColourTwo, DayOfWeekBackgroundColourOne, DayOfWeekBackgroundColourTwo, DayOfWeekLongTextColourOne, DayOfWeekLongTextColourTwo, DayOfWeekShortTextColourOne, DayOfWeekShortTextColourTwo, HeaderBackgroundColourOne, HeaderBackgroundColourTwo, HeaderLongTextColourOne, HeaderLongTextColourTwo, HeaderShortTextColourOne, HeaderShortTextColourTwo, Typeface);
+            ShortTextTypeface = null;
+
+            UpdateAppearanceValues(CommonBackgroundColourOne, CommonBackgroundColourTwo, DayBackgroundColourOne, DayBackgroundColourTwo, DayLongTextColourOne, DayLongTextColourTwo, DayShortTextColourOne, DayShortTextColourTwo, DayOfWeekBackgroundColourOne, DayOfWeekBackgroundColourTwo, DayOfWeekLongTextColourOne, DayOfWeekLongTextColourTwo, DayOfWeekShortTextColourOne, DayOfWeekShortTextColourTwo, HeaderBackgroundColourOne, HeaderBackgroundColourTwo, HeaderLongTextColourOne, HeaderLongTextColourTwo, HeaderShortTextColourOne, HeaderShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
         }
         #endregion
 
@@ -129,7 +136,7 @@ namespace ExtendedStandardControls
         /// <param name="headerShortTextColourOne">The header short text colour one.</param>
         /// <param name="headerShortTextColourTwo">The header short text colour two.</param>
         /// <param name="typeface">The typeface.</param>
-        private void UpdateAppearanceValues(Color commonBackgroundColourOne, Color commonBackgroundColourTwo, Color dayBackgroundColourOne, Color dayBackgroundColourTwo, Color dayLongTextColourOne, Color dayLongTextColourTwo, Color dayShortTextColourOne, Color dayShortTextColourTwo, Color dayOfWeekBackgroundColourOne, Color dayOfWeekBackgroundColourTwo, Color dayOfWeekLongTextColourOne, Color dayOfWeekLongTextColourTwo, Color dayOfWeekShortTextColourOne, Color dayOfWeekShortTextColourTwo, Color headerBackgroundColourOne, Color headerBackgroundColourTwo, Color headerLongTextColourOne, Color headerLongTextColourTwo, Color headerShortTextColourOne, Color headerShortTextColourTwo, Font typeface)
+        private void UpdateAppearanceValues(Color commonBackgroundColourOne, Color commonBackgroundColourTwo, Color dayBackgroundColourOne, Color dayBackgroundColourTwo, Color dayLongTextColourOne, Color dayLongTextColourTwo, Color dayShortTextColourOne, Color dayShortTextColourTwo, Color dayOfWeekBackgroundColourOne, Color dayOfWeekBackgroundColourTwo, Color dayOfWeekLongTextColourOne, Color dayOfWeekLongTextColourTwo, Color dayOfWeekShortTextColourOne, Color dayOfWeekShortTextColourTwo, Color headerBackgroundColourOne, Color headerBackgroundColourTwo, Color headerLongTextColourOne, Color headerLongTextColourTwo, Color headerShortTextColourOne, Color headerShortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StateCommon.Back.Color1 = commonBackgroundColourOne;
 
@@ -143,13 +150,13 @@ namespace ExtendedStandardControls
 
             StateCommon.Day.Content.LongText.Color2 = dayLongTextColourTwo;
 
-            StateCommon.Day.Content.LongText.Font = typeface;
+            StateCommon.Day.Content.LongText.Font = longTextTypeface;
 
             StateCommon.Day.Content.ShortText.Color1 = dayShortTextColourOne;
 
             StateCommon.Day.Content.ShortText.Color2 = dayShortTextColourTwo;
 
-            StateCommon.Day.Content.ShortText.Font = typeface;
+            StateCommon.Day.Content.ShortText.Font = shortTextTypeface;
 
             StateCommon.DayOfWeek.Back.Color1 = dayOfWeekBackgroundColourOne;
 
@@ -159,13 +166,13 @@ namespace ExtendedStandardControls
 
             StateCommon.DayOfWeek.Content.LongText.Color2 = dayOfWeekLongTextColourTwo;
 
-            StateCommon.DayOfWeek.Content.LongText.Font = typeface;
+            StateCommon.DayOfWeek.Content.LongText.Font = longTextTypeface;
 
             StateCommon.DayOfWeek.Content.ShortText.Color1 = dayOfWeekShortTextColourOne;
 
             StateCommon.DayOfWeek.Content.ShortText.Color2 = dayOfWeekShortTextColourTwo;
 
-            StateCommon.DayOfWeek.Content.ShortText.Font = typeface;
+            StateCommon.DayOfWeek.Content.ShortText.Font = shortTextTypeface;
 
             StateCommon.Header.Back.Color1 = headerBackgroundColourOne;
 
@@ -175,20 +182,20 @@ namespace ExtendedStandardControls
 
             StateCommon.Header.Content.LongText.Color2 = headerLongTextColourTwo;
 
-            StateCommon.Header.Content.LongText.Font = typeface;
+            StateCommon.Header.Content.LongText.Font = longTextTypeface;
 
             StateCommon.Header.Content.ShortText.Color1 = headerShortTextColourOne;
 
             StateCommon.Header.Content.ShortText.Color2 = headerShortTextColourTwo;
 
-            StateCommon.Header.Content.ShortText.Font = typeface;
+            StateCommon.Header.Content.ShortText.Font = shortTextTypeface;
         }
         #endregion
 
         #region Override
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateAppearanceValues(CommonBackgroundColourOne, CommonBackgroundColourTwo, DayBackgroundColourOne, DayBackgroundColourTwo, DayLongTextColourOne, DayLongTextColourTwo, DayShortTextColourOne, DayShortTextColourTwo, DayOfWeekBackgroundColourOne, DayOfWeekBackgroundColourTwo, DayOfWeekLongTextColourOne, DayOfWeekLongTextColourTwo, DayOfWeekShortTextColourOne, DayOfWeekShortTextColourTwo, HeaderBackgroundColourOne, HeaderBackgroundColourTwo, HeaderLongTextColourOne, HeaderLongTextColourTwo, HeaderShortTextColourOne, HeaderShortTextColourTwo, Typeface);
+            UpdateAppearanceValues(CommonBackgroundColourOne, CommonBackgroundColourTwo, DayBackgroundColourOne, DayBackgroundColourTwo, DayLongTextColourOne, DayLongTextColourTwo, DayShortTextColourOne, DayShortTextColourTwo, DayOfWeekBackgroundColourOne, DayOfWeekBackgroundColourTwo, DayOfWeekLongTextColourOne, DayOfWeekLongTextColourTwo, DayOfWeekShortTextColourOne, DayOfWeekShortTextColourTwo, HeaderBackgroundColourOne, HeaderBackgroundColourTwo, HeaderLongTextColourOne, HeaderLongTextColourTwo, HeaderShortTextColourOne, HeaderShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
 
             base.OnPaint(e);
         }

@@ -63,7 +63,8 @@ namespace Playground
             this.kryptonMonthCalendarExtended1.StateCommon.Header.Back.Color2 = System.Drawing.Color.Lime;
             this.kryptonMonthCalendarExtended1.StateCommon.Header.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonMonthCalendarExtended1.TabIndex = 7;
-            this.kryptonMonthCalendarExtended1.Typeface = null;
+            this.kryptonMonthCalendarExtended1.LongTextTypeface = null;
+            this.kryptonMonthCalendarExtended1.ShortTextTypeface = null;
             // 
             // kryptonLinkLabelExtended1
             // 
@@ -106,7 +107,8 @@ namespace Playground
             this.kryptonLinkLabelExtended1.StateCommon.ShortText.Color2 = System.Drawing.Color.Teal;
             this.kryptonLinkLabelExtended1.StateCommon.ShortText.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLinkLabelExtended1.TabIndex = 4;
-            this.kryptonLinkLabelExtended1.Typeface = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLinkLabelExtended1.LongTextTypeface = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLinkLabelExtended1.ShortTextTypeface = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLinkLabelExtended1.Values.Text = "kryptonLinkLabelExtended1";
             // 
             // kryptonLabelExtended1
@@ -124,7 +126,8 @@ namespace Playground
             this.kryptonLabelExtended1.TabIndex = 2;
             this.kryptonLabelExtended1.TextColourOne = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.kryptonLabelExtended1.TextColourTwo = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.kryptonLabelExtended1.Typeface = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabelExtended1.LongTextTypeface = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabelExtended1.ShortTextTypeface = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabelExtended1.Values.Text = "kryptonLabelExtended1";
             // 
             // kryptonPanelExtended1

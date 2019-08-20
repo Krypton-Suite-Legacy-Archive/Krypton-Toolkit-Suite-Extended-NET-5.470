@@ -1,5 +1,4 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
@@ -12,7 +11,7 @@ namespace ExtendedStandardControls
         #region Variables
         private Color _textColourOne, _textColourTwo;
 
-        private Font _typeface;
+        private Font _longTextTypeface, _shortTextTypeface;
 
         private Image _image;
         #endregion
@@ -24,8 +23,11 @@ namespace ExtendedStandardControls
         [Category("Appearance"), Description("The second text colour.")]
         public Color TextColourTwo { get => _textColourTwo; set { _textColourTwo = value; Invalidate(); } }
 
-        [Category("Appearance"), Description("The typeface of the text box.")]
-        public Font Typeface { get => _typeface; set { _typeface = value; Invalidate(); } }
+        [Category("Appearance"), Description("The 'Long Text' typeface.")]
+        public Font LongTextTypeface { get => _longTextTypeface; set { _longTextTypeface = value; Invalidate(); } }
+
+        [Category("Appearance"), Description("The 'Short Text' typeface.")]
+        public Font ShortTextTypeface { get => _shortTextTypeface; set { _shortTextTypeface = value; Invalidate(); } }
 
         [Category("Appearance"), Description("The image.")]
         public Image Image { get => _image; set { _image = value; Invalidate(); } }
@@ -38,22 +40,24 @@ namespace ExtendedStandardControls
 
             TextColourTwo = Color.Empty;
 
-            Typeface = null;
+            LongTextTypeface = null;
+
+            ShortTextTypeface = null;
 
             Image = null;
 
-            UpdateAppearanceValues(TextColourOne, TextColourTwo, Typeface, Image);
+            UpdateAppearanceValues(TextColourOne, TextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
         }
         #endregion
 
         #region Method
-        private void UpdateAppearanceValues(Color textColourOne, Color textColourTwo, Font typeface, Image image)
+        private void UpdateAppearanceValues(Color textColourOne, Color textColourTwo, Font longTextTypeface, Font shortTextTypeface, Image image)
         {
             StateCommon.LongText.Color1 = textColourOne;
 
             StateCommon.LongText.Color2 = textColourTwo;
 
-            StateCommon.LongText.Font = typeface;
+            StateCommon.LongText.Font = longTextTypeface;
 
             StateCommon.LongText.Image = image;
 
@@ -61,7 +65,7 @@ namespace ExtendedStandardControls
 
             StateCommon.ShortText.Color2 = textColourTwo;
 
-            StateCommon.ShortText.Font = typeface;
+            StateCommon.ShortText.Font = shortTextTypeface;
 
             StateCommon.ShortText.Image = image;
         }
@@ -70,7 +74,7 @@ namespace ExtendedStandardControls
         #region Override
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateAppearanceValues(TextColourOne, TextColourTwo, Typeface, Image);
+            UpdateAppearanceValues(TextColourOne, TextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
 
             base.OnPaint(e);
         }

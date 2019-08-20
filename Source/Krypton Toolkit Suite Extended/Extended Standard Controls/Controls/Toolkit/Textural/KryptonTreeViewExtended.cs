@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,7 +11,7 @@ namespace ExtendedStandardControls.Controls
         #region Variables
         private Color _backGroundColour, _nodeBackgroundColourOne, _nodeBackgroundColourTwo, _nodeLongTextColourOne, _nodeLongTextColourTwo, _nodeShortTextColourOne, _nodeShortTextColourTwo;
 
-        private Font _typeface;
+        private Font _longTextTypeface, _shortTextTypeface;
         #endregion
 
         #region Properties
@@ -28,7 +29,11 @@ namespace ExtendedStandardControls.Controls
 
         public Color NodeShortTextColourTwo { get => _nodeShortTextColourTwo; set { _nodeShortTextColourTwo = value; Invalidate(); } }
 
-        public Font Typeface { get => _typeface; set { _typeface = value; Invalidate(); } }
+        [Category("Appearance"), Description("The 'Long Text' typeface.")]
+        public Font LongTextTypeface { get => _longTextTypeface; set { _longTextTypeface = value; Invalidate(); } }
+
+        [Category("Appearance"), Description("The 'Short Text' typeface.")]
+        public Font ShortTextTypeface { get => _shortTextTypeface; set { _shortTextTypeface = value; Invalidate(); } }
         #endregion
 
         #region Constructor
@@ -48,14 +53,16 @@ namespace ExtendedStandardControls.Controls
 
             NodeShortTextColourTwo = Color.Empty;
 
-            Typeface = null;
+            LongTextTypeface = null;
 
-            UpdateAppearanceValues(BackgroundColour, NodeBackgroundColourOne, NodeBackgroundColourTwo, NodeLongTextColourOne, NodeLongTextColourTwo, NodeShortTextColourOne, NodeShortTextColourTwo, Typeface);
+            ShortTextTypeface = null;
+
+            UpdateAppearanceValues(BackgroundColour, NodeBackgroundColourOne, NodeBackgroundColourTwo, NodeLongTextColourOne, NodeLongTextColourTwo, NodeShortTextColourOne, NodeShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
         }
         #endregion
 
         #region Method
-        private void UpdateAppearanceValues(Color backgroundColour, Color nodeBackgroundColourOne, Color nodeBackgroundColourTwo, Color nodeLongTextColourOne, Color nodeLongTextColourTwo, Color nodeShortTextColourOne, Color nodeShortTextColourTwo, Font typeface)
+        private void UpdateAppearanceValues(Color backgroundColour, Color nodeBackgroundColourOne, Color nodeBackgroundColourTwo, Color nodeLongTextColourOne, Color nodeLongTextColourTwo, Color nodeShortTextColourOne, Color nodeShortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StateCommon.Back.Color1 = backgroundColour;
 
@@ -67,20 +74,20 @@ namespace ExtendedStandardControls.Controls
 
             StateCommon.Node.Content.LongText.Color2 = nodeLongTextColourTwo;
 
-            StateCommon.Node.Content.LongText.Font = typeface;
+            StateCommon.Node.Content.LongText.Font = LongTextTypeface;
 
             StateCommon.Node.Content.ShortText.Color1 = nodeShortTextColourOne;
 
             StateCommon.Node.Content.ShortText.Color2 = nodeShortTextColourTwo;
 
-            StateCommon.Node.Content.ShortText.Font = typeface;
+            StateCommon.Node.Content.ShortText.Font = ShortTextTypeface;
         }
         #endregion
 
         #region Override
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateAppearanceValues(BackgroundColour, NodeBackgroundColourOne, NodeBackgroundColourTwo, NodeLongTextColourOne, NodeLongTextColourTwo, NodeShortTextColourOne, NodeShortTextColourTwo, Typeface);
+            UpdateAppearanceValues(BackgroundColour, NodeBackgroundColourOne, NodeBackgroundColourTwo, NodeLongTextColourOne, NodeLongTextColourTwo, NodeShortTextColourOne, NodeShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
 
             base.OnPaint(e);
         }

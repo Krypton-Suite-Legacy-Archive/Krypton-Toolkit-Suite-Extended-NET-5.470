@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,7 +11,7 @@ namespace ExtendedStandardControls
         #region Variables
         private Color _overrideFocusLongTextColourOne, _overrideFocusLongTextColourTwo, _overrideFocusShortTextColourOne, _overrideFocusShortTextColourTwo, _overrideNotVisitedLongTextColourOne, _overrideNotVisitedLongTextColourTwo, _overrideNotVisitedShortTextColourOne, _overrideNotVisitedShortTextColourTwo, _overridePressedLongTextColourOne, _overridePressedLongTextColourTwo, _overridePressedShortTextColourOne, _overridePressedShortTextColourTwo, _overrideVisitedLongTextColourOne, _overrideVisitedLongTextColourTwo, _overrideVisitedShortTextColourOne, _overrideVisitedShortTextColourTwo, _commonLongTextColourOne, _commonLongTextColourTwo, _commonShortTextColourOne, _commonShortTextColourTwo;
 
-        private Font _typeface;
+        private Font _longTextTypeface, _shortTextTypeface;
         #endregion
 
         #region Properties
@@ -65,7 +66,11 @@ namespace ExtendedStandardControls
         public Color CommonShortTextColourTwo { get => _commonShortTextColourTwo; set { _commonShortTextColourTwo = value; Invalidate(); } }
         #endregion
 
-        public Font Typeface { get => _typeface; set { _typeface = value; Invalidate(); } }
+        [Category("Appearance"), Description("The 'Long Text' typeface.")]
+        public Font LongTextTypeface { get => _longTextTypeface; set { _longTextTypeface = value; Invalidate(); } }
+
+        [Category("Appearance"), Description("The 'Short Text' typeface.")]
+        public Font ShortTextTypeface { get => _shortTextTypeface; set { _shortTextTypeface = value; Invalidate(); } }
 
         #endregion
 
@@ -123,9 +128,11 @@ namespace ExtendedStandardControls
             OverrideVisitedShortTextColourTwo = Color.Empty;
             #endregion
 
-            Typeface = null;
+            LongTextTypeface = null;
 
-            UpdateAppearanceValues(CommonLongTextColourOne, CommonLongTextColourTwo, CommonShortTextColourOne, CommonShortTextColourTwo, OverrideFocusLongTextColourOne, OverrideFocusLongTextColourTwo, OverrideFocusShortTextColourOne, OverrideFocusShortTextColourTwo, OverrideNotVisitedLongTextColourOne, OverrideNotVisitedLongTextColourTwo, OverrideNotVisitedShortTextColourOne, OverrideNotVisitedShortTextColourTwo, OverridePressedLongTextColourOne, OverridePressedLongTextColourTwo, OverridePressedShortTextColourOne, OverridePressedShortTextColourTwo, OverrideVisitedLongTextColourOne, OverrideVisitedLongTextColourTwo, OverrideVisitedShortTextColourOne, OverrideVisitedShortTextColourTwo, Typeface);
+            ShortTextTypeface = null;
+
+            UpdateAppearanceValues(CommonLongTextColourOne, CommonLongTextColourTwo, CommonShortTextColourOne, CommonShortTextColourTwo, OverrideFocusLongTextColourOne, OverrideFocusLongTextColourTwo, OverrideFocusShortTextColourOne, OverrideFocusShortTextColourTwo, OverrideNotVisitedLongTextColourOne, OverrideNotVisitedLongTextColourTwo, OverrideNotVisitedShortTextColourOne, OverrideNotVisitedShortTextColourTwo, OverridePressedLongTextColourOne, OverridePressedLongTextColourTwo, OverridePressedShortTextColourOne, OverridePressedShortTextColourTwo, OverrideVisitedLongTextColourOne, OverrideVisitedLongTextColourTwo, OverrideVisitedShortTextColourOne, OverrideVisitedShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
         }
         #endregion
 
@@ -152,20 +159,20 @@ namespace ExtendedStandardControls
         /// <param name="overrideVisitedShortTextColourOne">The override visited short text colour one.</param>
         /// <param name="overrideVisitedShortTextColourTwo">The override visited short text colour two.</param>
         /// <param name="typeface">The typeface.</param>
-        private void UpdateAppearanceValues(Color commonLongTextColourOne, Color commonLongTextColourTwo, Color commonShortTextColourOne, Color commonShortTextColourTwo, Color overrideFocusLongTextColourOne, Color overrideFocusLongTextColourTwo, Color overrideFocusShortTextColourOne, Color overrideFocusShortTextColourTwo, Color overrideNotVisitedLongTextColourOne, Color overrideNotVisitedLongTextColourTwo, Color overrideNotVisitedShortTextColourOne, Color overrideNotVisitedShortTextColourTwo, Color overridePressedLongTextColourOne, Color overridePressedLongTextColourTwo, Color overridePressedShortTextColourOne, Color overridePressedShortTextColourTwo, Color overrideVisitedLongTextColourOne, Color overrideVisitedLongTextColourTwo, Color overrideVisitedShortTextColourOne, Color overrideVisitedShortTextColourTwo, Font typeface)
+        private void UpdateAppearanceValues(Color commonLongTextColourOne, Color commonLongTextColourTwo, Color commonShortTextColourOne, Color commonShortTextColourTwo, Color overrideFocusLongTextColourOne, Color overrideFocusLongTextColourTwo, Color overrideFocusShortTextColourOne, Color overrideFocusShortTextColourTwo, Color overrideNotVisitedLongTextColourOne, Color overrideNotVisitedLongTextColourTwo, Color overrideNotVisitedShortTextColourOne, Color overrideNotVisitedShortTextColourTwo, Color overridePressedLongTextColourOne, Color overridePressedLongTextColourTwo, Color overridePressedShortTextColourOne, Color overridePressedShortTextColourTwo, Color overrideVisitedLongTextColourOne, Color overrideVisitedLongTextColourTwo, Color overrideVisitedShortTextColourOne, Color overrideVisitedShortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             #region Common
             StateCommon.LongText.Color1 = commonLongTextColourOne;
 
             StateCommon.LongText.Color2 = commonLongTextColourTwo;
 
-            StateCommon.LongText.Font = typeface;
+            StateCommon.LongText.Font = longTextTypeface;
 
             StateCommon.ShortText.Color1 = commonShortTextColourOne;
 
             StateCommon.ShortText.Color2 = commonShortTextColourTwo;
 
-            StateCommon.ShortText.Font = typeface;
+            StateCommon.ShortText.Font = shortTextTypeface;
             #endregion
 
             #region Override Focus
@@ -173,13 +180,13 @@ namespace ExtendedStandardControls
 
             OverrideFocus.LongText.Color2 = overrideFocusLongTextColourTwo;
 
-            OverrideFocus.LongText.Font = typeface;
+            OverrideFocus.LongText.Font = longTextTypeface;
 
             OverrideFocus.ShortText.Color1 = overrideFocusShortTextColourOne;
 
             OverrideFocus.ShortText.Color2 = overrideFocusShortTextColourTwo;
 
-            OverrideFocus.ShortText.Font = typeface;
+            OverrideFocus.ShortText.Font = shortTextTypeface;
             #endregion
 
             #region Override Not Visited
@@ -187,13 +194,13 @@ namespace ExtendedStandardControls
 
             OverrideNotVisited.LongText.Color2 = overrideNotVisitedLongTextColourTwo;
 
-            OverrideNotVisited.LongText.Font = typeface;
+            OverrideNotVisited.LongText.Font = longTextTypeface;
 
             OverrideNotVisited.ShortText.Color1 = overrideNotVisitedShortTextColourOne;
 
             OverrideNotVisited.ShortText.Color2 = overrideNotVisitedShortTextColourTwo;
 
-            OverrideNotVisited.ShortText.Font = typeface;
+            OverrideNotVisited.ShortText.Font = shortTextTypeface;
             #endregion
 
             #region Override Pressed
@@ -201,13 +208,13 @@ namespace ExtendedStandardControls
 
             OverridePressed.LongText.Color2 = overridePressedLongTextColourTwo;
 
-            OverridePressed.LongText.Font = typeface;
+            OverridePressed.LongText.Font = longTextTypeface;
 
             OverridePressed.ShortText.Color1 = overridePressedShortTextColourOne;
 
             OverridePressed.ShortText.Color2 = overridePressedShortTextColourTwo;
 
-            OverridePressed.ShortText.Font = typeface;
+            OverridePressed.ShortText.Font = shortTextTypeface;
             #endregion
 
             #region Override Visited
@@ -215,13 +222,13 @@ namespace ExtendedStandardControls
 
             OverrideVisited.LongText.Color2 = overrideVisitedLongTextColourTwo;
 
-            OverrideVisited.LongText.Font = typeface;
+            OverrideVisited.LongText.Font = longTextTypeface;
 
             OverrideVisited.ShortText.Color1 = overrideVisitedShortTextColourOne;
 
             OverrideVisited.ShortText.Color2 = overrideVisitedShortTextColourTwo;
 
-            OverrideVisited.ShortText.Font = typeface;
+            OverrideVisited.ShortText.Font = shortTextTypeface;
             #endregion
         }
         #endregion
@@ -231,7 +238,7 @@ namespace ExtendedStandardControls
         /// <param name="e">A PaintEventArgs that contains the event data.</param>
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateAppearanceValues(CommonLongTextColourOne, CommonLongTextColourTwo, CommonShortTextColourOne, CommonShortTextColourTwo, OverrideFocusLongTextColourOne, OverrideFocusLongTextColourTwo, OverrideFocusShortTextColourOne, OverrideFocusShortTextColourTwo, OverrideNotVisitedLongTextColourOne, OverrideNotVisitedLongTextColourTwo, OverrideNotVisitedShortTextColourOne, OverrideNotVisitedShortTextColourTwo, OverridePressedLongTextColourOne, OverridePressedLongTextColourTwo, OverridePressedShortTextColourOne, OverridePressedShortTextColourTwo, OverrideVisitedLongTextColourOne, OverrideVisitedLongTextColourTwo, OverrideVisitedShortTextColourOne, OverrideVisitedShortTextColourTwo, Typeface);
+            UpdateAppearanceValues(CommonLongTextColourOne, CommonLongTextColourTwo, CommonShortTextColourOne, CommonShortTextColourTwo, OverrideFocusLongTextColourOne, OverrideFocusLongTextColourTwo, OverrideFocusShortTextColourOne, OverrideFocusShortTextColourTwo, OverrideNotVisitedLongTextColourOne, OverrideNotVisitedLongTextColourTwo, OverrideNotVisitedShortTextColourOne, OverrideNotVisitedShortTextColourTwo, OverridePressedLongTextColourOne, OverridePressedLongTextColourTwo, OverridePressedShortTextColourOne, OverridePressedShortTextColourTwo, OverrideVisitedLongTextColourOne, OverrideVisitedLongTextColourTwo, OverrideVisitedShortTextColourOne, OverrideVisitedShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
 
             base.OnPaint(e);
         }

@@ -80,6 +80,7 @@ namespace ExtendedStandardControls
             UpdateAppearanceValues(BackgroundColourOne, BackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
         }
         #endregion
+
         #region Methods
         /// <summary>Updates the appearance values.</summary>
         /// <param name="backgroundColourOne">The background colour one.</param>

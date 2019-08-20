@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,7 +11,7 @@ namespace ExtendedStandardControls
         #region Variables
         private Color _longTextColourOne, _longTextColourTwo, _shortTextColourOne, _shortTextColourTwo;
 
-        private Font _typeface;
+        private Font _longTextTypeface, _shortTextTypeface;
         #endregion
 
         #region Properties
@@ -22,7 +23,11 @@ namespace ExtendedStandardControls
 
         public Color ShortTextColourTwo { get => _shortTextColourTwo; set { _shortTextColourTwo = value; Invalidate(); } }
 
-        public Font Typeface { get => _typeface; set { _typeface = value; Invalidate(); } }
+        [Category("Appearance"), Description("The 'Long Text' typeface.")]
+        public Font LongTextTypeface { get => _longTextTypeface; set { _longTextTypeface = value; Invalidate(); } }
+
+        [Category("Appearance"), Description("The 'Short Text' typeface.")]
+        public Font ShortTextTypeface { get => _shortTextTypeface; set { _shortTextTypeface = value; Invalidate(); } }
         #endregion
 
         #region Constructor
@@ -36,9 +41,11 @@ namespace ExtendedStandardControls
 
             ShortTextColourTwo = Color.Empty;
 
-            Typeface = null;
+            LongTextTypeface = null;
 
-            UpdateAppearanceValues(LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, Typeface);
+            ShortTextTypeface = null;
+
+            UpdateAppearanceValues(LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
         }
         #endregion
 
@@ -49,19 +56,19 @@ namespace ExtendedStandardControls
         /// <param name="shortTextColourOne">The short text colour one.</param>
         /// <param name="shortTextColourTwo">The short text colour two.</param>
         /// <param name="typeface">The typeface.</param>
-        private void UpdateAppearanceValues(Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font typeface)
+        private void UpdateAppearanceValues(Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StateCommon.LongText.Color1 = longTextColourOne;
 
             StateCommon.LongText.Color2 = longTextColourTwo;
 
-            StateCommon.LongText.Font = typeface;
+            StateCommon.LongText.Font = longTextTypeface;
 
             StateCommon.ShortText.Color1 = shortTextColourOne;
 
             StateCommon.ShortText.Color2 = shortTextColourTwo;
 
-            StateCommon.ShortText.Font = typeface;
+            StateCommon.ShortText.Font = shortTextTypeface;
         }
         #endregion
 
@@ -70,7 +77,7 @@ namespace ExtendedStandardControls
         /// <param name="e">A PaintEventArgs that contains the event data.</param>
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateAppearanceValues(LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, Typeface);
+            UpdateAppearanceValues(LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
 
             base.OnPaint(e);
         }
