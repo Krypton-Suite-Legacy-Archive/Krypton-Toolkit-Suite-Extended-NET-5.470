@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Krypton Palette Converter")]
+[assembly: AssemblyTitle("Toolkit Control Settings")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Krypton Palette Converter")]
+[assembly: AssemblyProduct("Toolkit Control Settings")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ecb9cda4-c0b9-4272-b8fc-921f29d688ed")]
+[assembly: Guid("b1178131-e303-42ed-9e9f-c808639bd40d")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("5.470.494.0")]
-[assembly: AssemblyFileVersion("5.470.494.0")]
+[assembly: AssemblyVersion("5.470.300.0")]
+[assembly: AssemblyFileVersion("5.470.300.0")]

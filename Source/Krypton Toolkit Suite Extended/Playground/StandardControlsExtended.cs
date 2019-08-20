@@ -8,18 +8,21 @@ namespace Playground
         private ExtendedStandardControls.KryptonLabelExtended kryptonLabelExtended1;
         private ExtendedStandardControls.KryptonLinkLabelExtended kryptonLinkLabelExtended1;
         private ExtendedStandardControls.KryptonMonthCalendarExtended kryptonMonthCalendarExtended1;
-        private KryptonTreeView kryptonTreeView1;
-        private KryptonWrapLabel kryptonWrapLabel1;
+        private ExtendedStandardControls.KryptonPanelExtended kryptonPanelExtended1;
+        private KryptonManager kryptonManager1;
+        private System.ComponentModel.IContainer components;
         private KryptonNumericUpDown kryptonNumericUpDown1;
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.kryptonNumericUpDown1 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonMonthCalendarExtended1 = new ExtendedStandardControls.KryptonMonthCalendarExtended();
             this.kryptonLinkLabelExtended1 = new ExtendedStandardControls.KryptonLinkLabelExtended();
             this.kryptonLabelExtended1 = new ExtendedStandardControls.KryptonLabelExtended();
-            this.kryptonTreeView1 = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
-            this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.kryptonPanelExtended1 = new ExtendedStandardControls.KryptonPanelExtended();
+            this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelExtended1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonNumericUpDown1
@@ -124,33 +127,33 @@ namespace Playground
             this.kryptonLabelExtended1.Typeface = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabelExtended1.Values.Text = "kryptonLabelExtended1";
             // 
-            // kryptonTreeView1
+            // kryptonPanelExtended1
             // 
-            this.kryptonTreeView1.Location = new System.Drawing.Point(776, 182);
-            this.kryptonTreeView1.Name = "kryptonTreeView1";
-            this.kryptonTreeView1.Size = new System.Drawing.Size(120, 96);
-            this.kryptonTreeView1.TabIndex = 9;
+            this.kryptonPanelExtended1.BackGroundColourOne = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.kryptonPanelExtended1.BackGroundColourTwo = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.kryptonPanelExtended1.Location = new System.Drawing.Point(728, 29);
+            this.kryptonPanelExtended1.Name = "kryptonPanelExtended1";
+            this.kryptonPanelExtended1.Size = new System.Drawing.Size(414, 310);
+            this.kryptonPanelExtended1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.kryptonPanelExtended1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.kryptonPanelExtended1.StateCommon.Image = global::Playground.Properties.Resources.KR_32_x_32_Orange;
+            this.kryptonPanelExtended1.TabIndex = 11;
             // 
-            // kryptonWrapLabel1
+            // kryptonManager1
             // 
-            this.kryptonWrapLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            this.kryptonWrapLabel1.Location = new System.Drawing.Point(452, 428);
-            this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
-            this.kryptonWrapLabel1.Size = new System.Drawing.Size(110, 15);
-            this.kryptonWrapLabel1.Text = "kryptonWrapLabel1";
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2007Blue;
             // 
             // StandardControlsExtended
             // 
             this.ClientSize = new System.Drawing.Size(1369, 636);
-            this.Controls.Add(this.kryptonWrapLabel1);
-            this.Controls.Add(this.kryptonTreeView1);
+            this.Controls.Add(this.kryptonPanelExtended1);
             this.Controls.Add(this.kryptonNumericUpDown1);
             this.Controls.Add(this.kryptonMonthCalendarExtended1);
             this.Controls.Add(this.kryptonLinkLabelExtended1);
             this.Controls.Add(this.kryptonLabelExtended1);
             this.Name = "StandardControlsExtended";
             this.Load += new System.EventHandler(this.StandardControlsExtended_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelExtended1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
