@@ -31,12 +31,12 @@ namespace ExtendedStandardControls
 
             Image = null;
 
-            UpdateAppearanceValues(BackGroundColourOne, BackGroundColourTwo, Image);
+            UpdateCommonAppearanceValues(BackGroundColourOne, BackGroundColourTwo, Image);
         }
         #endregion
 
         #region Method
-        private void UpdateAppearanceValues(Color backGroundColourOne, Color backGroundColourTwo, Image image)
+        private void UpdateCommonAppearanceValues(Color backGroundColourOne, Color backGroundColourTwo, Image image)
         {
             StateCommon.Color1 = backGroundColourOne;
 
@@ -49,7 +49,7 @@ namespace ExtendedStandardControls
         #region Override
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateAppearanceValues(BackGroundColourOne, BackGroundColourTwo, Image);
+            UpdateCommonAppearanceValues(BackGroundColourOne, BackGroundColourTwo, Image);
 
             base.OnPaint(e);
         }

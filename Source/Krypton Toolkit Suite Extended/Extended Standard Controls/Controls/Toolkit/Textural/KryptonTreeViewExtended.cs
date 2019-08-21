@@ -57,12 +57,12 @@ namespace ExtendedStandardControls.Controls
 
             ShortTextTypeface = null;
 
-            UpdateAppearanceValues(BackgroundColour, NodeBackgroundColourOne, NodeBackgroundColourTwo, NodeLongTextColourOne, NodeLongTextColourTwo, NodeShortTextColourOne, NodeShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+            UpdateCommonAppearanceValues(BackgroundColour, NodeBackgroundColourOne, NodeBackgroundColourTwo, NodeLongTextColourOne, NodeLongTextColourTwo, NodeShortTextColourOne, NodeShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
         }
         #endregion
 
         #region Method
-        private void UpdateAppearanceValues(Color backgroundColour, Color nodeBackgroundColourOne, Color nodeBackgroundColourTwo, Color nodeLongTextColourOne, Color nodeLongTextColourTwo, Color nodeShortTextColourOne, Color nodeShortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
+        private void UpdateCommonAppearanceValues(Color backgroundColour, Color nodeBackgroundColourOne, Color nodeBackgroundColourTwo, Color nodeLongTextColourOne, Color nodeLongTextColourTwo, Color nodeShortTextColourOne, Color nodeShortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StateCommon.Back.Color1 = backgroundColour;
 
@@ -87,7 +87,7 @@ namespace ExtendedStandardControls.Controls
         #region Override
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateAppearanceValues(BackgroundColour, NodeBackgroundColourOne, NodeBackgroundColourTwo, NodeLongTextColourOne, NodeLongTextColourTwo, NodeShortTextColourOne, NodeShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+            UpdateCommonAppearanceValues(BackgroundColour, NodeBackgroundColourOne, NodeBackgroundColourTwo, NodeLongTextColourOne, NodeLongTextColourTwo, NodeShortTextColourOne, NodeShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
 
             base.OnPaint(e);
         }

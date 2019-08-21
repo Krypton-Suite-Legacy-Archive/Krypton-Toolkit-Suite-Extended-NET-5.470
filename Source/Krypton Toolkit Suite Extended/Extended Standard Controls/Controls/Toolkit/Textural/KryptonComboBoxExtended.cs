@@ -77,7 +77,7 @@ namespace ExtendedStandardControls
 
             Image = null;
 
-            UpdateAppearenceValues(ComboBoxBackColour, ComboBoxContentColour, ComboBoxDropBackColourOne, ComboBoxDropBackColourTwo, ComboBoxItemBackColourOne, ComboBoxItemBackColourTwo, ComboBoxItemContentLongTextColourOne, ComboBoxItemContentLongTextColourTwo, ComboBoxItemContentShortTextColourOne, ComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
+            UpdateCommonAppearanceValues(ComboBoxBackColour, ComboBoxContentColour, ComboBoxDropBackColourOne, ComboBoxDropBackColourTwo, ComboBoxItemBackColourOne, ComboBoxItemBackColourTwo, ComboBoxItemContentLongTextColourOne, ComboBoxItemContentLongTextColourTwo, ComboBoxItemContentShortTextColourOne, ComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
         }
         #endregion
 
@@ -97,7 +97,7 @@ namespace ExtendedStandardControls
         /// <param name="comboBoxItemContentLongTextTypeface">The combo box item content long text typeface.</param>
         /// <param name="comboBoxItemContentShortTextTypeface">The combo box item content short text typeface.</param>
         /// <param name="image">The image.</param>
-        private void UpdateAppearenceValues(Color comboBoxBackColour, Color comboBoxContentColour, Color comboBoxDropBackColourOne, Color comboBoxDropBackColourTwo, Color comboBoxItemBackColourOne, Color comboBoxItemBackColourTwo, Color comboBoxItemContentLongTextColourOne, Color comboBoxItemContentLongTextColourTwo, Color comboBoxItemContentShortTextColourOne, Color comboBoxItemContentShortTextColourTwo, Font comboBoxContentTypeface, Font comboBoxItemContentLongTextTypeface, Font comboBoxItemContentShortTextTypeface, Image image)
+        private void UpdateCommonAppearanceValues(Color comboBoxBackColour, Color comboBoxContentColour, Color comboBoxDropBackColourOne, Color comboBoxDropBackColourTwo, Color comboBoxItemBackColourOne, Color comboBoxItemBackColourTwo, Color comboBoxItemContentLongTextColourOne, Color comboBoxItemContentLongTextColourTwo, Color comboBoxItemContentShortTextColourOne, Color comboBoxItemContentShortTextColourTwo, Font comboBoxContentTypeface, Font comboBoxItemContentLongTextTypeface, Font comboBoxItemContentShortTextTypeface, Image image)
         {
             StateCommon.ComboBox.Back.Color1 = comboBoxBackColour;
 
@@ -134,7 +134,7 @@ namespace ExtendedStandardControls
         #region Overrides
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateAppearenceValues(ComboBoxBackColour, ComboBoxContentColour, ComboBoxDropBackColourOne, ComboBoxDropBackColourTwo, ComboBoxItemBackColourOne, ComboBoxItemBackColourTwo, ComboBoxItemContentLongTextColourOne, ComboBoxItemContentLongTextColourTwo, ComboBoxItemContentShortTextColourOne, ComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
+            UpdateCommonAppearanceValues(ComboBoxBackColour, ComboBoxContentColour, ComboBoxDropBackColourOne, ComboBoxDropBackColourTwo, ComboBoxItemBackColourOne, ComboBoxItemBackColourTwo, ComboBoxItemContentLongTextColourOne, ComboBoxItemContentLongTextColourTwo, ComboBoxItemContentShortTextColourOne, ComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
 
             base.OnPaint(e);
         }

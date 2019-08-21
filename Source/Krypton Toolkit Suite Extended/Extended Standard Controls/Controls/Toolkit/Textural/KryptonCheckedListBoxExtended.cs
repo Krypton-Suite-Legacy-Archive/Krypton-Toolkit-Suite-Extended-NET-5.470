@@ -77,7 +77,7 @@ namespace ExtendedStandardControls
 
             Image = null;
 
-            UpdateAppearanceValues(BackgroundColourOne, BackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
+            UpdateCommonAppearanceValues(BackgroundColourOne, BackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
         }
         #endregion
 
@@ -94,7 +94,7 @@ namespace ExtendedStandardControls
         /// <param name="longTextTypeface">The long text typeface.</param>
         /// <param name="shortTextTypeface">The short text typeface.</param>
         /// <param name="image">The image.</param>
-        private void UpdateAppearanceValues(Color backgroundColourOne, Color backgroundColourTwo, Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface, Image image)
+        private void UpdateCommonAppearanceValues(Color backgroundColourOne, Color backgroundColourTwo, Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface, Image image)
         {
             StateCommon.Back.Color1 = backgroundColourOne;
 
@@ -125,7 +125,7 @@ namespace ExtendedStandardControls
         #region Overrides
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateAppearanceValues(BackgroundColourOne, BackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
+            UpdateCommonAppearanceValues(BackgroundColourOne, BackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
 
             base.OnPaint(e);
         }

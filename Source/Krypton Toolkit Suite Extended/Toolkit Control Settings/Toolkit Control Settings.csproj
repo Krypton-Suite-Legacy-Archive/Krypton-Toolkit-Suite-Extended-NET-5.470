@@ -53,6 +53,26 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>KryptonButtonCommonSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Settings\Toolkit\Common\KryptonCheckBoxCommonSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>KryptonCheckBoxCommonSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Toolkit\Common\KryptonCheckButtonCommonSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>KryptonCheckButtonCommonSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Toolkit\Common\KryptonCheckedListBoxCommonSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>KryptonCheckedListBoxCommonSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Toolkit\Common\KryptonColourButtonCommonSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>KryptonColourButtonCommonSettings.settings</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +84,22 @@
     <None Include="Settings\Toolkit\Common\KryptonButtonCommonSettings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>KryptonButtonCommonSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Toolkit\Common\KryptonCheckBoxCommonSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>KryptonCheckBoxCommonSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Toolkit\Common\KryptonCheckButtonCommonSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>KryptonCheckButtonCommonSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Toolkit\Common\KryptonCheckedListBoxCommonSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>KryptonCheckedListBoxCommonSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Toolkit\Common\KryptonColourButtonCommonSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>KryptonColourButtonCommonSettings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

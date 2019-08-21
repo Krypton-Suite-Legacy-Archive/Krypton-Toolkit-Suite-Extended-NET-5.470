@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Classes\Typeface.cs" />
     <Compile Include="Controls\Toolkit\Panels\KryptonPanelExtended.cs" />
+    <Compile Include="Controls\Toolkit\Panels\KryptonSplitContainerExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonButtonExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonCheckBoxExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonCheckButtonExtended.cs" />

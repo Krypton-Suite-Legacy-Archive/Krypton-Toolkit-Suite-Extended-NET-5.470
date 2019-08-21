@@ -67,12 +67,12 @@ namespace ExtendedStandardControls
 
             Image = null;
 
-            UpdateAppearanceValues(BackGroundColourOne, BackGroundColourTwo, LongTextColourOne, LongTextColourTwo, LongTextTypeface, ShortTextColourOne, ShortTextColourTwo, ShortTextTypeface, Image);
+            UpdateCommonAppearanceValues(BackGroundColourOne, BackGroundColourTwo, LongTextColourOne, LongTextColourTwo, LongTextTypeface, ShortTextColourOne, ShortTextColourTwo, ShortTextTypeface, Image);
         }
         #endregion
 
         #region Method
-        private void UpdateAppearanceValues(Color backGroundColourOne, Color backGroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Font longTextTypeface, Color shortTextColourOne, Color shortTextColourTwo, Font shortTextTypeface, Image image)
+        private void UpdateCommonAppearanceValues(Color backGroundColourOne, Color backGroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Font longTextTypeface, Color shortTextColourOne, Color shortTextColourTwo, Font shortTextTypeface, Image image)
         {
             StateCommon.Back.Color1 = backGroundColourOne;
 
@@ -99,7 +99,7 @@ namespace ExtendedStandardControls
         #region Overrides
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateAppearanceValues(BackGroundColourOne, BackGroundColourTwo, LongTextColourOne, LongTextColourTwo, LongTextTypeface, ShortTextColourOne, ShortTextColourTwo, ShortTextTypeface, Image);
+            UpdateCommonAppearanceValues(BackGroundColourOne, BackGroundColourTwo, LongTextColourOne, LongTextColourTwo, LongTextTypeface, ShortTextColourOne, ShortTextColourTwo, ShortTextTypeface, Image);
 
             base.OnPaint(e);
         }

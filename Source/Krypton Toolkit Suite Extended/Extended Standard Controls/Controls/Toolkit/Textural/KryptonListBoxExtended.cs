@@ -61,12 +61,12 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
 
             ShortTextTypeface = null;
 
-            UpdateAppearanceValues(CommonBackgroundColourOne, CommonBackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+            UpdateCommonAppearanceValues(CommonBackgroundColourOne, CommonBackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
         }
         #endregion
 
         #region Method
-        private void UpdateAppearanceValues(Color commonBackgroundColourOne, Color commonBackgroundColourTwo, Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
+        private void UpdateCommonAppearanceValues(Color commonBackgroundColourOne, Color commonBackgroundColourTwo, Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StateCommon.Back.Color1 = commonBackgroundColourOne;
 
@@ -93,7 +93,7 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
         #region Overrides
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateAppearanceValues(CommonBackgroundColourOne, CommonBackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+            UpdateCommonAppearanceValues(CommonBackgroundColourOne, CommonBackgroundColourTwo, ItemBackgroundColourOne, ItemBackgroundColourTwo, LongTextColourOne, LongTextColourTwo, ShortTextColourOne, ShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
 
             base.OnPaint(e);
         }
