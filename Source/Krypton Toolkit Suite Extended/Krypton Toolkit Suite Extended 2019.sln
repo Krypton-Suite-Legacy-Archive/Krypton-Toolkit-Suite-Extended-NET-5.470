@@ -212,6 +212,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{24BC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolkit Control Settings", "Toolkit Control Settings\Toolkit Control Settings.csproj", "{B1178131-E303-42ED-9E9F-C808639BD40D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krypton Sparkle", "Krypton Sparkle\Krypton Sparkle.csproj", "{501F76BC-0CC8-4680-9497-489539D65944}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -600,6 +602,18 @@ Global
 		{B1178131-E303-42ED-9E9F-C808639BD40D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B1178131-E303-42ED-9E9F-C808639BD40D}.Release|x86.ActiveCfg = Release|Any CPU
 		{B1178131-E303-42ED-9E9F-C808639BD40D}.Release|x86.Build.0 = Release|Any CPU
+		{501F76BC-0CC8-4680-9497-489539D65944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501F76BC-0CC8-4680-9497-489539D65944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501F76BC-0CC8-4680-9497-489539D65944}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{501F76BC-0CC8-4680-9497-489539D65944}.Debug|x86.Build.0 = Debug|Any CPU
+		{501F76BC-0CC8-4680-9497-489539D65944}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{501F76BC-0CC8-4680-9497-489539D65944}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{501F76BC-0CC8-4680-9497-489539D65944}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{501F76BC-0CC8-4680-9497-489539D65944}.Installer Only|x86.Build.0 = Release|Any CPU
+		{501F76BC-0CC8-4680-9497-489539D65944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501F76BC-0CC8-4680-9497-489539D65944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{501F76BC-0CC8-4680-9497-489539D65944}.Release|x86.ActiveCfg = Release|Any CPU
+		{501F76BC-0CC8-4680-9497-489539D65944}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -652,6 +666,7 @@ Global
 		{8E3D0185-FCA5-4BF4-ABF9-A04AB6A0CF90} = {00BD5065-7D99-43D4-BF83-5AB7B3474EF1}
 		{24BCE9A0-E437-430F-97CC-09B10AD1114F} = {8A22EBC9-33CB-49B2-B943-493475778C30}
 		{B1178131-E303-42ED-9E9F-C808639BD40D} = {40012A2D-6D4F-4EE7-991D-7073DC5A579C}
+		{501F76BC-0CC8-4680-9497-489539D65944} = {00BD5065-7D99-43D4-BF83-5AB7B3474EF1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4D1018D-143A-451D-8FC0-F63E4923F552}
