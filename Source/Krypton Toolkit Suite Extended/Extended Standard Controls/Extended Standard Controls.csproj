@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Typeface.cs" />
+    <Compile Include="Controls\Extended Toolkit\Textural\KryptonUACElevatedButtonExtended.cs" />
     <Compile Include="Controls\Toolkit\Panels\KryptonPanelExtended.cs" />
     <Compile Include="Controls\Toolkit\Panels\KryptonSplitContainerExtended.cs" />
     <Compile Include="Controls\Toolkit\Textural\KryptonButtonExtended.cs" />
@@ -74,6 +75,12 @@
     <PackageReference Include="KryptonToolkitSuite5470">
       <Version>5.470.1252</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Extended Toolkit Core.csproj">
+      <Project>{5F28100D-C9A0-4361-B780-7AC132A421DF}</Project>
+      <Name>Extended Toolkit Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
