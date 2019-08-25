@@ -34,6 +34,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,8 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CommonMethods.cs" />
     <Compile Include="Classes\Enumerations\Enumerations.cs" />
     <Compile Include="Classes\ExceptionHandler.cs" />
+    <Compile Include="Classes\GlobalMethods.cs" />
     <Compile Include="Classes\Helpers\HashingHelper.cs" />
     <Compile Include="Classes\IconExtractor.cs" />
     <Compile Include="Classes\Internal\InternalExtendedKryptonMessageBox.cs" />
@@ -61,7 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.1251</Version>
+      <Version>5.470.1252</Version>
+    </PackageReference>
+    <PackageReference Include="WindowsAPICodePack">
+      <Version>1.1.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

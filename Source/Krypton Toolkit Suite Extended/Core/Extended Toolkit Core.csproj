@@ -85,6 +85,7 @@
     <Compile Include="Components\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\KryptonUACElevatedButton.cs" />
     <Compile Include="Components\List View\ListViewColumnSorter.cs" />
     <Compile Include="Components\List View\ListViewItemComparer.cs" />
     <Compile Include="Components\List View\ListViewPrint.cs">
@@ -125,10 +126,15 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.1251</Version>
+      <Version>5.470.1252</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Warning_32_x_32.png" />
     <None Include="Resources\Warning_2.png" />

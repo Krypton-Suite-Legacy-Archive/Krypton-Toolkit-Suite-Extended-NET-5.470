@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KryptonSparkle.Classes;
+using System;
 using System.Windows.Forms;
 
 namespace KryptonSparkle.Interfaces

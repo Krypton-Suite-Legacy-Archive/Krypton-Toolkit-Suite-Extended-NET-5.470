@@ -31,10 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Extended Standard Controls">
+      <HintPath>..\Extended Standard Controls\obj\Debug\Extended Standard Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Net" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -43,8 +48,22 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\KryptonSparkle.cs" />
+    <Compile Include="Classes\KryptonSparkleAppCast.cs" />
+    <Compile Include="Classes\KryptonSparkleAppCastItem.cs" />
+    <Compile Include="Classes\KryptonSparkleAssemblyAccessor.cs" />
+    <Compile Include="Classes\KryptonSparkleAssemblyDiagnosticsAccessor.cs" />
+    <Compile Include="Classes\KryptonSparkleAssemblyReflectionAccessor.cs" />
+    <Compile Include="Classes\KryptonSparkleConfiguration.cs" />
+    <Compile Include="Classes\KryptonSparkleDeviceInventory.cs" />
+    <Compile Include="Classes\KryptonSparkleDiagnostic.cs" />
+    <Compile Include="Classes\KryptonSparkleDSAVerificator.cs" />
+    <Compile Include="Classes\KryptonSparkleException.cs" />
+    <Compile Include="Classes\KryptonSparkleRegistryConfiguration.cs" />
+    <Compile Include="Classes\UpdateDetectedEventArgs.cs" />
     <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="Interfaces\IKryptonSparkleAssemblyAccessor.cs" />
     <Compile Include="Interfaces\IKryptonSparkleDownloadProgress.cs" />
@@ -55,16 +74,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UX\KryptonSparkleDownloadProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\KryptonSparkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470CoreModule">
       <Version>5.470.1252</Version>
+    </PackageReference>
+    <PackageReference Include="NLog">
+      <Version>4.6.6</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\KryptonSparkleDownloadProgress.resx">
+      <DependentUpon>KryptonSparkleDownloadProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\KryptonSparkleForm.resx">
+      <DependentUpon>KryptonSparkleForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

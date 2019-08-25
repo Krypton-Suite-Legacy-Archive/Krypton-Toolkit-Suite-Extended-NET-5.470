@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Krypton Sparkle")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A application update program, based off NetSparkle.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Krypton Sparkle")]
