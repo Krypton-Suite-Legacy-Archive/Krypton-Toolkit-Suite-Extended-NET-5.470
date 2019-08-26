@@ -10,52 +10,49 @@ namespace KryptonSparkle.UX
     public class KryptonSparkleForm : KryptonForm, IKryptonSparkleForm
     {
         #region Designer Code
-        private System.Windows.Forms.WebBrowser NetSparkleBrowser;
-        private ExtendedStandardControls.KryptonLabelExtended kryptonLabelExtended1;
-        private ExtendedStandardControls.KryptonLabelExtended klblDetails;
+        private KryptonPanel kryptonPanel1;
         private ExtendedStandardControls.KryptonLabelExtended klblHeader;
-        private System.Windows.Forms.PictureBox pbxAppIcon;
+        private ExtendedStandardControls.KryptonLabelExtended klblDetails;
+        private ExtendedStandardControls.KryptonLabelExtended kryptonLabelExtended1;
+        private WebBrowser NetSparkleBrowser;
         private ExtendedStandardControls.KryptonButtonExtended kbtnSkip;
-        private ExtendedStandardControls.KryptonButtonExtended kbtnRemins;
         private ExtendedStandardControls.KryptonButtonExtended kbtnInstall;
-        private ExtendedStandardControls.KryptonPanelExtended kryptonPanelExtended1;
+        private ExtendedStandardControls.KryptonButtonExtended kbtnRemind;
+        private PictureBox pbxAppIcon;
 
 
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KryptonSparkleForm));
-            this.kryptonPanelExtended1 = new ExtendedStandardControls.KryptonPanelExtended();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.klblHeader = new ExtendedStandardControls.KryptonLabelExtended();
             this.pbxAppIcon = new System.Windows.Forms.PictureBox();
             this.klblDetails = new ExtendedStandardControls.KryptonLabelExtended();
             this.kryptonLabelExtended1 = new ExtendedStandardControls.KryptonLabelExtended();
             this.NetSparkleBrowser = new System.Windows.Forms.WebBrowser();
             this.kbtnInstall = new ExtendedStandardControls.KryptonButtonExtended();
-            this.kbtnRemins = new ExtendedStandardControls.KryptonButtonExtended();
+            this.kbtnRemind = new ExtendedStandardControls.KryptonButtonExtended();
             this.kbtnSkip = new ExtendedStandardControls.KryptonButtonExtended();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelExtended1)).BeginInit();
-            this.kryptonPanelExtended1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
+            this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAppIcon)).BeginInit();
             this.SuspendLayout();
             // 
-            // kryptonPanelExtended1
+            // kryptonPanel1
             // 
-            this.kryptonPanelExtended1.BackGroundColourOne = System.Drawing.Color.Empty;
-            this.kryptonPanelExtended1.BackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kryptonPanelExtended1.Controls.Add(this.kbtnSkip);
-            this.kryptonPanelExtended1.Controls.Add(this.kbtnRemins);
-            this.kryptonPanelExtended1.Controls.Add(this.kbtnInstall);
-            this.kryptonPanelExtended1.Controls.Add(this.NetSparkleBrowser);
-            this.kryptonPanelExtended1.Controls.Add(this.kryptonLabelExtended1);
-            this.kryptonPanelExtended1.Controls.Add(this.klblDetails);
-            this.kryptonPanelExtended1.Controls.Add(this.klblHeader);
-            this.kryptonPanelExtended1.Controls.Add(this.pbxAppIcon);
-            this.kryptonPanelExtended1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanelExtended1.Image = null;
-            this.kryptonPanelExtended1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanelExtended1.Name = "kryptonPanelExtended1";
-            this.kryptonPanelExtended1.Size = new System.Drawing.Size(575, 452);
-            this.kryptonPanelExtended1.TabIndex = 0;
+            this.kryptonPanel1.Controls.Add(this.kbtnSkip);
+            this.kryptonPanel1.Controls.Add(this.kbtnInstall);
+            this.kryptonPanel1.Controls.Add(this.kbtnRemind);
+            this.kryptonPanel1.Controls.Add(this.NetSparkleBrowser);
+            this.kryptonPanel1.Controls.Add(this.kryptonLabelExtended1);
+            this.kryptonPanel1.Controls.Add(this.klblDetails);
+            this.kryptonPanel1.Controls.Add(this.klblHeader);
+            this.kryptonPanel1.Controls.Add(this.pbxAppIcon);
+            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.Size = new System.Drawing.Size(679, 494);
+            this.kryptonPanel1.TabIndex = 0;
             // 
             // klblHeader
             // 
@@ -84,47 +81,45 @@ namespace KryptonSparkle.UX
             // 
             // klblDetails
             // 
-            this.klblDetails.AutoSize = false;
             this.klblDetails.Image = null;
             this.klblDetails.Location = new System.Drawing.Point(67, 39);
             this.klblDetails.LongTextTypeface = null;
             this.klblDetails.Name = "klblDetails";
             this.klblDetails.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblDetails.Size = new System.Drawing.Size(496, 49);
+            this.klblDetails.Size = new System.Drawing.Size(423, 19);
             this.klblDetails.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblDetails.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.klblDetails.TabIndex = 1;
+            this.klblDetails.TabIndex = 5;
             this.klblDetails.TextColourOne = System.Drawing.Color.Empty;
             this.klblDetails.TextColourTwo = System.Drawing.Color.Empty;
-            this.klblDetails.Values.Text = "APP is now available (you have OLDVERSION). \r\nWould you like to download it now?";
+            this.klblDetails.Values.Text = "APP is now available (you have OLDVERSION). Would you like to download it now?";
             // 
             // kryptonLabelExtended1
             // 
             this.kryptonLabelExtended1.Image = null;
-            this.kryptonLabelExtended1.Location = new System.Drawing.Point(67, 94);
+            this.kryptonLabelExtended1.Location = new System.Drawing.Point(67, 64);
             this.kryptonLabelExtended1.LongTextTypeface = null;
             this.kryptonLabelExtended1.Name = "kryptonLabelExtended1";
             this.kryptonLabelExtended1.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabelExtended1.Size = new System.Drawing.Size(103, 21);
+            this.kryptonLabelExtended1.Size = new System.Drawing.Size(100, 21);
             this.kryptonLabelExtended1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabelExtended1.TabIndex = 5;
+            this.kryptonLabelExtended1.TabIndex = 6;
             this.kryptonLabelExtended1.TextColourOne = System.Drawing.Color.Empty;
             this.kryptonLabelExtended1.TextColourTwo = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended1.Values.Text = "Release Notes:";
+            this.kryptonLabelExtended1.Values.Text = "Release notes:";
             // 
             // NetSparkleBrowser
             // 
             this.NetSparkleBrowser.IsWebBrowserContextMenuEnabled = false;
-            this.NetSparkleBrowser.Location = new System.Drawing.Point(67, 121);
+            this.NetSparkleBrowser.Location = new System.Drawing.Point(67, 91);
             this.NetSparkleBrowser.MinimumSize = new System.Drawing.Size(20, 28);
             this.NetSparkleBrowser.Name = "NetSparkleBrowser";
-            this.NetSparkleBrowser.Size = new System.Drawing.Size(496, 290);
-            this.NetSparkleBrowser.TabIndex = 6;
+            this.NetSparkleBrowser.Size = new System.Drawing.Size(600, 355);
+            this.NetSparkleBrowser.TabIndex = 7;
             // 
             // kbtnInstall
             // 
             this.kbtnInstall.Image = null;
-            this.kbtnInstall.Location = new System.Drawing.Point(444, 417);
+            this.kbtnInstall.Location = new System.Drawing.Point(577, 457);
             this.kbtnInstall.LongTextTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.kbtnInstall.Name = "kbtnInstall";
             this.kbtnInstall.OverrideDefault.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -144,7 +139,7 @@ namespace KryptonSparkle.UX
             this.kbtnInstall.OverrideFocusShortTextColourOne = System.Drawing.Color.Empty;
             this.kbtnInstall.OverrideFocusShortTextColourTwo = System.Drawing.Color.Empty;
             this.kbtnInstall.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnInstall.Size = new System.Drawing.Size(119, 25);
+            this.kbtnInstall.Size = new System.Drawing.Size(90, 25);
             this.kbtnInstall.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.kbtnInstall.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kbtnInstall.StateCommonBackGroundColourOne = System.Drawing.Color.Empty;
@@ -186,79 +181,81 @@ namespace KryptonSparkle.UX
             this.kbtnInstall.StateTrackingShortTextColourOne = System.Drawing.Color.Empty;
             this.kbtnInstall.StateTrackingShortTextColourTwo = System.Drawing.Color.Empty;
             this.kbtnInstall.TabIndex = 2;
-            this.kbtnInstall.Values.Text = "I&nstall Update";
+            this.kbtnInstall.Values.Text = "I&nstall";
+            this.kbtnInstall.Click += new System.EventHandler(this.KbtnInstall_Click);
             // 
-            // kbtnRemins
+            // kbtnRemind
             // 
-            this.kbtnRemins.Image = null;
-            this.kbtnRemins.Location = new System.Drawing.Point(295, 417);
-            this.kbtnRemins.LongTextTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnRemins.Name = "kbtnRemins";
-            this.kbtnRemins.OverrideDefault.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnRemins.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnRemins.OverrideDefaultBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.OverrideDefaultBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.OverrideDefaultLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.OverrideDefaultLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.OverrideDefaultShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.OverrideDefaultShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.OverrideFocus.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnRemins.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnRemins.OverrideFocusBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.OverrideFocusBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.OverrideFocusLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.OverrideFocusLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.OverrideFocusShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.OverrideFocusShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnRemins.Size = new System.Drawing.Size(143, 25);
-            this.kbtnRemins.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnRemins.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnRemins.StateCommonBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateCommonBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateCommonLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateCommonLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateCommonShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateCommonShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateDisabled.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnRemins.StateDisabled.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnRemins.StateDisabledBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateDisabledBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateDisabledLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateDisabledLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateDisabledShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateDisabledShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateNormal.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnRemins.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnRemins.StateNormalBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateNormalBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateNormalLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateNormalLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateNormalShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateNormalShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StatePressed.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnRemins.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnRemins.StatePressedBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StatePressedBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StatePressedLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StatePressedLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StatePressedShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StatePressedShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateTracking.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnRemins.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnRemins.StateTrackingBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateTrackingBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateTrackingLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateTrackingLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateTrackingShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnRemins.StateTrackingShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnRemins.TabIndex = 2;
-            this.kbtnRemins.Values.Text = "Remind Me &Later";
+            this.kbtnRemind.Image = null;
+            this.kbtnRemind.Location = new System.Drawing.Point(428, 457);
+            this.kbtnRemind.LongTextTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnRemind.Name = "kbtnRemind";
+            this.kbtnRemind.OverrideDefault.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnRemind.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnRemind.OverrideDefaultBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.OverrideDefaultBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.OverrideDefaultLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.OverrideDefaultLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.OverrideDefaultShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.OverrideDefaultShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.OverrideFocus.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnRemind.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnRemind.OverrideFocusBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.OverrideFocusBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.OverrideFocusLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.OverrideFocusLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.OverrideFocusShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.OverrideFocusShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnRemind.Size = new System.Drawing.Size(143, 25);
+            this.kbtnRemind.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnRemind.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnRemind.StateCommonBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateCommonBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateCommonLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateCommonLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateCommonShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateCommonShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateDisabled.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnRemind.StateDisabled.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnRemind.StateDisabledBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateDisabledBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateDisabledLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateDisabledLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateDisabledShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateDisabledShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateNormal.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnRemind.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnRemind.StateNormalBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateNormalBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateNormalLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateNormalLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateNormalShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateNormalShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StatePressed.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnRemind.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnRemind.StatePressedBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StatePressedBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StatePressedLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StatePressedLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StatePressedShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StatePressedShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateTracking.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnRemind.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnRemind.StateTrackingBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateTrackingBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateTrackingLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateTrackingLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateTrackingShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnRemind.StateTrackingShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnRemind.TabIndex = 3;
+            this.kbtnRemind.Values.Text = "&Remind me Later";
+            this.kbtnRemind.Click += new System.EventHandler(this.KbtnRemind_Click);
             // 
             // kbtnSkip
             // 
             this.kbtnSkip.Image = null;
-            this.kbtnSkip.Location = new System.Drawing.Point(67, 417);
+            this.kbtnSkip.Location = new System.Drawing.Point(67, 457);
             this.kbtnSkip.LongTextTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.kbtnSkip.Name = "kbtnSkip";
             this.kbtnSkip.OverrideDefault.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -319,13 +316,14 @@ namespace KryptonSparkle.UX
             this.kbtnSkip.StateTrackingLongTextColourTwo = System.Drawing.Color.Empty;
             this.kbtnSkip.StateTrackingShortTextColourOne = System.Drawing.Color.Empty;
             this.kbtnSkip.StateTrackingShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnSkip.TabIndex = 2;
+            this.kbtnSkip.TabIndex = 8;
             this.kbtnSkip.Values.Text = "&Skip this Version";
+            this.kbtnSkip.Click += new System.EventHandler(this.KbtnSkip_Click);
             // 
             // KryptonSparkleForm
             // 
-            this.ClientSize = new System.Drawing.Size(575, 452);
-            this.Controls.Add(this.kryptonPanelExtended1);
+            this.ClientSize = new System.Drawing.Size(679, 494);
+            this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -333,13 +331,17 @@ namespace KryptonSparkle.UX
             this.Name = "KryptonSparkleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Software Update";
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelExtended1)).EndInit();
-            this.kryptonPanelExtended1.ResumeLayout(false);
-            this.kryptonPanelExtended1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
+            this.kryptonPanel1.ResumeLayout(false);
+            this.kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAppIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
+        #endregion
+
+        #region Variables
+        private KryptonSparkleAppCastItem _currentItem;
         #endregion
 
         #region Constructor
@@ -404,10 +406,10 @@ namespace KryptonSparkle.UX
                 return;
 
             // calc new size
-            Size newSize = new Size(this.Size.Width, this.Size.Height - kryptonLabelExtended1.Height - kryptonPanelExtended1.Height);
+            Size newSize = new Size(this.Size.Width, this.Size.Height - kryptonLabelExtended1.Height - kryptonPanel1.Height);
 
             // remove the no more needed controls            
-            kryptonPanelExtended1.Parent.Controls.Remove(kryptonPanelExtended1);
+            kryptonPanel1.Parent.Controls.Remove(kryptonPanel1);
             NetSparkleBrowser.Parent.Controls.Remove(NetSparkleBrowser);
             //? panel1.Parent.Controls.Remove(panel1);
 
@@ -418,5 +420,25 @@ namespace KryptonSparkle.UX
             this.Size = newSize;
         }
 
+        private void KbtnSkip_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.No;
+
+            Close();
+        }
+
+        private void KbtnRemind_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Retry;
+
+            Close();
+        }
+
+        private void KbtnInstall_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Yes;
+
+            Close();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using KryptonSparkle.UX;
+using NLog;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -12,7 +13,7 @@ namespace KryptonSparkle.Classes
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         private readonly bool _isDiagnosticWindowShown;
-        private readonly NetSparkleMainWindows _diagnosticWindow;
+        private readonly KryptonSparkleMainWindows _diagnosticWindow;
 
         /// <summary>
         /// Constructor
@@ -23,7 +24,7 @@ namespace KryptonSparkle.Classes
             _isDiagnosticWindowShown = isDiagnosticWindowShown;
             if (_isDiagnosticWindowShown)
             {
-                _diagnosticWindow = new NetSparkleMainWindows();
+                _diagnosticWindow = new KryptonSparkleMainWindows();
             }
         }
 

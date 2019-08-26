@@ -60,32 +60,32 @@
     <Compile Include="Classes\ScrollBars\WIN32.cs" />
     <Compile Include="Classes\Utility.cs" />
     <Compile Include="Classes\WIN32.cs" />
-    <Compile Include="Components\CircularPictureBox.cs">
+    <Compile Include="Components\Controls\CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Components\ExtendedProgressBar.cs">
+    <Compile Include="Components\Controls\ExtendedProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Components\KryptonCommandLinkVersion1.cs" />
-    <Compile Include="Components\KryptonCommandLinkVersion2.cs" />
-    <Compile Include="Components\KryptonGrid.cs">
+    <Compile Include="Components\Controls\KryptonCommandLinkVersion1.cs" />
+    <Compile Include="Components\Controls\KryptonCommandLinkVersion2.cs" />
+    <Compile Include="Components\Controls\KryptonGrid.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Components\KryptonKnobControl.cs">
+    <Compile Include="Components\Controls\KryptonKnobControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\KryptonListView.cs">
+    <Compile Include="Components\Controls\KryptonListView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Components\KryptonMessageBoxExtendedComoponent.cs">
+    <Compile Include="Components\Controls\KryptonMessageBoxExtendedComoponent.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Break Out\KryptonTreeViewShell.cs" />
-    <Compile Include="Components\KryptonRichTextBoxExtended.cs" />
-    <Compile Include="Components\KryptonToggleSwitch.cs">
+    <Compile Include="Components\Controls\KryptonRichTextBoxExtended.cs" />
+    <Compile Include="Components\Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Components\KryptonUACElevatedButton.cs" />
+    <Compile Include="Components\Controls\KryptonUACElevatedButton.cs" />
     <Compile Include="Components\List View\ListViewColumnSorter.cs" />
     <Compile Include="Components\List View\ListViewItemComparer.cs" />
     <Compile Include="Components\List View\ListViewPrint.cs">

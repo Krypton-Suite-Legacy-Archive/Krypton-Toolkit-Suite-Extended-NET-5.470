@@ -34,6 +34,9 @@
     <Reference Include="Extended Standard Controls">
       <HintPath>..\Extended Standard Controls\obj\Debug\Extended Standard Controls.dll</HintPath>
     </Reference>
+    <Reference Include="Krypton Toolkit Suite Extended Core">
+      <HintPath>..\Core\obj\Debug\Krypton Toolkit Suite Extended Core.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -80,6 +83,9 @@
     <Compile Include="UX\KryptonSparkleForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UX\KryptonSparkleMainWindows.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470CoreModule">
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\KryptonSparkleForm.resx">
       <DependentUpon>KryptonSparkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\KryptonSparkleMainWindows.resx">
+      <DependentUpon>KryptonSparkleMainWindows.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
