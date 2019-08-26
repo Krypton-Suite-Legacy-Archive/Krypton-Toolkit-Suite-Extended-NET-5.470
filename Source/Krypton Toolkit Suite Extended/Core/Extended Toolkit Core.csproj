@@ -81,7 +81,11 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Break Out\KryptonTreeViewShell.cs" />
+    <Compile Include="Components\Controls\KryptonProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Components\Controls\KryptonRichTextBoxExtended.cs" />
+    <Compile Include="Components\Controls\KryptonRoundedTextBox.cs" />
     <Compile Include="Components\Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
