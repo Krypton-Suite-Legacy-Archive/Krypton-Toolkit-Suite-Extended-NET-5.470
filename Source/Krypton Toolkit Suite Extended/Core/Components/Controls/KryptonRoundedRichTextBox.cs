@@ -1,25 +1,15 @@
-﻿#region BSD License
-/*
- * Use of this source code is governed by a BSD-style
- * license that can be found in the LICENSE.md file or at
- * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
- *
- */
-#endregion
-
-using ComponentFactory.Krypton.Toolkit;
+﻿using ComponentFactory.Krypton.Toolkit;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Windows.Forms.Design;
 
 namespace KryptonToolkitSuiteExtendedCore
 {
     /// <summary>
-    /// Provides a rounded <seealso cref="KryptonTextBox"/> like Google Chrome's current Omnibox design.
+    /// Provides a rounded <seealso cref="KryptonRichTextBox"/> like Google Chrome's current Omnibox design.
     /// </summary>
-    [ToolboxBitmap(typeof(KryptonTextBox)), ToolboxItem(true), ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.All), Description("Provides a rounded textbox like Google Chrome's current Omnibox design.")]
-    public class KryptonRoundedTextBox : KryptonTextBox
+    [ToolboxBitmap(typeof(KryptonRichTextBox)), ToolboxItem(true), Description("Provides a rounded rich textbox like Google Chrome's current Omnibox design.")]
+    public class KryptonRoundedRichTextBox : KryptonRichTextBox
     {
         #region Variables
         private int _cornerRadius;
@@ -31,7 +21,7 @@ namespace KryptonToolkitSuiteExtendedCore
         #endregion
 
         #region Constructor
-        public KryptonRoundedTextBox()
+        public KryptonRoundedRichTextBox()
         {
             CornerRadius = 25;
 

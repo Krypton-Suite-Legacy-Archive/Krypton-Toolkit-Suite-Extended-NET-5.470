@@ -81,6 +81,11 @@ namespace Playground
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonRoundedTextBox1 = new KryptonToolkitSuiteExtendedCore.KryptonRoundedTextBox();
+            this.kryptonProgressBar1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonProgressBar();
+            this.extendedProgressBar1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.ExtendedProgressBar();
+            this.kryptonTimeSpanPicker1 = new ExtendedControls.ExtendedToolkit.Controls.TimeSpanExtended.KryptonTimeSpanPicker();
+            this.outlookBar1 = new ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls.OutlookBar();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton21 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -124,13 +129,11 @@ namespace Playground
             this.flashingLabel1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.FlashingLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.outlookBar1 = new ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls.OutlookBar();
-            this.kryptonTimeSpanPicker1 = new ExtendedControls.ExtendedToolkit.Controls.TimeSpanExtended.KryptonTimeSpanPicker();
-            this.extendedProgressBar1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.ExtendedProgressBar();
-            this.kryptonProgressBar1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonProgressBar();
+            this.kryptonRichTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonTimeSpanPicker1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbGradientDirection)).BeginInit();
             this.toolStrip2.SuspendLayout();
@@ -138,7 +141,6 @@ namespace Playground
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonCheckSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonTimeSpanPicker1)).BeginInit();
             this.SuspendLayout();
             // 
             // ms
@@ -208,13 +210,8 @@ namespace Playground
             this.kuacsbElevate.Values.Text = "Elevate";
             this.kuacsbElevate.Click += new System.EventHandler(this.kuacsbElevate_Click);
             // 
-            // kryptonManager1
-            // 
-            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2010Blue;
-            // 
             // kPal
             // 
-            this.kPal.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.kPal.CustomisedKryptonPaletteFilePath = null;
             // 
             // menuStrip2
@@ -502,6 +499,8 @@ namespace Playground
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonRichTextBox1);
+            this.kryptonPanel1.Controls.Add(this.kryptonRoundedTextBox1);
             this.kryptonPanel1.Controls.Add(this.kryptonProgressBar1);
             this.kryptonPanel1.Controls.Add(this.extendedProgressBar1);
             this.kryptonPanel1.Controls.Add(this.kryptonTimeSpanPicker1);
@@ -531,6 +530,75 @@ namespace Playground
             this.kryptonPanel1.Size = new System.Drawing.Size(1166, 659);
             this.kryptonPanel1.TabIndex = 2;
             this.kryptonPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.KryptonPanel1_Paint);
+            // 
+            // kryptonRoundedTextBox1
+            // 
+            this.kryptonRoundedTextBox1.CornerRadius = 20;
+            this.kryptonRoundedTextBox1.Location = new System.Drawing.Point(35, 399);
+            this.kryptonRoundedTextBox1.Name = "kryptonRoundedTextBox1";
+            this.kryptonRoundedTextBox1.Size = new System.Drawing.Size(492, 35);
+            this.kryptonRoundedTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonRoundedTextBox1.StateCommon.Border.Rounding = 20;
+            this.kryptonRoundedTextBox1.TabIndex = 4;
+            this.kryptonRoundedTextBox1.Text = "kryptonRoundedTextBox1";
+            // 
+            // kryptonProgressBar1
+            // 
+            this.kryptonProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.kryptonProgressBar1.EndColour = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(224)))), ((int)(((byte)(135)))));
+            this.kryptonProgressBar1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.kryptonProgressBar1.ForeColour = System.Drawing.Color.Empty;
+            this.kryptonProgressBar1.Location = new System.Drawing.Point(706, 455);
+            this.kryptonProgressBar1.Name = "kryptonProgressBar1";
+            this.kryptonProgressBar1.Size = new System.Drawing.Size(264, 32);
+            this.kryptonProgressBar1.StartColour = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(224)))), ((int)(((byte)(135)))));
+            this.kryptonProgressBar1.TabIndex = 4;
+            // 
+            // extendedProgressBar1
+            // 
+            this.extendedProgressBar1.BarBackColour = System.Drawing.SystemColors.Window;
+            this.extendedProgressBar1.BarFillColour = System.Drawing.Color.SkyBlue;
+            this.extendedProgressBar1.Location = new System.Drawing.Point(706, 387);
+            this.extendedProgressBar1.MarqueeAnimationSpeed = -1;
+            this.extendedProgressBar1.Name = "extendedProgressBar1";
+            this.extendedProgressBar1.Size = new System.Drawing.Size(239, 45);
+            this.extendedProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.extendedProgressBar1.TabIndex = 4;
+            this.extendedProgressBar1.Text = "extendedProgressBar1";
+            this.extendedProgressBar1.Typeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // kryptonTimeSpanPicker1
+            // 
+            this.kryptonTimeSpanPicker1.DropDownWidth = 121;
+            this.kryptonTimeSpanPicker1.IntegralHeight = false;
+            this.kryptonTimeSpanPicker1.Location = new System.Drawing.Point(878, 338);
+            this.kryptonTimeSpanPicker1.Name = "kryptonTimeSpanPicker1";
+            this.kryptonTimeSpanPicker1.Size = new System.Drawing.Size(121, 21);
+            this.kryptonTimeSpanPicker1.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.kryptonTimeSpanPicker1.TabIndex = 4;
+            // 
+            // outlookBar1
+            // 
+            this.outlookBar1.ButtonColourHoveringBottom = System.Drawing.Color.Empty;
+            this.outlookBar1.ButtonColourHoveringTop = System.Drawing.Color.Empty;
+            this.outlookBar1.ButtonColourPassiveBottom = System.Drawing.Color.Empty;
+            this.outlookBar1.ButtonColourPassiveTop = System.Drawing.Color.Empty;
+            this.outlookBar1.ButtonColourSelectedAndHoveringBottom = System.Drawing.Color.Empty;
+            this.outlookBar1.ButtonColourSelectedAndHoveringTop = System.Drawing.Color.Empty;
+            this.outlookBar1.ButtonColourSelectedBottom = System.Drawing.Color.Empty;
+            this.outlookBar1.ButtonColourSelectedTop = System.Drawing.Color.Empty;
+            this.outlookBar1.ButtonHeight = 35;
+            this.outlookBar1.ForeColourSelected = System.Drawing.Color.Empty;
+            this.outlookBar1.Location = new System.Drawing.Point(706, 338);
+            this.outlookBar1.MinimumSize = new System.Drawing.Size(16, 43);
+            this.outlookBar1.Name = "outlookBar1";
+            this.outlookBar1.OutlookBarLineColour = System.Drawing.Color.Empty;
+            this.outlookBar1.Renderer = ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls.Renderer.Custom;
+            this.outlookBar1.Size = new System.Drawing.Size(75, 43);
+            this.outlookBar1.TabIndex = 4;
+            this.outlookBar1.Text = "outlookBar1";
             // 
             // kryptonTextBox1
             // 
@@ -652,8 +720,6 @@ namespace Playground
             this.kcmbGradientDirection.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kcmbGradientDirection.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kcmbGradientDirection.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcmbGradientDirection.StateCommon.Item.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kcmbGradientDirection.StateCommon.Item.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kcmbGradientDirection.TabIndex = 15;
             this.kcmbGradientDirection.SelectedIndexChanged += new System.EventHandler(this.kcmbGradientDirection_SelectedIndexChanged);
             this.kcmbGradientDirection.TextChanged += new System.EventHandler(this.kcmbGradientDirection_TextChanged);
@@ -664,8 +730,6 @@ namespace Playground
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(149, 26);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel1.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel1.TabIndex = 14;
             this.kryptonLabel1.Values.Text = "Gradient Direction:";
             // 
@@ -899,8 +963,6 @@ namespace Playground
             this.klblAdminMode.Name = "klblAdminMode";
             this.klblAdminMode.Size = new System.Drawing.Size(283, 26);
             this.klblAdminMode.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblAdminMode.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.klblAdminMode.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.klblAdminMode.TabIndex = 0;
             this.klblAdminMode.Values.Text = "Is running in Administrator mode: No";
             // 
@@ -961,61 +1023,17 @@ namespace Playground
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // outlookBar1
+            // kryptonRichTextBox1
             // 
-            this.outlookBar1.ButtonColourHoveringBottom = System.Drawing.Color.Empty;
-            this.outlookBar1.ButtonColourHoveringTop = System.Drawing.Color.Empty;
-            this.outlookBar1.ButtonColourPassiveBottom = System.Drawing.Color.Empty;
-            this.outlookBar1.ButtonColourPassiveTop = System.Drawing.Color.Empty;
-            this.outlookBar1.ButtonColourSelectedAndHoveringBottom = System.Drawing.Color.Empty;
-            this.outlookBar1.ButtonColourSelectedAndHoveringTop = System.Drawing.Color.Empty;
-            this.outlookBar1.ButtonColourSelectedBottom = System.Drawing.Color.Empty;
-            this.outlookBar1.ButtonColourSelectedTop = System.Drawing.Color.Empty;
-            this.outlookBar1.ButtonHeight = 35;
-            this.outlookBar1.ForeColourSelected = System.Drawing.Color.Empty;
-            this.outlookBar1.Location = new System.Drawing.Point(706, 338);
-            this.outlookBar1.MinimumSize = new System.Drawing.Size(16, 43);
-            this.outlookBar1.Name = "outlookBar1";
-            this.outlookBar1.OutlookBarLineColour = System.Drawing.Color.Empty;
-            this.outlookBar1.Renderer = ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls.Renderer.Custom;
-            this.outlookBar1.Size = new System.Drawing.Size(75, 43);
-            this.outlookBar1.TabIndex = 4;
-            this.outlookBar1.Text = "outlookBar1";
-            // 
-            // kryptonTimeSpanPicker1
-            // 
-            this.kryptonTimeSpanPicker1.DropDownWidth = 121;
-            this.kryptonTimeSpanPicker1.IntegralHeight = false;
-            this.kryptonTimeSpanPicker1.Location = new System.Drawing.Point(878, 338);
-            this.kryptonTimeSpanPicker1.Name = "kryptonTimeSpanPicker1";
-            this.kryptonTimeSpanPicker1.Size = new System.Drawing.Size(121, 21);
-            this.kryptonTimeSpanPicker1.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.kryptonTimeSpanPicker1.TabIndex = 4;
-            // 
-            // extendedProgressBar1
-            // 
-            this.extendedProgressBar1.BarBackColour = System.Drawing.SystemColors.Window;
-            this.extendedProgressBar1.BarFillColour = System.Drawing.Color.SkyBlue;
-            this.extendedProgressBar1.Location = new System.Drawing.Point(706, 387);
-            this.extendedProgressBar1.MarqueeAnimationSpeed = -1;
-            this.extendedProgressBar1.Name = "extendedProgressBar1";
-            this.extendedProgressBar1.Size = new System.Drawing.Size(239, 45);
-            this.extendedProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.extendedProgressBar1.TabIndex = 4;
-            this.extendedProgressBar1.Text = "extendedProgressBar1";
-            this.extendedProgressBar1.Typeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // kryptonProgressBar1
-            // 
-            this.kryptonProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.kryptonProgressBar1.EndColour = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(224)))), ((int)(((byte)(135)))));
-            this.kryptonProgressBar1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.kryptonProgressBar1.ForeColour = System.Drawing.Color.Empty;
-            this.kryptonProgressBar1.Location = new System.Drawing.Point(706, 455);
-            this.kryptonProgressBar1.Name = "kryptonProgressBar1";
-            this.kryptonProgressBar1.Size = new System.Drawing.Size(264, 32);
-            this.kryptonProgressBar1.StartColour = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(224)))), ((int)(((byte)(135)))));
-            this.kryptonProgressBar1.TabIndex = 4;
+            this.kryptonRichTextBox1.Location = new System.Drawing.Point(63, 455);
+            this.kryptonRichTextBox1.Name = "kryptonRichTextBox1";
+            this.kryptonRichTextBox1.Size = new System.Drawing.Size(100, 96);
+            this.kryptonRichTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonRichTextBox1.StateCommon.Border.Rounding = 20;
+            this.kryptonRichTextBox1.TabIndex = 4;
+            this.kryptonRichTextBox1.Text = "kryptonRichTextBox1";
             // 
             // Form1
             // 
@@ -1035,6 +1053,7 @@ namespace Playground
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonTimeSpanPicker1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcmbGradientDirection)).EndInit();
             this.toolStrip2.ResumeLayout(false);
@@ -1046,7 +1065,6 @@ namespace Playground
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonCheckSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonTimeSpanPicker1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1156,6 +1174,8 @@ namespace Playground
         private KryptonExtendedToolkit.ExtendedToolkit.Controls.ExtendedProgressBar extendedProgressBar1;
         private ExtendedControls.ExtendedToolkit.Controls.TimeSpanExtended.KryptonTimeSpanPicker kryptonTimeSpanPicker1;
         private ExtendedControls.ExtendedToolkit.Controls.Navigator.Controls.OutlookBar outlookBar1;
+        private KryptonToolkitSuiteExtendedCore.KryptonRoundedTextBox kryptonRoundedTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
     }
 }
 

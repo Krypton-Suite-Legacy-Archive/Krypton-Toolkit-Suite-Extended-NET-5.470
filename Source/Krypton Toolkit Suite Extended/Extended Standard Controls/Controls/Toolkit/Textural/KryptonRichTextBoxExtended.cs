@@ -12,6 +12,8 @@ namespace ExtendedStandardControls
         private Color _backgroundColour, _textColour;
 
         private Font _typeface;
+
+        private int _cornerRadius;
         #endregion
 
         #region Properties
@@ -23,6 +25,9 @@ namespace ExtendedStandardControls
 
         [Category("Appearance"), Description("The typeface of the text box.")]
         public Font Typeface { get => _typeface; set { _typeface = value; Invalidate(); } }
+
+        [Category("Appearance"), DefaultValue(15), Description("Size of corner radius.")]
+        public int CornerRadius { get => _cornerRadius; set { _cornerRadius = value; Invalidate(); } }
         #endregion
 
         #region Constructor
@@ -34,25 +39,29 @@ namespace ExtendedStandardControls
 
             Typeface = Classes.Typeface.DefaultTypeface();
 
-            UpdateCommonAppearanceValues(BackgroundColour, TextColour, Typeface);
+            CornerRadius = 25;
+
+            UpdateCommonAppearanceValues(BackgroundColour, TextColour, Typeface, CornerRadius);
         }
         #endregion
 
         #region Method
-        private void UpdateCommonAppearanceValues(Color backgroundColour, Color textColour, Font typeface)
+        private void UpdateCommonAppearanceValues(Color backgroundColour, Color textColour, Font typeface, int cornerRadius)
         {
             StateCommon.Back.Color1 = backgroundColour;
 
             StateCommon.Content.Color1 = textColour;
 
             StateCommon.Content.Font = typeface;
+
+            StateCommon.Border.Rounding = cornerRadius;
         }
         #endregion
 
         #region Override
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateCommonAppearanceValues(BackgroundColour, TextColour, Typeface);
+            UpdateCommonAppearanceValues(BackgroundColour, TextColour, Typeface, CornerRadius);
 
             base.OnPaint(e);
         }

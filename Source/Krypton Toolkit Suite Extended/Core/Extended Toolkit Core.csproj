@@ -85,6 +85,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\Controls\KryptonRichTextBoxExtended.cs" />
+    <Compile Include="Components\Controls\KryptonRoundedRichTextBox.cs" />
     <Compile Include="Components\Controls\KryptonRoundedTextBox.cs" />
     <Compile Include="Components\Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
@@ -137,6 +138,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Extended Controls\Extended Controls.csproj">
+      <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
+      <Name>Extended Controls</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
