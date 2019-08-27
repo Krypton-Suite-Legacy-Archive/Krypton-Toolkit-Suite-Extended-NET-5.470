@@ -41,9 +41,15 @@ You can check out the pre-built demo application from downloading it [here](http
 <!--
 ======
 
-## 2019-09-01 Build 13xx - September Update
+2019-11-01 Build 15xx - November Update
 * Added a better file system tree view control
+
+======
+
+## 2019-09-01 Build 13xx - September Update
 * More item and project templates (floating MenuStrips & ToolStrip templates)
+* More toolbar features in `KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule`
+* Define corner radius for selected controls
 
 ======
 -->

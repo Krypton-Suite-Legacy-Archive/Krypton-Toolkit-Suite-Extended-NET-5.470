@@ -85,12 +85,15 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\Controls\KryptonRichTextBoxExtended.cs" />
-    <Compile Include="Components\Controls\KryptonRoundedRichTextBox.cs" />
-    <Compile Include="Components\Controls\KryptonRoundedTextBox.cs" />
+    <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedButton.cs" />
+    <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedMaskedTextBox.cs" />
+    <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedRichTextBox.cs" />
+    <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedTextBox.cs" />
     <Compile Include="Components\Controls\KryptonToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Components\Controls\KryptonUACElevatedButton.cs" />
+    <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedUACElevatedButton.cs" />
     <Compile Include="Components\List View\ListViewColumnSorter.cs" />
     <Compile Include="Components\List View\ListViewItemComparer.cs" />
     <Compile Include="Components\List View\ListViewPrint.cs">
@@ -122,6 +125,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UX\KryptonRoundedForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Values\CommandLinkTextValues.cs" />
     <Compile Include="Values\ImageValue.cs" />

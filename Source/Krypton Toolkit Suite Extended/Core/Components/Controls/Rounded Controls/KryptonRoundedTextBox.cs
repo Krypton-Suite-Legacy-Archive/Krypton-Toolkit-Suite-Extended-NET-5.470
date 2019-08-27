@@ -26,7 +26,7 @@ namespace KryptonToolkitSuiteExtendedCore
         #endregion
 
         #region Properties
-        [Category("Appearance"), DefaultValue(25), Description("Size of corner radius.")]
+        [Category("Appearance"), DefaultValue(25), Description("Size of corner radius. (-1 is the 'default system look' value)")]
         public int CornerRadius { get => _cornerRadius; set { _cornerRadius = value; Invalidate(); } }
         #endregion
 

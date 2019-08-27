@@ -81,6 +81,7 @@ namespace Playground
             this.advancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonRichTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.kryptonRoundedTextBox1 = new KryptonToolkitSuiteExtendedCore.KryptonRoundedTextBox();
             this.kryptonProgressBar1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonProgressBar();
             this.extendedProgressBar1 = new KryptonExtendedToolkit.ExtendedToolkit.Controls.ExtendedProgressBar();
@@ -129,7 +130,6 @@ namespace Playground
             this.flashingLabel1 = new ExtendedControls.ExtendedToolkit.ToolstripControls.FlashingLabel();
             this.kryptonCheckSet1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckSet(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.kryptonRichTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -202,9 +202,13 @@ namespace Playground
             // 
             // kuacsbElevate
             // 
-            this.kuacsbElevate.Location = new System.Drawing.Point(14, 236);
+            this.kuacsbElevate.Location = new System.Drawing.Point(325, 59);
             this.kuacsbElevate.Name = "kuacsbElevate";
-            this.kuacsbElevate.Size = new System.Drawing.Size(135, 26);
+            this.kuacsbElevate.Size = new System.Drawing.Size(83, 40);
+            this.kuacsbElevate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kuacsbElevate.StateCommon.Border.Rounding = 25;
             this.kuacsbElevate.TabIndex = 0;
             this.kuacsbElevate.Values.Image = ((System.Drawing.Image)(resources.GetObject("kuacsbElevate.Values.Image")));
             this.kuacsbElevate.Values.Text = "Elevate";
@@ -531,6 +535,18 @@ namespace Playground
             this.kryptonPanel1.TabIndex = 2;
             this.kryptonPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.KryptonPanel1_Paint);
             // 
+            // kryptonRichTextBox1
+            // 
+            this.kryptonRichTextBox1.Location = new System.Drawing.Point(63, 455);
+            this.kryptonRichTextBox1.Name = "kryptonRichTextBox1";
+            this.kryptonRichTextBox1.Size = new System.Drawing.Size(100, 96);
+            this.kryptonRichTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonRichTextBox1.StateCommon.Border.Rounding = 20;
+            this.kryptonRichTextBox1.TabIndex = 4;
+            this.kryptonRichTextBox1.Text = "kryptonRichTextBox1";
+            // 
             // kryptonRoundedTextBox1
             // 
             this.kryptonRoundedTextBox1.CornerRadius = 20;
@@ -575,7 +591,11 @@ namespace Playground
             this.kryptonTimeSpanPicker1.IntegralHeight = false;
             this.kryptonTimeSpanPicker1.Location = new System.Drawing.Point(878, 338);
             this.kryptonTimeSpanPicker1.Name = "kryptonTimeSpanPicker1";
-            this.kryptonTimeSpanPicker1.Size = new System.Drawing.Size(121, 21);
+            this.kryptonTimeSpanPicker1.Size = new System.Drawing.Size(121, 25);
+            this.kryptonTimeSpanPicker1.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTimeSpanPicker1.StateCommon.ComboBox.Border.Rounding = 5;
             this.kryptonTimeSpanPicker1.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kryptonTimeSpanPicker1.TabIndex = 4;
             // 
@@ -621,7 +641,11 @@ namespace Playground
             // 
             this.kryptonButton21.Location = new System.Drawing.Point(663, 237);
             this.kryptonButton21.Name = "kryptonButton21";
-            this.kryptonButton21.Size = new System.Drawing.Size(218, 25);
+            this.kryptonButton21.Size = new System.Drawing.Size(407, 25);
+            this.kryptonButton21.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton21.StateCommon.Border.Rounding = 25;
             this.kryptonButton21.TabIndex = 51;
             this.kryptonButton21.Values.Text = "Test Bench";
             this.kryptonButton21.Click += new System.EventHandler(this.kryptonButton21_Click);
@@ -997,6 +1021,7 @@ namespace Playground
             // 
             // etslBlinkTest
             // 
+            this.etslBlinkTest.BackColor = System.Drawing.Color.Empty;
             this.etslBlinkTest.BkClr = false;
             this.etslBlinkTest.BlinkDuration = ((long)(10));
             this.etslBlinkTest.BlinkState = ExtendedControls.Base.Enumerations.BlinkState.NormalBlink;
@@ -1023,18 +1048,6 @@ namespace Playground
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // kryptonRichTextBox1
-            // 
-            this.kryptonRichTextBox1.Location = new System.Drawing.Point(63, 455);
-            this.kryptonRichTextBox1.Name = "kryptonRichTextBox1";
-            this.kryptonRichTextBox1.Size = new System.Drawing.Size(100, 96);
-            this.kryptonRichTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonRichTextBox1.StateCommon.Border.Rounding = 20;
-            this.kryptonRichTextBox1.TabIndex = 4;
-            this.kryptonRichTextBox1.Text = "kryptonRichTextBox1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1046,6 +1059,10 @@ namespace Playground
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.ms;
             this.Name = "Form1";
+            this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.StateCommon.Border.Rounding = 25;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip2.ResumeLayout(false);

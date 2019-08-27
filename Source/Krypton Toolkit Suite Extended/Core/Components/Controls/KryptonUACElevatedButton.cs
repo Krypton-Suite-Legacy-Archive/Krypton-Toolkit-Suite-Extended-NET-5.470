@@ -13,6 +13,8 @@ using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace KryptonToolkitSuiteExtendedCore.Components
@@ -29,7 +31,9 @@ namespace KryptonToolkitSuiteExtendedCore.Components
     public partial class KryptonUACElevatedButton : KryptonButton
     {
         #region Variables
-        private bool _elevateApplicationOnClick = true;
+        private Assembly _processToElevate;
+
+        private bool _elevateApplicationOnClick = true, _showUACShield = true;
 
         private string _processName = string.Empty;
 
@@ -43,27 +47,18 @@ namespace KryptonToolkitSuiteExtendedCore.Components
         #endregion
 
         #region Properties
+        public Assembly ProcessToElevate { get => _processToElevate; set => _processToElevate = value; }
+
         /// <summary>
         /// Elevates the current running application to administrator level when button is clicked.
         /// </summary>
         /// <remarks>
         /// The application/process will restart when clicked.
         /// </remarks>
-        [Category("Code")]
-        [Description("Elevates the current running application to administrator level when button is clicked. The application/process will restart when clicked.")]
-        [DefaultValue(true)]
-        public bool ElevateApplicationOnClick
-        {
-            get
-            {
-                return _elevateApplicationOnClick;
-            }
+        [Category("Code"), Description("Elevates the current running application to administrator level when button is clicked. The application/process will restart when clicked."), DefaultValue(true)]
+        public bool ElevateApplicationOnClick { get => _elevateApplicationOnClick; set => _elevateApplicationOnClick = value; }
 
-            set
-            {
-                _elevateApplicationOnClick = value;
-            }
-        }
+        public bool ShowUACShield { get => _showUACShield; set { _showUACShield = value; Invalidate(); } }
 
         /// <summary>
         /// The application assembly.
@@ -71,21 +66,8 @@ namespace KryptonToolkitSuiteExtendedCore.Components
         /// <remarks>
         /// Use 'Process.GetCurrentProcess().ProcessName;' as a start.
         /// </remarks>
-        [Category("Code")]
-        [Description("The application assembly. Use 'Process.GetCurrentProcess().ProcessName;' as a start.")]
-        [DefaultValue("")]
-        public string ProcessName
-        {
-            get
-            {
-                return _processName;
-            }
-
-            set
-            {
-                _processName = value;
-            }
-        }
+        [Category("Code"), Description("The application assembly. Use 'Process.GetCurrentProcess().ProcessName;' as a start."), DefaultValue("")]
+        public string ProcessName { get => _processName; set => _processName = value; }
         #endregion
 
         #region Constructor
@@ -151,6 +133,7 @@ namespace KryptonToolkitSuiteExtendedCore.Components
                         {
                             _globalMethods.ElevateProcessWithAdministrativeRights(ProcessName);
                         }
+                        else if (ProcessToElevate != null) _globalMethods.ElevateProcessWithAdministrativeRights(Path.GetFullPath(ProcessName));
                     }
                 }
             }
@@ -167,6 +150,11 @@ namespace KryptonToolkitSuiteExtendedCore.Components
             }
 
             base.OnClick(e);
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
         }
         #endregion
 
