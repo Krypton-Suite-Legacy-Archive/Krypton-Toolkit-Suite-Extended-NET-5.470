@@ -56,6 +56,9 @@
     <Compile Include="Controls\KryptonNumericUpDownToolStripItem.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\KryptonSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\KryptonToolStripTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -76,7 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470CoreModule">
-      <Version>5.470.1252</Version>
+      <Version>5.470.1254</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

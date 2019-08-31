@@ -67,6 +67,7 @@
     <Compile Include="Classes\KryptonSparkleException.cs" />
     <Compile Include="Classes\KryptonSparkleRegistryConfiguration.cs" />
     <Compile Include="Classes\UpdateDetectedEventArgs.cs" />
+    <Compile Include="Controls\SparkleKryptonUACElevatedButton.cs" />
     <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="Interfaces\IKryptonSparkleAssemblyAccessor.cs" />
     <Compile Include="Interfaces\IKryptonSparkleDownloadProgress.cs" />
@@ -89,10 +90,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470CoreModule">
-      <Version>5.470.1252</Version>
+      <Version>5.470.1254</Version>
     </PackageReference>
     <PackageReference Include="NLog">
-      <Version>4.6.6</Version>
+      <Version>4.6.7</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +116,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\software-update-available.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

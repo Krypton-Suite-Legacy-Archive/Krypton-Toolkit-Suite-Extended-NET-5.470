@@ -10,7 +10,7 @@ namespace ExtendedStandardControls
     public class KryptonGroupBoxExtended : KryptonGroupBox
     {
         #region Variables
-        private Color _backGroundColourOne, _backGroundColourTwo, _longTextColourOne, _longTextColourTwo, _shortTextColourOne, _shortTextColourTwo;
+        private Color _stateCommonBackGroundColourOne, _stateCommonBackGroundColourTwo, _stateCommonLongTextColourOne, _stateCommonLongTextColourTwo, _stateCommonShortTextColourOne, _stateCommonShortTextColourTwo;
 
         private Font _longTextTypeface, _shortTextTypeface;
 
@@ -19,22 +19,22 @@ namespace ExtendedStandardControls
 
         #region Properties
         [Category("Appearance"), Description("The first background colour.")]
-        public Color BackGroundColourOne { get => _backGroundColourOne; set { _backGroundColourOne = value; Invalidate(); } }
+        public Color StateCommonBackGroundColourOne { get => _stateCommonBackGroundColourOne; set { _stateCommonBackGroundColourOne = value; Invalidate(); } }
 
         [Category("Appearance"), Description("The second background colour.")]
-        public Color BackGroundColourTwo { get => _backGroundColourTwo; set { _backGroundColourTwo = value; Invalidate(); } }
+        public Color StateCommonBackGroundColourTwo { get => _stateCommonBackGroundColourTwo; set { _stateCommonBackGroundColourTwo = value; Invalidate(); } }
 
         [Category("Appearance"), Description("The first long text colour.")]
-        public Color LongTextColourOne { get => _longTextColourOne; set { _longTextColourOne = value; Invalidate(); } }
+        public Color StateCommonLongTextColourOne { get => _stateCommonLongTextColourOne; set { _stateCommonLongTextColourOne = value; Invalidate(); } }
 
         [Category("Appearance"), Description("The second long text colour.")]
-        public Color LongTextColourTwo { get => _longTextColourTwo; set { _longTextColourTwo = value; Invalidate(); } }
+        public Color StateCommonLongTextColourTwo { get => _stateCommonLongTextColourTwo; set { _stateCommonLongTextColourTwo = value; Invalidate(); } }
 
         [Category("Appearance"), Description("The first short text colour.")]
-        public Color ShortTextColourOne { get => _shortTextColourOne; set { _shortTextColourOne = value; Invalidate(); } }
+        public Color StateCommonShortTextColourOne { get => _stateCommonShortTextColourOne; set { _stateCommonShortTextColourOne = value; Invalidate(); } }
 
         [Category("Appearance"), Description("The second short text colour.")]
-        public Color ShortTextColourTwo { get => _shortTextColourTwo; set { _shortTextColourTwo = value; Invalidate(); } }
+        public Color StateCommonShortTextColourTwo { get => _stateCommonShortTextColourTwo; set { _stateCommonShortTextColourTwo = value; Invalidate(); } }
 
         [Category("Appearance"), Description("The 'Long Text' typeface.")]
         public Font LongTextTypeface { get => _longTextTypeface; set { _longTextTypeface = value; Invalidate(); } }
@@ -49,30 +49,30 @@ namespace ExtendedStandardControls
         #region Constructor
         public KryptonGroupBoxExtended()
         {
-            BackGroundColourOne = Color.Empty;
+            StateCommonBackGroundColourOne = Color.Empty;
 
-            BackGroundColourTwo = Color.Empty;
+            StateCommonBackGroundColourTwo = Color.Empty;
 
-            LongTextColourOne = Color.Empty;
+            StateCommonLongTextColourOne = Color.Empty;
 
-            LongTextColourTwo = Color.Empty;
+            StateCommonLongTextColourTwo = Color.Empty;
 
             LongTextTypeface = Typeface.DefaultTypeface();
 
-            ShortTextColourOne = Color.Empty;
+            StateCommonShortTextColourOne = Color.Empty;
 
-            ShortTextColourTwo = Color.Empty;
+            StateCommonShortTextColourTwo = Color.Empty;
 
             ShortTextTypeface = Typeface.DefaultTypeface();
 
             Image = null;
 
-            UpdateCommonAppearanceValues(BackGroundColourOne, BackGroundColourTwo, LongTextColourOne, LongTextColourTwo, LongTextTypeface, ShortTextColourOne, ShortTextColourTwo, ShortTextTypeface, Image);
+            UpdateStateCommonAppearanceValues(StateCommonBackGroundColourOne, StateCommonBackGroundColourTwo, StateCommonLongTextColourOne, StateCommonLongTextColourTwo, LongTextTypeface, StateCommonShortTextColourOne, StateCommonShortTextColourTwo, ShortTextTypeface, Image);
         }
         #endregion
 
         #region Method
-        private void UpdateCommonAppearanceValues(Color backGroundColourOne, Color backGroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Font longTextTypeface, Color shortTextColourOne, Color shortTextColourTwo, Font shortTextTypeface, Image image)
+        private void UpdateStateCommonAppearanceValues(Color backGroundColourOne, Color backGroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Font longTextTypeface, Color shortTextColourOne, Color shortTextColourTwo, Font shortTextTypeface, Image image)
         {
             StateCommon.Back.Color1 = backGroundColourOne;
 
@@ -99,7 +99,7 @@ namespace ExtendedStandardControls
         #region Override
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateCommonAppearanceValues(BackGroundColourOne, BackGroundColourTwo, LongTextColourOne, LongTextColourTwo, LongTextTypeface, ShortTextColourOne, ShortTextColourTwo, ShortTextTypeface, Image);
+            UpdateStateCommonAppearanceValues(StateCommonBackGroundColourOne, StateCommonBackGroundColourTwo, StateCommonLongTextColourOne, StateCommonLongTextColourTwo, LongTextTypeface, StateCommonShortTextColourOne, StateCommonShortTextColourTwo, ShortTextTypeface, Image);
 
             base.OnPaint(e);
         }

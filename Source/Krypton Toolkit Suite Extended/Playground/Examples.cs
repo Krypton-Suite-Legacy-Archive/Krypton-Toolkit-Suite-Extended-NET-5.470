@@ -80,7 +80,6 @@ namespace Playground
         private KryptonButton kryptonButton3;
         private KryptonButton kbtnFileSystemExamples;
         private KryptonButton kryptonButton1;
-        private KryptonToolkitSuiteExtendedCore.Components.KryptonUACElevatedButton kryptonUACElevatedButton1;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
@@ -133,14 +132,12 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonUACElevatedButton1 = new KryptonToolkitSuiteExtendedCore.Components.KryptonUACElevatedButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Controls.Add(this.kryptonUACElevatedButton1);
             this.kryptonPanel1.Controls.Add(this.kryptonButton3);
             this.kryptonPanel1.Controls.Add(this.kbtnFileSystemExamples);
             this.kryptonPanel1.Controls.Add(this.kryptonButton1);
@@ -805,18 +802,6 @@ namespace Playground
             this.kbtnConvertColour.TabIndex = 51;
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
-            // 
-            // kryptonUACElevatedButton1
-            // 
-            this.kryptonUACElevatedButton1.Location = new System.Drawing.Point(509, 448);
-            this.kryptonUACElevatedButton1.Name = "kryptonUACElevatedButton1";
-            this.kryptonUACElevatedButton1.Size = new System.Drawing.Size(207, 26);
-            this.kryptonUACElevatedButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonUACElevatedButton1.TabIndex = 1;
-            this.kryptonUACElevatedButton1.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonUACElevatedButton1.Values.Image")));
-            this.kryptonUACElevatedButton1.Values.Text = "kryptonUACElevatedButton1";
             // 
             // Examples
             // 

@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -56,6 +57,12 @@
     <Compile Include="Classes\PI.cs" />
     <Compile Include="Classes\UtilityMethods.cs" />
     <Compile Include="Controls\Standard Controls\ProgressBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Toolbar Items\KryptonSliderButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Toolbar Items\KryptonToolbarSlider.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Drawing\RoundedRectangleF.cs" />

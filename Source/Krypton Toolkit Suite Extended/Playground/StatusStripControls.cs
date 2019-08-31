@@ -37,6 +37,7 @@ namespace Playground
         private KryptonColorButton kcbtnGradientColour2;
         private KryptonColorButton kcbtnGradientColour1;
         private System.Windows.Forms.ToolStripProgressBar tspbTest;
+        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToolbarItems.KryptonSliderBar kryptonSliderBar1;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
@@ -61,6 +62,7 @@ namespace Playground
             this.kcbtnTextColour = new ComponentFactory.Krypton.Toolkit.KryptonColorButton();
             this.kcbtnGradientColour2 = new ComponentFactory.Krypton.Toolkit.KryptonColorButton();
             this.kcbtnGradientColour1 = new ComponentFactory.Krypton.Toolkit.KryptonColorButton();
+            this.kryptonSliderBar1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.ToolbarItems.KryptonSliderBar();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.ss.SuspendLayout();
@@ -87,7 +89,8 @@ namespace Playground
             this.ksbTest,
             this.tsmiuacsTest,
             this.etslTest,
-            this.tspbTest});
+            this.tspbTest,
+            this.kryptonSliderBar1});
             this.ss.Location = new System.Drawing.Point(0, -3);
             this.ss.Name = "ss";
             this.ss.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
@@ -293,6 +296,16 @@ namespace Playground
             this.kcbtnGradientColour1.TabIndex = 24;
             this.kcbtnGradientColour1.Values.Text = "Gradient Colour 1";
             this.kcbtnGradientColour1.SelectedColorChanged += new System.EventHandler<ComponentFactory.Krypton.Toolkit.ColorEventArgs>(this.KcbtnGradientColour1_SelectedColorChanged);
+            // 
+            // kryptonSliderBar1
+            // 
+            this.kryptonSliderBar1.BackColor = System.Drawing.Color.Transparent;
+            this.kryptonSliderBar1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonSliderBar1.Name = "kryptonSliderBar1";
+            this.kryptonSliderBar1.Size = new System.Drawing.Size(140, 23);
+            this.kryptonSliderBar1.Steps = 2;
+            this.kryptonSliderBar1.Text = "kryptonSliderBar1";
+            this.kryptonSliderBar1.TrackerSize = new System.Drawing.Size(140, 23);
             // 
             // StatusStripControls
             // 

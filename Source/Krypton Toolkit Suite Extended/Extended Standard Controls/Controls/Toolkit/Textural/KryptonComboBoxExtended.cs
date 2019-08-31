@@ -9,7 +9,11 @@ namespace ExtendedStandardControls
     public class KryptonComboBoxExtended : KryptonComboBox
     {
         #region Variables
-        private Color _comboBoxBackColour, _comboBoxContentColour, _comboBoxDropBackColourOne, _comboBoxDropBackColourTwo, _comboBoxItemBackColourOne, _comboBoxItemBackColourTwo, _comboBoxItemContentLongTextColourOne, _comboBoxItemContentLongTextColourTwo, _comboBoxItemContentShortTextColourOne, _comboBoxItemContentShortTextColourTwo;
+        private Color _stateActiveComboBoxBackColour, _stateActiveComboBoxContentColour,
+                      _stateCommonComboBoxBackColour, _stateCommonComboBoxContentColour, _stateCommonComboBoxDropBackColourOne, _stateCommonComboBoxDropBackColourTwo, _stateCommonComboBoxItemBackColourOne, _stateCommonComboBoxItemBackColourTwo, _stateCommonComboBoxItemContentLongTextColourOne, _stateCommonComboBoxItemContentLongTextColourTwo, _stateCommonComboBoxItemContentShortTextColourOne, _stateCommonComboBoxItemContentShortTextColourTwo,
+                      _stateDisabledComboBoxBackColour, _stateDisabledComboBoxContentColour, _stateDisabledComboBoxItemBackColourOne, _stateDisabledComboBoxItemBackColourTwo, _stateDisabledComboBoxItemContentLongTextColourOne, _stateDisabledComboBoxItemContentLongTextColourTwo, _stateDisabledComboBoxItemContentShortTextColourOne, _stateDisabledComboBoxItemContentShortTextColourTwo,
+                      _stateNormalComboBoxBackColour, _stateNormalComboBoxContentColour, _stateNormalComboBoxItemBackColourOne, _stateNormalComboBoxItemBackColourTwo, _stateNormalComboBoxItemContentLongTextColourOne, _stateNormalComboBoxItemContentLongTextColourTwo, _stateNormalComboBoxItemContentShortTextColourOne, _stateNormalComboBoxItemContentShortTextColourTwo,
+                      _stateTrackingComboBoxItemBackColourOne, _stateTrackingComboBoxItemBackColourTwo, _stateTrackingComboBoxItemContentLongTextColourOne, _stateTrackingComboBoxItemContentLongTextColourTwo, _stateTrackingComboBoxItemContentShortTextColourOne, _stateTrackingComboBoxItemContentShortTextColourTwo;
 
         private Font _comboBoxContentTypeface, _comboBoxItemContentLongTextTypeface, _comboBoxItemContentShortTextTypeface;
 
@@ -17,26 +21,86 @@ namespace ExtendedStandardControls
         #endregion
 
         #region Properties
-        public Color ComboBoxBackColour { get => _comboBoxBackColour; set { _comboBoxBackColour = value; Invalidate(); } }
 
-        public Color ComboBoxContentColour { get => _comboBoxContentColour; set { _comboBoxContentColour = value; Invalidate(); } }
+        #region State Active
+        public Color StateActiveComboBoxBackColour { get => _stateActiveComboBoxBackColour; set { _stateActiveComboBoxBackColour = value; Invalidate(); } }
 
-        public Color ComboBoxDropBackColourOne { get => _comboBoxDropBackColourOne; set { _comboBoxDropBackColourOne = value; Invalidate(); } }
+        public Color StateActiveComboBoxContentColour { get => _stateActiveComboBoxContentColour; set { _stateActiveComboBoxContentColour = value; Invalidate(); } }
+        #endregion
 
-        public Color ComboBoxDropBackColourTwo { get => _comboBoxDropBackColourTwo; set { _comboBoxDropBackColourTwo = value; Invalidate(); } }
+        #region State Common
+        public Color StateCommonComboBoxBackColour { get => _stateCommonComboBoxBackColour; set { _stateCommonComboBoxBackColour = value; Invalidate(); } }
 
-        public Color ComboBoxItemBackColourOne { get => _comboBoxItemBackColourOne; set { _comboBoxItemBackColourOne = value; Invalidate(); } }
+        public Color StateCommonComboBoxContentColour { get => _stateCommonComboBoxContentColour; set { _stateCommonComboBoxContentColour = value; Invalidate(); } }
 
-        public Color ComboBoxItemBackColourTwo { get => _comboBoxItemBackColourTwo; set { _comboBoxItemBackColourTwo = value; Invalidate(); } }
+        public Color StateCommonComboBoxDropBackColourOne { get => _stateCommonComboBoxDropBackColourOne; set { _stateCommonComboBoxDropBackColourOne = value; Invalidate(); } }
 
-        public Color ComboBoxItemContentLongTextColourOne { get => _comboBoxItemContentLongTextColourOne; set { _comboBoxItemContentLongTextColourOne = value; Invalidate(); } }
+        public Color StateCommonComboBoxDropBackColourTwo { get => _stateCommonComboBoxDropBackColourTwo; set { _stateCommonComboBoxDropBackColourTwo = value; Invalidate(); } }
 
-        public Color ComboBoxItemContentLongTextColourTwo { get => _comboBoxItemContentLongTextColourTwo; set { _comboBoxItemContentLongTextColourTwo = value; Invalidate(); } }
+        public Color StateCommonComboBoxItemBackColourOne { get => _stateCommonComboBoxItemBackColourOne; set { _stateCommonComboBoxItemBackColourOne = value; Invalidate(); } }
 
-        public Color ComboBoxItemContentShortTextColourOne { get => _comboBoxItemContentShortTextColourOne; set { _comboBoxItemContentShortTextColourOne = value; Invalidate(); } }
+        public Color StateCommonComboBoxItemBackColourTwo { get => _stateCommonComboBoxItemBackColourTwo; set { _stateCommonComboBoxItemBackColourTwo = value; Invalidate(); } }
 
-        public Color ComboBoxItemContentShortTextColourTwo { get => _comboBoxItemContentShortTextColourTwo; set { _comboBoxItemContentShortTextColourTwo = value; Invalidate(); } }
+        public Color StateCommonComboBoxItemContentLongTextColourOne { get => _stateCommonComboBoxItemContentLongTextColourOne; set { _stateCommonComboBoxItemContentLongTextColourOne = value; Invalidate(); } }
 
+        public Color StateCommonComboBoxItemContentLongTextColourTwo { get => _stateCommonComboBoxItemContentLongTextColourTwo; set { _stateCommonComboBoxItemContentLongTextColourTwo = value; Invalidate(); } }
+
+        public Color StateCommonComboBoxItemContentShortTextColourOne { get => _stateCommonComboBoxItemContentShortTextColourOne; set { _stateCommonComboBoxItemContentShortTextColourOne = value; Invalidate(); } }
+
+        public Color StateCommonComboBoxItemContentShortTextColourTwo { get => _stateCommonComboBoxItemContentShortTextColourTwo; set { _stateCommonComboBoxItemContentShortTextColourTwo = value; Invalidate(); } }
+        #endregion
+
+        #region State Disabled
+        public Color StateDisabledComboBoxBackColour { get => _stateDisabledComboBoxBackColour; set { _stateDisabledComboBoxBackColour = value; Invalidate(); } }
+
+        public Color StateDisabledComboBoxContentColour { get => _stateDisabledComboBoxContentColour; set { _stateDisabledComboBoxContentColour = value; Invalidate(); } }
+
+        public Color StateDisabledComboBoxItemBackColourOne { get => _stateDisabledComboBoxItemBackColourOne; set { _stateDisabledComboBoxItemBackColourOne = value; Invalidate(); } }
+
+        public Color StateDisabledComboBoxItemBackColourTwo { get => _stateDisabledComboBoxItemBackColourTwo; set { _stateDisabledComboBoxItemBackColourTwo = value; Invalidate(); } }
+
+        public Color StateDisabledComboBoxItemContentLongTextColourOne { get => _stateDisabledComboBoxItemContentLongTextColourOne; set { _stateDisabledComboBoxItemContentLongTextColourOne = value; Invalidate(); } }
+
+        public Color StateDisabledComboBoxItemContentLongTextColourTwo { get => _stateDisabledComboBoxItemContentLongTextColourTwo; set { _stateDisabledComboBoxItemContentLongTextColourTwo = value; Invalidate(); } }
+
+        public Color StateDisabledComboBoxItemContentShortTextColourOne { get => _stateDisabledComboBoxItemContentShortTextColourOne; set { _stateDisabledComboBoxItemContentShortTextColourOne = value; Invalidate(); } }
+
+        public Color StateDisabledComboBoxItemContentShortTextColourTwo { get => _stateDisabledComboBoxItemContentShortTextColourTwo; set { _stateDisabledComboBoxItemContentShortTextColourTwo = value; Invalidate(); } }
+        #endregion
+
+        #region State Normal
+        public Color StateNormalComboBoxBackColour { get => _stateNormalComboBoxBackColour; set { _stateNormalComboBoxBackColour = value; Invalidate(); } }
+
+        public Color StateNormalComboBoxContentColour { get => _stateNormalComboBoxContentColour; set { _stateNormalComboBoxContentColour = value; Invalidate(); } }
+
+        public Color StateNormalComboBoxItemBackColourOne { get => _stateNormalComboBoxItemBackColourOne; set { _stateNormalComboBoxItemBackColourOne = value; Invalidate(); } }
+
+        public Color StateNormalComboBoxItemBackColourTwo { get => _stateNormalComboBoxItemBackColourTwo; set { _stateNormalComboBoxItemBackColourTwo = value; Invalidate(); } }
+
+        public Color StateNormalComboBoxItemContentLongTextColourOne { get => _stateNormalComboBoxItemContentLongTextColourOne; set { _stateNormalComboBoxItemContentLongTextColourOne = value; Invalidate(); } }
+
+        public Color StateNormalComboBoxItemContentLongTextColourTwo { get => _stateNormalComboBoxItemContentLongTextColourTwo; set { _stateNormalComboBoxItemContentLongTextColourTwo = value; Invalidate(); } }
+
+        public Color StateNormalComboBoxItemContentShortTextColourOne { get => _stateNormalComboBoxItemContentShortTextColourOne; set { _stateNormalComboBoxItemContentShortTextColourOne = value; Invalidate(); } }
+
+        public Color StateNormalComboBoxItemContentShortTextColourTwo { get => _stateNormalComboBoxItemContentShortTextColourTwo; set { _stateNormalComboBoxItemContentShortTextColourTwo = value; Invalidate(); } }
+        #endregion
+
+        #region State Tracking
+        public Color StateTrackingComboBoxItemBackColourOne { get => _stateTrackingComboBoxItemBackColourOne; set { _stateTrackingComboBoxItemBackColourOne = value; Invalidate(); } }
+
+        public Color StateTrackingComboBoxItemBackColourTwo { get => _stateTrackingComboBoxItemBackColourTwo; set { _stateTrackingComboBoxItemBackColourTwo = value; Invalidate(); } }
+
+        public Color StateTrackingComboBoxItemContentLongTextColourOne { get => _stateTrackingComboBoxItemContentLongTextColourOne; set { _stateTrackingComboBoxItemContentLongTextColourOne = value; Invalidate(); } }
+
+        public Color StateTrackingComboBoxItemContentLongTextColourTwo { get => _stateTrackingComboBoxItemContentLongTextColourTwo; set { _stateTrackingComboBoxItemContentLongTextColourTwo = value; Invalidate(); } }
+
+        public Color StateTrackingComboBoxItemContentShortTextColourOne { get => _stateTrackingComboBoxItemContentShortTextColourOne; set { _stateTrackingComboBoxItemContentShortTextColourOne = value; Invalidate(); } }
+
+        public Color StateTrackingComboBoxItemContentShortTextColourTwo { get => _stateTrackingComboBoxItemContentShortTextColourTwo; set { _stateTrackingComboBoxItemContentShortTextColourTwo = value; Invalidate(); } }
+        #endregion
+
+        #region Globals
         public Font ComboBoxContentTypeface { get => _comboBoxContentTypeface; set { _comboBoxContentTypeface = value; Invalidate(); } }
 
         public Font ComboBoxItemContentLongTextTypeface { get => _comboBoxItemContentLongTextTypeface; set { _comboBoxItemContentLongTextTypeface = value; Invalidate(); } }
@@ -46,29 +110,90 @@ namespace ExtendedStandardControls
         public Image Image { get => _image; set { _image = value; Invalidate(); } }
         #endregion
 
+        #endregion
+
         #region Constructor
         public KryptonComboBoxExtended()
         {
-            ComboBoxBackColour = Color.Empty;
+            #region State Active
+            StateActiveComboBoxBackColour = Color.Empty;
 
-            ComboBoxContentColour = Color.Empty;
+            StateActiveComboBoxContentColour = Color.Empty;
+            #endregion
 
-            ComboBoxDropBackColourOne = Color.Empty;
+            #region State Common
+            StateCommonComboBoxBackColour = Color.Empty;
 
-            ComboBoxDropBackColourTwo = Color.Empty;
+            StateCommonComboBoxContentColour = Color.Empty;
 
-            ComboBoxItemBackColourOne = Color.Empty;
+            StateCommonComboBoxDropBackColourOne = Color.Empty;
 
-            ComboBoxItemBackColourTwo = Color.Empty;
+            StateCommonComboBoxDropBackColourTwo = Color.Empty;
 
-            ComboBoxItemContentLongTextColourOne = Color.Empty;
+            StateCommonComboBoxItemBackColourOne = Color.Empty;
 
-            ComboBoxItemContentLongTextColourTwo = Color.Empty;
+            StateCommonComboBoxItemBackColourTwo = Color.Empty;
 
-            ComboBoxItemContentShortTextColourOne = Color.Empty;
+            StateCommonComboBoxItemContentLongTextColourOne = Color.Empty;
 
-            ComboBoxItemContentShortTextColourTwo = Color.Empty;
+            StateCommonComboBoxItemContentLongTextColourTwo = Color.Empty;
 
+            StateCommonComboBoxItemContentShortTextColourOne = Color.Empty;
+
+            StateCommonComboBoxItemContentShortTextColourTwo = Color.Empty;
+            #endregion
+
+            #region State Disabled
+            StateDisabledComboBoxBackColour = Color.Empty;
+
+            StateDisabledComboBoxContentColour = Color.Empty;
+
+            StateDisabledComboBoxItemBackColourOne = Color.Empty;
+
+            StateDisabledComboBoxItemBackColourTwo = Color.Empty;
+
+            StateDisabledComboBoxItemContentLongTextColourOne = Color.Empty;
+
+            StateDisabledComboBoxItemContentLongTextColourTwo = Color.Empty;
+
+            StateDisabledComboBoxItemContentShortTextColourOne = Color.Empty;
+
+            StateDisabledComboBoxItemContentShortTextColourTwo = Color.Empty;
+            #endregion
+
+            #region State Normal
+            StateNormalComboBoxBackColour = Color.Empty;
+
+            StateNormalComboBoxContentColour = Color.Empty;
+
+            StateNormalComboBoxItemBackColourOne = Color.Empty;
+
+            StateNormalComboBoxItemBackColourTwo = Color.Empty;
+
+            StateNormalComboBoxItemContentLongTextColourOne = Color.Empty;
+
+            StateNormalComboBoxItemContentLongTextColourTwo = Color.Empty;
+
+            StateNormalComboBoxItemContentShortTextColourOne = Color.Empty;
+
+            StateNormalComboBoxItemContentShortTextColourTwo = Color.Empty;
+            #endregion
+
+            #region State Tracking
+            StateTrackingComboBoxItemBackColourOne = Color.Empty;
+
+            StateTrackingComboBoxItemBackColourTwo = Color.Empty;
+
+            StateTrackingComboBoxItemContentLongTextColourOne = Color.Empty;
+
+            StateTrackingComboBoxItemContentLongTextColourTwo = Color.Empty;
+
+            StateTrackingComboBoxItemContentShortTextColourOne = Color.Empty;
+
+            StateTrackingComboBoxItemContentShortTextColourTwo = Color.Empty;
+            #endregion
+
+            #region Globals
             ComboBoxContentTypeface = Typeface.DefaultTypeface();
 
             ComboBoxItemContentLongTextTypeface = Typeface.DefaultTypeface();
@@ -76,13 +201,39 @@ namespace ExtendedStandardControls
             ComboBoxItemContentShortTextTypeface = Typeface.DefaultTypeface();
 
             Image = null;
+            #endregion
 
-            UpdateCommonAppearanceValues(ComboBoxBackColour, ComboBoxContentColour, ComboBoxDropBackColourOne, ComboBoxDropBackColourTwo, ComboBoxItemBackColourOne, ComboBoxItemBackColourTwo, ComboBoxItemContentLongTextColourOne, ComboBoxItemContentLongTextColourTwo, ComboBoxItemContentShortTextColourOne, ComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
+            UpdateStateActiveAppearanceValues(StateActiveComboBoxBackColour, StateActiveComboBoxContentColour, ComboBoxContentTypeface);
+
+            UpdateStateCommonAppearanceValues(StateCommonComboBoxBackColour, StateCommonComboBoxContentColour, StateCommonComboBoxDropBackColourOne, StateCommonComboBoxDropBackColourTwo, StateCommonComboBoxItemBackColourOne, StateCommonComboBoxItemBackColourTwo, StateCommonComboBoxItemContentLongTextColourOne, StateCommonComboBoxItemContentLongTextColourTwo, StateCommonComboBoxItemContentShortTextColourOne, StateCommonComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
+
+            UpdateStateDisabledAppearanceValues(StateDisabledComboBoxBackColour, StateDisabledComboBoxContentColour, StateDisabledComboBoxItemBackColourOne, StateDisabledComboBoxItemBackColourTwo, StateDisabledComboBoxItemContentLongTextColourOne, StateDisabledComboBoxItemContentLongTextColourTwo, StateDisabledComboBoxItemContentShortTextColourOne, StateDisabledComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
+
+            UpdateStateNormalAppearanceValues(StateNormalComboBoxBackColour, StateNormalComboBoxContentColour, StateNormalComboBoxItemBackColourOne, StateNormalComboBoxItemBackColourTwo, StateNormalComboBoxItemContentLongTextColourOne, StateNormalComboBoxItemContentLongTextColourTwo, StateNormalComboBoxItemContentShortTextColourOne, StateNormalComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
+
+            UpdateStateTrackingAppearanceValues(StateTrackingComboBoxItemBackColourOne, StateTrackingComboBoxItemBackColourTwo, StateTrackingComboBoxItemContentLongTextColourOne, StateTrackingComboBoxItemContentLongTextColourTwo, StateTrackingComboBoxItemContentShortTextColourOne, StateTrackingComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
         }
         #endregion
 
-        #region Method
-        /// <summary>Updates the appearence values.</summary>
+        #region Method        
+        /// <summary>
+        /// Updates the state active appearance values.
+        /// </summary>
+        /// <param name="comboBoxBackColour">The combo box back colour.</param>
+        /// <param name="comboBoxContentColour">The combo box content colour.</param>
+        /// <param name="comboBoxContentTypeface">The combo box content typeface.</param>
+        private void UpdateStateActiveAppearanceValues(Color comboBoxBackColour, Color comboBoxContentColour, Font comboBoxContentTypeface)
+        {
+            StateActive.ComboBox.Back.Color1 = comboBoxBackColour;
+
+            StateActive.ComboBox.Content.Color1 = comboBoxContentColour;
+
+            StateActive.ComboBox.Content.Font = comboBoxContentTypeface;
+        }
+
+        /// <summary>
+        /// Updates the state common appearance values.
+        /// </summary>
         /// <param name="comboBoxBackColour">The combo box back colour.</param>
         /// <param name="comboBoxContentColour">The combo box content colour.</param>
         /// <param name="comboBoxDropBackColourOne">The combo box drop back colour one.</param>
@@ -97,7 +248,7 @@ namespace ExtendedStandardControls
         /// <param name="comboBoxItemContentLongTextTypeface">The combo box item content long text typeface.</param>
         /// <param name="comboBoxItemContentShortTextTypeface">The combo box item content short text typeface.</param>
         /// <param name="image">The image.</param>
-        private void UpdateCommonAppearanceValues(Color comboBoxBackColour, Color comboBoxContentColour, Color comboBoxDropBackColourOne, Color comboBoxDropBackColourTwo, Color comboBoxItemBackColourOne, Color comboBoxItemBackColourTwo, Color comboBoxItemContentLongTextColourOne, Color comboBoxItemContentLongTextColourTwo, Color comboBoxItemContentShortTextColourOne, Color comboBoxItemContentShortTextColourTwo, Font comboBoxContentTypeface, Font comboBoxItemContentLongTextTypeface, Font comboBoxItemContentShortTextTypeface, Image image)
+        private void UpdateStateCommonAppearanceValues(Color comboBoxBackColour, Color comboBoxContentColour, Color comboBoxDropBackColourOne, Color comboBoxDropBackColourTwo, Color comboBoxItemBackColourOne, Color comboBoxItemBackColourTwo, Color comboBoxItemContentLongTextColourOne, Color comboBoxItemContentLongTextColourTwo, Color comboBoxItemContentShortTextColourOne, Color comboBoxItemContentShortTextColourTwo, Font comboBoxContentTypeface, Font comboBoxItemContentLongTextTypeface, Font comboBoxItemContentShortTextTypeface, Image image)
         {
             StateCommon.ComboBox.Back.Color1 = comboBoxBackColour;
 
@@ -129,12 +280,144 @@ namespace ExtendedStandardControls
 
             StateCommon.Item.Content.ShortText.Image = image;
         }
+
+        /// <summary>
+        /// Updates the state disabled appearance values.
+        /// </summary>
+        /// <param name="comboBoxBackColour">The combo box back colour.</param>
+        /// <param name="comboBoxContentColour">The combo box content colour.</param>
+        /// <param name="comboBoxItemBackColourOne">The combo box item back colour one.</param>
+        /// <param name="comboBoxItemBackColourTwo">The combo box item back colour two.</param>
+        /// <param name="comboBoxItemContentLongTextColourOne">The combo box item content long text colour one.</param>
+        /// <param name="comboBoxItemContentLongTextColourTwo">The combo box item content long text colour two.</param>
+        /// <param name="comboBoxItemContentShortTextColourOne">The combo box item content short text colour one.</param>
+        /// <param name="comboBoxItemContentShortTextColourTwo">The combo box item content short text colour two.</param>
+        /// <param name="comboBoxContentTypeface">The combo box content typeface.</param>
+        /// <param name="comboBoxItemContentLongTextTypeface">The combo box item content long text typeface.</param>
+        /// <param name="comboBoxItemContentShortTextTypeface">The combo box item content short text typeface.</param>
+        /// <param name="image">The image.</param>
+        private void UpdateStateDisabledAppearanceValues(Color comboBoxBackColour, Color comboBoxContentColour, Color comboBoxItemBackColourOne, Color comboBoxItemBackColourTwo, Color comboBoxItemContentLongTextColourOne, Color comboBoxItemContentLongTextColourTwo, Color comboBoxItemContentShortTextColourOne, Color comboBoxItemContentShortTextColourTwo, Font comboBoxContentTypeface, Font comboBoxItemContentLongTextTypeface, Font comboBoxItemContentShortTextTypeface, Image image)
+        {
+            StateDisabled.ComboBox.Back.Color1 = comboBoxBackColour;
+
+            StateDisabled.ComboBox.Content.Color1 = comboBoxContentColour;
+
+            StateDisabled.ComboBox.Content.Font = comboBoxContentTypeface;
+
+            StateDisabled.Item.Back.Color1 = comboBoxItemBackColourOne;
+
+            StateDisabled.Item.Back.Color2 = comboBoxItemBackColourTwo;
+
+            StateDisabled.Item.Content.LongText.Color1 = comboBoxItemContentLongTextColourOne;
+
+            StateDisabled.Item.Content.LongText.Color2 = comboBoxItemContentLongTextColourTwo;
+
+            StateDisabled.Item.Content.LongText.Font = comboBoxItemContentLongTextTypeface;
+
+            StateDisabled.Item.Content.LongText.Image = image;
+
+            StateDisabled.Item.Content.ShortText.Color1 = comboBoxItemContentShortTextColourOne;
+
+            StateDisabled.Item.Content.ShortText.Color2 = comboBoxItemContentShortTextColourTwo;
+
+            StateDisabled.Item.Content.ShortText.Font = comboBoxItemContentShortTextTypeface;
+
+            StateDisabled.Item.Content.ShortText.Image = image;
+        }
+
+        /// <summary>
+        /// Updates the state normal appearance values.
+        /// </summary>
+        /// <param name="comboBoxBackColour">The combo box back colour.</param>
+        /// <param name="comboBoxContentColour">The combo box content colour.</param>
+        /// <param name="comboBoxItemBackColourOne">The combo box item back colour one.</param>
+        /// <param name="comboBoxItemBackColourTwo">The combo box item back colour two.</param>
+        /// <param name="comboBoxItemContentLongTextColourOne">The combo box item content long text colour one.</param>
+        /// <param name="comboBoxItemContentLongTextColourTwo">The combo box item content long text colour two.</param>
+        /// <param name="comboBoxItemContentShortTextColourOne">The combo box item content short text colour one.</param>
+        /// <param name="comboBoxItemContentShortTextColourTwo">The combo box item content short text colour two.</param>
+        /// <param name="comboBoxContentTypeface">The combo box content typeface.</param>
+        /// <param name="comboBoxItemContentLongTextTypeface">The combo box item content long text typeface.</param>
+        /// <param name="comboBoxItemContentShortTextTypeface">The combo box item content short text typeface.</param>
+        /// <param name="image">The image.</param>
+        private void UpdateStateNormalAppearanceValues(Color comboBoxBackColour, Color comboBoxContentColour, Color comboBoxItemBackColourOne, Color comboBoxItemBackColourTwo, Color comboBoxItemContentLongTextColourOne, Color comboBoxItemContentLongTextColourTwo, Color comboBoxItemContentShortTextColourOne, Color comboBoxItemContentShortTextColourTwo, Font comboBoxContentTypeface, Font comboBoxItemContentLongTextTypeface, Font comboBoxItemContentShortTextTypeface, Image image)
+        {
+            StateNormal.ComboBox.Back.Color1 = comboBoxBackColour;
+
+            StateNormal.ComboBox.Content.Color1 = comboBoxContentColour;
+
+            StateNormal.ComboBox.Content.Font = comboBoxContentTypeface;
+
+            StateNormal.Item.Back.Color1 = comboBoxItemBackColourOne;
+
+            StateNormal.Item.Back.Color2 = comboBoxItemBackColourTwo;
+
+            StateNormal.Item.Content.LongText.Color1 = comboBoxItemContentLongTextColourOne;
+
+            StateNormal.Item.Content.LongText.Color2 = comboBoxItemContentLongTextColourTwo;
+
+            StateNormal.Item.Content.LongText.Font = comboBoxItemContentLongTextTypeface;
+
+            StateNormal.Item.Content.LongText.Image = image;
+
+            StateNormal.Item.Content.ShortText.Color1 = comboBoxItemContentShortTextColourOne;
+
+            StateNormal.Item.Content.ShortText.Color2 = comboBoxItemContentShortTextColourTwo;
+
+            StateNormal.Item.Content.ShortText.Font = comboBoxItemContentShortTextTypeface;
+
+            StateNormal.Item.Content.ShortText.Image = image;
+        }
+
+        /// <summary>
+        /// Updates the state tracking appearance values.
+        /// </summary>
+        /// <param name="comboBoxItemBackColourOne">The combo box item back colour one.</param>
+        /// <param name="comboBoxItemBackColourTwo">The combo box item back colour two.</param>
+        /// <param name="comboBoxItemContentLongTextColourOne">The combo box item content long text colour one.</param>
+        /// <param name="comboBoxItemContentLongTextColourTwo">The combo box item content long text colour two.</param>
+        /// <param name="comboBoxItemContentShortTextColourOne">The combo box item content short text colour one.</param>
+        /// <param name="comboBoxItemContentShortTextColourTwo">The combo box item content short text colour two.</param>
+        /// <param name="comboBoxContentTypeface">The combo box content typeface.</param>
+        /// <param name="comboBoxItemContentLongTextTypeface">The combo box item content long text typeface.</param>
+        /// <param name="comboBoxItemContentShortTextTypeface">The combo box item content short text typeface.</param>
+        /// <param name="image">The image.</param>
+        private void UpdateStateTrackingAppearanceValues(Color comboBoxItemBackColourOne, Color comboBoxItemBackColourTwo, Color comboBoxItemContentLongTextColourOne, Color comboBoxItemContentLongTextColourTwo, Color comboBoxItemContentShortTextColourOne, Color comboBoxItemContentShortTextColourTwo, Font comboBoxContentTypeface, Font comboBoxItemContentLongTextTypeface, Font comboBoxItemContentShortTextTypeface, Image image)
+        {
+            StateTracking.Item.Back.Color1 = comboBoxItemBackColourOne;
+
+            StateTracking.Item.Back.Color2 = comboBoxItemBackColourTwo;
+
+            StateTracking.Item.Content.LongText.Color1 = comboBoxItemContentLongTextColourOne;
+
+            StateTracking.Item.Content.LongText.Color2 = comboBoxItemContentLongTextColourTwo;
+
+            StateTracking.Item.Content.LongText.Font = comboBoxItemContentLongTextTypeface;
+
+            StateTracking.Item.Content.LongText.Image = image;
+
+            StateTracking.Item.Content.ShortText.Color1 = comboBoxItemContentShortTextColourOne;
+
+            StateTracking.Item.Content.ShortText.Color2 = comboBoxItemContentShortTextColourTwo;
+
+            StateTracking.Item.Content.ShortText.Font = comboBoxItemContentShortTextTypeface;
+
+            StateTracking.Item.Content.ShortText.Image = image;
+        }
         #endregion
 
         #region Overrides
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateCommonAppearanceValues(ComboBoxBackColour, ComboBoxContentColour, ComboBoxDropBackColourOne, ComboBoxDropBackColourTwo, ComboBoxItemBackColourOne, ComboBoxItemBackColourTwo, ComboBoxItemContentLongTextColourOne, ComboBoxItemContentLongTextColourTwo, ComboBoxItemContentShortTextColourOne, ComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
+            UpdateStateActiveAppearanceValues(StateActiveComboBoxBackColour, StateActiveComboBoxContentColour, ComboBoxContentTypeface);
+
+            UpdateStateCommonAppearanceValues(StateCommonComboBoxBackColour, StateCommonComboBoxContentColour, StateCommonComboBoxDropBackColourOne, StateCommonComboBoxDropBackColourTwo, StateCommonComboBoxItemBackColourOne, StateCommonComboBoxItemBackColourTwo, StateCommonComboBoxItemContentLongTextColourOne, StateCommonComboBoxItemContentLongTextColourTwo, StateCommonComboBoxItemContentShortTextColourOne, StateCommonComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
+
+            UpdateStateDisabledAppearanceValues(StateDisabledComboBoxBackColour, StateDisabledComboBoxContentColour, StateDisabledComboBoxItemBackColourOne, StateDisabledComboBoxItemBackColourTwo, StateDisabledComboBoxItemContentLongTextColourOne, StateDisabledComboBoxItemContentLongTextColourTwo, StateDisabledComboBoxItemContentShortTextColourOne, StateDisabledComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
+
+            UpdateStateNormalAppearanceValues(StateNormalComboBoxBackColour, StateNormalComboBoxContentColour, StateNormalComboBoxItemBackColourOne, StateNormalComboBoxItemBackColourTwo, StateNormalComboBoxItemContentLongTextColourOne, StateNormalComboBoxItemContentLongTextColourTwo, StateNormalComboBoxItemContentShortTextColourOne, StateNormalComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
+
+            UpdateStateTrackingAppearanceValues(StateTrackingComboBoxItemBackColourOne, StateTrackingComboBoxItemBackColourTwo, StateTrackingComboBoxItemContentLongTextColourOne, StateTrackingComboBoxItemContentLongTextColourTwo, StateTrackingComboBoxItemContentShortTextColourOne, StateTrackingComboBoxItemContentShortTextColourTwo, ComboBoxContentTypeface, ComboBoxItemContentLongTextTypeface, ComboBoxItemContentShortTextTypeface, Image);
 
             base.OnPaint(e);
         }
