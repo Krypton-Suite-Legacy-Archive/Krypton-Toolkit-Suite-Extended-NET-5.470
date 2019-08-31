@@ -46,7 +46,7 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ======
 
-## 2019-09-01 Build 13xx - September Update
+## 2019-09-0x Build 13xx - September Update
 * More item and project templates (floating MenuStrips & ToolStrip templates)
 * More toolbar features in `KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule`
 * Define corner radius for selected controls
