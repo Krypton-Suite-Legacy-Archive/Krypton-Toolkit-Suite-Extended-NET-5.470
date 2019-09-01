@@ -6,9 +6,21 @@
 
 =======
 
-| NuGet | Current NuGet Version | Github License |
+| Module Name | Current Version |
+|---|---|
+| <img src="https://img.shields.io/badge/Module-Core-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470CoreModule) | 
+| <img src="https://img.shields.io/badge/Module-Colour Controls-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470ExtendedColourControlsModule) | 
+| <img src="https://img.shields.io/badge/Module-Dialogs-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470ExtendedDialogsModule) |
+| <img src="https://img.shields.io/badge/Module-Menu & Toolbar Items-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule) 
+| <img src="https://img.shields.io/badge/Module-Floating Menu & Toolbars-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470FloatingMenuAndToolbarsModule) | 
+| <img src="https://img.shields.io/badge/Module-IO Components-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470IOComponentsModule) 
+| <img src="https://img.shields.io/badge/Module-Krypton Outlook Grid-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470KryptonOutlookGridModule) |
+| <img src="https://img.shields.io/badge/Module-Navi Suite-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470NaviSuiteModule) | 
+| <img src="https://img.shields.io/badge/Module-Task Dialogs-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470TaskDialogsModule) | 
+
+<!-- | NuGet | Current NuGet Version | Github License |
 |---|---|---|
-| [![NuGet](https://img.shields.io/badge/NuGet-Krypton%20Extended%20.NET%205.470-brightgreen.svg)](https://www.nuget.org/packages/KryptonExtendedToolkit5470/) | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470.svg) | ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470.svg)
+| [![NuGet](https://img.shields.io/badge/NuGet-Krypton%20Extended%20.NET%205.470-brightgreen.svg)](https://www.nuget.org/packages/KryptonExtendedToolkit5470/) | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470.svg) | ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470.svg) -->
 
 =======
 
