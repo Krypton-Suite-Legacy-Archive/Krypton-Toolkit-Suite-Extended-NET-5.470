@@ -58,13 +58,20 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ======
 
-## 2019-09-0x Build 13xx - September Update
-* More item and project templates (floating MenuStrips & ToolStrip templates)
-* More toolbar features in `KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule`
-* Define corner radius for selected controls
+## 2019-10-01 Build 14xx - October Update
+* Complete [#95](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/95) & [#89](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/89), labelled as `KryptonExtendedToolkit5470StandardControlsExtendedModule`
+* More [#96](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/96)
 
 ======
 -->
+
+## 2019-09-01 Build 1331 - September Update
+* More item and project templates (floating MenuStrips & ToolStrip templates)
+* More toolbar features in `KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule`
+* Define corner radius for selected controls, [#96](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/96)
+* Updated `README.md` with module information
+
+======
 
 ## 2019-08-12 Build 1216 - August Update
 * Added `ExtendedKryptonColourButton` control with a kryptonised custom colour UI
