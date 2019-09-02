@@ -3,7 +3,7 @@
     <Metadata>
         <Identity Id="Floatable_Tool_and_Menu_Strips.65d5acfd-6213-4c02-9e30-fbdcfbfbd6ca" Version="5.470" Language="en-US" Publisher="Peter Wagner &amp; Simon Coghlan" />
         <DisplayName>Floatable Tool &amp; Menu Strips</DisplayName>
-        <Description xml:space="preserve">Templates for floating menu &amp; tool </Description>
+        <Description xml:space="preserve">Templates for floating menu &amp; tool Templates for floating menu &amp; tool </Description>
         <License>License.txt</License>
         <Icon>KR 48 x 48 Orange.ico</Icon>
     </Metadata>
@@ -19,5 +19,6 @@
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
         <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\KryptonFloatingMenuStripForm.zip" />
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\KryptonFloatingToolStripItemTemplate.zip" />
     </Assets>
 </PackageManifest>

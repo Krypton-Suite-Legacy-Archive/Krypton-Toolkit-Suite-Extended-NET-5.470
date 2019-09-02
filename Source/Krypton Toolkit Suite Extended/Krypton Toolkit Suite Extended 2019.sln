@@ -218,6 +218,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VSIX", "VSIX", "{F75A4C78-A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Floatable Tool and Menu Strips", "Floatable Tool and Menu Strips\Floatable Tool and Menu Strips.csproj", "{ACE55EF1-72E9-4FDB-9459-CBEA93E10843}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -630,6 +632,18 @@ Global
 		{ACE55EF1-72E9-4FDB-9459-CBEA93E10843}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ACE55EF1-72E9-4FDB-9459-CBEA93E10843}.Release|x86.ActiveCfg = Release|Any CPU
 		{ACE55EF1-72E9-4FDB-9459-CBEA93E10843}.Release|x86.Build.0 = Release|Any CPU
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}.Debug|x86.Build.0 = Debug|Any CPU
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}.Installer Only|Any CPU.ActiveCfg = Release|Any CPU
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}.Installer Only|Any CPU.Build.0 = Release|Any CPU
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}.Installer Only|x86.ActiveCfg = Release|Any CPU
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}.Installer Only|x86.Build.0 = Release|Any CPU
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}.Release|x86.ActiveCfg = Release|Any CPU
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -684,6 +698,7 @@ Global
 		{B1178131-E303-42ED-9E9F-C808639BD40D} = {40012A2D-6D4F-4EE7-991D-7073DC5A579C}
 		{501F76BC-0CC8-4680-9497-489539D65944} = {00BD5065-7D99-43D4-BF83-5AB7B3474EF1}
 		{ACE55EF1-72E9-4FDB-9459-CBEA93E10843} = {F75A4C78-A356-4F28-A259-8CEFEB9B2B2A}
+		{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A} = {40012A2D-6D4F-4EE7-991D-7073DC5A579C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4D1018D-143A-451D-8FC0-F63E4923F552}

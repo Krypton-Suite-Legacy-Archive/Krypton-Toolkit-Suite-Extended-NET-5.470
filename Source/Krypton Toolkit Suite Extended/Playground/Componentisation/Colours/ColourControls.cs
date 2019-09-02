@@ -9,7 +9,7 @@ namespace Playground.Componentisation.Colours
 {
     public class ColourControls : KryptonForm
     {
-        private ExtendedColourControls.ColourWheel colourWheel1;
+        private ColourWheel colourWheel1;
 
         private void InitializeComponent()
         {
