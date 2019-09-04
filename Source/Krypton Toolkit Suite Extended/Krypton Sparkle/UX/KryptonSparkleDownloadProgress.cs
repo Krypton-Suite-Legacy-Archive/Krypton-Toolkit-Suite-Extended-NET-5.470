@@ -63,8 +63,8 @@ namespace KryptonSparkle.UX
             this.klblSecurityHint.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.klblSecurityHint.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.klblSecurityHint.TabIndex = 1;
-            this.klblSecurityHint.TextColourOne = System.Drawing.Color.Empty;
-            this.klblSecurityHint.TextColourTwo = System.Drawing.Color.Empty;
+            this.klblSecurityHint.StateCommonTextColourOne = System.Drawing.Color.Empty;
+            this.klblSecurityHint.StateCommonTextColourTwo = System.Drawing.Color.Empty;
             this.klblSecurityHint.Values.Text = "The update was affected by not verified changes, it could be unsafe to install it" +
     "!";
             // 
@@ -156,8 +156,8 @@ namespace KryptonSparkle.UX
             this.klblHeader.Size = new System.Drawing.Size(117, 21);
             this.klblHeader.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblHeader.TabIndex = 2;
-            this.klblHeader.TextColourOne = System.Drawing.Color.Empty;
-            this.klblHeader.TextColourTwo = System.Drawing.Color.Empty;
+            this.klblHeader.StateCommonTextColourOne = System.Drawing.Color.Empty;
+            this.klblHeader.StateCommonTextColourTwo = System.Drawing.Color.Empty;
             this.klblHeader.Values.Text = "Downloading {0}";
             // 
             // pbxAppIcon

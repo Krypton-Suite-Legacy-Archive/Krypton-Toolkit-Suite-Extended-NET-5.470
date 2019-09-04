@@ -66,6 +66,7 @@
     <Compile Include="Components\Controls\ExtendedProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\Controls\KryptonColourComboBox.cs" />
     <Compile Include="Components\Controls\KryptonCommandLinkVersion1.cs" />
     <Compile Include="Components\Controls\KryptonCommandLinkVersion2.cs" />
     <Compile Include="Components\Controls\KryptonGrid.cs">

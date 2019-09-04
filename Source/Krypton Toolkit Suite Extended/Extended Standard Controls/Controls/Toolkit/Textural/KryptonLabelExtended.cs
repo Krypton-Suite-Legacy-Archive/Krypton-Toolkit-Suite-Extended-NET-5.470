@@ -9,7 +9,9 @@ namespace ExtendedStandardControls
     public class KryptonLabelExtended : KryptonLabel
     {
         #region Variables
-        private Color _textColourOne, _textColourTwo;
+        private Color _stateCommonTextColourOne, _stateCommonTextColourTwo,
+                      _stateDisabledTextColourOne, _stateDisabledTextColourTwo,
+                      _stateNormalTextColourOne, _stateNormalTextColourTwo;
 
         private Font _longTextTypeface, _shortTextTypeface;
 
@@ -17,12 +19,32 @@ namespace ExtendedStandardControls
         #endregion
 
         #region Properties
+
+        #region State Common
         [Category("Appearance"), Description("The first text colour.")]
-        public Color TextColourOne { get => _textColourOne; set { _textColourOne = value; Invalidate(); } }
+        public Color StateCommonTextColourOne { get => _stateCommonTextColourOne; set { _stateCommonTextColourOne = value; Invalidate(); } }
 
         [Category("Appearance"), Description("The second text colour.")]
-        public Color TextColourTwo { get => _textColourTwo; set { _textColourTwo = value; Invalidate(); } }
+        public Color StateCommonTextColourTwo { get => _stateCommonTextColourTwo; set { _stateCommonTextColourTwo = value; Invalidate(); } }
+        #endregion
 
+        #region State Disabled
+        [Category("Appearance"), Description("The first text colour.")]
+        public Color StateDisabledTextColourOne { get => _stateDisabledTextColourOne; set { _stateDisabledTextColourOne = value; Invalidate(); } }
+
+        [Category("Appearance"), Description("The second text colour.")]
+        public Color StateDisabledTextColourTwo { get => _stateDisabledTextColourTwo; set { _stateDisabledTextColourTwo = value; Invalidate(); } }  
+        #endregion
+
+        #region State Normal
+        [Category("Appearance"), Description("The first text colour.")]
+        public Color StateNormalTextColourOne { get => _stateNormalTextColourOne; set { _stateNormalTextColourOne = value; Invalidate(); } }
+
+        [Category("Appearance"), Description("The second text colour.")]
+        public Color StateNormalTextColourTwo { get => _stateNormalTextColourTwo; set { _stateNormalTextColourTwo = value; Invalidate(); } }            
+        #endregion
+
+        #region Globals
         [Category("Appearance"), Description("The 'Long Text' typeface.")]
         public Font LongTextTypeface { get => _longTextTypeface; set { _longTextTypeface = value; Invalidate(); } }
 
@@ -33,12 +55,22 @@ namespace ExtendedStandardControls
         public Image Image { get => _image; set { _image = value; Invalidate(); } }
         #endregion
 
+        #endregion
+
         #region Constructor
         public KryptonLabelExtended()
         {
-            TextColourOne = Color.Empty;
+            StateCommonTextColourOne = Color.Empty;
 
-            TextColourTwo = Color.Empty;
+            StateCommonTextColourTwo = Color.Empty;
+
+            StateDisabledTextColourOne = Color.Empty;
+
+            StateDisabledTextColourTwo = Color.Empty;
+
+            StateNormalTextColourOne = Color.Empty;
+
+            StateNormalTextColourTwo = Color.Empty;
 
             LongTextTypeface = null;
 
@@ -46,7 +78,11 @@ namespace ExtendedStandardControls
 
             Image = null;
 
-            UpdateCommonAppearanceValues(TextColourOne, TextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
+            UpdateCommonAppearanceValues(StateCommonTextColourOne, StateCommonTextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
+
+            UpdateDisabledAppearanceValues(StateDisabledTextColourOne, StateDisabledTextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
+
+            UpdateNormalAppearanceValues(StateNormalTextColourOne, StateNormalTextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
         }
         #endregion
 
@@ -69,12 +105,54 @@ namespace ExtendedStandardControls
 
             StateCommon.ShortText.Image = image;
         }
+
+        private void UpdateDisabledAppearanceValues(Color textColourOne, Color textColourTwo, Font longTextTypeface, Font shortTextTypeface, Image image)
+        {
+            StateDisabled.LongText.Color1 = textColourOne;
+
+            StateDisabled.LongText.Color2 = textColourTwo;
+
+            StateDisabled.LongText.Font = longTextTypeface;
+
+            StateDisabled.LongText.Image = image;
+
+            StateDisabled.ShortText.Color1 = textColourOne;
+
+            StateDisabled.ShortText.Color2 = textColourTwo;
+
+            StateDisabled.ShortText.Font = shortTextTypeface;
+
+            StateDisabled.ShortText.Image = image;
+        }
+
+        private void UpdateNormalAppearanceValues(Color textColourOne, Color textColourTwo, Font longTextTypeface, Font shortTextTypeface, Image image)
+        {
+            StateNormal.LongText.Color1 = textColourOne;
+
+            StateNormal.LongText.Color2 = textColourTwo;
+
+            StateNormal.LongText.Font = longTextTypeface;
+
+            StateNormal.LongText.Image = image;
+
+            StateNormal.ShortText.Color1 = textColourOne;
+
+            StateNormal.ShortText.Color2 = textColourTwo;
+
+            StateNormal.ShortText.Font = shortTextTypeface;
+
+            StateNormal.ShortText.Image = image;
+        }
         #endregion
 
         #region Override
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateCommonAppearanceValues(TextColourOne, TextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
+            UpdateCommonAppearanceValues(StateCommonTextColourOne, StateCommonTextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
+
+            UpdateDisabledAppearanceValues(StateDisabledTextColourOne, StateDisabledTextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
+
+            UpdateNormalAppearanceValues(StateNormalTextColourOne, StateNormalTextColourTwo, LongTextTypeface, ShortTextTypeface, Image);
 
             base.OnPaint(e);
         }

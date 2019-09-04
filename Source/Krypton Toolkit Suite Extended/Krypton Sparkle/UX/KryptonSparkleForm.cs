@@ -64,8 +64,8 @@ namespace KryptonSparkle.UX
             this.klblHeader.Size = new System.Drawing.Size(215, 21);
             this.klblHeader.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblHeader.TabIndex = 4;
-            this.klblHeader.TextColourOne = System.Drawing.Color.Empty;
-            this.klblHeader.TextColourTwo = System.Drawing.Color.Empty;
+            this.klblHeader.StateCommonTextColourOne = System.Drawing.Color.Empty;
+            this.klblHeader.StateCommonTextColourTwo = System.Drawing.Color.Empty;
             this.klblHeader.Values.Text = "A new version of {0} is available!";
             // 
             // pbxAppIcon
@@ -89,8 +89,8 @@ namespace KryptonSparkle.UX
             this.klblDetails.Size = new System.Drawing.Size(423, 19);
             this.klblDetails.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblDetails.TabIndex = 5;
-            this.klblDetails.TextColourOne = System.Drawing.Color.Empty;
-            this.klblDetails.TextColourTwo = System.Drawing.Color.Empty;
+            this.klblDetails.StateCommonTextColourOne = System.Drawing.Color.Empty;
+            this.klblDetails.StateCommonTextColourTwo = System.Drawing.Color.Empty;
             this.klblDetails.Values.Text = "APP is now available (you have OLDVERSION). Would you like to download it now?";
             // 
             // kryptonLabelExtended1
@@ -103,8 +103,8 @@ namespace KryptonSparkle.UX
             this.kryptonLabelExtended1.Size = new System.Drawing.Size(100, 21);
             this.kryptonLabelExtended1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabelExtended1.TabIndex = 6;
-            this.kryptonLabelExtended1.TextColourOne = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended1.TextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended1.StateCommonTextColourOne = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended1.StateCommonTextColourTwo = System.Drawing.Color.Empty;
             this.kryptonLabelExtended1.Values.Text = "Release notes:";
             // 
             // NetSparkleBrowser

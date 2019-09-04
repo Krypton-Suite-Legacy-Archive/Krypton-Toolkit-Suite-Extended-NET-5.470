@@ -30,7 +30,7 @@ namespace Persistence.Classes.Other
         #region Methods
         public void GenerateNewFile(SimpleEditor editor)
         {
-            editor.Text = string.Format(Resources.FreshFile, DateTime.Now.ToString());
+            // TODO: editor.Text = string.Format(Resources.FreshFile, DateTime.Now.ToString());
         }
 
         /// <summary>

@@ -46,8 +46,8 @@ namespace KryptonSparkle.UX
             this.kryptonLabelExtended1.Size = new System.Drawing.Size(305, 21);
             this.kryptonLabelExtended1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabelExtended1.TabIndex = 1;
-            this.kryptonLabelExtended1.TextColourOne = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended1.TextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended1.StateCommonTextColourOne = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended1.StateCommonTextColourTwo = System.Drawing.Color.Empty;
             this.kryptonLabelExtended1.Values.Text = "KryptonSparkle - Background Activity Monitor";
             // 
             // KryptonSparkleMainWindows

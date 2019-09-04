@@ -9,7 +9,14 @@ namespace ExtendedStandardControls
     public class KryptonLinkLabelExtended : KryptonLinkLabel
     {
         #region Variables
-        private Color _overrideFocusLongTextColourOne, _overrideFocusLongTextColourTwo, _overrideFocusShortTextColourOne, _overrideFocusShortTextColourTwo, _overrideNotVisitedLongTextColourOne, _overrideNotVisitedLongTextColourTwo, _overrideNotVisitedShortTextColourOne, _overrideNotVisitedShortTextColourTwo, _overridePressedLongTextColourOne, _overridePressedLongTextColourTwo, _overridePressedShortTextColourOne, _overridePressedShortTextColourTwo, _overrideVisitedLongTextColourOne, _overrideVisitedLongTextColourTwo, _overrideVisitedShortTextColourOne, _overrideVisitedShortTextColourTwo, _commonLongTextColourOne, _commonLongTextColourTwo, _commonShortTextColourOne, _commonShortTextColourTwo;
+        private Color _overrideFocusLongTextColourOne, _overrideFocusLongTextColourTwo, _overrideFocusShortTextColourOne, _overrideFocusShortTextColourTwo,
+                     _overrideNotVisitedLongTextColourOne, _overrideNotVisitedShortTextColourOne,
+                     _overrideNotVisitedShortTextColourTwo, _overridePressedLongTextColourOne, _overridePressedLongTextColourTwo,
+                     _overridePressedShortTextColourOne, _overridePressedShortTextColourTwo, _overrideVisitedLongTextColourOne,
+                     _overrideVisitedLongTextColourTwo, _overrideVisitedShortTextColourOne, _overrideVisitedShortTextColourTwo,
+                     _stateCommonLongTextColourOne, _stateCommonLongTextColourTwo, _stateCommonShortTextColourOne, _stateCommonShortTextColourTwo,
+                     _stateDisabledLongTextColourOne, _stateDisabledLongTextColourTwo, _stateDisabledShortTextColourOne, _stateDisabledShortTextColourTwo,
+                     _stateNormalLongTextColourOne, _stateNormalLongTextColourTwo, _stateNormalShortTextColourOne, _stateNormalShortTextColourTwo;
 
         private Font _longTextTypeface, _shortTextTypeface;
         #endregion
@@ -57,13 +64,33 @@ namespace ExtendedStandardControls
         #endregion
 
         #region Common
-        public Color CommonLongTextColourOne { get => _commonLongTextColourOne; set { _commonLongTextColourOne = value; Invalidate(); } }
+        public Color StateCommonLongTextColourOne { get => _stateCommonLongTextColourOne; set { _stateCommonLongTextColourOne = value; Invalidate(); } }
 
-        public Color CommonLongTextColourTwo { get => _commonLongTextColourTwo; set { _commonLongTextColourTwo = value; Invalidate(); } }
+        public Color StateCommonLongTextColourTwo { get => _stateCommonLongTextColourTwo; set { _stateCommonLongTextColourTwo = value; Invalidate(); } }
 
-        public Color CommonShortTextColourOne { get => _commonShortTextColourOne; set { _commonShortTextColourOne = value; Invalidate(); } }
+        public Color StateCommonShortTextColourOne { get => _stateCommonShortTextColourOne; set { _stateCommonShortTextColourOne = value; Invalidate(); } }
 
-        public Color CommonShortTextColourTwo { get => _commonShortTextColourTwo; set { _commonShortTextColourTwo = value; Invalidate(); } }
+        public Color StateCommonShortTextColourTwo { get => _stateCommonShortTextColourTwo; set { _stateCommonShortTextColourTwo = value; Invalidate(); } }
+        #endregion
+
+        #region Disabled
+        public Color StateDisabledLongTextColourOne { get => _stateDisabledLongTextColourOne; set { _stateDisabledLongTextColourOne = value; Invalidate(); } }
+
+        public Color StateDisabledLongTextColourTwo { get => _stateDisabledLongTextColourTwo; set { _stateDisabledLongTextColourTwo = value; Invalidate(); } }
+
+        public Color StateDisabledShortTextColourOne { get => _stateDisabledShortTextColourOne; set { _stateDisabledShortTextColourOne = value; Invalidate(); } }
+
+        public Color StateDisabledShortTextColourTwo { get => _stateDisabledShortTextColourTwo; set { _stateDisabledShortTextColourTwo = value; Invalidate(); } }
+        #endregion
+
+        #region Normal
+        public Color StateNormalLongTextColourOne { get => _stateNormalLongTextColourOne; set { _stateNormalLongTextColourOne = value; Invalidate(); } }
+
+        public Color StateNormalLongTextColourTwo { get => _stateNormalLongTextColourTwo; set { _stateNormalLongTextColourTwo = value; Invalidate(); } }
+
+        public Color StateNormalShortTextColourOne { get => _stateNormalShortTextColourOne; set { _stateNormalShortTextColourOne = value; Invalidate(); } }
+
+        public Color StateNormalShortTextColourTwo { get => _stateNormalShortTextColourTwo; set { _stateNormalShortTextColourTwo = value; Invalidate(); } }
         #endregion
 
         [Category("Appearance"), Description("The 'Long Text' typeface.")]
@@ -78,16 +105,6 @@ namespace ExtendedStandardControls
         /// <summary>Initializes a new instance of the <see cref="KryptonLinkLabelExtended"/> class.</summary>
         public KryptonLinkLabelExtended()
         {
-            #region Common
-            CommonLongTextColourOne = Color.Empty;
-
-            CommonLongTextColourTwo = Color.Empty;
-
-            CommonShortTextColourOne = Color.Empty;
-
-            CommonShortTextColourTwo = Color.Empty;
-            #endregion
-
             #region Override Focus
             OverrideFocusLongTextColourOne = Color.Empty;
 
@@ -128,11 +145,45 @@ namespace ExtendedStandardControls
             OverrideVisitedShortTextColourTwo = Color.Empty;
             #endregion
 
+            #region Common
+            StateCommonLongTextColourOne = Color.Empty;
+
+            StateCommonLongTextColourTwo = Color.Empty;
+
+            StateCommonShortTextColourOne = Color.Empty;
+
+            StateCommonShortTextColourTwo = Color.Empty;
+            #endregion
+
+            #region Disabled
+            StateDisabledLongTextColourOne = Color.Empty;
+
+            StateDisabledLongTextColourTwo = Color.Empty;
+
+            StateDisabledShortTextColourOne = Color.Empty;
+
+            StateDisabledShortTextColourTwo = Color.Empty;
+            #endregion
+
+            #region Normal
+            StateNormalLongTextColourOne = Color.Empty;
+
+            StateNormalLongTextColourTwo = Color.Empty;
+
+            StateNormalShortTextColourOne = Color.Empty;
+
+            StateNormalShortTextColourTwo = Color.Empty;
+            #endregion
+
             LongTextTypeface = null;
 
             ShortTextTypeface = null;
 
-            UpdateCommonAppearanceValues(CommonLongTextColourOne, CommonLongTextColourTwo, CommonShortTextColourOne, CommonShortTextColourTwo, OverrideFocusLongTextColourOne, OverrideFocusLongTextColourTwo, OverrideFocusShortTextColourOne, OverrideFocusShortTextColourTwo, OverrideNotVisitedLongTextColourOne, OverrideNotVisitedLongTextColourTwo, OverrideNotVisitedShortTextColourOne, OverrideNotVisitedShortTextColourTwo, OverridePressedLongTextColourOne, OverridePressedLongTextColourTwo, OverridePressedShortTextColourOne, OverridePressedShortTextColourTwo, OverrideVisitedLongTextColourOne, OverrideVisitedLongTextColourTwo, OverrideVisitedShortTextColourOne, OverrideVisitedShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+            UpdateCommonAppearanceValues(StateCommonLongTextColourOne, StateCommonLongTextColourTwo, StateCommonShortTextColourOne, StateCommonShortTextColourTwo, OverrideFocusLongTextColourOne, OverrideFocusLongTextColourTwo, OverrideFocusShortTextColourOne, OverrideFocusShortTextColourTwo, OverrideNotVisitedLongTextColourOne, OverrideNotVisitedLongTextColourTwo, OverrideNotVisitedShortTextColourOne, OverrideNotVisitedShortTextColourTwo, OverridePressedLongTextColourOne, OverridePressedLongTextColourTwo, OverridePressedShortTextColourOne, OverridePressedShortTextColourTwo, OverrideVisitedLongTextColourOne, OverrideVisitedLongTextColourTwo, OverrideVisitedShortTextColourOne, OverrideVisitedShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateDisabledAppearanceValues(StateDisabledLongTextColourOne, StateDisabledLongTextColourTwo, StateDisabledShortTextColourOne, StateDisabledShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateNormalAppearanceValues(StateNormalLongTextColourOne, StateNormalLongTextColourTwo, StateNormalShortTextColourOne, StateNormalShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
         }
         #endregion
 
@@ -231,6 +282,54 @@ namespace ExtendedStandardControls
             OverrideVisited.ShortText.Font = shortTextTypeface;
             #endregion
         }
+
+        /// <summary>Updates the state normal appearance values.</summary>
+        /// <param name="stateNormalLongTextColourOne">The state normal long text colour one.</param>
+        /// <param name="stateNormalLongTextColourTwo">The state normal long text colour two.</param>
+        /// <param name="stateNormalShortTextColourOne">The state normal short text colour one.</param>
+        /// <param name="stateNormalShortTextColourTwo">The state normal short text colour two.</param>
+        /// <param name="longTextTypeface">The long text typeface.</param>
+        /// <param name="shortTextTypeface">The short text typeface.</param>
+        private void UpdateStateNormalAppearanceValues(Color stateNormalLongTextColourOne, Color stateNormalLongTextColourTwo, Color stateNormalShortTextColourOne, Color stateNormalShortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
+        {
+            #region Normal
+            StateNormal.LongText.Color1 = stateNormalLongTextColourOne;
+
+            StateNormal.LongText.Color2 = stateNormalLongTextColourTwo;
+
+            StateNormal.LongText.Font = longTextTypeface;
+
+            StateNormal.ShortText.Color1 = stateNormalShortTextColourOne;
+
+            StateNormal.ShortText.Color2 = stateNormalShortTextColourTwo;
+
+            StateNormal.ShortText.Font = shortTextTypeface;
+            #endregion
+        }
+
+        /// <summary>Updates the state disabled appearance values.</summary>
+        /// <param name="stateDisabledLongTextColourOne">The state disabled long text colour one.</param>
+        /// <param name="stateDisabledLongTextColourTwo">The state disabled long text colour two.</param>
+        /// <param name="stateDisabledShortTextColourOne">The state disabled short text colour one.</param>
+        /// <param name="stateDisabledShortTextColourTwo">The state disabled short text colour two.</param>
+        /// <param name="longTextTypeface">The long text typeface.</param>
+        /// <param name="shortTextTypeface">The short text typeface.</param>
+        private void UpdateStateDisabledAppearanceValues(Color stateDisabledLongTextColourOne, Color stateDisabledLongTextColourTwo, Color stateDisabledShortTextColourOne, Color stateDisabledShortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
+        {
+            #region Disabled
+            StateDisabled.LongText.Color1 = stateDisabledLongTextColourOne;
+
+            StateDisabled.LongText.Color2 = stateDisabledLongTextColourTwo;
+
+            StateDisabled.LongText.Font = longTextTypeface;
+
+            StateDisabled.ShortText.Color1 = stateDisabledShortTextColourOne;
+
+            StateDisabled.ShortText.Color2 = stateDisabledShortTextColourTwo;
+
+            StateDisabled.ShortText.Font = shortTextTypeface;
+            #endregion
+        }
         #endregion
 
         #region Overrides
@@ -238,7 +337,11 @@ namespace ExtendedStandardControls
         /// <param name="e">A PaintEventArgs that contains the event data.</param>
         protected override void OnPaint(PaintEventArgs e)
         {
-            UpdateCommonAppearanceValues(CommonLongTextColourOne, CommonLongTextColourTwo, CommonShortTextColourOne, CommonShortTextColourTwo, OverrideFocusLongTextColourOne, OverrideFocusLongTextColourTwo, OverrideFocusShortTextColourOne, OverrideFocusShortTextColourTwo, OverrideNotVisitedLongTextColourOne, OverrideNotVisitedLongTextColourTwo, OverrideNotVisitedShortTextColourOne, OverrideNotVisitedShortTextColourTwo, OverridePressedLongTextColourOne, OverridePressedLongTextColourTwo, OverridePressedShortTextColourOne, OverridePressedShortTextColourTwo, OverrideVisitedLongTextColourOne, OverrideVisitedLongTextColourTwo, OverrideVisitedShortTextColourOne, OverrideVisitedShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+            UpdateCommonAppearanceValues(StateCommonLongTextColourOne, StateCommonLongTextColourTwo, StateCommonShortTextColourOne, StateCommonShortTextColourTwo, OverrideFocusLongTextColourOne, OverrideFocusLongTextColourTwo, OverrideFocusShortTextColourOne, OverrideFocusShortTextColourTwo, OverrideNotVisitedLongTextColourOne, OverrideNotVisitedLongTextColourTwo, OverrideNotVisitedShortTextColourOne, OverrideNotVisitedShortTextColourTwo, OverridePressedLongTextColourOne, OverridePressedLongTextColourTwo, OverridePressedShortTextColourOne, OverridePressedShortTextColourTwo, OverrideVisitedLongTextColourOne, OverrideVisitedLongTextColourTwo, OverrideVisitedShortTextColourOne, OverrideVisitedShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateDisabledAppearanceValues(StateDisabledLongTextColourOne, StateDisabledLongTextColourTwo, StateDisabledShortTextColourOne, StateDisabledShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateNormalAppearanceValues(StateNormalLongTextColourOne, StateNormalLongTextColourTwo, StateNormalShortTextColourOne, StateNormalShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
 
             base.OnPaint(e);
         }
