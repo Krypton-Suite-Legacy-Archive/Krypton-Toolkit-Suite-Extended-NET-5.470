@@ -327,11 +327,38 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
 
             ShortTextTypeface = null;
 
+            UpdateOverrideFocusAppearanceValues(OverrideFocusItemBackgroundColourOne, OverrideFocusItemBackgroundColourTwo, OverrideFocusLongTextColourOne, OverrideFocusLongTextColourTwo, OverrideFocusShortTextColourOne, OverrideFocusShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateActiveAppearanceValues(StateActiveBackgroundColourOne, StateActiveBackgroundColourTwo);
+
+            UpdateStateCheckedNormalAppearanceValues(StateCheckedNormalItemBackgroundColourOne, StateCheckedNormalItemBackgroundColourTwo, StateCheckedNormalLongTextColourOne, StateCheckedNormalLongTextColourTwo, StateCheckedNormalShortTextColourOne, StateCheckedNormalShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateCheckedPressedAppearanceValues(StateCheckedPressedItemBackgroundColourOne, StateCheckedPressedItemBackgroundColourTwo, StateCheckedPressedLongTextColourOne, StateCheckedPressedLongTextColourTwo, StateCheckedPressedShortTextColourOne, StateCheckedPressedShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateCheckedTrackingAppearanceValues(StateCheckedTrackingItemBackgroundColourOne, StateCheckedTrackingItemBackgroundColourTwo, StateCheckedTrackingLongTextColourOne, StateCheckedTrackingLongTextColourTwo, StateCheckedTrackingShortTextColourOne, StateCheckedTrackingShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
             UpdateStateCommonAppearanceValues(StateCommonBackgroundColourOne, StateCommonBackgroundColourTwo, StateCommonItemBackgroundColourOne, StateCommonItemBackgroundColourTwo, StateCommonLongTextColourOne, StateCommonLongTextColourTwo, StateCommonShortTextColourOne, StateCommonShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateDisabledAppearanceValues(StateDisabledBackgroundColourOne, StateDisabledBackgroundColourTwo, StateDisabledItemBackgroundColourOne, StateDisabledItemBackgroundColourTwo, StateDisabledLongTextColourOne, StateDisabledLongTextColourTwo, StateDisabledShortTextColourOne, StateDisabledShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateNormalAppearanceValues(StateNormalBackgroundColourOne, StateNormalBackgroundColourTwo, StateNormalItemBackgroundColourOne, StateNormalItemBackgroundColourTwo, StateNormalLongTextColourOne, StateNormalLongTextColourTwo, StateNormalShortTextColourOne, StateNormalShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStatePressedAppearanceValues(StatePressedItemBackgroundColourOne, StatePressedItemBackgroundColourTwo, StatePressedLongTextColourOne, StatePressedLongTextColourTwo, StatePressedShortTextColourOne, StatePressedShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateTrackingAppearanceValues(StateTrackingItemBackgroundColourOne, StateTrackingItemBackgroundColourTwo, StateTrackingLongTextColourOne, StateTrackingLongTextColourTwo, StateTrackingShortTextColourOne, StateTrackingShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
         }
         #endregion
 
         #region Method
+        /// <summary>Updates the override focus appearance values.</summary>
+        /// <param name="itemBackgroundColourOne">The item background colour one.</param>
+        /// <param name="itemBackgroundColourTwo">The item background colour two.</param>
+        /// <param name="longTextColourOne">The long text colour one.</param>
+        /// <param name="longTextColourTwo">The long text colour two.</param>
+        /// <param name="shortTextColourOne">The short text colour one.</param>
+        /// <param name="shortTextColourTwo">The short text colour two.</param>
+        /// <param name="longTextTypeface">The long text typeface.</param>
+        /// <param name="shortTextTypeface">The short text typeface.</param>
         private void UpdateOverrideFocusAppearanceValues(Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             OverrideFocus.Item.Back.Color1 = itemBackgroundColourOne;
@@ -351,6 +378,17 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
             OverrideFocus.Item.Content.ShortText.Font = shortTextTypeface;
         }
 
+        /// <summary>Updates the state common appearance values.</summary>
+        /// <param name="commonBackgroundColourOne">The common background colour one.</param>
+        /// <param name="commonBackgroundColourTwo">The common background colour two.</param>
+        /// <param name="itemBackgroundColourOne">The item background colour one.</param>
+        /// <param name="itemBackgroundColourTwo">The item background colour two.</param>
+        /// <param name="longTextColourOne">The long text colour one.</param>
+        /// <param name="longTextColourTwo">The long text colour two.</param>
+        /// <param name="shortTextColourOne">The short text colour one.</param>
+        /// <param name="shortTextColourTwo">The short text colour two.</param>
+        /// <param name="longTextTypeface">The long text typeface.</param>
+        /// <param name="shortTextTypeface">The short text typeface.</param>
         private void UpdateStateCommonAppearanceValues(Color commonBackgroundColourOne, Color commonBackgroundColourTwo, Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StateCommon.Back.Color1 = commonBackgroundColourOne;
@@ -374,6 +412,9 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
             StateCommon.Item.Content.ShortText.Font = shortTextTypeface;
         }
 
+        /// <summary>Updates the state active appearance values.</summary>
+        /// <param name="activeBackgroundColourOne">The active background colour one.</param>
+        /// <param name="activeBackgroundColourTwo">The active background colour two.</param>
         private void UpdateStateActiveAppearanceValues(Color activeBackgroundColourOne, Color activeBackgroundColourTwo)
         {
             StateActive.Back.Color1 = activeBackgroundColourOne;
@@ -381,6 +422,15 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
             StateActive.Back.Color2 = activeBackgroundColourTwo;
         }
 
+        /// <summary>Updates the state checked normal appearance values.</summary>
+        /// <param name="itemBackgroundColourOne">The item background colour one.</param>
+        /// <param name="itemBackgroundColourTwo">The item background colour two.</param>
+        /// <param name="longTextColourOne">The long text colour one.</param>
+        /// <param name="longTextColourTwo">The long text colour two.</param>
+        /// <param name="shortTextColourOne">The short text colour one.</param>
+        /// <param name="shortTextColourTwo">The short text colour two.</param>
+        /// <param name="longTextTypeface">The long text typeface.</param>
+        /// <param name="shortTextTypeface">The short text typeface.</param>
         private void UpdateStateCheckedNormalAppearanceValues(Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StateCheckedNormal.Item.Back.Color1 = itemBackgroundColourOne;
@@ -400,6 +450,15 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
             StateCheckedNormal.Item.Content.ShortText.Font = shortTextTypeface;
         }
 
+        /// <summary>Updates the state checked pressed appearance values.</summary>
+        /// <param name="itemBackgroundColourOne">The item background colour one.</param>
+        /// <param name="itemBackgroundColourTwo">The item background colour two.</param>
+        /// <param name="longTextColourOne">The long text colour one.</param>
+        /// <param name="longTextColourTwo">The long text colour two.</param>
+        /// <param name="shortTextColourOne">The short text colour one.</param>
+        /// <param name="shortTextColourTwo">The short text colour two.</param>
+        /// <param name="longTextTypeface">The long text typeface.</param>
+        /// <param name="shortTextTypeface">The short text typeface.</param>
         private void UpdateStateCheckedPressedAppearanceValues(Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StateCheckedPressed.Item.Back.Color1 = itemBackgroundColourOne;
@@ -419,6 +478,15 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
             StateCheckedPressed.Item.Content.ShortText.Font = shortTextTypeface;
         }
 
+        /// <summary>Updates the state checked tracking appearance values.</summary>
+        /// <param name="itemBackgroundColourOne">The item background colour one.</param>
+        /// <param name="itemBackgroundColourTwo">The item background colour two.</param>
+        /// <param name="longTextColourOne">The long text colour one.</param>
+        /// <param name="longTextColourTwo">The long text colour two.</param>
+        /// <param name="shortTextColourOne">The short text colour one.</param>
+        /// <param name="shortTextColourTwo">The short text colour two.</param>
+        /// <param name="longTextTypeface">The long text typeface.</param>
+        /// <param name="shortTextTypeface">The short text typeface.</param>
         private void UpdateStateCheckedTrackingAppearanceValues(Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StateCheckedTracking.Item.Back.Color1 = itemBackgroundColourOne;
@@ -438,6 +506,17 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
             StateCheckedTracking.Item.Content.ShortText.Font = shortTextTypeface;
         }
 
+        /// <summary>Updates the state disabled appearance values.</summary>
+        /// <param name="DisabledBackgroundColourOne">The disabled background colour one.</param>
+        /// <param name="DisabledBackgroundColourTwo">The disabled background colour two.</param>
+        /// <param name="itemBackgroundColourOne">The item background colour one.</param>
+        /// <param name="itemBackgroundColourTwo">The item background colour two.</param>
+        /// <param name="longTextColourOne">The long text colour one.</param>
+        /// <param name="longTextColourTwo">The long text colour two.</param>
+        /// <param name="shortTextColourOne">The short text colour one.</param>
+        /// <param name="shortTextColourTwo">The short text colour two.</param>
+        /// <param name="longTextTypeface">The long text typeface.</param>
+        /// <param name="shortTextTypeface">The short text typeface.</param>
         private void UpdateStateDisabledAppearanceValues(Color DisabledBackgroundColourOne, Color DisabledBackgroundColourTwo, Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StateDisabled.Back.Color1 = DisabledBackgroundColourOne;
@@ -461,6 +540,17 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
             StateDisabled.Item.Content.ShortText.Font = shortTextTypeface;
         }
 
+        /// <summary>Updates the state normal appearance values.</summary>
+        /// <param name="NormalBackgroundColourOne">The normal background colour one.</param>
+        /// <param name="NormalBackgroundColourTwo">The normal background colour two.</param>
+        /// <param name="itemBackgroundColourOne">The item background colour one.</param>
+        /// <param name="itemBackgroundColourTwo">The item background colour two.</param>
+        /// <param name="longTextColourOne">The long text colour one.</param>
+        /// <param name="longTextColourTwo">The long text colour two.</param>
+        /// <param name="shortTextColourOne">The short text colour one.</param>
+        /// <param name="shortTextColourTwo">The short text colour two.</param>
+        /// <param name="longTextTypeface">The long text typeface.</param>
+        /// <param name="shortTextTypeface">The short text typeface.</param>
         private void UpdateStateNormalAppearanceValues(Color NormalBackgroundColourOne, Color NormalBackgroundColourTwo, Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StateNormal.Back.Color1 = NormalBackgroundColourOne;
@@ -484,6 +574,15 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
             StateNormal.Item.Content.ShortText.Font = shortTextTypeface;
         }
 
+        /// <summary>Updates the state pressed appearance values.</summary>
+        /// <param name="itemBackgroundColourOne">The item background colour one.</param>
+        /// <param name="itemBackgroundColourTwo">The item background colour two.</param>
+        /// <param name="longTextColourOne">The long text colour one.</param>
+        /// <param name="longTextColourTwo">The long text colour two.</param>
+        /// <param name="shortTextColourOne">The short text colour one.</param>
+        /// <param name="shortTextColourTwo">The short text colour two.</param>
+        /// <param name="longTextTypeface">The long text typeface.</param>
+        /// <param name="shortTextTypeface">The short text typeface.</param>
         private void UpdateStatePressedAppearanceValues(Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StatePressed.Item.Back.Color1 = itemBackgroundColourOne;
@@ -503,6 +602,15 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
             StatePressed.Item.Content.ShortText.Font = shortTextTypeface;
         }
 
+        /// <summary>Updates the state tracking appearance values.</summary>
+        /// <param name="itemBackgroundColourOne">The item background colour one.</param>
+        /// <param name="itemBackgroundColourTwo">The item background colour two.</param>
+        /// <param name="longTextColourOne">The long text colour one.</param>
+        /// <param name="longTextColourTwo">The long text colour two.</param>
+        /// <param name="shortTextColourOne">The short text colour one.</param>
+        /// <param name="shortTextColourTwo">The short text colour two.</param>
+        /// <param name="longTextTypeface">The long text typeface.</param>
+        /// <param name="shortTextTypeface">The short text typeface.</param>
         private void UpdateStateTrackingAppearanceValues(Color itemBackgroundColourOne, Color itemBackgroundColourTwo, Color longTextColourOne, Color longTextColourTwo, Color shortTextColourOne, Color shortTextColourTwo, Font longTextTypeface, Font shortTextTypeface)
         {
             StateTracking.Item.Back.Color1 = itemBackgroundColourOne;
@@ -526,7 +634,25 @@ namespace ExtendedStandardControls.Controls.Toolkit.Textural
         #region Overrides
         protected override void OnPaint(PaintEventArgs e)
         {
+            UpdateOverrideFocusAppearanceValues(OverrideFocusItemBackgroundColourOne, OverrideFocusItemBackgroundColourTwo, OverrideFocusLongTextColourOne, OverrideFocusLongTextColourTwo, OverrideFocusShortTextColourOne, OverrideFocusShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateActiveAppearanceValues(StateActiveBackgroundColourOne, StateActiveBackgroundColourTwo);
+
+            UpdateStateCheckedNormalAppearanceValues(StateCheckedNormalItemBackgroundColourOne, StateCheckedNormalItemBackgroundColourTwo, StateCheckedNormalLongTextColourOne, StateCheckedNormalLongTextColourTwo, StateCheckedNormalShortTextColourOne, StateCheckedNormalShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateCheckedPressedAppearanceValues(StateCheckedPressedItemBackgroundColourOne, StateCheckedPressedItemBackgroundColourTwo, StateCheckedPressedLongTextColourOne, StateCheckedPressedLongTextColourTwo, StateCheckedPressedShortTextColourOne, StateCheckedPressedShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateCheckedTrackingAppearanceValues(StateCheckedTrackingItemBackgroundColourOne, StateCheckedTrackingItemBackgroundColourTwo, StateCheckedTrackingLongTextColourOne, StateCheckedTrackingLongTextColourTwo, StateCheckedTrackingShortTextColourOne, StateCheckedTrackingShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
             UpdateStateCommonAppearanceValues(StateCommonBackgroundColourOne, StateCommonBackgroundColourTwo, StateCommonItemBackgroundColourOne, StateCommonItemBackgroundColourTwo, StateCommonLongTextColourOne, StateCommonLongTextColourTwo, StateCommonShortTextColourOne, StateCommonShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateDisabledAppearanceValues(StateDisabledBackgroundColourOne, StateDisabledBackgroundColourTwo, StateDisabledItemBackgroundColourOne, StateDisabledItemBackgroundColourTwo, StateDisabledLongTextColourOne, StateDisabledLongTextColourTwo, StateDisabledShortTextColourOne, StateDisabledShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateNormalAppearanceValues(StateNormalBackgroundColourOne, StateNormalBackgroundColourTwo, StateNormalItemBackgroundColourOne, StateNormalItemBackgroundColourTwo, StateNormalLongTextColourOne, StateNormalLongTextColourTwo, StateNormalShortTextColourOne, StateNormalShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStatePressedAppearanceValues(StatePressedItemBackgroundColourOne, StatePressedItemBackgroundColourTwo, StatePressedLongTextColourOne, StatePressedLongTextColourTwo, StatePressedShortTextColourOne, StatePressedShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
+
+            UpdateStateTrackingAppearanceValues(StateTrackingItemBackgroundColourOne, StateTrackingItemBackgroundColourTwo, StateTrackingLongTextColourOne, StateTrackingLongTextColourTwo, StateTrackingShortTextColourOne, StateTrackingShortTextColourTwo, LongTextTypeface, ShortTextTypeface);
 
             base.OnPaint(e);
         }

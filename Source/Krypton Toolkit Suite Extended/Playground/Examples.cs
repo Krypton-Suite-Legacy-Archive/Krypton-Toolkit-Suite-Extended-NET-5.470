@@ -80,12 +80,17 @@ namespace Playground
         private KryptonButton kryptonButton3;
         private KryptonButton kbtnFileSystemExamples;
         private KryptonButton kryptonButton1;
+        private KryptonButton kbtnESC;
+        private KryptonManager kryptonManager1;
+        private KryptonPalette kryptonPalette1;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Examples));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnESC = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnFileSystemExamples = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -132,12 +137,15 @@ namespace Playground
             this.kbtnColourMixer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnHexToRGB = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
+            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnESC);
             this.kryptonPanel1.Controls.Add(this.kryptonButton3);
             this.kryptonPanel1.Controls.Add(this.kbtnFileSystemExamples);
             this.kryptonPanel1.Controls.Add(this.kryptonButton1);
@@ -189,6 +197,20 @@ namespace Playground
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(971, 597);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kbtnESC
+            // 
+            this.kbtnESC.Location = new System.Drawing.Point(498, 449);
+            this.kbtnESC.Name = "kbtnESC";
+            this.kbtnESC.Size = new System.Drawing.Size(218, 25);
+            this.kbtnESC.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnESC.StateCommon.Border.Rounding = 25;
+            this.kbtnESC.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnESC.TabIndex = 99;
+            this.kbtnESC.Values.Text = "Extended Standard Controls";
+            this.kbtnESC.Click += new System.EventHandler(this.kbtnESC_Click);
             // 
             // kryptonButton3
             // 
@@ -803,6 +825,14 @@ namespace Playground
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
+            // kryptonManager1
+            // 
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2010White;
+            // 
+            // kryptonPalette1
+            // 
+            this.kryptonPalette1.CustomisedKryptonPaletteFilePath = null;
+            // 
             // Examples
             // 
             this.ClientSize = new System.Drawing.Size(971, 597);
@@ -1189,6 +1219,13 @@ namespace Playground
             FileSystemExamples fileSystemExamples = new FileSystemExamples();
 
             fileSystemExamples.Show();
+        }
+
+        private void kbtnESC_Click(object sender, EventArgs e)
+        {
+            Editor editor = new Editor();
+
+            editor.Show();
         }
     }
 }

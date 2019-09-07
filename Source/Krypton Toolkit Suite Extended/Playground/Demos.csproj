@@ -349,8 +349,20 @@
     <PackageReference Include="Cyotek.Windows.Forms.ColorPicker">
       <Version>1.7.2</Version>
     </PackageReference>
-    <PackageReference Include="KryptonToolkitSuite5470">
-      <Version>5.470.1252</Version>
+    <PackageReference Include="KryptonToolkitSuite5470CoreModule">
+      <Version>5.470.1254</Version>
+    </PackageReference>
+    <PackageReference Include="KryptonToolkitSuite5470DockingModule">
+      <Version>5.470.740</Version>
+    </PackageReference>
+    <PackageReference Include="KryptonToolkitSuite5470NavigatorModule">
+      <Version>5.470.761</Version>
+    </PackageReference>
+    <PackageReference Include="KryptonToolkitSuite5470RibbonModule">
+      <Version>5.470.815</Version>
+    </PackageReference>
+    <PackageReference Include="KryptonToolkitSuite5470WorkspaceModule">
+      <Version>5.470.714</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>

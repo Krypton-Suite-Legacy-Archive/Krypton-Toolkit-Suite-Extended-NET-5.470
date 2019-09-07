@@ -36,8 +36,8 @@ namespace KryptonSparkle.UX
             // 
             // kryptonPanelExtended1
             // 
-            this.kryptonPanelExtended1.BackGroundColourOne = System.Drawing.Color.Empty;
-            this.kryptonPanelExtended1.BackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kryptonPanelExtended1.StateCommonBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kryptonPanelExtended1.StateCommonBackGroundColourTwo = System.Drawing.Color.Empty;
             this.kryptonPanelExtended1.Controls.Add(this.klblSecurityHint);
             this.kryptonPanelExtended1.Controls.Add(this.kbtnInstall);
             this.kryptonPanelExtended1.Controls.Add(this.progressDownload);
