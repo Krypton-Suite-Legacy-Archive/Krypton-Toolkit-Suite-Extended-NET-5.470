@@ -22,6 +22,7 @@ using ExtendedControls.ExtendedToolkit.UI.Security;
 using ExtendedControls.ExtendedToolkit.UI.Security.FileHashing;
 using ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal;
 using ExtendedControls.ExtendedToolkit.UI.Theming;
+using ExtendedStandardControls;
 using Playground.Properties;
 using System;
 using System.Drawing;
@@ -30,7 +31,7 @@ using System.Windows.Forms;
 
 namespace Playground
 {
-    public class Examples : KryptonForm
+    public class Examples : KryptonFormExtended
     {
         #region Designer Code
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;

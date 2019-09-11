@@ -150,6 +150,9 @@
     <Compile Include="PropertyGridTest.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RibbonWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Scrollbars.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +264,9 @@
     </Compile>
     <EmbeddedResource Include="PropertyGridTest.resx">
       <DependentUpon>PropertyGridTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonWindow.resx">
+      <DependentUpon>RibbonWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scrollbars.resx">
       <DependentUpon>Scrollbars.cs</DependentUpon>
