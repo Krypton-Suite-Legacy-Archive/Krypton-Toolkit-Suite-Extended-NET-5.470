@@ -38,6 +38,10 @@
 
 # <img src="https://raw.githubusercontent.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/master/Assets/PNG/64%20x%2064/KR%2064%20%20x%2064%20Orange.png" /><a href="https://github.com/Wagnerp/Krypton-NET-Version-Dashboard"> Krypton Releases</a>
 
+=======
+
+<a href="https://discord.gg/KVsht22" alt="Join our Krypton Toolkit community Discord server"><img src="https://img.shields.io/badge/Discord-Join%20our%20server-7289DA" /></a>
+
 ======
 
 ## Control Examples
@@ -49,6 +53,11 @@ Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Exte
 ## Demo Application
 
 You can check out the pre-built demo application from downloading it [here](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Demos/Demos.zip)
+
+=======
+
+## 2019-09-09 Discord community server
+* A new Discord community server has been set-up to discuss bugs, issues, new features etc. You can join by clicking the button above.
 
 <!--
 ======
