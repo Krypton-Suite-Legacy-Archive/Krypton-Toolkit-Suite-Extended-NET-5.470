@@ -1,4 +1,4 @@
-﻿namespace Krypton_Toolkit_Suite_Extended_Demos
+﻿namespace Demo_Hub
 {
     partial class Form1
     {

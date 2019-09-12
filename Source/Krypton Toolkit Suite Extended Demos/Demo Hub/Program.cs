@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Krypton_Toolkit_Suite_Extended_Demos
+namespace Demo_Hub
 {
     static class Program
     {

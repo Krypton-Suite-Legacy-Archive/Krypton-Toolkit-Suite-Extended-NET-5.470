@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Krypton_Toolkit_Suite_Extended_Demos.Properties
+namespace Demo_Hub.Properties
 {
 
 

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Krypton Toolkit Suite Extended Demos")]
+[assembly: AssemblyTitle("Demo Hub")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Krypton Toolkit Suite Extended Demos")]
+[assembly: AssemblyProduct("Demo Hub")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f0e6327d-c5eb-4c35-87b0-18d64d761362")]
+[assembly: Guid("c00d2ebd-2152-4b6d-a9c3-9c3377b8703d")]
 
 // Version information for an assembly consists of the following four values:
 //

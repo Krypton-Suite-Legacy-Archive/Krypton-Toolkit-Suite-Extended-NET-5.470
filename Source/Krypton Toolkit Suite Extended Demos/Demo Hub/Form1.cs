@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Krypton_Toolkit_Suite_Extended_Demos
+namespace Demo_Hub
 {
     public partial class Form1 : Form
     {

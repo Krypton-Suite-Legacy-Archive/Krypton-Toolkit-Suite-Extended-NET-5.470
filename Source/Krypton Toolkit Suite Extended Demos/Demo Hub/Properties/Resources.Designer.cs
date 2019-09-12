@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Krypton_Toolkit_Suite_Extended_Demos.Properties
+namespace Demo_Hub.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace Krypton_Toolkit_Suite_Extended_Demos.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Krypton_Toolkit_Suite_Extended_Demos.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Demo_Hub.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
