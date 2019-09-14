@@ -14,37 +14,36 @@ namespace Playground
 {
     public class Editor : KryptonForm
     {
-        private ExtendedStandardControls.Controls.KryptonTreeViewExtended kryptonTreeViewExtended2;
-        private ExtendedStandardControls.Controls.KryptonTreeViewExtended kryptonTreeViewExtended1;
+        private KryptonToolkitSuiteExtendedCore.Components.Controls.KryptonSplitButton kryptonSplitButton1;
         #region Designer Code
 
         private void InitializeComponent()
         {
-            this.kryptonTreeViewExtended2 = new ExtendedStandardControls.Controls.KryptonTreeViewExtended();
+            this.kryptonSplitButton1 = new KryptonToolkitSuiteExtendedCore.Components.Controls.KryptonSplitButton();
             this.SuspendLayout();
             // 
-            // kryptonTreeViewExtended2
+            // kryptonSplitButton1
             // 
-            this.kryptonTreeViewExtended2.Location = new System.Drawing.Point(0, 0);
-            this.kryptonTreeViewExtended2.LongTextTypeface = null;
-            this.kryptonTreeViewExtended2.Name = "kryptonTreeViewExtended2";
-            this.kryptonTreeViewExtended2.ShortTextTypeface = null;
-            this.kryptonTreeViewExtended2.Size = new System.Drawing.Size(120, 96);
-            this.kryptonTreeViewExtended2.StateCommonBackgroundColour = System.Drawing.Color.Empty;
-            this.kryptonTreeViewExtended2.StateCommonNodeBackgroundColourOne = System.Drawing.Color.Empty;
-            this.kryptonTreeViewExtended2.StateCommonNodeBackgroundColourTwo = System.Drawing.Color.Empty;
-            this.kryptonTreeViewExtended2.StateCommonNodeLongTextColourOne = System.Drawing.Color.Empty;
-            this.kryptonTreeViewExtended2.StateCommonNodeLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kryptonTreeViewExtended2.StateCommonNodeShortTextColourOne = System.Drawing.Color.Empty;
-            this.kryptonTreeViewExtended2.StateCommonNodeShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kryptonTreeViewExtended2.TabIndex = 0;
+            this.kryptonSplitButton1.AutoSize = true;
+            this.kryptonSplitButton1.CornerRadius = 25;
+            this.kryptonSplitButton1.Location = new System.Drawing.Point(420, 215);
+            this.kryptonSplitButton1.Name = "kryptonSplitButton1";
+            this.kryptonSplitButton1.ShowSplitOption = true;
+            this.kryptonSplitButton1.Size = new System.Drawing.Size(272, 38);
+            this.kryptonSplitButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonSplitButton1.StateCommon.Border.Rounding = 25;
+            this.kryptonSplitButton1.TabIndex = 0;
+            this.kryptonSplitButton1.Values.Text = "kryptonSplitButton1";
             // 
             // Editor
             // 
             this.ClientSize = new System.Drawing.Size(1410, 690);
-            this.Controls.Add(this.kryptonTreeViewExtended2);
+            this.Controls.Add(this.kryptonSplitButton1);
             this.Name = "Editor";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
         #endregion

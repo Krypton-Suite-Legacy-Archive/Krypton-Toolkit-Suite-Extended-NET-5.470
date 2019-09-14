@@ -49,6 +49,7 @@
     <Compile Include="Classes\Enumerations\Enumerations.cs" />
     <Compile Include="Classes\ExceptionHandler.cs" />
     <Compile Include="Classes\GlobalMethods.cs" />
+    <Compile Include="Classes\Helpers\AssemblyManager.cs" />
     <Compile Include="Classes\Helpers\HashingHelper.cs" />
     <Compile Include="Classes\IconExtractor.cs" />
     <Compile Include="Classes\Internal\InternalExtendedKryptonMessageBox.cs" />

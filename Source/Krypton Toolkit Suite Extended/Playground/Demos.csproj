@@ -100,6 +100,9 @@
     <Compile Include="FileSystemExamples.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FileVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FlashingLabelTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +216,9 @@
     <EmbeddedResource Include="FileSystemExamples.resx">
       <DependentUpon>FileSystemExamples.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FileVersion.resx">
+      <DependentUpon>FileVersion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FlashingLabelTest.resx">
       <DependentUpon>FlashingLabelTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,6 +315,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Extended Controls\Extended Controls.csproj">
       <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
       <Name>Extended Controls</Name>

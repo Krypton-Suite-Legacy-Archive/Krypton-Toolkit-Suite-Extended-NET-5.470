@@ -84,6 +84,7 @@ namespace Playground
         private KryptonButton kbtnESC;
         private KryptonManager kryptonManager1;
         private KryptonPalette kryptonPalette1;
+        private KryptonButton kbtnFileVersion;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
@@ -140,12 +141,14 @@ namespace Playground
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.kbtnFileVersion = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnFileVersion);
             this.kryptonPanel1.Controls.Add(this.kbtnESC);
             this.kryptonPanel1.Controls.Add(this.kryptonButton3);
             this.kryptonPanel1.Controls.Add(this.kbtnFileSystemExamples);
@@ -834,6 +837,20 @@ namespace Playground
             // 
             this.kryptonPalette1.CustomisedKryptonPaletteFilePath = null;
             // 
+            // kbtnFileVersion
+            // 
+            this.kbtnFileVersion.Location = new System.Drawing.Point(737, 449);
+            this.kbtnFileVersion.Name = "kbtnFileVersion";
+            this.kbtnFileVersion.Size = new System.Drawing.Size(218, 25);
+            this.kbtnFileVersion.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnFileVersion.StateCommon.Border.Rounding = 25;
+            this.kbtnFileVersion.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnFileVersion.TabIndex = 100;
+            this.kbtnFileVersion.Values.Text = "File Version";
+            this.kbtnFileVersion.Click += new System.EventHandler(this.kbtnFileVersion_Click);
+            // 
             // Examples
             // 
             this.ClientSize = new System.Drawing.Size(971, 597);
@@ -845,10 +862,15 @@ namespace Playground
             this.Name = "Examples";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StateActive.Header.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.StateActive.Header.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.StateCommon.Border.Rounding = 25;
+            this.StateCommon.Header.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.StateCommon.Header.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.StateInactive.Header.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.StateInactive.Header.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Text = "Krypton Toolkit Suite Extended for .NET 4.7 - Examples";
             this.TextExtra = "(Public Build)";
             this.Load += new System.EventHandler(this.Examples_Load);
@@ -1227,6 +1249,13 @@ namespace Playground
             Editor editor = new Editor();
 
             editor.Show();
+        }
+
+        private void kbtnFileVersion_Click(object sender, EventArgs e)
+        {
+            FileVersion fv = new FileVersion();
+
+            fv.Show();
         }
     }
 }

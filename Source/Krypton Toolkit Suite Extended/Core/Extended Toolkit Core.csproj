@@ -58,6 +58,7 @@
     <Compile Include="Classes\ScrollBars\ScrollBarExtendedRenderer.cs" />
     <Compile Include="Classes\ScrollBars\ScrollBarKryptonRenderer.cs" />
     <Compile Include="Classes\ScrollBars\WIN32.cs" />
+    <Compile Include="Classes\Typeface.cs" />
     <Compile Include="Classes\Utility.cs" />
     <Compile Include="Classes\WIN32.cs" />
     <Compile Include="Components\Controls\CircularPictureBox.cs">
@@ -86,6 +87,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\Controls\KryptonRichTextBoxExtended.cs" />
+    <Compile Include="Components\Controls\KryptonSplitButton.cs" />
     <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedButton.cs" />
     <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedMaskedTextBox.cs" />
     <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedRichTextBox.cs" />
