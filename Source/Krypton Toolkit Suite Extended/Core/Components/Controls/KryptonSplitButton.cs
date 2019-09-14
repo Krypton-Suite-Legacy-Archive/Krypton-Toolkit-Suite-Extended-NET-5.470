@@ -287,101 +287,101 @@ namespace KryptonToolkitSuiteExtendedCore.Components.Controls
             CornerRadius = -1;
 
             #region State Disabled
-            StateDisabledBackGroundColourOne = Color.Empty;
+            StateDisabledBackGroundColourOne = Typeface.DefaultColour();
 
-            StateDisabledBackGroundColourTwo = Color.Empty;
+            StateDisabledBackGroundColourTwo = Typeface.DefaultColour();
 
-            StateDisabledLongTextColourOne = Color.Empty;
+            StateDisabledLongTextColourOne = Typeface.DefaultColour();
 
-            StateDisabledLongTextColourTwo = Color.Empty;
+            StateDisabledLongTextColourTwo = Typeface.DefaultColour();
 
-            StateDisabledShortTextColourOne = Color.Empty;
+            StateDisabledShortTextColourOne = Typeface.DefaultColour();
 
-            StateDisabledShortTextColourTwo = Color.Empty;
+            StateDisabledShortTextColourTwo = Typeface.DefaultColour();
             #endregion
 
             #region State Common
-            StateCommonBackGroundColourOne = Color.Empty;
+            StateCommonBackGroundColourOne = Typeface.DefaultColour();
 
-            StateCommonBackGroundColourTwo = Color.Empty;
+            StateCommonBackGroundColourTwo = Typeface.DefaultColour();
 
-            StateCommonLongTextColourOne = Color.Empty;
+            StateCommonLongTextColourOne = Typeface.DefaultColour();
 
-            StateCommonLongTextColourTwo = Color.Empty;
+            StateCommonLongTextColourTwo = Typeface.DefaultColour();
 
-            StateCommonShortTextColourOne = Color.Empty;
+            StateCommonShortTextColourOne = Typeface.DefaultColour();
 
-            StateCommonShortTextColourTwo = Color.Empty;
+            StateCommonShortTextColourTwo = Typeface.DefaultColour();
             #endregion
 
             #region State Normal
-            StateNormalBackGroundColourOne = Color.Empty;
+            StateNormalBackGroundColourOne = Typeface.DefaultColour();
 
-            StateNormalBackGroundColourTwo = Color.Empty;
+            StateNormalBackGroundColourTwo = Typeface.DefaultColour();
 
-            StateNormalLongTextColourOne = Color.Empty;
+            StateNormalLongTextColourOne = Typeface.DefaultColour();
 
-            StateNormalLongTextColourTwo = Color.Empty;
+            StateNormalLongTextColourTwo = Typeface.DefaultColour();
 
-            StateNormalShortTextColourOne = Color.Empty;
+            StateNormalShortTextColourOne = Typeface.DefaultColour();
 
-            StateNormalShortTextColourTwo = Color.Empty;
+            StateNormalShortTextColourTwo = Typeface.DefaultColour();
             #endregion
 
             #region State Pressed
-            StatePressedBackGroundColourOne = Color.Empty;
+            StatePressedBackGroundColourOne = Typeface.DefaultColour();
 
-            StatePressedBackGroundColourTwo = Color.Empty;
+            StatePressedBackGroundColourTwo = Typeface.DefaultColour();
 
-            StatePressedLongTextColourOne = Color.Empty;
+            StatePressedLongTextColourOne = Typeface.DefaultColour();
 
-            StatePressedLongTextColourTwo = Color.Empty;
+            StatePressedLongTextColourTwo = Typeface.DefaultColour();
 
-            StatePressedShortTextColourOne = Color.Empty;
+            StatePressedShortTextColourOne = Typeface.DefaultColour();
 
-            StatePressedShortTextColourTwo = Color.Empty;
+            StatePressedShortTextColourTwo = Typeface.DefaultColour();
             #endregion
 
             #region State Tracking
-            StateTrackingBackGroundColourOne = Color.Empty;
+            StateTrackingBackGroundColourOne = Typeface.DefaultColour();
 
-            StateTrackingBackGroundColourTwo = Color.Empty;
+            StateTrackingBackGroundColourTwo = Typeface.DefaultColour();
 
-            StateTrackingLongTextColourOne = Color.Empty;
+            StateTrackingLongTextColourOne = Typeface.DefaultColour();
 
-            StateTrackingLongTextColourTwo = Color.Empty;
+            StateTrackingLongTextColourTwo = Typeface.DefaultColour();
 
-            StateTrackingShortTextColourOne = Color.Empty;
+            StateTrackingShortTextColourOne = Typeface.DefaultColour();
 
-            StateTrackingShortTextColourTwo = Color.Empty;
+            StateTrackingShortTextColourTwo = Typeface.DefaultColour();
             #endregion
 
             #region Override Default
-            OverrideDefaultBackGroundColourOne = Color.Empty;
+            OverrideDefaultBackGroundColourOne = Typeface.DefaultColour();
 
-            OverrideDefaultBackGroundColourTwo = Color.Empty;
+            OverrideDefaultBackGroundColourTwo = Typeface.DefaultColour();
 
-            OverrideDefaultLongTextColourOne = Color.Empty;
+            OverrideDefaultLongTextColourOne = Typeface.DefaultColour();
 
-            OverrideDefaultLongTextColourTwo = Color.Empty;
+            OverrideDefaultLongTextColourTwo = Typeface.DefaultColour();
 
-            OverrideDefaultShortTextColourOne = Color.Empty;
+            OverrideDefaultShortTextColourOne = Typeface.DefaultColour();
 
-            OverrideDefaultShortTextColourTwo = Color.Empty;
+            OverrideDefaultShortTextColourTwo = Typeface.DefaultColour();
             #endregion
 
             #region Override Focus
-            OverrideFocusBackGroundColourOne = Color.Empty;
+            OverrideFocusBackGroundColourOne = Typeface.DefaultColour();
 
-            OverrideFocusBackGroundColourTwo = Color.Empty;
+            OverrideFocusBackGroundColourTwo = Typeface.DefaultColour();
 
-            OverrideFocusLongTextColourOne = Color.Empty;
+            OverrideFocusLongTextColourOne = Typeface.DefaultColour();
 
-            OverrideFocusLongTextColourTwo = Color.Empty;
+            OverrideFocusLongTextColourTwo = Typeface.DefaultColour();
 
-            OverrideFocusShortTextColourOne = Color.Empty;
+            OverrideFocusShortTextColourOne = Typeface.DefaultColour();
 
-            OverrideFocusShortTextColourTwo = Color.Empty;
+            OverrideFocusShortTextColourTwo = Typeface.DefaultColour();
             #endregion
 
             #region Globals
