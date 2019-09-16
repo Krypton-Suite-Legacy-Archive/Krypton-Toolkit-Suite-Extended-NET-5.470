@@ -1,8 +1,11 @@
-﻿using KryptonBackupUtility.UX;
+﻿using KryptonFileCopier.UX;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KryptonBackupUtility
+namespace KryptonFileCopier
 {
     static class Program
     {

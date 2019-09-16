@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{73B49F95-59DF-43B6-8409-CAE45A2045B4}</ProjectGuid>
+    <ProjectGuid>{E34D609D-583E-452A-B729-9E30E4177D1B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>KryptonBackupUtility</RootNamespace>
-    <AssemblyName>Krypton Backup Utility</AssemblyName>
+    <RootNamespace>KryptonFileCopier</RootNamespace>
+    <AssemblyName>Krypton File Copier</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,13 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CopyFiles.cs" />
+    <Compile Include="Interfaces\ICopyFilesDialog.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UX\MainWindow.cs">
+    <Compile Include="UX\CopyFilesDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\MainWindow.Designer.cs">
-      <DependentUpon>MainWindow.cs</DependentUpon>
+    <Compile Include="UX\MainWindow.cs">
+      <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,6 +73,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UX\CopyFilesDialog.resx">
+      <DependentUpon>CopyFilesDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UX\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,8 +97,8 @@
     <PackageReference Include="KryptonToolkitSuite5470CoreModule">
       <Version>5.470.1254</Version>
     </PackageReference>
-    <PackageReference Include="KryptonToolkitSuite5470NavigatorModule">
-      <Version>5.470.761</Version>
+    <PackageReference Include="WindowsAPICodePackShell">
+      <Version>1.1.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
