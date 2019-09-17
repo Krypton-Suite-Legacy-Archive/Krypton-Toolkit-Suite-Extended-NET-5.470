@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using KryptonFileCopier.Classes;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections.Generic;
@@ -544,7 +545,15 @@ namespace KryptonFileCopier.UX
 
         private void kbtnBrowseDestinationPath_Click(object sender, EventArgs e)
         {
+            CommonOpenFileDialog cofd = new CommonOpenFileDialog();
 
+            cofd.Title = "Select a destination path: ";
+
+            cofd.IsFolderPicker = true;
+
+            if (cofd.ShowDialog() == CommonFileDialogResult.Ok) ktxtDestinationPath.Text = Path.GetFullPath(cofd.FileName);
+
+            kbtnStartCopy.Enabled = true;
         }
 
         private void kbtnCancel_Click(object sender, EventArgs e)
@@ -554,13 +563,19 @@ namespace KryptonFileCopier.UX
 
         private void kbtnStartCopy_Click(object sender, EventArgs e)
         {
+            CopyFiles tmp = new CopyFiles(GetFileList(), ktxtDestinationPath.Text);
 
+            CopyFilesDialog dialog = new CopyFilesDialog();
+
+            dialog.SynchronizationObject = this;
+
+            tmp.CopyAsync(dialog);
         }
 
         #region Methods
         private void PropagateFileList(string sourcePath, bool listFiles = false)
         {
-            string[] files = Directory.GetFiles(sourcePath);
+            string[] files = Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories);
 
             foreach (string file in files)
             {

@@ -1,6 +1,8 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using APICodePackExtended;
+using ComponentFactory.Krypton.Toolkit;
 using KryptonFileCopier.Classes;
 using KryptonFileCopier.Interfaces;
+using Microsoft.WindowsAPICodePack.Taskbar;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -212,11 +214,6 @@ namespace KryptonFileCopier.UX
             this.ResumeLayout(false);
 
         }
-
-        public void Update(int totalFiles, int copiedFiles, long totalBytes, long copiedBytes, string currentFilename)
-        {
-            throw new System.NotImplementedException();
-        }
         #endregion
 
         #region Constructor
@@ -233,7 +230,7 @@ namespace KryptonFileCopier.UX
         #endregion
 
         #region Methods
-        public void update(Int32 totalFiles, Int32 copiedFiles, Int64 totalBytes, Int64 copiedBytes, String currentFilename)
+        public void Update(Int32 totalFiles, Int32 copiedFiles, Int64 totalBytes, Int64 copiedBytes, String currentFilename)
         {
             pbTotalFiles.Maximum = totalFiles;
 
@@ -249,6 +246,9 @@ namespace KryptonFileCopier.UX
             klblTotalFiles.Text = "Total files (" + copiedFiles + "/" + totalFiles + ")";
 
             kllblCurrentFile.Text = currentFilename;
+
+            // Updates the taskbar progress
+            WindowsAPICodePackModel.UpdateTaskbarProgressbarValue(TaskbarProgressBarState.Normal, pbTotalFiles.Value, pbTotalFiles.Maximum);
         }
 
         private void RaiseCancel()
