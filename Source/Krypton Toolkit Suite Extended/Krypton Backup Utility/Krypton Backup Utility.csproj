@@ -52,7 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\BackgroundWorkerInstructions.cs" />
     <Compile Include="Classes\Copy.cs" />
+    <Compile Include="Classes\ProgressChangedEventArgs.cs" />
     <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +98,12 @@
     <PackageReference Include="KryptonToolkitSuite5470NavigatorModule">
       <Version>5.470.761</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{ecdf3883-0655-421a-bc76-8e822bc9c778}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KryptonBackupUtility.Enumerations
+﻿namespace KryptonBackupUtility.Enumerations
 {
-    class Enumerations
+    public enum DirectoryParsing
     {
+        INCLUDESUBDIRECTORIES,
+        TOPLEVELONLY
+    }
+
+    public enum OperationType
+    {
+        IDLE,
+        ENUMERATINGDIRECTORIES,
+        ENUMERATINGFILES,
+        COPYING
     }
 }
