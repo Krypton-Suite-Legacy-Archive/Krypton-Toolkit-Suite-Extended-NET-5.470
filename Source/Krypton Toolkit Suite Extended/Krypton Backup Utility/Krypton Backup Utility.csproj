@@ -39,6 +39,7 @@
     <Reference Include="Extended Standard Controls">
       <HintPath>..\Extended Standard Controls\obj\Debug\Extended Standard Controls.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,7 +55,9 @@
   <ItemGroup>
     <Compile Include="Classes\BackgroundWorkerInstructions.cs" />
     <Compile Include="Classes\Copy.cs" />
+    <Compile Include="Classes\OperationCompleteEventArgs.cs" />
     <Compile Include="Classes\ProgressChangedEventArgs.cs" />
+    <Compile Include="Classes\Utilities.cs" />
     <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

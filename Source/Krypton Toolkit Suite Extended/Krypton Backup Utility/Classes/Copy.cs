@@ -17,23 +17,23 @@ namespace KryptonBackupUtility.Classes
 
         private Timer _timer;
 
-        private static OperationType _currentOperation = OperationType.IDLE;
+        public static OperationType _currentOperation = OperationType.IDLE;
 
-        private static Stopwatch _operationSW;
+        public static Stopwatch _operationSW;
 
-        private static Exception _operationException;
+        public static Exception _operationException;
 
-        private static bool _userCancel;
+        public static bool _userCancel;
 
-        private static int _totalFileCount;
+        public static int _totalFileCount;
 
-        private static long _totalFilesSize;
+        public static long _totalFilesSize;
 
-        private static int _currentFileCount;
+        public static int _currentFileCount;
 
-        private static long _cumulativeFileSize;
+        public static long _cumulativeFileSize;
 
-        private static int _totalDirectoryCount;
+        public static int _totalDirectoryCount;
         #endregion
 
         #region Properties
@@ -125,7 +125,9 @@ namespace KryptonBackupUtility.Classes
                     }
                     else
                     {
-                        Dispose();
+                        OperationCompleteEventArgs args = new OperationCompleteEventArgs();
+
+                        args.Dispose();
 
                         _operationException = null;
 
@@ -320,9 +322,9 @@ namespace KryptonBackupUtility.Classes
                                 BackgroundWorker.CancelAsync();
                             else
                             {
-                                string sourceRoot = GetPathRoot(fi.FullName);
+                                string sourceRoot = Directory.GetDirectoryRoot(fi.FullName); // GetPathRoot(fi.FullName);
 
-                                string targetPath = Combine(instructions.TargetBaseDirectory.FullName, fi.FullName.Replace(sourceRoot, ""));
+                                string targetPath = Path.Combine(instructions.TargetBaseDirectory.FullName, fi.FullName.Replace(sourceRoot, ""));
 
                                 string targetDirectoryPath = Path.GetDirectoryName(targetPath);
 
