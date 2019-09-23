@@ -767,44 +767,44 @@ namespace KryptonToolkitSuiteExtendedCore
         private void InternalRendererHeader(ref Graphics g, ref Rectangle rect, bool bHot, ref DrawListViewColumnHeaderEventArgs e)
         {
             //set colors
-            Color gradStartColour;
-            Color gradEndColour;
-            Color gradMiddleColour;
-            Color borderColour = _palette.ColorTable.ToolStripBorder;
+            Color gradStartColor;
+            Color gradEndColor;
+            Color gradMiddleColor;
+            Color borderColor = _palette.ColorTable.ToolStripBorder;
 
             if (e.State == ListViewItemStates.Selected)
             {
-                gradStartColour = Color.White;// _palette.ColorTable.ButtonSelectedGradientBegin;
-                gradMiddleColour = _palette.ColorTable.ButtonCheckedGradientEnd;
-                gradEndColour = _palette.ColorTable.ButtonCheckedGradientBegin;
+                gradStartColor = Color.White;// _palette.ColorTable.ButtonSelectedGradientBegin;
+                gradMiddleColor = _palette.ColorTable.ButtonCheckedGradientEnd;
+                gradEndColor = _palette.ColorTable.ButtonCheckedGradientBegin;
 
             }
             else
             {
                 if (bHot)
                 {
-                    gradStartColour = Color.White;// _palette.ColorTable.ButtonSelectedGradientBegin;
-                    gradMiddleColour = _palette.ColorTable.ButtonSelectedGradientEnd;
-                    gradEndColour = _palette.ColorTable.ButtonSelectedGradientBegin;
+                    gradStartColor = Color.White;// _palette.ColorTable.ButtonSelectedGradientBegin;
+                    gradMiddleColor = _palette.ColorTable.ButtonSelectedGradientEnd;
+                    gradEndColor = _palette.ColorTable.ButtonSelectedGradientBegin;
                 }
                 else
                 {
-                    gradStartColour = Color.White;//_palette.ColorTable.ToolStripGradientBegin;
-                    gradMiddleColour = _palette.ColorTable.ToolStripGradientEnd;
-                    gradEndColour = _palette.ColorTable.ToolStripGradientBegin;
+                    gradStartColor = Color.White;//_palette.ColorTable.ToolStripGradientBegin;
+                    gradMiddleColor = _palette.ColorTable.ToolStripGradientEnd;
+                    gradEndColor = _palette.ColorTable.ToolStripGradientBegin;
                 }
             }
             //Fill Gradient
-            using (LinearGradientBrush brush = new LinearGradientBrush(rect, gradStartColour, gradMiddleColour, LinearGradientMode.Vertical))
+            using (LinearGradientBrush brush = new LinearGradientBrush(rect, gradStartColor, gradMiddleColor, LinearGradientMode.Vertical))
             {
                 if (!_enableHeaderGlow)
                     g.FillRectangle(brush, rect);
                 else
-                    DrawingMethods.DrawListViewHeader(g, rect, gradStartColour, gradMiddleColour, 90F);
+                    DrawingMethods.DrawListViewHeader(g, rect, gradStartColor, gradMiddleColor, 90F);
             }
 
             //DrawBorder
-            g.DrawRectangle(new Pen(borderColour), rect);
+            g.DrawRectangle(new Pen(borderColor), rect);
 
             //Draw light lines
             //oriz
@@ -813,7 +813,7 @@ namespace KryptonToolkitSuiteExtendedCore
             g.DrawLine(new Pen(Color.White), new Point(rect.X + 1, rect.Y + 1), new Point(rect.X + 1, rect.Y + rect.Height - 1));
 
             if (e.ColumnIndex == this.Columns.Count - 1)
-                g.DrawLine(new Pen(borderColour), new Point(rect.X + rect.Width - 1, rect.Y), new Point(rect.X + rect.Width - 1, rect.Y + rect.Height + 0));
+                g.DrawLine(new Pen(borderColor), new Point(rect.X + rect.Width - 1, rect.Y), new Point(rect.X + rect.Width - 1, rect.Y + rect.Height + 0));
 
         }
 

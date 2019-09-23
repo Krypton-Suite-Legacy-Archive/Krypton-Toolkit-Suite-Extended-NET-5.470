@@ -51,6 +51,8 @@
     </Compile>
     <Compile Include="Classes\ColourHandler.cs" />
     <Compile Include="Classes\Drawing\DrawingMethods.cs" />
+    <Compile Include="Classes\Drawing\FontMetrics.cs" />
+    <Compile Include="Classes\Drawing\GraphicsExtension.cs" />
     <Compile Include="Classes\Drawing\RoundedRectangleF.cs" />
     <Compile Include="Classes\KryptonMessageBoxExtended.cs" />
     <Compile Include="Classes\PI.cs" />
@@ -62,6 +64,9 @@
     <Compile Include="Classes\Utility.cs" />
     <Compile Include="Classes\WIN32.cs" />
     <Compile Include="Components\Controls\CircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\CustomProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Components\Controls\ExtendedProgressBar.cs">

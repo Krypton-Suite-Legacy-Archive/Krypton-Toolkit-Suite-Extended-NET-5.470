@@ -20,16 +20,14 @@
  */
 #endregion
 
-
-using Persistence.Enumerations;
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
 
-namespace Persistence.Classes.Drawing
+namespace KryptonToolkitSuiteExtendedCore.Classes.Drawing
 {
-    public static class GraphicsExtension
+    internal static class GraphicsExtension
     {
         private static GraphicsPath GenerateRoundedRectangle(this Graphics graphics, RectangleF rectangle, float radius, RectangleEdgeFilter filter)
         {

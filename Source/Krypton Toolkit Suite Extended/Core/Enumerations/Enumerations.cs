@@ -64,6 +64,16 @@
         JUSTIFY = 4
     }
 
+    public enum RectangleEdgeFilter
+    {
+        NONE = 0,
+        TOPLEFT = 1,
+        TOPRIGHT = 2,
+        BOTTOMLEFT = 4,
+        BOTTOMRIGHT = 8,
+        ALL = TOPLEFT | TOPRIGHT | BOTTOMLEFT | BOTTOMRIGHT
+    }
+
     #region Scrollbars
     /// <summary>
     /// The scrollbar arrow button states.
