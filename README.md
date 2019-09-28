@@ -12,6 +12,7 @@
 | <img src="https://img.shields.io/badge/Module-Colour Controls-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470ExtendedColourControlsModule) | 
 | <img src="https://img.shields.io/badge/Module-Dialogs-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470ExtendedDialogsModule) |
 | <img src="https://img.shields.io/badge/Module-Menu & Toolbar Items-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule) 
+| <img src="https://img.shields.io/badge/Module-Extended Standard Controls-orange" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470ExtendedStandardControlsModule) |
 | <img src="https://img.shields.io/badge/Module-Floating Menu & Toolbars-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470FloatingMenuAndToolbarsModule) | 
 | <img src="https://img.shields.io/badge/Module-IO Components-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470IOComponentsModule) 
 | <img src="https://img.shields.io/badge/Module-Krypton Outlook Grid-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470KryptonOutlookGridModule) |
