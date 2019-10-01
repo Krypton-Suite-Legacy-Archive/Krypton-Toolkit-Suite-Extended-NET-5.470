@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonExtendedToolkit5470CoreModule">
-      <Version>5.470.1331</Version>
+      <Version>5.470.1400</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

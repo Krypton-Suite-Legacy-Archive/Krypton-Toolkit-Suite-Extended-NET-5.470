@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\About\KryptonAboutWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialogs\Colour\KryptonColourDetailsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +92,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialogs\About\KryptonAboutWindow.resx">
+      <DependentUpon>KryptonAboutWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Colour\KryptonColourDetailsDialog.resx">
       <DependentUpon>KryptonColourDetailsDialog.cs</DependentUpon>
     </EmbeddedResource>
