@@ -311,3 +311,5 @@ OpenCover/
 *.zip
 *.dll
 /Source/Krypton Toolkit Suite Extended/MigrationBackup/711e8208/Componentisation/Applications/Krypton Backup Utility/NuGetUpgradeLog.html
+*.dll
+*.pdb
