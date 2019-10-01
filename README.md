@@ -55,10 +55,7 @@ Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Exte
 
 You can check out the pre-built demo application from downloading it [here](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Demos/Demos.zip)
 
-=======
-
-## 2019-09-09 Discord community server
-* A new Discord community server has been set-up to discuss bugs, issues, new features etc. You can join by clicking the button above.
+======
 
 <!--
 ======
@@ -66,14 +63,18 @@ You can check out the pre-built demo application from downloading it [here](http
 2019-11-01 Build 15xx - November Update
 * Added a better file system tree view control
 
-======
+======-->
 
-## 2019-10-01 Build 14xx - October Update
-* Complete [#95](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/95) & [#89](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/89), labelled as `KryptonExtendedToolkit5470StandardControlsExtendedModule`
+## 2019-10-01 Build 1400 - October Update
+* You can now have granular control over the appearance over the Krypton components, [#95](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/95) & [#89](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/89), labelled as `KryptonExtendedToolkit5470StandardControlsExtendedModule`
 * More [#96](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/96)
 
 ======
--->
+
+## 2019-09-09 Discord community server
+* A new Discord community server has been set-up to discuss bugs, issues, new features etc. You can join by clicking the button above.
+
+======
 
 ## 2019-09-01 Build 1331 - September Update
 * More item and project templates (floating MenuStrips & ToolStrip templates)

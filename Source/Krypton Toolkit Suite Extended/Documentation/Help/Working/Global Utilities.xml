@@ -1,0 +1,947 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Global Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:GlobalUtilities.Classes.ExceptionHandler">
+            <summary>
+            A wrapper for exception handling.
+            </summary>
+        </member>
+        <member name="M:GlobalUtilities.Classes.ExceptionHandler.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GlobalUtilities.Classes.ExceptionHandler"/> class.
+            </summary>
+        </member>
+        <member name="M:GlobalUtilities.Classes.ExceptionHandler.CaptureException(System.Exception,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.String,System.String)">
+            <summary>
+            Captures the exception.
+            </summary>
+            <param name="exception">The exception.</param>
+            <param name="title">The title.</param>
+            <param name="buttons">The buttons.</param>
+            <param name="icon">The icon.</param>
+            <param name="className">Name of the class.</param>
+            <param name="methodSignature">The method signature.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.ExceptionHandler.ShowException(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Windows.Forms.ToolStripLabel,System.Object,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxOptions)">
+            <summary>
+            Shows the exception.
+            </summary>
+            <param name="exceptionMessage">The exception message.</param>
+            <param name="useKryptonMessageBox">if set to <c>true</c> [use krypton message box].</param>
+            <param name="useExtendedKryptonMessageBox">if set to <c>true</c> [use extended krypton message box].</param>
+            <param name="useWin32MessageBox">if set to <c>true</c> [use win32 message box].</param>
+            <param name="useConsole">if set to <c>true</c> [use console].</param>
+            <param name="useToolStripLabel">if set to <c>true</c> [use tool strip label].</param>
+            <param name="toolStripLabel">The tool strip label.</param>
+            <param name="args">The arguments.</param>
+            <param name="caption">The caption.</param>
+            <param name="buttons">The buttons.</param>
+            <param name="defaultButton">The default button.</param>
+            <param name="icon">The icon.</param>
+            <param name="options">The options.</param>
+        </member>
+        <member name="T:GlobalUtilities.Classes.NetworkUtilities">
+            <summary>
+            Handles networking.
+            </summary>
+        </member>
+        <member name="M:GlobalUtilities.Classes.NetworkUtilities.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:GlobalUtilities.Classes.NetworkUtilities"/> class.
+            </summary>
+        </member>
+        <member name="M:GlobalUtilities.Classes.NetworkUtilities.CheckInternetConnectionState(System.String)">
+            <summary>
+            Checks the state of the Internet connection.
+            </summary>
+            <param name="pingAddress">The ping address.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.NetworkUtilities.ExistsOnServer(System.Uri)">
+            <summary>
+            Checks to see whether the specified file exists the on server.
+            </summary>
+            <param name="fileLocation">The file location.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GlobalUtilities.Classes.GlobalMethods">
+            <summary>
+            Methods that can be used anywhere.
+            </summary>
+        </member>
+        <member name="P:GlobalUtilities.Classes.GlobalMethods.IsTargetPlatformSupported">
+            <summary>
+            The property to access and alter the variable _isTargetPlatformSupported.
+            </summary>
+        </member>
+        <member name="P:GlobalUtilities.Classes.GlobalMethods.IsTargetPlatform64BIT">
+            <summary>
+            The property to access and alter the variable _isTargetPlatform64BIT.
+            </summary>
+        </member>
+        <member name="P:GlobalUtilities.Classes.GlobalMethods.IsAssemblies64BIT">
+            <summary>
+            The property to access and alter the variable _isAssemblies64BIT.
+            </summary>
+        </member>
+        <member name="P:GlobalUtilities.Classes.GlobalMethods.InternetConnectionState">
+            <summary>
+            Gets or sets a value indicating whether [internet connection state].
+            </summary>
+            <value>
+              <c>true</c> if [internet connection state]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.#ctor">
+            <summary>
+            The default constructor.
+            </summary>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.CheckIfTargetPlatformIsSupported(System.Boolean)">
+            <summary>
+            Checks to see if the client's version of Windows is supported or not.
+            </summary>
+            <param name="useLegacyVistaSupport">Include Windows Vista in the supported list (the default value is 'false').</param>
+            <returns>True if the version of Windows is supported, false if not.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.IsTargetPlatformRunningIn64BITMode">
+            <summary>
+            Checks to see whether the client is using a 64-bit version of Windows.
+            </summary>
+            <returns>True if a 64-bit version of Windows is detected, false if a 32-bit version of Windows is detected.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.AreAssemblies64BIT">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.ElevateProcessWithAdministrativeRights(System.String)">
+            <summary>
+            Elevates the application to use administrative privileges. To be used with <see cref="T:System.Windows.Forms.Button"/> button click.
+            </summary>
+            <param name="processName">The process name that you wish to elevate.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.GetOSFriendlyName">
+            <summary>
+            Gets the name of the os friendly.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.IsWindowsAPICodePackSupported">
+            <summary>
+            This method checks if the client operating system supports the Windows API CodePack set of API's.
+            </summary>
+            <returns>True, if the client operating system supports the Windows API CodePack set of API's.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.SetIsTargetPlatformSupported(System.Boolean)">
+            <summary>
+            Sets the IsTargetPlatformSupported to the value of value.
+            </summary>
+            <param name="value">The desired value of IsTargetPlatformSupported.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.GetIsTargetPlatformSupported">
+            <summary>
+            Returns the value of the IsTargetPlatformSupported.
+            </summary>
+            <returns>The value of the IsTargetPlatformSupported.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.SetIsTargetPlatform64BIT(System.Boolean)">
+            <summary>
+            Sets the IsTargetPlatform64BIT to the value of value.
+            </summary>
+            <param name="value">The desired value of IsTargetPlatform64BIT.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.GetIsTargetPlatform64BIT">
+            <summary>
+            Returns the value of the IsTargetPlatform64BIT.
+            </summary>
+            <returns>The value of the IsTargetPlatform64BIT.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.SetIsAssemblies64BIT(System.Boolean)">
+            <summary>
+            Sets the IsAssemblies64BIT to the value of value.
+            </summary>
+            <param name="value">The desired value of IsAssemblies64BIT.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.GetIsAssemblies64BIT">
+            <summary>
+            Returns the value of the IsAssemblies64BIT.
+            </summary>
+            <returns>The value of the IsAssemblies64BIT.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.SetInternetConnectionState(System.Boolean)">
+            <summary>
+            Sets the InternetConnectionState to the value of value.
+            </summary>
+            <param name="value">The desired value of InternetConnectionState.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.GetInternetConnectionState">
+            <summary>
+            Returns the value of the InternetConnectionState.
+            </summary>
+            <returns>The value of the InternetConnectionState.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethods.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:GlobalUtilities.Classes.GlobalMethods"/> class.
+            </summary>
+        </member>
+        <member name="T:GlobalUtilities.Classes.GlobalMethodsStatic">
+            <summary>
+            Static methods that can be used anywhere.
+            </summary>
+        </member>
+        <member name="P:GlobalUtilities.Classes.GlobalMethodsStatic.IsTargetPlatformSupported">
+            <summary>
+            The property to access and alter the variable _isTargetPlatformSupported.
+            </summary>
+        </member>
+        <member name="P:GlobalUtilities.Classes.GlobalMethodsStatic.IsTargetPlatform64BIT">
+            <summary>
+            The property to access and alter the variable _isTargetPlatform64BIT.
+            </summary>
+        </member>
+        <member name="P:GlobalUtilities.Classes.GlobalMethodsStatic.IsAssemblies64BIT">
+            <summary>
+            The property to access and alter the variable _isAssemblies64BIT.
+            </summary>
+        </member>
+        <member name="P:GlobalUtilities.Classes.GlobalMethodsStatic.InternetConnectionState">
+            <summary>
+            Gets or sets a value indicating whether [internet connection state].
+            </summary>
+            <value>
+              <c>true</c> if [internet connection state]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.CheckIfTargetPlatformIsSupported(System.Boolean)">
+            <summary>
+            Checks to see if the client's version of Windows is supported or not.
+            </summary>
+            <param name="useLegacyVistaSupport">Include Windows Vista in the supported list (the default value is 'false').</param>
+            <returns>True if the version of Windows is supported, false if not.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.IsTargetPlatformRunningIn64BITMode">
+            <summary>
+            Checks to see whether the client is using a 64-bit version of Windows.
+            </summary>
+            <returns>True if a 64-bit version of Windows is detected, false if a 32-bit version of Windows is detected.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.AreAssemblies64BIT">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.ElevateProcessWithAdministrativeRights(System.String)">
+            <summary>
+            Elevates the application to use administrative privileges. To be used with <see cref="T:System.Windows.Forms.Button"/> button click.
+            </summary>
+            <param name="processName">The process name that you wish to elevate.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.GetOSFriendlyName">
+            <summary>
+            Gets the os friendly name for static methods.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.IsWindowsAPICodePackSupported">
+            <summary>
+            This method checks if the client operating system supports the Windows API CodePack set of API's.
+            </summary>
+            <returns>True, if the client operating system supports the Windows API CodePack set of API's.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.NotImplementedYet(System.String)">
+            <summary>
+            Not the implemented yet.
+            </summary>
+            <param name="featureName">Name of the feature.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.SetIsTargetPlatformSupported(System.Boolean)">
+            <summary>
+            Sets the IsTargetPlatformSupported to the value of value.
+            </summary>
+            <param name="value">The desired value of IsTargetPlatformSupported.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.GetIsTargetPlatformSupported">
+            <summary>
+            Returns the value of the IsTargetPlatformSupported.
+            </summary>
+            <returns>The value of the IsTargetPlatformSupported.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.SetIsTargetPlatform64BIT(System.Boolean)">
+            <summary>
+            Sets the IsTargetPlatform64BIT to the value of value.
+            </summary>
+            <param name="value">The desired value of IsTargetPlatform64BIT.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.GetIsTargetPlatform64BIT">
+            <summary>
+            Returns the value of the IsTargetPlatform64BIT.
+            </summary>
+            <returns>The value of the IsTargetPlatform64BIT.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.SetIsAssemblies64BIT(System.Boolean)">
+            <summary>
+            Sets the IsAssemblies64BIT to the value of value.
+            </summary>
+            <param name="value">The desired value of IsAssemblies64BIT.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.GetIsAssemblies64BIT">
+            <summary>
+            Returns the value of the IsAssemblies64BIT.
+            </summary>
+            <returns>The value of the IsAssemblies64BIT.</returns>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.SetInternetConnectionState(System.Boolean)">
+            <summary>
+            Sets the InternetConnectionState to the value of value.
+            </summary>
+            <param name="value">The desired value of InternetConnectionState.</param>
+        </member>
+        <member name="M:GlobalUtilities.Classes.GlobalMethodsStatic.GetInternetConnectionState">
+            <summary>
+            Returns the value of the InternetConnectionState.
+            </summary>
+            <returns>The value of the InternetConnectionState.</returns>
+        </member>
+        <member name="T:Core.Classes.FileUtilityMethods">
+            <summary>
+            This class is used to retrieve data for the downloaded file.
+            Version: 1.0
+            Date: Thursday 31st December 2015
+            </summary>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Core.Classes.FileUtilityMethods"/> class.
+            </summary>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.ParseReadableFileSize(System.Int64)">
+            <summary>
+            Parses the size of the readable file.
+            </summary>
+            <param name="fileSize">Size of the file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.ParseReadableFileSize(System.Int32)">
+            <summary>
+            Parses the size of the readable file.
+            </summary>
+            <param name="fileSize">Size of the file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.ReturnOnlineFileSize(System.String,System.Windows.Forms.Label)">
+            <summary>
+            Returns the size of the online file.
+            </summary>
+            <param name="onlineFileURL">The online file URL.</param>
+            <param name="fileSize">Size of the file.</param>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.FormatFileLength(System.String,System.Windows.Forms.Label)">
+            <summary>
+            Formats the length of the file.
+            </summary>
+            <param name="FilePath">The file path.</param>
+            <param name="Output">The output.</param>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.ReturnFileLength(System.String)">
+            <summary>
+            Retrieves the file length from the specified file.
+            </summary>
+            <param name="FilePath">The file path to the specified file.</param>
+            <returns>The file length from the specified file.</returns>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.ReturnFileLastAccessedTime(System.String)">
+            <summary>
+            Retrieves the file last accessed time from the specified file.
+            </summary>
+            <param name="FilePath">The file path to the specified file.</param>
+            <returns>The file last accessed time from the specified file.</returns>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.ReturnFileCreationTime(System.String)">
+            <summary>
+            Retrieves the file creation time from the specified file.
+            </summary>
+            <param name="FilePath">The file path to the specified file.</param>
+            <returns>The file creation time from the specified file.</returns>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.ReturnFileLastWriteTime(System.String)">
+            <summary>
+            Retrieves the file last write time from the specified file.
+            </summary>
+            <param name="FilePath">The file path to the specified file.</param>
+            <returns>The file last write time from the specified file.</returns>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.ReturnFileName(System.String)">
+            <summary>
+            Retrieves the file name from the specified file.
+            </summary>
+            <param name="FilePath">The file path to the specified file.</param>
+            <returns>The file name from the specified file.</returns>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.ReturnFileExtension(System.String)">
+            <summary>
+            Retrieves the file extension from the specified file.
+            </summary>
+            <param name="FilePath">The file path to the specified file.</param>
+            <returns>The file extension from the specified file.</returns>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.ReturnFileInformation(System.String)">
+            <summary>
+            Retrieves the file information from the specified file.
+            </summary>
+            <param name="FilePath">The file path to the specified file.</param>
+            <returns>The file information from the specified file.</returns>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.LoadFromFile(System.String)">
+            <summary>
+            Loads from file.
+            </summary>
+            <param name="FilePath">The file path.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.IsFileLocked(System.IO.FileInfo)">
+            <summary>
+            Determines whether [is file locked] [the specified file].
+            </summary>
+            <param name="File">The file.</param>
+            <returns>
+              <c>true</c> if [is file locked] [the specified file]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.ReturnFileInformationOn(System.String)">
+            <summary>
+            Returns the file information on the selected file.
+            </summary>
+            <param name="FilePath">The file path.</param>
+            <returns>Returns the file information on the selected file.</returns>
+        </member>
+        <member name="M:Core.Classes.FileUtilityMethods.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:Core.Classes.FileUtilityMethods"/> class.
+            </summary>
+        </member>
+        <member name="T:Core.Classes.IconExtractor">
+            <summary>
+            Provides a method for extracting images from the system via LoadImage
+            Modified from the AeroSuite project.
+            </summary>
+        </member>
+        <member name="M:Core.Classes.IconExtractor.LoadIcon(Core.Classes.IconExtractor.IconType,System.Drawing.Size)">
+            <summary>
+            Loads the icon.
+            </summary>
+            <param name="type">The type of icon.</param>
+            <param name="size">The size.</param>
+            <returns>The icon.</returns>
+            <exception cref="T:System.PlatformNotSupportedException"></exception>
+        </member>
+        <member name="T:Core.Classes.IconExtractor.IconType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Core.Classes.IconExtractor.IconType.WARNING">
+            <summary>
+            The warning
+            </summary>
+        </member>
+        <member name="F:Core.Classes.IconExtractor.IconType.HELP">
+            <summary>
+            The help
+            </summary>
+        </member>
+        <member name="F:Core.Classes.IconExtractor.IconType.ERROR">
+            <summary>
+            The error
+            </summary>
+        </member>
+        <member name="F:Core.Classes.IconExtractor.IconType.INFO">
+            <summary>
+            The information
+            </summary>
+        </member>
+        <member name="F:Core.Classes.IconExtractor.IconType.SHIELD">
+            <summary>
+            The shield
+            </summary>
+        </member>
+        <member name="T:Core.Classes.GlobalNativeMethods">
+            <summary>
+            Provides some methods from the user32 and uxtheme libraries.
+            Modified from the AeroSuite project.
+            </summary>
+        </member>
+        <member name="M:Core.Classes.GlobalNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.IntPtr,System.IntPtr)">
+            <summary>
+            Sends the message.
+            </summary>
+            <param name="hWnd">The h WND.</param>
+            <param name="msg">The MSG.</param>
+            <param name="wParam">The w parameter.</param>
+            <param name="lParam">The l parameter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.GlobalNativeMethods.SendMessage(System.IntPtr,System.UInt32,System.IntPtr,System.String)">
+            <summary>
+            Sends the message.
+            </summary>
+            <param name="hWnd">The h WND.</param>
+            <param name="msg">The MSG.</param>
+            <param name="wParam">The w parameter.</param>
+            <param name="lParam">The l parameter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.GlobalNativeMethods.LoadCursor(System.IntPtr,System.Int32)">
+            <summary>
+            Loads the cursor.
+            </summary>
+            <param name="hInstance">The h instance.</param>
+            <param name="lpCursorName">Name of the lp cursor.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.GlobalNativeMethods.SetCursor(System.IntPtr)">
+            <summary>
+            Sets the cursor.
+            </summary>
+            <param name="hCursor">The h cursor.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.GlobalNativeMethods.LoadImage(System.IntPtr,System.String,System.UInt32,System.Int32,System.Int32,System.UInt32)">
+            <summary>
+            Loads the image.
+            </summary>
+            <param name="hinst">The hinst.</param>
+            <param name="lpszName">Name of the LPSZ.</param>
+            <param name="uType">Type of the u.</param>
+            <param name="cxDesired">The cx desired.</param>
+            <param name="cyDesired">The cy desired.</param>
+            <param name="fuLoad">The fu load.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.GlobalNativeMethods.SetWindowPos(System.IntPtr,System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the window position.
+            </summary>
+            <param name="hWnd">The h WND.</param>
+            <param name="hWndInsertAfter">The h WND insert after.</param>
+            <param name="X">The x.</param>
+            <param name="Y">The y.</param>
+            <param name="cx">The cx.</param>
+            <param name="cy">The cy.</param>
+            <param name="uFlags">The u flags.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.GlobalNativeMethods.SetWindowLong32(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            Sets the window long32.
+            </summary>
+            <param name="hWnd">The h WND.</param>
+            <param name="nIndex">Index of the n.</param>
+            <param name="dwNewLong">The dw new long.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.GlobalNativeMethods.SetWindowLongPtr64(System.IntPtr,System.Int32,System.IntPtr)">
+            <summary>
+            Sets the window long PTR64.
+            </summary>
+            <param name="hWnd">The h WND.</param>
+            <param name="nIndex">Index of the n.</param>
+            <param name="dwNewLong">The dw new long.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.GlobalNativeMethods.SetWindowTheme(System.IntPtr,System.String,System.String)">
+            <summary>
+            Sets the window theme.
+            </summary>
+            <param name="hWnd">The h WND.</param>
+            <param name="pszSubAppName">Name of the PSZ sub application.</param>
+            <param name="pszSubIdList">The PSZ sub identifier list.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.GlobalNativeMethods.DwmIsCompositionEnabled">
+            <summary>
+            DWMs the is composition enabled.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Core.Classes.SpecialEffects.FadeEffects">
+            <summary>
+            Fades the selected <see cref="T:ComponentFactory.Krypton.Toolkit.KryptonForm"/> or <see cref="T:System.Windows.Forms.Form"/> in and out.
+            </summary>
+        </member>
+        <member name="P:Core.Classes.SpecialEffects.FadeEffects.FadeIn">
+            <summary>
+            Gets or sets the fade in value.
+            </summary>
+            <value>
+            The fade in value.
+            </value>
+        </member>
+        <member name="P:Core.Classes.SpecialEffects.FadeEffects.FadeOut">
+            <summary>
+            Gets or sets the fade out value.
+            </summary>
+            <value>
+            The fade out value.
+            </value>
+        </member>
+        <member name="M:Core.Classes.SpecialEffects.FadeEffects.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:Core.Classes.SpecialEffects.FadeEffects"/> class.
+            </summary>
+        </member>
+        <member name="M:Core.Classes.SpecialEffects.FadeEffects.FadeInWindow(ComponentFactory.Krypton.Toolkit.KryptonForm,System.Windows.Forms.Form,System.Int32)">
+            <summary>
+            Fades the form in.
+            Use this in your 'Form_Load' event.
+            </summary>
+            <param name="kryptonWindow">The krypton window.</param>
+            <param name="window">The window.</param>
+            <param name="fadeInSleepTimer">The fade in sleep timer.</param>
+        </member>
+        <member name="M:Core.Classes.SpecialEffects.FadeEffects.FadeOutWindow(ComponentFactory.Krypton.Toolkit.KryptonForm,ComponentFactory.Krypton.Toolkit.KryptonForm,System.Windows.Forms.Form,System.Windows.Forms.Form,System.Int32)">
+            <summary>
+            Fades the out window.
+            </summary>
+            <param name="currentKryptonWindow">The current krypton window.</param>
+            <param name="nextKryptonWindow">The next krypton window.</param>
+            <param name="currentWindow">The current window.</param>
+            <param name="nextWindow">The next window.</param>
+            <param name="fadeOutSleepTimer">The fade out sleep timer.</param>
+        </member>
+        <member name="M:Core.Classes.SpecialEffects.FadeEffects.Finalize">
+            <summary>
+            Finalises an instance of the <see cref="T:Core.Classes.SpecialEffects.FadeEffects"/> class.
+            </summary>
+        </member>
+        <member name="T:Core.Classes.TranslationMethods">
+            <summary>
+            Some translation methods.
+            </summary>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Core.Classes.TranslationMethods"/> class.
+            </summary>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.ParseBoolean(System.String)">
+            <summary>
+            Parses the boolean.
+            </summary>
+            <param name="booleanInput">The boolean input.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.ParseDateTime(System.String)">
+            <summary>
+            Parses the date time.
+            </summary>
+            <param name="dateTimeInput">The date time input.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.ParseLong(System.String)">
+            <summary>
+            Parses the long.
+            </summary>
+            <param name="longInput">The long input.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.ParseInteger(System.String)">
+            <summary>
+            Parses the integer.
+            </summary>
+            <param name="integerInput">The integer input.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.ParseVersion(System.String)">
+            <summary>
+            Parses the version.
+            </summary>
+            <param name="versionInput">The version input.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.TranslateColourToARGB(System.Drawing.Color)">
+            <summary>
+            Translates the colour to ARGB.
+            </summary>
+            <param name="colour">The colour.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.TranslateColourToRGB(System.Drawing.Color)">
+            <summary>
+            Translates the colour to RGB.
+            </summary>
+            <param name="colour">The colour.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.TranslateColourToHexadecimal(System.Drawing.Color)">
+            <summary>
+            Translates the colour to hexadecinal.
+            </summary>
+            <param name="colour">The colour.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.GetColourBrightness(System.Drawing.Color)">
+            <summary>
+            Gets the colour brightness.
+            </summary>
+            <param name="colour">The colour.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.GetColourHue(System.Drawing.Color)">
+            <summary>
+            Gets the colour hue.
+            </summary>
+            <param name="colour">The colour.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.GetColourSaturation(System.Drawing.Color)">
+            <summary>
+            Gets the colour saturation.
+            </summary>
+            <param name="colour">The colour.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.ConvertRGBToHexadecimal(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Converts the RGB to hexadecimal.
+            </summary>
+            <param name="red">The red.</param>
+            <param name="green">The green.</param>
+            <param name="blue">The blue.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.GetKnownColourName(System.Drawing.Color)">
+            <summary>
+            Gets the name of the known colour.
+            </summary>
+            <param name="colour">The colour.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.GetColourName(System.Drawing.Color)">
+            <summary>
+            Gets the name of the colour.
+            </summary>
+            <param name="colour">The colour.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.ReturnSafeFileNameDateTimeString(System.String)">
+            <summary>
+            Returns the safe file name date time string.
+            </summary>
+            <param name="format">The format.
+            Syntax:-
+            dd - The current day of week.
+            MM - The current Month.
+            yy or yyyy - The current year.
+            HH - The current hour.
+            mm - The current minute.
+            tt - Only use this for a 12-hour clock (AM/PM).
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.ColourStringToARGB(System.String)">
+            <summary>
+            Colours the string to ARGB.
+            </summary>
+            <param name="argbString">The ARGB string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.ColourARGBToString(System.Drawing.Color)">
+            <summary>
+            Colours the ARGB to string.
+            </summary>
+            <param name="colour">The colour.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.RGBColourToString(System.Drawing.Color)">
+            <summary>
+            RGBs the colour to string.
+            </summary>
+            <param name="colour">The colour.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.RGBStringToColour(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="inputColour"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Classes.TranslationMethods.IsHexadecimal(System.String)">
+            <summary>
+            Determines whether the specified input is hexadecimal.
+            </summary>
+            <param name="input">The input.</param>
+            <returns>
+              <c>true</c> if the specified input is hexadecimal; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Core.Interfaces.IAbout">
+            <summary>
+            For 'About' windows.
+            </summary>
+        </member>
+        <member name="P:Core.Interfaces.IAbout.UseIcon">
+            <summary>
+            Gets or sets a value indicating whether [use icon].
+            </summary>
+            <value>
+              <c>true</c> if [use icon]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Core.Interfaces.IAbout.ShowSystemInformationButton">
+            <summary>
+            Gets or sets a value indicating whether [show system information button].
+            </summary>
+            <value>
+              <c>true</c> if [show system information button]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Core.Interfaces.IAbout.CreationDateTime">
+            <summary>
+            Gets or sets the creation date time.
+            </summary>
+            <value>
+            The creation date time.
+            </value>
+        </member>
+        <member name="P:Core.Interfaces.IAbout.ApplicationName">
+            <summary>
+            Gets or sets the name of the application.
+            </summary>
+            <value>
+            The name of the application.
+            </value>
+        </member>
+        <member name="P:Core.Interfaces.IAbout.ApplicationVersion">
+            <summary>
+            Gets or sets the application version.
+            </summary>
+            <value>
+            The application version.
+            </value>
+        </member>
+        <member name="P:Core.Interfaces.IAbout.FrameworkVersion">
+            <summary>
+            Gets or sets the framework version.
+            </summary>
+            <value>
+            The framework version.
+            </value>
+        </member>
+        <member name="P:Core.Interfaces.IAbout.ApplicationIcon">
+            <summary>
+            Gets or sets the application icon.
+            </summary>
+            <value>
+            The application icon.
+            </value>
+        </member>
+        <member name="P:Core.Interfaces.IAbout.ApplicationIconImage">
+            <summary>
+            Gets or sets the application icon image.
+            </summary>
+            <value>
+            The application icon image.
+            </value>
+        </member>
+        <member name="P:Core.Interfaces.IAbout.AuthourName">
+            <summary>
+            Gets or sets the name of the authour.
+            </summary>
+            <value>
+            The name of the authour.
+            </value>
+        </member>
+        <member name="P:Core.Interfaces.IAbout.InstallLocation">
+            <summary>
+            Gets or sets the install location.
+            </summary>
+            <value>
+            The install location.
+            </value>
+        </member>
+        <member name="T:Core.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Core.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Core.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Core.Properties.Resources.documentinfo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+            </summary>
+        </member>
+        <member name="T:Core.UI.Elements.AboutBox">
+            <summary>
+            Displays the application information.
+            </summary>
+            <seealso cref="T:ComponentFactory.Krypton.Toolkit.KryptonForm" />
+            <seealso cref="T:Core.Interfaces.IAbout" />
+        </member>
+        <member name="M:Core.UI.Elements.AboutBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Core.UI.Elements.AboutBox"/> class.
+            </summary>
+        </member>
+        <member name="P:Core.UI.Elements.AboutBox.UseIcon">
+            <summary>
+            Gets or sets a value indicating whether [use icon].
+            </summary>
+            <value>
+              <c>true</c> if [use icon]; otherwise, <c>false</c>.
+            </value>
+            <exception cref="T:System.NotImplementedException">
+            </exception>
+        </member>
+        <member name="F:Core.UI.Elements.AboutBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Core.UI.Elements.AboutBox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Core.UI.Elements.AboutBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Core.UI.Elements.SystemInformation.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Core.UI.Elements.SystemInformation.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Core.UI.Elements.SystemInformation.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>
