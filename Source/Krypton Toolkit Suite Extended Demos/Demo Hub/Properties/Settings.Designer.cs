@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Demo_Hub.Properties
+namespace DemoHub.Properties
 {
 
 

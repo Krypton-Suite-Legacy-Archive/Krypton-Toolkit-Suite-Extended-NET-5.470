@@ -51,15 +51,15 @@ namespace InformationBox.Classes.Context
 
             EffectiveParameters = parameters;
 
-            if (behavior == InformationBoxScopeBehavior.InheritParent)
+            if (behavior == InformationBoxScopeBehavior.INHERITPARENT)
             {
                 if (null != Current)
                 {
                     // Merge with the parameters defined explicitly in the direct parent
-                    EffectiveParameters.Merge(Current.definedParameters);
+                    EffectiveParameters.Merge(Current._definedParameters);
                 }
             }
-            else if (behavior == InformationBoxScopeBehavior.InheritAll)
+            else if (behavior == InformationBoxScopeBehavior.INHERITALL)
             {
                 if (null != Current)
                 {
