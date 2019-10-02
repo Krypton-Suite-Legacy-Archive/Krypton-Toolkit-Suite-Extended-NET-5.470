@@ -86,10 +86,7 @@ namespace InformationBox.Classes.Context
         /// Gets the parameters.
         /// </summary>
         /// <value>The parameters.</value>
-        public InformationBoxScopeParameters Parameters
-        {
-            get { return this.EffectiveParameters; }
-        }
+        public InformationBoxScopeParameters Parameters => EffectiveParameters;
 
         /// <summary>
         /// Gets the current scope.
@@ -116,23 +113,26 @@ namespace InformationBox.Classes.Context
 
         #endregion Properties
 
-        #region Dispose
+        #region Dispose        
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        /// </summary>
         public void Dispose()
         {
             _scopesStack.Pop();
 
-            Dispose(true);
+            //Dispose(true);
 
             GC.SuppressFinalize(this);
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing)
+        //    {
 
-            }
-        }
+        //    }
+        //}
         #endregion
     }
 }

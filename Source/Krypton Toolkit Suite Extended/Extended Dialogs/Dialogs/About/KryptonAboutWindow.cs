@@ -9,19 +9,22 @@
 
 
 using ComponentFactory.Krypton.Toolkit;
+using System.Drawing;
+using System.Reflection;
 
 namespace ExtendedDialogs.Dialogs.About
 {
     public class KryptonAboutWindow : KryptonForm
     {
+        #region Designer Code
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox logoPictureBox;
         private KryptonLabel klblProductName;
         private KryptonLabel klblVersion;
         private KryptonLabel klblCopyright;
         private KryptonLabel klblCompanyName;
-        private KryptonRichTextBox kryptonRichTextBox1;
-        private KryptonButton kryptonButton1;
+        private KryptonRichTextBox krtbDescription;
+        private KryptonButton kbtnOk;
         private KryptonPanel kryptonPanel1;
 
         private void InitializeComponent()
@@ -34,8 +37,8 @@ namespace ExtendedDialogs.Dialogs.About
             this.klblVersion = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.klblCopyright = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.klblCompanyName = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonRichTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.krtbDescription = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -62,8 +65,8 @@ namespace ExtendedDialogs.Dialogs.About
             this.tableLayoutPanel1.Controls.Add(this.klblVersion, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.klblCopyright, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.klblCompanyName, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.kryptonRichTextBox1, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.kryptonButton1, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.krtbDescription, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.kbtnOk, 1, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -94,8 +97,9 @@ namespace ExtendedDialogs.Dialogs.About
             this.klblProductName.Location = new System.Drawing.Point(188, 3);
             this.klblProductName.Name = "klblProductName";
             this.klblProductName.Size = new System.Drawing.Size(372, 43);
+            this.klblProductName.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblProductName.TabIndex = 14;
-            this.klblProductName.Values.Text = "kryptonLabel1";
+            this.klblProductName.Values.Text = "{PRODUCT-NAME}";
             // 
             // klblVersion
             // 
@@ -103,8 +107,9 @@ namespace ExtendedDialogs.Dialogs.About
             this.klblVersion.Location = new System.Drawing.Point(188, 52);
             this.klblVersion.Name = "klblVersion";
             this.klblVersion.Size = new System.Drawing.Size(372, 43);
+            this.klblVersion.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblVersion.TabIndex = 15;
-            this.klblVersion.Values.Text = "kryptonLabel1";
+            this.klblVersion.Values.Text = "{VERSION}";
             // 
             // klblCopyright
             // 
@@ -112,8 +117,9 @@ namespace ExtendedDialogs.Dialogs.About
             this.klblCopyright.Location = new System.Drawing.Point(188, 101);
             this.klblCopyright.Name = "klblCopyright";
             this.klblCopyright.Size = new System.Drawing.Size(372, 43);
+            this.klblCopyright.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblCopyright.TabIndex = 16;
-            this.klblCopyright.Values.Text = "kryptonLabel1";
+            this.klblCopyright.Values.Text = "{COPYRIGHT}";
             // 
             // klblCompanyName
             // 
@@ -121,34 +127,46 @@ namespace ExtendedDialogs.Dialogs.About
             this.klblCompanyName.Location = new System.Drawing.Point(188, 150);
             this.klblCompanyName.Name = "klblCompanyName";
             this.klblCompanyName.Size = new System.Drawing.Size(372, 43);
+            this.klblCompanyName.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblCompanyName.TabIndex = 17;
-            this.klblCompanyName.Values.Text = "kryptonLabel2";
+            this.klblCompanyName.Values.Text = "{COMPANY-NAME}";
             // 
-            // kryptonRichTextBox1
+            // krtbDescription
             // 
-            this.kryptonRichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonRichTextBox1.Location = new System.Drawing.Point(188, 199);
-            this.kryptonRichTextBox1.Name = "kryptonRichTextBox1";
-            this.kryptonRichTextBox1.ReadOnly = true;
-            this.kryptonRichTextBox1.Size = new System.Drawing.Size(372, 141);
-            this.kryptonRichTextBox1.TabIndex = 18;
-            this.kryptonRichTextBox1.Text = "kryptonRichTextBox1";
+            this.krtbDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.krtbDescription.Location = new System.Drawing.Point(188, 199);
+            this.krtbDescription.Name = "krtbDescription";
+            this.krtbDescription.ReadOnly = true;
+            this.krtbDescription.Size = new System.Drawing.Size(372, 141);
+            this.krtbDescription.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.krtbDescription.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
+            this.krtbDescription.TabIndex = 18;
+            this.krtbDescription.Text = "{DESCRIPTION}";
             // 
-            // kryptonButton1
+            // kbtnOk
             // 
-            this.kryptonButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.kryptonButton1.Location = new System.Drawing.Point(470, 364);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(90, 25);
-            this.kryptonButton1.TabIndex = 19;
-            this.kryptonButton1.Values.Text = "&Ok";
+            this.kbtnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.kbtnOk.Location = new System.Drawing.Point(470, 364);
+            this.kbtnOk.Name = "kbtnOk";
+            this.kbtnOk.Size = new System.Drawing.Size(90, 25);
+            this.kbtnOk.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnOk.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnOk.TabIndex = 21;
+            this.kbtnOk.Values.Text = "&Ok";
             // 
             // KryptonAboutWindow
             // 
             this.ClientSize = new System.Drawing.Size(587, 416);
             this.Controls.Add(this.kryptonPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "KryptonAboutWindow";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "About {0}";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -157,5 +175,118 @@ namespace ExtendedDialogs.Dialogs.About
             this.ResumeLayout(false);
 
         }
+        #endregion
+
+        #region Assembly Attribute Accessors
+
+        public string AssemblyTitle
+        {
+            get
+            {
+                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
+                if (attributes.Length > 0)
+                {
+                    AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
+                    if (titleAttribute.Title != "")
+                    {
+                        return titleAttribute.Title;
+                    }
+                }
+                return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
+            }
+        }
+
+        public string AssemblyVersion
+        {
+            get
+            {
+                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            }
+        }
+
+        public string AssemblyDescription
+        {
+            get
+            {
+                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
+                if (attributes.Length == 0)
+                {
+                    return "";
+                }
+                return ((AssemblyDescriptionAttribute)attributes[0]).Description;
+            }
+        }
+
+        public string AssemblyProduct
+        {
+            get
+            {
+                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
+                if (attributes.Length == 0)
+                {
+                    return "";
+                }
+                return ((AssemblyProductAttribute)attributes[0]).Product;
+            }
+        }
+
+        public string AssemblyCopyright
+        {
+            get
+            {
+                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
+                if (attributes.Length == 0)
+                {
+                    return "";
+                }
+                return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
+            }
+        }
+
+        public string AssemblyCompany
+        {
+            get
+            {
+                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
+                if (attributes.Length == 0)
+                {
+                    return "";
+                }
+                return ((AssemblyCompanyAttribute)attributes[0]).Company;
+            }
+        }
+        #endregion
+
+        #region Variables
+        private Image _applicationLogo;
+        #endregion
+
+        #region Properties
+        public Image ApplicationLogo { get => _applicationLogo; set => _applicationLogo = value; }
+        #endregion
+
+        #region Constructors
+        public KryptonAboutWindow()
+        {
+            InitializeComponent();
+
+            Text = $"About { AssemblyTitle }";
+
+            klblProductName.Text = ProductName;
+
+            klblVersion.Text = $"Version: { AssemblyVersion }";
+
+            klblCopyright.Text = AssemblyCopyright;
+
+            klblCompanyName.Text = AssemblyCompany;
+
+            krtbDescription.Text = AssemblyDescription;
+
+            if (ApplicationLogo != null)
+            {
+                logoPictureBox.Image = ApplicationLogo;
+            }
+        }
+        #endregion
     }
 }
