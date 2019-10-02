@@ -6,6 +6,8 @@
 // <summary>Contains the parameters used by a specific scope</summary>
 #endregion
 
+using InformationBox.Classes.Parameters;
+using InformationBox.Enumerations;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
