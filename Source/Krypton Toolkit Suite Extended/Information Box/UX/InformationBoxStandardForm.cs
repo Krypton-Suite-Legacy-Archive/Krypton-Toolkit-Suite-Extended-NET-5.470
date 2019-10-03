@@ -45,24 +45,24 @@ namespace InformationBox.UX
             this.gpnlButtons = new InformationBox.Controls.GlassPanel();
             this.pnlForm = new System.Windows.Forms.Panel();
             this.pnlText = new System.Windows.Forms.Panel();
-            this.pnlScrollText = new System.Windows.Forms.Panel();
-            this.messageText = new System.Windows.Forms.TextBox();
-            this.glblTitle = new InformationBox.Controls.GlassLabel();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlIcon = new System.Windows.Forms.Panel();
             this.pcbIcon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pnlScrollText = new System.Windows.Forms.Panel();
+            this.messageText = new System.Windows.Forms.TextBox();
+            this.glblTitle = new InformationBox.Controls.GlassLabel();
             this.pnlBas.SuspendLayout();
             this.pnlForm.SuspendLayout();
             this.pnlText.SuspendLayout();
-            this.pnlScrollText.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.pnlIcon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcon)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.pnlScrollText.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBas
@@ -112,6 +112,7 @@ namespace InformationBox.UX
             this.pnlForm.Name = "pnlForm";
             this.pnlForm.Size = new System.Drawing.Size(257, 100);
             this.pnlForm.TabIndex = 1;
+            this.pnlForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlForm_Paint);
             // 
             // pnlText
             // 
@@ -122,47 +123,6 @@ namespace InformationBox.UX
             this.pnlText.Name = "pnlText";
             this.pnlText.Size = new System.Drawing.Size(257, 69);
             this.pnlText.TabIndex = 5;
-            // 
-            // pnlScrollText
-            // 
-            this.pnlScrollText.AutoScroll = true;
-            this.pnlScrollText.Controls.Add(this.messageText);
-            this.pnlScrollText.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlScrollText.Location = new System.Drawing.Point(84, 0);
-            this.pnlScrollText.Name = "pnlScrollText";
-            this.pnlScrollText.Size = new System.Drawing.Size(173, 69);
-            this.pnlScrollText.TabIndex = 5;
-            // 
-            // messageText
-            // 
-            this.messageText.BackColor = System.Drawing.SystemColors.Control;
-            this.messageText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.messageText.Location = new System.Drawing.Point(3, 26);
-            this.messageText.Multiline = true;
-            this.messageText.Name = "messageText";
-            this.messageText.ReadOnly = true;
-            this.messageText.Size = new System.Drawing.Size(100, 20);
-            this.messageText.TabIndex = 0;
-            this.messageText.Text = "Text";
-            // 
-            // glblTitle
-            // 
-            this.glblTitle.BackColor = System.Drawing.Color.Black;
-            this.glblTitle.DisabledForeColor = System.Drawing.Color.Gray;
-            this.glblTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.glblTitle.ForeColor = System.Drawing.Color.White;
-            this.glblTitle.Location = new System.Drawing.Point(0, 0);
-            this.glblTitle.Margin = new System.Windows.Forms.Padding(0);
-            this.glblTitle.MinimumSize = new System.Drawing.Size(16, 16);
-            this.glblTitle.Name = "glblTitle";
-            this.glblTitle.SideBorder = InformationBox.Enumerations.SideBorder.Both;
-            this.glblTitle.SideBorderBottomColour = System.Drawing.Color.Transparent;
-            this.glblTitle.SideBorderTopColour = System.Drawing.Color.White;
-            this.glblTitle.SideBorderWidth = 1;
-            this.glblTitle.Size = new System.Drawing.Size(257, 31);
-            this.glblTitle.TabIndex = 4;
-            this.glblTitle.Text = "Title";
-            this.glblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlMain
             // 
@@ -227,6 +187,50 @@ namespace InformationBox.UX
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Text";
             // 
+            // pnlScrollText
+            // 
+            this.pnlScrollText.AutoScroll = true;
+            this.pnlScrollText.Controls.Add(this.messageText);
+            this.pnlScrollText.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlScrollText.Location = new System.Drawing.Point(84, 0);
+            this.pnlScrollText.Name = "pnlScrollText";
+            this.pnlScrollText.Size = new System.Drawing.Size(173, 69);
+            this.pnlScrollText.TabIndex = 5;
+            // 
+            // messageText
+            // 
+            this.messageText.BackColor = System.Drawing.SystemColors.Control;
+            this.messageText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.messageText.Location = new System.Drawing.Point(3, 26);
+            this.messageText.Multiline = true;
+            this.messageText.Name = "messageText";
+            this.messageText.ReadOnly = true;
+            this.messageText.Size = new System.Drawing.Size(100, 20);
+            this.messageText.TabIndex = 0;
+            this.messageText.Text = "Text";
+            // 
+            // glblTitle
+            // 
+            this.glblTitle.BackColor = System.Drawing.Color.Black;
+            this.glblTitle.DisabledForeColor = System.Drawing.Color.Gray;
+            this.glblTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.glblTitle.ForeColor = System.Drawing.Color.White;
+            this.glblTitle.Location = new System.Drawing.Point(0, 0);
+            this.glblTitle.Margin = new System.Windows.Forms.Padding(0);
+            this.glblTitle.MinimumSize = new System.Drawing.Size(16, 16);
+            this.glblTitle.Name = "glblTitle";
+            this.glblTitle.SideBorder = InformationBox.Enumerations.SideBorder.Both;
+            this.glblTitle.SideBorderBottomColour = System.Drawing.Color.Transparent;
+            this.glblTitle.SideBorderTopColour = System.Drawing.Color.White;
+            this.glblTitle.SideBorderWidth = 1;
+            this.glblTitle.Size = new System.Drawing.Size(257, 31);
+            this.glblTitle.TabIndex = 4;
+            this.glblTitle.Text = "Title";
+            this.glblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.glblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.glblTitle_MouseDown);
+            this.glblTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.glblTitle_MouseMove);
+            this.glblTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.glblTitle_MouseUp);
+            // 
             // InformationBoxStandardForm
             // 
             this.ClientSize = new System.Drawing.Size(257, 153);
@@ -237,17 +241,19 @@ namespace InformationBox.UX
             this.MinimizeBox = false;
             this.Name = "InformationBoxStandardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InformationBoxStandardForm_FormClosed);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InformationBoxStandardForm_KeyDown);
             this.pnlBas.ResumeLayout(false);
             this.pnlForm.ResumeLayout(false);
             this.pnlText.ResumeLayout(false);
-            this.pnlScrollText.ResumeLayout(false);
-            this.pnlScrollText.PerformLayout();
             this.pnlMain.ResumeLayout(false);
             this.pnlIcon.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcon)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.pnlScrollText.ResumeLayout(false);
+            this.pnlScrollText.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1588,96 +1594,6 @@ namespace InformationBox.UX
         }
 
         /// <summary>
-        /// Handles the FormClosed event of the InformationBox control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.Windows.Forms.FormClosedEventArgs"/> instance containing the event data.</param>
-        private void InformationBox_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (this.result == InformationBoxResult.None)
-            {
-                this.result = InformationBoxResult.Cancel;
-            }
-
-            if (this.behavior == InformationBoxBehavior.Modeless && null != this.callback)
-            {
-                Invoke(this.callback, this.result);
-            }
-        }
-
-        /// <summary>
-        /// Handles the Paint event of the pnlForm control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.Windows.Forms.PaintEventArgs"/> instance containing the event data.</param>
-        private void PnlForm_Paint(object sender, PaintEventArgs e)
-        {
-            if (this.style == InformationBoxStyle.Modern)
-            {
-                ControlPaint.DrawBorder(e.Graphics, this.pnlForm.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
-            }
-        }
-
-        /// <summary>
-        /// Handles the MouseDown event of the lblTitle control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.Windows.Forms.MouseEventArgs"/> instance containing the event data.</param>
-        private void LblTitle_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.lastPointerPosition = e.Location;
-                this.mouseDown = true;
-            }
-        }
-
-        /// <summary>
-        /// Handles the MouseMove event of the lblTitle control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.Windows.Forms.MouseEventArgs"/> instance containing the event data.</param>
-        private void LblTitle_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (!this.mouseDown)
-            {
-                return;
-            }
-
-            Point location = DesktopLocation;
-
-            location.Offset(new Point(e.Location.X - this.lastPointerPosition.X, e.Location.Y - this.lastPointerPosition.Y));
-
-            DesktopLocation = location;
-        }
-
-        /// <summary>
-        /// Handles the MouseUp event of the lblTitle control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.Windows.Forms.MouseEventArgs"/> instance containing the event data.</param>
-        private void LblTitle_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.mouseDown = false;
-            }
-        }
-
-        /// <summary>
-        /// Handles the KeyDown event of the InformationBoxForm control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.Windows.Forms.KeyEventArgs"/> instance containing the event data.</param>
-        private void InformationBoxForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                Close();
-            }
-        }
-
-        /// <summary>
         /// Handles the Tick event of the tmrAutoClose control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
@@ -1797,5 +1713,66 @@ namespace InformationBox.UX
         }
 
         #endregion Event handling
+
+        private void InformationBoxStandardForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (result == InformationBoxResult.None)
+            {
+                result = InformationBoxResult.Cancel;
+            }
+
+            if (behavior == InformationBoxBehavior.Modeless && null != callback)
+            {
+                Invoke(callback, result);
+            }
+        }
+
+        private void InformationBoxStandardForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
+
+        private void pnlForm_Paint(object sender, PaintEventArgs e)
+        {
+            if (style == InformationBoxStyle.Modern)
+            {
+                ControlPaint.DrawBorder(e.Graphics, pnlForm.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+            }
+        }
+
+        private void glblTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                lastPointerPosition = e.Location;
+
+                mouseDown = true;
+            }
+        }
+
+        private void glblTitle_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (!mouseDown)
+            {
+                return;
+            }
+
+            Point location = DesktopLocation;
+
+            location.Offset(new Point(e.Location.X - lastPointerPosition.X, e.Location.Y - lastPointerPosition.Y));
+
+            DesktopLocation = location;
+        }
+
+        private void glblTitle_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mouseDown = false;
+            }
+        }
     }
 }
