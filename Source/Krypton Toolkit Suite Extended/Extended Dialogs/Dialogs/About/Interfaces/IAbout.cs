@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using ExtendedDialogs.Dialogs.About.Custom;
+using System.Drawing;
 
 namespace ExtendedDialogs.Dialogs.About
 {
@@ -32,6 +33,22 @@ namespace ExtendedDialogs.Dialogs.About
         /// <value>The name of the product.</value>
         string ProductName { get; set; }
 
+        /// <summary>Gets or sets the name of the copyright holders.</summary>
+        /// <value>The name of the copyright holders.</value>
+        string CopyrightHoldersName { get; set; }
+
+        /// <summary>Gets or sets the start year.</summary>
+        /// <value>The start year.</value>
+        string StartYear { get; set; }
+
+        /// <summary>Gets or sets the current copyright year.</summary>
+        /// <value>The current copyright year.</value>
+        string CurrentCopyrightYear { get; set; }
+
+        /// <summary>Gets or sets the license file path.</summary>
+        /// <value>The license file path.</value>
+        string LicenseFilePath { get; set; }
+
         /// <summary>Gets or sets the product icon.</summary>
         /// <value>The product icon.</value>
         Icon ProductIcon { get; set; }
@@ -63,5 +80,9 @@ namespace ExtendedDialogs.Dialogs.About
         /// <summary>Gets or sets the product image 512 x 512.</summary>
         /// <value>The product image 512 x 512.</value>
         Image ProductImage512x512 { get; set; }
+
+        /// <summary>Gets or sets the type of the krypton about box layout button.</summary>
+        /// <value>The type of the krypton about box layout button.</value>
+        KryptonAboutBoxLayoutButtonType KryptonAboutBoxLayoutButtonType { get; set; }
     }
 }
