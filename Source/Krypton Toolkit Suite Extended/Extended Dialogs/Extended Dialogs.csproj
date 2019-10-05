@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\About\Classes\Common.cs" />
     <Compile Include="Dialogs\About\Custom\KryptonAboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
