@@ -72,7 +72,9 @@
     <Compile Include="UX\InformationBoxStandardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\KryptonInformationBoxForm.cs" />
+    <Compile Include="UX\KryptonInformationBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\InformationBoxStandardForm.resx">
       <DependentUpon>InformationBoxStandardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\KryptonInformationBoxForm.resx">
+      <DependentUpon>KryptonInformationBoxForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
