@@ -92,6 +92,7 @@ namespace Playground
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Examples));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnFileVersion = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnESC = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnFileSystemExamples = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -141,7 +142,6 @@ namespace Playground
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.kbtnFileVersion = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -201,6 +201,20 @@ namespace Playground
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(971, 597);
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // kbtnFileVersion
+            // 
+            this.kbtnFileVersion.Location = new System.Drawing.Point(737, 449);
+            this.kbtnFileVersion.Name = "kbtnFileVersion";
+            this.kbtnFileVersion.Size = new System.Drawing.Size(218, 25);
+            this.kbtnFileVersion.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnFileVersion.StateCommon.Border.Rounding = 25;
+            this.kbtnFileVersion.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnFileVersion.TabIndex = 100;
+            this.kbtnFileVersion.Values.Text = "File Version";
+            this.kbtnFileVersion.Click += new System.EventHandler(this.kbtnFileVersion_Click);
             // 
             // kbtnESC
             // 
@@ -829,27 +843,9 @@ namespace Playground
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
-            // kryptonManager1
-            // 
-            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office365Blue;
-            // 
             // kryptonPalette1
             // 
             this.kryptonPalette1.CustomisedKryptonPaletteFilePath = null;
-            // 
-            // kbtnFileVersion
-            // 
-            this.kbtnFileVersion.Location = new System.Drawing.Point(737, 449);
-            this.kbtnFileVersion.Name = "kbtnFileVersion";
-            this.kbtnFileVersion.Size = new System.Drawing.Size(218, 25);
-            this.kbtnFileVersion.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kbtnFileVersion.StateCommon.Border.Rounding = 25;
-            this.kbtnFileVersion.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnFileVersion.TabIndex = 100;
-            this.kbtnFileVersion.Values.Text = "File Version";
-            this.kbtnFileVersion.Click += new System.EventHandler(this.kbtnFileVersion_Click);
             // 
             // Examples
             // 

@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Extended Standard Controls">
+      <HintPath>..\Extended Standard Controls\obj\Debug\Extended Standard Controls.dll</HintPath>
+    </Reference>
     <Reference Include="Krypton Toolkit Suite Extended Core">
       <HintPath>..\Core\obj\Debug\Krypton Toolkit Suite Extended Core.dll</HintPath>
     </Reference>
@@ -49,6 +52,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\About\Classes\Common.cs" />
+    <Compile Include="Dialogs\About\Custom\KryptonAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\About\Enumerations\Enumerations.cs" />
+    <Compile Include="Dialogs\About\Extras\ApplicationDescriptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\About\Extras\CopyrightInformationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\About\Interfaces\IAbout.cs" />
+    <Compile Include="Dialogs\About\KryptonAboutWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\About\Extras\LicenseInformationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialogs\Colour\KryptonColourDetailsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,10 +106,25 @@
       <Version>1.7.2</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470CoreModule">
-      <Version>5.470.1254</Version>
+      <Version>5.470.1300</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialogs\About\Custom\KryptonAboutBox.resx">
+      <DependentUpon>KryptonAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\About\Extras\ApplicationDescriptionDialog.resx">
+      <DependentUpon>ApplicationDescriptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\About\Extras\CopyrightInformationDialog.resx">
+      <DependentUpon>CopyrightInformationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\About\Extras\LicenseInformationDialog.resx">
+      <DependentUpon>LicenseInformationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\About\KryptonAboutWindow.resx">
+      <DependentUpon>KryptonAboutWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Colour\KryptonColourDetailsDialog.resx">
       <DependentUpon>KryptonColourDetailsDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +188,10 @@
     <None Include="Resources\palette-save.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Extended Colour Controls\Extended Colour Controls.csproj">
       <Project>{a2f6a6c7-a8a9-4509-93e0-edf09b6a03a7}</Project>
       <Name>Extended Colour Controls</Name>

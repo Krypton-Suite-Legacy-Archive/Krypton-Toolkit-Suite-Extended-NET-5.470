@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utilities.UX;
 
-namespace Demo_Hub
+namespace Circular_ProgressBar_Example
 {
-    public partial class Form1 : Form
+    public partial class CircularProgressBarExampleWindow : StandardDemoWindow
     {
-        public Form1()
+        public CircularProgressBarExampleWindow()
         {
             InitializeComponent();
         }

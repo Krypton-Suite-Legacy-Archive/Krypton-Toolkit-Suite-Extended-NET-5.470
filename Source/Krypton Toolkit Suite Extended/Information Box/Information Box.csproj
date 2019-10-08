@@ -42,8 +42,102 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Common\AsyncResultCallback.cs" />
+    <Compile Include="Classes\Common\InformationBox.cs" />
+    <Compile Include="Classes\Context\InformationBoxScope.cs" />
+    <Compile Include="Classes\Context\InformationBoxScopeBehavior.cs" />
+    <Compile Include="Classes\Context\InformationBoxScopeParameters.cs" />
+    <Compile Include="Classes\Controls\PaintingEngine.cs" />
+    <Compile Include="Classes\Internals\IconHelper.cs" />
+    <Compile Include="Classes\Internals\MessageBoxEnumConverter.cs" />
+    <Compile Include="Classes\Parameters\AutoCloseParameters.cs" />
+    <Compile Include="Classes\Parameters\DesignParameters.cs" />
+    <Compile Include="Classes\Parameters\InformationBoxTitleIcon.cs" />
+    <Compile Include="Controls\GlassButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GlassLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GlassPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Enumerations\Enumerations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UX\InformationBoxStandardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\KryptonInformationBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5470CoreModule">
+      <Version>5.470.1300</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\InformationBoxStandardForm.resx">
+      <DependentUpon>InformationBoxStandardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\KryptonInformationBoxForm.resx">
+      <DependentUpon>KryptonInformationBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blank.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fax.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gamepad.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\good.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\joystick.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locker.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scanner.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speakers.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
