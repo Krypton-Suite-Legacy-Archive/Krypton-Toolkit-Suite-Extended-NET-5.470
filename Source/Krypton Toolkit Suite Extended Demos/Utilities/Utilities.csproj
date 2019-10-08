@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ProcessHandler.cs" />
+    <Compile Include="Components\ControlContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UX\StandardDemoWindow.cs">
       <SubType>Form</SubType>
@@ -56,6 +59,17 @@
     <PackageReference Include="KryptonExtendedToolkit5470CoreModule">
       <Version>5.470.1400</Version>
     </PackageReference>
+    <PackageReference Include="KryptonToolkitSuite5470CoreModule">
+      <Version>5.470.1300</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Components\ControlContainer.resx">
+      <DependentUpon>ControlContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\StandardDemoWindow.resx">
+      <DependentUpon>StandardDemoWindow.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

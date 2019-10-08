@@ -33,45 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common, Version=5.470.609.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470CoreModule.5.470.1400\lib\net47\Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Docking, Version=5.470.740.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470CoreModule.5.470.1400\lib\net47\Krypton Docking.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Navigator, Version=5.470.761.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470CoreModule.5.470.1400\lib\net47\Krypton Navigator.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Ribbon, Version=5.470.815.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470CoreModule.5.470.1400\lib\net47\Krypton Ribbon.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Toolkit Suite Extended Core, Version=5.470.1400.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470CoreModule.5.470.1400\lib\net47\Krypton Toolkit Suite Extended Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Toolkit, Version=5.470.1252.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470CoreModule.5.470.1400\lib\net47\Krypton Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Workspace, Version=5.470.714.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470CoreModule.5.470.1400\lib\net47\Krypton Workspace.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470CoreModule.5.470.1400\lib\net47\Microsoft.WindowsAPICodePack.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAPICodePack.ExtendedLinguisticServices, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470CoreModule.5.470.1400\lib\net47\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAPICodePack.Sensors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470CoreModule.5.470.1400\lib\net47\Microsoft.WindowsAPICodePack.Sensors.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470CoreModule.5.470.1400\lib\net47\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470CoreModule.5.470.1400\lib\net47\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
-    </Reference>
-    <Reference Include="NaviSuite, Version=5.470.441.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\KryptonExtendedToolkit5470NaviSuiteModule.5.470.441\lib\net47\NaviSuite.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -93,6 +54,9 @@
     <Compile Include="UX\About\AboutWindow.Designer.cs">
       <DependentUpon>AboutWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="UX\Splash\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UX\Splash\SplashWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,10 +73,12 @@
     <EmbeddedResource Include="UX\About\AboutWindow.resx">
       <DependentUpon>AboutWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UX\Splash\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UX\Splash\SplashWindow.resx">
       <DependentUpon>SplashWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,6 +94,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\KR 512 x 512 Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonExtendedToolkit5470CoreModule">
+      <Version>5.470.1400</Version>
+    </PackageReference>
+    <PackageReference Include="KryptonExtendedToolkit5470NaviSuiteModule">
+      <Version>5.470.441</Version>
+    </PackageReference>
+    <PackageReference Include="KryptonToolkitSuite5470CoreModule">
+      <Version>5.470.1300</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KR 64  x 64 Orange.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

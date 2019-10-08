@@ -27,9 +27,7 @@
         CLOSELICENSEANDDESCRIPTION = 9,
         /// <summary>The close and description buttons.</summary>
         CLOSEANDDESCRIPTION = 10,
-        /// <summary>
-        /// All buttons.
-        /// </summary>
+        /// <summary>All buttons.</summary>
         ALL = 11
     }
 }

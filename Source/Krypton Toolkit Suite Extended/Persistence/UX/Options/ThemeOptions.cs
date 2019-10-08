@@ -357,21 +357,22 @@ namespace Persistence.UX.Options
 
         private void kbtnApply_Click(object sender, EventArgs e)
         {
-            //_paletteThemeSettingsManager.SetTheme(GetPaletteMode());
+            KryptonPalette palette = new KryptonPalette();
 
-            //if (GetPaletteMode() == PaletteMode.Custom)
-            //{
-            //    try
-            //    {
-            //        _paletteThemeSettingsManager.SetCustomThemeFilePath(_palette.GetFilePath());
-            //    }
-            //    catch (Exception exc)
-            //    {
-            //        KryptonMessageBox.Show($"An error has occurred: { exc.Message }", "Palette Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
+            KryptonManager manager = new KryptonManager();
 
-            //EnableApplyButton(false);
+            try
+            {
+                palette.Import(ktxtCustomPath.Text, false);
+
+                manager.GlobalPalette = palette;
+
+                manager.GlobalPaletteMode = PaletteModeManager.Custom;
+            }
+            catch (Exception exc)
+            {
+                ExceptionHandler.CaptureException(exc);
+            }
         }
 
         private void kbtnCancel_Click(object sender, EventArgs e)

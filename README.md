@@ -58,10 +58,13 @@ You can check out the pre-built demo application from downloading it [here](http
 ======
 
 <!--
+* Added a better file system tree view control
+
 ======
 
 2019-11-01 Build 15xx - November Update
-* Added a better file system tree view control
+* Fixed [#102](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/102), `PInvokeImbance` memory leak, courtesy of [zenglanmu](https://github.com/zenglanmu)
+* New Krypton about dialog box
 
 ======-->
 

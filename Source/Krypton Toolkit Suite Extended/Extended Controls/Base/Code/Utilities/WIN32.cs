@@ -54,7 +54,7 @@ namespace ExtendedControls.Base.Code.Utilities
 
 
         [DllImport("User32", CallingConvention = CallingConvention.Cdecl)]
-        public static extern int RealGetWindowClass(IntPtr hwnd, System.Text.StringBuilder pszType, int cchType);
+        public static extern int RealGetWindowClass(IntPtr hwnd, System.Text.StringBuilder pszType, uint cchType);
 
         [DllImport("user32")]
         public static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);

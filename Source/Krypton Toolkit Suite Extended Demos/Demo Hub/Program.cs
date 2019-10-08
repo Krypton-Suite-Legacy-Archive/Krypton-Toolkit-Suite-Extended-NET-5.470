@@ -14,7 +14,7 @@ namespace DemoHub
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SplashWindow());
+            Application.Run(new MainWindow());
         }
     }
 }

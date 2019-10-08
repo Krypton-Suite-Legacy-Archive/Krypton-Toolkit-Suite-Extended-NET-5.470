@@ -121,4 +121,7 @@
   <data name="KR_512_x_512_Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KR 512 x 512 Orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="KR_64__x_64_Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KR 64  x 64 Orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

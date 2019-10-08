@@ -69,5 +69,15 @@ namespace DemoHub.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KR_64__x_64_Orange {
+            get {
+                object obj = ResourceManager.GetObject("KR_64__x_64_Orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
