@@ -94,6 +94,9 @@
     <Compile Include="Componentisation\Colours\ColourControls.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Componentisation\IO Components\IOControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Editor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +216,9 @@
     <EmbeddedResource Include="Componentisation\Colours\ColourControls.resx">
       <DependentUpon>ColourControls.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Componentisation\IO Components\IOControls.resx">
+      <DependentUpon>IOControls.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +334,10 @@
     <ProjectReference Include="..\Extended Controls\Extended Controls.csproj">
       <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
       <Name>Extended Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Extended Dialogs\Extended Dialogs.csproj">
+      <Project>{222C7D90-9D2A-4736-B58D-80AF566BA167}</Project>
+      <Name>Extended Dialogs</Name>
     </ProjectReference>
     <ProjectReference Include="..\Floating Toolbars\Floating Toolbars.csproj">
       <Project>{1893C8B4-3215-4F77-9AFF-24659EC475BE}</Project>

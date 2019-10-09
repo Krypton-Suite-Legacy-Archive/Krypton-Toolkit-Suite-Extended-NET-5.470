@@ -15,7 +15,6 @@ namespace IOComponents.UserControls
         private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer1;
         private ComponentFactory.Krypton.Toolkit.KryptonTreeView ktvExplorer;
         private ImageList ilExplorer;
-        private ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonListView klvFileList;
         private ColumnHeader colName;
         private ColumnHeader colType;
         private ColumnHeader colLastModified;
@@ -27,7 +26,6 @@ namespace IOComponents.UserControls
             this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.ktvExplorer = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
             this.ilExplorer = new System.Windows.Forms.ImageList(this.components);
-            this.klvFileList = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonListView();
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colLastModified = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,7 +50,6 @@ namespace IOComponents.UserControls
             // 
             // kryptonSplitContainer1.Panel2
             // 
-            this.kryptonSplitContainer1.Panel2.Controls.Add(this.klvFileList);
             this.kryptonSplitContainer1.Size = new System.Drawing.Size(905, 504);
             this.kryptonSplitContainer1.SplitterDistance = 301;
             this.kryptonSplitContainer1.TabIndex = 0;
@@ -73,43 +70,6 @@ namespace IOComponents.UserControls
             this.ilExplorer.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.ilExplorer.ImageSize = new System.Drawing.Size(16, 16);
             this.ilExplorer.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // klvFileList
-            // 
-            this.klvFileList.AlternateRowColour = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
-            this.klvFileList.AlternateRowColourEnabled = true;
-            this.klvFileList.AutoSizeLastColumn = true;
-            this.klvFileList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colName,
-            this.colType,
-            this.colLastModified});
-            this.klvFileList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.klvFileList.EnableDragDrop = false;
-            this.klvFileList.EnableHeaderGlow = false;
-            this.klvFileList.EnableHeaderHotTrack = false;
-            this.klvFileList.EnableHeaderRendering = true;
-            this.klvFileList.EnableSelectionBorder = false;
-            this.klvFileList.EnableSorting = true;
-            this.klvFileList.EnableVistaCheckBoxes = true;
-            this.klvFileList.ForceLeftAlign = false;
-            this.klvFileList.FullRowSelect = true;
-            this.klvFileList.HideSelection = false;
-            this.klvFileList.ItemHeight = 0;
-            this.klvFileList.LineAfter = -1;
-            this.klvFileList.LineBefore = -1;
-            this.klvFileList.Location = new System.Drawing.Point(0, 0);
-            this.klvFileList.Name = "klvFileList";
-            this.klvFileList.OwnerDraw = true;
-            this.klvFileList.PersistentColours = false;
-            this.klvFileList.SelectEntireRowOnSubItem = true;
-            this.klvFileList.Size = new System.Drawing.Size(599, 504);
-            this.klvFileList.SmallImageList = this.ilExplorer;
-            this.klvFileList.StateImageList = this.ilExplorer;
-            this.klvFileList.TabIndex = 1;
-            this.klvFileList.UseCompatibleStateImageBehavior = false;
-            this.klvFileList.UseKryptonRenderer = true;
-            this.klvFileList.UseStyledColours = false;
-            this.klvFileList.View = System.Windows.Forms.View.Details;
             // 
             // colName
             // 
@@ -162,20 +122,18 @@ namespace IOComponents.UserControls
         {
             InitializeComponent();
 
-            AlternateRowColour = klvFileList.AlternateRowColour;
+            //AlternateRowColour = klvFileList.AlternateRowColour;
 
-            GradientEndColour = klvFileList.GradientEndColour;
+            //GradientEndColour = klvFileList.GradientEndColour;
 
-            GradientMiddleColour = klvFileList.GradientMiddleColour;
+            //GradientMiddleColour = klvFileList.GradientMiddleColour;
 
-            GradientStartColour = klvFileList.GradientStartColour;
+            //GradientStartColour = klvFileList.GradientStartColour;
         }
 
         private void ktvExplorer_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             TreeNode newSelected = e.Node;
-
-            klvFileList.Items.Clear();
 
             DirectoryInfo nodeDirectoryInfo = (DirectoryInfo)newSelected.Tag;
 
@@ -190,8 +148,6 @@ namespace IOComponents.UserControls
                 subItems = new ListViewItem.ListViewSubItem[] { new ListViewItem.ListViewSubItem(item, "Directory"), new ListViewItem.ListViewSubItem(item, directory.LastAccessTime.ToShortDateString()) };
 
                 item.SubItems.AddRange(subItems);
-
-                klvFileList.Items.Add(item);
             }
 
             foreach (FileInfo file in nodeDirectoryInfo.GetFiles())
@@ -201,11 +157,9 @@ namespace IOComponents.UserControls
                 subItems = new ListViewItem.ListViewSubItem[] { new ListViewItem.ListViewSubItem(item, "File"), new ListViewItem.ListViewSubItem(item, file.LastAccessTime.ToShortDateString()) };
 
                 item.SubItems.AddRange(subItems);
-
-                klvFileList.Items.Add(item);
             }
 
-            klvFileList.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            //klvFileList.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
         public void PopulateTreeView(string filePath = "")

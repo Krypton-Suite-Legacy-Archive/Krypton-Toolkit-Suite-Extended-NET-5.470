@@ -91,6 +91,9 @@
     <Compile Include="Dialogs\Colour\Palettes\KryptonPaletteColourMixerBasic.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Dialogs\Theming\ThemeSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialogs\Toast\KryptonToastNotificationDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Colour\Palettes\KryptonPaletteColourMixerBasic.resx">
       <DependentUpon>KryptonPaletteColourMixerBasic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Theming\ThemeSelector.resx">
+      <DependentUpon>ThemeSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Toast\KryptonToastNotificationDialog.resx">
       <DependentUpon>KryptonToastNotificationDialog.cs</DependentUpon>

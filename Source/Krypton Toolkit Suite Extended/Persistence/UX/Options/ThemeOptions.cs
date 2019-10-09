@@ -46,25 +46,25 @@ namespace Persistence.UX.Options
         private KryptonLabel klblCustomTheme;
         private KryptonComboBox kcmbPaletteTheme;
         private KryptonLabel kryptonLabel1;
-        private KryptonButton kbtnLoadTheme;
+        private KryptonButton kbtnTry;
         private KryptonButton kbtnRestoreToDefaults;
         private System.Windows.Forms.Panel pnlSeperator;
 
         private void InitializeComponent()
         {
             this.kpnlButtons = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kbtnRestoreToDefaults = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnApply = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kpnlContent = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kbtnLoadTheme = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kbtnTry = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnBrowse = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.ktxtCustomPath = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.klblCustomTheme = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kcmbPaletteTheme = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pnlSeperator = new System.Windows.Forms.Panel();
-            this.kbtnRestoreToDefaults = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlButtons)).BeginInit();
             this.kpnlButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlContent)).BeginInit();
@@ -84,6 +84,18 @@ namespace Persistence.UX.Options
             this.kpnlButtons.Size = new System.Drawing.Size(781, 54);
             this.kpnlButtons.TabIndex = 0;
             // 
+            // kbtnRestoreToDefaults
+            // 
+            this.kbtnRestoreToDefaults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.kbtnRestoreToDefaults.Enabled = false;
+            this.kbtnRestoreToDefaults.Location = new System.Drawing.Point(12, 12);
+            this.kbtnRestoreToDefaults.Name = "kbtnRestoreToDefaults";
+            this.kbtnRestoreToDefaults.Size = new System.Drawing.Size(163, 30);
+            this.kbtnRestoreToDefaults.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnRestoreToDefaults.TabIndex = 3;
+            this.kbtnRestoreToDefaults.Values.Text = "&Restore to Defaults";
+            this.kbtnRestoreToDefaults.Click += new System.EventHandler(this.kbtnRestoreToDefaults_Click);
+            // 
             // kbtnCancel
             // 
             this.kbtnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -92,8 +104,6 @@ namespace Persistence.UX.Options
             this.kbtnCancel.Name = "kbtnCancel";
             this.kbtnCancel.Size = new System.Drawing.Size(90, 30);
             this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnCancel.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnCancel.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnCancel.TabIndex = 2;
             this.kbtnCancel.Values.Text = "&Cancel";
             this.kbtnCancel.Click += new System.EventHandler(this.kbtnCancel_Click);
@@ -105,8 +115,6 @@ namespace Persistence.UX.Options
             this.kbtnOk.Name = "kbtnOk";
             this.kbtnOk.Size = new System.Drawing.Size(90, 30);
             this.kbtnOk.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnOk.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnOk.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnOk.TabIndex = 1;
             this.kbtnOk.Values.Text = "&Ok";
             this.kbtnOk.Click += new System.EventHandler(this.kbtnOk_Click);
@@ -119,15 +127,13 @@ namespace Persistence.UX.Options
             this.kbtnApply.Name = "kbtnApply";
             this.kbtnApply.Size = new System.Drawing.Size(90, 30);
             this.kbtnApply.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnApply.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnApply.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnApply.TabIndex = 0;
             this.kbtnApply.Values.Text = "A&pply";
             this.kbtnApply.Click += new System.EventHandler(this.kbtnApply_Click);
             // 
             // kpnlContent
             // 
-            this.kpnlContent.Controls.Add(this.kbtnLoadTheme);
+            this.kpnlContent.Controls.Add(this.kbtnTry);
             this.kpnlContent.Controls.Add(this.kbtnBrowse);
             this.kpnlContent.Controls.Add(this.ktxtCustomPath);
             this.kpnlContent.Controls.Add(this.klblCustomTheme);
@@ -139,65 +145,58 @@ namespace Persistence.UX.Options
             this.kpnlContent.Size = new System.Drawing.Size(781, 142);
             this.kpnlContent.TabIndex = 1;
             // 
-            // kbtnLoadTheme
+            // kbtnTry
             // 
-            this.kbtnLoadTheme.AutoSize = true;
-            this.kbtnLoadTheme.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnLoadTheme.Enabled = false;
-            this.kbtnLoadTheme.Location = new System.Drawing.Point(720, 87);
-            this.kbtnLoadTheme.Name = "kbtnLoadTheme";
-            this.kbtnLoadTheme.Size = new System.Drawing.Size(47, 30);
-            this.kbtnLoadTheme.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnLoadTheme.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnLoadTheme.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
-            this.kbtnLoadTheme.TabIndex = 5;
-            this.kbtnLoadTheme.Values.Text = "&Load";
-            this.kbtnLoadTheme.Click += new System.EventHandler(this.kbtnLoadTheme_Click);
+            this.kbtnTry.AutoSize = true;
+            this.kbtnTry.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.kbtnTry.Location = new System.Drawing.Point(733, 87);
+            this.kbtnTry.Name = "kbtnTry";
+            this.kbtnTry.Size = new System.Drawing.Size(34, 30);
+            this.kbtnTry.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnTry.TabIndex = 5;
+            this.kbtnTry.Values.Text = "T&ry";
+            this.kbtnTry.Click += new System.EventHandler(this.kbtnTry_Click);
             // 
             // kbtnBrowse
             // 
             this.kbtnBrowse.AutoSize = true;
             this.kbtnBrowse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnBrowse.Enabled = false;
             this.kbtnBrowse.Location = new System.Drawing.Point(744, 51);
             this.kbtnBrowse.Name = "kbtnBrowse";
             this.kbtnBrowse.Size = new System.Drawing.Size(23, 30);
             this.kbtnBrowse.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnBrowse.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnBrowse.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnBrowse.TabIndex = 4;
             this.kbtnBrowse.Values.Text = ".&..";
             this.kbtnBrowse.Click += new System.EventHandler(this.kbtnBrowse_Click);
             // 
             // ktxtCustomPath
             // 
-            this.ktxtCustomPath.Enabled = false;
             this.ktxtCustomPath.Location = new System.Drawing.Point(248, 52);
             this.ktxtCustomPath.Name = "ktxtCustomPath";
             this.ktxtCustomPath.Size = new System.Drawing.Size(490, 29);
             this.ktxtCustomPath.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ktxtCustomPath.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
             this.ktxtCustomPath.TabIndex = 3;
             this.ktxtCustomPath.TextChanged += new System.EventHandler(this.ktxtCustomPath_TextChanged);
             // 
             // klblCustomTheme
             // 
-            this.klblCustomTheme.Enabled = false;
             this.klblCustomTheme.Location = new System.Drawing.Point(38, 55);
             this.klblCustomTheme.Name = "klblCustomTheme";
             this.klblCustomTheme.Size = new System.Drawing.Size(204, 26);
             this.klblCustomTheme.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblCustomTheme.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.klblCustomTheme.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.klblCustomTheme.TabIndex = 2;
             this.klblCustomTheme.Values.Text = "Custom Theme File Path:";
             // 
             // kcmbPaletteTheme
             // 
             this.kcmbPaletteTheme.DropDownWidth = 216;
+            this.kcmbPaletteTheme.IntegralHeight = false;
             this.kcmbPaletteTheme.Location = new System.Drawing.Point(147, 12);
             this.kcmbPaletteTheme.Name = "kcmbPaletteTheme";
             this.kcmbPaletteTheme.Size = new System.Drawing.Size(216, 27);
             this.kcmbPaletteTheme.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbPaletteTheme.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kcmbPaletteTheme.TabIndex = 1;
             this.kcmbPaletteTheme.SelectedIndexChanged += new System.EventHandler(this.kcmbPaletteTheme_SelectedIndexChanged);
             this.kcmbPaletteTheme.TextChanged += new System.EventHandler(this.kcmbPaletteTheme_TextChanged);
@@ -208,8 +207,6 @@ namespace Persistence.UX.Options
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(128, 26);
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonLabel1.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Palette Theme:";
             // 
@@ -221,20 +218,6 @@ namespace Persistence.UX.Options
             this.pnlSeperator.Name = "pnlSeperator";
             this.pnlSeperator.Size = new System.Drawing.Size(781, 3);
             this.pnlSeperator.TabIndex = 2;
-            // 
-            // kbtnRestoreToDefaults
-            // 
-            this.kbtnRestoreToDefaults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.kbtnRestoreToDefaults.Enabled = false;
-            this.kbtnRestoreToDefaults.Location = new System.Drawing.Point(12, 12);
-            this.kbtnRestoreToDefaults.Name = "kbtnRestoreToDefaults";
-            this.kbtnRestoreToDefaults.Size = new System.Drawing.Size(163, 30);
-            this.kbtnRestoreToDefaults.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnRestoreToDefaults.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kbtnRestoreToDefaults.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
-            this.kbtnRestoreToDefaults.TabIndex = 3;
-            this.kbtnRestoreToDefaults.Values.Text = "&Restore to Defaults";
-            this.kbtnRestoreToDefaults.Click += new System.EventHandler(this.kbtnRestoreToDefaults_Click);
             // 
             // ThemeOptions
             // 
@@ -411,7 +394,7 @@ namespace Persistence.UX.Options
 
             update.Tick += Update_Tick;
 
-            kbtnLoadTheme.Enabled = true;
+            kbtnTry.Enabled = true;
         }
 
         private void Update_Tick(object sender, EventArgs e)
@@ -486,6 +469,15 @@ namespace Persistence.UX.Options
 
             //    ChangeTheme(PaletteMode.Custom);
             //}
+
+            if (kcmbPaletteTheme.Text == "Custom")
+            {
+                EnableCustomUI(true);
+            }
+            else
+            {
+                EnableCustomUI(false);
+            }
         }
 
         #region Methods
@@ -777,6 +769,15 @@ namespace Persistence.UX.Options
 
             //    ChangeTheme(PaletteMode.Custom);
             //}
+
+            if (kcmbPaletteTheme.Text == "Custom")
+            {
+                EnableCustomUI(true);
+            }
+            else
+            {
+                EnableCustomUI(false);
+            }
         }
 
         private void kbtnLoadTheme_Click(object sender, EventArgs e)
@@ -814,5 +815,43 @@ namespace Persistence.UX.Options
         //    //return PaletteMode;
         //}
         #endregion
+
+        #region Methods
+        private void EnableCustomUI(bool enabled)
+        {
+            klblCustomTheme.Enabled = enabled;
+
+            ktxtCustomPath.Enabled = enabled;
+
+            kbtnBrowse.Enabled = enabled;
+        }
+        #endregion
+
+        private void kbtnTry_Click(object sender, EventArgs e)
+        {
+            Timer tryTimer = new Timer() { Enabled = true, Interval = 1000 };
+
+            tryTimer.Tick += TryTimer_Tick;
+
+            tryTimer.Start();
+        }
+
+        private void TryTimer_Tick(object sender, EventArgs e)
+        {
+            int tryTimeout = 10;
+
+            KryptonPalette palette = new KryptonPalette();
+
+            KryptonManager manager = new KryptonManager();
+
+            while (tryTimeout > 0)
+            {
+                palette.Import(ktxtCustomPath.Text, false);
+
+                manager.GlobalPaletteMode = PaletteModeManager.Custom;
+
+                manager.GlobalPalette = palette;
+            }
+        }
     }
 }

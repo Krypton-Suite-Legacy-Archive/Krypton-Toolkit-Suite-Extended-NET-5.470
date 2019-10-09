@@ -22,6 +22,7 @@ using ExtendedControls.ExtendedToolkit.UI.Security;
 using ExtendedControls.ExtendedToolkit.UI.Security.FileHashing;
 using ExtendedControls.ExtendedToolkit.UI.Security.VirusTotal;
 using ExtendedControls.ExtendedToolkit.UI.Theming;
+using ExtendedDialogs.Dialogs.Theming;
 using ExtendedStandardControls;
 using Playground.Properties;
 using System;
@@ -993,9 +994,13 @@ namespace Playground
 
         private void kbtnThemeOptions_Click(object sender, EventArgs e)
         {
-            ThemeOptions themeOptions = new ThemeOptions();
+            //ThemeOptions themeOptions = new ThemeOptions();
 
-            themeOptions.Show();
+            //themeOptions.Show();
+
+            ThemeSelector selector = new ThemeSelector();
+
+            selector.Show();
         }
 
         private void kbtnKryptonWizard_Click(object sender, EventArgs e)

@@ -8,12 +8,10 @@
 #endregion
 
 using ComponentFactory.Krypton.Toolkit;
-using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 using System.IO;
-using System.Windows.Forms;
 
 namespace System.Windows.Forms
 {
@@ -23,6 +21,8 @@ namespace System.Windows.Forms
     {
         #region Variables
         private bool _showFiles = true;
+
+        private DriveInfo[] _drives;
 
         private ImageList _imageList = new ImageList();
 
@@ -34,12 +34,16 @@ namespace System.Windows.Forms
         #endregion
 
         #region Property
+        public DriveInfo[] Drives { get => _drives; set => _drives = value; }
+
         public Icon FolderIcon { get => _folderIcon; set => _folderIcon = value; }
         #endregion
 
         #region Constructor
         public KryptonFileSystemTreeView()
         {
+            Drives = DriveInfo.GetDrives();
+
             ImageList = _imageList;
 
             MouseDown += KryptonFileSystemTreeView_MouseDown;
@@ -48,18 +52,22 @@ namespace System.Windows.Forms
 
             try
             {
-                string folderIcon = "Icons\\Folder.ico";
+                string localFolderIcon = "Icons\\Folder.ico";
+
+                //Icon folderIcon = Icon.ExtractAssociatedIcon(@"C:\\Windows"), 
 
                 Icon applicationIcon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
-                if (File.Exists(folderIcon))
+                if (File.Exists(localFolderIcon))
                 {
-                    FolderIcon = new Icon(folderIcon);
+                    FolderIcon = new Icon(localFolderIcon);
                 }
                 else
                 {
                     FolderIcon = applicationIcon;
                 }
+
+                //FolderIcon = folderIcon;
             }
             catch (Exception exc)
             {

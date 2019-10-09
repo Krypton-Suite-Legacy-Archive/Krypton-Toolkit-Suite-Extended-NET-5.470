@@ -2,7 +2,7 @@
 <!--Created by exporting the settings of a KryptonPalette instance.-->
 <!--For more information about Krypton visit www.ComponentFactory.com-->
 <!--WARNING: Modifying this file may render it invalid for importing.-->
-<KryptonPalette Version="18" Generated="Wednesday, 09 October 2019, 15:39">
+<KryptonPalette Version="18" Generated="Wednesday, 09 October 2019, 11:44">
   <Properties>
     <ButtonStyles>
       <ButtonCommon>
@@ -21,8 +21,8 @@
         </StateCommon>
         <StateDisabled>
           <Back>
-            <Color1 Type="Color" Value="51, 51, 55" />
-            <Color2 Type="Color" Value="51, 51, 55" />
+            <Color1 Type="Color" Value="45, 45, 48" />
+            <Color2 Type="Color" Value="45, 45, 48" />
           </Back>
           <Content>
             <ShortText>
@@ -205,20 +205,6 @@
         </OverrideFocus>
       </ButtonFormClose>
     </ButtonStyles>
-    <CalendarDay>
-      <StateTracking>
-        <Back>
-          <Color1 Type="Color" Value="0, 122, 204" />
-          <Color2 Type="Color" Value="0, 122, 204" />
-        </Back>
-      </StateTracking>
-      <StatePressed>
-        <Back>
-          <Color1 Type="Color" Value="51, 51, 55" />
-          <Color2 Type="Color" Value="51, 51, 55" />
-        </Back>
-      </StatePressed>
-    </CalendarDay>
     <Common>
       <StateCommon>
         <Back>
@@ -339,20 +325,6 @@
         </StateTracking>
       </GridSheet>
     </GridStyles>
-    <InputControlStyles>
-      <InputControlCommon>
-        <StateCommon>
-          <Back>
-            <Color1 Type="Color" Value="45, 45, 48" />
-          </Back>
-          <Content>
-            <ShortText>
-              <Color1 Type="Color" Value="White" />
-            </ShortText>
-          </Content>
-        </StateCommon>
-      </InputControlCommon>
-    </InputControlStyles>
     <LabelStyles>
       <LabelNormalControl>
         <StateDisabled>
@@ -544,17 +516,6 @@
         </StateCommon>
       </SeparatorCommon>
     </SeparatorStyles>
-    <TrackBar>
-      <StateCommon>
-        <Tick>
-          <Color1 Type="Color" Value="0, 122, 204" />
-          <Color2 Type="Color" Value="0, 122, 204" />
-          <Color3 Type="Color" Value="0, 122, 204" />
-          <Color4 Type="Color" Value="0, 122, 204" />
-          <Color5 Type="Color" Value="0, 122, 204" />
-        </Tick>
-      </StateCommon>
-    </TrackBar>
     <ToolMenuStatus>
       <Button>
         <ButtonPressedBorder Type="Color" Value="45, 45, 48" />
@@ -568,15 +529,7 @@
         <GripLight Type="Color" Value="MintCream" />
       </Grip>
       <Menu>
-        <ImageMarginGradientBegin Type="Color" Value="45, 45, 48" />
-        <ImageMarginGradientEnd Type="Color" Value="45, 45, 48" />
-        <ImageMarginGradientMiddle Type="Color" Value="45, 45, 48" />
-        <ImageMarginRevealedGradientBegin Type="Color" Value="45, 45, 48" />
-        <ImageMarginRevealedGradientEnd Type="Color" Value="45, 45, 48" />
-        <ImageMarginRevealedGradientMiddle Type="Color" Value="45, 45, 48" />
-        <MenuBorder Type="Color" Value="0, 102, 204" />
         <MenuItemText Type="Color" Value="45, 45, 48" />
-        <MenuItemBorder Type="Color" Value="0, 102, 204" />
         <MenuItemPressedGradientBegin Type="Color" Value="45, 45, 48" />
         <MenuItemPressedGradientEnd Type="Color" Value="45, 45, 48" />
         <MenuItemPressedGradientMiddle Type="Color" Value="45, 45, 48" />
@@ -595,12 +548,12 @@
       </MenuStrip>
       <Separator>
         <SeparatorDark Type="Color" Value="45, 45, 48" />
-        <SeparatorLight Type="Color" Value="0, 122, 205" />
+        <SeparatorLight Type="Color" Value="MintCream" />
       </Separator>
       <StatusStrip>
         <StatusStripText Type="Color" Value="White" />
-        <StatusStripGradientBegin Type="Color" Value="0, 122, 204" />
-        <StatusStripGradientEnd Type="Color" Value="0, 122, 204" />
+        <StatusStripGradientBegin Type="Color" Value="104, 33, 122" />
+        <StatusStripGradientEnd Type="Color" Value="104, 33, 122" />
       </StatusStrip>
       <ToolStrip>
         <ToolStripText Type="Color" Value="White" />
@@ -614,7 +567,7 @@
         <ToolStripPanelGradientEnd Type="Color" Value="45, 45, 48" />
       </ToolStrip>
     </ToolMenuStatus>
-    <CustomisedKryptonPaletteFilePath Type="String" Value="T:\Development\Krypton\Versions\Extended\Krypton-Toolkit-Suite-Extended-NET-5.470\Source\Palettes\Visual Studio 2019 Dark.xml" />
+    <CustomisedKryptonPaletteFilePath Type="String" Value="T:\Development\Krypton\Versions\Extended\Krypton-Toolkit-Suite-Extended-NET-5.470\Source\Palettes\Visual Studio 2019 Dark - Purple StatusStrip.xml" />
     <BasePaletteMode Type="PaletteMode" Value="Office 365 - Black" />
   </Properties>
   <Images />
