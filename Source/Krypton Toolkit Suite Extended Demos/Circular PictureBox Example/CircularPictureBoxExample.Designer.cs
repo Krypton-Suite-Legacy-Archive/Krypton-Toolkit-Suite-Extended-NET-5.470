@@ -48,7 +48,6 @@
             this.ClientSize = new System.Drawing.Size(1071, 709);
             this.Controls.Add(this.cbxExample);
             this.Name = "CircularPictureBoxExample";
-            this.SelectedControl = this.cbxExample;
             this.Text = "Form1";
             this.Controls.SetChildIndex(this.cbxExample, 0);
             ((System.ComponentModel.ISupportInitialize)(this.cbxExample)).EndInit();

@@ -1,37 +1,71 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using KryptonToolkitSuiteExtendedCore;
+using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Utilities.Components
 {
     public class ControlContainer : UserControl
     {
-        private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer1;
+        #region Designer Code
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlButtons;
+        private Panel panel1;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonSplitContainer kryptonSplitContainer1;
+        private KryptonToolkitSuiteExtendedCore.KryptonPropertyGrid kpgControlProperties;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlInstructions;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel klblInstructions;
-        private KryptonToolkitSuiteExtendedCore.KryptonPropertyGrid kpgControlProperties;
 
         private void InitializeComponent()
         {
+            this.kpnlButtons = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this.kpgControlProperties = new KryptonToolkitSuiteExtendedCore.KryptonPropertyGrid();
+            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kpnlInstructions = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.klblInstructions = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlButtons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
+            this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
             this.kryptonSplitContainer1.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).BeginInit();
             this.kryptonSplitContainer1.Panel2.SuspendLayout();
             this.kryptonSplitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlInstructions)).BeginInit();
             this.kpnlInstructions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // kpnlButtons
+            // 
+            this.kpnlButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.kpnlButtons.Location = new System.Drawing.Point(0, 725);
+            this.kpnlButtons.Name = "kpnlButtons";
+            this.kpnlButtons.Size = new System.Drawing.Size(1196, 50);
+            this.kpnlButtons.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 722);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1196, 3);
+            this.panel1.TabIndex = 1;
+            // 
+            // kryptonPanel1
+            // 
+            this.kryptonPanel1.Controls.Add(this.kryptonSplitContainer1);
+            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.Size = new System.Drawing.Size(1196, 722);
+            this.kryptonPanel1.TabIndex = 2;
             // 
             // kryptonSplitContainer1
             // 
@@ -46,11 +80,11 @@ namespace Utilities.Components
             // 
             // kryptonSplitContainer1.Panel2
             // 
-            this.kryptonSplitContainer1.Panel2.Controls.Add(this.kryptonPanel1);
+            this.kryptonSplitContainer1.Panel2.Controls.Add(this.kryptonPanel2);
             this.kryptonSplitContainer1.Panel2.Controls.Add(this.kpnlInstructions);
-            this.kryptonSplitContainer1.Size = new System.Drawing.Size(933, 636);
-            this.kryptonSplitContainer1.SplitterDistance = 311;
-            this.kryptonSplitContainer1.TabIndex = 0;
+            this.kryptonSplitContainer1.Size = new System.Drawing.Size(1196, 722);
+            this.kryptonSplitContainer1.SplitterDistance = 398;
+            this.kryptonSplitContainer1.TabIndex = 1;
             // 
             // kpgControlProperties
             // 
@@ -61,8 +95,16 @@ namespace Utilities.Components
             this.kpgControlProperties.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(196)))), ((int)(((byte)(216)))));
             this.kpgControlProperties.Location = new System.Drawing.Point(0, 0);
             this.kpgControlProperties.Name = "kpgControlProperties";
-            this.kpgControlProperties.Size = new System.Drawing.Size(311, 636);
+            this.kpgControlProperties.Size = new System.Drawing.Size(398, 722);
             this.kpgControlProperties.TabIndex = 0;
+            // 
+            // kryptonPanel2
+            // 
+            this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanel2.Location = new System.Drawing.Point(0, 113);
+            this.kryptonPanel2.Name = "kryptonPanel2";
+            this.kryptonPanel2.Size = new System.Drawing.Size(793, 609);
+            this.kryptonPanel2.TabIndex = 2;
             // 
             // kpnlInstructions
             // 
@@ -70,7 +112,7 @@ namespace Utilities.Components
             this.kpnlInstructions.Dock = System.Windows.Forms.DockStyle.Top;
             this.kpnlInstructions.Location = new System.Drawing.Point(0, 0);
             this.kpnlInstructions.Name = "kpnlInstructions";
-            this.kpnlInstructions.Size = new System.Drawing.Size(617, 113);
+            this.kpnlInstructions.Size = new System.Drawing.Size(793, 113);
             this.kpnlInstructions.TabIndex = 1;
             // 
             // klblInstructions
@@ -78,37 +120,111 @@ namespace Utilities.Components
             this.klblInstructions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.klblInstructions.Location = new System.Drawing.Point(0, 0);
             this.klblInstructions.Name = "klblInstructions";
-            this.klblInstructions.Size = new System.Drawing.Size(617, 113);
+            this.klblInstructions.Size = new System.Drawing.Size(793, 113);
             this.klblInstructions.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.klblInstructions.TabIndex = 0;
             this.klblInstructions.Values.Text = "kryptonLabel1";
             // 
-            // kryptonPanel1
-            // 
-            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel1.Location = new System.Drawing.Point(0, 113);
-            this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(617, 523);
-            this.kryptonPanel1.TabIndex = 2;
-            // 
             // ControlContainer
             // 
-            this.Controls.Add(this.kryptonSplitContainer1);
+            this.Controls.Add(this.kryptonPanel1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.kpnlButtons);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ControlContainer";
-            this.Size = new System.Drawing.Size(933, 636);
+            this.Size = new System.Drawing.Size(1196, 775);
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlButtons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
+            this.kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();
             this.kryptonSplitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).EndInit();
             this.kryptonSplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).EndInit();
             this.kryptonSplitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlInstructions)).EndInit();
             this.kpnlInstructions.ResumeLayout(false);
             this.kpnlInstructions.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.ResumeLayout(false);
 
+        }
+        #endregion
+
+        #region Variables
+        private bool _showInstructionsPane;
+
+        private Control _selectedControl;
+
+        private string _instructionsText;
+
+        //private KryptonFormExtended _parent;
+        #endregion
+
+        #region Properties
+        public bool ShowInstructionsPane { get => _showInstructionsPane; set { _showInstructionsPane = value; Invalidate(); } }
+
+        public Control SelectedControl { get => _selectedControl; set { _selectedControl = value; Invalidate(); } }
+
+        public string InstructionsText { get => _instructionsText; set { _instructionsText = value; Invalidate(); } }
+
+        //public KryptonFormExtended ParentForm { get => _parent; set => _parent = value; }
+
+        public KryptonPropertyGrid PropertyGrid { get => kpgControlProperties; }
+        #endregion
+
+        #region Constructors
+        public ControlContainer()
+        {
+            InitializeComponent();
+
+            ShowInstructionsPane = true;
+
+            SelectedControl = null;
+
+            InstructionsText = "To view the properties of a control, just click on the desired control.";
+
+            Dock = DockStyle.Fill;
+        }
+        #endregion
+
+        #region Methods
+        private void ShowInstructionsPanel(bool visible)
+        {
+            if (visible)
+            {
+                kpnlInstructions.Size = new Size(kpnlInstructions.Width, 133);
+            }
+            else
+            {
+                kpnlInstructions.Size = new Size(kpnlInstructions.Width, 0);
+            }
+        }
+
+        private void UpdateProperties(Control control)
+        {
+            if (control != null) PropertyGrid.SelectedObject = control;
+        }
+
+        private void SetInstructionsText(string value) => klblInstructions.Text = value;
+        #endregion
+
+        #region Overrides
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            ShowInstructionsPanel(ShowInstructionsPane);
+
+            UpdateProperties(SelectedControl);
+
+            SetInstructionsText(InstructionsText);
+
+            base.OnPaint(e);
+        }
+        #endregion
+
+        private void kbtnClose_Click(object sender, EventArgs e)
+        {
+            //Parent.
         }
     }
 }
