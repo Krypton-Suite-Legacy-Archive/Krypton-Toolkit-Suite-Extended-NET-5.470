@@ -88,6 +88,7 @@ namespace Utilities.Components
             // 
             // kpgControlProperties
             // 
+            this.kpgControlProperties.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.kpgControlProperties.CategoryForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.kpgControlProperties.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kpgControlProperties.HelpBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
@@ -97,6 +98,7 @@ namespace Utilities.Components
             this.kpgControlProperties.Name = "kpgControlProperties";
             this.kpgControlProperties.Size = new System.Drawing.Size(398, 722);
             this.kpgControlProperties.TabIndex = 0;
+            this.kpgControlProperties.ViewBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
             // 
             // kryptonPanel2
             // 
@@ -122,6 +124,8 @@ namespace Utilities.Components
             this.klblInstructions.Name = "klblInstructions";
             this.klblInstructions.Size = new System.Drawing.Size(793, 113);
             this.klblInstructions.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblInstructions.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.klblInstructions.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.klblInstructions.TabIndex = 0;
             this.klblInstructions.Values.Text = "kryptonLabel1";
             // 

@@ -2,8 +2,22 @@
 <!--Created by exporting the settings of a KryptonPalette instance.-->
 <!--For more information about Krypton visit www.ComponentFactory.com-->
 <!--WARNING: Modifying this file may render it invalid for importing.-->
-<KryptonPalette Version="18" Generated="Saturday, 12 October 2019, 15:09">
+<KryptonPalette Version="18" Generated="Saturday, 12 October 2019, 19:36">
   <Properties>
+    <ButtonSpecs>
+      <FormClose>
+        <ColorMap Type="Color" Value="63, 63, 70" />
+      </FormClose>
+      <FormMin>
+        <ColorMap Type="Color" Value="63, 63, 70" />
+      </FormMin>
+      <FormMax>
+        <ColorMap Type="Color" Value="63, 63, 70" />
+      </FormMax>
+      <FormRestore>
+        <ColorMap Type="Color" Value="63, 63, 70" />
+      </FormRestore>
+    </ButtonSpecs>
     <ButtonStyles>
       <ButtonCommon>
         <StateCommon>
@@ -224,6 +238,7 @@
           <Back>
             <Color1 Type="Color" Value="0, 122, 204" />
             <Color2 Type="Color" Value="0, 122, 204" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
           </Back>
         </StateCheckedTracking>
         <OverrideDefault>
@@ -261,6 +276,8 @@
       <ButtonFormClose>
         <OverrideFocus>
           <Back>
+            <Color1 Type="Color" Value="63, 63, 70" />
+            <Color2 Type="Color" Value="63, 63, 70" />
             <ColorStyle Type="PaletteColorStyle" Value="Solid" />
           </Back>
         </OverrideFocus>
@@ -269,8 +286,8 @@
     <CalendarDay>
       <StateTracking>
         <Back>
-          <Color1 Type="Color" Value="0, 122, 204" />
-          <Color2 Type="Color" Value="0, 122, 204" />
+          <Color1 Type="Color" Value="28, 151, 234" />
+          <Color2 Type="Color" Value="28, 151, 234" />
         </Back>
       </StateTracking>
       <StatePressed>
@@ -309,6 +326,7 @@
           <Back>
             <Color1 Type="Color" Value="63, 63, 70" />
             <Color2 Type="Color" Value="63, 63, 70" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
           </Back>
         </ControlInner>
       </StateCommon>
@@ -691,6 +709,13 @@
           <Color4 Type="Color" Value="0, 122, 204" />
           <Color5 Type="Color" Value="0, 122, 204" />
         </Tick>
+        <Position>
+          <Color1 Type="Color" Value="0, 122, 204" />
+          <Color2 Type="Color" Value="0, 122, 204" />
+          <Color3 Type="Color" Value="0, 122, 204" />
+          <Color4 Type="Color" Value="0, 122, 204" />
+          <Color5 Type="Color" Value="0, 122, 204" />
+        </Position>
       </StateCommon>
     </TrackBar>
     <ToolMenuStatus>

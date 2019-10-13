@@ -52,9 +52,6 @@
     <Compile Include="CircularPictureBoxExample.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CircularPictureBoxExample.Designer.cs">
-      <DependentUpon>CircularPictureBoxExample.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CircularPictureBoxExample.resx">
