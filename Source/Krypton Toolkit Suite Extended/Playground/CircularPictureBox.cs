@@ -18,19 +18,10 @@ namespace Playground
 
         private void InitializeComponent()
         {
-            this.circularPictureBox1 = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             this.kryptonPropertyGrid1 = new ExtendedControls.ExtendedToolkit.Controls.KryptonControls.KryptonPropertyGrid();
+            this.circularPictureBox1 = new ExtendedControls.ExtendedToolkit.Controls.CircularPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.BackColor = System.Drawing.Color.White;
-            this.circularPictureBox1.Location = new System.Drawing.Point(13, 13);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(634, 511);
-            this.circularPictureBox1.TabIndex = 0;
-            this.circularPictureBox1.TabStop = false;
             // 
             // kryptonPropertyGrid1
             // 
@@ -43,6 +34,15 @@ namespace Playground
             this.kryptonPropertyGrid1.SelectedObject = this.circularPictureBox1;
             this.kryptonPropertyGrid1.Size = new System.Drawing.Size(467, 677);
             this.kryptonPropertyGrid1.TabIndex = 1;
+            // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.BackColor = System.Drawing.Color.White;
+            this.circularPictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(634, 511);
+            this.circularPictureBox1.TabIndex = 0;
+            this.circularPictureBox1.TabStop = false;
             // 
             // CircularPictureBox
             // 

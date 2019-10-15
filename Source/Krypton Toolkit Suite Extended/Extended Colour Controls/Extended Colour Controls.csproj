@@ -35,10 +35,16 @@
     <Reference Include="Core">
       <HintPath>..\Tooling\obj\Debug\Core.dll</HintPath>
     </Reference>
+    <Reference Include="Extended Standard Controls">
+      <HintPath>..\Extended Standard Controls\obj\Debug\Extended Standard Controls.dll</HintPath>
+    </Reference>
     <Reference Include="Krypton Toolkit Suite Extended Core">
       <HintPath>..\Core\obj\Debug\Krypton Toolkit Suite Extended Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Persistence">
+      <HintPath>..\Persistence\obj\Debug\Persistence.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -112,6 +118,9 @@
     <Compile Include="Controls\Trackbars\KryptonBlueTrackBar.cs" />
     <Compile Include="Controls\Trackbars\KryptonGreenTrackBar.cs" />
     <Compile Include="Controls\Trackbars\KryptonRedTrackBar.cs" />
+    <Compile Include="Controls\User Controls\ScreenColourPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Designers\KryptonColourButtonExtendedActionList.cs" />
     <Compile Include="Designers\KryptonColourButtonExtendedDesigner.cs" />
     <Compile Include="Enumerations\Enumerations.cs" />
@@ -131,6 +140,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UX\KryptonColourButtonCustomColourDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\ScreenColourPicker.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Values\ColourButtonValues.cs" />
@@ -154,6 +166,9 @@
     <EmbeddedResource Include="Controls\User Controls\ContrastColourControl.resx">
       <DependentUpon>ContrastColourControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\User Controls\ScreenColourPicker.resx">
+      <DependentUpon>ScreenColourPicker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -166,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UX\KryptonColourButtonCustomColourDialog.resx">
       <DependentUpon>KryptonColourButtonCustomColourDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\ScreenColourPicker.resx">
+      <DependentUpon>ScreenColourPicker.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +204,7 @@
   <ItemGroup>
     <None Include="Resources\ButtonNoColour.png" />
     <None Include="Resources\ColourButton.png" />
+    <None Include="Resources\dropper.png" />
     <Content Include="ToolboxBitmaps\KryptonColourButtonExtended.bmp" />
   </ItemGroup>
   <ItemGroup>

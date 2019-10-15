@@ -7,7 +7,9 @@
  */
 #endregion
 
+using Common.Classes;
 using ComponentFactory.Krypton.Toolkit;
+using Core.Controls.Colours;
 using Core.UX;
 using Core.UX.Colours;
 using Core.UX.Options;
@@ -86,6 +88,7 @@ namespace Playground
         private KryptonManager kryptonManager1;
         private KryptonPalette kryptonPalette1;
         private KryptonButton kbtnFileVersion;
+        private KryptonButton kbtnScreenColourPicker;
         private System.ComponentModel.IContainer components;
 
         private void InitializeComponent()
@@ -143,12 +146,14 @@ namespace Playground
             this.kbtnConvertColour = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.kbtnScreenColourPicker = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kbtnScreenColourPicker);
             this.kryptonPanel1.Controls.Add(this.kbtnFileVersion);
             this.kryptonPanel1.Controls.Add(this.kbtnESC);
             this.kryptonPanel1.Controls.Add(this.kryptonButton3);
@@ -211,8 +216,11 @@ namespace Playground
             this.kbtnFileVersion.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnFileVersion.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnFileVersion.StateCommon.Border.Rounding = 25;
             this.kbtnFileVersion.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnFileVersion.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnFileVersion.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnFileVersion.TabIndex = 100;
             this.kbtnFileVersion.Values.Text = "File Version";
             this.kbtnFileVersion.Click += new System.EventHandler(this.kbtnFileVersion_Click);
@@ -225,8 +233,11 @@ namespace Playground
             this.kbtnESC.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnESC.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnESC.StateCommon.Border.Rounding = 25;
             this.kbtnESC.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnESC.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnESC.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnESC.TabIndex = 99;
             this.kbtnESC.Values.Text = "Extended Standard Controls";
             this.kbtnESC.Click += new System.EventHandler(this.kbtnESC_Click);
@@ -239,8 +250,11 @@ namespace Playground
             this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonButton3.StateCommon.Border.Rounding = 25;
             this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton3.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonButton3.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonButton3.TabIndex = 98;
             this.kryptonButton3.Values.Text = "Tree Views";
             // 
@@ -252,8 +266,11 @@ namespace Playground
             this.kbtnFileSystemExamples.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnFileSystemExamples.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnFileSystemExamples.StateCommon.Border.Rounding = 25;
             this.kbtnFileSystemExamples.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnFileSystemExamples.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnFileSystemExamples.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnFileSystemExamples.TabIndex = 97;
             this.kbtnFileSystemExamples.Values.Text = "File System Examples";
             this.kbtnFileSystemExamples.Click += new System.EventHandler(this.KbtnFileSystemExamples_Click);
@@ -266,8 +283,11 @@ namespace Playground
             this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonButton1.StateCommon.Border.Rounding = 25;
             this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonButton1.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonButton1.TabIndex = 96;
             this.kryptonButton1.Values.Text = "Tree Views";
             // 
@@ -279,8 +299,11 @@ namespace Playground
             this.kbtnKryptonColourButtonExtended.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnKryptonColourButtonExtended.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnKryptonColourButtonExtended.StateCommon.Border.Rounding = 25;
             this.kbtnKryptonColourButtonExtended.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnKryptonColourButtonExtended.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnKryptonColourButtonExtended.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnKryptonColourButtonExtended.TabIndex = 95;
             this.kbtnKryptonColourButtonExtended.Values.Text = "Krypton Colour Button Extended";
             this.kbtnKryptonColourButtonExtended.Click += new System.EventHandler(this.KbtnKryptonColourButtonExtended_Click);
@@ -293,8 +316,11 @@ namespace Playground
             this.kbtnTreeViews.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnTreeViews.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnTreeViews.StateCommon.Border.Rounding = 25;
             this.kbtnTreeViews.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnTreeViews.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnTreeViews.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnTreeViews.TabIndex = 94;
             this.kbtnTreeViews.Values.Text = "Tree Views";
             this.kbtnTreeViews.Click += new System.EventHandler(this.KbtnTreeViews_Click);
@@ -307,8 +333,11 @@ namespace Playground
             this.kbtnFloatingMenuStrip.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnFloatingMenuStrip.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnFloatingMenuStrip.StateCommon.Border.Rounding = 25;
             this.kbtnFloatingMenuStrip.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnFloatingMenuStrip.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnFloatingMenuStrip.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnFloatingMenuStrip.TabIndex = 93;
             this.kbtnFloatingMenuStrip.Values.Text = "Floating Menu Strip";
             this.kbtnFloatingMenuStrip.Click += new System.EventHandler(this.KbtnFloatingMenuStrip_Click);
@@ -321,8 +350,11 @@ namespace Playground
             this.kbtnFloatingToolStrip.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnFloatingToolStrip.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnFloatingToolStrip.StateCommon.Border.Rounding = 25;
             this.kbtnFloatingToolStrip.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnFloatingToolStrip.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnFloatingToolStrip.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnFloatingToolStrip.TabIndex = 92;
             this.kbtnFloatingToolStrip.Values.Text = "Floating Tool Strip";
             this.kbtnFloatingToolStrip.Click += new System.EventHandler(this.KbtnFloatingToolStrip_Click);
@@ -335,8 +367,11 @@ namespace Playground
             this.kbtnUAC.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnUAC.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnUAC.StateCommon.Border.Rounding = 25;
             this.kbtnUAC.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnUAC.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnUAC.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnUAC.TabIndex = 91;
             this.kbtnUAC.Values.Text = "UAC Elevation";
             this.kbtnUAC.Click += new System.EventHandler(this.KbtnUAC_Click);
@@ -349,8 +384,11 @@ namespace Playground
             this.kbtnFileInformation.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnFileInformation.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnFileInformation.StateCommon.Border.Rounding = 25;
             this.kbtnFileInformation.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnFileInformation.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnFileInformation.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnFileInformation.TabIndex = 90;
             this.kbtnFileInformation.Values.Text = "File Information";
             this.kbtnFileInformation.Click += new System.EventHandler(this.KbtnFileInformation_Click);
@@ -363,8 +401,11 @@ namespace Playground
             this.kbtnVarifyHash.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnVarifyHash.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnVarifyHash.StateCommon.Border.Rounding = 25;
             this.kbtnVarifyHash.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnVarifyHash.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnVarifyHash.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnVarifyHash.TabIndex = 89;
             this.kbtnVarifyHash.Values.Text = "Varify File Hash";
             this.kbtnVarifyHash.Click += new System.EventHandler(this.KbtnVarifyHash_Click);
@@ -377,8 +418,11 @@ namespace Playground
             this.kbtnResizeImages.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnResizeImages.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnResizeImages.StateCommon.Border.Rounding = 25;
             this.kbtnResizeImages.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnResizeImages.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnResizeImages.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnResizeImages.TabIndex = 88;
             this.kbtnResizeImages.Values.Text = "Resize Images";
             this.kbtnResizeImages.Click += new System.EventHandler(this.KbtnResizeImages_Click);
@@ -391,8 +435,11 @@ namespace Playground
             this.kbtnMRU.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnMRU.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnMRU.StateCommon.Border.Rounding = 25;
             this.kbtnMRU.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnMRU.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnMRU.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnMRU.TabIndex = 87;
             this.kbtnMRU.Values.Text = "MRU Example";
             this.kbtnMRU.Click += new System.EventHandler(this.KbtnMRU_Click);
@@ -405,8 +452,11 @@ namespace Playground
             this.kbtnFileHashValidator.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnFileHashValidator.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnFileHashValidator.StateCommon.Border.Rounding = 25;
             this.kbtnFileHashValidator.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnFileHashValidator.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnFileHashValidator.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnFileHashValidator.TabIndex = 86;
             this.kbtnFileHashValidator.Values.Text = "File Hash Validator";
             this.kbtnFileHashValidator.Click += new System.EventHandler(this.KbtnFileHashValidator_Click);
@@ -419,8 +469,11 @@ namespace Playground
             this.kbtnCircularPictureBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnCircularPictureBox.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnCircularPictureBox.StateCommon.Border.Rounding = 25;
             this.kbtnCircularPictureBox.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnCircularPictureBox.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnCircularPictureBox.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnCircularPictureBox.TabIndex = 85;
             this.kbtnCircularPictureBox.Values.Text = "Circular Picturebox";
             this.kbtnCircularPictureBox.Click += new System.EventHandler(this.KbtnCircularPictureBox_Click);
@@ -433,6 +486,7 @@ namespace Playground
             this.kbtnKryptonCommandLinks.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnKryptonCommandLinks.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnKryptonCommandLinks.StateCommon.Border.Rounding = 25;
             this.kbtnKryptonCommandLinks.TabIndex = 84;
             this.kbtnKryptonCommandLinks.Values.Text = "Krypton Command Links";
@@ -446,6 +500,7 @@ namespace Playground
             this.kbtnStatusStripItems.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnStatusStripItems.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnStatusStripItems.StateCommon.Border.Rounding = 25;
             this.kbtnStatusStripItems.TabIndex = 83;
             this.kbtnStatusStripItems.Values.Text = "Status Strip Items";
@@ -459,6 +514,7 @@ namespace Playground
             this.kbtnToastV2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnToastV2.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnToastV2.StateCommon.Border.Rounding = 25;
             this.kbtnToastV2.TabIndex = 82;
             this.kbtnToastV2.Values.Text = "Toast v2";
@@ -472,6 +528,7 @@ namespace Playground
             this.kbtnScanFiles.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnScanFiles.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnScanFiles.StateCommon.Border.Rounding = 25;
             this.kbtnScanFiles.TabIndex = 81;
             this.kbtnScanFiles.Values.Text = "Scan Files";
@@ -485,6 +542,7 @@ namespace Playground
             this.kbtnRandomPasswords.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnRandomPasswords.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnRandomPasswords.StateCommon.Border.Rounding = 25;
             this.kbtnRandomPasswords.TabIndex = 80;
             this.kbtnRandomPasswords.Values.Text = "Random Password Generator";
@@ -498,6 +556,7 @@ namespace Playground
             this.kbtnCircularProgressBar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnCircularProgressBar.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnCircularProgressBar.StateCommon.Border.Rounding = 25;
             this.kbtnCircularProgressBar.TabIndex = 79;
             this.kbtnCircularProgressBar.Values.Text = "Circular Progress Bar";
@@ -511,6 +570,7 @@ namespace Playground
             this.Toast.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Toast.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Toast.StateCommon.Border.Rounding = 25;
             this.Toast.TabIndex = 78;
             this.Toast.Values.Text = "Toast";
@@ -524,6 +584,7 @@ namespace Playground
             this.kbtnThemeChooser.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnThemeChooser.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnThemeChooser.StateCommon.Border.Rounding = 25;
             this.kbtnThemeChooser.TabIndex = 77;
             this.kbtnThemeChooser.Values.Text = "Theme Chooser";
@@ -537,6 +598,7 @@ namespace Playground
             this.kbtnAeroWizard.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnAeroWizard.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnAeroWizard.StateCommon.Border.Rounding = 25;
             this.kbtnAeroWizard.TabIndex = 76;
             this.kbtnAeroWizard.Values.Text = "Aero Wizard";
@@ -550,6 +612,7 @@ namespace Playground
             this.kbtnListView.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnListView.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnListView.StateCommon.Border.Rounding = 25;
             this.kbtnListView.TabIndex = 75;
             this.kbtnListView.Values.Text = "List View";
@@ -563,8 +626,11 @@ namespace Playground
             this.kbtnPropertyGrid.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnPropertyGrid.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnPropertyGrid.StateCommon.Border.Rounding = 25;
             this.kbtnPropertyGrid.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnPropertyGrid.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnPropertyGrid.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnPropertyGrid.TabIndex = 74;
             this.kbtnPropertyGrid.Values.Text = "Property Grid";
             this.kbtnPropertyGrid.Click += new System.EventHandler(this.kbtnPropertyGrid_Click);
@@ -577,8 +643,11 @@ namespace Playground
             this.kbtnMessageboxTest2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnMessageboxTest2.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnMessageboxTest2.StateCommon.Border.Rounding = 25;
             this.kbtnMessageboxTest2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnMessageboxTest2.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnMessageboxTest2.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnMessageboxTest2.TabIndex = 73;
             this.kbtnMessageboxTest2.Values.Text = "Messagebox Test 2";
             this.kbtnMessageboxTest2.Click += new System.EventHandler(this.kbtnMessageboxTest2_Click);
@@ -591,6 +660,7 @@ namespace Playground
             this.kbtnAdobeColourDialog.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnAdobeColourDialog.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnAdobeColourDialog.StateCommon.Border.Rounding = 25;
             this.kbtnAdobeColourDialog.TabIndex = 70;
             this.kbtnAdobeColourDialog.Values.Text = "Adobe Colour Dialog";
@@ -604,6 +674,7 @@ namespace Playground
             this.kbtnColourWheel.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnColourWheel.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnColourWheel.StateCommon.Border.Rounding = 25;
             this.kbtnColourWheel.TabIndex = 69;
             this.kbtnColourWheel.Values.Text = "Colour Wheel";
@@ -617,6 +688,7 @@ namespace Playground
             this.kbtnMoreControls.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnMoreControls.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnMoreControls.StateCommon.Border.Rounding = 25;
             this.kbtnMoreControls.TabIndex = 68;
             this.kbtnMoreControls.Values.Text = "More Controls...";
@@ -630,6 +702,7 @@ namespace Playground
             this.kbtnKryptonWizard.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnKryptonWizard.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnKryptonWizard.StateCommon.Border.Rounding = 25;
             this.kbtnKryptonWizard.TabIndex = 67;
             this.kbtnKryptonWizard.Values.Text = "Wizard";
@@ -643,6 +716,7 @@ namespace Playground
             this.kbtnRGBToHEX.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnRGBToHEX.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnRGBToHEX.StateCommon.Border.Rounding = 25;
             this.kbtnRGBToHEX.TabIndex = 66;
             this.kbtnRGBToHEX.Values.Text = "Convert Colour (RGB to Hex)";
@@ -656,6 +730,7 @@ namespace Playground
             this.kbtnGlobalOptions.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnGlobalOptions.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnGlobalOptions.StateCommon.Border.Rounding = 25;
             this.kbtnGlobalOptions.TabIndex = 65;
             this.kbtnGlobalOptions.Values.Text = "Global Options";
@@ -669,6 +744,7 @@ namespace Playground
             this.kbtnThemeOptions.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnThemeOptions.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnThemeOptions.StateCommon.Border.Rounding = 25;
             this.kbtnThemeOptions.TabIndex = 64;
             this.kbtnThemeOptions.Values.Text = "Theme Options";
@@ -682,6 +758,7 @@ namespace Playground
             this.kbtnSettings.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnSettings.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnSettings.StateCommon.Border.Rounding = 25;
             this.kbtnSettings.TabIndex = 63;
             this.kbtnSettings.Values.Text = "Settings Options";
@@ -695,6 +772,7 @@ namespace Playground
             this.kbtnColourChooser1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnColourChooser1.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnColourChooser1.StateCommon.Border.Rounding = 25;
             this.kbtnColourChooser1.TabIndex = 62;
             this.kbtnColourChooser1.Values.Text = "Colour Chooser 1";
@@ -708,6 +786,7 @@ namespace Playground
             this.kbtnColourChooser2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnColourChooser2.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnColourChooser2.StateCommon.Border.Rounding = 25;
             this.kbtnColourChooser2.TabIndex = 61;
             this.kbtnColourChooser2.Values.Text = "Colour Chooser 2";
@@ -721,6 +800,7 @@ namespace Playground
             this.kbtnScrollbars.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnScrollbars.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnScrollbars.StateCommon.Border.Rounding = 25;
             this.kbtnScrollbars.TabIndex = 60;
             this.kbtnScrollbars.Values.Text = "Scrollbars";
@@ -734,6 +814,7 @@ namespace Playground
             this.kbtnToolstrips.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnToolstrips.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnToolstrips.StateCommon.Border.Rounding = 25;
             this.kbtnToolstrips.TabIndex = 59;
             this.kbtnToolstrips.Values.Text = "Toolstrips";
@@ -747,6 +828,7 @@ namespace Playground
             this.kbtnTypefaceSelectionDialogue.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnTypefaceSelectionDialogue.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnTypefaceSelectionDialogue.StateCommon.Border.Rounding = 25;
             this.kbtnTypefaceSelectionDialogue.TabIndex = 58;
             this.kbtnTypefaceSelectionDialogue.Values.Text = "Typeface Selection Dialogue";
@@ -760,6 +842,7 @@ namespace Playground
             this.kbtnPaletteEditor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnPaletteEditor.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnPaletteEditor.StateCommon.Border.Rounding = 25;
             this.kbtnPaletteEditor.TabIndex = 57;
             this.kbtnPaletteEditor.Values.Text = "Palette Editor";
@@ -773,8 +856,11 @@ namespace Playground
             this.kbtnMessageboxTest.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnMessageboxTest.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnMessageboxTest.StateCommon.Border.Rounding = 25;
             this.kbtnMessageboxTest.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnMessageboxTest.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnMessageboxTest.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kbtnMessageboxTest.TabIndex = 56;
             this.kbtnMessageboxTest.Values.Text = "Messagebox Test";
             this.kbtnMessageboxTest.Click += new System.EventHandler(this.kbtnMessageboxTest_Click);
@@ -787,6 +873,7 @@ namespace Playground
             this.kbtnFileCreator.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnFileCreator.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnFileCreator.StateCommon.Border.Rounding = 25;
             this.kbtnFileCreator.TabIndex = 55;
             this.kbtnFileCreator.Values.Text = "File Creator";
@@ -800,6 +887,7 @@ namespace Playground
             this.kbtnColourCreator.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnColourCreator.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnColourCreator.StateCommon.Border.Rounding = 25;
             this.kbtnColourCreator.TabIndex = 54;
             this.kbtnColourCreator.Values.Text = "Colour Creator";
@@ -813,6 +901,7 @@ namespace Playground
             this.kbtnColourMixer.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnColourMixer.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnColourMixer.StateCommon.Border.Rounding = 25;
             this.kbtnColourMixer.TabIndex = 53;
             this.kbtnColourMixer.Values.Text = "Colour Mixer";
@@ -826,6 +915,7 @@ namespace Playground
             this.kbtnHexToRGB.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnHexToRGB.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnHexToRGB.StateCommon.Border.Rounding = 25;
             this.kbtnHexToRGB.TabIndex = 52;
             this.kbtnHexToRGB.Values.Text = "Convert Colour (Hex to RGB)";
@@ -839,14 +929,37 @@ namespace Playground
             this.kbtnConvertColour.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnConvertColour.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kbtnConvertColour.StateCommon.Border.Rounding = 25;
             this.kbtnConvertColour.TabIndex = 51;
             this.kbtnConvertColour.Values.Text = "Convert Colour";
             this.kbtnConvertColour.Click += new System.EventHandler(this.kbtnConvertColour_Click);
             // 
+            // kryptonManager1
+            // 
+            this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2010Blue;
+            // 
             // kryptonPalette1
             // 
+            this.kryptonPalette1.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.kryptonPalette1.CustomisedKryptonPaletteFilePath = null;
+            // 
+            // kbtnScreenColourPicker
+            // 
+            this.kbtnScreenColourPicker.Location = new System.Drawing.Point(12, 489);
+            this.kbtnScreenColourPicker.Name = "kbtnScreenColourPicker";
+            this.kbtnScreenColourPicker.Size = new System.Drawing.Size(218, 25);
+            this.kbtnScreenColourPicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnScreenColourPicker.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnScreenColourPicker.StateCommon.Border.Rounding = 25;
+            this.kbtnScreenColourPicker.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnScreenColourPicker.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kbtnScreenColourPicker.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.kbtnScreenColourPicker.TabIndex = 101;
+            this.kbtnScreenColourPicker.Values.Text = "Screen Colour Picker";
+            this.kbtnScreenColourPicker.Click += new System.EventHandler(this.kbtnScreenColourPicker_Click);
             // 
             // Examples
             // 
@@ -1257,6 +1370,13 @@ namespace Playground
             FileVersion fv = new FileVersion();
 
             fv.Show();
+        }
+
+        private void kbtnScreenColourPicker_Click(object sender, EventArgs e)
+        {
+            ScreenColourPicker picker = new ScreenColourPicker();
+
+            picker.Show();
         }
     }
 }
