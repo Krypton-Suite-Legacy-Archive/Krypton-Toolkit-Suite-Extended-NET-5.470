@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Circular PictureBox Example
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Circular ProgressBar Example", "Circular ProgressBar Example\Circular ProgressBar Example.csproj", "{6B80D189-222B-4208-8CEE-1B0BCB9673F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Progressbar Examples", "Progressbar Examples\Progressbar Examples.csproj", "{1C9F0E88-38D3-456D-838A-ABF469254560}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{6B80D189-222B-4208-8CEE-1B0BCB9673F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B80D189-222B-4208-8CEE-1B0BCB9673F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B80D189-222B-4208-8CEE-1B0BCB9673F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C9F0E88-38D3-456D-838A-ABF469254560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C9F0E88-38D3-456D-838A-ABF469254560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C9F0E88-38D3-456D-838A-ABF469254560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C9F0E88-38D3-456D-838A-ABF469254560}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 		{DB281B5D-E3D5-4F76-B686-B924A0D219F4} = {394B1FF7-D1FF-431A-97BD-344395008931}
 		{FA42F8EE-32F9-4027-84C1-6018F0B641DC} = {9F2DC342-4F0C-46CB-96B5-A6430CA7C29F}
 		{6B80D189-222B-4208-8CEE-1B0BCB9673F8} = {9F2DC342-4F0C-46CB-96B5-A6430CA7C29F}
+		{1C9F0E88-38D3-456D-838A-ABF469254560} = {9F2DC342-4F0C-46CB-96B5-A6430CA7C29F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8CA73945-5CD8-4C47-8D63-EBF6C47FA515}

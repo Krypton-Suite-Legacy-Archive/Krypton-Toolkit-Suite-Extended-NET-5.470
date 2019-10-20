@@ -7,6 +7,8 @@
  */
 #endregion
 
+using ComponentFactory.Krypton.Toolkit;
+using ComponentFactory.Krypton.Toolkit.Values;
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -14,8 +16,12 @@ using System.Windows.Forms;
 
 namespace KryptonToolkitSuiteExtendedCore
 {
-    public class CircularPictureBox : PictureBox
+    public class CircularPictureBox : PictureBox, IContentValues
     {
+        private ToolTipValues _values;
+
+        public ToolTipValues ToolTipValues { get => _values; set { _values = value; } }
+
         public CircularPictureBox()
         {
             BackColor = SystemColors.Control;
@@ -47,6 +53,26 @@ namespace KryptonToolkitSuiteExtendedCore
             }
 
             base.OnPaint(pe);
+        }
+
+        public Image GetImage(PaletteState state)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Color GetImageTransparentColor(PaletteState state)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetShortText()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetLongText()
+        {
+            throw new NotImplementedException();
         }
     }
 }

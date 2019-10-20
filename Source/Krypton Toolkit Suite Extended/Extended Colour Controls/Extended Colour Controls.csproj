@@ -118,7 +118,7 @@
     <Compile Include="Controls\Trackbars\KryptonBlueTrackBar.cs" />
     <Compile Include="Controls\Trackbars\KryptonGreenTrackBar.cs" />
     <Compile Include="Controls\Trackbars\KryptonRedTrackBar.cs" />
-    <Compile Include="Controls\User Controls\ScreenColourPicker.cs">
+    <Compile Include="Controls\User Controls\KryptonScreenColourPicker.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Designers\KryptonColourButtonExtendedActionList.cs" />
@@ -142,7 +142,7 @@
     <Compile Include="UX\KryptonColourButtonCustomColourDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UX\ScreenColourPicker.cs">
+    <Compile Include="UX\ScreenColourPickerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Values\ColourButtonValues.cs" />
@@ -166,8 +166,8 @@
     <EmbeddedResource Include="Controls\User Controls\ContrastColourControl.resx">
       <DependentUpon>ContrastColourControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\User Controls\ScreenColourPicker.resx">
-      <DependentUpon>ScreenColourPicker.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\User Controls\KryptonScreenColourPicker.resx">
+      <DependentUpon>KryptonScreenColourPicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -182,8 +182,8 @@
     <EmbeddedResource Include="UX\KryptonColourButtonCustomColourDialog.resx">
       <DependentUpon>KryptonColourButtonCustomColourDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UX\ScreenColourPicker.resx">
-      <DependentUpon>ScreenColourPicker.cs</DependentUpon>
+    <EmbeddedResource Include="UX\ScreenColourPickerWindow.resx">
+      <DependentUpon>ScreenColourPickerWindow.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

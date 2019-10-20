@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace ExtendedColourControls.Controls
 {
-    public class ScreenColourPicker : UserControl
+    public class KryptonScreenColourPicker : UserControl
     {
         #region Designer Code
         private ExtendedStandardControls.KryptonPanelExtended kryptonPanelExtended1;
@@ -23,6 +23,7 @@ namespace ExtendedColourControls.Controls
         private Labels.KryptonRedValueLabel kryptonRedValueLabel1;
         private KryptonToolkitSuiteExtendedCore.CircularPictureBox cpbSelectedColour;
         private Cyotek.Windows.Forms.ScreenColorPicker scp1;
+        private ExtendedStandardControls.KryptonLabelExtended klblHex;
         private ExtendedStandardControls.KryptonButtonExtended kbtnCancel;
 
         private void InitializeComponent()
@@ -32,6 +33,7 @@ namespace ExtendedColourControls.Controls
             this.kbtnCancel = new ExtendedStandardControls.KryptonButtonExtended();
             this.panel1 = new System.Windows.Forms.Panel();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.klblHex = new ExtendedStandardControls.KryptonLabelExtended();
             this.knumBlue = new ExtendedColourControls.KryptonBlueValueNumericBox();
             this.knumGreen = new ExtendedColourControls.KryptonGreenValueNumericBox();
             this.knumRed = new ExtendedColourControls.KryptonRedValueNumericBox();
@@ -220,6 +222,7 @@ namespace ExtendedColourControls.Controls
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.klblHex);
             this.kryptonPanel1.Controls.Add(this.knumBlue);
             this.kryptonPanel1.Controls.Add(this.knumGreen);
             this.kryptonPanel1.Controls.Add(this.knumRed);
@@ -236,6 +239,27 @@ namespace ExtendedColourControls.Controls
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(479, 452);
             this.kryptonPanel1.TabIndex = 3;
+            // 
+            // klblHex
+            // 
+            this.klblHex.Image = null;
+            this.klblHex.Location = new System.Drawing.Point(12, 277);
+            this.klblHex.LongTextTypeface = null;
+            this.klblHex.Name = "klblHex";
+            this.klblHex.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHex.Size = new System.Drawing.Size(78, 26);
+            this.klblHex.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHex.StateCommonTextColourOne = System.Drawing.Color.Empty;
+            this.klblHex.StateCommonTextColourTwo = System.Drawing.Color.Empty;
+            this.klblHex.StateDisabled.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHex.StateDisabledTextColourOne = System.Drawing.Color.Empty;
+            this.klblHex.StateDisabledTextColourTwo = System.Drawing.Color.Empty;
+            this.klblHex.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHex.StateNormalTextColourOne = System.Drawing.Color.Empty;
+            this.klblHex.StateNormalTextColourTwo = System.Drawing.Color.Empty;
+            this.klblHex.TabIndex = 4;
+            this.klblHex.Values.Text = "#000000";
+            this.klblHex.MouseEnter += new System.EventHandler(this.klblHex_MouseEnter);
             // 
             // knumBlue
             // 
@@ -426,7 +450,7 @@ namespace ExtendedColourControls.Controls
             this.scp1.Size = new System.Drawing.Size(115, 115);
             this.scp1.ColorChanged += new System.EventHandler(this.scp1_ColorChanged);
             // 
-            // ScreenColourPicker
+            // KryptonScreenColourPicker
             // 
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
@@ -434,7 +458,7 @@ namespace ExtendedColourControls.Controls
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanelExtended1);
             this.MinimumSize = new System.Drawing.Size(479, 505);
-            this.Name = "ScreenColourPicker";
+            this.Name = "KryptonScreenColourPicker";
             this.Size = new System.Drawing.Size(479, 505);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelExtended1)).EndInit();
             this.kryptonPanelExtended1.ResumeLayout(false);
@@ -450,6 +474,8 @@ namespace ExtendedColourControls.Controls
         #region Variables
         private Color _selectedColour = Color.Empty;
 
+        private Timer _tmrChangeColourByTrackbars = null, _tmrChangeColourByNumericUpDown = null, _tmrChangeColourByScreenColourPicker = null;
+
         private KryptonForm _owner;
         #endregion
 
@@ -460,9 +486,11 @@ namespace ExtendedColourControls.Controls
         #endregion
 
         #region Constructor
-        public ScreenColourPicker()
+        public KryptonScreenColourPicker()
         {
             InitializeComponent();
+
+            Dock = DockStyle.Fill;
 
             if (Owner != null)
             {
@@ -470,15 +498,79 @@ namespace ExtendedColourControls.Controls
 
                 Owner.CancelButton = kbtnCancel;
             }
+
+            #region Timers
+
+            #region Trackbars
+            _tmrChangeColourByTrackbars = new Timer();
+
+            _tmrChangeColourByTrackbars.Enabled = true;
+
+            _tmrChangeColourByTrackbars.Interval = 500;
+
+            _tmrChangeColourByTrackbars.Tick += ChangeColourByTrackbars_Tick;
+            #endregion
+
+            #region Numeric Up & Down
+            _tmrChangeColourByNumericUpDown = new Timer();
+
+            _tmrChangeColourByNumericUpDown.Interval = 500;
+
+            _tmrChangeColourByNumericUpDown.Enabled = true;
+
+            _tmrChangeColourByNumericUpDown.Tick += ChangeColourByNumericUpDown_Tick;
+            #endregion
+
+            #region Screen Colour Picker
+            _tmrChangeColourByScreenColourPicker = new Timer();
+
+            _tmrChangeColourByScreenColourPicker.Enabled = true;
+
+            _tmrChangeColourByScreenColourPicker.Tick += ChangeColourByScreenColourPicker_Tick;
+            #endregion
+
+            #endregion
         }
 
-        public ScreenColourPicker(KryptonForm owner)
+        public KryptonScreenColourPicker(KryptonForm owner)
         {
             InitializeComponent();
 
             owner.CancelButton = kbtnCancel;
 
             owner.AcceptButton = kbtnOk;
+
+            #region Timers
+
+            #region Trackbars
+            _tmrChangeColourByTrackbars = new Timer();
+
+            _tmrChangeColourByTrackbars.Enabled = true;
+
+            _tmrChangeColourByTrackbars.Interval = 500;
+
+            _tmrChangeColourByTrackbars.Tick += ChangeColourByTrackbars_Tick;
+            #endregion
+
+            #region Numeric Up & Down
+            _tmrChangeColourByNumericUpDown = new Timer();
+
+            _tmrChangeColourByNumericUpDown.Interval = 500;
+
+            _tmrChangeColourByNumericUpDown.Enabled = true;
+
+            _tmrChangeColourByNumericUpDown.Tick += ChangeColourByNumericUpDown_Tick;
+            #endregion
+
+            #region Screen Colour Picker
+            _tmrChangeColourByScreenColourPicker = new Timer();
+
+            _tmrChangeColourByScreenColourPicker.Enabled = true;
+
+            _tmrChangeColourByScreenColourPicker.Tick += ChangeColourByScreenColourPicker_Tick;
+            #endregion
+
+            #endregion
         }
         #endregion
 
@@ -531,6 +623,18 @@ namespace ExtendedColourControls.Controls
 
             SetSelectedColour(output);
         }
+
+        private void UpdateHexadecimalLabel(bool toUpper = false)
+        {
+            if (toUpper)
+            {
+                klblHex.Text = ColorTranslator.ToHtml(SelectedColour).ToUpper();
+            }
+            else
+            {
+                klblHex.Text = ColorTranslator.ToHtml(SelectedColour);
+            }
+        }
         #endregion
 
         #region Setters and Getters
@@ -550,27 +654,31 @@ namespace ExtendedColourControls.Controls
         #region Event Handlers
         private void kbtnOk_Click(object sender, EventArgs e)
         {
+            ((KryptonForm)TopLevelControl).DialogResult = DialogResult.OK;
 
+            ((KryptonForm)TopLevelControl).Close();
         }
 
         private void kbtnCancel_Click(object sender, EventArgs e)
         {
+            ((KryptonForm)TopLevelControl).DialogResult = DialogResult.Cancel;
 
+            ((KryptonForm)TopLevelControl).Close();
         }
 
         private void ktrkRed_ValueChanged(object sender, EventArgs e)
         {
-
+            _tmrChangeColourByTrackbars.Start();
         }
 
         private void ktrkGreen_ValueChanged(object sender, EventArgs e)
         {
-
+            _tmrChangeColourByTrackbars.Start();
         }
 
         private void ktrkBlue_ValueChanged(object sender, EventArgs e)
         {
-
+            _tmrChangeColourByTrackbars.Start();
         }
 
         private void knumRed_ValueChanged(object sender, EventArgs e)
@@ -590,13 +698,48 @@ namespace ExtendedColourControls.Controls
 
         private void scp1_ColorChanged(object sender, EventArgs e)
         {
+            UpdateSelectedColour(scp1.Color);
+        }
 
+        private void ChangeColourByScreenColourPicker_Tick(object sender, EventArgs e)
+        {
+            UpdateSelectedColour(scp1.Color);
+
+            _tmrChangeColourByScreenColourPicker.Stop();
+        }
+
+        private void ChangeColourByNumericUpDown_Tick(object sender, EventArgs e)
+        {
+            UpdateSelectedColour((byte)knumRed.Value, (byte)knumGreen.Value, (byte)knumBlue.Value);
+
+            _tmrChangeColourByNumericUpDown.Stop();
+        }
+
+        private void klblHex_MouseEnter(object sender, EventArgs e)
+        {
+            klblHex.ToolTipValues.Heading = "Current Hexadecimal Value";
+
+            klblHex.ToolTipValues.Description = $"The hexadecimal value for the current colour is: { klblHex.Text }";
+        }
+
+        private void ChangeColourByTrackbars_Tick(object sender, EventArgs e)
+        {
+            UpdateSelectedColour((byte)ktrkRed.Value, (byte)ktrkGreen.Value, (byte)ktrkBlue.Value);
+
+            _tmrChangeColourByTrackbars.Stop();
         }
         #endregion
 
         #region Overrides
         protected override void OnPaint(PaintEventArgs e)
         {
+            UpdateSelectedColour(SelectedColour);
+
+            if (SelectedColour != null || SelectedColour != Color.Empty || SelectedColour != Color.Transparent)
+            {
+                UpdateHexadecimalLabel();
+            }
+
             base.OnPaint(e);
         }
         #endregion

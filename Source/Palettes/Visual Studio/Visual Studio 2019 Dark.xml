@@ -2,7 +2,7 @@
 <!--Created by exporting the settings of a KryptonPalette instance.-->
 <!--For more information about Krypton visit www.ComponentFactory.com-->
 <!--WARNING: Modifying this file may render it invalid for importing.-->
-<KryptonPalette Version="18" Generated="Sunday, 13 October 2019, 11:06">
+<KryptonPalette Version="18" Generated="Thursday, 17 October 2019, 19:27">
   <Properties>
     <ButtonSpecs>
       <FormClose>
@@ -785,6 +785,7 @@
       <UseRoundedEdges Type="InheritBool" Value="False" />
     </ToolMenuStatus>
     <CustomisedKryptonPaletteFilePath Type="String" Value="T:\Development\Krypton\Versions\Extended\Krypton-Toolkit-Suite-Extended-NET-5.470\Source\Palettes\Visual Studio 2019 Dark.xml" />
+    <BasePaletteMode Type="PaletteMode" Value="Professional - System" />
   </Properties>
   <Images />
 </KryptonPalette>

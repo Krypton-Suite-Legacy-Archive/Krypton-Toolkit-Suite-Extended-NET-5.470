@@ -2,7 +2,7 @@
 <!--Created by exporting the settings of a KryptonPalette instance.-->
 <!--For more information about Krypton visit www.ComponentFactory.com-->
 <!--WARNING: Modifying this file may render it invalid for importing.-->
-<KryptonPalette Version="18" Generated="Thursday, 24 May 2018, 07:23">
+<KryptonPalette Version="18" Generated="Thursday, 17 October 2019, 19:04">
   <Properties>
     <ButtonStyles>
       <ButtonCommon>
@@ -511,7 +511,15 @@
         <GripLight Type="Color" Value="MintCream" />
       </Grip>
       <Menu>
+        <ImageMarginGradientBegin Type="Color" Value="136, 20, 33" />
+        <ImageMarginGradientEnd Type="Color" Value="201, 79, 96" />
+        <ImageMarginGradientMiddle Type="Color" Value="175, 32, 49" />
+        <ImageMarginRevealedGradientBegin Type="Color" Value="136, 20, 33" />
+        <ImageMarginRevealedGradientEnd Type="Color" Value="201, 79, 96" />
+        <ImageMarginRevealedGradientMiddle Type="Color" Value="175, 32, 49" />
+        <MenuBorder Type="Color" Value="136, 20, 33" />
         <MenuItemText Type="Color" Value="144, 56, 49" />
+        <MenuItemBorder Type="Color" Value="201, 79, 96" />
         <MenuItemPressedGradientBegin Type="Color" Value="174, 77, 80" />
         <MenuItemPressedGradientEnd Type="Color" Value="211, 125, 127" />
         <MenuItemPressedGradientMiddle Type="Color" Value="211, 125, 127" />
@@ -549,6 +557,7 @@
         <ToolStripPanelGradientEnd Type="Color" Value="211, 125, 127" />
       </ToolStrip>
     </ToolMenuStatus>
+    <CustomisedKryptonPaletteFilePath Type="String" Value="" />
     <BasePaletteMode Type="PaletteMode" Value="Office2013" />
   </Properties>
   <Images />

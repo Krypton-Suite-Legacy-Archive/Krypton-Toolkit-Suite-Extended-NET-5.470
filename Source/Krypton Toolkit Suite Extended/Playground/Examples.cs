@@ -13,6 +13,7 @@ using Core.Controls.Colours;
 using Core.UX;
 using Core.UX.Colours;
 using Core.UX.Options;
+using ExtendedColourControls.UX;
 using ExtendedControls.ExtendedToolkit.Controls;
 using ExtendedControls.ExtendedToolkit.Controls.Drawing.UI;
 using ExtendedControls.ExtendedToolkit.Controls.KryptonControls;
@@ -1374,7 +1375,7 @@ namespace Playground
 
         private void kbtnScreenColourPicker_Click(object sender, EventArgs e)
         {
-            ScreenColourPicker picker = new ScreenColourPicker();
+            ScreenColourPickerWindow picker = new ScreenColourPickerWindow();
 
             picker.Show();
         }

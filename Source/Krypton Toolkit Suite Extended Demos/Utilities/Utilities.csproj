@@ -73,3 +73,24 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
+<!--
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Utilities</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="KryptonExtendedToolkit5470CoreModule" Version="5.470.1400" />
+    <PackageReference Include="KryptonToolkitSuite5470CoreModule" Version="5.470.1300" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UX\" />
+  </ItemGroup>
+
+</Project>
+-->

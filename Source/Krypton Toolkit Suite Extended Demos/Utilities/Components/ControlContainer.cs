@@ -1,4 +1,5 @@
-﻿using KryptonToolkitSuiteExtendedCore;
+﻿using ComponentFactory.Krypton.Toolkit;
+using KryptonToolkitSuiteExtendedCore;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace Utilities.Components
         private KryptonToolkitSuiteExtendedCore.KryptonPropertyGrid kpgControlProperties;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kpnlInstructions;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnClose;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel klblInstructions;
 
         private void InitializeComponent()
@@ -27,7 +29,9 @@ namespace Utilities.Components
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kpnlInstructions = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.klblInstructions = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kbtnClose = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kpnlButtons)).BeginInit();
+            this.kpnlButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
@@ -43,6 +47,7 @@ namespace Utilities.Components
             // 
             // kpnlButtons
             // 
+            this.kpnlButtons.Controls.Add(this.kbtnClose);
             this.kpnlButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.kpnlButtons.Location = new System.Drawing.Point(0, 725);
             this.kpnlButtons.Name = "kpnlButtons";
@@ -124,10 +129,20 @@ namespace Utilities.Components
             this.klblInstructions.Name = "klblInstructions";
             this.klblInstructions.Size = new System.Drawing.Size(793, 113);
             this.klblInstructions.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblInstructions.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.klblInstructions.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.klblInstructions.TabIndex = 0;
             this.klblInstructions.Values.Text = "kryptonLabel1";
+            // 
+            // kbtnClose
+            // 
+            this.kbtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.kbtnClose.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.kbtnClose.Location = new System.Drawing.Point(1091, 11);
+            this.kbtnClose.Name = "kbtnClose";
+            this.kbtnClose.Size = new System.Drawing.Size(90, 25);
+            this.kbtnClose.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnClose.TabIndex = 0;
+            this.kbtnClose.Values.Text = "&Close";
+            this.kbtnClose.Click += new System.EventHandler(this.kbtnClose_Click);
             // 
             // ControlContainer
             // 
@@ -138,6 +153,7 @@ namespace Utilities.Components
             this.Name = "ControlContainer";
             this.Size = new System.Drawing.Size(1196, 775);
             ((System.ComponentModel.ISupportInitialize)(this.kpnlButtons)).EndInit();
+            this.kpnlButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();
@@ -224,11 +240,16 @@ namespace Utilities.Components
 
             base.OnPaint(e);
         }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+        }
         #endregion
 
         private void kbtnClose_Click(object sender, EventArgs e)
         {
-            //Parent.
+            ((KryptonForm)TopLevelControl).Close();
         }
     }
 }
