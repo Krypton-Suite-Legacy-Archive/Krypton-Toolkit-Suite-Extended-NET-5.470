@@ -1,7 +1,4 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using System;
-using System.Drawing;
-using System.Windows.Forms;
 
 namespace ExtendedColourControls.UX
 {
@@ -24,7 +21,7 @@ namespace ExtendedColourControls.UX
             this.kryptonScreenColourPicker1.MinimumSize = new System.Drawing.Size(479, 505);
             this.kryptonScreenColourPicker1.Name = "kryptonScreenColourPicker1";
             this.kryptonScreenColourPicker1.Owner = null;
-            this.kryptonScreenColourPicker1.SelectedColour = System.Drawing.Color.Empty;
+            this.kryptonScreenColourPicker1.SelectedColour = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.kryptonScreenColourPicker1.Size = new System.Drawing.Size(479, 507);
             this.kryptonScreenColourPicker1.TabIndex = 0;
             // 

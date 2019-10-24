@@ -11,46 +11,101 @@ namespace ExtendedColourControls.Controls
         private ExtendedStandardControls.KryptonPanelExtended kryptonPanelExtended1;
         private ExtendedStandardControls.KryptonButtonExtended kbtnOk;
         private Panel panel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private KryptonBlueValueNumericBox knumBlue;
-        private KryptonGreenValueNumericBox knumGreen;
-        private KryptonRedValueNumericBox knumRed;
-        private KryptonBlueTrackBar ktrkBlue;
-        private KryptonGreenTrackBar ktrkGreen;
-        private KryptonRedTrackBar ktrkRed;
-        private Labels.KryptonBlueValueLabel kryptonBlueValueLabel1;
-        private Labels.KryptonGreenValueLabel kryptonGreenValueLabel1;
-        private Labels.KryptonRedValueLabel kryptonRedValueLabel1;
+        private KryptonSplitContainer kryptonSplitContainer1;
         private KryptonToolkitSuiteExtendedCore.CircularPictureBox cpbSelectedColour;
-        private Cyotek.Windows.Forms.ScreenColorPicker scp1;
-        private ExtendedStandardControls.KryptonLabelExtended klblHex;
+        private ExtendedStandardControls.KryptonLabelExtended klblHexValue;
+        private Cyotek.Windows.Forms.ScreenColorPicker scpColour;
+        private ColourSliders.KryptonRGBColourSlider kryptonRGBColourSlider1;
         private ExtendedStandardControls.KryptonButtonExtended kbtnCancel;
 
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonSplitContainer1 = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
+            this.klblHexValue = new ExtendedStandardControls.KryptonLabelExtended();
+            this.scpColour = new Cyotek.Windows.Forms.ScreenColorPicker();
+            this.cpbSelectedColour = new KryptonToolkitSuiteExtendedCore.CircularPictureBox();
             this.kryptonPanelExtended1 = new ExtendedStandardControls.KryptonPanelExtended();
             this.kbtnOk = new ExtendedStandardControls.KryptonButtonExtended();
             this.kbtnCancel = new ExtendedStandardControls.KryptonButtonExtended();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.klblHex = new ExtendedStandardControls.KryptonLabelExtended();
-            this.knumBlue = new ExtendedColourControls.KryptonBlueValueNumericBox();
-            this.knumGreen = new ExtendedColourControls.KryptonGreenValueNumericBox();
-            this.knumRed = new ExtendedColourControls.KryptonRedValueNumericBox();
-            this.ktrkBlue = new ExtendedColourControls.KryptonBlueTrackBar();
-            this.ktrkGreen = new ExtendedColourControls.KryptonGreenTrackBar();
-            this.ktrkRed = new ExtendedColourControls.KryptonRedTrackBar();
-            this.kryptonBlueValueLabel1 = new ExtendedColourControls.Controls.Labels.KryptonBlueValueLabel();
-            this.kryptonGreenValueLabel1 = new ExtendedColourControls.Controls.Labels.KryptonGreenValueLabel();
-            this.kryptonRedValueLabel1 = new ExtendedColourControls.Controls.Labels.KryptonRedValueLabel();
-            this.cpbSelectedColour = new KryptonToolkitSuiteExtendedCore.CircularPictureBox();
-            this.scp1 = new Cyotek.Windows.Forms.ScreenColorPicker();
+            this.kryptonRGBColourSlider1 = new ExtendedColourControls.Controls.ColourSliders.KryptonRGBColourSlider();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).BeginInit();
+            this.kryptonSplitContainer1.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).BeginInit();
+            this.kryptonSplitContainer1.Panel2.SuspendLayout();
+            this.kryptonSplitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbSelectedColour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelExtended1)).BeginInit();
             this.kryptonPanelExtended1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
-            this.kryptonPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbSelectedColour)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 452);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(479, 3);
+            this.panel1.TabIndex = 2;
+            // 
+            // kryptonSplitContainer1
+            // 
+            this.kryptonSplitContainer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.kryptonSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonSplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonSplitContainer1.Name = "kryptonSplitContainer1";
+            // 
+            // kryptonSplitContainer1.Panel1
+            // 
+            this.kryptonSplitContainer1.Panel1.Controls.Add(this.klblHexValue);
+            this.kryptonSplitContainer1.Panel1.Controls.Add(this.scpColour);
+            this.kryptonSplitContainer1.Panel1.Controls.Add(this.cpbSelectedColour);
+            // 
+            // kryptonSplitContainer1.Panel2
+            // 
+            this.kryptonSplitContainer1.Panel2.Controls.Add(this.kryptonRGBColourSlider1);
+            this.kryptonSplitContainer1.Size = new System.Drawing.Size(479, 452);
+            this.kryptonSplitContainer1.SplitterDistance = 173;
+            this.kryptonSplitContainer1.TabIndex = 3;
+            // 
+            // klblHexValue
+            // 
+            this.klblHexValue.Image = null;
+            this.klblHexValue.Location = new System.Drawing.Point(18, 272);
+            this.klblHexValue.LongTextTypeface = null;
+            this.klblHexValue.Name = "klblHexValue";
+            this.klblHexValue.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHexValue.Size = new System.Drawing.Size(78, 26);
+            this.klblHexValue.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHexValue.StateCommonTextColourOne = System.Drawing.Color.Empty;
+            this.klblHexValue.StateCommonTextColourTwo = System.Drawing.Color.Empty;
+            this.klblHexValue.StateDisabled.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHexValue.StateDisabledTextColourOne = System.Drawing.Color.Empty;
+            this.klblHexValue.StateDisabledTextColourTwo = System.Drawing.Color.Empty;
+            this.klblHexValue.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.klblHexValue.StateNormalTextColourOne = System.Drawing.Color.Empty;
+            this.klblHexValue.StateNormalTextColourTwo = System.Drawing.Color.Empty;
+            this.klblHexValue.TabIndex = 1;
+            this.klblHexValue.Values.Text = "#000000";
+            // 
+            // scpColour
+            // 
+            this.scpColour.Color = System.Drawing.Color.Empty;
+            this.scpColour.Location = new System.Drawing.Point(18, 154);
+            this.scpColour.Name = "scpColour";
+            this.scpColour.Size = new System.Drawing.Size(115, 112);
+            this.scpColour.Text = "screenColorPicker1";
+            // 
+            // cpbSelectedColour
+            // 
+            this.cpbSelectedColour.BackColor = System.Drawing.SystemColors.Control;
+            this.cpbSelectedColour.Location = new System.Drawing.Point(18, 14);
+            this.cpbSelectedColour.Name = "cpbSelectedColour";
+            this.cpbSelectedColour.Size = new System.Drawing.Size(115, 115);
+            this.cpbSelectedColour.TabIndex = 0;
+            this.cpbSelectedColour.TabStop = false;
+            this.cpbSelectedColour.ToolTipValues = null;
             // 
             // kryptonPanelExtended1
             // 
@@ -211,261 +266,34 @@ namespace ExtendedColourControls.Controls
             this.kbtnCancel.Values.Text = "C&ancel";
             this.kbtnCancel.Click += new System.EventHandler(this.kbtnCancel_Click);
             // 
-            // panel1
+            // kryptonRGBColourSlider1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 452);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(479, 3);
-            this.panel1.TabIndex = 2;
-            // 
-            // kryptonPanel1
-            // 
-            this.kryptonPanel1.Controls.Add(this.klblHex);
-            this.kryptonPanel1.Controls.Add(this.knumBlue);
-            this.kryptonPanel1.Controls.Add(this.knumGreen);
-            this.kryptonPanel1.Controls.Add(this.knumRed);
-            this.kryptonPanel1.Controls.Add(this.ktrkBlue);
-            this.kryptonPanel1.Controls.Add(this.ktrkGreen);
-            this.kryptonPanel1.Controls.Add(this.ktrkRed);
-            this.kryptonPanel1.Controls.Add(this.kryptonBlueValueLabel1);
-            this.kryptonPanel1.Controls.Add(this.kryptonGreenValueLabel1);
-            this.kryptonPanel1.Controls.Add(this.kryptonRedValueLabel1);
-            this.kryptonPanel1.Controls.Add(this.cpbSelectedColour);
-            this.kryptonPanel1.Controls.Add(this.scp1);
-            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(479, 452);
-            this.kryptonPanel1.TabIndex = 3;
-            // 
-            // klblHex
-            // 
-            this.klblHex.Image = null;
-            this.klblHex.Location = new System.Drawing.Point(12, 277);
-            this.klblHex.LongTextTypeface = null;
-            this.klblHex.Name = "klblHex";
-            this.klblHex.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblHex.Size = new System.Drawing.Size(78, 26);
-            this.klblHex.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblHex.StateCommonTextColourOne = System.Drawing.Color.Empty;
-            this.klblHex.StateCommonTextColourTwo = System.Drawing.Color.Empty;
-            this.klblHex.StateDisabled.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblHex.StateDisabledTextColourOne = System.Drawing.Color.Empty;
-            this.klblHex.StateDisabledTextColourTwo = System.Drawing.Color.Empty;
-            this.klblHex.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.klblHex.StateNormalTextColourOne = System.Drawing.Color.Empty;
-            this.klblHex.StateNormalTextColourTwo = System.Drawing.Color.Empty;
-            this.klblHex.TabIndex = 4;
-            this.klblHex.Values.Text = "#000000";
-            this.klblHex.MouseEnter += new System.EventHandler(this.klblHex_MouseEnter);
-            // 
-            // knumBlue
-            // 
-            this.knumBlue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.knumBlue.Location = new System.Drawing.Point(401, 409);
-            this.knumBlue.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.knumBlue.Name = "knumBlue";
-            this.knumBlue.Size = new System.Drawing.Size(64, 26);
-            this.knumBlue.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
-            this.knumBlue.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.knumBlue.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.knumBlue.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
-            this.knumBlue.TabIndex = 10;
-            this.knumBlue.ValueChanged += new System.EventHandler(this.knumBlue_ValueChanged);
-            // 
-            // knumGreen
-            // 
-            this.knumGreen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.knumGreen.Location = new System.Drawing.Point(286, 409);
-            this.knumGreen.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.knumGreen.Name = "knumGreen";
-            this.knumGreen.Size = new System.Drawing.Size(64, 26);
-            this.knumGreen.StateCommon.Back.Color1 = System.Drawing.Color.Green;
-            this.knumGreen.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.knumGreen.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.knumGreen.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
-            this.knumGreen.TabIndex = 9;
-            this.knumGreen.ValueChanged += new System.EventHandler(this.knumGreen_ValueChanged);
-            // 
-            // knumRed
-            // 
-            this.knumRed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.knumRed.Location = new System.Drawing.Point(159, 409);
-            this.knumRed.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.knumRed.Name = "knumRed";
-            this.knumRed.Size = new System.Drawing.Size(64, 26);
-            this.knumRed.StateCommon.Back.Color1 = System.Drawing.Color.Red;
-            this.knumRed.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.knumRed.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.knumRed.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
-            this.knumRed.TabIndex = 8;
-            this.knumRed.ValueChanged += new System.EventHandler(this.knumRed_ValueChanged);
-            // 
-            // ktrkBlue
-            // 
-            this.ktrkBlue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ktrkBlue.DrawBackground = true;
-            this.ktrkBlue.Location = new System.Drawing.Point(429, 44);
-            this.ktrkBlue.Maximum = 255;
-            this.ktrkBlue.Name = "ktrkBlue";
-            this.ktrkBlue.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.ktrkBlue.Size = new System.Drawing.Size(21, 359);
-            this.ktrkBlue.StateCommon.Tick.Color1 = System.Drawing.Color.Blue;
-            this.ktrkBlue.StateCommon.Track.Color1 = System.Drawing.Color.Blue;
-            this.ktrkBlue.StateCommon.Track.Color2 = System.Drawing.Color.Blue;
-            this.ktrkBlue.StateCommon.Track.Color3 = System.Drawing.Color.Blue;
-            this.ktrkBlue.StateCommon.Track.Color4 = System.Drawing.Color.Blue;
-            this.ktrkBlue.StateCommon.Track.Color5 = System.Drawing.Color.Blue;
-            this.ktrkBlue.TabIndex = 7;
-            this.ktrkBlue.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.ktrkBlue.Value = 255;
-            this.ktrkBlue.ValueChanged += new System.EventHandler(this.ktrkBlue_ValueChanged);
-            // 
-            // ktrkGreen
-            // 
-            this.ktrkGreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ktrkGreen.DrawBackground = true;
-            this.ktrkGreen.Location = new System.Drawing.Point(303, 44);
-            this.ktrkGreen.Maximum = 255;
-            this.ktrkGreen.Name = "ktrkGreen";
-            this.ktrkGreen.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.ktrkGreen.Size = new System.Drawing.Size(21, 359);
-            this.ktrkGreen.StateCommon.Tick.Color1 = System.Drawing.Color.Green;
-            this.ktrkGreen.StateCommon.Track.Color1 = System.Drawing.Color.Green;
-            this.ktrkGreen.StateCommon.Track.Color2 = System.Drawing.Color.Green;
-            this.ktrkGreen.StateCommon.Track.Color3 = System.Drawing.Color.Green;
-            this.ktrkGreen.StateCommon.Track.Color4 = System.Drawing.Color.Green;
-            this.ktrkGreen.StateCommon.Track.Color5 = System.Drawing.Color.Green;
-            this.ktrkGreen.TabIndex = 6;
-            this.ktrkGreen.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.ktrkGreen.Value = 255;
-            this.ktrkGreen.ValueChanged += new System.EventHandler(this.ktrkGreen_ValueChanged);
-            // 
-            // ktrkRed
-            // 
-            this.ktrkRed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ktrkRed.DrawBackground = true;
-            this.ktrkRed.Location = new System.Drawing.Point(174, 44);
-            this.ktrkRed.Maximum = 255;
-            this.ktrkRed.Name = "ktrkRed";
-            this.ktrkRed.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.ktrkRed.Size = new System.Drawing.Size(21, 359);
-            this.ktrkRed.StateCommon.Tick.Color1 = System.Drawing.Color.Red;
-            this.ktrkRed.StateCommon.Track.Color1 = System.Drawing.Color.Red;
-            this.ktrkRed.StateCommon.Track.Color2 = System.Drawing.Color.Red;
-            this.ktrkRed.StateCommon.Track.Color3 = System.Drawing.Color.Red;
-            this.ktrkRed.StateCommon.Track.Color4 = System.Drawing.Color.Red;
-            this.ktrkRed.StateCommon.Track.Color5 = System.Drawing.Color.Red;
-            this.ktrkRed.TabIndex = 5;
-            this.ktrkRed.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.ktrkRed.Value = 255;
-            this.ktrkRed.ValueChanged += new System.EventHandler(this.ktrkRed_ValueChanged);
-            // 
-            // kryptonBlueValueLabel1
-            // 
-            this.kryptonBlueValueLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.kryptonBlueValueLabel1.Location = new System.Drawing.Point(415, 12);
-            this.kryptonBlueValueLabel1.Name = "kryptonBlueValueLabel1";
-            this.kryptonBlueValueLabel1.RedValue = 255;
-            this.kryptonBlueValueLabel1.Size = new System.Drawing.Size(46, 26);
-            this.kryptonBlueValueLabel1.StateCommon.LongText.Color1 = System.Drawing.Color.Blue;
-            this.kryptonBlueValueLabel1.StateCommon.LongText.Color2 = System.Drawing.Color.Blue;
-            this.kryptonBlueValueLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.kryptonBlueValueLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.Blue;
-            this.kryptonBlueValueLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.Blue;
-            this.kryptonBlueValueLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.kryptonBlueValueLabel1.TabIndex = 4;
-            this.kryptonBlueValueLabel1.TextSize = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.kryptonBlueValueLabel1.Values.Text = "Blue";
-            // 
-            // kryptonGreenValueLabel1
-            // 
-            this.kryptonGreenValueLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.kryptonGreenValueLabel1.Location = new System.Drawing.Point(282, 12);
-            this.kryptonGreenValueLabel1.Name = "kryptonGreenValueLabel1";
-            this.kryptonGreenValueLabel1.RedValue = 255;
-            this.kryptonGreenValueLabel1.Size = new System.Drawing.Size(58, 26);
-            this.kryptonGreenValueLabel1.StateCommon.LongText.Color1 = System.Drawing.Color.Green;
-            this.kryptonGreenValueLabel1.StateCommon.LongText.Color2 = System.Drawing.Color.Green;
-            this.kryptonGreenValueLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.kryptonGreenValueLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.Green;
-            this.kryptonGreenValueLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.Green;
-            this.kryptonGreenValueLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.kryptonGreenValueLabel1.TabIndex = 3;
-            this.kryptonGreenValueLabel1.TextSize = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.kryptonGreenValueLabel1.Values.Text = "Green";
-            // 
-            // kryptonRedValueLabel1
-            // 
-            this.kryptonRedValueLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.kryptonRedValueLabel1.Location = new System.Drawing.Point(165, 12);
-            this.kryptonRedValueLabel1.Name = "kryptonRedValueLabel1";
-            this.kryptonRedValueLabel1.RedValue = 255;
-            this.kryptonRedValueLabel1.Size = new System.Drawing.Size(42, 26);
-            this.kryptonRedValueLabel1.StateCommon.LongText.Color1 = System.Drawing.Color.Red;
-            this.kryptonRedValueLabel1.StateCommon.LongText.Color2 = System.Drawing.Color.Red;
-            this.kryptonRedValueLabel1.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.kryptonRedValueLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
-            this.kryptonRedValueLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
-            this.kryptonRedValueLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.kryptonRedValueLabel1.TabIndex = 2;
-            this.kryptonRedValueLabel1.TextSize = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.kryptonRedValueLabel1.Values.Text = "Red";
-            // 
-            // cpbSelectedColour
-            // 
-            this.cpbSelectedColour.BackColor = System.Drawing.SystemColors.Control;
-            this.cpbSelectedColour.Location = new System.Drawing.Point(12, 12);
-            this.cpbSelectedColour.Name = "cpbSelectedColour";
-            this.cpbSelectedColour.Size = new System.Drawing.Size(115, 115);
-            this.cpbSelectedColour.TabIndex = 1;
-            this.cpbSelectedColour.TabStop = false;
-            // 
-            // scp1
-            // 
-            this.scp1.Color = System.Drawing.Color.Empty;
-            this.scp1.Image = global::ExtendedColourControls.Properties.Resources.dropper;
-            this.scp1.Location = new System.Drawing.Point(12, 156);
-            this.scp1.Name = "scp1";
-            this.scp1.Size = new System.Drawing.Size(115, 115);
-            this.scp1.ColorChanged += new System.EventHandler(this.scp1_ColorChanged);
+            this.kryptonRGBColourSlider1.BackColor = System.Drawing.Color.Transparent;
+            this.kryptonRGBColourSlider1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonRGBColourSlider1.Name = "kryptonRGBColourSlider1";
+            this.kryptonRGBColourSlider1.Size = new System.Drawing.Size(301, 452);
+            this.kryptonRGBColourSlider1.TabIndex = 0;
             // 
             // KryptonScreenColourPicker
             // 
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.kryptonPanel1);
+            this.Controls.Add(this.kryptonSplitContainer1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kryptonPanelExtended1);
             this.MinimumSize = new System.Drawing.Size(479, 505);
             this.Name = "KryptonScreenColourPicker";
             this.Size = new System.Drawing.Size(479, 505);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel1)).EndInit();
+            this.kryptonSplitContainer1.Panel1.ResumeLayout(false);
+            this.kryptonSplitContainer1.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1.Panel2)).EndInit();
+            this.kryptonSplitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonSplitContainer1)).EndInit();
+            this.kryptonSplitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cpbSelectedColour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelExtended1)).EndInit();
             this.kryptonPanelExtended1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
-            this.kryptonPanel1.ResumeLayout(false);
-            this.kryptonPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbSelectedColour)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -581,18 +409,6 @@ namespace ExtendedColourControls.Controls
         {
             int r = colour.R, g = colour.G, b = colour.B;
 
-            ktrkRed.Value = r;
-
-            ktrkGreen.Value = g;
-
-            ktrkBlue.Value = b;
-
-            knumRed.Value = r;
-
-            knumGreen.Value = g;
-
-            knumBlue.Value = b;
-
             cpbSelectedColour.BackColor = colour;
 
             SetSelectedColour(colour);
@@ -607,18 +423,6 @@ namespace ExtendedColourControls.Controls
         {
             Color output = Color.FromArgb(red, green, blue);
 
-            ktrkRed.Value = red;
-
-            ktrkGreen.Value = green;
-
-            ktrkBlue.Value = blue;
-
-            knumRed.Value = red;
-
-            knumGreen.Value = green;
-
-            knumBlue.Value = blue;
-
             cpbSelectedColour.BackColor = output;
 
             SetSelectedColour(output);
@@ -628,13 +432,15 @@ namespace ExtendedColourControls.Controls
         {
             if (toUpper)
             {
-                klblHex.Text = ColorTranslator.ToHtml(SelectedColour).ToUpper();
+                klblHexValue.Text = ColorTranslator.ToHtml(SelectedColour).ToUpper();
             }
             else
             {
-                klblHex.Text = ColorTranslator.ToHtml(SelectedColour);
+                klblHexValue.Text = ColorTranslator.ToHtml(SelectedColour);
             }
         }
+
+        private string ResolveHexadecimalColourValue(Color colourValue) => ColorTranslator.ToHtml(colourValue);
         #endregion
 
         #region Setters and Getters
@@ -666,65 +472,30 @@ namespace ExtendedColourControls.Controls
             ((KryptonForm)TopLevelControl).Close();
         }
 
-        private void ktrkRed_ValueChanged(object sender, EventArgs e)
-        {
-            _tmrChangeColourByTrackbars.Start();
-        }
-
-        private void ktrkGreen_ValueChanged(object sender, EventArgs e)
-        {
-            _tmrChangeColourByTrackbars.Start();
-        }
-
-        private void ktrkBlue_ValueChanged(object sender, EventArgs e)
-        {
-            _tmrChangeColourByTrackbars.Start();
-        }
-
-        private void knumRed_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void knumGreen_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void knumBlue_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void scp1_ColorChanged(object sender, EventArgs e)
-        {
-            UpdateSelectedColour(scp1.Color);
-        }
-
         private void ChangeColourByScreenColourPicker_Tick(object sender, EventArgs e)
         {
-            UpdateSelectedColour(scp1.Color);
+            UpdateSelectedColour(scpColour.Color);
 
             _tmrChangeColourByScreenColourPicker.Stop();
         }
 
         private void ChangeColourByNumericUpDown_Tick(object sender, EventArgs e)
         {
-            UpdateSelectedColour((byte)knumRed.Value, (byte)knumGreen.Value, (byte)knumBlue.Value);
+            //UpdateSelectedColour((byte)knumRed.Value, (byte)knumGreen.Value, (byte)knumBlue.Value);
 
             _tmrChangeColourByNumericUpDown.Stop();
         }
 
         private void klblHex_MouseEnter(object sender, EventArgs e)
         {
-            klblHex.ToolTipValues.Heading = "Current Hexadecimal Value";
+            klblHexValue.ToolTipValues.Heading = "Current Hexadecimal Value";
 
-            klblHex.ToolTipValues.Description = $"The hexadecimal value for the current colour is: { klblHex.Text }";
+            klblHexValue.ToolTipValues.Description = $"The hexadecimal value for the current colour is: { klblHexValue.Text }";
         }
 
         private void ChangeColourByTrackbars_Tick(object sender, EventArgs e)
         {
-            UpdateSelectedColour((byte)ktrkRed.Value, (byte)ktrkGreen.Value, (byte)ktrkBlue.Value);
+            //UpdateSelectedColour((byte)ktrkRed.Value, (byte)ktrkGreen.Value, (byte)ktrkBlue.Value);
 
             _tmrChangeColourByTrackbars.Stop();
         }

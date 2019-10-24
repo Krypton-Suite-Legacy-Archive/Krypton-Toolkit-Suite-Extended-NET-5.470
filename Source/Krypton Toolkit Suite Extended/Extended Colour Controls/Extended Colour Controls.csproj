@@ -62,9 +62,16 @@
     <Compile Include="Classes\ColourCollectionEventArgs.cs" />
     <Compile Include="Classes\ColourCollection.cs" />
     <Compile Include="Classes\ColourExtensions.cs" />
+    <Compile Include="Classes\Custom Events\CustomEventHandlers.cs" />
     <Compile Include="Classes\Helpers.cs" />
     <Compile Include="Classes\PI.cs" />
     <Compile Include="Controls\Components\KryptonColourButtonExtended.cs" />
+    <Compile Include="Controls\User Controls\Colour Sliders\KryptonColourSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\User Controls\Colour Sliders\KryptonRGBColourSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\User Controls\ColourEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,6 +166,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Controls\User Controls\ARGBUserControl.resx">
       <DependentUpon>ARGBUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\User Controls\Colour Sliders\KryptonColourSlider.resx">
+      <DependentUpon>KryptonColourSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\User Controls\Colour Sliders\KryptonRGBColourSlider.resx">
+      <DependentUpon>KryptonRGBColourSlider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\User Controls\ColourEditor.resx">
       <DependentUpon>ColourEditor.cs</DependentUpon>
