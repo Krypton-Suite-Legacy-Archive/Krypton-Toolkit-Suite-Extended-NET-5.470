@@ -55,6 +55,7 @@
     <Compile Include="Classes\Drawing\FontMetrics.cs" />
     <Compile Include="Classes\Drawing\GraphicsExtension.cs" />
     <Compile Include="Classes\Drawing\RoundedRectangleF.cs" />
+    <Compile Include="Classes\Drawing\Utility.cs" />
     <Compile Include="Classes\KryptonMessageBoxExtended.cs" />
     <Compile Include="Classes\PI.cs" />
     <Compile Include="Classes\Ribbon\RibbonMerger.cs" />
@@ -80,6 +81,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Components\Controls\KryptonKnobControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\KryptonKnobControlEnhanced.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\Controls\KryptonListView.cs">
@@ -328,6 +332,9 @@
     <Content Include="ToolboxBitmaps\UACButton.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Components\Controls\KryptonKnobControlEnhanced.resx">
+      <DependentUpon>KryptonKnobControlEnhanced.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

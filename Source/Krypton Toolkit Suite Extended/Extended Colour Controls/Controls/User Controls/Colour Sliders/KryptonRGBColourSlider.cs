@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExtendedColourControls.Classes.Events;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -229,20 +230,28 @@ namespace ExtendedColourControls.Controls.ColourSliders
 
         #region Variables
         private Color _selectedColour, _previousColour;
+
+        private int _redValue, _greenValue, _blueValue;
         #endregion
 
         #region Properties
         public Color SelectedColour { get => _selectedColour; set { _selectedColour = value; Invalidate(); } }
 
-        private Color PreviousColour { get => _previousColour; set { _previousColour = value; Invalidate(); } }
+        internal Color PreviousColour { get => _previousColour; set { _previousColour = value; Invalidate(); } }
+
+        public int RedValue { get => _redValue; set { _redValue = value; Invalidate(); } }
+
+        public int GreenValue { get => _greenValue; set { _greenValue = value; Invalidate(); } }
+
+        public int BlueValue { get => _blueValue; set { _blueValue = value; Invalidate(); } }
         #endregion
 
         #region Events
-        public EventHandler SelectedColourChanged;
+        public event EventHandler<SelectedColourEventArgs> SelectedColourChanged;
         #endregion
 
         #region Delegates
-        public delegate void OnSelectedColourChanged(object sender, EventArgs e);
+        //public delegate void SelectedColourChangedEventHandler(object sender, SelectedColourEventArgs e);
         #endregion
 
         #region Constructor
@@ -253,6 +262,18 @@ namespace ExtendedColourControls.Controls.ColourSliders
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw | ControlStyles.UserPaint | ControlStyles.SupportsTransparentBackColor, true);
 
             SelectedColour = Color.Empty;
+
+            RedValue = 255;
+
+            GreenValue = 255;
+
+            BlueValue = 255;
+
+            ktrkRed.Value = RedValue;
+
+            ktrkGreen.Value = GreenValue;
+
+            ktrkBlue.Value = BlueValue;
         }
         #endregion
 
@@ -345,6 +366,13 @@ namespace ExtendedColourControls.Controls.ColourSliders
         /// <param name="green">The green.</param>
         /// <param name="blue">The blue.</param>
         private Color UpdateSelectedColour(int red, int green, int blue) => SelectedColour = Color.FromArgb(red, green, blue);
+
+        public void UpdateSelectedColour(Color colour)
+        {
+            SelectedColour = colour;
+
+            OnSelectedColourChanged(colour);
+        }
         #endregion
 
         #region Overrides
@@ -353,6 +381,13 @@ namespace ExtendedColourControls.Controls.ColourSliders
             SetSelectedColour(UpdateSelectedColour(ktrkRed.Value, ktrkGreen.Value, ktrkBlue.Value));
 
             base.OnPaint(e);
+        }
+        #endregion
+
+        #region Protected
+        protected virtual void OnSelectedColourChanged(Color colour)
+        {
+            if (SelectedColourChanged != null) SelectedColourChanged(this, new SelectedColourEventArgs() { SelectedColour = colour });
         }
         #endregion
     }

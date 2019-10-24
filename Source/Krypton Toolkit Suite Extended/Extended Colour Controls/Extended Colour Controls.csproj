@@ -63,6 +63,7 @@
     <Compile Include="Classes\ColourCollection.cs" />
     <Compile Include="Classes\ColourExtensions.cs" />
     <Compile Include="Classes\Custom Events\CustomEventHandlers.cs" />
+    <Compile Include="Classes\Events\CustomEvents.cs" />
     <Compile Include="Classes\Helpers.cs" />
     <Compile Include="Classes\PI.cs" />
     <Compile Include="Controls\Components\KryptonColourButtonExtended.cs" />
