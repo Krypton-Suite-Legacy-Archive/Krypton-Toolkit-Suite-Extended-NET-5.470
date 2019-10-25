@@ -51,7 +51,7 @@
     </Compile>
     <Compile Include="Classes\ColourHandler.cs" />
     <Compile Include="Classes\Drawing\DrawingMethods.cs" />
-    <Compile Include="Classes\Drawing\ExsendedDrawing.cs" />
+    <Compile Include="Classes\Drawing\ExtendedDrawing.cs" />
     <Compile Include="Classes\Drawing\FontMetrics.cs" />
     <Compile Include="Classes\Drawing\GraphicsExtension.cs" />
     <Compile Include="Classes\Drawing\RoundedRectangleF.cs" />

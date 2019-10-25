@@ -1,9 +1,9 @@
 ﻿namespace KryptonToolkitSuiteExtendedCore.Classes.Drawing
 {
-    public class ExsendedDrawing
+    public class ExtendedDrawing
     {
         #region Constructor
-        public ExsendedDrawing()
+        public ExtendedDrawing()
         {
 
         }
