@@ -70,6 +70,9 @@
     <Compile Include="Controls\User Controls\Colour Sliders\KryptonColourSlider.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\User Controls\Colour Sliders\KryptonRGBColourKnobControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\User Controls\Colour Sliders\KryptonRGBColourSlider.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\User Controls\Colour Sliders\KryptonColourSlider.resx">
       <DependentUpon>KryptonColourSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\User Controls\Colour Sliders\KryptonRGBColourKnobControl.resx">
+      <DependentUpon>KryptonRGBColourKnobControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\User Controls\Colour Sliders\KryptonRGBColourSlider.resx">
       <DependentUpon>KryptonRGBColourSlider.cs</DependentUpon>

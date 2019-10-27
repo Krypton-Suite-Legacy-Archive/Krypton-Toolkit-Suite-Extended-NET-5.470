@@ -19,7 +19,7 @@ namespace KryptonToolkitSuiteExtendedCore
     // Delegate type for hooking up ValueChanged notifications.
     public delegate void ValueChangedEventHandler(object Sender);
 
-    [ToolboxBitmap(typeof(Timer))]
+    [DefaultEvent("ValueChanged"), ToolboxBitmap(typeof(Timer))]
     public class KryptonKnobControl : UserControl
     {
         #region " constructor "

@@ -7,56 +7,65 @@ using System.Windows.Forms;
 
 namespace KryptonToolkitSuiteExtendedCore.Components.Controls
 {
-    public class KryptonKnobControlEnhanced : UserControl
+    #region Knob Control
+    // A delegate type for hooking up ValueChanged notifications. 
+    public delegate void ValueChangedEventHandler(object Sender);
+
+    /// <summary>
+    /// Summary description for KnobControl.
+    /// </summary>
+    [ToolboxItem(false)]
+    public class KryptonKnobControlEnhanced : System.Windows.Forms.UserControl
     {
-        #region Designer Code
-        private Container components = null;
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // KryptonKnobControlEnhanced
-            // 
-            this.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.Name = "KryptonKnobControlEnhanced";
-            this.Resize += new System.EventHandler(this.KryptonKnobControlEnhanced_Resize);
-
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                if (components != null)
-                {
-                    components.Dispose();
-                }
-            }
-
-            base.Dispose(disposing);
-        }
-        #endregion
-
         #region Variables
-        private bool _showSmallScale = false, _showLargeScale = true, _isFocused = false, _isKnobRotating = false;
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.Container components = null;
 
-        private Brush _bKnob, _bKnobPoint;
+        private int _Minimum = 0;
+        private int _Maximum = 25;
+        private int _LargeChange = 5;
+        private int _SmallChange = 1;
+        private bool _ShowSmallScale = false;
+        private bool _ShowLargeScale = true;
+        private bool _isFocused = false;
 
-        private Rectangle _rKnob, _rScale;
 
-        private int _minimum = 0, _maximum = 25, _largeChange = 5, _smallChange = 1, _value = 0;
+        private int _Value = 0;
+        private bool isKnobRotating = false;
+        private Rectangle rKnob;
+        private Point pKnob;
+        private Rectangle rScale;
+        private Pen DottedPen;
 
-        private Point _pKnob;
-
-        private Pen _dottedPen;
-
-        private Image _offScreenImage;
-
-        private Graphics _gOffScreen;
+        private Color _knobColour;
 
         private IPalette _palette;
+
+        Brush bKnob;
+        Brush bKnobPoint;
+        //-------------------------------------------------------
+        // declare Off screen image and Offscreen graphics       
+        //-------------------------------------------------------
+        private Image OffScreenImage;
+        private Graphics gOffScreen;
         #endregion
+
+        //-------------------------------------------------------
+        // An event that clients can use to be notified whenever 
+        // the Value is Changed.                                 
+        //-------------------------------------------------------
+        public event ValueChangedEventHandler ValueChanged;
+        //-------------------------------------------------------
+        // Invoke the ValueChanged event; called  when value     
+        // is changed                                            
+        //-------------------------------------------------------
+        protected virtual void OnValueChanged(object sender)
+        {
+            if (ValueChanged != null)
+                ValueChanged(sender);
+        }
 
         #region Properties
         /// <summary>
@@ -64,11 +73,10 @@ namespace KryptonToolkitSuiteExtendedCore.Components.Controls
         /// </summary>
         public bool ShowSmallScale
         {
-            get => _showSmallScale;
-
+            get { return _ShowSmallScale; }
             set
             {
-                _showSmallScale = value;
+                _ShowSmallScale = value;
                 // need to redraw 
                 Refresh();
             }
@@ -79,11 +87,10 @@ namespace KryptonToolkitSuiteExtendedCore.Components.Controls
         /// </summary>
         public bool ShowLargeScale
         {
-            get => _showLargeScale;
-
+            get { return _ShowLargeScale; }
             set
             {
-                _showLargeScale = value;
+                _ShowLargeScale = value;
                 // need to redraw
                 Refresh();
             }
@@ -94,16 +101,16 @@ namespace KryptonToolkitSuiteExtendedCore.Components.Controls
         /// </summary>
         public int Minimum
         {
-            get => _minimum;
-            set => _minimum = value;
+            get { return _Minimum; }
+            set { _Minimum = value; }
         }
         /// <summary>
         /// Maximum value for knob control
         /// </summary>
         public int Maximum
         {
-            get => _maximum;
-            set => _maximum = value;
+            get { return _Maximum; }
+            set { _Maximum = value; }
         }
 
         /// <summary>
@@ -111,11 +118,10 @@ namespace KryptonToolkitSuiteExtendedCore.Components.Controls
         /// </summary>
         public int LargeChange
         {
-            get => _largeChange;
-
+            get { return _LargeChange; }
             set
             {
-                _largeChange = value;
+                _LargeChange = value;
                 Refresh();
             }
         }
@@ -124,11 +130,10 @@ namespace KryptonToolkitSuiteExtendedCore.Components.Controls
         /// </summary>
         public int SmallChange
         {
-            get => _smallChange;
-
+            get { return _SmallChange; }
             set
             {
-                _smallChange = value;
+                _SmallChange = value;
                 Refresh();
             }
         }
@@ -138,106 +143,107 @@ namespace KryptonToolkitSuiteExtendedCore.Components.Controls
         /// </summary>
         public int Value
         {
-            get => _value;
-
+            get { return _Value; }
             set
             {
 
-                _value = value;
+                _Value = value;
                 // need to redraw 
                 Refresh();
                 // call delegate  
                 OnValueChanged(this);
             }
         }
+
+        public Color KnobColour { get => _knobColour; set { _knobColour = value; Invalidate(); } }
         #endregion
 
-        #region Delegates
-        public delegate void ValueChangedEventHandler(object sender);
-        #endregion
-
-        #region Events
-        public event ValueChangedEventHandler ValueChanged;
-        #endregion
-
-        #region Virtual
-        protected virtual void OnValueChanged(object sender)
-        {
-            if (ValueChanged != null)
-            {
-                ValueChanged(sender);
-            }
-        }
-        #endregion
-
-        #region Constructor
         public KryptonKnobControlEnhanced()
         {
-            _dottedPen = new Pen(Classes.Drawing.Utility.GetDarkColour(BackColor, 40));
 
-            _dottedPen.DashStyle = DashStyle.Dash;
+            // This call is required by the Windows.Forms Form Designer.
+            DottedPen = new Pen(Utility.getDarkColor(this.BackColor, 40));
+            DottedPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            DottedPen.DashCap = System.Drawing.Drawing2D.DashCap.Flat;
 
-            _dottedPen.DashCap = DashCap.Flat;
+            KnobColour = Color.SlateBlue;
 
             InitializeComponent();
+            setDimensions();
 
-            InitialiseColours();
 
-            SetDimensions();
+            // TODO: Add any initialization after the InitForm call
+
         }
-        #endregion
-
-        #region Overrides
         protected override void OnPaint(PaintEventArgs e)
         {
             Graphics g = e.Graphics;
+            // Set background color of Image...            
+            gOffScreen.Clear(this.BackColor);
+            // Fill knob Background to give knob effect....
+            gOffScreen.FillEllipse(bKnob, rKnob);
+            // Set antialias effect on                     
+            gOffScreen.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            // Draw border of knob                         
+            gOffScreen.DrawEllipse(new Pen(this.BackColor), rKnob);
 
-            _gOffScreen.Clear(BackColor);
-
-            _gOffScreen.FillEllipse(_bKnob, _rKnob);
-
-            _gOffScreen.SmoothingMode = SmoothingMode.AntiAlias;
-
-            _gOffScreen.DrawEllipse(new Pen(BackColor), _rKnob);
-
-            if (_isFocused) _gOffScreen.DrawEllipse(_dottedPen, _rKnob);
-
-            Point arrow = GetKnobPosition();
-
-            Classes.Drawing.Utility.DrawInsetCircle(ref _gOffScreen, new Rectangle(arrow.X - 3, arrow.Y - 3, 6, 6), new Pen(BackColor));
-
-            if (_showSmallScale)
+            //if control is focused 
+            if (this._isFocused)
             {
-                for (int i = _minimum; i < _maximum; i += _smallChange)
+                gOffScreen.DrawEllipse(DottedPen, rKnob);
+            }
+
+            // get current position of pointer             
+            Point Arrow = this.getKnobPosition();
+
+            // Draw pointer arrow that shows knob position 
+            Utility.DrawInsetCircle(ref gOffScreen, new Rectangle(Arrow.X - 3, Arrow.Y - 3, 6, 6), new Pen(this.BackColor));
+
+            //---------------------------------------------
+            // darw small and large scale                  
+            //---------------------------------------------
+            if (this._ShowSmallScale)
+            {
+                for (int i = Minimum; i <= Maximum; i += this._SmallChange)
                 {
-                    _gOffScreen.DrawLine(new Pen(ForeColor), GetMarkerPoint(0, i), GetMarkerPoint(0, i));
+                    gOffScreen.DrawLine(new Pen(this.ForeColor), getMarkerPoint(0, i), getMarkerPoint(3, i));
+                }
+            }
+            if (this._ShowLargeScale)
+            {
+                for (int i = Minimum; i <= Maximum; i += this._LargeChange)
+                {
+                    gOffScreen.DrawLine(new Pen(this.ForeColor), getMarkerPoint(0, i), getMarkerPoint(5, i));
                 }
             }
 
-            if (_showLargeScale)
-            {
-                for (int i = _minimum; i < _maximum; i += _largeChange)
-                {
-                    _gOffScreen.DrawLine(new Pen(ForeColor), GetMarkerPoint(0, i), GetMarkerPoint(0, i));
-                }
-            }
-
-            g.DrawImage(_offScreenImage, 0, 0);
+            // Drawimage on screen                    
+            g.DrawImage(OffScreenImage, 0, 0);
         }
 
         protected override void OnPaintBackground(PaintEventArgs e)
         {
-
+            // Empty To avoid Flickring due do background Drawing.
         }
-
         protected override void OnMouseDown(MouseEventArgs e)
         {
-            if (Classes.Drawing.Utility.IsPointInRectangle(new Point(e.X, e.Y), _rKnob)) _isKnobRotating = true;
+            if (Utility.isPointinRectangle(new Point(e.X, e.Y), rKnob))
+            {
+                // Start Rotation of knob         
+                this.isKnobRotating = true;
+            }
+
         }
 
-        protected override bool IsInputKey(Keys keyData)
+        //----------------------------------------------------------
+        // we need to override IsInputKey method to allow user to   
+        // use up, down, right and bottom keys other wise using this
+        // keys will change focus from current object to another    
+        // object on the form                                       
+        //----------------------------------------------------------
+        protected override bool IsInputKey(Keys key)
         {
-            switch (keyData)
+            switch (key)
             {
                 case Keys.Up:
                 case Keys.Down:
@@ -245,168 +251,257 @@ namespace KryptonToolkitSuiteExtendedCore.Components.Controls
                 case Keys.Left:
                     return true;
             }
-
-            return base.IsInputKey(keyData);
+            return base.IsInputKey(key);
         }
 
         protected override void OnMouseUp(MouseEventArgs e)
         {
-            _isKnobRotating = true;
-
-            if (Classes.Drawing.Utility.IsPointInRectangle(new Point(e.X, e.Y), _rKnob)) Value = GetValueFromPosition(new Point(e.X, e.Y));
-
-            Cursor = Cursors.Default;
+            // Stop rotation                   
+            this.isKnobRotating = false;
+            if (Utility.isPointinRectangle(new Point(e.X, e.Y), rKnob))
+            {
+                // get value                   
+                this.Value = this.getValueFromPosition(new Point(e.X, e.Y));
+            }
+            this.Cursor = Cursors.Default;
         }
 
         protected override void OnMouseMove(MouseEventArgs e)
         {
-            if (_isKnobRotating)
+            //--------------------------------------
+            //  Following Handles Knob Rotating     
+            //--------------------------------------
+            if (this.isKnobRotating == true)
             {
-                Cursor = Cursors.Hand;
-
+                this.Cursor = Cursors.Hand;
                 Point p = new Point(e.X, e.Y);
-
-                int positionValue = GetValueFromPosition(p);
-
-                Value = positionValue;
+                int posVal = this.getValueFromPosition(p);
+                Value = posVal;
             }
+
         }
 
         protected override void OnEnter(EventArgs e)
         {
-            _isFocused = true;
-
-            Refresh();
-
+            this._isFocused = true;
+            this.Refresh();
             base.OnEnter(new EventArgs());
         }
 
         protected override void OnLeave(EventArgs e)
         {
-            _isFocused = false;
-
-            Refresh();
-
+            this._isFocused = false;
+            this.Refresh();
             base.OnLeave(new EventArgs());
         }
-
         protected override void OnKeyDown(KeyEventArgs e)
         {
+
+            //--------------------------------------------------------
+            // Handles knob rotation with up,down,left and right keys 
+            //--------------------------------------------------------
             if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Right)
             {
-                if (_value < Maximum) Value = _value + 1;
-
-                Refresh();
+                if (_Value < Maximum) Value = _Value + 1;
+                this.Refresh();
             }
             else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.Left)
             {
-                if (_value > Minimum) Value = _value - 1;
-
-                Refresh();
+                if (_Value > Minimum) Value = _Value - 1;
+                this.Refresh();
             }
+        }
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (components != null)
+                {
+                    components.Dispose();
+                }
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            // 
+            // KnobControl
+            // 
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.Name = "KnobControl";
+            this.Resize += new System.EventHandler(this.KnobControl_Resize);
+
         }
         #endregion
 
-        #region Methods
-        private void SetDimensions()
+        private void setDimensions()
         {
-            int size = Width;
+            // get smaller from height and width
+            int size = this.Width;
+            if (this.Width > this.Height)
+            {
+                size = this.Height;
+            }
+            // allow 10% gap on all side to determine size of knob    
+            this.rKnob = new Rectangle((int)(size * 0.10), (int)(size * 0.10), (int)(size * 0.80), (int)(size * 0.80));
 
-            if (Width > Height) size = Height;
+            this.rScale = new Rectangle(2, 2, size - 4, size - 4);
 
-            _rKnob = new Rectangle((int)(size * 0.10), (int)(size * 0.10), (int)(size * 0.80), (int)(size * 0.80));
+            this.pKnob = new Point(rKnob.X + rKnob.Width / 2, rKnob.Y + rKnob.Height / 2);
+            // create offscreen image                                 
+            this.OffScreenImage = new Bitmap(this.Width, this.Height);
+            // create offscreen graphics                              
+            this.gOffScreen = Graphics.FromImage(OffScreenImage);
 
-            _rScale = new Rectangle(2, 2, size - 4, size - 4);
-
-            _pKnob = new Point(_rKnob.X + _rKnob.Width / 2, _rKnob.Y + _rKnob.Height / 2);
-
-            _offScreenImage = new Bitmap(Width, Height);
-
-            _gOffScreen = Graphics.FromImage(_offScreenImage);
-
-            _bKnob = new LinearGradientBrush(_rKnob, Classes.Drawing.Utility.GetLightColour(BackColor, 55), Classes.Drawing.Utility.GetDarkColour(BackColor, 55), LinearGradientMode.ForwardDiagonal);
-
-            _bKnobPoint = new LinearGradientBrush(_rKnob, Classes.Drawing.Utility.GetLightColour(BackColor, 55), Classes.Drawing.Utility.GetDarkColour(BackColor, 55), LinearGradientMode.ForwardDiagonal);
+            // create LinearGradientBrush for creating knob            
+            bKnob = new System.Drawing.Drawing2D.LinearGradientBrush(
+                rKnob, Utility.getLightColor(this.BackColor, 55), Utility.getDarkColor(this.BackColor, 55), LinearGradientMode.ForwardDiagonal);
+            // create LinearGradientBrush for knobPoint                
+            bKnobPoint = new System.Drawing.Drawing2D.LinearGradientBrush(
+                rKnob, Utility.getLightColor(this.BackColor, 55), Utility.getDarkColor(this.BackColor, 55), LinearGradientMode.ForwardDiagonal);
         }
 
-        private void InitialiseColours()
+        private void KnobControl_Resize(object sender, System.EventArgs e)
         {
-            BackColor = _palette.ColorTable.MenuStripGradientBegin;
+            setDimensions();
+            Refresh();
         }
 
-        private Point GetKnobPosition()
+        /// <summary>
+        /// gets knob position that is to be drawn on control.
+        /// </summary>
+        /// <returns>Point that describes current knob position</returns>
+        private Point getKnobPosition()
         {
-            double degree = 270 * Value / (Maximum - Minimum);
-
+            double degree = 270 * this.Value / (this.Maximum - this.Minimum);
             degree = (degree + 135) * Math.PI / 180;
 
-            Point positionPoint = new Point(0, 0);
-
-            positionPoint.X = (int)(Math.Cos(degree) * (_rKnob.Width / 2 - 10) + _rKnob.X + _rKnob.Width / 2);
-
-            positionPoint.Y = (int)(Math.Sin(degree) * (_rKnob.Width / 2 - 10) + _rKnob.Y + _rKnob.Height / 2);
-
-            return positionPoint;
+            Point Pos = new Point(0, 0);
+            Pos.X = (int)(Math.Cos(degree) * (rKnob.Width / 2 - 10) + rKnob.X + rKnob.Width / 2);
+            Pos.Y = (int)(Math.Sin(degree) * (rKnob.Width / 2 - 10) + rKnob.Y + rKnob.Height / 2);
+            return Pos;
         }
 
-        private Point GetMarkerPoint(int length, int Value)
+        /// <summary>
+        /// gets marker point required to draw scale marker.
+        /// </summary>
+        /// <param name="length">distance from center</param>
+        /// <param name="Value">value that is to be marked</param>
+        /// <returns>Point that describes marker position</returns>
+        private Point getMarkerPoint(int length, int Value)
         {
-            double degree = 270 * Value / (Maximum - Minimum);
-
+            double degree = 270 * Value / (this.Maximum - this.Minimum);
             degree = (degree + 135) * Math.PI / 180;
 
-            Point positionPoint = new Point(0, 0);
-
-            positionPoint.X = (int)(Math.Cos(degree) * (_rKnob.Width / 2 - length + 7) + _rKnob.X + _rKnob.Width / 2);
-
-            positionPoint.Y = (int)(Math.Sin(degree) * (_rKnob.Width / 2 - length + 7) + _rKnob.Y + _rKnob.Height / 2);
-
-            return positionPoint;
+            Point Pos = new Point(0, 0);
+            Pos.X = (int)(Math.Cos(degree) * (rKnob.Width / 2 - length + 7) + rKnob.X + rKnob.Width / 2);
+            Pos.Y = (int)(Math.Sin(degree) * (rKnob.Width / 2 - length + 7) + rKnob.Y + rKnob.Height / 2);
+            return Pos;
         }
 
-        private int GetValueFromPosition(Point p)
+        /// <summary>
+        /// converts geomatrical position in to value..
+        /// </summary>
+        /// <param name="p">Point that is to be converted</param>
+        /// <returns>Value derived from position</returns>
+        private int getValueFromPosition(Point p)
         {
             double degree = 0.0;
-
             int v = 0;
-
-            if (p.X <= _pKnob.X)
+            if (p.X <= pKnob.X)
             {
-                degree = (double)(_pKnob.Y - p.Y) / (double)(_pKnob.X - p.X);
-
+                degree = (double)(pKnob.Y - p.Y) / (double)(pKnob.X - p.X);
                 degree = Math.Atan(degree);
-
                 degree = (degree) * (180 / Math.PI) + 45;
-
                 v = (int)(degree * (this.Maximum - this.Minimum) / 270);
 
             }
-            else if (p.X > _pKnob.X)
+            else if (p.X > pKnob.X)
             {
-                degree = (double)(p.Y - _pKnob.Y) / (double)(p.X - _pKnob.X);
-
+                degree = (double)(p.Y - pKnob.Y) / (double)(p.X - pKnob.X);
                 degree = Math.Atan(degree);
-
                 degree = 225 + (degree) * (180 / Math.PI);
-
                 v = (int)(degree * (this.Maximum - this.Minimum) / 270);
 
             }
-
             if (v > Maximum) v = Maximum;
-
             if (v < Minimum) v = Minimum;
-
             return v;
 
         }
-        #endregion
+    }
+    #endregion
 
-        private void KryptonKnobControlEnhanced_Resize(object sender, EventArgs e)
+    #region Utility
+    /// <summary>
+    /// Summary description for Utility.
+    /// </summary>
+    public class Utility
+    {
+        public static Color getDarkColor(Color c, byte d)
         {
-            SetDimensions();
+            byte r = 0;
+            byte g = 0;
+            byte b = 0;
 
-            Refresh();
+            if (c.R > d) r = (byte)(c.R - d);
+            if (c.G > d) g = (byte)(c.G - d);
+            if (c.B > d) b = (byte)(c.B - d);
+
+            Color c1 = Color.FromArgb(r, g, b);
+            return c1;
+        }
+        public static Color getLightColor(Color c, byte d)
+        {
+            byte r = 255;
+            byte g = 255;
+            byte b = 255;
+
+            if (c.R + d < 255) r = (byte)(c.R + d);
+            if (c.G + d < 255) g = (byte)(c.G + d);
+            if (c.B + d < 255) b = (byte)(c.B + d);
+
+            Color c2 = Color.FromArgb(r, g, b);
+            return c2;
+        }
+
+        /// <summary>
+        /// Method which checks is particular point is in rectangle
+        /// </summary>
+        /// <param name="p">Point to be Chaecked</param>
+        /// <param name="r">Rectangle</param>
+        /// <returns>true is Point is in rectangle, else false</returns>
+        public static bool isPointinRectangle(Point p, Rectangle r)
+        {
+            bool flag = false;
+            if (p.X > r.X && p.X < r.X + r.Width && p.Y > r.Y && p.Y < r.Y + r.Height)
+            {
+                flag = true;
+            }
+            return flag;
+
+        }
+        public static void DrawInsetCircle(ref Graphics g, Rectangle r, Pen p)
+        {
+            Pen p1 = new Pen(getDarkColor(p.Color, 50));
+            Pen p2 = new Pen(getLightColor(p.Color, 50));
+            for (int i = 0; i < p.Width; i++)
+            {
+                Rectangle r1 = new Rectangle(r.X + i, r.Y + i, r.Width - i * 2, r.Height - i * 2);
+                g.DrawArc(p2, r1, -45, 180);
+                g.DrawArc(p1, r1, 135, 180);
+            }
         }
     }
+    #endregion
 }

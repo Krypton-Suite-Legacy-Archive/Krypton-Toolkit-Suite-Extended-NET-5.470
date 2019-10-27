@@ -62,13 +62,29 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ======
 
-2019-11-01 Build 15xx - November Update
+## 2020-01-01 Build 20xx - January 2020 Update
+* Changed year from `2019` to `2020`
+
+======
+
+## 2019-12-01 Build 16xx - December 2019 Update
+* Implemented [#98](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/98), Add Border Colour Control Properties
+* Implemented [#100](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/100), Progress bar
+
+======
+
+## 2019-11-01 Build 1576 - November 2019 Update
 * Fixed [#102](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/102), `PInvokeImbance` memory leak, courtesy of [zenglanmu](https://github.com/zenglanmu)
 * New Krypton about dialog box
+* New screen colour picker
+* New Visual Studio 2019 inspired theme
+* New themes by Byte#7189
+* Reorganised custom theme directory for better accessibility
+* General bugfixes
 
 ======-->
 
-## 2019-10-01 Build 1400 - October Update
+## 2019-10-01 Build 1400 - October 2019 Update
 * You can now have granular control over the appearance over the Krypton components, [#95](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/95) & [#89](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/89), labelled as `KryptonExtendedToolkit5470StandardControlsExtendedModule`
 * More [#96](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/96)
 
@@ -79,7 +95,7 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ======
 
-## 2019-09-01 Build 1331 - September Update
+## 2019-09-01 Build 1331 - September 2019 Update
 * More item and project templates (floating MenuStrips & ToolStrip templates)
 * More toolbar features in `KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule`
 * Define corner radius for selected controls, [#96](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/96)
@@ -87,7 +103,7 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ======
 
-## 2019-08-12 Build 1216 - August Update
+## 2019-08-12 Build 1216 - August 2019 Update
 * Added `ExtendedKryptonColourButton` control with a kryptonised custom colour UI
 * Started componentising toolkit
 * Modularisation of the toolkit. These modules are:
@@ -107,7 +123,7 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ======
 
-## 2019-07-01 Build 1180 - July Update
+## 2019-07-01 Build 1180 - July 2019 Update
 * Implement [TaskDialog](https://github.com/kpreisser/TaskDialog) by [Konstantin Preißer](https://github.com/kpreisser)
 * Floating Menu & Tool strips - Bought back one of the pre Office 2007 features (**IMPORTANT:** Always set the `GripStyle` to **visible** on `FloatingMenuStrip`!)
 * Fixed issue [#79](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/79), How many MessageBoxes are being exported!?! and which work?
@@ -121,7 +137,7 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ======
 
-## 2019-06-01 Build 1030 - June Update
+## 2019-06-01 Build 1030 - June 2019 Update
 * New `issue` templates
 * Implemented repository tags for better GitHub SEO
 * Implement `WindowsAPICodePackModel.cs` class for dealing with **WindowsAPICodePack** features 
@@ -137,7 +153,7 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ======
 
-## 2019-05-01 Build 934 - May Update
+## 2019-05-01 Build 934 - May 2019 Update
 * Outlook 2003 style toast notification
 * File checksum calculator (MD5, SHA-1, SHA-256, SHA-384, SHA-512 and RIPEMD-160)
 * New `KryptonPaletteManager` class for dealing with creating custom `KryptonPalette`'s
@@ -155,7 +171,7 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ======
 
-## 2019-04-01 Build 855 April Update
+## 2019-04-01 Build 855 - April 2019 Update
 * Build 855 (build date Monday 1st, April 2019) is now available on NuGet
 * New palette theme selector
 * New `KryptonToastNotification` window
