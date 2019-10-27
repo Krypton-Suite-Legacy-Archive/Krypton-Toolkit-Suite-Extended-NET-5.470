@@ -74,7 +74,7 @@ You can check out the pre-built demo application from downloading it [here](http
 ======
 
 ## 2019-11-01 Build 1576 - November 2019 Update
-* Fixed [#102](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/102), `PInvokeImbance` memory leak, courtesy of [zenglanmu](https://github.com/zenglanmu)
+* Fixed [#102](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/102), `PInvokeImbalance` memory leak, courtesy of [zenglanmu](https://github.com/zenglanmu)
 * New Krypton about dialog box
 * New screen colour picker
 * New Visual Studio 2019 inspired theme
