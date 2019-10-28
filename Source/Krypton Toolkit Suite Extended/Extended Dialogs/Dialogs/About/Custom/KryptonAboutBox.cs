@@ -30,7 +30,7 @@ namespace ExtendedDialogs.Dialogs.About.Custom
         private ExtendedStandardControls.KryptonButtonExtended kbtnLicenseInformation;
         private ExtendedStandardControls.KryptonButtonExtended kbtnApplicationInformation;
         private ExtendedStandardControls.KryptonButtonExtended kbtnCopyrightInformation;
-        private ExtendedStandardControls.KryptonButtonExtended kbeClose;
+        private ExtendedStandardControls.KryptonButtonExtended kbtnClose;
         private KryptonToolkitSuiteExtendedCore.CircularPictureBox cbxApplicationIcon;
         private System.Windows.Forms.PictureBox pbxApplicationLogo;
 
@@ -41,7 +41,7 @@ namespace ExtendedDialogs.Dialogs.About.Custom
             this.kbtnLicenseInformation = new ExtendedStandardControls.KryptonButtonExtended();
             this.kbtnApplicationInformation = new ExtendedStandardControls.KryptonButtonExtended();
             this.kbtnCopyrightInformation = new ExtendedStandardControls.KryptonButtonExtended();
-            this.kbeClose = new ExtendedStandardControls.KryptonButtonExtended();
+            this.kbtnClose = new ExtendedStandardControls.KryptonButtonExtended();
             this.panel1 = new System.Windows.Forms.Panel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.cbxApplicationIcon = new KryptonToolkitSuiteExtendedCore.CircularPictureBox();
@@ -63,7 +63,7 @@ namespace ExtendedDialogs.Dialogs.About.Custom
             this.kryptonPanel1.Controls.Add(this.kbtnLicenseInformation);
             this.kryptonPanel1.Controls.Add(this.kbtnApplicationInformation);
             this.kryptonPanel1.Controls.Add(this.kbtnCopyrightInformation);
-            this.kryptonPanel1.Controls.Add(this.kbeClose);
+            this.kryptonPanel1.Controls.Add(this.kbtnClose);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 604);
             this.kryptonPanel1.Name = "kryptonPanel1";
@@ -74,7 +74,7 @@ namespace ExtendedDialogs.Dialogs.About.Custom
             // 
             this.kbtnTechnicalInformation.AutoSize = true;
             this.kbtnTechnicalInformation.Image = null;
-            this.kbtnTechnicalInformation.Location = new System.Drawing.Point(617, 11);
+            this.kbtnTechnicalInformation.Location = new System.Drawing.Point(617, 10);
             this.kbtnTechnicalInformation.LongTextTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.kbtnTechnicalInformation.Name = "kbtnTechnicalInformation";
             this.kbtnTechnicalInformation.OverrideDefault.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -346,74 +346,74 @@ namespace ExtendedDialogs.Dialogs.About.Custom
             this.kbtnCopyrightInformation.Values.Text = "&Copyright Information";
             this.kbtnCopyrightInformation.Click += new System.EventHandler(this.kbtnCopyrightInformation_Click);
             // 
-            // kbeClose
+            // kbtnClose
             // 
-            this.kbeClose.AutoSize = true;
-            this.kbeClose.Image = null;
-            this.kbeClose.Location = new System.Drawing.Point(1289, 10);
-            this.kbeClose.LongTextTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbeClose.Name = "kbeClose";
-            this.kbeClose.OverrideDefault.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbeClose.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbeClose.OverrideDefaultBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.OverrideDefaultBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.OverrideDefaultLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.OverrideDefaultLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.OverrideDefaultShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.OverrideDefaultShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.OverrideFocus.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbeClose.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbeClose.OverrideFocusBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.OverrideFocusBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.OverrideFocusLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.OverrideFocusLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.OverrideFocusShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.OverrideFocusShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbeClose.Size = new System.Drawing.Size(90, 28);
-            this.kbeClose.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbeClose.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbeClose.StateCommonBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StateCommonBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StateCommonLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StateCommonLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StateCommonShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StateCommonShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StateDisabled.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbeClose.StateDisabled.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbeClose.StateDisabledBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StateDisabledBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StateDisabledLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StateDisabledLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StateDisabledShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StateDisabledShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StateNormal.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbeClose.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbeClose.StateNormalBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StateNormalBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StateNormalLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StateNormalLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StateNormalShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StateNormalShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StatePressed.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbeClose.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbeClose.StatePressedBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StatePressedBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StatePressedLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StatePressedLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StatePressedShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StatePressedShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StateTracking.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbeClose.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbeClose.StateTrackingBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StateTrackingBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StateTrackingLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StateTrackingLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.StateTrackingShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbeClose.StateTrackingShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbeClose.TabIndex = 1;
-            this.kbeClose.Values.Text = "Cl&ose";
-            this.kbeClose.Click += new System.EventHandler(this.kbeClose_Click);
+            this.kbtnClose.AutoSize = true;
+            this.kbtnClose.Image = null;
+            this.kbtnClose.Location = new System.Drawing.Point(1289, 10);
+            this.kbtnClose.LongTextTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnClose.Name = "kbtnClose";
+            this.kbtnClose.OverrideDefault.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnClose.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnClose.OverrideDefaultBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.OverrideDefaultBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.OverrideDefaultLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.OverrideDefaultLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.OverrideDefaultShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.OverrideDefaultShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.OverrideFocus.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnClose.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnClose.OverrideFocusBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.OverrideFocusBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.OverrideFocusLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.OverrideFocusLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.OverrideFocusShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.OverrideFocusShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnClose.Size = new System.Drawing.Size(90, 28);
+            this.kbtnClose.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnClose.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnClose.StateCommonBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StateCommonBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StateCommonLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StateCommonLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StateCommonShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StateCommonShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StateDisabled.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnClose.StateDisabled.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnClose.StateDisabledBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StateDisabledBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StateDisabledLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StateDisabledLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StateDisabledShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StateDisabledShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StateNormal.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnClose.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnClose.StateNormalBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StateNormalBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StateNormalLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StateNormalLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StateNormalShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StateNormalShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StatePressed.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnClose.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnClose.StatePressedBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StatePressedBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StatePressedLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StatePressedLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StatePressedShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StatePressedShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StateTracking.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtnClose.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnClose.StateTrackingBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StateTrackingBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StateTrackingLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StateTrackingLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.StateTrackingShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtnClose.StateTrackingShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtnClose.TabIndex = 1;
+            this.kbtnClose.Values.Text = "Cl&ose";
+            this.kbtnClose.Click += new System.EventHandler(this.kbeClose_Click);
             // 
             // panel1
             // 
@@ -445,6 +445,7 @@ namespace ExtendedDialogs.Dialogs.About.Custom
             this.cbxApplicationIcon.Size = new System.Drawing.Size(512, 512);
             this.cbxApplicationIcon.TabIndex = 4;
             this.cbxApplicationIcon.TabStop = false;
+            this.cbxApplicationIcon.ToolTipValues = null;
             // 
             // klbleCompanyName
             // 
@@ -756,31 +757,218 @@ namespace ExtendedDialogs.Dialogs.About.Custom
 
         private void AdaptWindow(KryptonAboutBoxLayoutButtonType layoutButtonType)
         {
+            AdaptButtonVisibility(layoutButtonType);
+
             switch (layoutButtonType)
             {
                 case KryptonAboutBoxLayoutButtonType.CLOSEONLY:
+                    RelocateControl(kbtnClose, new Point(644, 10));
                     break;
                 case KryptonAboutBoxLayoutButtonType.CLOSEANDCOPYRIGHT:
+                    RelocateControl(kbtnClose, new Point(1289, 10));
+
+                    RelocateControl(kbtnCopyrightInformation, new Point(12, 10));
                     break;
                 case KryptonAboutBoxLayoutButtonType.CLOSECOPYRIGHTANDTECHNICAL:
+                    RelocateControl(kbtnClose, new Point(1289, 10));
                     break;
                 case KryptonAboutBoxLayoutButtonType.CLOSECOPYRIGHTTECHNICALANDLICENSE:
+                    RelocateControl(kbtnClose, new Point(1289, 10));
                     break;
                 case KryptonAboutBoxLayoutButtonType.CLOSECOPYRIGHTTECHNICALANDDESCRIPTION:
+                    RelocateControl(kbtnClose, new Point(1289, 10));
+
+                    RelocateControl(kbtnApplicationInformation, new Point(12, 10));
+
+                    RelocateControl(kbtnCopyrightInformation, new Point(191, 10));
+
+                    RelocateControl(kbtnTechnicalInformation, new Point(1124, 10));
                     break;
                 case KryptonAboutBoxLayoutButtonType.CLOSEANDTECHNICAL:
+                    RelocateControl(kbtnClose, new Point(1289, 10));
+
+                    RelocateControl(kbtnTechnicalInformation, new Point(12, 10));
                     break;
                 case KryptonAboutBoxLayoutButtonType.CLOSETECHNICALANDLICENSE:
+                    RelocateControl(kbtnClose, new Point(1289, 10));
+
+                    RelocateControl(kbtnTechnicalInformation, new Point(12, 10));
+
+                    RelocateControl(kbtnLicenseInformation, new Point(191, 10));
                     break;
                 case KryptonAboutBoxLayoutButtonType.CLOSETECHNICALANDDESCRIPTION:
+                    RelocateControl(kbtnClose, new Point(1289, 10));
+
+                    RelocateControl(kbtnTechnicalInformation, new Point(12, 10));
+
+                    RelocateControl(kbtnApplicationInformation, new Point(191, 10));
                     break;
                 case KryptonAboutBoxLayoutButtonType.CLOSEANDLICENSE:
+                    RelocateControl(kbtnClose, new Point(1289, 10));
+
+                    RelocateControl(kbtnLicenseInformation, new Point(12, 10));
                     break;
                 case KryptonAboutBoxLayoutButtonType.CLOSELICENSEANDDESCRIPTION:
+                    RelocateControl(kbtnClose, new Point(1289, 10));
+
+                    RelocateControl(kbtnApplicationInformation, new Point(12, 10));
+
+                    RelocateControl(kbtnLicenseInformation, new Point(191, 10));
                     break;
                 case KryptonAboutBoxLayoutButtonType.CLOSEANDDESCRIPTION:
+                    RelocateControl(kbtnClose, new Point(1289, 10));
+
+                    RelocateControl(kbtnApplicationInformation, new Point(12, 10));
                     break;
                 case KryptonAboutBoxLayoutButtonType.ALL:
+                    RelocateControl(kbtnApplicationInformation, new Point(12, 10));
+
+                    RelocateControl(kbtnLicenseInformation, new Point(191, 10));
+
+                    RelocateControl(kbtnTechnicalInformation, new Point(617, 10));
+
+                    RelocateControl(kbtnCopyrightInformation, new Point(1120, 10));
+
+                    RelocateControl(kbtnClose, new Point(1289, 10));
+                    break;
+            }
+        }
+
+        private void AdaptButtonVisibility(KryptonAboutBoxLayoutButtonType buttonType)
+        {
+            switch (buttonType)
+            {
+                case KryptonAboutBoxLayoutButtonType.CLOSEONLY:
+                    kbtnClose.Visible = true;
+
+                    kbtnApplicationInformation.Visible = false;
+
+                    kbtnCopyrightInformation.Visible = false;
+
+                    kbtnLicenseInformation.Visible = false;
+
+                    kbtnTechnicalInformation.Visible = false;
+                    break;
+                case KryptonAboutBoxLayoutButtonType.CLOSEANDCOPYRIGHT:
+                    kbtnClose.Visible = true;
+
+                    kbtnApplicationInformation.Visible = false;
+
+                    kbtnCopyrightInformation.Visible = true;
+
+                    kbtnLicenseInformation.Visible = false;
+
+                    kbtnTechnicalInformation.Visible = false;
+                    break;
+                case KryptonAboutBoxLayoutButtonType.CLOSECOPYRIGHTANDTECHNICAL:
+                    kbtnClose.Visible = true;
+
+                    kbtnApplicationInformation.Visible = false;
+
+                    kbtnCopyrightInformation.Visible = true;
+
+                    kbtnLicenseInformation.Visible = false;
+
+                    kbtnTechnicalInformation.Visible = true;
+                    break;
+                case KryptonAboutBoxLayoutButtonType.CLOSECOPYRIGHTTECHNICALANDLICENSE:
+                    kbtnClose.Visible = true;
+
+                    kbtnApplicationInformation.Visible = false;
+
+                    kbtnCopyrightInformation.Visible = true;
+
+                    kbtnLicenseInformation.Visible = true;
+
+                    kbtnTechnicalInformation.Visible = true;
+                    break;
+                case KryptonAboutBoxLayoutButtonType.CLOSECOPYRIGHTTECHNICALANDDESCRIPTION:
+                    kbtnClose.Visible = true;
+
+                    kbtnApplicationInformation.Visible = true;
+
+                    kbtnCopyrightInformation.Visible = true;
+
+                    kbtnLicenseInformation.Visible = false;
+
+                    kbtnTechnicalInformation.Visible = true;
+                    break;
+                case KryptonAboutBoxLayoutButtonType.CLOSEANDTECHNICAL:
+                    kbtnClose.Visible = true;
+
+                    kbtnApplicationInformation.Visible = false;
+
+                    kbtnCopyrightInformation.Visible = false;
+
+                    kbtnLicenseInformation.Visible = false;
+
+                    kbtnTechnicalInformation.Visible = true;
+                    break;
+                case KryptonAboutBoxLayoutButtonType.CLOSETECHNICALANDLICENSE:
+                    kbtnClose.Visible = true;
+
+                    kbtnApplicationInformation.Visible = false;
+
+                    kbtnCopyrightInformation.Visible = false;
+
+                    kbtnLicenseInformation.Visible = true;
+
+                    kbtnTechnicalInformation.Visible = true;
+                    break;
+                case KryptonAboutBoxLayoutButtonType.CLOSETECHNICALANDDESCRIPTION:
+                    kbtnClose.Visible = true;
+
+                    kbtnApplicationInformation.Visible = true;
+
+                    kbtnCopyrightInformation.Visible = false;
+
+                    kbtnLicenseInformation.Visible = false;
+
+                    kbtnTechnicalInformation.Visible = true;
+                    break;
+                case KryptonAboutBoxLayoutButtonType.CLOSEANDLICENSE:
+                    kbtnClose.Visible = true;
+
+                    kbtnApplicationInformation.Visible = false;
+
+                    kbtnCopyrightInformation.Visible = false;
+
+                    kbtnLicenseInformation.Visible = true;
+
+                    kbtnTechnicalInformation.Visible = false;
+                    break;
+                case KryptonAboutBoxLayoutButtonType.CLOSELICENSEANDDESCRIPTION:
+                    kbtnClose.Visible = true;
+
+                    kbtnApplicationInformation.Visible = true;
+
+                    kbtnCopyrightInformation.Visible = false;
+
+                    kbtnLicenseInformation.Visible = true;
+
+                    kbtnTechnicalInformation.Visible = false;
+                    break;
+                case KryptonAboutBoxLayoutButtonType.CLOSEANDDESCRIPTION:
+                    kbtnClose.Visible = true;
+
+                    kbtnApplicationInformation.Visible = true;
+
+                    kbtnCopyrightInformation.Visible = false;
+
+                    kbtnLicenseInformation.Visible = false;
+
+                    kbtnTechnicalInformation.Visible = false;
+                    break;
+                case KryptonAboutBoxLayoutButtonType.ALL:
+                    kbtnClose.Visible = true;
+
+                    kbtnApplicationInformation.Visible = true;
+
+                    kbtnCopyrightInformation.Visible = true;
+
+                    kbtnLicenseInformation.Visible = true;
+
+                    kbtnTechnicalInformation.Visible = true;
                     break;
                 default:
                     break;
