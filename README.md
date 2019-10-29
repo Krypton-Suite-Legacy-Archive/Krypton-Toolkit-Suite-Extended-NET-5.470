@@ -81,6 +81,7 @@ You can check out the pre-built demo application from downloading it [here](http
 * New themes by Byte#7189
 * Reorganised custom theme directory for better accessibility
 * General bugfixes
+* **Support for .NET Framework 4.0 has now ended!**
 
 ======-->
 
