@@ -72,6 +72,7 @@ You can check out the pre-built demo application from downloading it [here](http
 * Implemented [#100](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/100), Progress bar
 
 ======
+-->
 
 ## 2019-11-01 Build 1576 - November 2019 Update
 * Fixed [#102](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/102), `PInvokeImbalance` memory leak, courtesy of [zenglanmu](https://github.com/zenglanmu)
@@ -82,7 +83,7 @@ You can check out the pre-built demo application from downloading it [here](http
 * Reorganised custom theme directory for better accessibility
 * General bugfixes
 
-======-->
+======
 
 ## 2019-10-01 Build 1400 - October 2019 Update
 * You can now have granular control over the appearance over the Krypton components, [#95](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/95) & [#89](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/89), labelled as `KryptonExtendedToolkit5470StandardControlsExtendedModule`
