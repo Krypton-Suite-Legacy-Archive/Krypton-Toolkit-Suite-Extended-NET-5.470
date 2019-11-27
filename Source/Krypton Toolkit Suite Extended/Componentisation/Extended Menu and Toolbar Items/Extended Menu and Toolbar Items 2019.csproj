@@ -53,6 +53,9 @@
     <Compile Include="Controls\KryptonColourButtonToolStripMenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\KryptonLoadingCircleToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\KryptonNumericUpDownToolStripItem.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -90,6 +93,10 @@
     <ProjectReference Include="..\..\Shared\Global Utilities\Global Utilities 2019.csproj">
       <Project>{124496e1-e8fd-4796-b194-8fd8db8a1896}</Project>
       <Name>Global Utilities 2019</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Extended Toolkit Core 2019.csproj">
+      <Project>{5F28100D-C9A0-4361-B780-7AC132A421DF}</Project>
+      <Name>Extended Toolkit Core 2019</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

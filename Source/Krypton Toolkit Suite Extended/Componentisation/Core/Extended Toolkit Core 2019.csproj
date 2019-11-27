@@ -94,6 +94,9 @@
     <Compile Include="Components\Controls\KryptonListView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\Controls\KryptonLoadingCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Components\Controls\KryptonMessageBoxExtendedComoponent.cs">
       <SubType>Component</SubType>
     </Compile>
