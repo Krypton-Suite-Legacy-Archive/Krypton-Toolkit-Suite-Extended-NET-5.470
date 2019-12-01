@@ -66,15 +66,15 @@ You can check out the pre-built demo application from downloading it [here](http
 * Changed year from `2019` to `2020`
 
 ======
+-->
 
-## 2019-12-01 Build 16xx - December 2019 Update
+## 2019-12-01 Build 1660 - December 2019 Update
 * Implemented [#98](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/98), Add Border Colour Control Properties
 * Implemented [#100](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/100), Progress bar
 * Made it easier to use `KryptonUACElevatedButton`, elevation will now occur on `OnClick` if `ProcessName` is populated
 * Directory changes
 
 ======
--->
 
 ## 2019-11-01 Build 1576 - November 2019 Update
 * Fixed [#102](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/102), `PInvokeImbalance` memory leak, courtesy of [zenglanmu](https://github.com/zenglanmu)
