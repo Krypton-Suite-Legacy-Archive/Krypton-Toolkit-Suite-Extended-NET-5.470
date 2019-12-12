@@ -63,3 +63,6 @@
 ## TreeViews
 
 ![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/TreeViews.png)
+
+## Input Box Extended
+![](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Examples/KryptonInputBoxExtended.png)
