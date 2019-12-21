@@ -90,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="KryptonToolkitSuite5470CoreModule">
-      <Version>5.470.1300</Version>
+      <Version>5.470.2000</Version>
     </PackageReference>
     <PackageReference Include="NLog">
       <Version>4.6.8</Version>

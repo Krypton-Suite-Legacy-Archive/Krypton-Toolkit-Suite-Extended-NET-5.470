@@ -394,7 +394,7 @@ namespace ExtendedControls.Components.ScintillaNET.Classes
         public const int SCI_GETSELALPHA = 2477;
         public const int SCI_SETSELALPHA = 2478;
         public const int SCI_GETSELEOLFILLED = 2479;
-        public const int SCI_SETSELEOLFILLED = 2480;
+        public const int SCI_SETSELEOLFILLED = 2470;
         public const int SCI_SETCARETFORE = 2069;
         public const int SCI_ASSIGNCMDKEY = 2070;
         public const int SCI_CLEARCMDKEY = 2071;

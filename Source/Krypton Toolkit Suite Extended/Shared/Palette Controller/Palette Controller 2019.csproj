@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C0A19DFB-B380-4805-BCF0-7C5639E3553F}</ProjectGuid>
+    <ProjectGuid>{C0A19DFB-B380-4705-BCF0-7C5639E3553F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>PaletteController</RootNamespace>
     <AssemblyName>Palette Controller</AssemblyName>

@@ -108,7 +108,10 @@ namespace KryptonOutlookGrid.Classes
         /// </summary>
         protected IComparer itemsComparer;
 
-
+        /// <summary>
+        ///  Background for group
+        /// </summary>
+        protected PaletteBack back;
         #endregion
 
         #region "Constructor"
@@ -131,6 +134,7 @@ namespace KryptonOutlookGrid.Classes
             XXXItemsText = LanguageManager.Instance.GetStringGB("XXXItems");
             allowHiddenWhenGrouped = true;
             sortBySummaryCount = false;
+            back = new PaletteBack(null, null);
         }
 
         /// <summary>
@@ -432,6 +436,14 @@ namespace KryptonOutlookGrid.Classes
             set { itemsComparer = value; }
         }
 
+        /// <summary>
+        /// Background for group
+        /// </summary>
+        public PaletteBack Back
+        {
+            get { return back; }
+        }
+
         #endregion
 
         #region ICloneable Members
@@ -443,18 +455,7 @@ namespace KryptonOutlookGrid.Classes
         public virtual object Clone()
         {
             OutlookGridDefaultGroup gr = new OutlookGridDefaultGroup(parentGroup);
-            gr.column = column;
-            gr.val = val;
-            gr.collapsed = collapsed;
-            //gr.text = this.text;
-            gr.height = height;
-            gr.groupImage = groupImage;
-            gr.formatStyle = formatStyle;
-            gr.xXXItemsText = XXXItemsText;
-            gr.oneItemText = OneItemText;
-            gr.allowHiddenWhenGrouped = allowHiddenWhenGrouped;
-            gr.sortBySummaryCount = sortBySummaryCount;
-
+            CloneMembers(gr);
             return gr;
         }
 
@@ -544,6 +545,39 @@ namespace KryptonOutlookGrid.Classes
             return compareResult;
         }
         #endregion
+
+        #region Protected
+        /// <summary>
+        /// Clones every member
+        /// </summary>
+        /// <param name="group">Destination group</param>
+        protected void CloneMembers(OutlookGridDefaultGroup group)
+        {
+            group.column = column;
+            group.val = val;
+            group.collapsed = collapsed;
+            //group.text = this.text;
+            group.height = height;
+            group.groupImage = groupImage;
+            group.formatStyle = formatStyle;
+            group.xXXItemsText = XXXItemsText;
+            group.oneItemText = OneItemText;
+            group.allowHiddenWhenGrouped = allowHiddenWhenGrouped;
+            group.sortBySummaryCount = sortBySummaryCount;
+            group.back = new PaletteBack(null, null);
+            group.back.Color1 = Back.Color1;
+            group.back.Color2 = Back.Color2;
+            group.back.ColorAlign = Back.ColorAlign;
+            group.back.ColorAngle = Back.ColorAngle;
+            group.back.ColorStyle = Back.ColorStyle;
+            group.back.Draw = Back.Draw;
+            group.back.GraphicsHint = Back.GraphicsHint;
+            group.back.Image = Back.Image;
+            group.back.ImageAlign = Back.ImageAlign;
+            group.back.ImageStyle = Back.ImageStyle;
+        }
+        #endregion
+
     }
 
     /// <summary>
@@ -619,21 +653,21 @@ namespace KryptonOutlookGrid.Classes
         public override object Clone()
         {
             OutlookGridAlphabeticGroup gr = new OutlookGridAlphabeticGroup(parentGroup);
-
-            gr.column = column;
-            gr.val = val;
-            gr.collapsed = collapsed;
-            //gr.text = this.text;
-            gr.height = height;
-            gr.groupImage = groupImage;
-            gr.formatStyle = formatStyle;
-            gr.xXXItemsText = XXXItemsText;
-            gr.oneItemText = OneItemText;
-            gr.allowHiddenWhenGrouped = allowHiddenWhenGrouped;
-            gr.sortBySummaryCount = sortBySummaryCount;
+            CloneMembers(gr);
             return gr;
         }
+        #endregion
 
+        #region Protected
+        /// <summary>
+        /// Clones every member
+        /// </summary>
+        /// <param name="group">Destination group</param>
+        protected void CloneMembers(OutlookGridAlphabeticGroup group)
+        {
+            base.CloneMembers(group);
+            // no additional members
+        }
         #endregion
 
         #region IComparable Members
@@ -831,19 +865,7 @@ namespace KryptonOutlookGrid.Classes
         public override object Clone()
         {
             OutlookGridDateTimeGroup gr = new OutlookGridDateTimeGroup(parentGroup);
-            gr.column = column;
-            gr.val = val;
-            gr.collapsed = collapsed;
-            //gr.text = this.text;
-            gr.height = height;
-            gr.groupImage = groupImage;
-            gr.formatStyle = formatStyle;
-            gr.xXXItemsText = XXXItemsText;
-            gr.oneItemText = OneItemText;
-            gr.allowHiddenWhenGrouped = allowHiddenWhenGrouped;
-            gr.sortBySummaryCount = sortBySummaryCount;
-            gr.Interval = Interval;
-
+            CloneMembers(gr);
             return gr;
         }
 
@@ -927,5 +949,17 @@ namespace KryptonOutlookGrid.Classes
             }
         }
         #endregion IComparable Members
+
+        #region Protected
+        /// <summary>
+        /// Clones every member
+        /// </summary>
+        /// <param name="group">Destination group</param>
+        protected void CloneMembers(OutlookGridDateTimeGroup group)
+        {
+            base.CloneMembers(group);
+            group.Interval = Interval;
+        }
+        #endregion
     }
 }

@@ -358,7 +358,7 @@
             // knumAlphaChannelValue
             // 
             this.knumAlphaChannelValue.Enabled = false;
-            this.knumAlphaChannelValue.Location = new System.Drawing.Point(214, 480);
+            this.knumAlphaChannelValue.Location = new System.Drawing.Point(214, 470);
             this.knumAlphaChannelValue.Maximum = new decimal(new int[] {
             255,
             0,
@@ -388,7 +388,7 @@
             // knumBlueChannelValue
             // 
             this.knumBlueChannelValue.Enabled = false;
-            this.knumBlueChannelValue.Location = new System.Drawing.Point(507, 480);
+            this.knumBlueChannelValue.Location = new System.Drawing.Point(507, 470);
             this.knumBlueChannelValue.Maximum = new decimal(new int[] {
             255,
             0,
@@ -405,7 +405,7 @@
             // knumGreenChannelValue
             // 
             this.knumGreenChannelValue.Enabled = false;
-            this.knumGreenChannelValue.Location = new System.Drawing.Point(415, 480);
+            this.knumGreenChannelValue.Location = new System.Drawing.Point(415, 470);
             this.knumGreenChannelValue.Maximum = new decimal(new int[] {
             255,
             0,
@@ -421,7 +421,7 @@
             // knumRedChannelValue
             // 
             this.knumRedChannelValue.Enabled = false;
-            this.knumRedChannelValue.Location = new System.Drawing.Point(324, 480);
+            this.knumRedChannelValue.Location = new System.Drawing.Point(324, 470);
             this.knumRedChannelValue.Maximum = new decimal(new int[] {
             255,
             0,

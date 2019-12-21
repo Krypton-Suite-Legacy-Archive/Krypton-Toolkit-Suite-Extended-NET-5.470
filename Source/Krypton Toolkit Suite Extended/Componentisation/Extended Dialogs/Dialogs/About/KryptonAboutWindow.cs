@@ -7,7 +7,6 @@
  */
 #endregion
 
-
 using ComponentFactory.Krypton.Toolkit;
 using System.Drawing;
 using System.Reflection;

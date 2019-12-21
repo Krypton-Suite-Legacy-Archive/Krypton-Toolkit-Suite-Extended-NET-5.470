@@ -1883,6 +1883,46 @@ namespace ToolkitResources.Images {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap InputBoxError {
+            get {
+                object obj = ResourceManager.GetObject("InputBoxError", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InputBoxExclamation {
+            get {
+                object obj = ResourceManager.GetObject("InputBoxExclamation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InputBoxInformation {
+            get {
+                object obj = ResourceManager.GetObject("InputBoxInformation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InputBoxQuestion {
+            get {
+                object obj = ResourceManager.GetObject("InputBoxQuestion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Interface_16x {
             get {
                 object obj = ResourceManager.GetObject("Interface_16x", resourceCulture);
@@ -2336,6 +2376,16 @@ namespace ToolkitResources.Images {
         internal static System.Drawing.Bitmap New_File_32_x_32 {
             get {
                 object obj = ResourceManager.GetObject("New_File_32_x_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nic80x80 {
+            get {
+                object obj = ResourceManager.GetObject("nic80x80", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

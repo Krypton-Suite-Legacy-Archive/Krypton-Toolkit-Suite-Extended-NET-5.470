@@ -197,7 +197,7 @@
             // 
             this.kryptonButton1.AutoSize = true;
             this.kryptonButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kryptonButton1.Location = new System.Drawing.Point(740, 480);
+            this.kryptonButton1.Location = new System.Drawing.Point(740, 470);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(114, 30);
             this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -268,7 +268,7 @@
             // 
             this.kbtnGenerateBlueValue.AutoSize = true;
             this.kbtnGenerateBlueValue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGenerateBlueValue.Location = new System.Drawing.Point(222, 480);
+            this.kbtnGenerateBlueValue.Location = new System.Drawing.Point(222, 470);
             this.kbtnGenerateBlueValue.Name = "kbtnGenerateBlueValue";
             this.kbtnGenerateBlueValue.Size = new System.Drawing.Size(114, 30);
             this.kbtnGenerateBlueValue.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -329,7 +329,7 @@
             // 
             // knumContrastBlueChannelValue
             // 
-            this.knumContrastBlueChannelValue.Location = new System.Drawing.Point(614, 480);
+            this.knumContrastBlueChannelValue.Location = new System.Drawing.Point(614, 470);
             this.knumContrastBlueChannelValue.Maximum = new decimal(new int[] {
             255,
             0,
@@ -471,7 +471,7 @@
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(28, 480);
+            this.kryptonLabel4.Location = new System.Drawing.Point(28, 470);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(50, 26);
             this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

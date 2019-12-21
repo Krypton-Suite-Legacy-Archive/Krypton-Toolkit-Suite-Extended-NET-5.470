@@ -248,16 +248,16 @@
       <Version>1.0.5</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470CoreModule">
-      <Version>5.470.1300</Version>
+      <Version>5.470.2000</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470DockingModule">
       <Version>5.470.745</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470NavigatorModule">
-      <Version>5.470.772</Version>
+      <Version>5.470.774</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470RibbonModule">
-      <Version>5.470.826</Version>
+      <Version>5.470.828</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470WorkspaceModule">
       <Version>5.470.719</Version>

@@ -803,6 +803,76 @@ namespace KryptonToolkitSuiteExtendedCore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Input_Box_Critical_64_x_64 {
+            get {
+                object obj = ResourceManager.GetObject("Input_Box_Critical_64_x_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Input_Box_Hand_64_x_64 {
+            get {
+                object obj = ResourceManager.GetObject("Input_Box_Hand_64_x_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Input_Box_Information_64_x_64 {
+            get {
+                object obj = ResourceManager.GetObject("Input_Box_Information_64_x_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Input_Box_Ok_64_x_64 {
+            get {
+                object obj = ResourceManager.GetObject("Input_Box_Ok_64_x_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Input_Box_Question_64_x_64 {
+            get {
+                object obj = ResourceManager.GetObject("Input_Box_Question_64_x_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Input_Box_Stop_64_x_64 {
+            get {
+                object obj = ResourceManager.GetObject("Input_Box_Stop_64_x_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Input_Box_Warning_64_x_58 {
+            get {
+                object obj = ResourceManager.GetObject("Input_Box_Warning_64_x_58", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Interface_16x {
             get {
                 object obj = ResourceManager.GetObject("Interface_16x", resourceCulture);

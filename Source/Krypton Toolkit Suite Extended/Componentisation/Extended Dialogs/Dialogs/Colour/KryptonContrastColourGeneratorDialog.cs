@@ -1,4 +1,13 @@
-﻿using System;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
@@ -217,7 +226,7 @@ namespace ExtendedDialogs
             // 
             this.kbtnContrastColourGenerateBlue.AutoSize = true;
             this.kbtnContrastColourGenerateBlue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnContrastColourGenerateBlue.Location = new System.Drawing.Point(740, 480);
+            this.kbtnContrastColourGenerateBlue.Location = new System.Drawing.Point(740, 470);
             this.kbtnContrastColourGenerateBlue.Name = "kbtnContrastColourGenerateBlue";
             this.kbtnContrastColourGenerateBlue.Size = new System.Drawing.Size(114, 30);
             this.kbtnContrastColourGenerateBlue.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -289,7 +298,7 @@ namespace ExtendedDialogs
             // 
             this.kbtnGenerateBlueValue.AutoSize = true;
             this.kbtnGenerateBlueValue.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.kbtnGenerateBlueValue.Location = new System.Drawing.Point(222, 480);
+            this.kbtnGenerateBlueValue.Location = new System.Drawing.Point(222, 470);
             this.kbtnGenerateBlueValue.Name = "kbtnGenerateBlueValue";
             this.kbtnGenerateBlueValue.Size = new System.Drawing.Size(114, 30);
             this.kbtnGenerateBlueValue.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -351,7 +360,7 @@ namespace ExtendedDialogs
             // 
             // knumContrastBlueChannelValue
             // 
-            this.knumContrastBlueChannelValue.Location = new System.Drawing.Point(614, 480);
+            this.knumContrastBlueChannelValue.Location = new System.Drawing.Point(614, 470);
             this.knumContrastBlueChannelValue.Maximum = new decimal(new int[] {
             255,
             0,
@@ -500,7 +509,7 @@ namespace ExtendedDialogs
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(28, 480);
+            this.kryptonLabel4.Location = new System.Drawing.Point(28, 470);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(50, 26);
             this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

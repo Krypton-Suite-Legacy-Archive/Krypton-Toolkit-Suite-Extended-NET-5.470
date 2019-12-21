@@ -6,7 +6,7 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace KryptonToolkitSuiteExtendedCore
 {
-    [ToolboxBitmap(typeof(PropertyGrid))]
+    [ToolboxBitmap(typeof(PropertyGrid), "ToolboxBitmaps.PropertyGridVersionTwo.bmp")]
     public class KryptonPropertyGrid : PropertyGrid
     {
         private IPalette _palette;
@@ -14,6 +14,8 @@ namespace KryptonToolkitSuiteExtendedCore
 
         #region ... Properties...
         private Color _gradientMiddleColor = Color.Gray;
+        /// <summary>Gets or sets the gradient middle colour.</summary>
+        /// <value>The gradient middle colour.</value>
         [Browsable(true), Category("Appearance-Extended")]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         [DefaultValue("Color.Gray")]

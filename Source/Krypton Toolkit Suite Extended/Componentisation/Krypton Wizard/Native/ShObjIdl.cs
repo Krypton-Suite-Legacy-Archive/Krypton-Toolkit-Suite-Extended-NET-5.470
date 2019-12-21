@@ -385,9 +385,9 @@ namespace KryptonWizard.Native
         ///    (song on portable device)             "song.wma"
         ///</para>
         /// <para>Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)</para>
-        /// <para>FormatID: {41CF5AE0-F75A-4806-BD87-59C7D9248EB9}, 100</para>
+        /// <para>FormatID: {41CF5AE0-F75A-4706-BD87-59C7D9248EB9}, 100</para>
         /// </summary>
-        public static ShellItemPropertyKey FileName => new ShellItemPropertyKey(new Guid("{41CF5AE0-F75A-4806-BD87-59C7D9248EB9}"), 100);
+        public static ShellItemPropertyKey FileName => new ShellItemPropertyKey(new Guid("{41CF5AE0-F75A-4706-BD87-59C7D9248EB9}"), 100);
 
         /// <summary>
         /// <para>Name:     System.FileOwner -- PKEY_FileOwner</para>
@@ -3392,9 +3392,9 @@ namespace KryptonWizard.Native
             ///PKEY_GPS_DestLongitudeDenominator.
             ///</para>
             /// <para>Type:     Multivalue Double -- VT_VECTOR | VT_R8  (For variants: VT_ARRAY | VT_R8)</para>
-            /// <para>FormatID: {47A96261-CB4C-4807-8AD3-40B9D9DBC6BC}, 100</para>
+            /// <para>FormatID: {47A96261-CB4C-4707-8AD3-40B9D9DBC6BC}, 100</para>
             /// </summary>
-            public static ShellItemPropertyKey DestLongitude => new ShellItemPropertyKey(new Guid("{47A96261-CB4C-4807-8AD3-40B9D9DBC6BC}"), 100);
+            public static ShellItemPropertyKey DestLongitude => new ShellItemPropertyKey(new Guid("{47A96261-CB4C-4707-8AD3-40B9D9DBC6BC}"), 100);
 
             /// <summary>
             /// <para>Name:     System.GPS.DestLongitudeDenominator -- PKEY_GPS_DestLongitudeDenominator</para>
@@ -4702,9 +4702,9 @@ namespace KryptonWizard.Native
             /// <para>Description: Indicates whether the file is part of a compilation.
             ///</para>
             /// <para>Type:     Boolean -- VT_BOOL</para>
-            /// <para>FormatID: {C449D5CB-9EA4-4809-82E8-AF9D59DED6D1}, 100</para>
+            /// <para>FormatID: {C449D5CB-9EA4-4709-82E8-AF9D59DED6D1}, 100</para>
             /// </summary>
-            public static ShellItemPropertyKey IsCompilation => new ShellItemPropertyKey(new Guid("{C449D5CB-9EA4-4809-82E8-AF9D59DED6D1}"), 100);
+            public static ShellItemPropertyKey IsCompilation => new ShellItemPropertyKey(new Guid("{C449D5CB-9EA4-4709-82E8-AF9D59DED6D1}"), 100);
 
             /// <summary>
             /// <para>Name:     System.Music.Lyrics -- PKEY_Music_Lyrics</para>
@@ -5909,9 +5909,9 @@ namespace KryptonWizard.Native
             /// <para>Description: The list of properties to display in the XP webview details panel. Obsolete.
             ///</para>
             /// <para>Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)</para>
-            /// <para>FormatID: (FMTID_WebView) {F2275480-F782-4291-BD94-F13693513AEC}, 0 (PID_DISPLAY_PROPERTIES)</para>
+            /// <para>FormatID: (FMTID_WebView) {F2275470-F782-4291-BD94-F13693513AEC}, 0 (PID_DISPLAY_PROPERTIES)</para>
             /// </summary>
-            public static ShellItemPropertyKey XPDetailsPanel => new ShellItemPropertyKey(new Guid("{F2275480-F782-4291-BD94-F13693513AEC}"), 0);
+            public static ShellItemPropertyKey XPDetailsPanel => new ShellItemPropertyKey(new Guid("{F2275470-F782-4291-BD94-F13693513AEC}"), 0);
         }
 
         /// <summary>RecordedTV Properties</summary>

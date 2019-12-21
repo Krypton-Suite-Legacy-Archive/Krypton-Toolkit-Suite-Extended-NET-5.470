@@ -8,9 +8,9 @@
 #endregion
 
 using Common;
-using ComponentFactory.Krypton.Toolkit;
 using Core.Classes;
 using GlobalUtilities.Classes;
+using KryptonToolkitSuiteExtendedCore.Classes.Events;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -91,6 +91,16 @@ namespace ExtendedMenuToolbarItems
         }
         #endregion
 
+        #region Events
+        /// <summary></summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="ExecuteProcessAsAdministratorEventArgs"/> instance containing the event data.</param>
+        public delegate void ExecuteProcessAsAdministratorEventHandler(object sender, ExecuteProcessAsAdministratorEventArgs e);
+
+        /// <summary>The execute process as administrator</summary>
+        public ExecuteProcessAsAdministratorEventHandler ExecuteProcessAsAdministrator;
+        #endregion
+
         #region Constructor
         /// <summary>
         /// Initialises a new instance of the <see cref="ToolStripMenuItemUACSheld"/> class.
@@ -140,33 +150,23 @@ namespace ExtendedMenuToolbarItems
         #region Overrides
         protected override void OnClick(EventArgs e)
         {
-            base.OnClick(e);
+            ExecuteProcessAsAdministratorEventArgs evt = new ExecuteProcessAsAdministratorEventArgs(ProcessName);
 
-            try
-            {
-                if (ElevateApplicationOnClick)
-                {
-                    if (_globalMethods.GetIsTargetPlatformSupported())
-                    {
-                        if (ProcessName != string.Empty)
-                        {
-                            UtilityMethods.ElevateProcessWithAdministrativeRights(ProcessName);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                if (_globalMethods.GetIsTargetPlatformSupported())
-                {
-                    KryptonMessageBox.Show($"An error has occurred: { ex.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show($"An error has occurred: { ex.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            OnExecuteProcessAsAdministrator(this, evt);
+
+            base.OnClick(e);
         }
         #endregion
+
+        /// <summary>Called when [execute process as administrator].</summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="ExecuteProcessAsAdministratorEventArgs"/> instance containing the event data.</param>
+        protected virtual void OnExecuteProcessAsAdministrator(object sender, ExecuteProcessAsAdministratorEventArgs e)
+        {
+            if (ExecuteProcessAsAdministrator != null)
+            {
+                ExecuteProcessAsAdministrator(sender, e);
+            }
+        }
     }
 }

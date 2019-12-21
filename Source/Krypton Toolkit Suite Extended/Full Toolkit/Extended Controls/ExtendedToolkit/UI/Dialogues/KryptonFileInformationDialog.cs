@@ -103,6 +103,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KryptonFileInformationDialog));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kbtnOk = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -128,7 +129,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kbtnImportHash = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kbtnValidate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.ktxtValidate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.ctxHashMenu = new System.Windows.Forms.ContextMenuStrip();
+            this.ctxHashMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -271,7 +272,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Dialogues
             this.kryptonPage1,
             this.kryptonPage2,
             this.kpFileAttributes});
-            this.kryptonNavigator1.SelectedIndex = 0;
+            this.kryptonNavigator1.SelectedIndex = 2;
             this.kryptonNavigator1.Size = new System.Drawing.Size(692, 675);
             this.kryptonNavigator1.StateCommon.Tab.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonNavigator1.StateCommon.Tab.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

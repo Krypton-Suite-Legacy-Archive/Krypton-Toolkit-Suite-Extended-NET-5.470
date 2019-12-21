@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37A347A2-38D0-43BD-98E4-198F8A2BF032}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>InformationBox</RootNamespace>
+    <AssemblyName>Information Box</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Common\AsyncResultCallback.cs" />
+    <Compile Include="Classes\Common\InformationBox.cs" />
+    <Compile Include="Classes\Context\InformationBoxScope.cs" />
+    <Compile Include="Classes\Context\InformationBoxScopeBehavior.cs" />
+    <Compile Include="Classes\Context\InformationBoxScopeParameters.cs" />
+    <Compile Include="Classes\Controls\PaintingEngine.cs" />
+    <Compile Include="Classes\Internals\IconHelper.cs" />
+    <Compile Include="Classes\Internals\MessageBoxEnumConverter.cs" />
+    <Compile Include="Classes\Parameters\AutoCloseParameters.cs" />
+    <Compile Include="Classes\Parameters\DesignParameters.cs" />
+    <Compile Include="Classes\Parameters\InformationBoxTitleIcon.cs" />
+    <Compile Include="Controls\GlassButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GlassLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GlassPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Enumerations\Enumerations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UX\InformationBoxStandardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\KryptonInformationBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5470CoreModule">
+      <Version>5.470.2000</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\InformationBoxStandardForm.resx">
+      <DependentUpon>InformationBoxStandardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\KryptonInformationBoxForm.resx">
+      <DependentUpon>KryptonInformationBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blank.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fax.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gamepad.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\good.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\joystick.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locker.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scanner.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speakers.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\..\Bin\Individual Components\Information Box\" /D /R /Y /S</PostBuildEvent>
+  </PropertyGroup>
+</Project>

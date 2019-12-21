@@ -1,4 +1,14 @@
-﻿using Common;
+﻿#region BSD License
+/*
+ * Use of this source code is governed by a BSD-style
+ * license that can be found in the LICENSE.md file or at
+ * https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/LICENSE
+ *
+ */
+#endregion
+
+using Common;
+using Common.Drawing;
 using ComponentFactory.Krypton.Toolkit;
 using KryptonToolkitSuiteExtendedCore;
 using Microsoft.WindowsAPICodePack.Dialogs;
@@ -26,17 +36,12 @@ namespace ExtendedDialogs.Dialogs.Run
         private System.Windows.Forms.PictureBox pictureBox1;
         private ExtendedStandardControls.KryptonLabelExtended kryptonLabelExtended2;
         private ExtendedStandardControls.KryptonButtonExtended kbtneLocate;
+        private ExtendedStandardControls.KryptonComboBoxExtended kcmbURL;
         private ExtendedStandardControls.KryptonPanelExtended kpnlButtons;
 
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KryptonRunDialog));
-            this.kpnlButtons = new ExtendedStandardControls.KryptonPanelExtended();
-            this.kbtnSettings = new ExtendedStandardControls.KryptonButtonExtended();
-            this.kbtnRun = new ExtendedStandardControls.KryptonButtonExtended();
-            this.kbtnCancel = new ExtendedStandardControls.KryptonButtonExtended();
-            this.kbtnBrowse = new ExtendedStandardControls.KryptonButtonExtended();
-            this.kbtnUACRun = new ExtendedStandardControls.Controls.ExtendedToolkit.KryptonUACElevatedButtonExtended();
             this.panel1 = new System.Windows.Forms.Panel();
             this.kryptonPanelExtended1 = new ExtendedStandardControls.KryptonPanelExtended();
             this.kryptonLabelExtended2 = new ExtendedStandardControls.KryptonLabelExtended();
@@ -44,15 +49,190 @@ namespace ExtendedDialogs.Dialogs.Run
             this.pbxApplicationIcon = new System.Windows.Forms.PictureBox();
             this.kryptonLabelExtended1 = new ExtendedStandardControls.KryptonLabelExtended();
             this.kcbxProcessPath = new ExtendedStandardControls.KryptonComboBoxExtended();
+            this.kpnlButtons = new ExtendedStandardControls.KryptonPanelExtended();
             this.kbtneLocate = new ExtendedStandardControls.KryptonButtonExtended();
-            ((System.ComponentModel.ISupportInitialize)(this.kpnlButtons)).BeginInit();
-            this.kpnlButtons.SuspendLayout();
+            this.kbtnSettings = new ExtendedStandardControls.KryptonButtonExtended();
+            this.kbtnRun = new ExtendedStandardControls.KryptonButtonExtended();
+            this.kbtnCancel = new ExtendedStandardControls.KryptonButtonExtended();
+            this.kbtnBrowse = new ExtendedStandardControls.KryptonButtonExtended();
+            this.kcmbURL = new ExtendedStandardControls.KryptonComboBoxExtended();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelExtended1)).BeginInit();
             this.kryptonPanelExtended1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxApplicationIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcbxProcessPath)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlButtons)).BeginInit();
+            this.kpnlButtons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kcmbURL)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 201);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(648, 3);
+            this.panel1.TabIndex = 2;
+            // 
+            // kryptonPanelExtended1
+            // 
+            this.kryptonPanelExtended1.Controls.Add(this.kcmbURL);
+            this.kryptonPanelExtended1.Controls.Add(this.kryptonLabelExtended2);
+            this.kryptonPanelExtended1.Controls.Add(this.pictureBox1);
+            this.kryptonPanelExtended1.Controls.Add(this.pbxApplicationIcon);
+            this.kryptonPanelExtended1.Controls.Add(this.kryptonLabelExtended1);
+            this.kryptonPanelExtended1.Controls.Add(this.kcbxProcessPath);
+            this.kryptonPanelExtended1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanelExtended1.Image = null;
+            this.kryptonPanelExtended1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanelExtended1.Name = "kryptonPanelExtended1";
+            this.kryptonPanelExtended1.Size = new System.Drawing.Size(648, 201);
+            this.kryptonPanelExtended1.StateCommonBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kryptonPanelExtended1.StateCommonBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kryptonPanelExtended1.StateDisabledBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kryptonPanelExtended1.StateDisabledBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kryptonPanelExtended1.StateNormalBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kryptonPanelExtended1.StateNormalBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kryptonPanelExtended1.TabIndex = 3;
+            // 
+            // kryptonLabelExtended2
+            // 
+            this.kryptonLabelExtended2.AutoSize = false;
+            this.kryptonLabelExtended2.Image = null;
+            this.kryptonLabelExtended2.Location = new System.Drawing.Point(66, 13);
+            this.kryptonLabelExtended2.LongTextTypeface = null;
+            this.kryptonLabelExtended2.Name = "kryptonLabelExtended2";
+            this.kryptonLabelExtended2.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelExtended2.Size = new System.Drawing.Size(570, 90);
+            this.kryptonLabelExtended2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelExtended2.StateCommonTextColourOne = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended2.StateCommonTextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended2.StateDisabled.ShortText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelExtended2.StateDisabledTextColourOne = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended2.StateDisabledTextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended2.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelExtended2.StateNormalTextColourOne = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended2.StateNormalTextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended2.TabIndex = 4;
+            this.kryptonLabelExtended2.Values.Text = "Type the name of a application, file, directory or internet\r\nresource, and Window" +
+    "s will open it for you.";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ExtendedDialogs.Properties.Resources.Run_481;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbxApplicationIcon
+            // 
+            this.pbxApplicationIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pbxApplicationIcon.Location = new System.Drawing.Point(604, 144);
+            this.pbxApplicationIcon.Name = "pbxApplicationIcon";
+            this.pbxApplicationIcon.Size = new System.Drawing.Size(32, 32);
+            this.pbxApplicationIcon.TabIndex = 2;
+            this.pbxApplicationIcon.TabStop = false;
+            this.pbxApplicationIcon.MouseEnter += new System.EventHandler(this.pbxApplicationIcon_MouseEnter);
+            // 
+            // kryptonLabelExtended1
+            // 
+            this.kryptonLabelExtended1.Image = null;
+            this.kryptonLabelExtended1.Location = new System.Drawing.Point(12, 144);
+            this.kryptonLabelExtended1.LongTextTypeface = null;
+            this.kryptonLabelExtended1.Name = "kryptonLabelExtended1";
+            this.kryptonLabelExtended1.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabelExtended1.Size = new System.Drawing.Size(47, 26);
+            this.kryptonLabelExtended1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabelExtended1.StateCommonTextColourOne = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended1.StateCommonTextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended1.StateDisabled.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabelExtended1.StateDisabledTextColourOne = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended1.StateDisabledTextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended1.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabelExtended1.StateNormalTextColourOne = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended1.StateNormalTextColourTwo = System.Drawing.Color.Empty;
+            this.kryptonLabelExtended1.TabIndex = 1;
+            this.kryptonLabelExtended1.Values.Text = "Run:";
+            // 
+            // kcbxProcessPath
+            // 
+            this.kcbxProcessPath.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.kcbxProcessPath.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
+            this.kcbxProcessPath.ComboBoxContentTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbxProcessPath.ComboBoxItemContentLongTextTypeface = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcbxProcessPath.ComboBoxItemContentShortTextTypeface = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcbxProcessPath.DropDownWidth = 533;
+            this.kcbxProcessPath.Image = null;
+            this.kcbxProcessPath.IntegralHeight = false;
+            this.kcbxProcessPath.Location = new System.Drawing.Point(65, 144);
+            this.kcbxProcessPath.Name = "kcbxProcessPath";
+            this.kcbxProcessPath.Size = new System.Drawing.Size(533, 27);
+            this.kcbxProcessPath.StateActive.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbxProcessPath.StateActive.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
+            this.kcbxProcessPath.StateActiveComboBoxBackColour = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateActiveComboBoxBorderColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateActiveComboBoxBorderColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateActiveComboBoxContentColour = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbxProcessPath.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.kcbxProcessPath.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcbxProcessPath.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcbxProcessPath.StateCommonComboBoxBackColour = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateCommonComboBoxBorderColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateCommonComboBoxBorderColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateCommonComboBoxContentColour = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateCommonComboBoxDropBackColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateCommonComboBoxDropBackColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateCommonComboBoxItemBackColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateCommonComboBoxItemBackColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateCommonComboBoxItemContentLongTextColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateCommonComboBoxItemContentLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateCommonComboBoxItemContentShortTextColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateCommonComboBoxItemContentShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateDisabled.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbxProcessPath.StateDisabled.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
+            this.kcbxProcessPath.StateDisabled.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcbxProcessPath.StateDisabled.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcbxProcessPath.StateDisabledComboBoxBackColour = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateDisabledComboBoxBorderColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateDisabledComboBoxBorderColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateDisabledComboBoxContentColour = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateDisabledComboBoxItemBackColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateDisabledComboBoxItemBackColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateDisabledComboBoxItemContentLongTextColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateDisabledComboBoxItemContentLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateDisabledComboBoxItemContentShortTextColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateDisabledComboBoxItemContentShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateNormal.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbxProcessPath.StateNormal.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
+            this.kcbxProcessPath.StateNormal.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcbxProcessPath.StateNormal.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcbxProcessPath.StateNormalComboBoxBackColour = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateNormalComboBoxBorderColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateNormalComboBoxBorderColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateNormalComboBoxContentColour = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateNormalComboBoxItemBackColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateNormalComboBoxItemBackColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateNormalComboBoxItemContentLongTextColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateNormalComboBoxItemContentLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateNormalComboBoxItemContentShortTextColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateNormalComboBoxItemContentShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateTracking.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcbxProcessPath.StateTracking.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcbxProcessPath.StateTrackingComboBoxItemBackColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateTrackingComboBoxItemBackColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateTrackingComboBoxItemContentLongTextColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateTrackingComboBoxItemContentLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateTrackingComboBoxItemContentShortTextColourOne = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.StateTrackingComboBoxItemContentShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kcbxProcessPath.TabIndex = 0;
+            this.kcbxProcessPath.TextChanged += new System.EventHandler(this.kcbxProcessPath_TextChanged);
+            this.kcbxProcessPath.KeyDown += new System.Windows.Forms.KeyEventHandler(this.kcbxProcessPath_KeyDown);
             // 
             // kpnlButtons
             // 
@@ -61,7 +241,6 @@ namespace ExtendedDialogs.Dialogs.Run
             this.kpnlButtons.Controls.Add(this.kbtnRun);
             this.kpnlButtons.Controls.Add(this.kbtnCancel);
             this.kpnlButtons.Controls.Add(this.kbtnBrowse);
-            this.kpnlButtons.Controls.Add(this.kbtnUACRun);
             this.kpnlButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.kpnlButtons.Image = null;
             this.kpnlButtons.Location = new System.Drawing.Point(0, 204);
@@ -74,6 +253,89 @@ namespace ExtendedDialogs.Dialogs.Run
             this.kpnlButtons.StateNormalBackGroundColourOne = System.Drawing.Color.Empty;
             this.kpnlButtons.StateNormalBackGroundColourTwo = System.Drawing.Color.Empty;
             this.kpnlButtons.TabIndex = 0;
+            // 
+            // kbtneLocate
+            // 
+            this.kbtneLocate.Enabled = false;
+            this.kbtneLocate.Image = null;
+            this.kbtneLocate.Location = new System.Drawing.Point(108, 7);
+            this.kbtneLocate.LongTextTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtneLocate.Name = "kbtneLocate";
+            this.kbtneLocate.OverrideDefault.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtneLocate.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtneLocate.OverrideDefaultBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideDefaultBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideDefaultBorderColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideDefaultBorderColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideDefaultLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideDefaultLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideDefaultShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideDefaultShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideFocus.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtneLocate.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtneLocate.OverrideFocusBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideFocusBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideFocusBorderColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideFocusBorderColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideFocusLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideFocusLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideFocusShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.OverrideFocusShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtneLocate.Size = new System.Drawing.Size(90, 38);
+            this.kbtneLocate.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtneLocate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtneLocate.StateCommonBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateCommonBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateCommonBorderColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateCommonBorderColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateCommonLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateCommonLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateCommonShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateCommonShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateDisabled.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtneLocate.StateDisabled.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtneLocate.StateDisabledBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateDisabledBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateDisabledBorderColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateDisabledBorderColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateDisabledLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateDisabledLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateDisabledShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateDisabledShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateNormal.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtneLocate.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtneLocate.StateNormalBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateNormalBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateNormalBorderColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateNormalBorderColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateNormalLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateNormalLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateNormalShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateNormalShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StatePressed.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtneLocate.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtneLocate.StatePressedBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StatePressedBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StatePressedBorderColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StatePressedBorderColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StatePressedLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StatePressedLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StatePressedShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StatePressedShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateTracking.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.kbtneLocate.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtneLocate.StateTrackingBackGroundColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateTrackingBackGroundColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateTrackingBorderColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateTrackingBorderColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateTrackingLongTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateTrackingLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateTrackingShortTextColourOne = System.Drawing.Color.Empty;
+            this.kbtneLocate.StateTrackingShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kbtneLocate.TabIndex = 5;
+            this.kbtneLocate.Values.Text = "Lo&cate";
+            this.kbtneLocate.Click += new System.EventHandler(this.kbtneLocate_Click);
             // 
             // kbtnSettings
             // 
@@ -404,340 +666,80 @@ namespace ExtendedDialogs.Dialogs.Run
             this.kbtnBrowse.Values.Text = "&Browse...";
             this.kbtnBrowse.Click += new System.EventHandler(this.kbtnBrowse_Click);
             // 
-            // kbtnUACRun
+            // kcmbURL
             // 
-            this.kbtnUACRun.Enabled = false;
-            this.kbtnUACRun.Image = null;
-            this.kbtnUACRun.Location = new System.Drawing.Point(354, 7);
-            this.kbtnUACRun.LongTextTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnUACRun.Name = "kbtnUACRun";
-            this.kbtnUACRun.OverrideDefault.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnUACRun.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnUACRun.OverrideDefaultBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideDefaultBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideDefaultBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideDefaultBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideDefaultLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideDefaultLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideDefaultShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideDefaultShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideFocus.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnUACRun.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnUACRun.OverrideFocusBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideFocusBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideFocusBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideFocusBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideFocusLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideFocusLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideFocusShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.OverrideFocusShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.ProcessToElevate = null;
-            this.kbtnUACRun.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnUACRun.ShowUACShield = true;
-            this.kbtnUACRun.Size = new System.Drawing.Size(90, 38);
-            this.kbtnUACRun.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnUACRun.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnUACRun.StateCommonBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateCommonBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateCommonBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateCommonBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateCommonLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateCommonLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateCommonShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateCommonShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateDisabled.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnUACRun.StateDisabled.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnUACRun.StateDisabledBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateDisabledBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateDisabledBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateDisabledBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateDisabledLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateDisabledLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateDisabledShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateDisabledShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateNormal.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnUACRun.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnUACRun.StateNormalBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateNormalBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateNormalBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateNormalBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateNormalLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateNormalLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateNormalShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateNormalShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StatePressed.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnUACRun.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnUACRun.StatePressedBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StatePressedBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StatePressedBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StatePressedBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StatePressedLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StatePressedLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StatePressedShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StatePressedShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateTracking.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtnUACRun.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtnUACRun.StateTrackingBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateTrackingBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateTrackingBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateTrackingBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateTrackingLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateTrackingLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateTrackingShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtnUACRun.StateTrackingShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtnUACRun.TabIndex = 0;
-            this.kbtnUACRun.Values.Image = ((System.Drawing.Image)(resources.GetObject("kbtnUACRun.Values.Image")));
-            this.kbtnUACRun.Values.Text = "&Run";
-            this.kbtnUACRun.Click += new System.EventHandler(this.kbtnUACRun_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 201);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(648, 3);
-            this.panel1.TabIndex = 2;
-            // 
-            // kryptonPanelExtended1
-            // 
-            this.kryptonPanelExtended1.Controls.Add(this.kryptonLabelExtended2);
-            this.kryptonPanelExtended1.Controls.Add(this.pictureBox1);
-            this.kryptonPanelExtended1.Controls.Add(this.pbxApplicationIcon);
-            this.kryptonPanelExtended1.Controls.Add(this.kryptonLabelExtended1);
-            this.kryptonPanelExtended1.Controls.Add(this.kcbxProcessPath);
-            this.kryptonPanelExtended1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanelExtended1.Image = null;
-            this.kryptonPanelExtended1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanelExtended1.Name = "kryptonPanelExtended1";
-            this.kryptonPanelExtended1.Size = new System.Drawing.Size(648, 201);
-            this.kryptonPanelExtended1.StateCommonBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kryptonPanelExtended1.StateCommonBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kryptonPanelExtended1.StateDisabledBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kryptonPanelExtended1.StateDisabledBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kryptonPanelExtended1.StateNormalBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kryptonPanelExtended1.StateNormalBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kryptonPanelExtended1.TabIndex = 3;
-            // 
-            // kryptonLabelExtended2
-            // 
-            this.kryptonLabelExtended2.AutoSize = false;
-            this.kryptonLabelExtended2.Image = null;
-            this.kryptonLabelExtended2.Location = new System.Drawing.Point(66, 13);
-            this.kryptonLabelExtended2.LongTextTypeface = null;
-            this.kryptonLabelExtended2.Name = "kryptonLabelExtended2";
-            this.kryptonLabelExtended2.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelExtended2.Size = new System.Drawing.Size(570, 90);
-            this.kryptonLabelExtended2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelExtended2.StateCommonTextColourOne = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended2.StateCommonTextColourTwo = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended2.StateDisabled.ShortText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelExtended2.StateDisabledTextColourOne = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended2.StateDisabledTextColourTwo = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended2.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelExtended2.StateNormalTextColourOne = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended2.StateNormalTextColourTwo = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended2.TabIndex = 4;
-            this.kryptonLabelExtended2.Values.Text = "Type the name of a application, file, directory or internet\r\nresource, and Window" +
-    "s will open it for you.";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ExtendedDialogs.Properties.Resources.Run_481;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pbxApplicationIcon
-            // 
-            this.pbxApplicationIcon.BackColor = System.Drawing.Color.Transparent;
-            this.pbxApplicationIcon.Location = new System.Drawing.Point(604, 144);
-            this.pbxApplicationIcon.Name = "pbxApplicationIcon";
-            this.pbxApplicationIcon.Size = new System.Drawing.Size(32, 32);
-            this.pbxApplicationIcon.TabIndex = 2;
-            this.pbxApplicationIcon.TabStop = false;
-            this.pbxApplicationIcon.MouseEnter += new System.EventHandler(this.pbxApplicationIcon_MouseEnter);
-            // 
-            // kryptonLabelExtended1
-            // 
-            this.kryptonLabelExtended1.Image = null;
-            this.kryptonLabelExtended1.Location = new System.Drawing.Point(12, 144);
-            this.kryptonLabelExtended1.LongTextTypeface = null;
-            this.kryptonLabelExtended1.Name = "kryptonLabelExtended1";
-            this.kryptonLabelExtended1.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabelExtended1.Size = new System.Drawing.Size(47, 26);
-            this.kryptonLabelExtended1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabelExtended1.StateCommonTextColourOne = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended1.StateCommonTextColourTwo = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended1.StateDisabled.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabelExtended1.StateDisabledTextColourOne = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended1.StateDisabledTextColourTwo = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended1.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabelExtended1.StateNormalTextColourOne = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended1.StateNormalTextColourTwo = System.Drawing.Color.Empty;
-            this.kryptonLabelExtended1.TabIndex = 1;
-            this.kryptonLabelExtended1.Values.Text = "Run:";
-            // 
-            // kcbxProcessPath
-            // 
-            this.kcbxProcessPath.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.kcbxProcessPath.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
-            this.kcbxProcessPath.ComboBoxContentTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbxProcessPath.ComboBoxItemContentLongTextTypeface = new System.Drawing.Font("Segoe UI", 12F);
-            this.kcbxProcessPath.ComboBoxItemContentShortTextTypeface = new System.Drawing.Font("Segoe UI", 12F);
-            this.kcbxProcessPath.DropDownWidth = 533;
-            this.kcbxProcessPath.Image = null;
-            this.kcbxProcessPath.IntegralHeight = false;
-            this.kcbxProcessPath.Location = new System.Drawing.Point(65, 144);
-            this.kcbxProcessPath.Name = "kcbxProcessPath";
-            this.kcbxProcessPath.Size = new System.Drawing.Size(533, 27);
-            this.kcbxProcessPath.StateActive.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbxProcessPath.StateActive.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
-            this.kcbxProcessPath.StateActiveComboBoxBackColour = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateActiveComboBoxBorderColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateActiveComboBoxBorderColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateActiveComboBoxContentColour = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbxProcessPath.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.kcbxProcessPath.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.kcbxProcessPath.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.kcbxProcessPath.StateCommonComboBoxBackColour = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateCommonComboBoxBorderColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateCommonComboBoxBorderColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateCommonComboBoxContentColour = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateCommonComboBoxDropBackColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateCommonComboBoxDropBackColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateCommonComboBoxItemBackColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateCommonComboBoxItemBackColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateCommonComboBoxItemContentLongTextColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateCommonComboBoxItemContentLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateCommonComboBoxItemContentShortTextColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateCommonComboBoxItemContentShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateDisabled.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbxProcessPath.StateDisabled.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
-            this.kcbxProcessPath.StateDisabled.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.kcbxProcessPath.StateDisabled.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.kcbxProcessPath.StateDisabledComboBoxBackColour = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateDisabledComboBoxBorderColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateDisabledComboBoxBorderColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateDisabledComboBoxContentColour = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateDisabledComboBoxItemBackColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateDisabledComboBoxItemBackColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateDisabledComboBoxItemContentLongTextColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateDisabledComboBoxItemContentLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateDisabledComboBoxItemContentShortTextColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateDisabledComboBoxItemContentShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateNormal.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbxProcessPath.StateNormal.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
-            this.kcbxProcessPath.StateNormal.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.kcbxProcessPath.StateNormal.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.kcbxProcessPath.StateNormalComboBoxBackColour = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateNormalComboBoxBorderColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateNormalComboBoxBorderColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateNormalComboBoxContentColour = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateNormalComboBoxItemBackColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateNormalComboBoxItemBackColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateNormalComboBoxItemContentLongTextColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateNormalComboBoxItemContentLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateNormalComboBoxItemContentShortTextColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateNormalComboBoxItemContentShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateTracking.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.kcbxProcessPath.StateTracking.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.kcbxProcessPath.StateTrackingComboBoxItemBackColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateTrackingComboBoxItemBackColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateTrackingComboBoxItemContentLongTextColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateTrackingComboBoxItemContentLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateTrackingComboBoxItemContentShortTextColourOne = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.StateTrackingComboBoxItemContentShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kcbxProcessPath.TabIndex = 0;
-            this.kcbxProcessPath.TextChanged += new System.EventHandler(this.kcbxProcessPath_TextChanged);
-            // 
-            // kbtneLocate
-            // 
-            this.kbtneLocate.Enabled = false;
-            this.kbtneLocate.Image = null;
-            this.kbtneLocate.Location = new System.Drawing.Point(108, 7);
-            this.kbtneLocate.LongTextTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtneLocate.Name = "kbtneLocate";
-            this.kbtneLocate.OverrideDefault.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtneLocate.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtneLocate.OverrideDefaultBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideDefaultBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideDefaultBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideDefaultBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideDefaultLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideDefaultLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideDefaultShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideDefaultShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideFocus.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtneLocate.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtneLocate.OverrideFocusBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideFocusBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideFocusBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideFocusBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideFocusLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideFocusLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideFocusShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.OverrideFocusShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtneLocate.Size = new System.Drawing.Size(90, 38);
-            this.kbtneLocate.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtneLocate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtneLocate.StateCommonBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateCommonBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateCommonBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateCommonBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateCommonLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateCommonLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateCommonShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateCommonShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateDisabled.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtneLocate.StateDisabled.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtneLocate.StateDisabledBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateDisabledBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateDisabledBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateDisabledBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateDisabledLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateDisabledLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateDisabledShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateDisabledShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateNormal.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtneLocate.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtneLocate.StateNormalBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateNormalBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateNormalBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateNormalBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateNormalLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateNormalLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateNormalShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateNormalShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StatePressed.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtneLocate.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtneLocate.StatePressedBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StatePressedBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StatePressedBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StatePressedBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StatePressedLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StatePressedLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StatePressedShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StatePressedShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateTracking.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.kbtneLocate.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kbtneLocate.StateTrackingBackGroundColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateTrackingBackGroundColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateTrackingBorderColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateTrackingBorderColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateTrackingLongTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateTrackingLongTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateTrackingShortTextColourOne = System.Drawing.Color.Empty;
-            this.kbtneLocate.StateTrackingShortTextColourTwo = System.Drawing.Color.Empty;
-            this.kbtneLocate.TabIndex = 5;
-            this.kbtneLocate.Values.Text = "Lo&cate";
-            this.kbtneLocate.Click += new System.EventHandler(this.kbtneLocate_Click);
+            this.kcmbURL.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.kcmbURL.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllUrl;
+            this.kcmbURL.ComboBoxContentTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbURL.ComboBoxItemContentLongTextTypeface = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcmbURL.ComboBoxItemContentShortTextTypeface = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcmbURL.DropDownWidth = 533;
+            this.kcmbURL.Image = null;
+            this.kcmbURL.IntegralHeight = false;
+            this.kcmbURL.Location = new System.Drawing.Point(65, 143);
+            this.kcmbURL.Name = "kcmbURL";
+            this.kcmbURL.Size = new System.Drawing.Size(533, 27);
+            this.kcmbURL.StateActive.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbURL.StateActive.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
+            this.kcmbURL.StateActiveComboBoxBackColour = System.Drawing.Color.Empty;
+            this.kcmbURL.StateActiveComboBoxBorderColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateActiveComboBoxBorderColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateActiveComboBoxContentColour = System.Drawing.Color.Empty;
+            this.kcmbURL.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbURL.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.kcmbURL.StateCommon.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcmbURL.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcmbURL.StateCommonComboBoxBackColour = System.Drawing.Color.Empty;
+            this.kcmbURL.StateCommonComboBoxBorderColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateCommonComboBoxBorderColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateCommonComboBoxContentColour = System.Drawing.Color.Empty;
+            this.kcmbURL.StateCommonComboBoxDropBackColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateCommonComboBoxDropBackColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateCommonComboBoxItemBackColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateCommonComboBoxItemBackColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateCommonComboBoxItemContentLongTextColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateCommonComboBoxItemContentLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateCommonComboBoxItemContentShortTextColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateCommonComboBoxItemContentShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateDisabled.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbURL.StateDisabled.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
+            this.kcmbURL.StateDisabled.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcmbURL.StateDisabled.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcmbURL.StateDisabledComboBoxBackColour = System.Drawing.Color.Empty;
+            this.kcmbURL.StateDisabledComboBoxBorderColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateDisabledComboBoxBorderColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateDisabledComboBoxContentColour = System.Drawing.Color.Empty;
+            this.kcmbURL.StateDisabledComboBoxItemBackColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateDisabledComboBoxItemBackColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateDisabledComboBoxItemContentLongTextColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateDisabledComboBoxItemContentLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateDisabledComboBoxItemContentShortTextColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateDisabledComboBoxItemContentShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateNormal.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcmbURL.StateNormal.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
+            this.kcmbURL.StateNormal.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcmbURL.StateNormal.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcmbURL.StateNormalComboBoxBackColour = System.Drawing.Color.Empty;
+            this.kcmbURL.StateNormalComboBoxBorderColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateNormalComboBoxBorderColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateNormalComboBoxContentColour = System.Drawing.Color.Empty;
+            this.kcmbURL.StateNormalComboBoxItemBackColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateNormalComboBoxItemBackColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateNormalComboBoxItemContentLongTextColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateNormalComboBoxItemContentLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateNormalComboBoxItemContentShortTextColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateNormalComboBoxItemContentShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateTracking.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcmbURL.StateTracking.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.kcmbURL.StateTrackingComboBoxItemBackColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateTrackingComboBoxItemBackColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateTrackingComboBoxItemContentLongTextColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateTrackingComboBoxItemContentLongTextColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.StateTrackingComboBoxItemContentShortTextColourOne = System.Drawing.Color.Empty;
+            this.kcmbURL.StateTrackingComboBoxItemContentShortTextColourTwo = System.Drawing.Color.Empty;
+            this.kcmbURL.TabIndex = 5;
+            this.kcmbURL.Visible = false;
+            this.kcmbURL.SelectedIndexChanged += new System.EventHandler(this.kcmbURL_SelectedIndexChanged);
             // 
             // KryptonRunDialog
             // 
@@ -752,14 +754,15 @@ namespace ExtendedDialogs.Dialogs.Run
             this.Name = "KryptonRunDialog";
             this.Text = "Run";
             this.Load += new System.EventHandler(this.KryptonRunDialog_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.kpnlButtons)).EndInit();
-            this.kpnlButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelExtended1)).EndInit();
             this.kryptonPanelExtended1.ResumeLayout(false);
             this.kryptonPanelExtended1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxApplicationIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kcbxProcessPath)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kpnlButtons)).EndInit();
+            this.kpnlButtons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kcmbURL)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -817,9 +820,11 @@ namespace ExtendedDialogs.Dialogs.Run
                 //try
                 //{
 
-                if (kcbxProcessPath.Text.Contains(fileExtension))
+                if (Path.HasExtension(kcbxProcessPath.Text))
                 {
-                    pbxApplicationIcon.Image = Icon.ExtractAssociatedIcon(kcbxProcessPath.Text).ToBitmap();
+                    pbxApplicationIcon.Visible = true;
+
+                    pbxApplicationIcon.Image = GraphicsUtilities.ExtractBinaryIcon(kcbxProcessPath.Text);
                 }
                 else
                 {
@@ -827,7 +832,19 @@ namespace ExtendedDialogs.Dialogs.Run
 
                     kcbxProcessPath.Size = new Size(571, 27);
                 }
-                //}
+
+                if (kcbxProcessPath.Text.StartsWith("http://") || kcbxProcessPath.Text.StartsWith("https://"))
+                {
+                    kcmbURL.Visible = true;
+
+                    kcmbURL.Text = kcbxProcessPath.Text;
+
+                    kcbxProcessPath.Text = "";
+
+                    kcbxProcessPath.Visible = false;
+                }
+
+                //if (Uri.IsWellFormedUriString(kcbxProcessPath.Text, UriKind.RelativeOrAbsolute)) GraphicsUtilities.GrabFavIcon(pbxApplicationIcon, kcbxProcessPath.Text);                //}
                 //catch (Exception exc)
                 //{
 
@@ -866,18 +883,21 @@ namespace ExtendedDialogs.Dialogs.Run
 
         private void kbtnRun_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    Process.Start(kcbxProcessPath.Text);
-            //}
-            //catch (Exception exc)
-            //{
-            //    KryptonMessageBoxExtended.Show($"An error has occurred: { exc.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
-            KryptonRunArguments arguments = new KryptonRunArguments(kcbxProcessPath.Text, this);
-
-            arguments.Show();
+            try
+            {
+                if (!string.IsNullOrEmpty(kcbxProcessPath.Text))
+                {
+                    Process.Start(kcbxProcessPath.Text);
+                }
+                else if (!string.IsNullOrEmpty(kcmbURL.Text))
+                {
+                    Process.Start(kcmbURL.Text);
+                }
+            }
+            catch (Exception exc)
+            {
+                KryptonMessageBoxExtended.Show($"An error has occurred: { exc.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void kbtnCancel_Click(object sender, EventArgs e)
@@ -944,6 +964,33 @@ namespace ExtendedDialogs.Dialogs.Run
         private void kbtneLocate_Click(object sender, EventArgs e)
         {
             OpenResourceInExplorer(kcbxProcessPath.Text);
+        }
+
+        private void kcbxProcessPath_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                FileInfo fileInfo = new FileInfo(kcbxProcessPath.Text);
+
+                if (kcbxProcessPath.Text.EndsWith(fileInfo.Extension))
+                {
+                    GraphicsUtilities.ExtractBinaryIcon(kcbxProcessPath.Text);
+                }
+            }
+        }
+
+        private void kcmbURL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(kcmbURL.Text))
+            {
+                if (Uri.IsWellFormedUriString(kcbxProcessPath.Text, UriKind.RelativeOrAbsolute)) GraphicsUtilities.GrabFavIcon(pbxApplicationIcon, kcmbURL.Text);
+
+                kbtnRun.Enabled = true;
+            }
+            else
+            {
+                kcmbURL.Visible = false;
+            }
         }
     }
 }

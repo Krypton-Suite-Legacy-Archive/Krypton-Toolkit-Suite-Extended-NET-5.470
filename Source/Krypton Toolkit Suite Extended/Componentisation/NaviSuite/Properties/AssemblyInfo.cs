@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("NaviSuite")]
-[assembly: AssemblyCopyright("Copyright © Guifreaks 2009 - 2011. Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2019. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © Guifreaks 2009 - 2011. Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2019 - 2020. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,7 +33,7 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("5.470.550.0")]
-[assembly: AssemblyFileVersion("5.470.550.0")]
+[assembly: AssemblyVersion("5.470.522.0")]
+[assembly: AssemblyFileVersion("5.470.522.0")]
 [assembly: NeutralResourcesLanguage("en-GB")]
 

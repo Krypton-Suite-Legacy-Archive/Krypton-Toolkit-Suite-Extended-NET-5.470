@@ -95,7 +95,7 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(714, 480);
+            this.kryptonButton1.Location = new System.Drawing.Point(714, 470);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(247, 38);
             this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -104,7 +104,7 @@
             // 
             // kbtnValidateChecksums
             // 
-            this.kbtnValidateChecksums.Location = new System.Drawing.Point(967, 480);
+            this.kbtnValidateChecksums.Location = new System.Drawing.Point(967, 470);
             this.kbtnValidateChecksums.Name = "kbtnValidateChecksums";
             this.kbtnValidateChecksums.Size = new System.Drawing.Size(179, 38);
             this.kbtnValidateChecksums.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,7 +113,7 @@
             // 
             // kbtnCancel
             // 
-            this.kbtnCancel.Location = new System.Drawing.Point(1152, 480);
+            this.kbtnCancel.Location = new System.Drawing.Point(1152, 470);
             this.kbtnCancel.Name = "kbtnCancel";
             this.kbtnCancel.Size = new System.Drawing.Size(111, 38);
             this.kbtnCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

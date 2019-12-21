@@ -431,6 +431,8 @@ namespace Core.Classes.Other
                 return 0.5;
             }
         }
+
+        public static bool ConvertStringToBoolean(string text) => bool.Parse(text);
         #endregion
     }
 }

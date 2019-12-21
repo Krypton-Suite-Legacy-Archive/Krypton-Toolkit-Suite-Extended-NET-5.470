@@ -41,10 +41,6 @@ namespace Playground
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // kryptonPanel1
-            // 
-            this.kryptonPanel1.Controls.Add(this.keTest);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 62);
             this.kryptonPanel1.Name = "kryptonPanel1";
@@ -53,14 +49,8 @@ namespace Playground
             // 
             // keTest
             // 
-            this.keTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.keTest.Enabled = false;
             this.keTest.Image = null;
-            this.keTest.Location = new System.Drawing.Point(752, 8);
             this.keTest.LongTextTypeface = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.keTest.Name = "keTest";
-            this.keTest.OverrideDefault.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.keTest.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.keTest.OverrideDefaultBackGroundColourOne = System.Drawing.Color.Empty;
             this.keTest.OverrideDefaultBackGroundColourTwo = System.Drawing.Color.Empty;
             this.keTest.OverrideDefaultBorderColourOne = System.Drawing.Color.Empty;
@@ -69,8 +59,6 @@ namespace Playground
             this.keTest.OverrideDefaultLongTextColourTwo = System.Drawing.Color.Empty;
             this.keTest.OverrideDefaultShortTextColourOne = System.Drawing.Color.Empty;
             this.keTest.OverrideDefaultShortTextColourTwo = System.Drawing.Color.Empty;
-            this.keTest.OverrideFocus.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.keTest.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.keTest.OverrideFocusBackGroundColourOne = System.Drawing.Color.Empty;
             this.keTest.OverrideFocusBackGroundColourTwo = System.Drawing.Color.Empty;
             this.keTest.OverrideFocusBorderColourOne = System.Drawing.Color.Empty;
@@ -79,12 +67,7 @@ namespace Playground
             this.keTest.OverrideFocusLongTextColourTwo = System.Drawing.Color.Empty;
             this.keTest.OverrideFocusShortTextColourOne = System.Drawing.Color.Empty;
             this.keTest.OverrideFocusShortTextColourTwo = System.Drawing.Color.Empty;
-            this.keTest.ProcessToElevate = null;
             this.keTest.ShortTextTypeface = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.keTest.ShowUACShield = true;
-            this.keTest.Size = new System.Drawing.Size(155, 37);
-            this.keTest.StateCommon.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.keTest.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.keTest.StateCommonBackGroundColourOne = System.Drawing.Color.Empty;
             this.keTest.StateCommonBackGroundColourTwo = System.Drawing.Color.Empty;
             this.keTest.StateCommonBorderColourOne = System.Drawing.Color.Empty;
@@ -93,8 +76,6 @@ namespace Playground
             this.keTest.StateCommonLongTextColourTwo = System.Drawing.Color.Empty;
             this.keTest.StateCommonShortTextColourOne = System.Drawing.Color.Empty;
             this.keTest.StateCommonShortTextColourTwo = System.Drawing.Color.Empty;
-            this.keTest.StateDisabled.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.keTest.StateDisabled.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.keTest.StateDisabledBackGroundColourOne = System.Drawing.Color.Empty;
             this.keTest.StateDisabledBackGroundColourTwo = System.Drawing.Color.Empty;
             this.keTest.StateDisabledBorderColourOne = System.Drawing.Color.Empty;
@@ -103,8 +84,6 @@ namespace Playground
             this.keTest.StateDisabledLongTextColourTwo = System.Drawing.Color.Empty;
             this.keTest.StateDisabledShortTextColourOne = System.Drawing.Color.Empty;
             this.keTest.StateDisabledShortTextColourTwo = System.Drawing.Color.Empty;
-            this.keTest.StateNormal.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.keTest.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.keTest.StateNormalBackGroundColourOne = System.Drawing.Color.Empty;
             this.keTest.StateNormalBackGroundColourTwo = System.Drawing.Color.Empty;
             this.keTest.StateNormalBorderColourOne = System.Drawing.Color.Empty;
@@ -113,8 +92,6 @@ namespace Playground
             this.keTest.StateNormalLongTextColourTwo = System.Drawing.Color.Empty;
             this.keTest.StateNormalShortTextColourOne = System.Drawing.Color.Empty;
             this.keTest.StateNormalShortTextColourTwo = System.Drawing.Color.Empty;
-            this.keTest.StatePressed.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.keTest.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.keTest.StatePressedBackGroundColourOne = System.Drawing.Color.Empty;
             this.keTest.StatePressedBackGroundColourTwo = System.Drawing.Color.Empty;
             this.keTest.StatePressedBorderColourOne = System.Drawing.Color.Empty;
@@ -123,8 +100,6 @@ namespace Playground
             this.keTest.StatePressedLongTextColourTwo = System.Drawing.Color.Empty;
             this.keTest.StatePressedShortTextColourOne = System.Drawing.Color.Empty;
             this.keTest.StatePressedShortTextColourTwo = System.Drawing.Color.Empty;
-            this.keTest.StateTracking.Content.LongText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.keTest.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.keTest.StateTrackingBackGroundColourOne = System.Drawing.Color.Empty;
             this.keTest.StateTrackingBackGroundColourTwo = System.Drawing.Color.Empty;
             this.keTest.StateTrackingBorderColourOne = System.Drawing.Color.Empty;
@@ -133,10 +108,6 @@ namespace Playground
             this.keTest.StateTrackingLongTextColourTwo = System.Drawing.Color.Empty;
             this.keTest.StateTrackingShortTextColourOne = System.Drawing.Color.Empty;
             this.keTest.StateTrackingShortTextColourTwo = System.Drawing.Color.Empty;
-            this.keTest.TabIndex = 0;
-            this.keTest.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonUACElevatedButtonExtended1.Values.Image")));
-            this.keTest.Values.Text = "E&levate Now!";
-            this.keTest.Click += new System.EventHandler(this.keTest_Click);
             // 
             // panel1
             // 
@@ -326,12 +297,7 @@ namespace Playground
         {
 
         }
-
-        private void keTest_Click(object sender, EventArgs e)
-        {
-            keTest.ProcessName = ktbProcessPath.Text;
-        }
-
+        
         private void kbtnBrowse_Click(object sender, EventArgs e)
         {
             CommonOpenFileDialog cofd = new CommonOpenFileDialog();
@@ -346,14 +312,7 @@ namespace Playground
 
         private void ktbProcessPath_TextChanged(object sender, EventArgs e)
         {
-            if (ktbProcessPath.Text != string.Empty)
-            {
-                keTest.Enabled = true;
-            }
-            else
-            {
-                keTest.Enabled = false;
-            }
+           
         }
 
         //private void KryptonUACElevatedButton1_Click(object sender, EventArgs e)

@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Extended File Dialogs")]
-[assembly: AssemblyCopyright("Copyright © Decebal Mihailescu 2007-2015. Then modifications by Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2018 - 2019. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © Decebal Mihailescu 2007-2015. Then modifications by Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2018 - 2019 - 2020. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,7 +33,7 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("5.470.488.0")]
-[assembly: AssemblyFileVersion("5.470.488.0")]
+[assembly: AssemblyVersion("5.470.526.0")]
+[assembly: AssemblyFileVersion("5.470.526.0")]
 [assembly: NeutralResourcesLanguage("en-GB")]
 

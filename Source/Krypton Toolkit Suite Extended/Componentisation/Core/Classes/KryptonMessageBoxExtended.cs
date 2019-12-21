@@ -25,6 +25,8 @@ namespace KryptonToolkitSuiteExtendedCore
         #region System
         private void InitialiseComponent()
         {
+            #region Old Code
+            /*
             _panelMessage = new KryptonPanel();
             _panelMessageText = new KryptonPanel();
             _messageText = new KryptonWrapLabel();
@@ -172,7 +174,7 @@ namespace KryptonToolkitSuiteExtendedCore
             //
             // _doNotShowAgainOption
             //
-            _doNotShowAgainOption.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            _doNotShowAgainOption.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             _doNotShowAgainOption.AutoSize = true;
             _doNotShowAgainOption.Location = new Point(56, 0);
             _doNotShowAgainOption.Margin = new Padding(0);
@@ -211,7 +213,191 @@ namespace KryptonToolkitSuiteExtendedCore
             _panelButtons.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
+            */
+            #endregion
 
+            this._panelMessage = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this._panelMessageText = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this._messageText = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this._panelMessageIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this._messageIcon = new System.Windows.Forms.PictureBox();
+            this._panelButtons = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this._borderEdge = new ComponentFactory.Krypton.Toolkit.KryptonBorderEdge();
+            this._button3 = new KryptonToolkitSuiteExtendedCore.KryptonMessageBoxExtended.MessageButton();
+            this._button1 = new KryptonToolkitSuiteExtendedCore.KryptonMessageBoxExtended.MessageButton();
+            this._button2 = new KryptonToolkitSuiteExtendedCore.KryptonMessageBoxExtended.MessageButton();
+            this._doNotShowAgainOption = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this._panelMessage)).BeginInit();
+            this._panelMessage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._panelMessageText)).BeginInit();
+            this._panelMessageText.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._panelMessageIcon)).BeginInit();
+            this._panelMessageIcon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._messageIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._panelButtons)).BeginInit();
+            this._panelButtons.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // _panelMessage
+            // 
+            this._panelMessage.AutoSize = true;
+            this._panelMessage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this._panelMessage.Controls.Add(this._panelMessageText);
+            this._panelMessage.Controls.Add(this._panelMessageIcon);
+            this._panelMessage.Dock = System.Windows.Forms.DockStyle.Top;
+            this._panelMessage.Location = new System.Drawing.Point(0, 0);
+            this._panelMessage.Name = "_panelMessage";
+            this._panelMessage.Size = new System.Drawing.Size(156, 52);
+            this._panelMessage.TabIndex = 0;
+            // 
+            // _panelMessageText
+            // 
+            this._panelMessageText.AutoSize = true;
+            this._panelMessageText.Controls.Add(this._messageText);
+            this._panelMessageText.Location = new System.Drawing.Point(42, 0);
+            this._panelMessageText.Margin = new System.Windows.Forms.Padding(0);
+            this._panelMessageText.Name = "_panelMessageText";
+            this._panelMessageText.Padding = new System.Windows.Forms.Padding(5, 17, 5, 17);
+            this._panelMessageText.Size = new System.Drawing.Size(88, 52);
+            this._panelMessageText.TabIndex = 1;
+            // 
+            // _messageText
+            // 
+            this._messageText.AutoSize = false;
+            this._messageText.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this._messageText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            this._messageText.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
+            this._messageText.Location = new System.Drawing.Point(5, 18);
+            this._messageText.Margin = new System.Windows.Forms.Padding(0);
+            this._messageText.Name = "_messageText";
+            this._messageText.Size = new System.Drawing.Size(78, 15);
+            this._messageText.StateCommon.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this._messageText.Text = "Message Text";
+            // 
+            // _panelMessageIcon
+            // 
+            this._panelMessageIcon.AutoSize = true;
+            this._panelMessageIcon.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this._panelMessageIcon.Controls.Add(this._messageIcon);
+            this._panelMessageIcon.Location = new System.Drawing.Point(0, 0);
+            this._panelMessageIcon.Margin = new System.Windows.Forms.Padding(0);
+            this._panelMessageIcon.Name = "_panelMessageIcon";
+            this._panelMessageIcon.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
+            this._panelMessageIcon.Size = new System.Drawing.Size(42, 52);
+            this._panelMessageIcon.TabIndex = 0;
+            // 
+            // _messageIcon
+            // 
+            this._messageIcon.BackColor = System.Drawing.Color.Transparent;
+            this._messageIcon.Location = new System.Drawing.Point(10, 10);
+            this._messageIcon.Margin = new System.Windows.Forms.Padding(0);
+            this._messageIcon.Name = "_messageIcon";
+            this._messageIcon.Size = new System.Drawing.Size(32, 32);
+            this._messageIcon.TabIndex = 0;
+            this._messageIcon.TabStop = false;
+            // 
+            // _panelButtons
+            // 
+            this._panelButtons.Controls.Add(this._doNotShowAgainOption);
+            this._panelButtons.Controls.Add(this._borderEdge);
+            this._panelButtons.Controls.Add(this._button3);
+            this._panelButtons.Controls.Add(this._button1);
+            this._panelButtons.Controls.Add(this._button2);
+            this._panelButtons.Dock = System.Windows.Forms.DockStyle.Top;
+            this._panelButtons.Location = new System.Drawing.Point(0, 52);
+            this._panelButtons.Margin = new System.Windows.Forms.Padding(0);
+            this._panelButtons.Name = "_panelButtons";
+            this._panelButtons.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.PanelAlternate;
+            this._panelButtons.Size = new System.Drawing.Size(156, 26);
+            this._panelButtons.TabIndex = 0;
+            // 
+            // _borderEdge
+            // 
+            this._borderEdge.BorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.HeaderPrimary;
+            this._borderEdge.Dock = System.Windows.Forms.DockStyle.Top;
+            this._borderEdge.Location = new System.Drawing.Point(0, 0);
+            this._borderEdge.Name = "_borderEdge";
+            this._borderEdge.Size = new System.Drawing.Size(156, 1);
+            this._borderEdge.Text = "kryptonBorderEdge1";
+            // 
+            // _button3
+            // 
+            this._button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._button3.AutoSize = true;
+            this._button3.IgnoreAltF4 = false;
+            this._button3.Location = new System.Drawing.Point(106, 0);
+            this._button3.Margin = new System.Windows.Forms.Padding(0);
+            this._button3.MinimumSize = new System.Drawing.Size(50, 26);
+            this._button3.Name = "_button3";
+            this._button3.Size = new System.Drawing.Size(50, 26);
+            this._button3.TabIndex = 2;
+            this._button3.Values.Text = "B3";
+            // 
+            // _button1
+            // 
+            this._button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._button1.AutoSize = true;
+            this._button1.IgnoreAltF4 = false;
+            this._button1.Location = new System.Drawing.Point(6, 0);
+            this._button1.Margin = new System.Windows.Forms.Padding(0);
+            this._button1.MinimumSize = new System.Drawing.Size(50, 26);
+            this._button1.Name = "_button1";
+            this._button1.Size = new System.Drawing.Size(50, 26);
+            this._button1.TabIndex = 0;
+            this._button1.Values.Text = "B1";
+            // 
+            // _button2
+            // 
+            this._button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._button2.AutoSize = true;
+            this._button2.IgnoreAltF4 = false;
+            this._button2.Location = new System.Drawing.Point(56, 0);
+            this._button2.Margin = new System.Windows.Forms.Padding(0);
+            this._button2.MinimumSize = new System.Drawing.Size(50, 26);
+            this._button2.Name = "_button2";
+            this._button2.Size = new System.Drawing.Size(50, 26);
+            this._button2.TabIndex = 1;
+            this._button2.Values.Text = "B2";
+            // 
+            // _doNotShowAgainOption
+            // 
+            this._doNotShowAgainOption.Location = new System.Drawing.Point(0, 0);
+            this._doNotShowAgainOption.Margin = new System.Windows.Forms.Padding(0);
+            this._doNotShowAgainOption.MinimumSize = new System.Drawing.Size(50, 26);
+            this._doNotShowAgainOption.Name = "_doNotShowAgainOption";
+            this._doNotShowAgainOption.Size = new System.Drawing.Size(149, 26);
+            this._doNotShowAgainOption.TabIndex = 1;
+            this._doNotShowAgainOption.Values.Text = "&Do not show this again";
+            // 
+            // KryptonMessageBoxExtended
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(156, 78);
+            this.Controls.Add(this._panelButtons);
+            this.Controls.Add(this._panelMessage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "KryptonMessageBoxExtended";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.TopMost = true;
+            ((System.ComponentModel.ISupportInitialize)(this._panelMessage)).EndInit();
+            this._panelMessage.ResumeLayout(false);
+            this._panelMessage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._panelMessageText)).EndInit();
+            this._panelMessageText.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._panelMessageIcon)).EndInit();
+            this._panelMessageIcon.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._messageIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._panelButtons)).EndInit();
+            this._panelButtons.ResumeLayout(false);
+            this._panelButtons.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
         #endregion
 
@@ -1555,6 +1741,10 @@ namespace KryptonToolkitSuiteExtendedCore
                 }
             }
         }
+
+        /// <summary>Gets the do not show again value.</summary>
+        /// <returns></returns>
+        public bool GetDoNotShowAgainValue() => _doNotShowAgainOption.Checked;
         #endregion
 
         #region Events

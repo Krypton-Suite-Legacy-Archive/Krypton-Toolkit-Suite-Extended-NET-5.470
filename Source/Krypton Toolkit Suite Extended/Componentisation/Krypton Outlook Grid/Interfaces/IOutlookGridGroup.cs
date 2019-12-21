@@ -25,6 +25,8 @@ using System.Drawing;
 
 using KryptonOutlookGrid.Classes;
 
+using ComponentFactory.Krypton.Toolkit;
+
 namespace KryptonOutlookGrid.Interfaces
 {
     /// <summary>
@@ -131,5 +133,10 @@ namespace KryptonOutlookGrid.Interfaces
         /// The items comparer.
         /// </value>
         IComparer ItemsComparer { get; set; }
+
+        /// <summary>
+        /// Background for group
+        /// </summary>
+        PaletteBack Back { get; }
     }
 }

@@ -291,7 +291,9 @@ namespace KryptonOutlookGrid.Classes
                 Rectangle myRowBounds = rowBounds;
                 myRowBounds.Width = gridwidth;
 
-                IPaletteBack paletteBack = grid.StateNormal.DataCell.Back;
+                PaletteBack paletteBack = group.Back;
+                paletteBack.SetInherit(grid.StateNormal.DataCell.Back);
+
                 IPaletteBorder paletteBorder = grid.StateNormal.DataCell.Border;
 
                 PaletteState state = PaletteState.Normal;
@@ -398,12 +400,12 @@ namespace KryptonOutlookGrid.Classes
                 if (KryptonManager.CurrentGlobalPalette.GetRenderer() == KryptonManager.RenderOffice2013)
                 {
                     TextRenderer.DrawText(graphics, group.Text, grid.GridPalette.GetContentShortTextFont(PaletteContentStyle.LabelBoldControl, state), new Rectangle(offsetText, rowBounds.Bottom - StaticValues._2013OffsetHeight, rowBounds.Width - offsetText, rowBounds.Height), grid.GridPalette.GetContentShortTextColor1(PaletteContentStyle.LabelNormalControl, state),
-                                 TextFormatFlags.EndEllipsis | TextFormatFlags.SingleLine | TextFormatFlags.PreserveGraphicsClipping);
+                                 TextFormatFlags.EndEllipsis | TextFormatFlags.SingleLine | TextFormatFlags.PreserveGraphicsClipping | TextFormatFlags.NoPrefix);
                 }
                 else
                 {
                     TextRenderer.DrawText(graphics, group.Text, grid.GridPalette.GetContentShortTextFont(PaletteContentStyle.LabelBoldControl, state), new Rectangle(offsetText, rowBounds.Bottom - StaticValues._defaultOffsetHeight, rowBounds.Width - offsetText, rowBounds.Height), grid.GridPalette.GetContentShortTextColor1(PaletteContentStyle.LabelNormalControl, state),
-                                   TextFormatFlags.EndEllipsis | TextFormatFlags.SingleLine | TextFormatFlags.PreserveGraphicsClipping);
+                                   TextFormatFlags.EndEllipsis | TextFormatFlags.SingleLine | TextFormatFlags.PreserveGraphicsClipping | TextFormatFlags.NoPrefix);
                 }
 
                 ////Debug Hits

@@ -90,7 +90,7 @@ namespace ExtendedControls.ExtendedToolkit.Wizard.Controls
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.picImage);
             this.Name = "InfoContainer";
-            this.Size = new System.Drawing.Size(480, 388);
+            this.Size = new System.Drawing.Size(470, 388);
             this.Load += new System.EventHandler(this.InfoContainer_Load);
             this.ResumeLayout(false);
 

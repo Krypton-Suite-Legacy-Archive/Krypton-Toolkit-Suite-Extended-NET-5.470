@@ -156,7 +156,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
             // 
             // kbtnDismiss
             // 
-            this.kbtnDismiss.Location = new System.Drawing.Point(480, 6);
+            this.kbtnDismiss.Location = new System.Drawing.Point(470, 6);
             this.kbtnDismiss.Name = "kbtnDismiss";
             this.kbtnDismiss.Size = new System.Drawing.Size(154, 31);
             this.kbtnDismiss.StateCommon.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -777,7 +777,7 @@ namespace ExtendedControls.ExtendedToolkit.Controls.KryptonControls
 
             kbtnAction.RightToLeft = RightToLeft.No;
 
-            kbtnDismiss.Location = new Point(480, 6);
+            kbtnDismiss.Location = new Point(470, 6);
 
             kbtnDismiss.RightToLeft = RightToLeft.No;
         }

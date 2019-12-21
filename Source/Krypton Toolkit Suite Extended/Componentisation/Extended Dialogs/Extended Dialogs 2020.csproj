@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{222C7D90-9D2A-4736-B58D-80AF566BA167}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExtendedDialogs</RootNamespace>
+    <AssemblyName>Extended Dialogs</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Extended Dialogs.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Krypton Extended Toolkit">
+      <HintPath>..\..\Full Toolkit\Extended Controls\obj\Debug\Krypton Extended Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Toolkit Suite Extended Core">
+      <HintPath>..\Core\obj\Debug\Krypton Toolkit Suite Extended Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\EnumerationArrays.cs" />
+    <Compile Include="Classes\EnumerationTranslator.cs" />
+    <Compile Include="Classes\PI.cs" />
+    <Compile Include="Controls\KryptonAbortButton.cs" />
+    <Compile Include="Controls\KryptonCancelButton.cs" />
+    <Compile Include="Controls\User Controls\KryptonInputBoxExtended.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\About\Classes\Common.cs" />
+    <Compile Include="Dialogs\About\Custom\KryptonAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\About\Enumerations\Enumerations.cs" />
+    <Compile Include="Dialogs\About\Extras\ApplicationDescriptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\About\Extras\CopyrightInformationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\About\Interfaces\IAbout.cs" />
+    <Compile Include="Dialogs\About\KryptonAboutWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\About\Extras\LicenseInformationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Colour\KryptonColourDetailsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Colour\KryptonColourPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Colour\KryptonBasicColourDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Colour\KryptonContrastColourGeneratorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Colour\Palettes\CustomPaletteColours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Colour\Palettes\KryptonPaletteBaseColourMixer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Colour\Palettes\KryptonPaletteColourMixerBasic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\IO\KryptonInputBoxExtended.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\IO\Old\KryptonInputBoxExtendedNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\IO\Old\KryptonInputBoxExtended.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\IO\Old\KryptonInputBoxExtendedTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Run\KryptonProcessRunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Run\KryptonRunArguments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Run\KryptonRunDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Run\KryptonRunSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Security\KryptonCredentialsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\System\KryptonFileInformationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\System\KryptonStringCollectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Theming\ThemeSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Toast\KryptonToastNotificationDialog.cs" />
+    <Compile Include="Dialogs\Toast\Old\KryptonToastNotificationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Typeface\KryptonTypefaceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enumerations\Enumerations.cs" />
+    <Compile Include="Message Boxes\KryptonRichMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous\InputBoxResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InputBoxResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Cyotek.Windows.Forms.ColorPicker">
+      <Version>1.7.2</Version>
+    </PackageReference>
+    <PackageReference Include="KryptonToolkitSuite5470CoreModule">
+      <Version>5.470.2000</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\User Controls\KryptonInputBoxExtended.resx">
+      <DependentUpon>KryptonInputBoxExtended.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\About\Custom\KryptonAboutBox.resx">
+      <DependentUpon>KryptonAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\About\Extras\ApplicationDescriptionDialog.resx">
+      <DependentUpon>ApplicationDescriptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\About\Extras\CopyrightInformationDialog.resx">
+      <DependentUpon>CopyrightInformationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\About\Extras\LicenseInformationDialog.resx">
+      <DependentUpon>LicenseInformationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\About\KryptonAboutWindow.resx">
+      <DependentUpon>KryptonAboutWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Colour\KryptonColourDetailsDialog.resx">
+      <DependentUpon>KryptonColourDetailsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Colour\KryptonColourPickerDialog.resx">
+      <DependentUpon>KryptonColourPickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Colour\KryptonBasicColourDialog.resx">
+      <DependentUpon>KryptonBasicColourDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Colour\KryptonContrastColourGeneratorDialog.resx">
+      <DependentUpon>KryptonContrastColourGeneratorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Colour\Palettes\CustomPaletteColours.resx">
+      <DependentUpon>CustomPaletteColours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Colour\Palettes\KryptonPaletteBaseColourMixer.resx">
+      <DependentUpon>KryptonPaletteBaseColourMixer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Colour\Palettes\KryptonPaletteColourMixerBasic.resx">
+      <DependentUpon>KryptonPaletteColourMixerBasic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IO\KryptonInputBoxExtended.resx">
+      <DependentUpon>KryptonInputBoxExtended.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IO\Old\KryptonInputBoxExtendedNew.resx">
+      <DependentUpon>KryptonInputBoxExtendedNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IO\Old\KryptonInputBoxExtended.resx">
+      <DependentUpon>KryptonInputBoxExtended.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\IO\Old\KryptonInputBoxExtendedTest.resx">
+      <DependentUpon>KryptonInputBoxExtendedTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Run\KryptonProcessRunner.resx">
+      <DependentUpon>KryptonProcessRunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Run\KryptonRunArguments.resx">
+      <DependentUpon>KryptonRunArguments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Run\KryptonRunDialog.resx">
+      <DependentUpon>KryptonRunDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Run\KryptonRunSettings.resx">
+      <DependentUpon>KryptonRunSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Security\KryptonCredentialsDialog.resx">
+      <DependentUpon>KryptonCredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\System\KryptonFileInformationDialog.resx">
+      <DependentUpon>KryptonFileInformationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\System\KryptonStringCollectionDialog.resx">
+      <DependentUpon>KryptonStringCollectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Theming\ThemeSelector.resx">
+      <DependentUpon>ThemeSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Toast\KryptonToastNotificationDialog.resx">
+      <DependentUpon>KryptonToastNotificationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Toast\Old\KryptonToastNotificationDialog.resx">
+      <DependentUpon>KryptonToastNotificationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Typeface\KryptonTypefaceDialog.resx">
+      <DependentUpon>KryptonTypefaceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message Boxes\KryptonRichMessageBox.resx">
+      <DependentUpon>KryptonRichMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Miscellaneous\InputBoxResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InputBoxResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Critical 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning 128 x 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cellbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyedropper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette-load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Common\Common 2020.csproj">
+      <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
+      <Name>Common 2020</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Toolkit Language Model\Toolkit Language Model 2020.csproj">
+      <Project>{c0ae3457-f726-4f70-8226-5a151c23a188}</Project>
+      <Name>Toolkit Language Model 2020</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Toolkit Resources\Toolkit Resources 2020.csproj">
+      <Project>{cfb34c40-6461-4ea1-a81c-5e207f2d7bfe}</Project>
+      <Name>Toolkit Resources 2020</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Extended Colour Controls\Extended Colour Controls 2020.csproj">
+      <Project>{a2f6a6c7-a8a9-4509-93e0-edf09b6a03a7}</Project>
+      <Name>Extended Colour Controls 2020</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Toolkit Settings\Toolkit Settings 2020.csproj">
+      <Project>{EA6E7878-FCCB-416C-8FE1-E626D478A7A7}</Project>
+      <Name>Toolkit Settings 2020</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Extended Standard Controls\Extended Standard Controls 2020.csproj">
+      <Project>{3FEB06A7-B28C-4674-8C84-18A75EDAB3EB}</Project>
+      <Name>Extended Standard Controls 2020</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Run 48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Run 48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputBoxError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputBoxExclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputBoxInformation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputBoxQuestion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nic80x80.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Critical_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Critical_48_x_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Critical_64_x_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Critical_128_x_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Hand_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Hand_48_x_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Hand_64_x_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Hand_128_x_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Information_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Information_48_x_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Information_64_x_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Information_128_x_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Ok_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Ok_48_x_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Ok_64_x_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Ok_128_x_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Question_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Question_48_x_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Question_64_x_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Question_128_x_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Stop_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Stop_48_x_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Stop_64_x_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Stop_128_x_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Warning_32_x_29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Warning_48_x_43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Warning_64_x_58.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input_Box_Warning_128_x_115.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\..\Bin\Individual Components\Extended Dialogs\" /D /R /Y /S</PostBuildEvent>
+  </PropertyGroup>
+</Project>

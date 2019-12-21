@@ -2836,7 +2836,7 @@
             this.pageHeadersPrimary.Text = "Primary";
             this.pageHeadersPrimary.TextDescription = "Primary is intended for main headers that provide section titles.";
             this.pageHeadersPrimary.ToolTipTitle = "Page ToolTip";
-            this.pageHeadersPrimary.UniqueName = "029BADD125B4480F029BADD125B4480F";
+            this.pageHeadersPrimary.UniqueName = "029BADD125B4470F029BADD125B4470F";
             // 
             // pageHeadersSecondary
             // 
