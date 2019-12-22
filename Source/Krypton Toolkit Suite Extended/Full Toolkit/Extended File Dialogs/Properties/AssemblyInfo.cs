@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Extended File Dialogs")]
-[assembly: AssemblyCopyright("Copyright © Decebal Mihailescu 2007-2015. Then modifications by Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2018 - 2019 - 2020. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © Decebal Mihailescu 2007-2015. Then modifications by Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2018 - 2020. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

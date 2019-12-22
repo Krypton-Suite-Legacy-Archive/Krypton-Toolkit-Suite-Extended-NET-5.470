@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Update File Creator")]
-[assembly: AssemblyCopyright("Copyright © Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2018 - 2019 - 2020. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2018 - 2020. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

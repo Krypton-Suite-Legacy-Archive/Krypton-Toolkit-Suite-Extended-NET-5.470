@@ -196,7 +196,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Drawing
             // 
             // ksbBrightness
             // 
-            this.ksbBrightness.Location = new System.Drawing.Point(129, 471);
+            this.ksbBrightness.Location = new System.Drawing.Point(129, 470);
             this.ksbBrightness.Name = "ksbBrightness";
             this.ksbBrightness.Orientation = ExtendedControls.Base.Code.ScrollBar.CustomScrollBar.ScrollBarOrientation.HORIZONTAL;
             this.ksbBrightness.Size = new System.Drawing.Size(459, 19);

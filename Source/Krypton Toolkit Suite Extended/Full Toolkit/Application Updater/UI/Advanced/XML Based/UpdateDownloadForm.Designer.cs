@@ -133,7 +133,7 @@ namespace KryptonApplicationUpdater.UI.Advanced.XMLBased
             // kuacbtnInstallUpdate
             // 
             this.kuacbtnInstallUpdate.Enabled = false;
-            this.kuacbtnInstallUpdate.Location = new System.Drawing.Point(472, 247);
+            this.kuacbtnInstallUpdate.Location = new System.Drawing.Point(470, 247);
             this.kuacbtnInstallUpdate.Name = "kuacbtnInstallUpdate";
             this.kuacbtnInstallUpdate.Size = new System.Drawing.Size(199, 38);
             this.kuacbtnInstallUpdate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

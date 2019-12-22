@@ -314,7 +314,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(472, 380);
+            this.kryptonLabel9.Location = new System.Drawing.Point(470, 380);
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.Size = new System.Drawing.Size(24, 24);
             this.kryptonLabel9.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -324,7 +324,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(472, 348);
+            this.kryptonLabel8.Location = new System.Drawing.Point(470, 348);
             this.kryptonLabel8.Name = "kryptonLabel8";
             this.kryptonLabel8.Size = new System.Drawing.Size(23, 24);
             this.kryptonLabel8.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -334,7 +334,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(472, 316);
+            this.kryptonLabel7.Location = new System.Drawing.Point(470, 316);
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.Size = new System.Drawing.Size(29, 24);
             this.kryptonLabel7.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -344,7 +344,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(472, 284);
+            this.kryptonLabel6.Location = new System.Drawing.Point(470, 284);
             this.kryptonLabel6.Name = "kryptonLabel6";
             this.kryptonLabel6.Size = new System.Drawing.Size(24, 24);
             this.kryptonLabel6.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -500,7 +500,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             // 
             // krbtnB
             // 
-            this.krbtnB.Location = new System.Drawing.Point(472, 239);
+            this.krbtnB.Location = new System.Drawing.Point(470, 239);
             this.krbtnB.Name = "krbtnB";
             this.krbtnB.Size = new System.Drawing.Size(36, 24);
             this.krbtnB.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -518,7 +518,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             // 
             // krbtnAlpha
             // 
-            this.krbtnAlpha.Location = new System.Drawing.Point(472, 209);
+            this.krbtnAlpha.Location = new System.Drawing.Point(470, 209);
             this.krbtnAlpha.Name = "krbtnAlpha";
             this.krbtnAlpha.Size = new System.Drawing.Size(37, 24);
             this.krbtnAlpha.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -527,7 +527,7 @@ namespace ExtendedControls.ExtendedToolkit.UI.Colours
             // 
             // krbtnLuminosity
             // 
-            this.krbtnLuminosity.Location = new System.Drawing.Point(472, 179);
+            this.krbtnLuminosity.Location = new System.Drawing.Point(470, 179);
             this.krbtnLuminosity.Name = "krbtnLuminosity";
             this.krbtnLuminosity.Size = new System.Drawing.Size(34, 24);
             this.krbtnLuminosity.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

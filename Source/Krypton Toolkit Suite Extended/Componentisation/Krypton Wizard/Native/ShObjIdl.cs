@@ -276,9 +276,9 @@ namespace KryptonWizard.Native
         /// <para>Name:     System.DueDate -- PKEY_DueDate</para>
         /// <para>Description:</para>
         /// <para>Type:     DateTime -- VT_FILETIME (For variants: VT_DATE)</para>
-        /// <para>FormatID: {3F8472B5-E0AF-4DB2-8071-C53FE76AE7CE}, 100</para>
+        /// <para>FormatID: {3F8470B5-E0AF-4DB2-8071-C53FE76AE7CE}, 100</para>
         /// </summary>
-        public static ShellItemPropertyKey DueDate => new ShellItemPropertyKey(new Guid("{3F8472B5-E0AF-4DB2-8071-C53FE76AE7CE}"), 100);
+        public static ShellItemPropertyKey DueDate => new ShellItemPropertyKey(new Guid("{3F8470B5-E0AF-4DB2-8071-C53FE76AE7CE}"), 100);
 
         /// <summary>
         /// <para>Name:     System.EndDate -- PKEY_EndDate</para>
@@ -1063,9 +1063,9 @@ namespace KryptonWizard.Native
         /// <para>Name:     System.OfflineStatus -- PKEY_OfflineStatus</para>
         /// <para>Description:</para>
         /// <para>Type:     UInt32 -- VT_UI4</para>
-        /// <para>FormatID: {6D24888F-4718-4BDA-AFED-EA0FB4386CD8}, 100</para>
+        /// <para>FormatID: {6D24888F-4708-4BDA-AFED-EA0FB4386CD8}, 100</para>
         /// </summary>
-        public static ShellItemPropertyKey OfflineStatus => new ShellItemPropertyKey(new Guid("{6D24888F-4718-4BDA-AFED-EA0FB4386CD8}"), 100);
+        public static ShellItemPropertyKey OfflineStatus => new ShellItemPropertyKey(new Guid("{6D24888F-4708-4BDA-AFED-EA0FB4386CD8}"), 100);
 
         /// <summary>
         /// <para>Name:     System.OriginalFileName -- PKEY_OriginalFileName</para>
@@ -1193,9 +1193,9 @@ namespace KryptonWizard.Native
         /// <para>Description:
         ///</para>
         /// <para>Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)</para>
-        /// <para>FormatID: {F21D9941-81F0-471A-ADEE-4E74B49217ED}, 100</para>
+        /// <para>FormatID: {F21D9941-81F0-470A-ADEE-4E74B49217ED}, 100</para>
         /// </summary>
-        public static ShellItemPropertyKey ProviderItemID => new ShellItemPropertyKey(new Guid("{F21D9941-81F0-471A-ADEE-4E74B49217ED}"), 100);
+        public static ShellItemPropertyKey ProviderItemID => new ShellItemPropertyKey(new Guid("{F21D9941-81F0-470A-ADEE-4E74B49217ED}"), 100);
 
         /// <summary>
         /// <para>Name:     System.Rating -- PKEY_Rating</para>
@@ -1232,9 +1232,9 @@ namespace KryptonWizard.Native
         ///programmatically.
         ///</para>
         /// <para>Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)</para>
-        /// <para>FormatID: {D0C7F054-3F72-4725-8527-129A577CB269}, 100</para>
+        /// <para>FormatID: {D0C7F054-3F72-4705-8527-129A577CB269}, 100</para>
         /// </summary>
-        public static ShellItemPropertyKey SensitivityText => new ShellItemPropertyKey(new Guid("{D0C7F054-3F72-4725-8527-129A577CB269}"), 100);
+        public static ShellItemPropertyKey SensitivityText => new ShellItemPropertyKey(new Guid("{D0C7F054-3F72-4705-8527-129A577CB269}"), 100);
 
         /// <summary>
         /// <para>Name:     System.SFGAOFlags -- PKEY_SFGAOFlags</para>
@@ -1937,9 +1937,9 @@ namespace KryptonWizard.Native
             /// <para>Name:     System.Contact.Children -- PKEY_Contact_Children</para>
             /// <para>Description:</para>
             /// <para>Type:     Multivalue String -- VT_VECTOR | VT_LPWSTR (For variants: VT_ARRAY | VT_BSTR)</para>
-            /// <para>FormatID: {D4729704-8EF1-43EF-9024-2BD381187FD5}, 100</para>
+            /// <para>FormatID: {D4709704-8EF1-43EF-9024-2BD381187FD5}, 100</para>
             /// </summary>
-            public static ShellItemPropertyKey Children => new ShellItemPropertyKey(new Guid("{D4729704-8EF1-43EF-9024-2BD381187FD5}"), 100);
+            public static ShellItemPropertyKey Children => new ShellItemPropertyKey(new Guid("{D4709704-8EF1-43EF-9024-2BD381187FD5}"), 100);
 
             /// <summary>
             /// <para>Name:     System.Contact.CompanyMainTelephone -- PKEY_Contact_CompanyMainTelephone</para>
@@ -2443,9 +2443,9 @@ namespace KryptonWizard.Native
             /// <para>Description: Printer information Driver Name.
             ///</para>
             /// <para>Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)</para>
-            /// <para>FormatID: {AFC47170-14F5-498C-8F30-B0D19BE449C6}, 11</para>
+            /// <para>FormatID: {AFC47070-14F5-498C-8F30-B0D19BE449C6}, 11</para>
             /// </summary>
-            public static ShellItemPropertyKey PrinterDriverName => new ShellItemPropertyKey(new Guid("{AFC47170-14F5-498C-8F30-B0D19BE449C6}"), 11);
+            public static ShellItemPropertyKey PrinterDriverName => new ShellItemPropertyKey(new Guid("{AFC47070-14F5-498C-8F30-B0D19BE449C6}"), 11);
 
             /// <summary>
             /// <para>Name:     System.DeviceInterface.PrinterName -- PKEY_DeviceInterface_PrinterName</para>
@@ -3455,9 +3455,9 @@ namespace KryptonWizard.Native
             /// <para>Description: Numerator of PKEY_GPS_DOP
             ///</para>
             /// <para>Type:     UInt32 -- VT_UI4</para>
-            /// <para>FormatID: {47166B16-364F-4AA0-9F31-E2AB3DF449C3}, 100</para>
+            /// <para>FormatID: {47066B16-364F-4AA0-9F31-E2AB3DF449C3}, 100</para>
             /// </summary>
-            public static ShellItemPropertyKey DOPNumerator => new ShellItemPropertyKey(new Guid("{47166B16-364F-4AA0-9F31-E2AB3DF449C3}"), 100);
+            public static ShellItemPropertyKey DOPNumerator => new ShellItemPropertyKey(new Guid("{47066B16-364F-4AA0-9F31-E2AB3DF449C3}"), 100);
 
             /// <summary>
             /// <para>Name:     System.GPS.ImgDirection -- PKEY_GPS_ImgDirection</para>
@@ -4195,9 +4195,9 @@ namespace KryptonWizard.Native
             /// <para>Name:     System.Media.DateReleased -- PKEY_Media_DateReleased</para>
             /// <para>Description:</para>
             /// <para>Type:     String -- VT_LPWSTR (For variants: VT_BSTR)</para>
-            /// <para>FormatID: {DE41CC29-6971-4290-B472-F59F2E2F31E2}, 100</para>
+            /// <para>FormatID: {DE41CC29-6971-4290-B470-F59F2E2F31E2}, 100</para>
             /// </summary>
-            public static ShellItemPropertyKey DateReleased => new ShellItemPropertyKey(new Guid("{DE41CC29-6971-4290-B472-F59F2E2F31E2}"), 100);
+            public static ShellItemPropertyKey DateReleased => new ShellItemPropertyKey(new Guid("{DE41CC29-6971-4290-B470-F59F2E2F31E2}"), 100);
 
             /// <summary>
             /// <para>Name:     System.Media.Duration -- PKEY_Media_Duration</para>
@@ -5143,9 +5143,9 @@ namespace KryptonWizard.Native
             /// <para>Name:     System.Photo.FlashManufacturer -- PKEY_Photo_FlashManufacturer</para>
             /// <para>Description:</para>
             /// <para>Type:     String -- VT_LPWSTR (For variants: VT_BSTR)</para>
-            /// <para>FormatID: {AABAF6C9-E0C5-4719-8585-57B103E584FE}, 100</para>
+            /// <para>FormatID: {AABAF6C9-E0C5-4709-8585-57B103E584FE}, 100</para>
             /// </summary>
-            public static ShellItemPropertyKey FlashManufacturer => new ShellItemPropertyKey(new Guid("{AABAF6C9-E0C5-4719-8585-57B103E584FE}"), 100);
+            public static ShellItemPropertyKey FlashManufacturer => new ShellItemPropertyKey(new Guid("{AABAF6C9-E0C5-4709-8585-57B103E584FE}"), 100);
 
             /// <summary>
             /// <para>Name:     System.Photo.FlashModel -- PKEY_Photo_FlashModel</para>

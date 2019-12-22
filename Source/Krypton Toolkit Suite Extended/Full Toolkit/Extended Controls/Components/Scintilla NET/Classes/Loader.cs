@@ -48,7 +48,7 @@ namespace ExtendedControls.Components.ScintillaNET.Classes
             this.encoding = encoding;
 
             // http://stackoverflow.com/a/985820/2073621
-            // http://stackoverflow.com/a/2094715/2073621
+            // http://stackoverflow.com/a/2094705/2073621
             // http://en.wikipedia.org/wiki/Virtual_method_table
             // http://www.openrce.org/articles/full_view/23
             // Because I know that I'm not going to remember all this... In C++, the first

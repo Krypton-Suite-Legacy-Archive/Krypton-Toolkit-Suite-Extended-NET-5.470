@@ -622,7 +622,7 @@ namespace ExtendedFileDialogs.Controls.Old
         LeftToolBar = 0x4A0,
         ComboFileName = 0x47c,
         ComboFileType = 0x470,
-        ComboFolder = 0x471,
+        ComboFolder = 0x470,
         CheckBoxReadOnly = 0x410
     }
     #endregion

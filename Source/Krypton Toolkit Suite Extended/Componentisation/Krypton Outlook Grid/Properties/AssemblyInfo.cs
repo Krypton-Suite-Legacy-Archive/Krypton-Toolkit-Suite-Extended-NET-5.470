@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("JDH Software, Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV)")]
 [assembly: AssemblyProduct("Krypton Outlook Grid")]
-[assembly: AssemblyCopyright("Copyright © JDH Software 2013-2018 - 2019 - 2020. Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2018 - 2019 - 2020. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © JDH Software 2013-2018 - 2020. Then modifications by Peter Wagner (aka Wagnerp) & Simon Coghlan (aka Smurf-IV) 2018 - 2020. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

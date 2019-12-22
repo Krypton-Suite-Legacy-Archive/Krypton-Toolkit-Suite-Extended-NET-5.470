@@ -374,7 +374,7 @@ namespace PaletteExplorer.UX.Colour
             this.knudRedChannelValue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.knudRedChannelValue.DecimalPlaces = 99;
-            this.knudRedChannelValue.Location = new System.Drawing.Point(98, 471);
+            this.knudRedChannelValue.Location = new System.Drawing.Point(98, 470);
             this.knudRedChannelValue.Maximum = new decimal(new int[] {
             255,
             0,
@@ -410,7 +410,7 @@ namespace PaletteExplorer.UX.Colour
             // 
             this.kryptonLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.kryptonLabel10.Location = new System.Drawing.Point(12, 471);
+            this.kryptonLabel10.Location = new System.Drawing.Point(12, 470);
             this.kryptonLabel10.Name = "kryptonLabel10";
             this.kryptonLabel10.Size = new System.Drawing.Size(59, 33);
             this.kryptonLabel10.StateCommon.LongText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
