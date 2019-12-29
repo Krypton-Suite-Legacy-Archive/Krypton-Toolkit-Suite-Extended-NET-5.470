@@ -373,19 +373,19 @@
       <Version>1.7.2</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470CoreModule">
-      <Version>5.470.2000</Version>
+      <Version>5.470.2098</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470DockingModule">
-      <Version>5.470.745</Version>
+      <Version>5.470.753</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470NavigatorModule">
-      <Version>5.470.774</Version>
+      <Version>5.470.796</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470RibbonModule">
-      <Version>5.470.828</Version>
+      <Version>5.470.850</Version>
     </PackageReference>
     <PackageReference Include="KryptonToolkitSuite5470WorkspaceModule">
-      <Version>5.470.719</Version>
+      <Version>5.470.727</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.0</Version>
