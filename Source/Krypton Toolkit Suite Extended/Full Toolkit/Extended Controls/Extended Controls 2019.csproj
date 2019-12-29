@@ -1396,21 +1396,21 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Global Utilities\Global Utilities 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Global Utilities\Global Utilities 2019.csproj">
       <Project>{124496E1-E8FD-4796-B194-8FD8DB8A1896}</Project>
-      <Name>Global Utilities 2020</Name>
+      <Name>Global Utilities 2019</Name>
     </ProjectReference>
     <ProjectReference Include="..\Global Utilities\Global Utilities.csproj">
       <Project>{edb87d0c-a37c-48b5-9857-f014c438a4c5}</Project>
       <Name>Global Utilities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Shared\Toolkit Resources\Toolkit Resources 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Toolkit Resources\Toolkit Resources 2019.csproj">
       <Project>{cfb34c40-6461-4ea1-a81c-5e207f2d7bfe}</Project>
-      <Name>Toolkit Resources 2020</Name>
+      <Name>Toolkit Resources 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Shared\Toolkit Settings\Toolkit Settings 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Toolkit Settings\Toolkit Settings 2019.csproj">
       <Project>{EA6E7878-FCCB-416C-8FE1-E626D478A7A7}</Project>
-      <Name>Toolkit Settings 2020</Name>
+      <Name>Toolkit Settings 2019</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

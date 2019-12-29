@@ -225,13 +225,13 @@
     <Content Include="ToolboxBitmaps\KryptonColourButtonExtended.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Common\Common 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Common\Common 2019.csproj">
       <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
-      <Name>Common 2020</Name>
+      <Name>Common 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Extended Standard Controls\Extended Standard Controls 2020.csproj">
+    <ProjectReference Include="..\Extended Standard Controls\Extended Standard Controls 2019.csproj">
       <Project>{3feb06a7-b28c-4674-8c84-18a75edab3eb}</Project>
-      <Name>Extended Standard Controls 2020</Name>
+      <Name>Extended Standard Controls 2019</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

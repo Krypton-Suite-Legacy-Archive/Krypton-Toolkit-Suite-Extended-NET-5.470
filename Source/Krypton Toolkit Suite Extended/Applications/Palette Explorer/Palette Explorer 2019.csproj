@@ -450,9 +450,9 @@
     <None Include="Resources\system-software-update_128_x_128.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Full Toolkit\Extended Controls\Extended Controls 2020.csproj">
+    <ProjectReference Include="..\..\Full Toolkit\Extended Controls\Extended Controls 2019.csproj">
       <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
-      <Name>Extended Controls 2020</Name>
+      <Name>Extended Controls 2019</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

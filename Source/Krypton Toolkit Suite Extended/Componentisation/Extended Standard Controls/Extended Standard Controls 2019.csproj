@@ -86,9 +86,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Extended Toolkit Core 2020.csproj">
+    <ProjectReference Include="..\Core\Extended Toolkit Core 2019.csproj">
       <Project>{5F28100D-C9A0-4361-B780-7AC132A421DF}</Project>
-      <Name>Extended Toolkit Core 2020</Name>
+      <Name>Extended Toolkit Core 2019</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

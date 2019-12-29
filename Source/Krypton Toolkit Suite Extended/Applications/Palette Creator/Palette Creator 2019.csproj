@@ -346,13 +346,13 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Full Toolkit\Extended Controls\Extended Controls 2020.csproj">
+    <ProjectReference Include="..\..\Full Toolkit\Extended Controls\Extended Controls 2019.csproj">
       <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
-      <Name>Extended Controls 2020</Name>
+      <Name>Extended Controls 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Shared\Tooling\Core 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Tooling\Core 2019.csproj">
       <Project>{DDE371E2-E7ED-41A3-ADBA-DC59298CDEF5}</Project>
-      <Name>Core 2020</Name>
+      <Name>Core 2019</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

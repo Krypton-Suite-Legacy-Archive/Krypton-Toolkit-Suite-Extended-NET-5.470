@@ -272,25 +272,25 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Componentisation\Core\Extended Toolkit Core 2020.csproj">
+    <ProjectReference Include="..\..\Componentisation\Core\Extended Toolkit Core 2019.csproj">
       <Project>{5F28100D-C9A0-4361-B780-7AC132A421DF}</Project>
-      <Name>Extended Toolkit Core 2020</Name>
+      <Name>Extended Toolkit Core 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Full Toolkit\Extended Controls\Extended Controls 2020.csproj">
+    <ProjectReference Include="..\..\Full Toolkit\Extended Controls\Extended Controls 2019.csproj">
       <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
-      <Name>Extended Controls 2020</Name>
+      <Name>Extended Controls 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Shared\Persistence\Persistence 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Persistence\Persistence 2019.csproj">
       <Project>{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}</Project>
-      <Name>Persistence 2020</Name>
+      <Name>Persistence 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Shared\Tooling\Core 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Tooling\Core 2019.csproj">
       <Project>{DDE371E2-E7ED-41A3-ADBA-DC59298CDEF5}</Project>
-      <Name>Core 2020</Name>
+      <Name>Core 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Shared\Toolkit Settings\Toolkit Settings 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Toolkit Settings\Toolkit Settings 2019.csproj">
       <Project>{EA6E7878-FCCB-416C-8FE1-E626D478A7A7}</Project>
-      <Name>Toolkit Settings 2020</Name>
+      <Name>Toolkit Settings 2019</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

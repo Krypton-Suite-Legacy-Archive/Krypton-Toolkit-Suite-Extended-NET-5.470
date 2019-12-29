@@ -392,13 +392,13 @@
     <None Include="Resources\Warning_32_x_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Componentisation\Core\Extended Toolkit Core 2020.csproj">
+    <ProjectReference Include="..\..\Componentisation\Core\Extended Toolkit Core 2019.csproj">
       <Project>{5f28100d-c9a0-4361-b780-7ac132a421df}</Project>
-      <Name>Extended Toolkit Core 2020</Name>
+      <Name>Extended Toolkit Core 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Toolkit Settings\Toolkit Settings 2020.csproj">
+    <ProjectReference Include="..\Toolkit Settings\Toolkit Settings 2019.csproj">
       <Project>{EA6E7878-FCCB-416C-8FE1-E626D478A7A7}</Project>
-      <Name>Toolkit Settings 2020</Name>
+      <Name>Toolkit Settings 2019</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -167,17 +167,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Common\Common 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Common\Common 2019.csproj">
       <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
-      <Name>Common 2020</Name>
+      <Name>Common 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Shared\Persistence\Persistence 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Persistence\Persistence 2019.csproj">
       <Project>{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}</Project>
-      <Name>Persistence 2020</Name>
+      <Name>Persistence 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Extended Controls\Extended Controls 2020.csproj">
+    <ProjectReference Include="..\Extended Controls\Extended Controls 2019.csproj">
       <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
-      <Name>Extended Controls 2020</Name>
+      <Name>Extended Controls 2019</Name>
     </ProjectReference>
     <ProjectReference Include="..\Global Utilities\Global Utilities.csproj">
       <Project>{edb87d0c-a37c-48b5-9857-f014c438a4c5}</Project>

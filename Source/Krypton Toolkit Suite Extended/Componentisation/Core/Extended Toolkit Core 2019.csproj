@@ -194,13 +194,13 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Common\Common 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Common\Common 2019.csproj">
       <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
-      <Name>Common 2020</Name>
+      <Name>Common 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Shared\Toolkit Settings\Toolkit Settings 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Toolkit Settings\Toolkit Settings 2019.csproj">
       <Project>{ea6e7878-fccb-416c-8fe1-e626d478a7a7}</Project>
-      <Name>Toolkit Settings 2020</Name>
+      <Name>Toolkit Settings 2019</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

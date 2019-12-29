@@ -343,17 +343,17 @@
     <None Include="Resources\System-Information-tool-icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Componentisation\Core\Extended Toolkit Core 2020.csproj">
+    <ProjectReference Include="..\..\Componentisation\Core\Extended Toolkit Core 2019.csproj">
       <Project>{5f28100d-c9a0-4361-b780-7ac132a421df}</Project>
-      <Name>Extended Toolkit Core 2020</Name>
+      <Name>Extended Toolkit Core 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Full Toolkit\Extended Controls\Extended Controls 2020.csproj">
+    <ProjectReference Include="..\..\Full Toolkit\Extended Controls\Extended Controls 2019.csproj">
       <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
-      <Name>Extended Controls 2020</Name>
+      <Name>Extended Controls 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Toolkit Settings\Toolkit Settings 2020.csproj">
+    <ProjectReference Include="..\Toolkit Settings\Toolkit Settings 2019.csproj">
       <Project>{ea6e7878-fccb-416c-8fe1-e626d478a7a7}</Project>
-      <Name>Toolkit Settings 2020</Name>
+      <Name>Toolkit Settings 2019</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

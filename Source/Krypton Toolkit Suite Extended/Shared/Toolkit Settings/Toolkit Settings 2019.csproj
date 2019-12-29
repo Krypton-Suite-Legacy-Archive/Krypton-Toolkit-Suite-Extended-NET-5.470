@@ -396,9 +396,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Global Utilities\Global Utilities 2020.csproj">
+    <ProjectReference Include="..\Global Utilities\Global Utilities 2019.csproj">
       <Project>{124496E1-E8FD-4796-B194-8FD8DB8A1896}</Project>
-      <Name>Global Utilities 2020</Name>
+      <Name>Global Utilities 2019</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

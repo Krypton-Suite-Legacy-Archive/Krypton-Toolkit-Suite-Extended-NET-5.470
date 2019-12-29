@@ -168,17 +168,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Common\Common 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Common\Common 2019.csproj">
       <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
-      <Name>Common 2020</Name>
+      <Name>Common 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Shared\Global Utilities\Global Utilities 2020.csproj">
+    <ProjectReference Include="..\..\Shared\Global Utilities\Global Utilities 2019.csproj">
       <Project>{124496E1-E8FD-4796-B194-8FD8DB8A1896}</Project>
-      <Name>Global Utilities 2020</Name>
+      <Name>Global Utilities 2019</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Extended Controls\Extended Controls 2020.csproj">
+    <ProjectReference Include="..\Extended Controls\Extended Controls 2019.csproj">
       <Project>{1c9153e4-cdc4-44c9-9794-1d144fe87a1f}</Project>
-      <Name>Extended Controls 2020</Name>
+      <Name>Extended Controls 2019</Name>
     </ProjectReference>
     <ProjectReference Include="..\Global Utilities\Global Utilities.csproj">
       <Project>{edb87d0c-a37c-48b5-9857-f014c438a4c5}</Project>
