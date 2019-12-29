@@ -6,15 +6,30 @@
 
 =======
 
-| NuGet | Current NuGet Version | Github License |
+| Module Name | Current Version |
+|---|---|
+| <img src="https://img.shields.io/badge/Module-Core-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470CoreModule) | 
+| <img src="https://img.shields.io/badge/Module-Colour Controls-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470ExtendedColourControlsModule) | 
+| <img src="https://img.shields.io/badge/Module-Dialogs-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470ExtendedDialogsModule) |
+| <img src="https://img.shields.io/badge/Module-Menu & Toolbar Items-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule) 
+| <img src="https://img.shields.io/badge/Module-Extended Standard Controls-orange" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470ExtendedStandardControlsModule) |
+| <img src="https://img.shields.io/badge/Module-Floating Menu & Toolbars-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470FloatingMenuAndToolbarsModule) | 
+| <img src="https://img.shields.io/badge/Module-IO Components-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470IOComponentsModule) 
+| <img src="https://img.shields.io/badge/Module-Krypton Outlook Grid-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470KryptonOutlookGridModule) |
+| <img src="https://img.shields.io/badge/Module-Navi Suite-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470NaviSuiteModule) | 
+| <img src="https://img.shields.io/badge/Module-Task Dialogs-orange.svg" /> | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470TaskDialogsModule) | 
+
+<!-- | NuGet | Current NuGet Version | Github License |
 |---|---|---|
-| [![NuGet](https://img.shields.io/badge/NuGet-Krypton%20Extended%20.NET%205.470-brightgreen.svg)](https://www.nuget.org/packages/KryptonExtendedToolkit5470/) | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470.svg) | ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470.svg)
+| [![NuGet](https://img.shields.io/badge/NuGet-Krypton%20Extended%20.NET%205.470-brightgreen.svg)](https://www.nuget.org/packages/KryptonExtendedToolkit5470/) | ![Nuget](https://img.shields.io/nuget/v/KryptonExtendedToolkit5470.svg) | ![GitHub](https://img.shields.io/github/license/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470.svg) -->
 
 =======
 
+<!--
 ## NOTE: 20/06/2018 Background menu colours will be implemented in the coming weeks. Stay tuned for updates!
 
 ======
+-->
 
 # Building this repository from code
 
@@ -23,6 +38,10 @@
 ======
 
 # <img src="https://raw.githubusercontent.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/master/Assets/PNG/64%20x%2064/KR%2064%20%20x%2064%20Orange.png" /><a href="https://github.com/Wagnerp/Krypton-NET-Version-Dashboard"> Krypton Releases</a>
+
+=======
+
+<a href="https://discord.gg/KVsht22" alt="Join our Krypton Toolkit community Discord server"><img src="https://img.shields.io/badge/Discord-Join%20our%20server-7289DA" /></a>
 
 ======
 
@@ -36,26 +55,86 @@ Please refer to [examples](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Exte
 
 You can check out the pre-built demo application from downloading it [here](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/blob/master/Assets/Demos/Demos.zip)
 
-<!--
 ======
 
-## 2019-09-01 Build 13xx - September Update
+<!--
 * Added a better file system tree view control
 
 ======
 
-## 2019-08-10 Build 12xx - August Update
-* Added `ExtendedKryptonColourButton` control with a kryptonised custom colour UI
-* Started componentising toolkit
-* More item and project templates (floating MenuStrips & ToolStrip templates)
-* Floating menu and toolstrips and associated components are now in a separate binary for easier toolbox navigation - **Floating Toolbars.dll**
-* The `GripStyle` visibility is now set to **true** and `DockStyle` is set to **None** by default on the `FloatingMenuStrip`
-* Add documentation via sandcastle
+## 2020-01-01 Build 20xx - January 2020 Update
+* Changed year from `2019` to `2020`
+* New `KryptonInputBoxExtended` dialog
+* New `KryptonRunDialog`
+* License headers in code
+* Fixes & enhancements to `Krypton Outlook Grid` courtesy of [richterAI](https://github.com/richterAl)
+* Binaries are now placed in one central **Bin** folder
+* Upgraded to Krypton Toolkit Suite - version: **5.470.21xx**
+* General fixes
+
+======
 -->
+
+## 2019-12-01 Build 1660 - December 2019 Update
+* Implemented [#98](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/98), Add Border Colour Control Properties
+* Implemented [#100](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/100), Progress bar
+* Made it easier to use `KryptonUACElevatedButton`, elevation will now occur on `OnClick` if `ProcessName` is populated
+* Directory changes
 
 ======
 
-## 2019-07-01 Build 1180 - July Update
+## 2019-11-01 Build 1576 - November 2019 Update
+* Fixed [#102](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/102), `PInvokeImbalance` memory leak, courtesy of [zenglanmu](https://github.com/zenglanmu)
+* New Krypton about dialog box
+* New screen colour picker
+* New Visual Studio 2019 inspired theme
+* New themes by Byte#7189
+* Reorganised custom theme directory for better accessibility
+* General bugfixes
+* **Support for .NET Framework 4.0 has now ended!**
+
+======
+
+## 2019-10-01 Build 1400 - October 2019 Update
+* You can now have granular control over the appearance over the Krypton components, [#95](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/95) & [#89](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/89), labelled as `KryptonExtendedToolkit5470StandardControlsExtendedModule`
+* More [#96](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/96)
+
+======
+
+## 2019-09-09 Discord community server
+* A new Discord community server has been set-up to discuss bugs, issues, new features etc. You can join by clicking the button above.
+
+======
+
+## 2019-09-01 Build 1331 - September 2019 Update
+* More item and project templates (floating MenuStrips & ToolStrip templates)
+* More toolbar features in `KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule`
+* Define corner radius for selected controls, [#96](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/96)
+* Updated `README.md` with module information
+
+======
+
+## 2019-08-12 Build 1216 - August 2019 Update
+* Added `ExtendedKryptonColourButton` control with a kryptonised custom colour UI
+* Started componentising toolkit
+* Modularisation of the toolkit. These modules are:
+    * `KryptonExtendedToolkit5470CoreModule` - Contains the core components
+    * `KryptonExtendedToolkit5470ExtendedColourControlsModule` - Enhanced colour controls
+    * `KryptonExtendedToolkit5470ExtendedDialogsModule` - Enhanced dialogs
+    * `KryptonExtendedToolkit5470ExtendedMenuAndToolbarItemsModule` - MRU & other toolbar features
+    * `KryptonExtendedToolkit5470FloatingMenuAndToolbarsModule` - Floatable menu & toolbars
+    * `KryptonExtendedToolkit5470IOComponentsModule` - Specific filesystem controls
+    * `KryptonExtendedToolkit5470KryptonOutlookGridModule` - Krypton Outlook Grid control
+    * `KryptonExtendedToolkit5470NaviSuiteModule` - NaviSuite controls
+    * `KryptonExtendedToolkit5470TaskDialogsModule` - Task dialogs
+* Floating menu and toolstrips and associated components are now in a separate binary for easier toolbox navigation - **Floating Toolbars.dll**
+* The `GripStyle` visibility is now set to **true** and `DockStyle` is set to **None** by default on the `FloatingMenuStrip`
+* Add documentation via sandcastle
+* Dashboard will be updated in due course
+
+======
+
+## 2019-07-01 Build 1180 - July 2019 Update
 * Implement [TaskDialog](https://github.com/kpreisser/TaskDialog) by [Konstantin Preißer](https://github.com/kpreisser)
 * Floating Menu & Tool strips - Bought back one of the pre Office 2007 features (**IMPORTANT:** Always set the `GripStyle` to **visible** on `FloatingMenuStrip`!)
 * Fixed issue [#79](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/79), How many MessageBoxes are being exported!?! and which work?
@@ -69,7 +148,7 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ======
 
-## 2019-06-01 Build 1030 - June Update
+## 2019-06-01 Build 1030 - June 2019 Update
 * New `issue` templates
 * Implemented repository tags for better GitHub SEO
 * Implement `WindowsAPICodePackModel.cs` class for dealing with **WindowsAPICodePack** features 
@@ -85,7 +164,7 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ======
 
-## 2019-05-01 Build 934 - May Update
+## 2019-05-01 Build 934 - May 2019 Update
 * Outlook 2003 style toast notification
 * File checksum calculator (MD5, SHA-1, SHA-256, SHA-384, SHA-512 and RIPEMD-160)
 * New `KryptonPaletteManager` class for dealing with creating custom `KryptonPalette`'s
@@ -103,7 +182,7 @@ You can check out the pre-built demo application from downloading it [here](http
 
 ======
 
-## 2019-04-01 Build 855 April Update
+## 2019-04-01 Build 855 - April 2019 Update
 * Build 855 (build date Monday 1st, April 2019) is now available on NuGet
 * New palette theme selector
 * New `KryptonToastNotification` window

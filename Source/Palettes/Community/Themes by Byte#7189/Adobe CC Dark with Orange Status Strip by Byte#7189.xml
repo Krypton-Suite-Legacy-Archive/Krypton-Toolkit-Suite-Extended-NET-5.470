@@ -1,0 +1,587 @@
+<?xml version="1.0"?>
+<!--Created by exporting the settings of a KryptonPalette instance.-->
+<!--For more information about Krypton visit www.ComponentFactory.com-->
+<!--WARNING: Modifying this file may render it invalid for importing.-->
+<KryptonPalette Version="18" Generated="Sunday, 13 October 2019, 11:19">
+  <Properties>
+    <ButtonSpecs>
+      <Close>
+        <Image Type="Image" Value="ImageCache1" />
+      </Close>
+    </ButtonSpecs>
+    <ButtonStyles>
+      <ButtonCommon>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="72, 72, 72" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="94, 94, 94" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Border>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="238, 238, 238" />
+              <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+            </ShortText>
+          </Content>
+        </StateCommon>
+        <StateNormal>
+          <Back>
+            <Color1 Type="Color" Value="72, 72, 72" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+        </StateNormal>
+        <StateTracking>
+          <Back>
+            <Color1 Type="Color" Value="76, 76, 76" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+        </StateTracking>
+        <StatePressed>
+          <Back>
+            <Color1 Type="Color" Value="72, 72, 72" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+        </StatePressed>
+        <OverrideDefault>
+          <Back>
+            <Color1 Type="Color" Value="72, 72, 72" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+        </OverrideDefault>
+        <OverrideFocus>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="64, 88, 110" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Border>
+        </OverrideFocus>
+      </ButtonCommon>
+      <ButtonAlternate>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="65, 65, 65" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="94, 94, 94" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Border>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="184, 184, 184" />
+            </ShortText>
+          </Content>
+        </StateCommon>
+        <StateNormal>
+          <Back>
+            <Color1 Type="Color" Value="65, 65, 65" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+        </StateNormal>
+        <StateTracking>
+          <Back>
+            <Color1 Type="Color" Value="69, 69, 69" />
+          </Back>
+        </StateTracking>
+        <StatePressed>
+          <Back>
+            <Color1 Type="Color" Value="65, 65, 65" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+        </StatePressed>
+        <OverrideDefault>
+          <Back>
+            <Color1 Type="Color" Value="65, 65, 65" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+        </OverrideDefault>
+        <OverrideFocus>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="64, 88, 110" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Border>
+        </OverrideFocus>
+      </ButtonAlternate>
+    </ButtonStyles>
+    <Common>
+      <StateCommon>
+        <Back>
+          <Color1 Type="Color" Value="72, 72, 72" />
+          <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+        </Back>
+      </StateCommon>
+      <StateDisabled>
+        <Back>
+          <Color1 Type="Color" Value="Silver" />
+          <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+        </Back>
+      </StateDisabled>
+    </Common>
+    <ControlStyles>
+      <ControlCommon>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="DimGray" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+        </StateCommon>
+      </ControlCommon>
+      <ControlClient>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="DimGray" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+        </StateCommon>
+      </ControlClient>
+    </ControlStyles>
+    <ContextMenu>
+      <StateCommon>
+        <Heading>
+          <Back>
+            <Color1 Type="Color" Value="65, 65, 65" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="94, 94, 94" />
+          </Border>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="184, 184, 184" />
+            </ShortText>
+          </Content>
+        </Heading>
+        <ItemImageColumn>
+          <Back>
+            <Draw Type="InheritBool" Value="False" />
+          </Back>
+          <Border>
+            <Draw Type="InheritBool" Value="False" />
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+          </Border>
+        </ItemImageColumn>
+        <Separator>
+          <Back>
+            <Color1 Type="Color" Value="72, 72, 72" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Border>
+            <Draw Type="InheritBool" Value="False" />
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+          </Border>
+        </Separator>
+      </StateCommon>
+      <StateHighlight>
+        <ItemHighlight>
+          <Back>
+            <Color1 Type="Color" Value="64, 88, 110" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Border>
+            <Draw Type="InheritBool" Value="False" />
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+          </Border>
+        </ItemHighlight>
+        <ItemSplit>
+          <Back>
+            <Draw Type="InheritBool" Value="False" />
+          </Back>
+          <Border>
+            <Draw Type="InheritBool" Value="False" />
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+          </Border>
+        </ItemSplit>
+      </StateHighlight>
+    </ContextMenu>
+    <HeaderStyles>
+      <HeaderPrimary>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="64, 88, 110" />
+          </Back>
+          <Border>
+            <Draw Type="InheritBool" Value="True" />
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Left,Right" />
+            <Color1 Type="Color" Value="94, 94, 94" />
+            <Width Type="Int" Value="1" />
+          </Border>
+          <Content>
+            <ShortText>
+              <Font Type="Font" Value="Leelawadee UI, 9.75pt" />
+              <Color1 Type="Color" Value="184, 184, 184" />
+              <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+            </ShortText>
+          </Content>
+        </StateCommon>
+      </HeaderPrimary>
+      <HeaderForm>
+        <StateCommon>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="94, 94, 94" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+            <Width Type="Int" Value="1" />
+          </Border>
+        </StateCommon>
+      </HeaderForm>
+    </HeaderStyles>
+    <Images>
+      <CheckBox>
+        <Common Type="Image" Value="ImageCache2" />
+        <UncheckedDisabled Type="Image" Value="ImageCache3" />
+        <UncheckedNormal Type="Image" Value="ImageCache4" />
+        <UncheckedTracking Type="Image" Value="ImageCache5" />
+        <UncheckedPressed Type="Image" Value="ImageCache6" />
+        <CheckedDisabled Type="Image" Value="ImageCache7" />
+        <CheckedNormal Type="Image" Value="ImageCache8" />
+        <CheckedTracking Type="Image" Value="ImageCache9" />
+        <CheckedPressed Type="Image" Value="ImageCache10" />
+      </CheckBox>
+      <DropDownButton>
+        <Common Type="Image" Value="ImageCache11" />
+        <Tracking Type="Image" Value="ImageCache12" />
+        <Pressed Type="Image" Value="ImageCache13" />
+      </DropDownButton>
+      <TreeView>
+        <Plus Type="Image" Value="ImageCache14" />
+        <Minus Type="Image" Value="ImageCache15" />
+      </TreeView>
+    </Images>
+    <InputControlStyles>
+      <InputControlCommon>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="72, 72, 72" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="238, 238, 238" />
+              <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+            </ShortText>
+          </Content>
+        </StateCommon>
+        <StateActive>
+          <Border>
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+            <Color1 Type="Color" Value="64, 88, 110" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Border>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="238, 238, 238" />
+              <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+            </ShortText>
+          </Content>
+        </StateActive>
+      </InputControlCommon>
+      <InputControlStandalone>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="72, 72, 72" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="238, 238, 238" />
+            </ShortText>
+          </Content>
+        </StateCommon>
+        <StateActive>
+          <Back>
+            <Color1 Type="Color" Value="72, 72, 72" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="238, 238, 238" />
+            </ShortText>
+          </Content>
+        </StateActive>
+      </InputControlStandalone>
+      <InputControlCustom1>
+        <StateCommon>
+          <Border>
+            <Draw Type="InheritBool" Value="False" />
+            <DrawBorders Type="PaletteDrawBorders" Value="Top,Bottom,Left,Right" />
+          </Border>
+        </StateCommon>
+      </InputControlCustom1>
+    </InputControlStyles>
+    <LabelStyles>
+      <LabelCommon>
+        <StateCommon>
+          <ShortText>
+            <Color1 Type="Color" Value="238, 238, 238" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </ShortText>
+        </StateCommon>
+      </LabelCommon>
+      <LabelNormalControl>
+        <StateCommon>
+          <ShortText>
+            <Color1 Type="Color" Value="238, 238, 238" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </ShortText>
+        </StateCommon>
+      </LabelNormalControl>
+      <LabelTitleControl>
+        <StateCommon>
+          <ShortText>
+            <Color1 Type="Color" Value="184, 184, 184" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </ShortText>
+        </StateCommon>
+      </LabelTitleControl>
+      <LabelNormalPanel>
+        <StateCommon>
+          <ShortText>
+            <Color1 Type="Color" Value="238, 238, 238" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </ShortText>
+        </StateCommon>
+      </LabelNormalPanel>
+      <LabelTitlePanel>
+        <StateCommon>
+          <ShortText>
+            <Color1 Type="Color" Value="184, 184, 184" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </ShortText>
+        </StateCommon>
+      </LabelTitlePanel>
+      <LabelCaptionPanel>
+        <StateCommon>
+          <ShortText>
+            <Color1 Type="Color" Value="184, 184, 184" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </ShortText>
+        </StateCommon>
+      </LabelCaptionPanel>
+      <LabelToolTip>
+        <StateCommon>
+          <ShortText>
+            <Color1 Type="Color" Value="184, 184, 184" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </ShortText>
+        </StateCommon>
+      </LabelToolTip>
+      <LabelSuperTip>
+        <StateCommon>
+          <ShortText>
+            <Color1 Type="Color" Value="238, 238, 238" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </ShortText>
+        </StateCommon>
+        <StateNormal>
+          <ShortText>
+            <Color1 Type="Color" Value="238, 238, 238" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </ShortText>
+        </StateNormal>
+      </LabelSuperTip>
+      <LabelKeyTip>
+        <StateCommon>
+          <ShortText>
+            <Color1 Type="Color" Value="238, 238, 238" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </ShortText>
+        </StateCommon>
+      </LabelKeyTip>
+    </LabelStyles>
+    <PanelStyles>
+      <PanelCommon>
+        <StateCommon>
+          <Color1 Type="Color" Value="72, 72, 72" />
+          <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+        </StateCommon>
+      </PanelCommon>
+      <PanelClient>
+        <StateCommon>
+          <Color1 Type="Color" Value="72, 72, 72" />
+          <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+        </StateCommon>
+      </PanelClient>
+      <PanelAlternate>
+        <StateCommon>
+          <Color1 Type="Color" Value="65, 65, 65" />
+          <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+        </StateCommon>
+      </PanelAlternate>
+      <PanelCustom1>
+        <StateCommon>
+          <Color1 Type="Color" Value="65, 65, 65" />
+          <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+        </StateCommon>
+      </PanelCustom1>
+    </PanelStyles>
+    <TabStyles>
+      <TabCommon>
+        <StateCommon>
+          <Back>
+            <Color1 Type="Color" Value="72, 72, 72" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Border>
+            <Color1 Type="Color" Value="72, 72, 72" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Border>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="184, 184, 184" />
+              <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+            </ShortText>
+          </Content>
+        </StateCommon>
+        <StateTracking>
+          <Back>
+            <Color1 Type="Color" Value="72, 72, 72" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Border>
+            <Color1 Type="Color" Value="72, 72, 72" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Border>
+          <Content>
+            <ShortText>
+              <Color1 Type="Color" Value="238, 238, 238" />
+            </ShortText>
+          </Content>
+        </StateTracking>
+        <StatePressed>
+          <Back>
+            <Color1 Type="Color" Value="65, 65, 65" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Border>
+            <Color1 Type="Color" Value="65, 65, 65" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Border>
+        </StatePressed>
+        <StateSelected>
+          <Back>
+            <Color1 Type="Color" Value="64, 88, 110" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Border>
+            <Color1 Type="Color" Value="65, 65, 65" />
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Border>
+        </StateSelected>
+        <OverrideFocus>
+          <Back>
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Back>
+          <Border>
+            <ColorStyle Type="PaletteColorStyle" Value="Solid" />
+          </Border>
+        </OverrideFocus>
+      </TabCommon>
+    </TabStyles>
+    <ToolMenuStatus>
+      <Button>
+        <ButtonCheckedGradientBegin Type="Color" Value="72, 72, 72" />
+        <ButtonCheckedGradientEnd Type="Color" Value="72, 72, 72" />
+        <ButtonCheckedGradientMiddle Type="Color" Value="72, 72, 72" />
+        <ButtonCheckedHighlight Type="Color" Value="72, 72, 72" />
+        <ButtonCheckedHighlightBorder Type="Color" Value="72, 72, 72" />
+        <ButtonPressedBorder Type="Color" Value="72, 72, 72" />
+        <ButtonPressedGradientBegin Type="Color" Value="72, 72, 72" />
+        <ButtonPressedGradientEnd Type="Color" Value="72, 72, 72" />
+        <ButtonPressedGradientMiddle Type="Color" Value="72, 72, 72" />
+        <ButtonPressedHighlight Type="Color" Value="72, 72, 72" />
+        <ButtonPressedHighlightBorder Type="Color" Value="72, 72, 72" />
+        <ButtonSelectedBorder Type="Color" Value="64, 88, 110" />
+        <ButtonSelectedGradientBegin Type="Color" Value="64, 88, 110" />
+        <ButtonSelectedGradientEnd Type="Color" Value="64, 88, 110" />
+        <ButtonSelectedGradientMiddle Type="Color" Value="64, 88, 110" />
+        <ButtonSelectedHighlight Type="Color" Value="64, 88, 110" />
+        <ButtonSelectedHighlightBorder Type="Color" Value="64, 88, 110" />
+        <CheckBackground Type="Color" Value="65, 65, 65" />
+        <CheckPressedBackground Type="Color" Value="72, 72, 72" />
+        <CheckSelectedBackground Type="Color" Value="64, 88, 110" />
+        <OverflowButtonGradientBegin Type="Color" Value="65, 65, 65" />
+        <OverflowButtonGradientEnd Type="Color" Value="65, 65, 65" />
+        <OverflowButtonGradientMiddle Type="Color" Value="65, 65, 65" />
+      </Button>
+      <Grip>
+        <GripDark Type="Color" Value="65, 65, 65" />
+        <GripLight Type="Color" Value="72, 72, 72" />
+      </Grip>
+      <Menu>
+        <ImageMarginGradientBegin Type="Color" Value="Transparent" />
+        <ImageMarginGradientEnd Type="Color" Value="Transparent" />
+        <ImageMarginGradientMiddle Type="Color" Value="Transparent" />
+        <ImageMarginRevealedGradientBegin Type="Color" Value="Transparent" />
+        <ImageMarginRevealedGradientEnd Type="Color" Value="Transparent" />
+        <ImageMarginRevealedGradientMiddle Type="Color" Value="Transparent" />
+        <MenuBorder Type="Color" Value="65, 65, 65" />
+        <MenuItemText Type="Color" Value="238, 238, 238" />
+        <MenuItemBorder Type="Color" Value="65, 65, 65" />
+        <MenuItemPressedGradientBegin Type="Color" Value="72, 72, 72" />
+        <MenuItemPressedGradientEnd Type="Color" Value="72, 72, 72" />
+        <MenuItemPressedGradientMiddle Type="Color" Value="72, 72, 72" />
+        <MenuItemSelected Type="Color" Value="64, 88, 110" />
+        <MenuItemSelectedGradientBegin Type="Color" Value="64, 88, 110" />
+        <MenuItemSelectedGradientEnd Type="Color" Value="64, 88, 110" />
+      </Menu>
+      <Rafting>
+        <RaftingContainerGradientBegin Type="Color" Value="72, 72, 72" />
+        <RaftingContainerGradientEnd Type="Color" Value="72, 72, 72" />
+      </Rafting>
+      <MenuStrip>
+        <MenuStripText Type="Color" Value="184, 184, 184" />
+        <MenuStripGradientBegin Type="Color" Value="72, 72, 72" />
+        <MenuStripGradientEnd Type="Color" Value="72, 72, 72" />
+      </MenuStrip>
+      <Separator>
+        <SeparatorDark Type="Color" Value="Transparent" />
+        <SeparatorLight Type="Color" Value="Transparent" />
+      </Separator>
+      <StatusStrip>
+        <StatusStripText Type="Color" Value="241, 241, 241" />
+        <StatusStripGradientBegin Type="Color" Value="202, 81, 0" />
+        <StatusStripGradientEnd Type="Color" Value="202, 81, 0" />
+      </StatusStrip>
+      <ToolStrip>
+        <ToolStripText Type="Color" Value="184, 184, 184" />
+        <ToolStripFont Type="Font" Value="Segoe UI, 9pt" />
+        <ToolStripBorder Type="Color" Value="65, 65, 65" />
+        <ToolStripContentPanelGradientBegin Type="Color" Value="65, 65, 65" />
+        <ToolStripContentPanelGradientEnd Type="Color" Value="65, 65, 65" />
+        <ToolStripDropDownBackground Type="Color" Value="65, 65, 65" />
+        <ToolStripGradientBegin Type="Color" Value="65, 65, 65" />
+        <ToolStripGradientEnd Type="Color" Value="65, 65, 65" />
+        <ToolStripGradientMiddle Type="Color" Value="65, 65, 65" />
+        <ToolStripPanelGradientBegin Type="Color" Value="65, 65, 65" />
+        <ToolStripPanelGradientEnd Type="Color" Value="65, 65, 65" />
+      </ToolStrip>
+      <UseRoundedEdges Type="InheritBool" Value="False" />
+    </ToolMenuStatus>
+    <CustomisedKryptonPaletteFilePath Type="String" Value="T:\Development\Krypton\Versions\Extended\Krypton-Toolkit-Suite-Extended-NET-5.470\Source\Palettes\Community\Themes by Byte#7189\Adobe CC Dark with Orange Status Strip by Byte#7189.xml" />
+    <BasePaletteMode Type="PaletteMode" Value="Professional - System" />
+  </Properties>
+  <Images>
+    <Image Name="ImageCache1"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA3QAAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0FMguYt0ziAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAABtJREFUOE9jGAXDAuzYseMwJZhyA0bB0AcMDAC4E11hnZnY/wAAAABJRU5ErkJgggs=]]></Image>
+    <Image Name="ImageCache2"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAADQEAAAKJUE5HDQoaCgAAAA1JSERSAAAAGAAAABgIBgAAAOB3PfgAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GMyVfPM41AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAEtJREFUSEtj2LFjx0kg/k8jfBJkAYjxBoh3UxmDzPwPs2AbA5UByMxRC/CCUQsIglELCIJRCwiCUQsIglELCAK6W0DTSp+GzZYdJwC98BPC5GShJQAAAABJRU5ErkJgggs=]]></Image>
+    <Image Name="ImageCache3"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAADQEAAAKJUE5HDQoaCgAAAA1JSERSAAAAGAAAABgIBgAAAOB3PfgAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GMyVfPM41AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAEtJREFUSEtj2LFjx0kg/k8jfBJkAYjxBoh3UxmDzPwPs2AbA5UByMxRC/CCUQsIglELCIJRCwiCUQsIglELCAK6W0DTSp+GzZYdJwC98BPC5GShJQAAAABJRU5ErkJgggs=]]></Image>
+    <Image Name="ImageCache4"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAADQEAAAKJUE5HDQoaCgAAAA1JSERSAAAAGAAAABgIBgAAAOB3PfgAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GMyVfPM41AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAEtJREFUSEtj2LFjx0kg/k8jfBJkAYjxBoh3UxmDzPwPs2AbA5UByMxRC/CCUQsIglELCIJRCwiCUQsIglELCAK6W0DTSp+GzZYdJwC98BPC5GShJQAAAABJRU5ErkJgggs=]]></Image>
+    <Image Name="ImageCache5"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAEQEAAAKJUE5HDQoaCgAAAA1JSERSAAAAGAAAABgIBgAAAOB3PfgAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GNRxWY+G7AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAE9JREFUSEtjOHz48MkjR478pwUGmc0A5bwB4t1UxiAz/8Ms2MZAZQAyc9QCvGDUAoJg1AKCYNQCgmDUAoJg1AKCgO4W0K7Sp2Wz5ciRIycAI2IsebB9NaMAAAAASUVORK5CYIIL]]></Image>
+    <Image Name="ImageCache6"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAADQEAAAKJUE5HDQoaCgAAAA1JSERSAAAAGAAAABgIBgAAAOB3PfgAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GMyVfPM41AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAEtJREFUSEtj2LFjx0kg/k8jfBJkAYjxBoh3UxmDzPwPs2AbA5UByMxRC/CCUQsIglELCIJRCwiCUQsIglELCAK6W0DTSp+GzZYdJwC98BPC5GShJQAAAABJRU5ErkJgggs=]]></Image>
+    <Image Name="ImageCache7"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAswEAAAKJUE5HDQoaCgAAAA1JSERSAAAAGAAAABgIBgAAAOB3PfgAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GMzg8OqLsAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAPFJREFUSEvtljEOgjAYhVnUO3gLEwe9gKOunpFFFkvB3UjCUTTOLOJ75IcUgm0lsPElL2n/tu+VnwECrXUGlRMpYwAHT+g2suhZ1gEqGBl6zgFW5oAGpdQG5+9pmq6lVDFKAEy3OPuGCowPUq6gJ70HB8jNX1ABnaTcQE/od0Acx+cwDJcybWHeHPuOUm5BT3r3BtBc6lE3xMec0JMevQF5ni9Qu3AtSZIr2rFi3dUWE6zbW9QTssPYy5xgj/slsz1Yi2TPB7K2xYSePGcNIMaTeN28hp6QO4DwSXDzvUy9+CtgCHOAk27ApB/9CX9b9OMLW8ilKZ5IIoYAAAAASUVORK5CYIIL]]></Image>
+    <Image Name="ImageCache8"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAswEAAAKJUE5HDQoaCgAAAA1JSERSAAAAGAAAABgIBgAAAOB3PfgAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GMzg8OqLsAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAPFJREFUSEvtljEOgjAYhVnUO3gLEwe9gKOunpFFFkvB3UjCUTTOLOJ75IcUgm0lsPElL2n/tu+VnwECrXUGlRMpYwAHT+g2suhZ1gEqGBl6zgFW5oAGpdQG5+9pmq6lVDFKAEy3OPuGCowPUq6gJ70HB8jNX1ABnaTcQE/od0Acx+cwDJcybWHeHPuOUm5BT3r3BtBc6lE3xMec0JMevQF5ni9Qu3AtSZIr2rFi3dUWE6zbW9QTssPYy5xgj/slsz1Yi2TPB7K2xYSePGcNIMaTeN28hp6QO4DwSXDzvUy9+CtgCHOAk27ApB/9CX9b9OMLW8ilKZ5IIoYAAAAASUVORK5CYIIL]]></Image>
+    <Image Name="ImageCache9"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAswEAAAKJUE5HDQoaCgAAAA1JSERSAAAAGAAAABgIBgAAAOB3PfgAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GNRKx28y8AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAPFJREFUSEvtljEOgkAURGnUO3gLEwu9gKW23lIat7Fkd6MJLbfQWNsIM+RDgAC7InS8ZIr9+//MshQQRFH00FqnU4jegSye0G1k0TMtAlQwMvScA3qZA0qstRvMW2gtpRx60vuvAMxtoTf0McYcpJxDT2h4gJz8BdH8JOUSetK7MwBD5yRJlrKsgf7y5NBRyjXoCbUH0FzqYTMENac5wV53QBzHC4RcZO+qlFqx7rqWKvTkfGsAaYZAO8jLnKDP/ZJ5PdgLpecL9V5LFfS5A0jlSbxOXuAdQPgkMN/L0oufAoYwBzhpBkz30Z/yt0Vrfc8AhLDGlf+ohNAAAAAASUVORK5CYIIL]]></Image>
+    <Image Name="ImageCache10"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAswEAAAKJUE5HDQoaCgAAAA1JSERSAAAAGAAAABgIBgAAAOB3PfgAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GMzg8OqLsAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAPFJREFUSEvtljEOgjAYhVnUO3gLEwe9gKOunpFFFkvB3UjCUTTOLOJ75IcUgm0lsPElL2n/tu+VnwECrXUGlRMpYwAHT+g2suhZ1gEqGBl6zgFW5oAGpdQG5+9pmq6lVDFKAEy3OPuGCowPUq6gJ70HB8jNX1ABnaTcQE/od0Acx+cwDJcybWHeHPuOUm5BT3r3BtBc6lE3xMec0JMevQF5ni9Qu3AtSZIr2rFi3dUWE6zbW9QTssPYy5xgj/slsz1Yi2TPB7K2xYSePGcNIMaTeN28hp6QO4DwSXDzvUy9+CtgCHOAk27ApB/9CX9b9OMLW8ilKZ5IIoYAAAAASUVORK5CYIIL]]></Image>
+    <Image Name="ImageCache11"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAOgEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GGBfhm2LcAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAHhJREFUOE/djksKgDAMROMVXXkDl15E6HHasxUxZiADUj+t7vRBoE3nDZUfoKpdSmmOMfa+qoIsHLhih2CjNrmlxOXsTsBitMPqi8Xug2cPFDKciQ/VkkuZ3JVUZXJW0iwTBDwIAWK7TIqfPJPJruS5TCC+lr+CyAa/RNWDTpcW/QAAAABJRU5ErkJgggs=]]></Image>
+    <Image Name="ImageCache12"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAQgEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GGSBAPfaSAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAIBJREFUOE/dj0sKgDAMBdObxSu4iZ7AVetFBO8roiaxAf9WdzpQaOibRwr/wCH5JiOfx/kWyYrDVwdIdYtFGPl0KSUqc1YddgFLX/EwxJIeKRQxu2Mli0Oh1oeUklPZuCq5lY2jkmTZkIAGZ0HEdNnYbPJMNhYlz2VDv/NW/goAE8BPfhX6OVe5AAAAAElFTkSuQmCCCw==]]></Image>
+    <Image Name="ImageCache13"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAQgEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GGSBAPfaSAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAIBJREFUOE/dj0sKgDAMBdObxSu4iZ7AVetFBO8roiaxAf9WdzpQaOibRwr/wCH5JiOfx/kWyYrDVwdIdYtFGPl0KSUqc1YddgFLX/EwxJIeKRQxu2Mli0Oh1oeUklPZuCq5lY2jkmTZkIAGZ0HEdNnYbPJMNhYlz2VDv/NW/goAE8BPfhX6OVe5AAAAAElFTkSuQmCCCw==]]></Image>
+    <Image Name="ImageCache14"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAFAEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GHTLX6ELeAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAFJJREFUOE9jGJxg//79LGfOnGGFckkDq1atYt6xY8dSIN6ybds2dqgw8QBoABtQ8wYg/j9qCIUGUFPzWpLSBEWaQQBoACwhka4ZBihKynQGDAwAZVSF5sFt5RMAAAAASUVORK5CYIIL]]></Image>
+    <Image Name="ImageCache15"><![CDATA[AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAANQEAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAAEZ0FNQQAAsY8L/GEFAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfjCg0GHQgR5JtsAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAHNJREFUOE/tjkEKgDAQA3sTH+jN7wiC+JHeBNlWP6cJpCIqUsRjBwolm2zWFX4mhNDEGM17X0s6MLMKswmeVtIdGHq8DablvIR/apzRI/kZGDoZVwbVPEsbZXsHbQMDbE3N1DTOA6F0SX7zFS35Fi7k4twOKU5cdQvDnhYAAAAASUVORK5CYIIL]]></Image>
+  </Images>
+</KryptonPalette>

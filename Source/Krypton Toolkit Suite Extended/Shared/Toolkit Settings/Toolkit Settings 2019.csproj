@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA6E7878-FCCB-416C-8FE1-E626D478A7A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ToolkitSettings</RootNamespace>
+    <AssemblyName>Toolkit Settings</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Toolkit Settings.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackEnd\ExceptionHandler.cs" />
+    <Compile Include="BackEnd\KryptonMessageBoxExtended.cs" />
+    <Compile Include="BackEnd\PI.cs" />
+    <Compile Include="Classes\Application Updater\InternalApplicationUpdaterSettingsManager.cs" />
+    <Compile Include="Classes\Application Updater\ThemeSettingsManager.cs" />
+    <Compile Include="Classes\Application Updater\XMLFileApplicationUpdaterSettingsManager.cs" />
+    <Compile Include="Classes\Core\ColourIntegerSettingsManager.cs" />
+    <Compile Include="Classes\Core\ColourStringSettingsManager.cs" />
+    <Compile Include="Classes\Extended Controls\BooleanSettingsManager.cs" />
+    <Compile Include="Classes\Extended Controls\StringSettingsManager.cs" />
+    <Compile Include="Classes\Extended Controls\ThemeSettingsManager.cs" />
+    <Compile Include="Classes\Extended Controls\WindowLocationSettingsManager.cs" />
+    <Compile Include="Classes\Global\GlobalBooleanSettingsManager.cs" />
+    <Compile Include="Classes\Global\GlobalStringSettingsManager.cs" />
+    <Compile Include="Classes\Helpers\ColourMerger.cs" />
+    <Compile Include="Classes\Helpers\SettingsVarifier.cs" />
+    <Compile Include="Classes\Palette Explorer\ColourCollectionStringSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\ColourIntensitySettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\AllMergedColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\BasicColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\CustomColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\CustomTextColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\LinkTextColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\MiscellaneousColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\StandardControlTextColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Colours\TextColourSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\GeneralPaletteExplorerSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\PaletteExplorerBooleanSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\PaletteThemeSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\PaletteTypefaceSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\Properties\ColourPropertyWindowSettingsManager.cs" />
+    <Compile Include="Classes\Palette Explorer\WindowLocationSettingsManager.cs" />
+    <Compile Include="Containers\WindowsIconResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WindowsIconResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Application Updater\InternalApplicationUpdaterSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>InternalApplicationUpdaterSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Application Updater\ThemeSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ThemeSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Application Updater\XMLFileApplicationUpdaterSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>XMLFileApplicationUpdaterSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Core\ColourIntegerSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ColourIntegerSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Core\ColourStringSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ColourStringSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Extended Controls\BooleanSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>BooleanSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Extended Controls\StringSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>StringSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Extended Controls\ThemeSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ThemeSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Extended Controls\WindowLocationSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>WindowLocationSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Global\GlobalBooleanSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>GlobalBooleanSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Global\GlobalEnumerationSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>GlobalEnumerationSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Global\GlobalStringSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>GlobalStringSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\ColourCollectionStringSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ColourCollectionStringSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\ColourIntensitySettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ColourIntensitySettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\Colours\AllMergedColourSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>AllMergedColourSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\Colours\BasicColourSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>BasicColourSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\Colours\CustomColourSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>CustomColourSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\Colours\CustomTextColourSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>CustomTextColourSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\Colours\LinkTextColourSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>LinkTextColourSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\Colours\MiscellaneousColourSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>MiscellaneousColourSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\Colours\StandardControlTextColourSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>StandardControlTextColourSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\Colours\TextColourSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>TextColourSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\GeneralPaletteExplorerSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>GeneralPaletteExplorerSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\PaletteExplorerBooleanSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>PaletteExplorerBooleanSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\PaletteThemeSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>PaletteThemeSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\PaletteTypefaceSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>PaletteTypefaceSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\Properties\ColourPropertyWindowSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ColourPropertyWindowSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Palette Explorer\WindowLocationSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>WindowLocationSettings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Settings\Application Updater\InternalApplicationUpdaterSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>InternalApplicationUpdaterSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Application Updater\ThemeSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ThemeSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Application Updater\XMLFileApplicationUpdaterSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>XMLFileApplicationUpdaterSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Core\ColourIntegerSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ColourIntegerSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Core\ColourStringSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ColourStringSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Extended Controls\BooleanSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>BooleanSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Extended Controls\StringSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>StringSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Extended Controls\ThemeSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ThemeSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Extended Controls\WindowLocationSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>WindowLocationSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Global\GlobalBooleanSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>GlobalBooleanSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Global\GlobalEnumerationSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>GlobalEnumerationSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Global\GlobalStringSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>GlobalStringSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\ColourCollectionStringSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ColourCollectionStringSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\ColourIntensitySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ColourIntensitySettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\Colours\AllMergedColourSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>AllMergedColourSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\Colours\BasicColourSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>BasicColourSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\Colours\CustomColourSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>CustomColourSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\Colours\CustomTextColourSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>CustomTextColourSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\Colours\LinkTextColourSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>LinkTextColourSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\Colours\MiscellaneousColourSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MiscellaneousColourSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\Colours\StandardControlTextColourSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>StandardControlTextColourSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\Colours\TextColourSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>TextColourSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\GeneralPaletteExplorerSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>GeneralPaletteExplorerSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\PaletteExplorerBooleanSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>PaletteExplorerBooleanSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\PaletteThemeSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>PaletteThemeSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\PaletteTypefaceSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>PaletteTypefaceSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\Properties\ColourPropertyWindowSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ColourPropertyWindowSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings\Palette Explorer\WindowLocationSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>WindowLocationSettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Containers\WindowsIconResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WindowsIconResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Critical_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_32_x_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop.png" />
+    <None Include="Resources\Floppy Drive.png" />
+    <None Include="Resources\Folder Up.png" />
+    <None Include="Resources\Folder.png" />
+    <None Include="Resources\Hard Drive.png" />
+    <None Include="Resources\Network Drive.png" />
+    <None Include="Resources\Optical Drive.png" />
+    <None Include="Resources\OS Drive.png" />
+    <None Include="Resources\This PC.png" />
+    <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5470">
+      <Version>5.470.2000</Version>
+    </PackageReference>
+    <PackageReference Include="WindowsAPICodePack">
+      <Version>1.1.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Global Utilities\Global Utilities 2019.csproj">
+      <Project>{124496E1-E8FD-4796-B194-8FD8DB8A1896}</Project>
+      <Name>Global Utilities 2019</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E668A872-620B-4247-9629-28F12F7B0FD7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PaletteCreator</RootNamespace>
+    <AssemblyName>Palette Creator</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AssemblyVersion>5.470.590.0</AssemblyVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\color.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\PaletteExporter.cs" />
+    <Compile Include="Classes\SettingsManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UX\ColourMixer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\ColourMixer.Designer.cs">
+      <DependentUpon>ColourMixer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UX\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UX\MainWindowWithRibbonUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\MainWindowWithRibbonUI.Designer.cs">
+      <DependentUpon>MainWindowWithRibbonUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UX\PaletteComposer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\PaletteComposer.Designer.cs">
+      <DependentUpon>PaletteComposer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UX\RibbonChromeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\RibbonChromeForm.Designer.cs">
+      <DependentUpon>RibbonChromeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UX\TMSChromeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\TMSChromeForm.Designer.cs">
+      <DependentUpon>TMSChromeForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\ColourMixer.resx">
+      <DependentUpon>ColourMixer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\MainWindowWithRibbonUI.resx">
+      <DependentUpon>MainWindowWithRibbonUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\PaletteComposer.resx">
+      <DependentUpon>PaletteComposer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\RibbonChromeForm.resx">
+      <DependentUpon>RibbonChromeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\TMSChromeForm.resx">
+      <DependentUpon>TMSChromeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppMenuClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppMenuDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppMenuPrint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppMenuSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppMenuSaveAs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppMenuSendMessage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color%281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark Drive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\environment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\External Drive-Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_brazil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_iceland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_scotland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy Drive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome-mime-application-x-theme.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome-mime-application-x-theme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard Disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonBSActual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonCBActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonGActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonHActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonHGActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonLActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonNav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonPActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonRibbon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonSCActual.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonTMS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KryptonTrackBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KTextBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette%281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theme.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theme256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopBS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopCB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopDT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopGrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopHG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopInputControls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopNavigate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopRB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopRibbon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopSC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopTMS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopTrackBar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_scotland1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_brazil1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_iceland1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui-label-link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5470">
+      <Version>5.470.2000</Version>
+    </PackageReference>
+    <PackageReference Include="WindowsAPICodePack">
+      <Version>1.1.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Full Toolkit\Extended Controls\Extended Controls 2019.csproj">
+      <Project>{1C9153E4-CDC4-44C9-9794-1D144FE87A1F}</Project>
+      <Name>Extended Controls 2019</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Tooling\Core 2019.csproj">
+      <Project>{DDE371E2-E7ED-41A3-ADBA-DC59298CDEF5}</Project>
+      <Name>Core 2019</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
