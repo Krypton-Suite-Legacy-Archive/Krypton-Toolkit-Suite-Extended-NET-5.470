@@ -8,7 +8,7 @@
  * Enhancements and history
  * ------------------------
  * 1.0.0.0 (20 Jul 2009): Initial release.
- * 5.470.x (1st November 2019): Changed name from 'HarrProgressBar' to 'CustomProgressBar'
+ * 5.480.x (1st November 2019): Changed name from 'HarrProgressBar' to 'CustomProgressBar'
  */
 #endregion
 

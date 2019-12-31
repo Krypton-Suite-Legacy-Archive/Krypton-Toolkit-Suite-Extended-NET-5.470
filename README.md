@@ -68,14 +68,14 @@ Please refer to [Module Descriptions](https://github.com/Wagnerp/Krypton-Toolkit
 
 ========
 
-## 2020-01-01 Build 20xx - January 2020 Update
-* Changed year from `2019` to `2020`
+## 2020-01-01 Build 2014 - January 2020 Update
+* Changed copyright year from `2019` to `2020`
 * New `KryptonInputBoxExtended` dialog
 * New `KryptonRunDialog`
 * License headers in code
 * Fixes & enhancements to `Krypton Outlook Grid` courtesy of [richterAI](https://github.com/richterAl)
 * Binaries are now placed in one central **Bin** folder
-* Upgraded to Krypton Toolkit Suite - version: **5.470.21xx**
+* Upgraded to Krypton Toolkit Suite - version: **5.470.2098**
 * General fixes
 
 ========

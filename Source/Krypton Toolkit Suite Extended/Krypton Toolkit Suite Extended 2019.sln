@@ -13,6 +13,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B4B787F0-53A2-498F-8893-091C709F73E4}"
 	ProjectSection(SolutionItems) = preProject
 		..\.gitignore = ..\.gitignore
+		Krypton Toolkit Suite Extended 2019.sln.licenseheader = Krypton Toolkit Suite Extended 2019.sln.licenseheader
 		License Code Header.txt = License Code Header.txt
 		..\..\Assets\License.txt = ..\..\Assets\License.txt
 	EndProjectSection

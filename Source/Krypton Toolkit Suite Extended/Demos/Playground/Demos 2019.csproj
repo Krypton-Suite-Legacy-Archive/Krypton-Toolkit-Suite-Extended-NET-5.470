@@ -46,9 +46,6 @@
     <Reference Include="IO Components">
       <HintPath>..\IO Components\obj\Debug\IO Components.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Toolkit Suite Extended Core">
-      <HintPath>..\Core\obj\Debug\Krypton Toolkit Suite Extended Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -344,10 +341,6 @@
     <ProjectReference Include="..\..\Shared\Common\Common 2019.csproj">
       <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
       <Name>Common 2019</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Shared\Global Utilities\Global Utilities 2019.csproj">
-      <Project>{124496E1-E8FD-4796-B194-8FD8DB8A1896}</Project>
-      <Name>Global Utilities 2019</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Shared\Persistence\Persistence 2019.csproj">
       <Project>{BCAF97E6-BFCC-4E12-95EC-D2AD7553D53A}</Project>

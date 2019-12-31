@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F28100D-C9A0-4361-B780-7AC132A421DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KryptonToolkitSuiteExtendedCore</RootNamespace>
+    <AssemblyName>Krypton Toolkit Suite Extended Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Krypton Toolkit Suite Extended Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Extended Standard Controls">
+      <HintPath>..\Extended Standard Controls\obj\Debug\Extended Standard Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Break Out\KryptonFormShell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\ColourHandler.cs" />
+    <Compile Include="Classes\ComboBox\ImageComboBoxItem.cs" />
+    <Compile Include="Classes\ComboBox\ImageComboCollection.cs" />
+    <Compile Include="Classes\Drawing\DrawingMethods.cs" />
+    <Compile Include="Classes\Drawing\ExtendedDrawing.cs" />
+    <Compile Include="Classes\Drawing\FontMetrics.cs" />
+    <Compile Include="Classes\Drawing\GraphicsExtension.cs" />
+    <Compile Include="Classes\Drawing\RoundedRectangleF.cs" />
+    <Compile Include="Classes\Drawing\Utility.cs" />
+    <Compile Include="Classes\Events\ExecuteProcessAsAdministratorEventArgs.cs" />
+    <Compile Include="Classes\KryptonMessageBoxAdvanced.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\KryptonMessageBoxExtended.cs" />
+    <Compile Include="Classes\PI.cs" />
+    <Compile Include="Classes\Ribbon\RibbonMerger.cs" />
+    <Compile Include="Classes\ScrollBars\ScrollBarExtendedRenderer.cs" />
+    <Compile Include="Classes\ScrollBars\ScrollBarKryptonRenderer.cs" />
+    <Compile Include="Classes\ScrollBars\WIN32.cs" />
+    <Compile Include="Classes\Security\SecurityMethods.cs" />
+    <Compile Include="Classes\Typeface.cs" />
+    <Compile Include="Classes\Utility.cs" />
+    <Compile Include="Classes\WIN32.cs" />
+    <Compile Include="Components\Controls\CircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\CustomProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\Dialog Buttons\KryptonCancelDialogButton.cs" />
+    <Compile Include="Components\Controls\Dialog Buttons\KryptonNODialogButton.cs" />
+    <Compile Include="Components\Controls\Dialog Buttons\KryptonOKDialogButton.cs" />
+    <Compile Include="Components\Controls\Dialog Buttons\KryptonYesDialogButton.cs" />
+    <Compile Include="Components\Controls\EnhancedProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\ExtendedProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\KryptonColourComboBox.cs" />
+    <Compile Include="Components\Controls\KryptonCommandLinkVersion1.cs" />
+    <Compile Include="Components\Controls\KryptonCommandLinkVersion2.cs" />
+    <Compile Include="Components\Controls\KryptonGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\KryptonImageComboBox.cs" />
+    <Compile Include="Components\Controls\KryptonKnobControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\KryptonKnobControlEnhanced.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\KryptonListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\KryptonLoadingCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\KryptonMessageBoxExtendedComoponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Break Out\KryptonTreeViewShell.cs" />
+    <Compile Include="Components\Controls\KryptonPanelExtended.cs" />
+    <Compile Include="Components\Controls\KryptonProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\KryptonRichTextBoxExtended.cs" />
+    <Compile Include="Components\Controls\KryptonSplitButton.cs" />
+    <Compile Include="Components\Controls\Typeface Controls\KryptonTypefaceExample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\Typeface Controls\KryptonTypefaceList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\Typeface Controls\KryptonTypefaceSizeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\Typeface Controls\KryptonTypefaceStyle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedButton.cs" />
+    <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedMaskedTextBox.cs" />
+    <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedRichTextBox.cs" />
+    <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedTextBox.cs" />
+    <Compile Include="Components\Controls\KryptonToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\KryptonUACElevatedButton.cs" />
+    <Compile Include="Components\Controls\Rounded Controls\KryptonRoundedUACElevatedButton.cs" />
+    <Compile Include="Components\Controls\UI\KryptonMessageBoxExtendedTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\List View\ListViewColumnSorter.cs" />
+    <Compile Include="Components\List View\ListViewItemComparer.cs" />
+    <Compile Include="Components\List View\ListViewPrint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\List View\ListViewSort.cs" />
+    <Compile Include="Components\Property Grid\KryptonPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Scroll Bars\Custom Scroll Bar\KryptonScrollBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Scroll Bars\Skins\HScrollSkin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Scroll Bars\Skins\VScrollSkin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Toolbar Items\KryptonToolstripProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Designers\KryptonCommandLinkButtonActionList.cs" />
+    <Compile Include="Designers\KryptonCommandLinkButtonDesigner.cs" />
+    <Compile Include="Designers\ScrollBarControlDesigner.cs" />
+    <Compile Include="Enumerations\Enumerations.cs" />
+    <Compile Include="Interfaces\Ribbon\IRibbonMerger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UX\KryptonRoundedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UX\Security\RandomPasswordGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Values\CommandLinkTextValues.cs" />
+    <Compile Include="Values\ImageValue.cs" />
+    <Compile Include="Values\MainTextValue.cs" />
+    <Compile Include="Values\SubscriptTextValue.cs" />
+    <Compile Include="View Draw\ViewDrawCommandLinkButton.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KryptonToolkitSuite5480">
+      <Version>5.480.2098</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Common\Common 2020.csproj">
+      <Project>{ECDF3883-0655-421A-BC76-8E822BC9C778}</Project>
+      <Name>Common 2020</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Toolkit Settings\Toolkit Settings 2020.csproj">
+      <Project>{ea6e7878-fccb-416c-8fe1-e626d478a7a7}</Project>
+      <Name>Toolkit Settings 2020</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_32_x_32.png" />
+    <None Include="Resources\Warning_2.png" />
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\Warning 128 x 128.png" />
+    <None Include="Resources\Up.png" />
+    <None Include="Resources\ttf-2_16_x_16.png" />
+    <None Include="Resources\ttf-2.png" />
+    <None Include="Resources\text_underline.png" />
+    <None Include="Resources\text_strikethrough.png" />
+    <None Include="Resources\text_lowercase.png" />
+    <None Include="Resources\text_italic.png" />
+    <None Include="Resources\text_bold.png" />
+    <None Include="Resources\Symbol-Error.png" />
+    <None Include="Resources\Stop_32_x_32.png" />
+    <None Include="Resources\Stop.png" />
+    <None Include="Resources\Stop 128 x 128.png" />
+    <None Include="Resources\SparkleIndeterminate.png" />
+    <None Include="Resources\SparkleGrayIndeterminate.png" />
+    <None Include="Resources\SparkleGrayChecked.png" />
+    <None Include="Resources\SparkleGalleryDropButton.png" />
+    <None Include="Resources\SparkleDropUpButton.png" />
+    <None Include="Resources\SparkleDropDownOutlineButton.png" />
+    <None Include="Resources\SparkleDropDownButton.png" />
+    <None Include="Resources\SparkleContextMenuSub.png" />
+    <None Include="Resources\SparkleChecked.png" />
+    <None Include="Resources\sign_warning.png" />
+    <None Include="Resources\SearchToolBar_ButtonWholeWord.png" />
+    <None Include="Resources\SearchToolBar_ButtonSearch.png" />
+    <None Include="Resources\SearchToolBar_ButtonFromBegin.png" />
+    <None Include="Resources\SearchToolBar_ButtonClose.png" />
+    <None Include="Resources\SearchToolBar_ButtonCaseSensitive.png" />
+    <None Include="Resources\restore.png" />
+    <None Include="Resources\Question_32_x_32.png" />
+    <None Include="Resources\Question.png" />
+    <None Include="Resources\Question 128 x 128.png" />
+    <None Include="Resources\Property_16x.png" />
+    <None Include="Resources\progress_bar.ico" />
+    <None Include="Resources\popupcontainerbuttons.bmp" />
+    <None Include="Resources\palette.ico" />
+    <None Include="Resources\palette.bmp" />
+    <None Include="Resources\Open_File_16_x_16.png" />
+    <None Include="Resources\Ok_32_x_32.png" />
+    <None Include="Resources\Ok.png" />
+    <None Include="Resources\Ok.bmp" />
+    <None Include="Resources\Ok 128 x 128.png" />
+    <None Include="Resources\NaviUp.png" />
+    <None Include="Resources\NaviGroup.bmp" />
+    <None Include="Resources\NaviDown.png" />
+    <None Include="Resources\NaviBar.bmp" />
+    <None Include="Resources\Namespace_16x.png" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\MenuStrip_ResizeGrip.png" />
+    <None Include="Resources\MenuStrip_OrderDESCtxt.png" />
+    <None Include="Resources\MenuStrip_OrderDESCnum.png" />
+    <None Include="Resources\MenuStrip_OrderDESCbool.png" />
+    <None Include="Resources\MenuStrip_OrderASCtxt.png" />
+    <None Include="Resources\MenuStrip_OrderASCnum.png" />
+    <None Include="Resources\MenuStrip_OrderASCbool.png" />
+    <None Include="Resources\maximize.png" />
+    <None Include="Resources\Interface_16x.png" />
+    <None Include="Resources\Information_32_x_32.png" />
+    <None Include="Resources\Information_2.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\Information 128 x 128.png" />
+    <None Include="Resources\inactive_search.png" />
+    <None Include="Resources\if_Symbol-Stop_49267.png" />
+    <None Include="Resources\if_Symbol-Restricted_49266.png" />
+    <None Include="Resources\if_Symbol-Information_49264.png" />
+    <None Include="Resources\if_Symbol-Help_49263.png" />
+    <None Include="Resources\if_Symbol-Exclamation_49262.png" />
+    <None Include="Resources\if_Symbol-Error_49261.png" />
+    <None Include="Resources\if_Symbol-Delete_49260.png" />
+    <None Include="Resources\if_Symbol-Check_49258.png" />
+    <None Include="Resources\help2.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\Hand_32_x_32.png" />
+    <None Include="Resources\Hand.png" />
+    <None Include="Resources\Hand 128 x 128.png" />
+    <None Include="Resources\Grip2007.ico" />
+    <None Include="Resources\Grip2003.ico" />
+    <None Include="Resources\Grip.png" />
+    <None Include="Resources\GridSortOrder.bmp" />
+    <None Include="Resources\GridRowIndicators.bmp" />
+    <None Include="Resources\GridErrorIcon.bmp" />
+    <None Include="Resources\Fail.bmp" />
+    <None Include="Resources\eyedropper.bmp" />
+    <None Include="Resources\Export To Document.png" />
+    <None Include="Resources\expended.png" />
+    <None Include="Resources\Event_16x.png" />
+    <None Include="Resources\Error_Report_128_x_128.png" />
+    <None Include="Resources\Error_Report_48_x_48.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\DropDown2007.ico" />
+    <None Include="Resources\DropDown2003.ico" />
+    <None Include="Resources\download.jpg" />
+    <None Include="Resources\Down.png" />
+    <None Include="Resources\DefaultIcon.ico" />
+    <None Include="Resources\Cube_16x.png" />
+    <None Include="Resources\Critical_32_x_32.png" />
+    <None Include="Resources\Critical.png" />
+    <None Include="Resources\Critical 128 x 128.png" />
+    <None Include="Resources\ColumnHeader_UnFiltered.png" />
+    <None Include="Resources\ColumnHeader_SavedFilters.png" />
+    <None Include="Resources\ColumnHeader_OrderedDESC.png" />
+    <None Include="Resources\ColumnHeader_OrderedASC.png" />
+    <None Include="Resources\ColumnHeader_FilteredAndOrderedDESC.png" />
+    <None Include="Resources\ColumnHeader_FilteredAndOrderedASC.png" />
+    <None Include="Resources\ColumnHeader_Filtered.png" />
+    <None Include="Resources\ColourButton.png" />
+    <None Include="Resources\colorbarIndicators.bmp" />
+    <None Include="Resources\color.ico" />
+    <None Include="Resources\collapsible.png" />
+    <None Include="Resources\collapsed.png" />
+    <None Include="Resources\collapse.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\Class_16x.png" />
+    <None Include="Resources\ButtonNoColor.png" />
+    <None Include="Resources\ButtonColorImageSmall.png" />
+    <None Include="Resources\BrowserUp 256.png" />
+    <None Include="Resources\BrowserUp 64.png" />
+    <None Include="Resources\BrowserUp 32.png" />
+    <None Include="Resources\BrowserForward 256.png" />
+    <None Include="Resources\BrowserForward 64.png" />
+    <None Include="Resources\BrowserForward 32.png" />
+    <None Include="Resources\BrowserBackward 256.png" />
+    <None Include="Resources\BrowserBackward 64.png" />
+    <None Include="Resources\BrowserBackward 32.png" />
+    <None Include="Resources\BrowseFolders 256.png" />
+    <None Include="Resources\BrowseFolders 64.png" />
+    <None Include="Resources\BrowseFolders 32.png" />
+    <None Include="Resources\arrowControl.Image.png" />
+    <None Include="Resources\Arrow_Up.ico" />
+    <None Include="Resources\Arrow_Down.ico" />
+    <None Include="Resources\active_search.png" />
+    <None Include="Resources\Input_Box_Warning_64_x_58.png" />
+    <None Include="Resources\Input_Box_Stop_64_x_64.png" />
+    <None Include="Resources\Input_Box_Question_64_x_64.png" />
+    <None Include="Resources\Input_Box_Ok_64_x_64.png" />
+    <None Include="Resources\Input_Box_Information_64_x_64.png" />
+    <None Include="Resources\Input_Box_Hand_64_x_64.png" />
+    <None Include="Resources\Input_Box_Critical_64_x_64.png" />
+    <Content Include="ToolboxBitmaps\CheckGroupBox.bmp" />
+    <Content Include="ToolboxBitmaps\CircularProgressBar.bmp" />
+    <Content Include="ToolboxBitmaps\CollapsibleGroupBox.bmp" />
+    <Content Include="ToolboxBitmaps\CollapsiblePanel.bmp" />
+    <Content Include="ToolboxBitmaps\CollapsiblePanelSplitter.bmp" />
+    <Content Include="ToolboxBitmaps\CollapsibleSplitter.bmp" />
+    <Content Include="ToolboxBitmaps\ColorListBox.bmp" />
+    <Content Include="ToolboxBitmaps\ColorPickerCtrl.bmp" />
+    <Content Include="ToolboxBitmaps\ColorTable.bmp" />
+    <Content Include="ToolboxBitmaps\ColorWheelCtrl.bmp" />
+    <Content Include="ToolboxBitmaps\ComboBoxEx.bmp" />
+    <Content Include="ToolboxBitmaps\CommandLinkButton.bmp" />
+    <Content Include="ToolboxBitmaps\DataBar.bmp" />
+    <Content Include="ToolboxBitmaps\DataChart.bmp" />
+    <Content Include="ToolboxBitmaps\FloatableToolStrip.bmp" />
+    <Content Include="ToolboxBitmaps\GlassButton.bmp" />
+    <Content Include="ToolboxBitmaps\Hyperlink.png" />
+    <Content Include="ToolboxBitmaps\HyperlinkBlue.png" />
+    <Content Include="ToolboxBitmaps\HyperlinkGreen.png" />
+    <Content Include="ToolboxBitmaps\HyperlinkRed.png" />
+    <Content Include="ToolboxBitmaps\HyperlinkYellow.png" />
+    <Content Include="ToolboxBitmaps\KryptonColourButtonExtended.bmp" />
+    <Content Include="ToolboxBitmaps\KryptonForm.bmp" />
+    <Content Include="ToolboxBitmaps\KryptonMessageBox.bmp" />
+    <Content Include="ToolboxBitmaps\LabelRotate.bmp" />
+    <Content Include="ToolboxBitmaps\ListBoxEx.bmp" />
+    <Content Include="ToolboxBitmaps\ListViewEx.bmp" />
+    <Content Include="ToolboxBitmaps\MultiLabel.bmp" />
+    <Content Include="ToolboxBitmaps\NavigateBar.bmp" />
+    <Content Include="ToolboxBitmaps\None.bmp" />
+    <Content Include="ToolboxBitmaps\PropertyGridVersionOne.bmp" />
+    <Content Include="ToolboxBitmaps\PropertyGridVersionTwo.bmp" />
+    <Content Include="ToolboxBitmaps\RadioGroupBox.bmp" />
+    <Content Include="ToolboxBitmaps\SplitButton.bmp" />
+    <Content Include="ToolboxBitmaps\TextBoxButton.bmp" />
+    <Content Include="ToolboxBitmaps\ToggleSwich.bmp" />
+    <Content Include="ToolboxBitmaps\UACButton.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Classes\KryptonMessageBoxAdvanced.resx">
+      <DependentUpon>KryptonMessageBoxAdvanced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Controls\KryptonKnobControlEnhanced.resx">
+      <DependentUpon>KryptonKnobControlEnhanced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Controls\Typeface Controls\KryptonTypefaceExample.resx">
+      <DependentUpon>KryptonTypefaceExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Controls\Typeface Controls\KryptonTypefaceList.resx">
+      <DependentUpon>KryptonTypefaceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Controls\Typeface Controls\KryptonTypefaceSizeList.resx">
+      <DependentUpon>KryptonTypefaceSizeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Controls\Typeface Controls\KryptonTypefaceStyle.resx">
+      <DependentUpon>KryptonTypefaceStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Controls\UI\KryptonMessageBoxExtendedTest.resx">
+      <DependentUpon>KryptonMessageBoxExtendedTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UX\Security\RandomPasswordGenerator.resx">
+      <DependentUpon>RandomPasswordGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(ProjectDir)..\..\..\..\Bin\Individual Components\Extended Toolkit Core\" /D /R /Y /S</PostBuildEvent>
+  </PropertyGroup>
+</Project>

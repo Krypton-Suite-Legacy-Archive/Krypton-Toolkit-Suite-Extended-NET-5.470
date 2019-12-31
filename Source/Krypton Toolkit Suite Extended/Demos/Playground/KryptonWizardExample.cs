@@ -52,10 +52,10 @@ namespace Playground
             // 
             // kryptonWizard1
             // 
-            this.kryptonWizard1.Controls.Add(this.wizardPage1);
-            this.kryptonWizard1.Controls.Add(this.wizardPage4);
             this.kryptonWizard1.Controls.Add(this.wizardPage3);
             this.kryptonWizard1.Controls.Add(this.wizardPage2);
+            this.kryptonWizard1.Controls.Add(this.wizardPage1);
+            this.kryptonWizard1.Controls.Add(this.wizardPage4);
             this.kryptonWizard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonWizard1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonWizard1.Location = new System.Drawing.Point(0, 0);
@@ -129,7 +129,7 @@ namespace Playground
             this.wizardPage2.IsFinishPage = false;
             this.wizardPage2.Location = new System.Drawing.Point(0, 0);
             this.wizardPage2.Name = "wizardPage2";
-            this.wizardPage2.Size = new System.Drawing.Size(444, 224);
+            this.wizardPage2.Size = new System.Drawing.Size(1138, 737);
             this.wizardPage2.TabIndex = 3;
             // 
             // kryptonTextBox2

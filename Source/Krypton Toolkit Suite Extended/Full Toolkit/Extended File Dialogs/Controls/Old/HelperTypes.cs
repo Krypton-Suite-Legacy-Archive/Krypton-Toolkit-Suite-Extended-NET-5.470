@@ -323,10 +323,10 @@ namespace ExtendedFileDialogs.Controls.Old
                         _ComboFolders = hwnd;
                         _ComboFoldersInfo = windowInfo;
                         break;
-                    case ControlsId.ComboFileType:
+                    /*case ControlsId.ComboFileType:
                         _hComboExtensions = hwnd;
                         _ComboExtensionsInfo = windowInfo;
-                        break;
+                        break;*/
                     case ControlsId.ComboFileName:
                         if (className.ToString().ToLower() == "comboboxex32")
                         {
