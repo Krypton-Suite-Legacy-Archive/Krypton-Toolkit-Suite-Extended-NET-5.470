@@ -67,6 +67,7 @@ Please refer to [Module Descriptions](https://github.com/Wagnerp/Krypton-Toolkit
 * Added a better file system tree view control
 
 ========
+-->
 
 ## 2020-01-01 Build 2014 - January 2020 Update
 * Changed copyright year from `2019` to `2020`
@@ -79,7 +80,6 @@ Please refer to [Module Descriptions](https://github.com/Wagnerp/Krypton-Toolkit
 * General fixes
 
 ========
--->
 
 ## 2019-12-01 Build 1660 - December 2019 Update
 * Implemented [#98](https://github.com/Wagnerp/Krypton-Toolkit-Suite-Extended-NET-5.470/issues/98), Add Border Colour Control Properties
